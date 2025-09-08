@@ -1,12 +1,10 @@
 import { GoogleGenAI } from "@google/genai";
-import type { Problem } from "../types";
+import type { Problem } from '../types';
 
 if (!process.env.API_KEY) {
-  // In a real production app, this check might be more robust or handled differently.
-  // For this context, we assume the environment variable is set.
-  console.warn(
-    "API_KEY environment variable is not set. AI features will not work."
-  );
+    // In a real production app, this check might be more robust or handled differently.
+    // For this context, we assume the environment variable is set.
+    console.warn("API_KEY environment variable is not set. AI features will not work.");
 }
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
@@ -25,27 +23,27 @@ Follow these principles strictly:
 7.  **Persona:** Be encouraging, patient, and professional. You are a mentor aiming to build the user's confidence and problem-solving skills. Start your very first response in any conversation with "Hi there! I'm Alex, your personal JavaScript mentor. How can we level up your skills today?".
 `;
 
+
 /**
  * Gets a response from the AI for a general chat query.
  * @param prompt The user's query.
  * @returns The AI's text response.
  */
 export const getAIResponse = async (prompt: string): Promise<string> => {
-  if (!process.env.API_KEY)
-    return "API key not configured. The AI assistant is offline.";
-  try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: prompt,
-      config: {
-        systemInstruction: advancedSystemInstruction,
-      },
-    });
-    return response.text;
-  } catch (error) {
-    console.error("Error getting AI response:", error);
-    throw new Error("Failed to communicate with the AI service.");
-  }
+    if (!process.env.API_KEY) return "API key not configured. The AI assistant is offline.";
+    try {
+        const response = await ai.models.generateContent({
+            model: 'gemini-2.5-flash',
+            contents: prompt,
+            config: {
+                systemInstruction: advancedSystemInstruction,
+            }
+        });
+        return response.text;
+    } catch (error) {
+        console.error("Error getting AI response:", error);
+        throw new Error("Failed to communicate with the AI service.");
+    }
 };
 
 /**
@@ -54,13 +52,9 @@ export const getAIResponse = async (prompt: string): Promise<string> => {
  * @param solutionCode The stringified code for the solution.
  * @returns The AI's explanation formatted in markdown.
  */
-export const getAIExplanation = async (
-  problem: Problem,
-  solutionCode: string
-): Promise<string> => {
-  if (!process.env.API_KEY)
-    return "API key not configured. The AI explainer is offline.";
-  const prompt = `
+export const getAIExplanation = async (problem: Problem, solutionCode: string): Promise<string> => {
+     if (!process.env.API_KEY) return "API key not configured. The AI explainer is offline.";
+    const prompt = `
         Please provide a detailed, beginner-friendly explanation for the following JavaScript problem and its solution.
         The goal is to educate, so be clear, concise, and thorough.
 
@@ -86,14 +80,14 @@ export const getAIExplanation = async (
         If there are other common ways to solve this problem, briefly mention them and their trade-offs (e.g., performance, readability).
     `;
 
-  try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: prompt,
-    });
-    return response.text;
-  } catch (error) {
-    console.error("Error getting AI explanation:", error);
-    throw new Error("Failed to generate an explanation from the AI service.");
-  }
+    try {
+        const response = await ai.models.generateContent({
+            model: 'gemini-2.5-flash',
+            contents: prompt,
+        });
+        return response.text;
+    } catch (error) {
+        console.error("Error getting AI explanation:", error);
+        throw new Error("Failed to generate an explanation from the AI service.");
+    }
 };

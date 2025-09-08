@@ -1,26 +1,26 @@
-import type { availableThemes } from "./App";
+import type { availableThemes } from './App';
 
 export type Theme = (typeof availableThemes)[number];
 
 export interface ProblemInput {
   id: string;
   label: string;
-  type: "text" | "number" | "textarea";
+  type: 'text' | 'number' | 'textarea';
   placeholder?: string;
   defaultValue?: string | number;
   step?: string;
   min?: string;
 }
 
-export type Category =
-  | "Beginner"
-  | "Intermediate"
-  | "ES6+"
-  | "Asynchronous"
-  | "Synchronous"
-  | "Web APIs & DOM"
-  | "Algorithms"
-  | "Data Structures";
+export type Category = 
+  | 'Beginner' 
+  | 'Intermediate' 
+  | 'ES6+'
+  | 'Asynchronous'
+  | 'Synchronous'
+  | 'Web APIs & DOM'
+  | 'Algorithms'
+  | 'Data Structures';
 
 export interface Problem {
   id: string;
@@ -32,6 +32,6 @@ export interface Problem {
 }
 
 export interface ChatMessage {
-  sender: "user" | "ai";
+  sender: 'user' | 'ai';
   text: string;
 }
