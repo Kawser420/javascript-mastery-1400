@@ -31,6 +31,12 @@
 </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Polyfill for browser environment to prevent crash
+      if (typeof window.process === 'undefined') {
+        window.process = { env: { API_KEY: undefined } };
+      }
+    </script>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

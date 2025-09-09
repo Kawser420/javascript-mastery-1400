@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { getAIExplanation } from '../services/geminiService';
 import { Problem } from '../types';
 import { solvers } from '../utils/problemSolver';
+import { staticExplanations } from '../data/explanations'; // Import the static fallbacks
 
 interface ExplanationModalProps {
   isOpen: boolean;
@@ -15,6 +16,35 @@ const ExplanationModal: React.FC<ExplanationModalProps> = ({ isOpen, onClose, pr
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [explanation, setExplanation] = useState('');
 
+  const renderMarkdown = (markdown: string) => {
+    const codeBlocks: string[] = [];
+    
+    // Step 1: Extract code blocks and replace them with a placeholder.
+    // This prevents the main text formatting from affecting the code.
+    let html = markdown.replace(/```javascript\n([\s\S]*?)```/g, (match, code) => {
+      // Basic HTML escaping for security
+      const escapedCode = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const formattedCode = `<div class="mockup-code my-2 text-sm"><pre><code>${escapedCode}</code></pre></div>`;
+      const placeholder = `__CODE_BLOCK_${codeBlocks.length}__`;
+      codeBlocks.push(formattedCode);
+      return placeholder;
+    });
+
+    // Step 2: Process the rest of the markdown text.
+    html = html.replace(/### (.*)/g, '<h3 class="text-xl font-bold mt-4 mb-2">$1</h3>');
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="link link-primary">$1</a>');
+    html = html.replace(/`([^`]+)`/g, '<code class="bg-base-300 px-1 rounded-md text-sm">$1</code>');
+    html = html.replace(/\n/g, '<br />');
+    
+    // Step 3: Re-insert the formatted code blocks back into the HTML.
+    codeBlocks.forEach((block, index) => {
+        html = html.replace(`__CODE_BLOCK_${index}__`, block);
+    });
+
+    return html;
+  };
+
   useEffect(() => {
     if (isOpen) {
       dialogRef.current?.showModal();
@@ -24,8 +54,7 @@ const ExplanationModal: React.FC<ExplanationModalProps> = ({ isOpen, onClose, pr
 
         const solverFunction = solvers[problem.id];
         if (!solverFunction) {
-            const errorMsg = `<div class="text-error">Could not find solver function for this problem.</div>`;
-            setExplanation(errorMsg);
+            setExplanation('<div class="text-error">Could not find solver function for this problem.</div>');
             setIsLoading(false);
             return;
         }
@@ -34,14 +63,33 @@ const ExplanationModal: React.FC<ExplanationModalProps> = ({ isOpen, onClose, pr
         
         getAIExplanation(problem, solutionCode)
           .then(res => {
-            // Simple markdown-to-HTML conversion
-            let html = res.replace(/### (.*)/g, '<h3 class="text-xl font-bold mt-4 mb-2">$1</h3>');
-            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-            html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="link link-primary">$1</a>');
-            html = html.replace(/`([^`]+)`/g, '<code class="bg-base-300 px-1 rounded-md text-sm">$1</code>');
-            setExplanation(html);
+            setExplanation(renderMarkdown(res));
           })
-          .catch(err => setExplanation(`<div class="text-error">Failed to load explanation. ${err.message}</div>`))
+          .catch(err => {
+            console.warn("Live AI explanation failed, falling back to static version. Error:", err.message);
+            const fallbackExplanation = staticExplanations[problem.id];
+            
+            if (fallbackExplanation) {
+                const fallbackHtml = renderMarkdown(fallbackExplanation);
+                const finalHtml = `
+                    ${fallbackHtml}
+                    <div class="alert alert-info text-sm mt-6">
+                        <div>
+                            <span><strong>Note:</strong> A live AI explanation could not be generated (this is expected on local machines). Displaying a high-quality, pre-written explanation instead.</span>
+                        </div>
+                    </div>
+                `;
+                setExplanation(finalHtml);
+            } else {
+                 const errorHtml = `
+                    <div class="alert alert-error">
+                        <h3 class="font-bold">Explanation Unavailable</h3>
+                        <p>A live AI explanation could not be generated, and a pre-written fallback could not be found for this problem.</p>
+                        <p class="text-sm mt-2">Error details: ${err.message}</p>
+                    </div>`;
+                setExplanation(errorHtml);
+            }
+          })
           .finally(() => setIsLoading(false));
       }
     } else {
@@ -51,16 +99,17 @@ const ExplanationModal: React.FC<ExplanationModalProps> = ({ isOpen, onClose, pr
 
   return (
     <dialog ref={dialogRef} className="modal" onClose={onClose}>
-      <div className="modal-box w-11/12 max-w-2xl">
+      <div className="modal-box w-11/12 max-w-3xl">
         <button onClick={onClose} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         {problem && <h3 className="font-bold text-2xl">{problem.title}</h3>}
         <div className="py-4">
           {isLoading ? (
-            <div className="flex justify-center items-center h-48">
+            <div className="flex flex-col justify-center items-center h-64">
               <span className="loading loading-lg loading-spinner text-primary"></span>
+              <p className="mt-4 text-base-content/70">Attempting to generate live AI explanation...</p>
             </div>
           ) : (
-            <div className="prose max-w-none whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: explanation }} />
+            <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: explanation }} />
           )}
         </div>
         <div className="modal-action">

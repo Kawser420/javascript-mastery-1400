@@ -1,13 +1,45 @@
 import { GoogleGenAI } from "@google/genai";
 import type { Problem } from '../types';
 
-if (!process.env.API_KEY) {
-    // In a real production app, this check might be more robust or handled differently.
-    // For this context, we assume the environment variable is set.
-    console.warn("API_KEY environment variable is not set. AI features will not work.");
+// Custom error for easy identification in UI components
+export class ApiKeyMissingError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ApiKeyMissingError';
+  }
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Custom error for running in an unsupported local file environment
+export class UnsupportedEnvironmentError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'UnsupportedEnvironmentError';
+  }
+}
+
+
+let ai: GoogleGenAI | null = null;
+
+/**
+ * Lazily initializes and returns the GoogleGenAI client instance.
+ * Throws specific errors if the environment is unsupported or the API key is missing.
+ */
+function getAiInstance(): GoogleGenAI {
+    // Check for the unsupported file:/// protocol, which is the root cause of local failures.
+    if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
+        throw new UnsupportedEnvironmentError("AI features are disabled when running from a local file (file:///) due to browser security restrictions (CORS).");
+    }
+
+    if (ai) return ai;
+
+    // The polyfill in index.html ensures process.env exists.
+    if (!process.env.API_KEY) {
+        throw new ApiKeyMissingError("API_KEY is not configured in this environment.");
+    }
+
+    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    return ai;
+}
 
 const advancedSystemInstruction = `
 You are an elite JavaScript tutor and mentor, not just a simple chatbot. Your name is "Alex". 
@@ -30,9 +62,9 @@ Follow these principles strictly:
  * @returns The AI's text response.
  */
 export const getAIResponse = async (prompt: string): Promise<string> => {
-    if (!process.env.API_KEY) return "API key not configured. The AI assistant is offline.";
     try {
-        const response = await ai.models.generateContent({
+        const genAI = getAiInstance();
+        const response = await genAI.models.generateContent({
             model: 'gemini-2.5-flash',
             contents: prompt,
             config: {
@@ -41,6 +73,10 @@ export const getAIResponse = async (prompt: string): Promise<string> => {
         });
         return response.text;
     } catch (error) {
+        // Re-throw specific errors to be handled by the UI
+        if (error instanceof ApiKeyMissingError || error instanceof UnsupportedEnvironmentError) {
+            throw error;
+        }
         console.error("Error getting AI response:", error);
         throw new Error("Failed to communicate with the AI service.");
     }
@@ -53,40 +89,44 @@ export const getAIResponse = async (prompt: string): Promise<string> => {
  * @returns The AI's explanation formatted in markdown.
  */
 export const getAIExplanation = async (problem: Problem, solutionCode: string): Promise<string> => {
-     if (!process.env.API_KEY) return "API key not configured. The AI explainer is offline.";
-    const prompt = `
-        Please provide a detailed, beginner-friendly explanation for the following JavaScript problem and its solution.
-        The goal is to educate, so be clear, concise, and thorough.
-
-        **Problem Title:** ${problem.title}
-        **Problem Description:** ${problem.description}
-
-        **Solution Code:**
-        \`\`\`javascript
-        ${solutionCode}
-        \`\`\`
-
-        Structure your explanation with the following sections using markdown:
-        ### 💡 Problem Breakdown
-        Explain the core concept and what the problem is asking for in simple terms. Break down the requirements.
-
-        ### ⚙️ Solution Walkthrough
-        Go through the provided solution code line-by-line or block-by-block, explaining what each part does and why it's necessary. Use code snippets for clarity.
-
-        ### 📚 Key Concepts
-        List and briefly explain any important JavaScript concepts or methods used in the solution (e.g., \`Array.prototype.map\`, recursion, closures, etc.).
-
-        ### 🔄 Alternative Approaches (Optional)
-        If there are other common ways to solve this problem, briefly mention them and their trade-offs (e.g., performance, readability).
-    `;
-
     try {
-        const response = await ai.models.generateContent({
+        const genAI = getAiInstance();
+        const prompt = `
+            Please provide a detailed, beginner-friendly explanation for the following JavaScript problem and its solution.
+            The goal is to educate, so be clear, concise, and thorough.
+
+            **Problem Title:** ${problem.title}
+            **Problem Description:** ${problem.description}
+
+            **Solution Code:**
+            \`\`\`javascript
+            ${solutionCode}
+            \`\`\`
+
+            Structure your explanation with the following sections using markdown:
+            ### 💡 Problem Breakdown
+            Explain the core concept and what the problem is asking for in simple terms. Break down the requirements.
+
+            ### ⚙️ Solution Walkthrough
+            Go through the provided solution code line-by-line or block-by-block, explaining what each part does and why it's necessary. Use code snippets for clarity.
+
+            ### 📚 Key Concepts
+            List and briefly explain any important JavaScript concepts or methods used in the solution (e.g., \`Array.prototype.map\`, recursion, closures, etc.).
+
+            ### 🔄 Alternative Approaches (Optional)
+            If there are other common ways to solve this problem, briefly mention them and their trade-offs (e.g., performance, readability).
+        `;
+
+        const response = await genAI.models.generateContent({
             model: 'gemini-2.5-flash',
             contents: prompt,
         });
         return response.text;
     } catch (error) {
+        // Re-throw specific errors to be handled by the UI
+        if (error instanceof ApiKeyMissingError || error instanceof UnsupportedEnvironmentError) {
+            throw error;
+        }
         console.error("Error getting AI explanation:", error);
         throw new Error("Failed to generate an explanation from the AI service.");
     }

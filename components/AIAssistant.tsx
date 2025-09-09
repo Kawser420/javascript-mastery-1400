@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { ChatMessage } from '../types';
-import { getAIResponse } from '../services/geminiService';
+import { getAIResponse, ApiKeyMissingError, UnsupportedEnvironmentError } from '../services/geminiService';
 
 const Message: React.FC<{ message: ChatMessage }> = ({ message }) => {
   const parts = message.text.split(/(```[\s\S]*?```)/g);
@@ -54,9 +54,23 @@ const AIAssistant: React.FC = () => {
       const aiMessage: ChatMessage = { sender: 'ai', text: aiResponseText };
       setMessages(prev => [...prev, aiMessage]);
     } catch (error) {
-      const errorMessage: ChatMessage = { sender: 'ai', text: "Sorry, I'm having trouble connecting. Please try again later." };
-      setMessages(prev => [...prev, errorMessage]);
-      console.error("AI Assistant Error:", error);
+        let errorMessageText = '';
+        if (error instanceof UnsupportedEnvironmentError) {
+             errorMessageText = `**AI Features Disabled in This Environment**
+            \nFor security reasons, browsers block AI requests when a project is opened directly as a local file (\`file:///\`).
+            \n**To enable AI features, you must serve this project from a local web server.**
+            \nDon't worry, it's easy! Here are two popular options:
+            \n1.  **Using VS Code's "Live Server" Extension:** The easiest way. Just install the extension and click "Go Live".
+            \n2.  **Using Node.js:** If you have Node.js, run \`npx serve\` in the project folder.
+            \nOnce you're running the project on \`http://localhost:...\`, the AI features will work correctly.`;
+        } else if (error instanceof ApiKeyMissingError) {
+            errorMessageText = "**AI Feature Disabled:** This feature requires a valid API key. It seems the `API_KEY` is not configured correctly in your environment. The AI features will work correctly in a properly configured hosted environment.";
+        } else {
+            console.error("AI Assistant Error:", error);
+            errorMessageText = `**Error:** I couldn't get a response. This might be due to a missing/invalid API key or a network issue. Please ensure the app is configured correctly.`;
+        }
+        const errorMessage: ChatMessage = { sender: 'ai', text: errorMessageText };
+        setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
