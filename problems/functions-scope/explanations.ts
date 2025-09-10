@@ -1,9 +1,8 @@
-
 // This file MUST be pure JavaScript. No imports, no types.
 
 // FIX: Cast window to any to attach property in non-module script context.
 (window as any).functionsScopeExplanations = {
-    'simple-function-return': `
+  "simple-function-return": `
 ### 💡 Problem Breakdown
 This is the most basic form of a function. The goal is to define a reusable block of code that, when called, performs a simple action: returning a specific string of text.
 
@@ -22,9 +21,9 @@ greet();
 
 ### 📚 Key Concepts
 -   **Function Declaration**: A traditional way to define a function using the \`function\` keyword.
--   **`return` Statement**: Ends function execution and specifies a value to be returned.
+-   **\`return\` Statement**: Ends function execution and specifies a value to be returned.
 `,
-    'arrow-function-syntax': `
+  "arrow-function-syntax": `
 ### 💡 Problem Breakdown
 The goal is to perform a simple calculation using the modern ES6 arrow function syntax. Arrow functions provide a more concise way to write functions.
 
@@ -43,5 +42,5 @@ square(9);
 -   **Arrow Function**: A compact alternative to a traditional function expression.
 -   **Implicit Return**: A feature of arrow functions where a single-expression body automatically returns its result.
 `,
-    // Add ALL 50 valid explanations here...
+  // Add other explanations following the same escaping pattern
 };

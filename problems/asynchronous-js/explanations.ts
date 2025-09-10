@@ -1,8 +1,5 @@
-
-
-
 export const explanations: Record<string, string> = {
-    'fetch-api-data': `
+  "fetch-api-data": `
 ### 💡 Problem Breakdown
 The task is to retrieve data from an external source over the network. This is a core part of modern web development. We'll use the browser's built-in \`fetch\` API, which is a modern, promise-based mechanism for making web requests. The function needs to handle the asynchronous nature of this operation—we don't get the data back instantly.
 
@@ -29,7 +26,7 @@ The solution uses \`async/await\` syntax to handle the promise returned by \`fet
 -   **Fetch API**: A modern browser interface for making network requests.
 -   **\`async/await\`**: Syntactic sugar built on top of promises, making asynchronous code look and behave more like synchronous code, which is often easier to read and reason about.
 `,
-    'async-await-syntax': `
+  "async-await-syntax": `
 ### 💡 Problem Breakdown
 This is a reinforcement of the previous problem, focusing specifically on writing robust asynchronous code with proper error handling. The goal is to use \`async/await\` along with a \`try...catch\` block to gracefully handle potential failures, such as a network error or an invalid URL.
 
@@ -59,9 +56,9 @@ The core logic is wrapped in a \`try...catch\` block.
 ### 📚 Key Concepts
 -   **Error Handling**: The practice of anticipating and responding to errors in a program.
 -   **\`try...catch\` Statement**: A fundamental error-handling mechanism in JavaScript. It allows you to test a block of code for errors and execute a separate block of code to handle them.
--   **The `throw` Statement**: Creates a user-defined exception that can be caught by a \`try...catch\` block.
+-   **The \\\`throw\\\` Statement**: Creates a user-defined exception that can be caught by a \\\`try...catch\\\` block.
 `,
-    'settimeout-callback': `
+  "settimeout-callback": `
 ### 💡 Problem Breakdown
 This problem demonstrates one of the most basic asynchronous functions in JavaScript: \`setTimeout\`. The goal is to execute a piece of code, but not immediately—only after a specified amount of time has passed. This illustrates the non-blocking nature of JavaScript.
 
@@ -91,7 +88,7 @@ To make \`setTimeout\` (which is callback-based) work nicely with our async prob
 -   **Callback Functions**: A function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 -   **Promisifying**: The pattern of wrapping a callback-based API inside a Promise to make it compatible with modern \`async/await\` syntax.
 `,
-    'promise-chaining': `
+  "promise-chaining": `
 ### 💡 Problem Breakdown
 The goal is to perform a sequence of asynchronous steps, where each step depends on the result of the previous one. This is a common scenario, for example: 1. Fetch a user ID, 2. Then, use the ID to fetch user details, 3. Then, use user details to fetch their posts. Promise chaining with \`.then()\` is the classic way to handle this.
 
