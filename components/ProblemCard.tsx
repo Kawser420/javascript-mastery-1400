@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import type { Problem } from '../types';
-import { solveProblem } from '../utils/problemSolver';
+// FIX: Removed import from non-module script. `solveProblem` is globally available.
 
 interface ProblemCardProps {
   problem: Problem;

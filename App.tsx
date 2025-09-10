@@ -9,7 +9,9 @@ import Footer from './components/Footer';
 import LoginModal from './components/LoginModal';
 import SignupModal from './components/SignupModal';
 import ExplanationModal from './components/ExplanationModal';
-import { Problem } from './types';
+import { Problem, Category } from './types';
+// FIX: Imported the Sidebar component.
+import Sidebar from './components/Sidebar';
 
 export const availableThemes = [
   'light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate', 'synthwave', 'retro', 'cyberpunk', 'valentine', 'halloween', 'garden', 'forest', 'aqua', 'lofi', 'pastel', 'fantasy', 'wireframe', 'black', 'luxury', 'dracula', 'cmyk', 'autumn', 'business', 'acid', 'lemonade', 'night', 'coffee', 'winter',
@@ -24,6 +26,8 @@ const App: React.FC = () => {
   const [isExplanationLoading, setIsExplanationLoading] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [username, setUsername] = useState('');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -63,32 +67,48 @@ const App: React.FC = () => {
     setSignupModalOpen(true);
   };
   
-  // FIX: Removed unused and buggy async call to `solveProblem`.
-  // The ExplanationModal component is self-contained and fetches its own explanation.
   const openExplanationModal = (problem: Problem) => {
     setExplanationContent({ problem, solution: '', explanation: '' });
     setIsExplanationLoading(true);
     setExplanationModalOpen(true);
   };
 
+  const categoryGroups: Record<string, Category[]> = {
+    'Fundamentals': ['Beginner Basics', 'Functions & Scope', 'Arrays & Strings', 'Objects & Prototypes'],
+    'Core Concepts': ['ES6+ Features', 'Closures & Lexical Environment', 'Recursion', 'Classes & OOP'],
+    'Asynchronous JS': ['Asynchronous JS', 'Web APIs & DOM', 'Event Handling & Propagation'],
+    'Advanced Topics': ['Functional Programming', 'Data Structures', 'Algorithms', 'Advanced JS Features'],
+    'Ecosystem & Practices': ['Error Handling & Debugging', 'Modules & Imports/Exports', 'Testing & Performance', 'Node.js & Backend JS'],
+  };
+
+
   return (
-    <div className="min-h-screen bg-base-100">
-      <Header
-        currentTheme={theme}
-        setTheme={setTheme}
-        onLoginClick={openLoginModal}
-        onSignupClick={openSignupModal}
-        isAuthenticated={isAuthenticated}
-        username={username}
-        onLogout={handleLogout}
+    <div className="flex min-h-screen bg-base-100">
+       <Sidebar
+        categoryGroups={categoryGroups}
+        isOpen={isSidebarOpen}
+        setIsOpen={setIsSidebarOpen}
       />
-      <main>
-        <Hero />
-        <Problems onExplain={openExplanationModal} />
-        <Calculator />
-        <AIAssistant />
-      </main>
-      <Footer />
+      <div className="flex-1 flex flex-col">
+          <Header
+            currentTheme={theme}
+            setTheme={setTheme}
+            onLoginClick={openLoginModal}
+            onSignupClick={openSignupModal}
+            isAuthenticated={isAuthenticated}
+            username={username}
+            onLogout={handleLogout}
+            onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+          />
+          <main className="flex-1">
+            <Hero />
+            <Problems onExplain={openExplanationModal} />
+            <Calculator />
+            <AIAssistant />
+          </main>
+          <Footer />
+      </div>
+
       <LoginModal
         isOpen={isLoginModalOpen}
         onClose={() => setLoginModalOpen(false)}

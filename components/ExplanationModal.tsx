@@ -1,8 +1,8 @@
+
 import React, { useEffect, useRef, useState } from 'react';
-import { getAIExplanation } from '../services/geminiService';
+// FIX: Removed import from non-module script. `getAIExplanation` is globally available.
 import { Problem } from '../types';
-import { solvers } from '../utils/problemSolver';
-import { staticExplanations } from '../data/explanations'; // Import the static fallbacks
+import { allSolvers, staticExplanations } from '../problems';
 
 interface ExplanationModalProps {
   isOpen: boolean;
@@ -17,32 +17,28 @@ const ExplanationModal: React.FC<ExplanationModalProps> = ({ isOpen, onClose, pr
   const [explanation, setExplanation] = useState('');
 
   const renderMarkdown = (markdown: string) => {
-    const codeBlocks: string[] = [];
-    
-    // Step 1: Extract code blocks and replace them with a placeholder.
-    // This prevents the main text formatting from affecting the code.
-    let html = markdown.replace(/```javascript\n([\s\S]*?)```/g, (match, code) => {
-      // Basic HTML escaping for security
-      const escapedCode = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-      const formattedCode = `<div class="mockup-code my-2 text-sm"><pre><code>${escapedCode}</code></pre></div>`;
-      const placeholder = `__CODE_BLOCK_${codeBlocks.length}__`;
-      codeBlocks.push(formattedCode);
-      return placeholder;
+    // Split by code blocks, keeping the code blocks in the result array
+    const parts = markdown.split(/(```javascript\n[\s\S]*?```)/g);
+
+    const htmlParts = parts.map(part => {
+        if (part.startsWith('```javascript')) {
+            // Handle code blocks
+            const code = part.replace(/```javascript\n|```/g, '').trim();
+            // Escape HTML entities in the code to be safe
+            const escapedCode = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return `<div class="mockup-code my-2 text-sm"><pre><code>${escapedCode}</code></pre></div>`;
+        } else {
+            // Handle regular text
+            let html = part.replace(/### (.*)/g, '<h3 class="text-xl font-bold mt-4 mb-2">$1</h3>');
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="link link-primary">$1</a>');
+            html = html.replace(/`([^`]+)`/g, '<code class="bg-base-300 px-1 rounded-md text-sm">$1</code>');
+            html = html.replace(/\n/g, '<br />'); // Only replace newlines in non-code parts
+            return html;
+        }
     });
 
-    // Step 2: Process the rest of the markdown text.
-    html = html.replace(/### (.*)/g, '<h3 class="text-xl font-bold mt-4 mb-2">$1</h3>');
-    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="link link-primary">$1</a>');
-    html = html.replace(/`([^`]+)`/g, '<code class="bg-base-300 px-1 rounded-md text-sm">$1</code>');
-    html = html.replace(/\n/g, '<br />');
-    
-    // Step 3: Re-insert the formatted code blocks back into the HTML.
-    codeBlocks.forEach((block, index) => {
-        html = html.replace(`__CODE_BLOCK_${index}__`, block);
-    });
-
-    return html;
+    return htmlParts.join('');
   };
 
   useEffect(() => {
@@ -52,7 +48,7 @@ const ExplanationModal: React.FC<ExplanationModalProps> = ({ isOpen, onClose, pr
         setExplanation('');
         setIsLoading(true);
 
-        const solverFunction = solvers[problem.id];
+        const solverFunction = allSolvers[problem.id];
         if (!solverFunction) {
             setExplanation('<div class="text-error">Could not find solver function for this problem.</div>');
             setIsLoading(false);

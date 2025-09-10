@@ -1,0 +1,4 @@
+export const solvers: Record<string, Function> = {
+    'es6-modules-conceptual': () => `// In file: math.js\nexport const add = (a, b) => a + b;\nexport const subtract = (a, b) => a - b;\n\n// In file: main.js\nimport { add } from './math.js';\nconsole.log(add(5, 3)); // 8`,
+    'named-vs-default-export': () => `// --- Using Named Exports ---\n// utils.js\nexport const func1 = () => {};\nexport const func2 = () => {};\n\n// main.js\nimport { func1, func2 } from './utils.js';\n\n// --- Using a Default Export ---\n// MyClass.js\nexport default class MyClass {} \n\n// main.js\nimport AnyNameYouWant from './MyClass.js';`,
+};

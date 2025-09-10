@@ -21,9 +21,10 @@
 {
   "imports": {
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0",
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1"
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "g-genai": "https://aistudiocdn.com/@google/genai@^1.17.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
   }
 }
 </script>
@@ -36,6 +37,10 @@
       if (typeof window.process === 'undefined') {
         window.process = { env: { API_KEY: undefined } };
       }
+    </script>
+    <script type="module">
+        import { GoogleGenAI } from "g-genai";
+        window.GoogleGenAI = GoogleGenAI;
     </script>
     <script type="module" src="/index.tsx"></script>
   </body>

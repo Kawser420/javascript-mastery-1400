@@ -1,6 +1,7 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import type { ChatMessage } from '../types';
-import { getAIResponse, ApiKeyMissingError, UnsupportedEnvironmentError } from '../services/geminiService';
+// FIX: Removed import from non-module script. Functions/classes are globally available.
 
 const Message: React.FC<{ message: ChatMessage }> = ({ message }) => {
   const parts = message.text.split(/(```[\s\S]*?```)/g);
@@ -30,7 +31,7 @@ const Message: React.FC<{ message: ChatMessage }> = ({ message }) => {
 
 const AIAssistant: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { sender: 'ai', text: "Hi there! I'm your JavaScript assistant, powered by Gemini. Ask me to explain a concept, debug your code, or solve a problem!" }
+    { sender: 'ai', text: "Welcome! I'm Master JS, your personal AI mentor. My goal is to help you achieve true JavaScript mastery. Ask me to explain a concept, debug your code, or even suggest which problem to tackle next!" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
