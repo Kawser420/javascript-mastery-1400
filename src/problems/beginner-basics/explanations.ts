@@ -1,7 +1,5 @@
-
-
 export const explanations: Record<string, string> = {
-  'say-hello': `
+  "say-hello": `
 ### 💡 Problem Breakdown
 The goal is to create a simple function that takes a person's name as input and produces a personalized greeting message. This is a fundamental exercise in understanding function parameters and string manipulation.
 
@@ -20,7 +18,7 @@ const greet = (name) => \`Hello, \${name}!\`;
 -   **Parameters**: Variables listed as a part of a function definition.
 -   **Template Literals**: A modern way to create strings in JavaScript that allows for embedded expressions.
 `,
-  'sum-two-numbers': `
+  "sum-two-numbers": `
 ### 💡 Problem Breakdown
 This is a basic arithmetic problem designed to test your ability to write a function that accepts numerical inputs, performs a calculation, and returns the result.
 
@@ -38,7 +36,7 @@ const sum = (num1, num2) => Number(num1) + Number(num2);
 -   **Arithmetic Operators**: Symbols that perform mathematical operations, like addition (\`+\`).
 -   **Type Conversion**: Explicitly converting values from one type to another (e.g., string to number) to prevent unexpected behavior.
 `,
-'subtract-numbers': `
+  "subtract-numbers": `
 ### 💡 Problem Breakdown
 This problem requires creating a function to find the difference between two numbers. It reinforces the understanding of basic arithmetic operations and function parameters.
 
@@ -56,7 +54,7 @@ const subtract = (num1, num2) => Number(num1) - Number(num2);
 -   **Functions**: Reusable blocks of code that perform a specific task.
 -   **Arithmetic Operators**: The subtraction operator (\`-\`) is a fundamental arithmetic operator.
 `,
-'simple-multiplication': `
+  "simple-multiplication": `
 ### 💡 Problem Breakdown
 This exercise focuses on creating a function to multiply two numbers. It is a core skill in programming, dealing with numeric data and basic calculations.
 
@@ -74,7 +72,7 @@ const multiply = (num1, num2) => Number(num1) * Number(num2);
 -   **Return Statement**: A function can return a value back to the calling code.
 -   **Arithmetic Operators**: The multiplication operator (\`*\`) is essential for mathematical calculations.
 `,
-'simple-division': `
+  "simple-division": `
 ### 💡 Problem Breakdown
 The task is to write a function that divides one number by another. An important part of this problem is handling the edge case of division by zero, which is mathematically undefined and results in \`Infinity\` in JavaScript.
 
@@ -97,7 +95,7 @@ const divide = (dividend, divisor) => {
 -   **Conditional Statements (\`if\`)**: Used to execute code based on a specific condition.
 -   **Edge Cases**: Scenarios that can cause problems if not specifically handled, like division by zero.
 `,
-'find-remainder': `
+  "find-remainder": `
 ### 💡 Problem Breakdown
 This problem introduces the modulo operator (\`%\`). The goal is to find the remainder left over after dividing one integer by another. For example, 10 divided by 3 is 3 with a remainder of 1.
 
@@ -114,7 +112,7 @@ const findRemainder = (dividend, divisor) => Number(dividend) % Number(divisor);
 -   **Modulo Operator**: A binary operator that yields the integer remainder of a division.
 -   **Integer Arithmetic**: Operations that deal with whole numbers.
 `,
-'exponentiation': `
+  exponentiation: `
 ### 💡 Problem Breakdown
 The task is to calculate a number raised to the power of another (e.g., 2 to the power of 3 is 2 * 2 * 2 = 8). This is a common mathematical operation.
 
@@ -137,7 +135,7 @@ const powerES6 = (base, exponent) => Number(base) ** Number(exponent);
 -   **\`Math\` Object**: A built-in object that has properties and methods for mathematical constants and functions.
 -   **Exponentiation**: The operation of raising a number to a power.
 `,
-'increment-number': `
+  "increment-number": `
 ### 💡 Problem Breakdown
 This is a very basic but common operation: increasing a number's value by one.
 
@@ -158,7 +156,7 @@ const incrementPrefix = (num) => ++num;
 ### 📚 Key Concepts
 -   **Unary Operators**: Operators that work on a single operand, like the increment operator.
 `,
-'decrement-number': `
+  "decrement-number": `
 ### 💡 Problem Breakdown
 The opposite of incrementing, this task involves decreasing a number's value by one.
 
@@ -179,7 +177,7 @@ const decrementPrefix = (num) => --num;
 ### 📚 Key Concepts
 -   **Unary Operators**: The decrement operator is another example of a unary operator.
 `,
-'string-length': `
+  "string-length": `
 ### 💡 Problem Breakdown
 The goal is to determine the number of characters in a string. This is a fundamental property of strings.
 
@@ -194,7 +192,7 @@ const getLength = (str) => str.length;
 ### 📚 Key Concepts
 -   **Properties**: Values associated with a JavaScript object. Even primitive types like strings can have properties and methods.
 `,
-'get-first-character': `
+  "get-first-character": `
 ### 💡 Problem Breakdown
 The task is to extract the first character from a string. This introduces the concept of accessing individual characters in a string by their index.
 
@@ -210,7 +208,7 @@ const getFirstChar = (str) => str[0];
 ### 📚 Key Concepts
 -   **Indexing**: Accessing elements in a sequence (like a string or array) using their numerical position.
 `,
-'get-last-character': `
+  "get-last-character": `
 ### 💡 Problem Breakdown
 This is slightly more complex than getting the first character. The task is to extract the last character of a string, which requires knowing the string's length.
 
@@ -226,7 +224,7 @@ const getLastChar = (str) => str[str.length - 1];
 ### 📚 Key Concepts
 -   **Dynamic Indexing**: Using a calculation (\`str.length - 1\`) to determine the index to access.
 `,
-'concatenate-strings': `
+  "concatenate-strings": `
 ### 💡 Problem Breakdown
 The task is to join two or more strings together to form a single, longer string. This process is called concatenation.
 
@@ -242,7 +240,7 @@ const combine = (str1, str2) => str1 + str2;
 -   **String Concatenation**: The operation of joining character strings end-to-end.
 -   **Operator Overloading**: When an operator has different meanings depending on the data types of its operands.
 `,
-'number-to-string': `
+  "number-to-string": `
 ### 💡 Problem Breakdown
 This problem focuses on explicit type conversion. The goal is to take a number and convert it into its string representation.
 
@@ -257,7 +255,7 @@ const convertToString = (num) => String(num);
 ### 📚 Key Concepts
 -   **Type Conversion**: The process of converting data from one type to another. It can be explicit (done by the programmer) or implicit (done automatically by JavaScript).
 `,
-'string-to-number': `
+  "string-to-number": `
 ### 💡 Problem Breakdown
 The opposite of the previous problem, this task is about converting a string that looks like a number into an actual numeric data type.
 
@@ -273,7 +271,7 @@ const convertToNumber = (str) => Number(str);
 -   **Parsing**: The process of analyzing a string of symbols to determine its grammatical structure. Here, we're parsing a string to see if it represents a valid number.
 -   **\`NaN\`**: A special value in JavaScript that represents "Not a Number".
 `,
-'get-data-type': `
+  "get-data-type": `
 ### 💡 Problem Breakdown
 The task is to determine the underlying data type of a given variable. This is a fundamental debugging and logic tool.
 
@@ -291,7 +289,7 @@ const getDataType = (value) => typeof value;
 -   **Data Types**: The fundamental classification of data, such as string, number, boolean, object, etc.
 -   **\`typeof\` Operator**: A built-in operator for checking the data type of a variable.
 `,
-'boolean-true-false': `
+  "boolean-true-false": `
 ### 💡 Problem Breakdown
 This is a very simple exercise to reinforce the concept of boolean values, which are fundamental to logic and control flow. The function should simply return the boolean literal \`true\`.
 
@@ -306,7 +304,7 @@ const returnTrue = () => true;
 ### 📚 Key Concepts
 -   **Booleans**: A primitive data type that can have only two values: \`true\` or \`false\`.
 `,
-'strict-equality': `
+  "strict-equality": `
 ### 💡 Problem Breakdown
 This problem highlights the difference between strict and loose equality. The task is to compare two values using the strict equality operator (\`===\`), which checks for both equal value AND equal data type.
 
@@ -323,7 +321,7 @@ const strictCheck = (val1, val2) => val1 === val2;
 -   **Equality Operators**: Symbols used to compare values.
 -   **Type Coercion**: The automatic conversion of values from one data type to another. Strict equality avoids this.
 `,
-'loose-equality': `
+  "loose-equality": `
 ### 💡 Problem Breakdown
 This problem demonstrates the loose equality operator (\`==\`). This operator compares two values for equality *after* converting both values to a common type. This can lead to unexpected results and is generally discouraged in favor of strict equality.
 
@@ -339,7 +337,7 @@ const looseCheck = (val1, val2) => val1 == val2;
 ### 📚 Key Concepts
 -   **Type Coercion**: The main concept demonstrated here. While sometimes useful, implicit coercion can hide bugs.
 `,
-'is-greater-than': `
+  "is-greater-than": `
 ### 💡 Problem Breakdown
 This problem involves using a comparison operator to determine if one number is larger than another. This is fundamental to sorting, validation, and conditional logic.
 
@@ -355,7 +353,7 @@ const isLarger = (num1, num2) => Number(num1) > Number(num2);
 ### 📚 Key Concepts
 -   **Comparison Operators**: Operators that compare their operands and return a boolean value based on whether the comparison is true.
 `,
-'logical-and': `
+  "logical-and": `
 ### 💡 Problem Breakdown
 This problem introduces logical operators. The logical AND (\`&&\`) operator is used to check if two or more conditions are all true simultaneously.
 
@@ -373,7 +371,7 @@ const canDrive = (age, hasLicense) => age >= 18 && hasLicense === true;
 -   **Logical Operators**: Used to combine or invert boolean values.
 -   **Boolean Logic**: A system of logic that deals with true and false values.
 `,
-'logical-or': `
+  "logical-or": `
 ### 💡 Problem Breakdown
 This problem demonstrates the logical OR (\`||\`) operator. It's used to check if at least one of several conditions is true.
 
@@ -391,7 +389,7 @@ const canEdit = (isAdmin, isOwner) => isAdmin === true || isOwner === true;
 -   **Logical Operators**: The OR operator is a key component of boolean logic.
 -   **Short-circuiting**: Logical operators in JavaScript use short-circuit evaluation. For OR, if the first operand is true, the second is not even evaluated.
 `,
-'logical-not': `
+  "logical-not": `
 ### 💡 Problem Breakdown
 The task is to use the logical NOT (\`!\`) operator to flip a boolean value from true to false, or false to true.
 
@@ -408,7 +406,7 @@ const invert = (value) => !value;
 -   **Unary Operators**: Operators that work on a single operand.
 -   **Truthiness**: In JavaScript, values that are not explicitly \`false\` can still be treated as false in a boolean context (e.g., \`0\`, \`""\`, \`null\`, \`undefined\`, \`NaN\`). The NOT operator can be used to check for truthiness: \`!someValue\`.
 `,
-'check-is-even': `
+  "check-is-even": `
 ### 💡 Problem Breakdown
 This is a classic problem that uses the modulo operator to determine if a number is even. An even number is any integer that is exactly divisible by 2.
 
@@ -425,7 +423,7 @@ const isEven = (num) => Number(num) % 2 === 0;
 ### 📚 Key Concepts
 -   **Modulo Operator**: A powerful tool for solving problems related to divisibility and cycles.
 `,
-'simple-if-else': `
+  "simple-if-else": `
 ### 💡 Problem Breakdown
 This problem introduces the most fundamental control flow statement: \`if...else\`. The goal is to execute one piece of code if a condition is true, and a different piece of code if it's false.
 
@@ -448,7 +446,7 @@ const checkVotingAge = (age) => {
 -   **Control Flow**: The order in which the computer executes statements in a script.
 -   **Conditional Logic**: Using statements like \`if...else\` to make decisions in your code.
 `,
-'check-is-positive': `
+  "check-is-positive": `
 ### 💡 Problem Breakdown
 This problem extends the \`if...else\` concept to include multiple conditions using \`else if\`. The function needs to differentiate between three states: positive, negative, or zero.
 
@@ -474,7 +472,7 @@ const checkNumber = (num) => {
 ### 📚 Key Concepts
 -   **Conditional Chaining**: Using \`if...else if...else\` to handle multiple, mutually exclusive conditions.
 `,
-'grade-calculator': `
+  "grade-calculator": `
 ### 💡 Problem Breakdown
 This is a practical application of \`if...else if...else\` chaining. The function must map a numerical score to a letter grade based on a series of ranges.
 
@@ -497,7 +495,7 @@ const getGrade = (score) => {
 ### 📚 Key Concepts
 -   **Logical Flow**: Structuring conditional statements in a logical order to produce the correct outcome.
 `,
-'ternary-operator-check': `
+  "ternary-operator-check": `
 ### 💡 Problem Breakdown
 The ternary operator is a concise, one-line alternative to a simple \`if...else\` statement. The task is to use this operator to return one of two messages based on a boolean condition.
 
@@ -514,7 +512,7 @@ const checkStatus = (isLoggedIn) =>
 ### 📚 Key Concepts
 -   **Ternary Operator**: The only JavaScript operator that takes three operands. It's a shortcut for an \`if\` statement.
 `,
-'is-leap-year': `
+  "is-leap-year": `
 ### 💡 Problem Breakdown
 This is a classic logic problem. A leap year follows specific rules: it must be divisible by 4, unless it's a century year (like 1900), in which case it must also be divisible by 400.
 
@@ -535,7 +533,7 @@ const isLeap = (year) => {
 -   **Complex Boolean Logic**: Combining multiple logical operators to express a complex rule.
 -   **Operator Precedence**: Understanding the order in which operators are evaluated (parentheses are used to enforce a specific order).
 `,
-'max-of-three': `
+  "max-of-three": `
 ### 💡 Problem Breakdown
 The task is to find the largest number among three given inputs. This can be solved with conditional statements or by using a built-in math function.
 
@@ -550,7 +548,7 @@ const findMax = (num1, num2, num3) => Math.max(Number(num1), Number(num2), Numbe
 ### 📚 Key Concepts
 -   **Built-in Functions**: Leveraging JavaScript's standard library to solve common problems efficiently.
 `,
-'switch-statement-day': `
+  "switch-statement-day": `
 ### 💡 Problem Breakdown
 A \`switch\` statement is an alternative to a long \`if...else if...else\` chain, particularly when you are checking a single variable against a series of specific values. The task is to map a number to a day of the week.
 
@@ -575,7 +573,7 @@ const getDay = (dayNum) => {
 ### 📚 Key Concepts
 -   **\`switch\` Statement**: A control flow statement for selecting one of many code blocks to be executed.
 `,
-'simple-for-loop': `
+  "simple-for-loop": `
 ### 💡 Problem Breakdown
 This introduces loops, which are used to execute a block of code repeatedly. The \`for\` loop is ideal when you know how many times you want to loop. The task is to generate a sequence of numbers.
 
@@ -599,7 +597,7 @@ const generateSequence = (num) => {
 -   **Loops**: Control flow statements that allow code to be executed repeatedly.
 -   **\`for\` Loop**: A loop that consists of three optional expressions, followed by a statement or a block of statements executed in the loop.
 `,
-'for-loop-sum': `
+  "for-loop-sum": `
 ### 💡 Problem Breakdown
 This is a practical application of a \`for\` loop. The task is to iterate through a range of numbers and accumulate their sum in a variable.
 
@@ -621,7 +619,7 @@ const sumUpTo = (num) => {
 ### 📚 Key Concepts
 -   **Accumulator Pattern**: A common programming pattern where you initialize a variable and then repeatedly update it inside a loop to accumulate a result.
 `,
-'for-loop-countdown': `
+  "for-loop-countdown": `
 ### 💡 Problem Breakdown
 This exercise shows that a \`for\` loop can also be used to count downwards by changing its initialization, condition, and final expression.
 
@@ -644,7 +642,7 @@ const countdown = (start) => {
 ### 📚 Key Concepts
 -   **Loop Flexibility**: The three parts of a \`for\` loop can be configured to count up, down, or in any custom increment.
 `,
-'simple-while-loop': `
+  "simple-while-loop": `
 ### 💡 Problem Breakdown
 The \`while\` loop is another type of loop. It's best used when you don't know in advance how many times you need to loop, but you know the condition that should stop it. This problem demonstrates a simple \`while\` loop.
 
@@ -670,7 +668,7 @@ const runWhile = (start) => {
 -   **\`while\` Loop**: Creates a loop that executes a block of code as long as a specified condition evaluates to true.
 -   **Infinite Loop**: A common bug where a loop's condition never becomes false, causing the program to hang.
 `,
-'access-array-element': `
+  "access-array-element": `
 ### 💡 Problem Breakdown
 Arrays are ordered collections of data. This task is about accessing a specific piece of data within an array using its numerical index.
 
@@ -693,7 +691,7 @@ const getElement = (arr, index) => {
 -   **Array**: A data structure that stores a collection of elements.
 -   **Zero-based Indexing**: The first element in an array is at index 0.
 `,
-'get-array-length': `
+  "get-array-length": `
 ### 💡 Problem Breakdown
 The goal is to find out how many elements are in an array. This is a fundamental property needed for looping and indexing.
 
@@ -708,7 +706,7 @@ const getArrayLength = (arr) => arr.length;
 ### 📚 Key Concepts
 -   **Array Properties**: Arrays are objects in JavaScript and have properties, with \`.length\` being the most common.
 `,
-'string-to-uppercase': `
+  "string-to-uppercase": `
 ### 💡 Problem Breakdown
 This is a common string manipulation task. The goal is to convert all characters in a string to their uppercase equivalents.
 
@@ -724,7 +722,7 @@ const toUpper = (str) => str.toUpperCase();
 -   **String Methods**: JavaScript provides a rich set of built-in methods for working with strings.
 -   **Immutability**: String methods like \`.toUpperCase()\` do not change the original string; they return a new one.
 `,
-'string-to-lowercase': `
+  "string-to-lowercase": `
 ### 💡 Problem Breakdown
 The opposite of the previous problem, this task involves converting all characters in a string to their lowercase equivalents.
 
@@ -740,7 +738,7 @@ const toLower = (str) => str.toLowerCase();
 -   **String Methods**: Part of the standard library for string manipulation.
 -   **Case-Insensitive Comparison**: Converting strings to the same case (usually lowercase) is a common technique for performing case-insensitive comparisons.
 `,
-'string-includes': `
+  "string-includes": `
 ### 💡 Problem Breakdown
 The task is to check if a smaller string (a substring) exists within a larger string. This is a common requirement for searching and filtering text.
 
@@ -757,7 +755,7 @@ const checkSubstring = (mainStr, subStr) => mainStr.includes(subStr);
 -   **Substring**: A contiguous sequence of characters within a string.
 -   **String Searching**: The process of finding occurrences of a pattern or substring within a larger string.
 `,
-'area-of-rectangle': `
+  "area-of-rectangle": `
 ### 💡 Problem Breakdown
 This is a practical problem that applies basic arithmetic. The goal is to calculate the area of a rectangle using the formula: Area = width × height.
 
@@ -772,7 +770,7 @@ const calculateArea = (width, height) => Number(width) * Number(height);
 ### 📚 Key Concepts
 -   **Problem Solving**: Translating a real-world problem or formula into code.
 `,
-'celsius-to-fahrenheit': `
+  "celsius-to-fahrenheit": `
 ### 💡 Problem Breakdown
 This is a formula-based conversion problem. The task is to convert a temperature from the Celsius scale to the Fahrenheit scale.
 
@@ -787,7 +785,7 @@ const convertToF = (celsius) => (Number(celsius) * 9 / 5) + 32;
 ### 📚 Key Concepts
 -   **Operator Precedence**: The order in which operators are evaluated in a mathematical expression.
 `,
-'fahrenheit-to-celsius': `
+  "fahrenheit-to-celsius": `
 ### 💡 Problem Breakdown
 This is the reverse of the previous problem: converting a temperature from Fahrenheit to Celsius.
 
@@ -802,7 +800,7 @@ const convertToC = (fahrenheit) => (Number(fahrenheit) - 32) * 5 / 9;
 ### 📚 Key Concepts
 -   **Order of Operations**: Using parentheses to override the default operator precedence to match a specific formula.
 `,
-'check-null': `
+  "check-null": `
 ### 💡 Problem Breakdown
 The goal is to check if a variable holds the special value \`null\`. \`null\` is a primitive value that represents the intentional absence of any object value.
 
@@ -820,7 +818,7 @@ const checkNullInput = (str) => str.toLowerCase().trim() === 'null';
 ### 📚 Key Concepts
 -   **\`null\`**: A primitive value representing the intentional absence of an object value.
 `,
-'check-undefined': `
+  "check-undefined": `
 ### 💡 Problem Breakdown
 The goal is to check if a variable has the value \`undefined\`. A variable is \`undefined\` if it has been declared but not yet assigned a value.
 
@@ -841,7 +839,7 @@ const isUndefinedTypeof = (value) => typeof value === 'undefined';
 ### 📚 Key Concepts
 -   **\`undefined\`**: A primitive value automatically assigned to variables that have just been declared.
 `,
-'string-repeat': `
+  "string-repeat": `
 ### 💡 Problem Breakdown
 The task is to create a new string by repeating an existing string a certain number of times.
 
@@ -856,7 +854,7 @@ const repeatString = (str, count) => str.repeat(Number(count));
 ### 📚 Key Concepts
 -   **String Methods**: Another example of JavaScript's powerful built-in string manipulation library.
 `,
-'string-slicing': `
+  "string-slicing": `
 ### 💡 Problem Breakdown
 The task is to extract a "slice" or portion of a string. You need to specify the starting index and the ending index (which is not included in the result).
 
@@ -871,7 +869,7 @@ const sliceStr = (str, start, end) => str.slice(Number(start), Number(end));
 ### 📚 Key Concepts
 -   **String Extraction**: Methods for creating substrings from a larger string.
 `,
-'array-join': `
+  "array-join": `
 ### 💡 Problem Breakdown
 The task is to take an array of elements and combine them into a single string. You should also be able to specify a "separator" or "delimiter" string to put between each element.
 
@@ -887,7 +885,7 @@ const joinArray = (arr, separator) => arr.join(separator);
 ### 📚 Key Concepts
 -   **Array to String Conversion**: A common operation for displaying array data in a human-readable format.
 `,
-'find-array-average': `
+  "find-array-average": `
 ### 💡 Problem Breakdown
 This is a multi-step problem. First, you need to find the sum of all numbers in an array. Second, you need to divide that sum by the number of elements in the array to find the average.
 
@@ -909,7 +907,7 @@ const getAverage = (arr) => {
 -   **Array Aggregation**: Reducing an array of values to a single summary value (like a sum or average).
 -   **\`Array.prototype.reduce()\`**: A powerful functional method for processing array elements to produce a single output.
 `,
-'absolute-value': `
+  "absolute-value": `
 ### 💡 Problem Breakdown
 The absolute value of a number is its distance from zero on the number line, which is always non-negative. For example, the absolute value of -10 is 10. The task is to write a function that calculates this.
 
@@ -926,7 +924,7 @@ const getAbsoluteValue = (num) => Math.abs(num);
 -   **\`Math\` Object**: A built-in JavaScript object that contains properties and methods for mathematical constants and functions.
 -   **Absolute Value**: A fundamental mathematical concept representing a number's magnitude without regard to its sign.
 `,
-'round-number-up': `
+  "round-number-up": `
 ### 💡 Problem Breakdown
 The task is to round a number with a decimal part *up* to the next largest whole number or integer. This is also known as finding the "ceiling" of a number.
 
@@ -943,7 +941,7 @@ const roundUp = (num) => Math.ceil(num);
 -   **Rounding**: The process of approximating a number to a nearby value.
 -   **Ceiling Function**: A mathematical function that maps a real number to the least integer greater than or equal to the number.
 `,
-'round-number-down': `
+  "round-number-down": `
 ### 💡 Problem Breakdown
 The task is to round a number with a decimal part *down* to the nearest whole number or integer. This is also known as finding the "floor" of a number.
 
@@ -960,7 +958,7 @@ const roundDown = (num) => Math.floor(num);
 -   **Rounding**: The process of approximating a number to a nearby value.
 -   **Floor Function**: A mathematical function that maps a real number to the greatest integer less than or equal to the number.
 `,
-'round-to-nearest': `
+  "round-to-nearest": `
 ### 💡 Problem Breakdown
 This is the most common type of rounding. The task is to round a number to the nearest integer. The standard rule is to round up if the decimal part is 0.5 or greater, and round down otherwise.
 
@@ -976,7 +974,7 @@ const roundNearest = (num) => Math.round(num);
 ### 📚 Key Concepts
 -   **Rounding**: Approximating a number. \`Math.round()\` is the standard method for general-purpose rounding.
 `,
-'random-integer-in-range': `
+  "random-integer-in-range": `
 ### 💡 Problem Breakdown
 The task is to generate a random whole number within a specified range, including both the minimum and maximum values. This requires using \`Math.random()\` and some arithmetic to scale and shift the result.
 
@@ -1000,7 +998,7 @@ const getRandomInt = (min, max) => {
 -   **Random Number Generation**: A common task in programming for games, simulations, and tests.
 -   **Range Scaling**: Using multiplication and addition to transform a value from one numerical range to another.
 `,
-'string-starts-with': `
+  "string-starts-with": `
 ### 💡 Problem Breakdown
 This task involves checking if a string begins with a specific sequence of characters (a substring).
 
@@ -1016,7 +1014,7 @@ const checkStart = (str, subStr) => str.startsWith(subStr);
 ### 📚 Key Concepts
 -   **String Methods**: JavaScript's standard library provides convenient methods for common string operations.
 `,
-'string-trim': `
+  "string-trim": `
 ### 💡 Problem Breakdown
 The task is to remove any "whitespace" (spaces, tabs, newlines) from the beginning and end of a string. This is a very common requirement when handling user input.
 
@@ -1031,7 +1029,7 @@ const trimString = (str) => str.trim();
 ### 📚 Key Concepts
 -   **String Sanitization**: The process of cleaning up string data, often from user input, to make it consistent and safe to process.
 `,
-'string-replace-first': `
+  "string-replace-first": `
 ### 💡 Problem Breakdown
 The goal is to find the first occurrence of a specific substring within a larger string and replace it with a new substring.
 
@@ -1047,7 +1045,7 @@ const replaceFirst = (str, target, replacement) => str.replace(target, replaceme
 ### 📚 Key Concepts
 -   **String Replacement**: A fundamental string manipulation task.
 `,
-'string-split': `
+  "string-split": `
 ### 💡 Problem Breakdown
 The task is to take a single string (like a sentence) and break it apart into an array of smaller strings (like words) based on a "delimiter" or "separator".
 
@@ -1063,7 +1061,7 @@ const splitSentence = (str) => str.split(' ');
 -   **String to Array Conversion**: A common task when you need to process the individual parts of a string.
 -   **Delimiter**: The character or string used to identify the points where the split should occur.
 `,
-'array-push': `
+  "array-push": `
 ### 💡 Problem Breakdown
 This is a fundamental array manipulation task. The goal is to add one or more elements to the very end of an existing array.
 
@@ -1081,7 +1079,7 @@ const addToArrayEnd = (arr, element) => {
 ### 📚 Key Concepts
 -   **Array Mutation**: Operations that change the array they are called on directly.
 `,
-'array-pop': `
+  "array-pop": `
 ### 💡 Problem Breakdown
 The task is to remove the last element from an array. This is the opposite of \`.push()\`.
 
@@ -1100,7 +1098,7 @@ const removeFromArrayEnd = (arr) => {
 ### 📚 Key Concepts
 -   **LIFO (Last-In, First-Out)**: The combination of \`.push()\` and \`.pop()\` allows an array to be used as a "stack" data structure.
 `,
-'array-shift': `
+  "array-shift": `
 ### 💡 Problem Breakdown
 The task is to remove the *first* element from an array.
 
@@ -1118,7 +1116,7 @@ const removeFromArrayStart = (arr) => {
 ### 📚 Key Concepts
 -   **FIFO (First-In, First-Out)**: The combination of \`.push()\` (to add to the end) and \`.shift()\` (to remove from the front) allows an array to be used as a "queue" data structure.
 `,
-'array-unshift': `
+  "array-unshift": `
 ### 💡 Problem Breakdown
 The task is to add one or more elements to the *beginning* of an array. This is the opposite of \`.shift()\`.
 
@@ -1136,7 +1134,7 @@ const addToArrayStart = (arr, element) => {
 ### 📚 Key Concepts
 -   **Array Mutation**: Like \`.push()\`, \`.pop()\`, and \`.shift()\`, \`.unshift()\` is a mutating method.
 `,
-'array-includes': `
+  "array-includes": `
 ### 💡 Problem Breakdown
 The task is to check if a specific value exists within an array.
 
@@ -1151,7 +1149,7 @@ const checkArrayForValue = (arr, value) => arr.includes(value);
 ### 📚 Key Concepts
 -   **Array Searching**: Finding if an element exists in a collection.
 `,
-'array-index-of': `
+  "array-index-of": `
 ### 💡 Problem Breakdown
 The goal is not just to see if a value exists, but to find *where* it is located in the array. This task requires finding the index of the first occurrence of a value.
 
@@ -1166,7 +1164,7 @@ const findElementIndex = (arr, value) => arr.indexOf(value);
 ### 📚 Key Concepts
 -   **Array Indexing**: The position of an element in an array.
 `,
-'array-slice': `
+  "array-slice": `
 ### 💡 Problem Breakdown
 The task is to create a new, smaller array by extracting a portion (a "slice") of an existing array. An important feature is that this operation should not modify the original array.
 
@@ -1181,7 +1179,7 @@ const createSubarray = (arr, start, end) => arr.slice(start, end);
 ### 📚 Key Concepts
 -   **Immutability**: \`.slice()\` is a non-mutating method, which is often preferred for predictable code.
 `,
-'do-while-loop': `
+  "do-while-loop": `
 ### 💡 Problem Breakdown
 The \`do...while\` loop is a variant of the \`while\` loop. The key difference is that the condition is checked *after* the loop body executes. This guarantees that the loop will run at least once, regardless of whether the condition is initially true or false.
 
@@ -1206,7 +1204,7 @@ const runDoWhile = (num) => {
 ### 📚 Key Concepts
 -   **\`do...while\` Loop**: A control flow statement that guarantees at least one execution of its loop body.
 `,
-'for-of-loop-array': `
+  "for-of-loop-array": `
 ### 💡 Problem Breakdown
 The \`for...of\` loop is a modern ES6 loop for iterating over "iterable" objects, such as arrays, strings, maps, and sets. It provides a cleaner syntax than a traditional \`for\` loop for simply accessing each value in a sequence.
 
@@ -1231,7 +1229,7 @@ const iterateWithForOf = (arr) => {
 -   **\`for...of\` Loop**: A modern loop for iterating over the values of an iterable.
 -   **Iterable Protocol**: A set of rules that, when implemented, make an object iterable. Arrays and strings are built-in iterables.
 `,
-'is-nan-check': `
+  "is-nan-check": `
 ### 💡 Problem Breakdown
 \`NaN\` stands for "Not-a-Number". It's a special numeric value that results from an operation that cannot produce a valid number (e.g., \`0/0\` or \`Math.sqrt(-1)\`). A strange quirk of \`NaN\` is that it doesn't equal anything, not even itself (\`NaN === NaN\` is \`false\`). Therefore, you need a special function to check for it.
 
@@ -1253,7 +1251,7 @@ const checkIsNaN = (value) => Number.isNaN(Number(value));
 -   **\`NaN\`**: A special primitive value representing "Not-a-Number".
 -   **\`Number.isNaN()\`**: The robust, non-coercing method for checking if a value is \`NaN\`.
 `,
-'check-truthy': `
+  "check-truthy": `
 ### 💡 Problem Breakdown
 In JavaScript, a "truthy" value is any value that is considered \`true\` when encountered in a boolean context (like an \`if\` statement). All values are truthy except for the "falsy" values: \`false\`, \`0\`, \`-0\`, \`0n\`, \`""\` (empty string), \`null\`, \`undefined\`, and \`NaN\`. The task is to check if a value is truthy.
 
@@ -1276,7 +1274,7 @@ const isTruthyConcise = (value) => !!value;
 ### 📚 Key Concepts
 -   **Truthy and Falsy**: A core concept in JavaScript that determines how values behave in logical operations and conditions.
 `,
-'get-square-root': `
+  "get-square-root": `
 ### 💡 Problem Breakdown
 The task is to find the square root of a non-negative number. The square root of a number 'x' is a number 'y' such that y² = x.
 
@@ -1298,7 +1296,7 @@ const squareRoot = (num) => {
 -   **\`Math\` Object**: JavaScript's built-in object for mathematical functions.
 -   **Input Validation**: Checking inputs to a function to ensure they are valid and prevent errors.
 `,
-  'get-current-year': `
+  "get-current-year": `
 ### 💡 Problem Breakdown
 The goal is to get the current four-digit year from the system's clock. This requires using JavaScript's built-in \`Date\` object.
 
@@ -1318,7 +1316,7 @@ const getCurrentYear = () => {
 -   **\`Date\` Object**: The built-in object for working with dates and times in JavaScript.
 -   **Object Methods**: Objects like \`Date\` have methods that allow you to get specific pieces of information from them.
 `,
-  'template-literal-expression': `
+  "template-literal-expression": `
 ### 💡 Problem Breakdown
 Template literals are powerful not just for inserting variables, but for embedding any valid JavaScript expression. The task is to create a string that includes the result of a calculation directly within the string.
 
@@ -1336,7 +1334,7 @@ const createExpressionString = (a, b) => {
 -   **Template Literals**: A modern string syntax that allows for embedded expressions.
 -   **Expressions**: Any valid unit of code that resolves to a value.
 `,
-  'char-at-index': `
+  "char-at-index": `
 ### 💡 Problem Breakdown
 This is an alternative to using bracket notation (\`string[index]\`) to get a character at a specific index. The \`.charAt()\` method is a more traditional way to achieve the same result.
 
@@ -1351,7 +1349,7 @@ const getChar = (str, index) => str.charAt(index);
 ### 📚 Key Concepts
 -   **String Methods**: JavaScript has a rich library of methods for string manipulation.
 `,
-  'create-object': `
+  "create-object": `
 ### 💡 Problem Breakdown
 This is a fundamental task: creating an object to represent a real-world entity. An object literal is used to group related data (properties) together.
 
@@ -1370,7 +1368,7 @@ const book = {
 -   **Object**: A data structure for storing collections of data.
 -   **Data Modeling**: Representing real-world entities as objects in code.
 `,
-  'access-object-property': `
+  "access-object-property": `
 ### 💡 Problem Breakdown
 The task is to retrieve a specific piece of data from an object. This is a core operation for working with structured data.
 
@@ -1385,7 +1383,7 @@ const age = person.age; // 30
 ### 📚 Key Concepts
 -   **Property Accessors**: Mechanisms (like dot notation) for retrieving data from an object.
 `,
-  'modify-object-property': `
+  "modify-object-property": `
 ### 💡 Problem Breakdown
 Objects are typically mutable, meaning their state can be changed. This problem involves targeting an existing property on an object and assigning a new value to it.
 
@@ -1400,7 +1398,7 @@ product.price = 1099.99; // The price is now updated
 ### 📚 Key Concepts
 -   **Mutability**: The ability for an object's state to be modified after its creation.
 `,
-  'add-object-property': `
+  "add-object-property": `
 ### 💡 Problem Breakdown
 You can add new properties to an object at any time after it has been created. This problem demonstrates how to add a new key-value pair to an existing object.
 
@@ -1416,7 +1414,7 @@ product.inStock = true;
 ### 📚 Key Concepts
 -   **Dynamic Objects**: JavaScript objects are dynamic "bags" of properties that can be added to or removed from at any time.
 `,
-  'nested-if-statement': `
+  "nested-if-statement": `
 ### 💡 Problem Breakdown
 The task is to use nested conditional logic. This involves placing an \`if\` statement inside another \`if\` statement to check for a second condition only if the first condition is met.
 
@@ -1441,7 +1439,7 @@ const checkPositiveEven = (num) => {
 ### 📚 Key Concepts
 -   **Nested Logic**: Structuring conditional statements within each other to handle complex, multi-part conditions.
 `,
-  'switch-with-fallthrough': `
+  "switch-with-fallthrough": `
 ### 💡 Problem Breakdown
 A \`switch\` statement compares a value against multiple \`case\` clauses. Normally, a \`break\` statement is used to exit the \`switch\` after a match. If you omit \`break\`, execution will "fall through" to the next \`case\`. This can be used to have multiple cases share the same code block.
 
@@ -1462,7 +1460,7 @@ const checkWeekend = (day) => {
 -   **\`switch\` Statement**: A control flow statement for selecting one of many code blocks.
 -   **Fall-through**: The intentional or accidental behavior of a \`switch\` statement executing subsequent \`case\` blocks because a \`break\` statement was omitted.
 `,
-  'string-to-integer': `
+  "string-to-integer": `
 ### 💡 Problem Breakdown
 The task is to convert a string representation of a number into a whole number (an integer), discarding any decimal part. This is different from \`Number()\`, which preserves decimals.
 
@@ -1479,7 +1477,7 @@ const toInteger = (str) => parseInt(str, 10);
 -   **Parsing**: Converting a string into another data type.
 -   **\`parseInt()\`**: The standard function for converting a string to an integer.
 `,
-  'for-loop-break': `
+  "for-loop-break": `
 ### 💡 Problem Breakdown
 The \`break\` statement provides a way to exit a loop (like \`for\`, \`while\`, or \`switch\`) prematurely, before its normal completion condition is met. This is useful when you've found what you were looking for and don't need to continue iterating.
 
@@ -1501,7 +1499,7 @@ const findFirstNumberGreaterThan3 = (arr) => {
 -   **\`break\` Statement**: A control flow statement that terminates the current loop or switch statement.
 -   **Loop Control**: Statements like \`break\` and \`continue\` give you fine-grained control over the execution of loops.
 `,
-  'for-loop-continue': `
+  "for-loop-continue": `
 ### 💡 Problem Breakdown
 The \`continue\` statement is another loop control statement. Instead of exiting the loop entirely, it terminates the *current iteration* and proceeds to the next one. This is useful for skipping over elements that you don't want to process.
 
@@ -1522,7 +1520,7 @@ const sumOddNumbers = (arr) => {
 ### 📚 Key Concepts
 -   **\`continue\` Statement**: A control flow statement that skips the rest of the current loop iteration and continues to the next one.
 `,
-  'array-concat': `
+  "array-concat": `
 ### 💡 Problem Breakdown
 The task is to merge two or more arrays into a single new array. The \`.concat()\` method is a classic way to do this.
 
@@ -1539,7 +1537,7 @@ const combineArrays = (arr1, arr2) => arr1.concat(arr2);
 -   **Array Merging**: Combining multiple arrays into one.
 -   **Immutability**: \`.concat()\` is a non-mutating method that creates a new array.
 `,
-  'string-last-index-of': `
+  "string-last-index-of": `
 ### 💡 Problem Breakdown
 Similar to \`.indexOf()\`, which finds the first occurrence of a substring, the \`.lastIndexOf()\` method finds the *last* occurrence. This is useful when you need to search a string from end to start.
 
@@ -1554,7 +1552,7 @@ const findLastA = (str, subStr) => str.lastIndexOf(subStr);
 ### 📚 Key Concepts
 -   **String Searching**: Finding substrings within a string.
 `,
-  'number-to-fixed': `
+  "number-to-fixed": `
 ### 💡 Problem Breakdown
 The task is to format a number with a specific number of digits after the decimal point. This is very common when displaying currency or other precise numerical values.
 
@@ -1570,7 +1568,7 @@ const formatDecimal = (num, decimals) => num.toFixed(decimals);
 ### 📚 Key Concepts
 -   **Number Formatting**: Converting numbers into specific string representations for display.
 `,
-  'for-in-loop-object': `
+  "for-in-loop-object": `
 ### 💡 Problem Breakdown
 This is a demonstration of the primary way to loop over the properties of an object: the \`for...in\` loop. This loop iterates over the enumerable property *keys* of an object.
 
@@ -1590,7 +1588,7 @@ for (const key in person) {
 ### 📚 Key Concepts
 -   **\`for...in\` loop**: A control statement for iterating over the properties of an object.
 `,
-  'create-array': `
+  "create-array": `
 ### 💡 Problem Breakdown
 This is a fundamental task: creating an ordered collection of data. An array literal is the most common way to create an array.
 
@@ -1605,7 +1603,7 @@ const colors = ["red", "green", "blue"];
 ### 📚 Key Concepts
 -   **Array**: An ordered, list-like object for storing a collection of items.
 `,
-  'array-reverse': `
+  "array-reverse": `
 ### 💡 Problem Breakdown
 The task is to reverse the order of elements within an array. For example, \`[1, 2, 3]\` should become \`[3, 2, 1]\`.
 
@@ -1621,7 +1619,7 @@ array.reverse(); // array is now [4, 3, 2, 1]
 ### 📚 Key Concepts
 -   **Array Mutation**: An operation that changes the original array.
 `,
-  'simple-type-coercion': `
+  "simple-type-coercion": `
 ### 💡 Problem Breakdown
 Type coercion is the automatic or implicit conversion of values from one data type to another by the JavaScript engine. This problem demonstrates one of the most common examples: when you use the \`+\` operator with a number and a string.
 
@@ -1636,5 +1634,5 @@ const result = 5 + "5";
 
 ### 📚 Key Concepts
 -   **Type Coercion**: A core behavior of JavaScript. While it can be convenient, it can also lead to unexpected bugs if not understood properly. This is a key reason why the strict equality operator (\`===\`) is often preferred over the loose one (\`==\`).
-`
+`,
 };

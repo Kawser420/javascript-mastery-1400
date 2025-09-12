@@ -1,5 +1,4 @@
-import type { Problem } from "../types";
-
+import { Problem } from "@/types";
 import { problems as beginnerBasicsProblems } from "./beginner-basics/problems";
 import { solvers as beginnerBasicsSolvers } from "./beginner-basics/solvers";
 import { explanations as beginnerBasicsExplanations } from "./beginner-basics/explanations";

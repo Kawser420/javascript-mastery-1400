@@ -568,7 +568,7 @@ myObject = null;
 `,
   'private-in-operator-adv': `
 ### 💡 Problem Breakdown
-ES2022 introduced the ability to use the `in` operator to check for the existence of a private field on an object from within the class. This is necessary because you cannot access or check for private fields from outside a class, and a normal check would throw a syntax error.
+ES2022 introduced the ability to use the \`in\` operator to check for the existence of a private field on an object from within the class. This is necessary because you cannot access or check for private fields from outside a class, and a normal check would throw a syntax error.
 
 ### ⚙️ Solution Walkthrough
 A static method is used to check if an instance has a private field.
@@ -583,11 +583,11 @@ const instance = new MyClass();
 MyClass.hasPrivate(instance); // true
 \`\`\`
 ### 📚 Key Concepts
--   **Ergonomic Brand Checks**: The primary use case for this feature is to allow one class to check if an object it receives is a true instance of that class (has its private fields), which is more robust than `instanceof`.
+-   **Ergonomic Brand Checks**: The primary use case for this feature is to allow one class to check if an object it receives is a true instance of that class (has its private fields), which is more robust than \`instanceof\`.
 `,
   'array-groupby-conceptual': `
 ### 💡 Problem Breakdown
-`Array.prototype.groupBy` is a new method that provides a declarative way to group the elements of an array based on a value returned by a callback function.
+\`Array.prototype.groupBy\` is a new method that provides a declarative way to group the elements of an array based on a value returned by a callback function.
 
 ### ⚙️ Solution Walkthrough
 A conceptual example of grouping an array of objects.
@@ -611,14 +611,14 @@ This is a very common data transformation that is now being standardized in the 
 
 ### 📚 Key Concepts
 -   **Data Aggregation**: Grouping items is a form of aggregation.
--   **`groupBy()`**: A new, declarative method for grouping array elements.
+-   \`\`groupBy()\`\`: A new, declarative method for grouping array elements.
 `,
   'regexp-match-indices': `
 ### 💡 Problem Breakdown
-The `d` flag (ES2022) for regular expressions provides the start and end indices for the matched substrings of capture groups. This is useful for parsing tasks where you need to know the exact position of a match, not just its content.
+The \`d\` flag (ES2022) for regular expressions provides the start and end indices for the matched substrings of capture groups. This is useful for parsing tasks where you need to know the exact position of a match, not just its content.
 
 ### ⚙️ Solution Walkthrough
-A regex with the `d` flag is executed. The result's `.indices` property contains the start/end positions.
+A regex with the \`d\` flag is executed. The result's \`.indices\` property contains the start/end positions.
 \`\`\`javascript
 const str = 'a=1, b=2';
 const regex = /([a-z])=(\\d)/gd; // 'g' for global, 'd' for indices
@@ -629,7 +629,7 @@ const match = regex.exec(str);
 // match.indices[2] is [2, 3] (for the second capture group "1")
 \`\`\`
 ### 📚 Key Concepts
--   **RegExp `d` flag**: A flag to request match indices for capture groups.
+-   **RegExp \`d\` flag**: A flag to request match indices for capture groups.
 `,
   'import-assertions-conceptual': `
 ### 💡 Problem Breakdown
@@ -651,10 +651,10 @@ This tells the engine to parse the file as JSON. This is safer than letting the 
 `,
   'error-cause-property': `
 ### 💡 Problem Breakdown
-The `cause` property for `Error` objects (ES2022) provides a standard way to chain errors. When you catch a low-level error and throw a new, more specific high-level error, you can attach the original error as the `cause`. This provides a complete stack trace and context for debugging.
+The \`cause\` property for \`Error\` objects (ES2022) provides a standard way to chain errors. When you catch a low-level error and throw a new, more specific high-level error, you can attach the original error as the \`cause\`. This provides a complete stack trace and context for debugging.
 
 ### ⚙️ Solution Walkthrough
-A low-level error is caught and wrapped in a high-level error with a `cause`.
+A low-level error is caught and wrapped in a high-level error with a \`cause\`.
 \`\`\`javascript
 try {
   try {
@@ -684,7 +684,7 @@ const realm = new ShadowRealm();
 
 // Execute code inside the realm using importValue
 const result = await realm.importValue('./untrusted-module.js', 'someFunction');
-// `result` is a function that can be called, but any objects
+// \`result\` is a function that can be called, but any objects
 // it returns are from the realm and cannot be accessed directly.
 \`\`\`
 Communication between realms happens with callable functions and by passing primitive values.
@@ -699,10 +699,10 @@ The built-in \`Date\` object in JavaScript is notoriously difficult to work with
 
 ### ⚙️ Solution Walkthrough
 Temporal provides a suite of immutable objects for different date/time use cases:
--   **`Temporal.PlainDate`**: A date without a time or time zone (e.g., '2024-01-20').
--   **`Temporal.PlainTime`**: A time without a date or time zone.
--   **`Temporal.ZonedDateTime`**: A date and time in a specific time zone.
--   **`Temporal.Duration`**: A length of time (e.g., '2 hours, 30 minutes').
+-   \`\`Temporal.PlainDate\`\`: A date without a time or time zone (e.g., '2024-01-20').
+-   \`\`Temporal.PlainTime\`\`: A time without a date or time zone.
+-   \`\`Temporal.ZonedDateTime\`\`: A date and time in a specific time zone.
+-   \`\`Temporal.Duration\`\`: A length of time (e.g., '2 hours, 30 minutes').
 
 These objects have a clean, modern API and are immutable, which prevents a large class of common bugs.
 \`\`\`javascript
@@ -729,9 +729,9 @@ class MyService {
   constructor(private http: HttpClient) {}
 }
 \`\`\`
-1.  **Decorator (`@Injectable()`)**: This is a function call that modifies the `MyService` class.
-2.  **Metadata**: The decorator might use the `Reflect.defineMetadata()` function to attach information to the class, such as the types of its constructor parameters.
-3.  **Dependency Injection**: A framework's "injector" can later read this metadata using `Reflect.getMetadata()` to know that it needs to provide an instance of `HttpClient` when creating `MyService`.
+1.  **Decorator (\`@Injectable()\`)**: This is a function call that modifies the \`MyService\` class.
+2.  **Metadata**: The decorator might use the \`Reflect.defineMetadata()\` function to attach information to the class, such as the types of its constructor parameters.
+3.  **Dependency Injection**: A framework's "injector" can later read this metadata using \`Reflect.getMetadata()\` to know that it needs to provide an instance of \`HttpClient\` when creating \`MyService\`.
 
 ### 📚 Key Concepts
 -   **Decorators**: A syntax for metaprogramming that allows you to modify declarations.
@@ -739,10 +739,10 @@ class MyService {
 `,
 'proxy-has-trap': `
 ### 💡 Problem Breakdown
-The `has` trap on a Proxy intercepts the `in` operator. This allows you to define custom logic for checking the existence of a property, for example, to hide certain "private" properties.
+The \`has\` trap on a Proxy intercepts the \`in\` operator. This allows you to define custom logic for checking the existence of a property, for example, to hide certain "private" properties.
 
 ### ⚙️ Solution Walkthrough
-A proxy is created with a `has` trap that returns `false` for any property starting with an underscore.
+A proxy is created with a \`has\` trap that returns \`false\` for any property starting with an underscore.
 \`\`\`javascript
 const target = { a: 1, _b: 2 };
 const handler = {
@@ -760,14 +760,14 @@ const proxy = new Proxy(target, handler);
 \`\`\`
 ### 📚 Key Concepts
 - **Proxy Traps**: Functions that provide access to fundamental object operations.
-- **`in` operator**: A JavaScript operator that checks for property existence, including on the prototype chain.
+- \`\`in\` operator**: A JavaScript operator that checks for property existence, including on the prototype chain.
 `,
 'proxy-delete-trap': `
 ### 💡 Problem Breakdown
-The `deleteProperty` trap on a Proxy intercepts the `delete` operator. This allows you to prevent certain properties from being deleted or to add custom logic (like logging) when a property is deleted.
+The \`deleteProperty\` trap on a Proxy intercepts the \`delete\` operator. This allows you to prevent certain properties from being deleted or to add custom logic (like logging) when a property is deleted.
 
 ### ⚙️ Solution Walkthrough
-A proxy's `deleteProperty` trap is used to prevent any property starting with an underscore from being deleted.
+A proxy's \`deleteProperty\` trap is used to prevent any property starting with an underscore from being deleted.
 \`\`\`javascript
 const target = { a: 1, _protected: 2 };
 const handler = {
@@ -785,15 +785,15 @@ delete proxy.a;          // true
 delete proxy._protected; // false (and logs message)
 \`\`\`
 ### 📚 Key Concepts
-- **`delete` operator**: A JavaScript operator used to remove a property from an object.
-- **`Reflect.deleteProperty`**: The standard way to perform the default delete operation from within a trap.
+- \`\`delete\` operator**: A JavaScript operator used to remove a property from an object.
+- \`\`Reflect.deleteProperty\`\`: The standard way to perform the default delete operation from within a trap.
 `,
 'proxy-ownkeys-trap': `
 ### 💡 Problem Breakdown
-The `ownKeys` trap on a Proxy intercepts operations that get the list of an object's own keys, such as `Object.keys()`, `Object.getOwnPropertyNames()`, `Reflect.ownKeys()`, and the `for...in` loop. This allows you to filter which keys are visible.
+The \`ownKeys\` trap on a Proxy intercepts operations that get the list of an object's own keys, such as \`Object.keys()\`, \`Object.getOwnPropertyNames()\`, \`Reflect.ownKeys()\`, and the \`for...in\` loop. This allows you to filter which keys are visible.
 
 ### ⚙️ Solution Walkthrough
-A proxy uses the `ownKeys` trap to hide properties that start with an underscore.
+A proxy uses the \`ownKeys\` trap to hide properties that start with an underscore.
 \`\`\`javascript
 const target = { a: 1, _b: 2 };
 const handler = {
@@ -806,11 +806,11 @@ const proxy = new Proxy(target, handler);
 Object.keys(proxy); // ["a"]
 \`\`\`
 ### 📚 Key Concepts
-- **Object Introspection**: The process of examining an object's structure. The `ownKeys` trap allows you to control this process.
+- **Object Introspection**: The process of examining an object's structure. The \`ownKeys\` trap allows you to control this process.
 `,
 'reflect-delete-property': `
 ### 💡 Problem Breakdown
-`Reflect.deleteProperty()` is the functional equivalent of the `delete` operator. It takes an object and a property key, deletes the property, and returns a boolean indicating whether the deletion was successful.
+\`Reflect.deleteProperty()\` is the functional equivalent of the \`delete\` operator. It takes an object and a property key, deletes the property, and returns a boolean indicating whether the deletion was successful.
 
 ### ⚙️ Solution Walkthrough
 The method is used to delete a property.
@@ -821,14 +821,14 @@ const success = Reflect.deleteProperty(obj, 'a');
 console.log(success); // true
 console.log(obj.a);   // undefined
 \`\`\`
-It's often used inside a proxy's `deleteProperty` trap to perform the default behavior.
+It's often used inside a proxy's \`deleteProperty\` trap to perform the default behavior.
 
 ### 📚 Key Concepts
-- **`Reflect` API**: Provides a set of static methods for JavaScript operations, often mirroring operators.
+- \`\`Reflect\` API**: Provides a set of static methods for JavaScript operations, often mirroring operators.
 `,
 'reflect-own-keys': `
 ### 💡 Problem Breakdown
-`Reflect.ownKeys()` returns an array of the target object's own (not inherited) property keys. It's more comprehensive than `Object.keys()` because it includes both string-keyed and symbol-keyed properties.
+\`Reflect.ownKeys()\` returns an array of the target object's own (not inherited) property keys. It's more comprehensive than \`Object.keys()\` because it includes both string-keyed and symbol-keyed properties.
 
 ### ⚙️ Solution Walkthrough
 The method is used on an object with a symbol key.
@@ -840,11 +840,11 @@ Object.keys(obj);      // ["a"]
 Reflect.ownKeys(obj);  // ["a", Symbol(s)]
 \`\`\`
 ### 📚 Key Concepts
-- **Object Introspection**: `Reflect.ownKeys()` provides the most complete list of an object's own keys.
+- **Object Introspection**: \`Reflect.ownKeys()\` provides the most complete list of an object's own keys.
 `,
 'generator-as-state-machine': `
 ### 💡 Problem Breakdown
-A generator function is a natural fit for implementing a simple state machine. The `yield` statement can represent a state, and the execution pauses at that state until `.next()` is called to transition to the next state.
+A generator function is a natural fit for implementing a simple state machine. The \`yield\` statement can represent a state, and the execution pauses at that state until \`.next()\` is called to transition to the next state.
 
 ### ⚙️ Solution Walkthrough
 A generator function is used to model a traffic light that cycles through its states.
@@ -869,7 +869,7 @@ light.next().value; // "Green"
 `,
 'async-generator-basic': `
 ### 💡 Problem Breakdown
-An async generator (`async function*`) combines the features of async functions and generator functions. It allows you to use both `await` and `yield` within the same function, making it easy to create iterators that produce values from asynchronous sources.
+An async generator (\`async function*\`) combines the features of async functions and generator functions. It allows you to use both \`await\` and \`yield\` within the same function, making it easy to create iterators that produce values from asynchronous sources.
 
 ### ⚙️ Solution Walkthrough
 An async generator yields a sequence of numbers with a delay between each yield.
@@ -885,11 +885,11 @@ async function* myAsyncGenerator() {
 // This is consumed with a for-await-of loop.
 \`\`\`
 ### 📚 Key Concepts
-- **Async Generator**: A function that returns an async iterator, which produces promises for the `{ value, done }` object.
+- **Async Generator**: A function that returns an async iterator, which produces promises for the \{ value, done \} object.
 `,
 'for-await-of': `
 ### 💡 Problem Breakdown
-The `for-await...of` loop (ES2018) is a special loop for iterating over async iterables, such as the ones produced by async generators. It automatically handles waiting for the promise returned by the iterator's `.next()` method to resolve at each step.
+The \`for-await...of\` loop (ES2018) is a special loop for iterating over async iterables, such as the ones produced by async generators. It automatically handles waiting for the promise returned by the iterator's \`.next()\` method to resolve at each step.
 
 ### ⚙️ Solution Walkthrough
 The loop is used to consume values from an async generator.
@@ -904,11 +904,11 @@ async function run() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **`for-await...of`**: A loop for iterating over async iterables.
+-   \`\`for-await...of\`\`: A loop for iterating over async iterables.
 `,
 'well-known-symbol-toprimitive': `
 ### 💡 Problem Breakdown
-The `Symbol.toPrimitive` well-known symbol allows you to specify a function on an object that will be called whenever the object needs to be converted to a primitive value (e.g., during an arithmetic operation or when being converted to a string).
+The \`Symbol.toPrimitive\` well-known symbol allows you to specify a function on an object that will be called whenever the object needs to be converted to a primitive value (e.g., during an arithmetic operation or when being converted to a string).
 
 ### ⚙️ Solution Walkthrough
 An object implements this method to control its conversion to a number and a string.
@@ -935,10 +935,10 @@ console.log(obj + 5);     // 15 (hint is 'number' or 'default')
 `,
 'well-known-symbol-hasinstance': `
 ### 💡 Problem Breakdown
-The `Symbol.hasInstance` well-known symbol allows you to customize the behavior of the `instanceof` operator for a class. By implementing a static method with this key, you can define your own logic for what it means for an object to be an "instance" of your class.
+The \`Symbol.hasInstance\` well-known symbol allows you to customize the behavior of the \`instanceof\` operator for a class. By implementing a static method with this key, you can define your own logic for what it means for an object to be an "instance" of your class.
 
 ### ⚙️ Solution Walkthrough
-A class `MyArray` is created. Its `[Symbol.hasInstance]` method checks if a value is a standard `Array`, effectively making any array an "instance" of `MyArray`.
+A class \`MyArray\` is created. Its \`[Symbol.hasInstance]\` method checks if a value is a standard \`Array\`, effectively making any array an "instance" of \`MyArray\`.
 \`\`\`javascript
 class MyArray {
   static [Symbol.hasInstance](instance) {
@@ -949,15 +949,15 @@ class MyArray {
 console.log([] instanceof MyArray); // true
 \`\`\`
 ### 📚 Key Concepts
-- **`instanceof` operator**: This symbol allows you to hook into and customize its behavior.
+- \`\`instanceof\` operator**: This symbol allows you to hook into and customize its behavior.
 - **Metaprogramming**: Modifying the fundamental behavior of the language's operators.
 `,
 'well-known-symbol-species': `
 ### 💡 Problem Breakdown
-The `Symbol.species` well-known symbol allows you to control which constructor is used by methods on a subclass that return new instances (like `Array.prototype.map`). By default, if you extend `Array` and call `.map()` on your subclass, it will return a new instance of your subclass. Sometimes you may want it to return a standard `Array` instead.
+The \`Symbol.species\` well-known symbol allows you to control which constructor is used by methods on a subclass that return new instances (like \`Array.prototype.map\`). By default, if you extend \`Array\` and call \`.map()\` on your subclass, it will return a new instance of your subclass. Sometimes you may want it to return a standard \`Array\` instead.
 
 ### ⚙️ Solution Walkthrough
-The `MyArray` subclass defines a static getter for `Symbol.species` that returns the base `Array` constructor.
+The \`MyArray\` subclass defines a static getter for \`Symbol.species\` that returns the base \`Array\` constructor.
 \`\`\`javascript
 class MyArray extends Array {
     // Override the species to return a regular Array from methods
@@ -972,11 +972,11 @@ console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array);   // true
 \`\`\`
 ### 📚 Key Concepts
--   **`Symbol.species`**: A "well-known symbol" used to specify a constructor function that is used to create derived objects.
+-   \`\`Symbol.species\`\`: A "well-known symbol" used to specify a constructor function that is used to create derived objects.
 `,
 'intl-listformat': `
 ### 💡 Problem Breakdown
-`Intl.ListFormat` (ES2021) is an object that enables language-sensitive list formatting. It can correctly format a list of items with commas and conjunctions (like "and" or "or") according to the rules of a specific language.
+\`Intl.ListFormat\` (ES2021) is an object that enables language-sensitive list formatting. It can correctly format a list of items with commas and conjunctions (like "and" or "or") according to the rules of a specific language.
 
 ### ⚙️ Solution Walkthrough
 A formatter for the English language is created and used.
@@ -987,11 +987,11 @@ formatter.format(list); // "A, B, and C"
 \`\`\`
 ### 📚 Key Concepts
 - **Internationalization (i18n)**: Handling linguistic differences in formatting.
-- **`Intl.ListFormat`**: The standard API for formatting lists of strings.
+- \`\`Intl.ListFormat\`\`: The standard API for formatting lists of strings.
 `,
 'intl-displaynames': `
 ### 💡 Problem Breakdown
-`Intl.DisplayNames` (ES2021) is an object that provides a way to get the localized string representation of language, region, script, or currency codes.
+\`Intl.DisplayNames\` (ES2021) is an object that provides a way to get the localized string representation of language, region, script, or currency codes.
 
 ### ⚙️ Solution Walkthrough
 A formatter is used to get the English name for the German region code ("DE").
@@ -1002,11 +1002,11 @@ regionNames.of('JP'); // "Japan"
 \`\`\`
 ### 📚 Key Concepts
 - **Internationalization (i18n)**: Providing localized names for standard codes.
-- **`Intl.DisplayNames`**: The standard API for this purpose.
+- \`\`Intl.DisplayNames\`\`: The standard API for this purpose.
 `,
 'intl-segmenter-conceptual': `
 ### 💡 Problem Breakdown
-This is a conceptual problem. Correctly splitting a string into words, sentences, or graphemes (what a user perceives as a single character, like an emoji with a skin tone modifier) is complex and language-dependent. The `Intl.Segmenter` API (ES2022) provides a standard, locale-sensitive way to perform this text segmentation.
+This is a conceptual problem. Correctly splitting a string into words, sentences, or graphemes (what a user perceives as a single character, like an emoji with a skin tone modifier) is complex and language-dependent. The \`Intl.Segmenter\` API (ES2022) provides a standard, locale-sensitive way to perform this text segmentation.
 
 ### ⚙️ Solution Walkthrough
 A conceptual example of splitting a string into words.
@@ -1023,7 +1023,7 @@ for (const segment of segments) {
 \`\`\`
 ### 📚 Key Concepts
 - **Text Segmentation**: The process of dividing written text into meaningful units.
-- **`Intl.Segmenter`**: The standard API for locale-aware text segmentation.
+- \`\`Intl.Segmenter\`\`: The standard API for locale-aware text segmentation.
 `,
 'jit-compilation-conceptual': `
 ### 💡 Problem Breakdown
@@ -1045,7 +1045,7 @@ This is a conceptual problem about automatic memory management in JavaScript. De
 
 ### ⚙️ Solution Walkthrough
 The most common algorithm is **Mark-and-Sweep**:
-1.  **Roots**: The GC starts with a set of "root" objects that are known to be accessible (e.g., the global `window` object, the currently executing function's variables).
+1.  **Roots**: The GC starts with a set of "root" objects that are known to be accessible (e.g., the global \`window\` object, the currently executing function's variables).
 2.  **Mark**: The GC traverses the object graph, starting from the roots. It finds and "marks" every object that is reachable from a root.
 3.  **Sweep**: After the marking phase, the GC scans through all the objects in memory. Any object that was not marked is considered "unreachable" and its memory is reclaimed.
 
@@ -1079,7 +1079,7 @@ function tailFactorial(n, accumulator = 1) {
 `,
 'atomics-wait-notify-conceptual': `
 ### 💡 Problem Breakdown
-This is a conceptual problem about low-level concurrency control with `SharedArrayBuffer`. `Atomics.wait()` and `Atomics.notify()` provide a way for one worker to sleep until another worker signals it, which is more efficient than constantly polling a value in a loop ("spin-locking").
+This is a conceptual problem about low-level concurrency control with \`SharedArrayBuffer\`. \`Atomics.wait()\` and \`Atomics.notify()\` provide a way for one worker to sleep until another worker signals it, which is more efficient than constantly polling a value in a loop ("spin-locking").
 
 ### ⚙️ Solution Walkthrough
 A conceptual locking mechanism.
@@ -1106,7 +1106,7 @@ Atomics.wait(sharedArray, 0, 1); // Puts this worker to sleep if the value at in
 `,
 'json-modules-conceptual': `
 ### 💡 Problem Breakdown
-This is a conceptual problem about a modern ES module feature. JSON modules allow you to directly `import` a JSON file. The JavaScript engine will parse the file as JSON and provide the resulting object as the module's default export.
+This is a conceptual problem about a modern ES module feature. JSON modules allow you to directly \`import\` a JSON file. The JavaScript engine will parse the file as JSON and provide the resulting object as the module's default export.
 
 ### ⚙️ Solution Walkthrough
 The import uses an "import attribute" to specify the type.
@@ -1119,14 +1119,14 @@ import config from './config.json' with { type: 'json' };
 
 console.log(config.apiKey); // "abc12345"
 \`\`\`
-This is safer and more ergonomic than using `fetch` to get the file, then calling `response.json()`.
+This is safer and more ergonomic than using \`fetch\` to get the file, then calling \`response.json()\`.
 
 ### 📚 Key Concepts
 - **Import Attributes**: A security and convenience feature for ES modules.
 `,
 'array-findlast-es2023': `
 ### 💡 Problem Breakdown
-These ES2023 methods are the counterparts to `.find()` and `.findIndex()`. They iterate the array from the last element to the first, returning the first value or index that satisfies the testing function.
+These ES2023 methods are the counterparts to \`.find()\` and \`.findIndex()\`. They iterate the array from the last element to the first, returning the first value or index that satisfies the testing function.
 
 ### ⚙️ Solution Walkthrough
 The methods are used to find the last element that meets a condition.
@@ -1136,11 +1136,11 @@ arr.findLast(n => n > 25); // 50
 arr.findLastIndex(n => n > 25); // 4
 \`\`\`
 ### 📚 Key Concepts
--   **`.findLast()` & `.findLastIndex()`**: Methods for searching an array from right to left.
+-   \`\`.findLast()\` & \`.findLastIndex()\`\`: Methods for searching an array from right to left.
 `,
 'array-immutable-methods-es2023': `
 ### 💡 Problem Breakdown
-ES2023 introduced new immutable versions of common array methods. `.toReversed()`, `.toSorted()`, and `.toSpliced()` work just like their counterparts (`.reverse()`, `.sort()`, `.splice()`) but they return a new, modified array instead of mutating the original one.
+ES2023 introduced new immutable versions of common array methods. \`.toReversed()\`, \`.toSorted()\`, and \`.toSpliced()\` work just like their counterparts (\`.reverse()\`, \`.sort()\`, \`.splice()\`) but they return a new, modified array instead of mutating the original one.
 
 ### ⚙️ Solution Walkthrough
 The immutable methods are used on an array.
@@ -1156,7 +1156,7 @@ console.log(arr); // [3, 1, 2] (original is unchanged)
 `,
 'hashbang-grammar-conceptual': `
 ### 💡 Problem Breakdown
-This is a conceptual problem about a feature for creating command-line scripts with JavaScript. The "hashbang" or "shebang" is the first line of a script, `#!`, which tells a Unix-like operating system which interpreter to use to run the file.
+This is a conceptual problem about a feature for creating command-line scripts with JavaScript. The "hashbang" or "shebang" is the first line of a script, \`#!\`, which tells a Unix-like operating system which interpreter to use to run the file.
 
 ### ⚙️ Solution Walkthrough
 ES2023 standardized that JavaScript engines should ignore this first line.
@@ -1166,15 +1166,15 @@ ES2023 standardized that JavaScript engines should ignore this first line.
 // This is now a valid Node.js script
 console.log('Hello from a script!');
 \`\`\`
-1.  Make the file executable: `chmod +x my-script.js`
-2.  Run it directly from the shell: `./my-script.js`
+1.  Make the file executable: \`chmod +x my-script.js\`
+2.  Run it directly from the shell: \`./my-script.js\`
 
 ### 📚 Key Concepts
 - **Scripting**: Using JavaScript to create command-line tools.
 `,
 'promise-withresolvables-conceptual-adv': `
 ### 💡 Problem Breakdown
-`Promise.withResolvables()` is a new static method (ES2024) that creates a promise and exposes its `resolve` and `reject` functions. This is a convenience method that simplifies patterns where you need to create a promise and resolve/reject it from outside the constructor's scope.
+\`Promise.withResolvables()\` is a new static method (ES2024) that creates a promise and exposes its \`resolve\` and \`reject\` functions. This is a convenience method that simplifies patterns where you need to create a promise and resolve/reject it from outside the constructor's scope.
 
 ### ⚙️ Solution Walkthrough
 The method is used to create a "deferred" promise.
@@ -1187,17 +1187,17 @@ promise.then(console.log);
 // And resolve it from somewhere else, later
 setTimeout(() => resolve("Resolved from outside!"), 100);
 \`\`\`
-This avoids having to define `let resolveFunc;` outside the scope of a `new Promise` constructor.
+This avoids having to define \`let resolveFunc;\` outside the scope of a \`new Promise\` constructor.
 
 ### 📚 Key Concepts
--   **`Promise.withResolvables()`**: A new utility for creating promises where the settlement functions are needed externally.
+-   \`\`Promise.withResolvables()\`\`: A new utility for creating promises where the settlement functions are needed externally.
 `,
 'well-known-symbol-unscopables': `
 ### 💡 Problem Breakdown
-This is a rarely used feature for backward compatibility. The `Symbol.unscopables` well-known symbol can be used to specify properties on an object's prototype that should *not* be added to the lexical scope when using the deprecated `with` statement.
+This is a rarely used feature for backward compatibility. The \`Symbol.unscopables\` well-known symbol can be used to specify properties on an object's prototype that should *not* be added to the lexical scope when using the deprecated \`with\` statement.
 
 ### ⚙️ Solution Walkthrough
-The `values` property is excluded from the `with` statement's scope.
+The \`values\` property is excluded from the \`with\` statement's scope.
 \`\`\`javascript
 const obj = {
   keys: ['a'],
@@ -1213,14 +1213,14 @@ with (obj) {
 }
 \`\`\`
 ### 📚 Key Concepts
-- **`with` statement**: A deprecated language feature that is forbidden in strict mode.
+- \`\`with\` statement**: A deprecated language feature that is forbidden in strict mode.
 `,
 'proxy-for-dom-nodes': `
 ### 💡 Problem Breakdown
 This is a conceptual problem. A Proxy can be wrapped around a DOM element to intercept interactions with it. This can be useful for debugging, logging, or creating a custom API layer over a DOM element.
 
 ### ⚙️ Solution Walkthrough
-A proxy's `get` trap could log all property accesses on a button element.
+A proxy's \`get\` trap could log all property accesses on a button element.
 \`\`\`javascript
 const myButton = document.getElementById('myBtn');
 const buttonProxy = new Proxy(myButton, {
@@ -1238,10 +1238,10 @@ const buttonProxy = new Proxy(myButton, {
 `,
 'generator-for-async-control-flow': `
 ### 💡 Problem Breakdown
-Before `async/await` was introduced, libraries like `co` used generators to enable a similar synchronous-looking style for asynchronous code. This problem demonstrates the underlying pattern.
+Before \`async/await\` was introduced, libraries like \`co\` used generators to enable a similar synchronous-looking style for asynchronous code. This problem demonstrates the underlying pattern.
 
 ### ⚙️ Solution Walkthrough
-A "runner" function is created that takes a generator. It calls `.next()` on the generator's iterator. When it receives a yielded promise, it waits for it to resolve and then calls `.next()` again, passing the resolved value back into the generator.
+A "runner" function is created that takes a generator. It calls \`.next()\` on the generator's iterator. When it receives a yielded promise, it waits for it to resolve and then calls \`.next()\` again, passing the resolved value back into the generator.
 \`\`\`javascript
 function run(generator) {
   const iterator = generator();
@@ -1261,14 +1261,14 @@ run(function*() {
 });
 \`\`\`
 ### 📚 Key Concepts
-- **`async/await` Under the Hood**: This pattern is essentially what `async/await` is syntactic sugar for.
+- \`\`async/await\` Under the Hood**: This pattern is essentially what \`async/await\` is syntactic sugar for.
 `,
 'structured-clone': `
 ### 💡 Problem Breakdown
-The `structuredClone()` global function (available in modern browsers and Node.js) provides a standard way to create a deep copy of a JavaScript value. It is more robust than the `JSON.parse(JSON.stringify(obj))` trick because it can handle more data types, such as `Date`, `RegExp`, `Map`, `Set`, and cyclical references.
+The \`structuredClone()\` global function (available in modern browsers and Node.js) provides a standard way to create a deep copy of a JavaScript value. It is more robust than the \`JSON.parse(JSON.stringify(obj))\` trick because it can handle more data types, such as \`Date\`, \`RegExp\`, \`Map\`, \`Set\`, and cyclical references.
 
 ### ⚙️ Solution Walkthrough
-An object containing a `Date` and a `Map` is deep-copied.
+An object containing a \`Date\` and a \`Map\` is deep-copied.
 \`\`\`javascript
 const original = {
   date: new Date(),
@@ -1281,14 +1281,14 @@ console.log(original.map === copy.map); // false
 \`\`\`
 ### 📚 Key Concepts
 - **Deep Copy**: Creating a completely independent copy of a data structure.
-- **`structuredClone()`**: The modern, built-in API for deep copying.
+- \`\`structuredClone()\`\`: The modern, built-in API for deep copying.
 `,
 'intl-locale-conceptual': `
 ### 💡 Problem Breakdown
-The `Intl.Locale` object provides a standard way to parse and manipulate Unicode locale identifier strings (e.g., "en-US-u-ca-gregory").
+The \`Intl.Locale\` object provides a standard way to parse and manipulate Unicode locale identifier strings (e.g., "en-US-u-ca-gregory").
 
 ### ⚙️ Solution Walkthrough
-A new `Intl.Locale` object is created and its properties are inspected.
+A new \`Intl.Locale\` object is created and its properties are inspected.
 \`\`\`javascript
 const locale = new Intl.Locale('fr-CA', {
   hourCycle: 'h12',
@@ -1300,14 +1300,14 @@ console.log(locale.language);    // "fr"
 console.log(locale.region);      // "CA"
 console.log(locale.hourCycle);   // "h12"
 \`\`\`
-This is useful for parsing user locale preferences and configuring other `Intl` formatters.
+This is useful for parsing user locale preferences and configuring other \`Intl\` formatters.
 
 ### 📚 Key Concepts
-- **Internationalization (i18n)**: `Intl.Locale` is a tool for working with locale identifiers.
+- **Internationalization (i18n)**: \`Intl.Locale\` is a tool for working with locale identifiers.
 `,
 'intl-calendars-timezones': `
 ### 💡 Problem Breakdown
-The `Intl.DateTimeFormat` constructor can take options to format dates according to different calendars and time zones.
+The \`Intl.DateTimeFormat\` constructor can take options to format dates according to different calendars and time zones.
 
 ### ⚙️ Solution Walkthrough
 A date is formatted for the Japanese calendar and Tokyo time zone.
@@ -1326,7 +1326,7 @@ const formatter = new Intl.DateTimeFormat('en-US', options);
 `,
 'reflect-getprototypeof': `
 ### 💡 Problem Breakdown
-`Reflect.getPrototypeOf()` is the functional equivalent of `Object.getPrototypeOf()`. It returns the prototype of a given object.
+\`Reflect.getPrototypeOf()\` is the functional equivalent of \`Object.getPrototypeOf()\`. It returns the prototype of a given object.
 
 ### ⚙️ Solution Walkthrough
 The method is used to get the prototype of an instance.
@@ -1337,17 +1337,17 @@ const inst = new MyClass();
 const proto = Reflect.getPrototypeOf(inst);
 console.log(proto === MyClass.prototype); // true
 \`\`\`
-It's often used in metaprogramming contexts where a functional approach is preferred over the static `Object` method.
+It's often used in metaprogramming contexts where a functional approach is preferred over the static \`Object\` method.
 
 ### 📚 Key Concepts
-- **`Reflect` API**: Provides a set of methods for JavaScript operations.
+- \`\`Reflect\` API**: Provides a set of methods for JavaScript operations.
 `,
 'proxy-for-operator-overloading': `
 ### 💡 Problem Breakdown
-This is a conceptual problem. JavaScript does not have traditional operator overloading (the ability to define what the `+` or `*` operators do for your custom objects). However, you can use Proxies to *simulate* this behavior by intercepting method calls that are named after the operation.
+This is a conceptual problem. JavaScript does not have traditional operator overloading (the ability to define what the \`+\` or \`\*\` operators do for your custom objects). However, you can use Proxies to *simulate* this behavior by intercepting method calls that are named after the operation.
 
 ### ⚙️ Solution Walkthrough
-You could create a custom `Vector` class and wrap it in a Proxy that intercepts a method call like `add`.
+You could create a custom \`Vector\` class and wrap it in a Proxy that intercepts a method call like \`add\`.
 \`\`\`javascript
 // This is not real operator overloading, but a simulation pattern.
 class Vector { /* ... */ }
@@ -1360,7 +1360,7 @@ const handler = {
   }
 };
 \`\`\`
-This allows for a syntax like `proxyVector1.add(proxyVector2)`, which feels more natural than a standard method call for some domains.
+This allows for a syntax like \`proxyVector1.add(proxyVector2)\`, which feels more natural than a standard method call for some domains.
 
 ### 📚 Key Concepts
 - **Operator Overloading**: A feature present in some languages (like C++) but not in JavaScript.

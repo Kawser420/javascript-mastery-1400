@@ -1,18 +1,22 @@
-import type { Problem } from "../../types";
+import { Problem } from "@/types";
 
 export const problems: Problem[] = [
   {
     id: "settimeout-callback",
     title: "`setTimeout` Callback",
-    description: "Use `setTimeout` to execute a function after a specified delay, demonstrating a basic macrotask.",
+    description:
+      "Use `setTimeout` to execute a function after a specified delay, demonstrating a basic macrotask.",
     category: "Asynchronous JS",
-    inputs: [{ id: "delay", label: "Delay (ms)", type: "number", defaultValue: 500 }],
+    inputs: [
+      { id: "delay", label: "Delay (ms)", type: "number", defaultValue: 500 },
+    ],
     buttonText: "Run with Delay",
   },
   {
     id: "promise-creation",
     title: "Creating a Simple Promise",
-    description: "Create a new Promise that resolves with a success message after a short delay.",
+    description:
+      "Create a new Promise that resolves with a success message after a short delay.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Create and Resolve",
@@ -20,7 +24,8 @@ export const problems: Problem[] = [
   {
     id: "promise-rejection",
     title: "Creating a Rejecting Promise",
-    description: "Create a new Promise that rejects with an error message and handle it with `.catch()`.",
+    description:
+      "Create a new Promise that rejects with an error message and handle it with `.catch()`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Create and Reject",
@@ -28,7 +33,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-api-data",
     title: "Fetch API Data",
-    description: "Use the Fetch API to get data from a public API (JSONPlaceholder).",
+    description:
+      "Use the Fetch API to get data from a public API (JSONPlaceholder).",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Fetch Todo",
@@ -36,7 +42,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-syntax",
     title: "`async/await` Syntax",
-    description: "Rewrite the Fetch API example using the more modern `async/await` syntax for cleaner asynchronous code.",
+    description:
+      "Rewrite the Fetch API example using the more modern `async/await` syntax for cleaner asynchronous code.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Fetch with async/await",
@@ -44,7 +51,8 @@ export const problems: Problem[] = [
   {
     id: "promise-chaining",
     title: "Promise Chaining with `.then()`",
-    description: "Chain multiple `.then()` calls to perform a sequence of asynchronous operations.",
+    description:
+      "Chain multiple `.then()` calls to perform a sequence of asynchronous operations.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Promise Chain",
@@ -52,7 +60,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-error-handling",
     title: "Error Handling with `async/await`",
-    description: "Use a `try...catch` block to handle a rejected promise within an `async` function.",
+    description:
+      "Use a `try...catch` block to handle a rejected promise within an `async` function.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Catch Async Error",
@@ -60,7 +69,8 @@ export const problems: Problem[] = [
   {
     id: "promise-all",
     title: "Promise.all()",
-    description: "Use `Promise.all()` to wait for multiple promises to resolve concurrently.",
+    description:
+      "Use `Promise.all()` to wait for multiple promises to resolve concurrently.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Promise.all",
@@ -68,7 +78,8 @@ export const problems: Problem[] = [
   {
     id: "promise-all-rejection",
     title: "Promise.all() with Rejection",
-    description: "Demonstrate that `Promise.all()` rejects as soon as any of the input promises reject.",
+    description:
+      "Demonstrate that `Promise.all()` rejects as soon as any of the input promises reject.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Rejection",
@@ -76,7 +87,8 @@ export const problems: Problem[] = [
   {
     id: "promise-race",
     title: "Promise.race()",
-    description: "Use `Promise.race()` to get the result of the first promise to settle (either resolve or reject).",
+    description:
+      "Use `Promise.race()` to get the result of the first promise to settle (either resolve or reject).",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Promise.race",
@@ -84,7 +96,8 @@ export const problems: Problem[] = [
   {
     id: "event-loop-macrotask-microtask",
     title: "Event Loop: Macro vs Microtask (Conceptual)",
-    description: "Explain the execution order of `setTimeout` (macrotask) and `Promise.resolve().then()` (microtask).",
+    description:
+      "Explain the execution order of `setTimeout` (macrotask) and `Promise.resolve().then()` (microtask).",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Order",
@@ -92,7 +105,8 @@ export const problems: Problem[] = [
   {
     id: "callback-hell-conceptual",
     title: "Callback Hell (Conceptual)",
-    description: "Show a conceptual example of 'callback hell' or the 'pyramid of doom' to illustrate the problem that Promises solve.",
+    description:
+      "Show a conceptual example of 'callback hell' or the 'pyramid of doom' to illustrate the problem that Promises solve.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Callback Hell",
@@ -100,7 +114,8 @@ export const problems: Problem[] = [
   {
     id: "promisify-callback-function",
     title: "Promisify a Callback Function",
-    description: "Convert a classic error-first callback-style function (like one from Node.js) into a function that returns a Promise.",
+    description:
+      "Convert a classic error-first callback-style function (like one from Node.js) into a function that returns a Promise.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Promisify",
@@ -108,7 +123,8 @@ export const problems: Problem[] = [
   {
     id: "promise-finally",
     title: "Promise `.finally()`",
-    description: "Demonstrate the `.finally()` method, which executes code once a promise is settled (either resolved or rejected).",
+    description:
+      "Demonstrate the `.finally()` method, which executes code once a promise is settled (either resolved or rejected).",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run with Finally",
@@ -116,7 +132,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-sequential",
     title: "Sequential `await` Calls",
-    description: "Use multiple `await` calls in sequence to perform asynchronous operations one after another.",
+    description:
+      "Use multiple `await` calls in sequence to perform asynchronous operations one after another.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Sequentially",
@@ -124,7 +141,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-parallel",
     title: "Parallel `await` Calls",
-    description: "Show how to run multiple asynchronous operations in parallel and wait for them all using `await` with `Promise.all`.",
+    description:
+      "Show how to run multiple asynchronous operations in parallel and wait for them all using `await` with `Promise.all`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run in Parallel",
@@ -132,7 +150,8 @@ export const problems: Problem[] = [
   {
     id: "promise-allsettled",
     title: "Promise.allSettled()",
-    description: "Use `Promise.allSettled()` to wait for all promises to settle and get an array of their outcomes (fulfilled or rejected).",
+    description:
+      "Use `Promise.allSettled()` to wait for all promises to settle and get an array of their outcomes (fulfilled or rejected).",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Promise.allSettled",
@@ -140,7 +159,8 @@ export const problems: Problem[] = [
   {
     id: "promise-any",
     title: "Promise.any()",
-    description: "Use `Promise.any()` to get the value of the first promise to be fulfilled. It rejects if all promises reject.",
+    description:
+      "Use `Promise.any()` to get the value of the first promise to be fulfilled. It rejects if all promises reject.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Promise.any",
@@ -156,7 +176,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-error-handling",
     title: "Fetch API: Error Handling",
-    description: "Demonstrate how to properly handle HTTP errors (like 404 or 500) with Fetch, as they don't cause the promise to reject.",
+    description:
+      "Demonstrate how to properly handle HTTP errors (like 404 or 500) with Fetch, as they don't cause the promise to reject.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Fetch Error",
@@ -164,7 +185,8 @@ export const problems: Problem[] = [
   {
     id: "setinterval-and-clear",
     title: "`setInterval` and `clearInterval`",
-    description: "Use `setInterval` to run a function repeatedly and `clearInterval` to stop it after a few executions.",
+    description:
+      "Use `setInterval` to run a function repeatedly and `clearInterval` to stop it after a few executions.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Interval",
@@ -172,7 +194,8 @@ export const problems: Problem[] = [
   {
     id: "microtask-queue-order",
     title: "Microtask Queue Order (Conceptual)",
-    description: "Explain the execution order of multiple `.then()` callbacks attached to an already resolved promise.",
+    description:
+      "Explain the execution order of multiple `.then()` callbacks attached to an already resolved promise.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Order",
@@ -180,7 +203,8 @@ export const problems: Problem[] = [
   {
     id: "async-iife",
     title: "Async IIFE",
-    description: "Use an Immediately Invoked Function Expression with `async` to run an async operation at the top level.",
+    description:
+      "Use an Immediately Invoked Function Expression with `async` to run an async operation at the top level.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Async IIFE",
@@ -188,23 +212,40 @@ export const problems: Problem[] = [
   {
     id: "promise-resolve-static",
     title: "Static `Promise.resolve()`",
-    description: "Use the static method `Promise.resolve()` to create a promise that is already resolved with a given value.",
+    description:
+      "Use the static method `Promise.resolve()` to create a promise that is already resolved with a given value.",
     category: "Asynchronous JS",
-    inputs: [{ id: "value", label: "Value to resolve with", type: "text", defaultValue: "Instant" }],
+    inputs: [
+      {
+        id: "value",
+        label: "Value to resolve with",
+        type: "text",
+        defaultValue: "Instant",
+      },
+    ],
     buttonText: "Resolve Instantly",
   },
   {
     id: "promise-reject-static",
     title: "Static `Promise.reject()`",
-    description: "Use the static method `Promise.reject()` to create a promise that is already rejected with a given reason.",
+    description:
+      "Use the static method `Promise.reject()` to create a promise that is already rejected with a given reason.",
     category: "Asynchronous JS",
-    inputs: [{ id: "reason", label: "Rejection reason", type: "text", defaultValue: "Instant Error" }],
+    inputs: [
+      {
+        id: "reason",
+        label: "Rejection reason",
+        type: "text",
+        defaultValue: "Instant Error",
+      },
+    ],
     buttonText: "Reject Instantly",
   },
   {
     id: "async-generator-conceptual",
     title: "Async Generator (Conceptual)",
-    description: "Explain the syntax and concept of an async generator (`async function*`) which can `yield` values asynchronously.",
+    description:
+      "Explain the syntax and concept of an async generator (`async function*`) which can `yield` values asynchronously.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Async Generator",
@@ -212,7 +253,8 @@ export const problems: Problem[] = [
   {
     id: "for-await-of-loop-conceptual",
     title: "`for-await...of` Loop (Conceptual)",
-    description: "Explain how to use the `for-await...of` loop to iterate over an async iterable, such as an async generator.",
+    description:
+      "Explain how to use the `for-await...of` loop to iterate over an async iterable, such as an async generator.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Loop",
@@ -220,7 +262,8 @@ export const problems: Problem[] = [
   {
     id: "web-workers-conceptual",
     title: "Web Workers (Conceptual)",
-    description: "Explain the concept of Web Workers for running scripts in a background thread to avoid blocking the main UI thread.",
+    description:
+      "Explain the concept of Web Workers for running scripts in a background thread to avoid blocking the main UI thread.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Web Workers",
@@ -228,7 +271,8 @@ export const problems: Problem[] = [
   {
     id: "abortcontroller-fetch",
     title: "AbortController with Fetch",
-    description: "Demonstrate how to use an `AbortController` to cancel an in-flight `fetch` request.",
+    description:
+      "Demonstrate how to use an `AbortController` to cancel an in-flight `fetch` request.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Abortable Fetch",
@@ -236,7 +280,8 @@ export const problems: Problem[] = [
   {
     id: "async-function-return-value",
     title: "Async Function Return Value",
-    description: "Demonstrate that an `async` function always returns a Promise, which resolves with the function's explicit return value.",
+    description:
+      "Demonstrate that an `async` function always returns a Promise, which resolves with the function's explicit return value.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Check Return Value",
@@ -244,7 +289,8 @@ export const problems: Problem[] = [
   {
     id: "then-chain-vs-await-sequence",
     title: "`.then` Chain vs Sequential `await`",
-    description: "Compare the visual and functional similarities between a `.then()` chain and a sequence of `await` statements.",
+    description:
+      "Compare the visual and functional similarities between a `.then()` chain and a sequence of `await` statements.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Compare Styles",
@@ -252,7 +298,8 @@ export const problems: Problem[] = [
   {
     id: "top-level-await-conceptual",
     title: "Top-Level `await` (Conceptual)",
-    description: "Explain how top-level `await` allows using `await` outside of an `async` function in ES modules.",
+    description:
+      "Explain how top-level `await` allows using `await` outside of an `async` function in ES modules.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Concept",
@@ -260,7 +307,8 @@ export const problems: Problem[] = [
   {
     id: "promise-in-constructor-antipattern",
     title: "Promise Constructor Antipattern (Conceptual)",
-    description: "Explain the 'Promise constructor anti-pattern' where a new promise is unnecessarily wrapped around an existing one.",
+    description:
+      "Explain the 'Promise constructor anti-pattern' where a new promise is unnecessarily wrapped around an existing one.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Antipattern",
@@ -268,7 +316,8 @@ export const problems: Problem[] = [
   {
     id: "promise-constructor-use-case",
     title: "Promise Constructor Use Case",
-    description: "Show a valid use case for the `Promise` constructor: wrapping a classic callback-based asynchronous API.",
+    description:
+      "Show a valid use case for the `Promise` constructor: wrapping a classic callback-based asynchronous API.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Valid Use Case",
@@ -276,7 +325,8 @@ export const problems: Problem[] = [
   {
     id: "requestanimationframe-conceptual",
     title: "`requestAnimationFrame` (Conceptual)",
-    description: "Explain `requestAnimationFrame` as a way to perform animations that is optimized by the browser to be efficient and smooth.",
+    description:
+      "Explain `requestAnimationFrame` as a way to perform animations that is optimized by the browser to be efficient and smooth.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain rAF",
@@ -284,7 +334,8 @@ export const problems: Problem[] = [
   {
     id: "event-loop-starvation-conceptual",
     title: "Event Loop Starvation (Conceptual)",
-    description: "Explain how a long-running synchronous task or an infinite loop of microtasks can block the event loop, preventing rendering and other tasks from running.",
+    description:
+      "Explain how a long-running synchronous task or an infinite loop of microtasks can block the event loop, preventing rendering and other tasks from running.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Starvation",
@@ -292,7 +343,8 @@ export const problems: Problem[] = [
   {
     id: "promise-from-thenable",
     title: "Promise from a 'Thenable'",
-    description: "Demonstrate how `Promise.resolve()` can convert a 'thenable' object (an object with a `.then` method) into a genuine Promise.",
+    description:
+      "Demonstrate how `Promise.resolve()` can convert a 'thenable' object (an object with a `.then` method) into a genuine Promise.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Convert Thenable",
@@ -308,7 +360,8 @@ export const problems: Problem[] = [
   {
     id: "async-error-propagation",
     title: "Async Error Propagation",
-    description: "Show that if an awaited function throws an error, the error propagates up and rejects the outer `async` function's promise.",
+    description:
+      "Show that if an awaited function throws an error, the error propagates up and rejects the outer `async` function's promise.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Propagation",
@@ -316,7 +369,8 @@ export const problems: Problem[] = [
   {
     id: "microtask-vs-macrotask-timing",
     title: "Microtask vs Macrotask Timing",
-    description: "Provide a code example with `setTimeout`, `setImmediate` (conceptual for Node), and `process.nextTick` (conceptual for Node) to show the order of execution.",
+    description:
+      "Provide a code example with `setTimeout`, `setImmediate` (conceptual for Node), and `process.nextTick` (conceptual for Node) to show the order of execution.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Timing Order",
@@ -324,7 +378,8 @@ export const problems: Problem[] = [
   {
     id: "promise-race-rejection",
     title: "Promise.race() with Rejection",
-    description: "Demonstrate that `Promise.race()` will reject if the first promise to settle is a rejection.",
+    description:
+      "Demonstrate that `Promise.race()` will reject if the first promise to settle is a rejection.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Race Rejection",
@@ -332,7 +387,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-in-map",
     title: "`async/await` inside `.map()`",
-    description: "Demonstrate the common pitfall of using `async/await` inside `.map()` without `Promise.all`, which results in an array of promises.",
+    description:
+      "Demonstrate the common pitfall of using `async/await` inside `.map()` without `Promise.all`, which results in an array of promises.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test `map` Pitfall",
@@ -340,7 +396,8 @@ export const problems: Problem[] = [
   {
     id: "promise-any-rejection",
     title: "Promise.any() with All Rejections",
-    description: "Demonstrate that `Promise.any()` rejects with an `AggregateError` if all of the input promises reject.",
+    description:
+      "Demonstrate that `Promise.any()` rejects with an `AggregateError` if all of the input promises reject.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test `any` Rejection",
@@ -348,7 +405,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-with-headers",
     title: "Fetch with Custom Headers",
-    description: "Show how to add custom headers (like `Authorization` or `Content-Type`) to a `fetch` request.",
+    description:
+      "Show how to add custom headers (like `Authorization` or `Content-Type`) to a `fetch` request.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Fetch with Headers",
@@ -356,7 +414,8 @@ export const problems: Problem[] = [
   {
     id: "promise-chain-error-handling",
     title: "Error Handling in Promise Chains",
-    description: "Show how a single `.catch()` at the end of a promise chain can handle a rejection from any of the preceding `.then()` blocks.",
+    description:
+      "Show how a single `.catch()` at the end of a promise chain can handle a rejection from any of the preceding `.then()` blocks.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Chain Catch",
@@ -364,7 +423,8 @@ export const problems: Problem[] = [
   {
     id: "callback-vs-promise-readability",
     title: "Readability: Callbacks vs Promises",
-    description: "Show a side-by-side conceptual comparison of a task implemented with nested callbacks versus a `.then()` chain.",
+    description:
+      "Show a side-by-side conceptual comparison of a task implemented with nested callbacks versus a `.then()` chain.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Compare Readability",
@@ -372,7 +432,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-destructuring",
     title: "Destructuring with `await`",
-    description: "Show how to destructure the result of an awaited promise that resolves to an object.",
+    description:
+      "Show how to destructure the result of an awaited promise that resolves to an object.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Destructure Result",
@@ -380,7 +441,8 @@ export const problems: Problem[] = [
   {
     id: "creating-promise-race-manually",
     title: "Creating `Promise.race` Manually",
-    description: "Conceptually outline how you could implement `Promise.race` from scratch using the `Promise` constructor.",
+    description:
+      "Conceptually outline how you could implement `Promise.race` from scratch using the `Promise` constructor.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Implementation",
@@ -388,7 +450,8 @@ export const problems: Problem[] = [
   {
     id: "awaiting-non-promise",
     title: "Awaiting a Non-Promise Value",
-    description: "Demonstrate that if you `await` a value that is not a promise, it is treated as a resolved promise with that value.",
+    description:
+      "Demonstrate that if you `await` a value that is not a promise, it is treated as a resolved promise with that value.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Await",
@@ -396,7 +459,8 @@ export const problems: Problem[] = [
   {
     id: "async-iteration-protocol-conceptual",
     title: "Async Iteration Protocol (Conceptual)",
-    description: "Explain the async iterator protocol (`[Symbol.asyncIterator]`) and how its `.next()` method returns a promise.",
+    description:
+      "Explain the async iterator protocol (`[Symbol.asyncIterator]`) and how its `.next()` method returns a promise.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Async Iterator",
@@ -404,7 +468,8 @@ export const problems: Problem[] = [
   {
     id: "custom-promise-class-conceptual",
     title: "Custom Promise Class (Conceptual)",
-    description: "Explain the basic structure of creating a custom Promise-like class by extending the `Promise` class and using `Symbol.species`.",
+    description:
+      "Explain the basic structure of creating a custom Promise-like class by extending the `Promise` class and using `Symbol.species`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Concept",
@@ -412,7 +477,8 @@ export const problems: Problem[] = [
   {
     id: "promise-chain-vs-nested-then",
     title: "Promise Chain vs. Nested `.then()`",
-    description: "Illustrate the difference between a proper promise chain and incorrectly nesting `.then()` calls, which leads to a new form of callback hell.",
+    description:
+      "Illustrate the difference between a proper promise chain and incorrectly nesting `.then()` calls, which leads to a new form of callback hell.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Compare Patterns",
@@ -420,7 +486,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-in-loops",
     title: "Using `await` in Loops",
-    description: "Demonstrate how to correctly use `await` inside a `for...of` loop to process items sequentially.",
+    description:
+      "Demonstrate how to correctly use `await` inside a `for...of` loop to process items sequentially.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Loop with Await",
@@ -428,7 +495,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-request-mode",
     title: "Fetch: Request `mode`",
-    description: "Explain the `mode` option in `fetch` (e.g., 'cors', 'no-cors', 'same-origin') and its impact on cross-origin requests.",
+    description:
+      "Explain the `mode` option in `fetch` (e.g., 'cors', 'no-cors', 'same-origin') and its impact on cross-origin requests.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain `mode`",
@@ -436,7 +504,8 @@ export const problems: Problem[] = [
   {
     id: "async-function-in-object",
     title: "Async Function in Object Literal",
-    description: "Show the syntax for defining an async function as a method within an object literal.",
+    description:
+      "Show the syntax for defining an async function as a method within an object literal.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Run Async Method",
@@ -444,7 +513,8 @@ export const problems: Problem[] = [
   {
     id: "promise-chain-with-sync-return",
     title: "Promise Chain with Synchronous Return",
-    description: "Demonstrate that returning a non-Promise value from a `.then()` handler effectively wraps that value in a resolved promise for the next step in the chain.",
+    description:
+      "Demonstrate that returning a non-Promise value from a `.then()` handler effectively wraps that value in a resolved promise for the next step in the chain.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Sync Return",
@@ -452,7 +522,8 @@ export const problems: Problem[] = [
   {
     id: "async-resource-management",
     title: "Async Resource Management (Conceptual)",
-    description: "Explain a pattern for acquiring and releasing a resource (like a lock or connection) asynchronously using `try...finally` with `async/await`.",
+    description:
+      "Explain a pattern for acquiring and releasing a resource (like a lock or connection) asynchronously using `try...finally` with `async/await`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Pattern",
@@ -460,7 +531,8 @@ export const problems: Problem[] = [
   {
     id: "indexeddb-promise-wrapper",
     title: "IndexedDB with a Promise Wrapper (Conceptual)",
-    description: "Explain how to wrap the callback- and event-based IndexedDB API with Promises to make it easier to use.",
+    description:
+      "Explain how to wrap the callback- and event-based IndexedDB API with Promises to make it easier to use.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Wrapper Concept",
@@ -468,7 +540,8 @@ export const problems: Problem[] = [
   {
     id: "websocket-communication-conceptual",
     title: "WebSocket Communication (Conceptual)",
-    description: "Explain the event-based nature of the WebSocket API (`onopen`, `onmessage`, `onerror`, `onclose`) for real-time, bidirectional communication.",
+    description:
+      "Explain the event-based nature of the WebSocket API (`onopen`, `onmessage`, `onerror`, `onclose`) for real-time, bidirectional communication.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain WebSockets",
@@ -476,7 +549,8 @@ export const problems: Problem[] = [
   {
     id: "server-sent-events-conceptual",
     title: "Server-Sent Events (Conceptual)",
-    description: "Explain the `EventSource` API for receiving a stream of updates from a server over a single HTTP connection.",
+    description:
+      "Explain the `EventSource` API for receiving a stream of updates from a server over a single HTTP connection.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain SSE",
@@ -484,7 +558,8 @@ export const problems: Problem[] = [
   {
     id: "async-batching-requests",
     title: "Async Batching (Conceptual)",
-    description: "Explain a debouncing/batching strategy where multiple calls to a function within a short time are collected and sent as a single network request.",
+    description:
+      "Explain a debouncing/batching strategy where multiple calls to a function within a short time are collected and sent as a single network request.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Batching",
@@ -492,15 +567,24 @@ export const problems: Problem[] = [
   {
     id: "promise-timeout-race",
     title: "Implementing a Timeout with `Promise.race`",
-    description: "Create a function that takes a promise and a timeout duration, and rejects if the promise doesn't resolve within the given time.",
+    description:
+      "Create a function that takes a promise and a timeout duration, and rejects if the promise doesn't resolve within the given time.",
     category: "Asynchronous JS",
-    inputs: [{ id: "timeout", label: "Timeout (ms)", type: "number", defaultValue: 100 }],
+    inputs: [
+      {
+        id: "timeout",
+        label: "Timeout (ms)",
+        type: "number",
+        defaultValue: 100,
+      },
+    ],
     buttonText: "Test Timeout",
   },
   {
     id: "async-retry-pattern",
     title: "Async Retry Pattern",
-    description: "Implement a function that attempts an async operation multiple times with a delay if it fails.",
+    description:
+      "Implement a function that attempts an async operation multiple times with a delay if it fails.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Retry",
@@ -508,7 +592,8 @@ export const problems: Problem[] = [
   {
     id: "mutationobserver-conceptual",
     title: "MutationObserver (Conceptual)",
-    description: "Explain the `MutationObserver` API for asynchronously observing changes to the DOM tree.",
+    description:
+      "Explain the `MutationObserver` API for asynchronously observing changes to the DOM tree.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Observer",
@@ -516,7 +601,8 @@ export const problems: Problem[] = [
   {
     id: "intersectionobserver-conceptual",
     title: "IntersectionObserver (Conceptual)",
-    description: "Explain the `IntersectionObserver` API for asynchronously observing when an element enters or exits the viewport.",
+    description:
+      "Explain the `IntersectionObserver` API for asynchronously observing when an element enters or exits the viewport.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Observer",
@@ -524,7 +610,8 @@ export const problems: Problem[] = [
   {
     id: "web-bluetooth-conceptual",
     title: "Web Bluetooth API (Conceptual)",
-    description: "Explain how the promise-based Web Bluetooth API allows web pages to connect to and interact with Bluetooth Low Energy devices.",
+    description:
+      "Explain how the promise-based Web Bluetooth API allows web pages to connect to and interact with Bluetooth Low Energy devices.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Web Bluetooth",
@@ -532,7 +619,8 @@ export const problems: Problem[] = [
   {
     id: "web-usb-conceptual",
     title: "WebUSB API (Conceptual)",
-    description: "Explain how the promise-based WebUSB API provides a way to interact with USB devices from a web page.",
+    description:
+      "Explain how the promise-based WebUSB API provides a way to interact with USB devices from a web page.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain WebUSB",
@@ -540,7 +628,8 @@ export const problems: Problem[] = [
   {
     id: "async-clipboard-api",
     title: "Async Clipboard API (Conceptual)",
-    description: "Explain the modern, promise-based `navigator.clipboard` API for reading from and writing to the system clipboard.",
+    description:
+      "Explain the modern, promise-based `navigator.clipboard` API for reading from and writing to the system clipboard.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Clipboard API",
@@ -548,7 +637,8 @@ export const problems: Problem[] = [
   {
     id: "async-queue-processing",
     title: "Sequential Async Queue",
-    description: "Implement a queue that processes asynchronous tasks one by one, ensuring the next task only starts after the previous one completes.",
+    description:
+      "Implement a queue that processes asynchronous tasks one by one, ensuring the next task only starts after the previous one completes.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Process Queue",
@@ -556,7 +646,8 @@ export const problems: Problem[] = [
   {
     id: "macrotask-rendering-conceptual",
     title: "Macrotasks and Rendering (Conceptual)",
-    description: "Explain that the browser's rendering step is typically treated as a macrotask, running after the current macrotask and all microtasks are complete.",
+    description:
+      "Explain that the browser's rendering step is typically treated as a macrotask, running after the current macrotask and all microtasks are complete.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Rendering",
@@ -564,7 +655,8 @@ export const problems: Problem[] = [
   {
     id: "promise-is-thenable",
     title: "Is it a Promise? (Conceptual)",
-    description: "Explain how to check if a value is a promise or 'thenable' by checking for a `then` method of type function.",
+    description:
+      "Explain how to check if a value is a promise or 'thenable' by checking for a `then` method of type function.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Check",
@@ -572,7 +664,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-vs-generators",
     title: "Async/Await vs Generators (Conceptual)",
-    description: "Explain that `async/await` is essentially syntactic sugar over generators and promises, which were used to achieve similar control flow before `async/await` was introduced.",
+    description:
+      "Explain that `async/await` is essentially syntactic sugar over generators and promises, which were used to achieve similar control flow before `async/await` was introduced.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Relationship",
@@ -580,7 +673,8 @@ export const problems: Problem[] = [
   {
     id: "promise-chain-flattening",
     title: "Promise Chain Flattening",
-    description: "Demonstrate that if you return a promise from inside a `.then()` handler, the chain will wait for that inner promise to resolve before continuing.",
+    description:
+      "Demonstrate that if you return a promise from inside a `.then()` handler, the chain will wait for that inner promise to resolve before continuing.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Flattening",
@@ -588,7 +682,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-credentials-option",
     title: "Fetch: `credentials` Option",
-    description: "Explain the `credentials` option in `fetch` ('include', 'same-origin', 'omit') for controlling whether cookies are sent with cross-origin requests.",
+    description:
+      "Explain the `credentials` option in `fetch` ('include', 'same-origin', 'omit') for controlling whether cookies are sent with cross-origin requests.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain `credentials`",
@@ -596,7 +691,8 @@ export const problems: Problem[] = [
   {
     id: "event-loop-node-vs-browser",
     title: "Event Loop: Node vs Browser (Conceptual)",
-    description: "Briefly explain the key differences in the Event Loop implementation between Node.js (with its multiple phases like timers, I/O) and browsers.",
+    description:
+      "Briefly explain the key differences in the Event Loop implementation between Node.js (with its multiple phases like timers, I/O) and browsers.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Differences",
@@ -604,15 +700,24 @@ export const problems: Problem[] = [
   {
     id: "async-sleep-function",
     title: "Creating an Async `sleep` Function",
-    description: "Create a `sleep` function that returns a promise which resolves after a given number of milliseconds, effectively pausing an `async` function.",
+    description:
+      "Create a `sleep` function that returns a promise which resolves after a given number of milliseconds, effectively pausing an `async` function.",
     category: "Asynchronous JS",
-    inputs: [{ id: "ms", label: "Milliseconds to sleep", type: "number", defaultValue: 300 }],
+    inputs: [
+      {
+        id: "ms",
+        label: "Milliseconds to sleep",
+        type: "number",
+        defaultValue: 300,
+      },
+    ],
     buttonText: "Sleep",
   },
   {
     id: "promise-callback-timing",
     title: "Promise Callback Timing",
-    description: "Demonstrate that a `.then()` callback is always executed asynchronously, even if the promise is already resolved.",
+    description:
+      "Demonstrate that a `.then()` callback is always executed asynchronously, even if the promise is already resolved.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Timing",
@@ -620,7 +725,8 @@ export const problems: Problem[] = [
   {
     id: "async-function-composition",
     title: "Async Function Composition (Conceptual)",
-    description: "Explain how to compose two async functions (where the output of one is the input to the next) using `async/await`.",
+    description:
+      "Explain how to compose two async functions (where the output of one is the input to the next) using `async/await`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Composition",
@@ -628,7 +734,8 @@ export const problems: Problem[] = [
   {
     id: "promise-all-vs-allsettled",
     title: "Promise.all vs allSettled",
-    description: "Summarize the key difference: `Promise.all` is fail-fast and rejects if any promise rejects, while `Promise.allSettled` waits for all and never rejects.",
+    description:
+      "Summarize the key difference: `Promise.all` is fail-fast and rejects if any promise rejects, while `Promise.allSettled` waits for all and never rejects.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Compare",
@@ -636,7 +743,8 @@ export const problems: Problem[] = [
   {
     id: "race-vs-any",
     title: "Promise.race vs any",
-    description: "Summarize the key difference: `Promise.race` settles with the first promise to settle (fulfill or reject). `Promise.any` settles with the first promise to *fulfill*.",
+    description:
+      "Summarize the key difference: `Promise.race` settles with the first promise to settle (fulfill or reject). `Promise.any` settles with the first promise to *fulfill*.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Compare",
@@ -644,7 +752,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-in-foreach-pitfall",
     title: "`await` in `forEach` Pitfall",
-    description: "Demonstrate that using `await` inside a `.forEach()` callback does not pause the loop, as `.forEach` is not promise-aware. A `for...of` loop should be used instead.",
+    description:
+      "Demonstrate that using `await` inside a `.forEach()` callback does not pause the loop, as `.forEach` is not promise-aware. A `for...of` loop should be used instead.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Pitfall",
@@ -652,7 +761,8 @@ export const problems: Problem[] = [
   {
     id: "async-function-constructor-conceptual",
     title: "AsyncFunction Constructor (Conceptual)",
-    description: "Explain the `AsyncFunction` constructor, which is similar to the `Function` constructor but creates async functions.",
+    description:
+      "Explain the `AsyncFunction` constructor, which is similar to the `Function` constructor but creates async functions.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Constructor",
@@ -660,7 +770,8 @@ export const problems: Problem[] = [
   {
     id: "await-in-conditional",
     title: "`await` in a Conditional",
-    description: "Show an example of using the `await` keyword within an `if` statement or ternary operator.",
+    description:
+      "Show an example of using the `await` keyword within an `if` statement or ternary operator.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Conditional Await",
@@ -668,7 +779,8 @@ export const problems: Problem[] = [
   {
     id: "promise-chain-return-value",
     title: "Promise Chain Final Return Value",
-    description: "Demonstrate that the final value of a promise chain is the value returned by the last `.then()` or the reason from the last `.catch()`.",
+    description:
+      "Demonstrate that the final value of a promise chain is the value returned by the last `.then()` or the reason from the last `.catch()`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Get Final Value",
@@ -676,7 +788,8 @@ export const problems: Problem[] = [
   {
     id: "async-mutex-conceptual",
     title: "Async Mutex (Conceptual)",
-    description: "Explain a conceptual pattern for creating an async mutex (mutual exclusion lock) to ensure that only one async operation can access a critical section of code at a time.",
+    description:
+      "Explain a conceptual pattern for creating an async mutex (mutual exclusion lock) to ensure that only one async operation can access a critical section of code at a time.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Mutex",
@@ -684,7 +797,8 @@ export const problems: Problem[] = [
   {
     id: "promise-withresolvables",
     title: "`Promise.withResolvables()` (Conceptual)",
-    description: "Explain the new `Promise.withResolvables()` static method (ES2024) that returns an object with a promise and its `resolve`/`reject` functions.",
+    description:
+      "Explain the new `Promise.withResolvables()` static method (ES2024) that returns an object with a promise and its `resolve`/`reject` functions.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain `withResolvables`",
@@ -692,7 +806,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-response-types",
     title: "Fetch Response Types",
-    description: "Demonstrate different response body processors like `.json()`, `.text()`, and `.blob()`.",
+    description:
+      "Demonstrate different response body processors like `.json()`, `.text()`, and `.blob()`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Show Response Types",
@@ -700,7 +815,8 @@ export const problems: Problem[] = [
   {
     id: "messagechannel-conceptual",
     title: "`MessageChannel` (Conceptual)",
-    description: "Explain the `MessageChannel` API for creating a two-way communication channel between different browsing contexts (e.g., window and iframe, or two workers).",
+    description:
+      "Explain the `MessageChannel` API for creating a two-way communication channel between different browsing contexts (e.g., window and iframe, or two workers).",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain `MessageChannel`",
@@ -708,7 +824,8 @@ export const problems: Problem[] = [
   {
     id: "web-locks-api-conceptual",
     title: "Web Locks API (Conceptual)",
-    description: "Explain the `navigator.locks` API for acquiring and releasing locks on resources, preventing race conditions between different tabs.",
+    description:
+      "Explain the `navigator.locks` API for acquiring and releasing locks on resources, preventing race conditions between different tabs.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Web Locks",
@@ -716,7 +833,8 @@ export const problems: Problem[] = [
   {
     id: "promise-then-onfulfilled-onrejected",
     title: "`.then()` with two arguments",
-    description: "Demonstrate using the second argument of `.then(onFulfilled, onRejected)` as an alternative to `.catch()` for handling rejections.",
+    description:
+      "Demonstrate using the second argument of `.then(onFulfilled, onRejected)` as an alternative to `.catch()` for handling rejections.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test `then` rejection",
@@ -724,7 +842,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-return-promise",
     title: "`await` a function that returns a Promise",
-    description: "Clarify that awaiting an `async` function is the same as awaiting a function that explicitly returns a promise.",
+    description:
+      "Clarify that awaiting an `async` function is the same as awaiting a function that explicitly returns a promise.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Test Equivalence",
@@ -732,7 +851,8 @@ export const problems: Problem[] = [
   {
     id: "broadcast-channel-conceptual",
     title: "`BroadcastChannel` API (Conceptual)",
-    description: "Explain the `BroadcastChannel` API for simple, one-to-many communication between different browsing contexts of the same origin.",
+    description:
+      "Explain the `BroadcastChannel` API for simple, one-to-many communication between different browsing contexts of the same origin.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain BroadcastChannel",
@@ -740,7 +860,8 @@ export const problems: Problem[] = [
   {
     id: "what-is-a-macrotask-conceptual",
     title: "What is a Macrotask? (Conceptual)",
-    description: "Provide a clear definition of a macrotask (or task) and list common examples like `setTimeout`, `setInterval`, and I/O operations.",
+    description:
+      "Provide a clear definition of a macrotask (or task) and list common examples like `setTimeout`, `setInterval`, and I/O operations.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Define Macrotask",
@@ -748,7 +869,8 @@ export const problems: Problem[] = [
   {
     id: "what-is-a-microtask-conceptual",
     title: "What is a Microtask? (Conceptual)",
-    description: "Provide a clear definition of a microtask and list common examples like `Promise.then/catch/finally` and `queueMicrotask`.",
+    description:
+      "Provide a clear definition of a microtask and list common examples like `Promise.then/catch/finally` and `queueMicrotask`.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Define Microtask",
@@ -756,7 +878,8 @@ export const problems: Problem[] = [
   {
     id: "queuemicrotask-api",
     title: "`queueMicrotask()` API",
-    description: "Demonstrate the `queueMicrotask()` global function for queuing a function to be executed in the microtask queue.",
+    description:
+      "Demonstrate the `queueMicrotask()` global function for queuing a function to be executed in the microtask queue.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Queue a Microtask",
@@ -764,7 +887,8 @@ export const problems: Problem[] = [
   {
     id: "promise-unwrapping-conceptual",
     title: "Promise Unwrapping (Conceptual)",
-    description: "Explain the concept of 'promise unwrapping' where if a `.then()` handler returns a promise, the chain waits for it to settle rather than resolving with the promise object itself.",
+    description:
+      "Explain the concept of 'promise unwrapping' where if a `.then()` handler returns a promise, the chain waits for it to settle rather than resolving with the promise object itself.",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Unwrapping",
@@ -772,7 +896,8 @@ export const problems: Problem[] = [
   {
     id: "async-pool-pattern-conceptual",
     title: "Async Pool / Concurrency Limiter (Conceptual)",
-    description: "Explain a pattern to run a large number of async tasks with a limited concurrency (e.g., only 5 network requests at a time).",
+    description:
+      "Explain a pattern to run a large number of async tasks with a limited concurrency (e.g., only 5 network requests at a time).",
     category: "Asynchronous JS",
     inputs: [],
     buttonText: "Explain Async Pool",

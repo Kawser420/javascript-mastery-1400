@@ -1,10 +1,11 @@
-import type { Problem } from "../../types";
+import { Problem } from "@/types";
 
 export const problems: Problem[] = [
   {
     id: "dom-get-element-by-id",
     title: "Get Element by ID",
-    description: "Use `document.getElementById` to select a specific DOM element and change its text content.",
+    description:
+      "Use `document.getElementById` to select a specific DOM element and change its text content.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Change Text by ID",
@@ -12,7 +13,8 @@ export const problems: Problem[] = [
   {
     id: "dom-get-elements-by-class-name",
     title: "Get Elements by Class Name",
-    description: "Use `document.getElementsByClassName` to select a collection of DOM elements and describe how you would iterate over them.",
+    description:
+      "Use `document.getElementsByClassName` to select a collection of DOM elements and describe how you would iterate over them.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Select by Class",
@@ -20,7 +22,8 @@ export const problems: Problem[] = [
   {
     id: "dom-query-selector",
     title: "Query Selector",
-    description: "Use `document.querySelector` to find the first element that matches a CSS selector (e.g., a class or an attribute).",
+    description:
+      "Use `document.querySelector` to find the first element that matches a CSS selector (e.g., a class or an attribute).",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Select First Match",
@@ -28,7 +31,8 @@ export const problems: Problem[] = [
   {
     id: "dom-query-selector-all",
     title: "Query Selector All",
-    description: "Use `document.querySelectorAll` to get a static NodeList of all elements matching a CSS selector and describe how to loop through it.",
+    description:
+      "Use `document.querySelectorAll` to get a static NodeList of all elements matching a CSS selector and describe how to loop through it.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Select All Matches",
@@ -36,7 +40,8 @@ export const problems: Problem[] = [
   {
     id: "dom-addeventlistener",
     title: "Add Event Listener",
-    description: "Attach a `click` event listener to a button that triggers an alert.",
+    description:
+      "Attach a `click` event listener to a button that triggers an alert.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Click Me (Event Listener)",
@@ -44,7 +49,8 @@ export const problems: Problem[] = [
   {
     id: "dom-create-and-append",
     title: "Create and Append Element",
-    description: "Create a new `<li>` element with some text and append it to an existing `<ul>` element.",
+    description:
+      "Create a new `<li>` element with some text and append it to an existing `<ul>` element.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Add List Item",
@@ -52,7 +58,8 @@ export const problems: Problem[] = [
   {
     id: "dom-remove-element",
     title: "Remove an Element",
-    description: "Select an element by its ID and remove it from the DOM using the `.remove()` method.",
+    description:
+      "Select an element by its ID and remove it from the DOM using the `.remove()` method.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Remove Element",
@@ -60,7 +67,8 @@ export const problems: Problem[] = [
   {
     id: "dom-innerhtml-vs-textcontent",
     title: "innerHTML vs. textContent",
-    description: "Demonstrate the difference between setting `innerHTML` (which parses HTML) and `textContent` (which treats content as plain text).",
+    description:
+      "Demonstrate the difference between setting `innerHTML` (which parses HTML) and `textContent` (which treats content as plain text).",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show Difference",
@@ -68,7 +76,8 @@ export const problems: Problem[] = [
   {
     id: "dom-get-set-attribute",
     title: "Get and Set Attributes",
-    description: "Use `setAttribute` to add a `disabled` attribute to a button and `getAttribute` to read an element's `id`.",
+    description:
+      "Use `setAttribute` to add a `disabled` attribute to a button and `getAttribute` to read an element's `id`.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Modify Attributes",
@@ -76,7 +85,8 @@ export const problems: Problem[] = [
   {
     id: "dom-data-attributes",
     title: "Working with Data Attributes",
-    description: "Set a custom `data-*` attribute on an element and access it using the `dataset` property.",
+    description:
+      "Set a custom `data-*` attribute on an element and access it using the `dataset` property.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Use Data Attributes",
@@ -84,7 +94,8 @@ export const problems: Problem[] = [
   {
     id: "dom-modify-styles",
     title: "Modify Element Styles",
-    description: "Select an element and change its `color` and `backgroundColor` style properties directly.",
+    description:
+      "Select an element and change its `color` and `backgroundColor` style properties directly.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Change Style",
@@ -92,7 +103,8 @@ export const problems: Problem[] = [
   {
     id: "dom-toggle-class",
     title: "Toggle a CSS Class",
-    description: "Use `element.classList.toggle()` to add or remove a CSS class from an element, changing its appearance.",
+    description:
+      "Use `element.classList.toggle()` to add or remove a CSS class from an element, changing its appearance.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Toggle Highlight",
@@ -100,7 +112,8 @@ export const problems: Problem[] = [
   {
     id: "dom-navigation",
     title: "DOM Navigation",
-    description: "Given an element, access its `parentElement`, `children`, and `nextElementSibling`.",
+    description:
+      "Given an element, access its `parentElement`, `children`, and `nextElementSibling`.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show Navigation",
@@ -108,7 +121,8 @@ export const problems: Problem[] = [
   {
     id: "dom-form-submit-event",
     title: "Form `submit` Event",
-    description: "Add a `submit` event listener to a form that prevents the default page reload and logs the input value.",
+    description:
+      "Add a `submit` event listener to a form that prevents the default page reload and logs the input value.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show Form Logic",
@@ -116,7 +130,8 @@ export const problems: Problem[] = [
   {
     id: "localstorage-set-get",
     title: "LocalStorage: Set & Get",
-    description: "Use `localStorage.setItem()` to save data that persists after the browser is closed, and `localStorage.getItem()` to retrieve it.",
+    description:
+      "Use `localStorage.setItem()` to save data that persists after the browser is closed, and `localStorage.getItem()` to retrieve it.",
     category: "Web APIs & DOM",
     inputs: [
       { id: "key", label: "Key", type: "text", defaultValue: "userTheme" },
@@ -127,7 +142,8 @@ export const problems: Problem[] = [
   {
     id: "sessionstorage-set-get",
     title: "SessionStorage: Set & Get",
-    description: "Use `sessionStorage` to store data for a single browser session (data is cleared when the tab is closed).",
+    description:
+      "Use `sessionStorage` to store data for a single browser session (data is cleared when the tab is closed).",
     category: "Web APIs & DOM",
     inputs: [
       { id: "key", label: "Key", type: "text", defaultValue: "sessionToken" },
@@ -138,7 +154,8 @@ export const problems: Problem[] = [
   {
     id: "window-location-object",
     title: "Window Location Object",
-    description: "Access properties of the `window.location` object, such as `href`, `hostname`, and `pathname`.",
+    description:
+      "Access properties of the `window.location` object, such as `href`, `hostname`, and `pathname`.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show Location Info",
@@ -146,7 +163,8 @@ export const problems: Problem[] = [
   {
     id: "navigator-geolocation",
     title: "Geolocation API (Conceptual)",
-    description: "Show the conceptual code for using the `navigator.geolocation` API to get the user's current position.",
+    description:
+      "Show the conceptual code for using the `navigator.geolocation` API to get the user's current position.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show Geolocation Code",
@@ -154,7 +172,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-api-dom-update",
     title: "Fetch API and DOM Update",
-    description: "Use the Fetch API to get data from a public API and then use the result to update the text content of a DOM element.",
+    description:
+      "Use the Fetch API to get data from a public API and then use the result to update the text content of a DOM element.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Fetch and Display",
@@ -162,7 +181,8 @@ export const problems: Problem[] = [
   {
     id: "history-api-pushstate",
     title: "History API: `pushState` (Conceptual)",
-    description: "Explain how `history.pushState()` can be used to change the URL in the browser's address bar without a full page reload, enabling single-page applications (SPAs).",
+    description:
+      "Explain how `history.pushState()` can be used to change the URL in the browser's address bar without a full page reload, enabling single-page applications (SPAs).",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain pushState",
@@ -170,7 +190,8 @@ export const problems: Problem[] = [
   {
     id: "dom-insert-before",
     title: "Insert Element Before Another",
-    description: "Create a new element and insert it into the DOM before another specific element using `insertBefore()`.",
+    description:
+      "Create a new element and insert it into the DOM before another specific element using `insertBefore()`.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show insertBefore",
@@ -178,7 +199,8 @@ export const problems: Problem[] = [
   {
     id: "dom-replace-child",
     title: "Replace an Element",
-    description: "Replace an existing DOM element with a new one using `replaceChild()`.",
+    description:
+      "Replace an existing DOM element with a new one using `replaceChild()`.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show replaceChild",
@@ -186,7 +208,8 @@ export const problems: Problem[] = [
   {
     id: "dom-clone-node",
     title: "Clone a DOM Node",
-    description: "Create a copy of a DOM element using `cloneNode()`, demonstrating both shallow and deep cloning.",
+    description:
+      "Create a copy of a DOM element using `cloneNode()`, demonstrating both shallow and deep cloning.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show cloneNode",
@@ -194,7 +217,8 @@ export const problems: Problem[] = [
   {
     id: "dom-input-event",
     title: "The `input` Event",
-    description: "Listen for the `input` event on a text field to react immediately as the user types.",
+    description:
+      "Listen for the `input` event on a text field to react immediately as the user types.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show `input` Event Logic",
@@ -202,7 +226,8 @@ export const problems: Problem[] = [
   {
     id: "dom-get-radio-value",
     title: "Get Selected Radio Button Value",
-    description: "Find which radio button in a group is selected and get its value.",
+    description:
+      "Find which radio button in a group is selected and get its value.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show Radio Value Logic",
@@ -210,15 +235,24 @@ export const problems: Problem[] = [
   {
     id: "localstorage-remove-item",
     title: "LocalStorage: Remove Item",
-    description: "Remove a specific item from `localStorage` by its key using `.removeItem()`.",
+    description:
+      "Remove a specific item from `localStorage` by its key using `.removeItem()`.",
     category: "Web APIs & DOM",
-    inputs: [{ id: "key", label: "Key to Remove", type: "text", defaultValue: "userTheme" }],
+    inputs: [
+      {
+        id: "key",
+        label: "Key to Remove",
+        type: "text",
+        defaultValue: "userTheme",
+      },
+    ],
     buttonText: "Remove Item",
   },
   {
     id: "localstorage-clear",
     title: "LocalStorage: Clear All",
-    description: "Remove all items from a domain's `localStorage` using `.clear()`.",
+    description:
+      "Remove all items from a domain's `localStorage` using `.clear()`.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Clear Storage",
@@ -226,7 +260,8 @@ export const problems: Problem[] = [
   {
     id: "history-api-replacestate",
     title: "History API: `replaceState` (Conceptual)",
-    description: "Explain how `history.replaceState()` modifies the current history entry, which is useful for updating the URL without creating a new entry in the history stack.",
+    description:
+      "Explain how `history.replaceState()` modifies the current history entry, which is useful for updating the URL without creating a new entry in the history stack.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain replaceState",
@@ -234,7 +269,8 @@ export const problems: Problem[] = [
   {
     id: "history-api-popstate",
     title: "History API: `popstate` Event (Conceptual)",
-    description: "Explain how to listen for the `popstate` event, which fires when the user navigates through their session history (e.g., using the browser's back/forward buttons).",
+    description:
+      "Explain how to listen for the `popstate` event, which fires when the user navigates through their session history (e.g., using the browser's back/forward buttons).",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain popstate",
@@ -242,15 +278,24 @@ export const problems: Problem[] = [
   {
     id: "urlsearchparams",
     title: "`URLSearchParams`",
-    description: "Use the `URLSearchParams` interface to easily read and write the query string of a URL.",
+    description:
+      "Use the `URLSearchParams` interface to easily read and write the query string of a URL.",
     category: "Web APIs & DOM",
-    inputs: [{ id: "url", label: "URL with query string", type: "text", defaultValue: "https://example.com?q=js&page=2" }],
+    inputs: [
+      {
+        id: "url",
+        label: "URL with query string",
+        type: "text",
+        defaultValue: "https://example.com?q=js&page=2",
+      },
+    ],
     buttonText: "Parse Query String",
   },
   {
     id: "document-cookie",
     title: "Working with `document.cookie`",
-    description: "Demonstrate how to read and write a simple cookie using the `document.cookie` property.",
+    description:
+      "Demonstrate how to read and write a simple cookie using the `document.cookie` property.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show Cookie Logic",
@@ -258,7 +303,8 @@ export const problems: Problem[] = [
   {
     id: "fetch-api-credentials",
     title: "Fetch API: `credentials` Option",
-    description: "Explain the `credentials` option in a `fetch` request ('include', 'same-origin', 'omit') for controlling whether cookies are sent with cross-origin requests.",
+    description:
+      "Explain the `credentials` option in a `fetch` request ('include', 'same-origin', 'omit') for controlling whether cookies are sent with cross-origin requests.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Credentials",
@@ -266,7 +312,8 @@ export const problems: Problem[] = [
   {
     id: "canvas-api-conceptual",
     title: "Canvas API (Conceptual)",
-    description: "Explain the basic concept of the `<canvas>` element and its 2D rendering context for drawing graphics, shapes, and images.",
+    description:
+      "Explain the basic concept of the `<canvas>` element and its 2D rendering context for drawing graphics, shapes, and images.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Canvas",
@@ -274,7 +321,8 @@ export const problems: Problem[] = [
   {
     id: "web-audio-api-conceptual",
     title: "Web Audio API (Conceptual)",
-    description: "Explain the concept of the Web Audio API for processing and synthesizing audio in web applications using an audio routing graph.",
+    description:
+      "Explain the concept of the Web Audio API for processing and synthesizing audio in web applications using an audio routing graph.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Web Audio",
@@ -282,7 +330,8 @@ export const problems: Problem[] = [
   {
     id: "drag-and-drop-api-conceptual",
     title: "Drag and Drop API (Conceptual)",
-    description: "Explain the sequence of events (`dragstart`, `dragover`, `drop`) involved in implementing native drag-and-drop functionality.",
+    description:
+      "Explain the sequence of events (`dragstart`, `dragover`, `drop`) involved in implementing native drag-and-drop functionality.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Drag & Drop",
@@ -290,7 +339,8 @@ export const problems: Problem[] = [
   {
     id: "page-visibility-api-conceptual",
     title: "Page Visibility API (Conceptual)",
-    description: "Explain how to use the Page Visibility API to detect when a user has navigated away from the tab or minimized the window.",
+    description:
+      "Explain how to use the Page Visibility API to detect when a user has navigated away from the tab or minimized the window.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Visibility API",
@@ -298,7 +348,8 @@ export const problems: Problem[] = [
   {
     id: "fullscreen-api-conceptual",
     title: "Fullscreen API (Conceptual)",
-    description: "Explain how to use the Fullscreen API to programmatically request that an element enters full-screen mode.",
+    description:
+      "Explain how to use the Fullscreen API to programmatically request that an element enters full-screen mode.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Fullscreen API",
@@ -306,7 +357,8 @@ export const problems: Problem[] = [
   {
     id: "service-workers-conceptual",
     title: "Service Workers (Conceptual)",
-    description: "Explain the role of a Service Worker as a client-side proxy for enabling offline functionality, intercepting network requests, and handling push notifications.",
+    description:
+      "Explain the role of a Service Worker as a client-side proxy for enabling offline functionality, intercepting network requests, and handling push notifications.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Service Workers",
@@ -314,7 +366,8 @@ export const problems: Problem[] = [
   {
     id: "indexeddb-conceptual",
     title: "IndexedDB API (Conceptual)",
-    description: "Explain the concept of IndexedDB as a low-level, transactional database in the browser for storing large amounts of structured data.",
+    description:
+      "Explain the concept of IndexedDB as a low-level, transactional database in the browser for storing large amounts of structured data.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain IndexedDB",
@@ -322,7 +375,8 @@ export const problems: Problem[] = [
   {
     id: "web-share-api-conceptual",
     title: "Web Share API (Conceptual)",
-    description: "Explain how the `navigator.share()` method can be used to invoke the native sharing capabilities of the user's device.",
+    description:
+      "Explain how the `navigator.share()` method can be used to invoke the native sharing capabilities of the user's device.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Web Share",
@@ -330,7 +384,8 @@ export const problems: Problem[] = [
   {
     id: "async-clipboard-api-conceptual",
     title: "Async Clipboard API (Conceptual)",
-    description: "Explain the modern, promise-based `navigator.clipboard` API for securely reading from and writing to the system clipboard.",
+    description:
+      "Explain the modern, promise-based `navigator.clipboard` API for securely reading from and writing to the system clipboard.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Clipboard API",
@@ -338,7 +393,8 @@ export const problems: Problem[] = [
   {
     id: "performance-api-conceptual",
     title: "Performance API (Conceptual)",
-    description: "Explain how the Performance API, specifically `performance.now()`, provides high-precision timestamps for measuring application performance.",
+    description:
+      "Explain how the Performance API, specifically `performance.now()`, provides high-precision timestamps for measuring application performance.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Performance API",
@@ -346,7 +402,8 @@ export const problems: Problem[] = [
   {
     id: "notifications-api-conceptual",
     title: "Notifications API (Conceptual)",
-    description: "Explain how to request permission and display native system notifications to the user from a web page.",
+    description:
+      "Explain how to request permission and display native system notifications to the user from a web page.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain Notifications",
@@ -354,15 +411,24 @@ export const problems: Problem[] = [
   {
     id: "url-object-conceptual",
     title: "The `URL` Object",
-    description: "Demonstrate how to parse and construct URLs using the `URL` constructor, a more robust method than string manipulation.",
+    description:
+      "Demonstrate how to parse and construct URLs using the `URL` constructor, a more robust method than string manipulation.",
     category: "Web APIs & DOM",
-    inputs: [{ id: "url", label: "URL to parse", type: "text", defaultValue: "https://example.com:8080/path?q=test" }],
+    inputs: [
+      {
+        id: "url",
+        label: "URL to parse",
+        type: "text",
+        defaultValue: "https://example.com:8080/path?q=test",
+      },
+    ],
     buttonText: "Parse with URL Object",
   },
   {
     id: "matchmedia-api-conceptual",
     title: "`window.matchMedia` (Conceptual)",
-    description: "Explain how `window.matchMedia()` can be used to check if the document matches a CSS media query, allowing for responsive design logic in JavaScript.",
+    description:
+      "Explain how `window.matchMedia()` can be used to check if the document matches a CSS media query, allowing for responsive design logic in JavaScript.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain matchMedia",
@@ -370,7 +436,8 @@ export const problems: Problem[] = [
   {
     id: "requestidlecallback-conceptual",
     title: "`requestIdleCallback` (Conceptual)",
-    description: "Explain how `requestIdleCallback` queues a function to be called during a browser's idle periods, allowing you to perform background and low-priority tasks without interfering with latency-critical events.",
+    description:
+      "Explain how `requestIdleCallback` queues a function to be called during a browser's idle periods, allowing you to perform background and low-priority tasks without interfering with latency-critical events.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain idleCallback",
@@ -378,7 +445,8 @@ export const problems: Problem[] = [
   {
     id: "formdata-object",
     title: "`FormData` Object",
-    description: "Demonstrate how to create a `FormData` object from a `<form>` element to easily send its data via `fetch`.",
+    description:
+      "Demonstrate how to create a `FormData` object from a `<form>` element to easily send its data via `fetch`.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show FormData Logic",
@@ -386,7 +454,8 @@ export const problems: Problem[] = [
   {
     id: "dom-contains-method",
     title: "The `.contains()` Method",
-    description: "Use the `node.contains(otherNode)` method to check if a node is a descendant of a given node.",
+    description:
+      "Use the `node.contains(otherNode)` method to check if a node is a descendant of a given node.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Show `.contains()` Logic",
@@ -394,7 +463,8 @@ export const problems: Problem[] = [
   {
     id: "storage-event-conceptual",
     title: "`storage` Event (Conceptual)",
-    description: "Explain how to listen for the `storage` event, which fires on a page when `localStorage` is changed in another tab of the same origin.",
+    description:
+      "Explain how to listen for the `storage` event, which fires on a page when `localStorage` is changed in another tab of the same origin.",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Explain `storage` Event",
@@ -402,10 +472,10 @@ export const problems: Problem[] = [
   {
     id: "dom-traversal-vs-query",
     title: "DOM Traversal vs. Querying (Conceptual)",
-    description: "Compare the use cases for direct DOM traversal (e.g., `.parentElement`, `.children`) versus querying (e.g., `querySelector`).",
+    description:
+      "Compare the use cases for direct DOM traversal (e.g., `.parentElement`, `.children`) versus querying (e.g., `querySelector`).",
     category: "Web APIs & DOM",
     inputs: [],
     buttonText: "Compare Methods",
   },
 ];
-```

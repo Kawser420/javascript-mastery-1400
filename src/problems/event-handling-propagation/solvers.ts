@@ -1,53 +1,102 @@
 export const solvers: Record<string, Function> = {
-    'event-bubbling': () => `(Conceptual) Three nested divs. Clicking the innermost one would log messages in this order: 'Inner clicked', 'Middle clicked', 'Outer clicked'. The event "bubbles up" from the target to its ancestors.`,
-    'event-capturing': () => `(Conceptual) Listeners are added with \`{ capture: true }\`. Clicking the innermost div would now log: 'Outer clicked', 'Middle clicked', 'Inner clicked'. The event travels down to the target first.`,
-    'event-delegation': () => `(Conceptual) One listener on a \`<ul>\` element. Clicking any \`<li>\` inside it would log the text of the specific \`<li>\` that was clicked by checking \`event.target\`. This saves memory and works for dynamically added items.`,
-    'stop-propagation': () => `(Conceptual) Three nested divs. Clicking the innermost one would log 'Inner clicked' and 'Middle clicked', but the 'Outer' listener would NOT fire because the middle one called \`event.stopPropagation()\`.`,
-    'prevent-default': () => `(Conceptual) On a form's 'submit' event, calling \`event.preventDefault()\` stops the browser from reloading the page. On a link's 'click' event, it stops the browser from navigating to the link's href.`,
-    'event-target-vs-currenttarget': () => `(Conceptual) In event delegation on a \`<ul>\`, if you click an \`<li>\`, \`event.target\` is the \`<li>\` itself. \`event.currentTarget\` is always the \`<ul>\`, the element the listener is attached to.`,
-    'this-in-event-handler': () => `(Conceptual) \`btn.addEventListener('click', function() { console.log(this) })\`. Here, \`this\` is the button element. \`btn.addEventListener('click', () => { console.log(this) })\`. Here, \`this\` is inherited from the surrounding scope (e.g., \`window\` or a class instance).`,
-    'keyboard-events': () => `(Conceptual) \`keydown\`: fires when key is pressed. \`keyup\`: fires when key is released. \`keypress\` is deprecated. Use \`event.key\` ("a", "Enter") to know which key was pressed and \`event.code\` ("KeyA", "Enter") for the physical key.`,
-    'mouse-events': () => `(Conceptual) Order: \`mousedown\` -> \`mouseup\` -> \`click\`. \`mousemove\` fires repeatedly. \`mouseover\` fires when entering an element or its children. \`mouseenter\` is similar but doesn't bubble and fires only for the element itself.`,
-    'addeventlistener-options-once': () => `(Conceptual) \`btn.addEventListener('click', myFunc, { once: true })\`. \`myFunc\` will execute only the first time the button is clicked and is then automatically removed.`,
-    'addeventlistener-options-passive': () => `(Conceptual) \`window.addEventListener('scroll', myFunc, { passive: true })\`. This tells the browser that \`myFunc\` will not call \`preventDefault()\`, allowing the browser to optimize scrolling for a smoother user experience.`,
-    'remove-event-listener': () => `(Conceptual) You must use a named function or store the callback in a variable. \`btn.addEventListener('click', handleClick);\` can be removed with \`btn.removeEventListener('click', handleClick);\`. You cannot remove an anonymous function.`,
-    'custom-events': () => `(Conceptual) Create: \`const myEvent = new CustomEvent('my-event', { detail: { data: 'hello' } });\`. Dispatch: \`el.dispatchEvent(myEvent);\`. Listen: \`el.addEventListener('my-event', e => console.log(e.detail.data));\`.`,
-    'domcontentloaded-vs-load': () => `(Conceptual) \`DOMContentLoaded\` fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. The \`window\` \`load\` event fires after all resources have loaded.`,
-    'event-phases': () => `(Conceptual) 1. Capturing Phase: The event travels from the \`window\` down to the target element's parent. 2. Target Phase: The event is handled by the target element itself. 3. Bubbling Phase: The event travels back up from the target's parent to the \`window\`.`,
-    'stop-immediate-propagation': () => `(Conceptual) If an element has two 'click' listeners, and the first one calls \`event.stopImmediatePropagation()\`, the second 'click' listener on that same element will NOT be executed.`,
-    'event-delegation-performance': () => `(Conceptual) Adding 1000 listeners uses more memory and takes more time to set up than adding just one. For a dynamic list where items are added/removed, delegation is much simpler as you don't need to add/remove listeners for each item.`,
-    'focus-and-blur-events': () => `(Conceptual) \`focus\` fires when an element (like an input) receives focus. \`blur\` fires when it loses focus. They are useful for input validation and UI changes. \`focusin\` and \`focusout\` are bubbling versions.`,
-    'event-coordinates': () => `(Conceptual) \`clientX/Y\` are coordinates relative to the visible part of the window (viewport). \`pageX/Y\` are coordinates relative to the top-left of the entire document, including the part that is scrolled out of view.`,
-    'delegation-with-closest': () => `(Conceptual) In a delegated listener on a list, instead of checking \`e.target.tagName\`, you can use \`const li = e.target.closest('li'); if (li) { ... }\`. This correctly finds the list item even if the user clicks on an icon or span inside it.`,
-    'input-vs-change-event': () => `(Conceptual) 'input' fires on every keystroke, paste, or change. 'change' fires only when the element loses focus after its value has been changed. 'input' is for real-time reactions; 'change' is for validation on exit.`,
-    'event-object-properties': () => `(Conceptual) \`event.type\`: "click". \`event.timeStamp\`: high-res time since page load. \`event.bubbles\`: boolean, true if the event bubbles. \`event.cancelable\`: boolean, true if preventDefault() can be called.`,
-    'mouseenter-vs-mouseover': () => `(Conceptual) Use \`mouseenter\` for hover effects on a parent element. It fires once. \`mouseover\` would fire again for every child element the mouse moves over, which is usually not what you want.`,
-    'pointer-events': () => `(Conceptual) They unify mouse, pen, and touch input. A single 'pointerdown' listener works for all three. The \`event.pointerType\` property tells you which device ('mouse', 'pen', 'touch') triggered the event.`,
-    'event-is-trusted': () => `(Conceptual) \`event.isTrusted\` is true if the event was generated by the user (e.g., a real click). It is false if the event was created and dispatched by code (e.g., \`element.dispatchEvent(new Event('click'))\`).`,
-    'form-reset-event': () => `(Conceptual) Add a listener to the \`<form>\` for the 'reset' event. It fires when a \`<button type="reset">\` is clicked. You can call \`event.preventDefault()\` to stop the form from clearing.`,
-    'window-error-event': () => `(Conceptual) \`window.addEventListener('error', event => { console.log('Uncaught error:', event.message); });\`. This acts as a global catch block for runtime errors that are not caught in try...catch.`,
-    'media-query-listener': () => `(Conceptual) \`const mq = window.matchMedia('(min-width: 600px)'); mq.addEventListener('change', event => { if(event.matches){...} });\`. The event fires whenever the condition's result changes.`,
-    'synthetic-events-react-conceptual': () => `(Conceptual) React wraps native browser events in a 'SyntheticEvent' object. This provides a consistent API across all browsers (e.g., you always use \`onChange\`, not \`oninput\`). React uses event delegation on the root for performance.`,
-    'event-modifier-keys': () => `(Conceptual) In a 'click' or 'keydown' event listener, you can check boolean properties like \`event.shiftKey\`, \`event.ctrlKey\`, \`event.altKey\`, and \`event.metaKey\` (Cmd/Win).`,
-    'touch-events': () => `(Conceptual) \`touchstart\`, \`touchmove\`, \`touchend\`. The event object has lists of touch points: \`event.touches\` (all fingers on screen), \`event.targetTouches\` (fingers on the element), and \`event.changedTouches\` (fingers involved in this specific event).`,
-    'event-composed-path': () => `(Conceptual) \`event.composedPath()\` returns an array of nodes the event will travel through, from the target up to the window. It's useful for debugging and for piercing through the Shadow DOM boundary.`,
-    'scroll-event': () => `(Conceptual) Add a listener to \`window\` or a scrollable \`div\` for the 'scroll' event. Inside, you can access \`element.scrollTop\` to know the scroll position. It fires very rapidly, so it should be debounced or throttled for performance.`,
-    'debouncing-events': () => `(Conceptual) A higher-order function that wraps an event handler. It uses \`setTimeout\` and \`clearTimeout\` to ensure the handler is only called after a period of inactivity (e.g., user stops typing).`,
-    'throttling-events': () => `(Conceptual) A higher-order function that wraps an event handler. It uses a flag or timestamp in a closure to ensure the handler is called at most once per interval (e.g., once every 200ms during a scroll).`,
-    'context-menu-event': () => `(Conceptual) \`element.addEventListener('contextmenu', e => { e.preventDefault(); showCustomMenu(); });\`. Preventing the default action stops the browser's right-click menu from appearing.`,
-    'drag-and-drop-events': () => `(Conceptual) An element with \`draggable="true"\` fires a \`dragstart\` event. A drop zone listens for \`dragover\` (and must call \`e.preventDefault()\`) and the final \`drop\` event to get the data.`,
-    'event-loop-conceptual': () => `(Conceptual) The Event Loop constantly checks if the Call Stack is empty. If it is, it takes a task from the Macrotask Queue, pushes it to the stack, and runs it. After the macrotask, it runs ALL tasks in the Microtask Queue. Then it repeats.`,
-    'focusin-vs-focus': () => `(Conceptual) \`focus\` does not bubble. If you want to use event delegation to know when any input inside a form gets focus, you must listen for the \`focusin\` event on the form element, because \`focusin\` bubbles.`,
-    'delegation-dynamic-elements': () => `(Conceptual) If you add a new \`<li>\` to a list, you would have to add a new listener to it. With delegation, the single listener on the parent \`<ul>\` will automatically handle events from the new \`<li>\` without any extra code.`,
-    'event-constructor': () => `(Conceptual) \`new Event('build', { bubbles: true, cancelable: true });\` creates a generic event that can be dispatched. This is simpler than \`CustomEvent\` if you don't need to pass custom data in the \`detail\` property.`,
-    'removing-all-listeners': () => `(Conceptual) The trick is: \`const newEl = oldEl.cloneNode(true); oldEl.parentNode.replaceChild(newEl, oldEl);\`. Cloning an element does not copy its event listeners.`,
-    'transitionend-event': () => `(Conceptual) \`element.addEventListener('transitionend', () => { console.log('Transition finished!'); });\`. This event fires when a CSS transition completes.`,
-    'animationend-event': () => `(Conceptual) \`element.addEventListener('animationend', () => { console.log('Animation finished!'); });\`. This event fires when a CSS animation completes.`,
-    'event-phase-property': () => `(Conceptual) Inside a listener, \`event.eventPhase\` returns a number: 1 for capturing, 2 for target, 3 for bubbling. This allows a single listener function to know which phase it's currently executing in.`,
-    'hashchange-event': () => `(Conceptual) \`window.addEventListener('hashchange', event => { console.log('New hash:', location.hash); });\`. This is a simple way to implement client-side routing for basic single-page apps.`,
-    'pointerevent-properties': () => `(Conceptual) \`event.pointerId\`: unique ID for the pointer. \`event.pointerType\`: "mouse", "pen", or "touch". \`event.pressure\`: pen pressure from 0-1. \`event.tiltX\`, \`event.tiltY\`: pen tilt angles.`,
-    'wheel-event': () => `(Conceptual) \`element.addEventListener('wheel', e => { e.preventDefault(); e.deltaY > 0 ? zoomOut() : zoomIn(); });\`. The \`deltaY\` property indicates the vertical scroll amount.`,
-    'event- bubbling-vs-delegation': () => `(Conceptual) Bubbling is the browser mechanism where an event travels up from a child to its parents. Delegation is a programming PATTERN that takes advantage of bubbling by placing a listener on a parent to handle events from its children.`,
-    'programmatic-event-dispatch': () => `(Conceptual) \`const myEvent = new Event('click', { bubbles: true }); myButton.dispatchEvent(myEvent);\`. This simulates a user click on the button, and the corresponding event listeners will be executed.`,
+  "event-bubbling": () =>
+    `(Conceptual) Three nested divs. Clicking the innermost one would log messages in this order: 'Inner clicked', 'Middle clicked', 'Outer clicked'. The event "bubbles up" from the target to its ancestors.`,
+  "event-capturing": () =>
+    `(Conceptual) Listeners are added with \`{ capture: true }\`. Clicking the innermost div would now log: 'Outer clicked', 'Middle clicked', 'Inner clicked'. The event travels down to the target first.`,
+  "event-delegation": () =>
+    `(Conceptual) One listener on a \`<ul>\` element. Clicking any \`<li>\` inside it would log the text of the specific \`<li>\` that was clicked by checking \`event.target\`. This saves memory and works for dynamically added items.`,
+  "stop-propagation": () =>
+    `(Conceptual) Three nested divs. Clicking the innermost one would log 'Inner clicked' and 'Middle clicked', but the 'Outer' listener would NOT fire because the middle one called \`event.stopPropagation()\`.`,
+  "prevent-default": () =>
+    `(Conceptual) On a form's 'submit' event, calling \`event.preventDefault()\` stops the browser from reloading the page. On a link's 'click' event, it stops the browser from navigating to the link's href.`,
+  "event-target-vs-currenttarget": () =>
+    `(Conceptual) In event delegation on a \`<ul>\`, if you click an \`<li>\`, \`event.target\` is the \`<li>\` itself. \`event.currentTarget\` is always the \`<ul>\`, the element the listener is attached to.`,
+  "this-in-event-handler": () =>
+    `(Conceptual) \`btn.addEventListener('click', function() { console.log(this) })\`. Here, \`this\` is the button element. \`btn.addEventListener('click', () => { console.log(this) })\`. Here, \`this\` is inherited from the surrounding scope (e.g., \`window\` or a class instance).`,
+  "keyboard-events": () =>
+    `(Conceptual) \`keydown\`: fires when key is pressed. \`keyup\`: fires when key is released. \`keypress\` is deprecated. Use \`event.key\` ("a", "Enter") to know which key was pressed and \`event.code\` ("KeyA", "Enter") for the physical key.`,
+  "mouse-events": () =>
+    `(Conceptual) Order: \`mousedown\` -> \`mouseup\` -> \`click\`. \`mousemove\` fires repeatedly. \`mouseover\` fires when entering an element or its children. \`mouseenter\` is similar but doesn't bubble and fires only for the element itself.`,
+  "addeventlistener-options-once": () =>
+    `(Conceptual) \`btn.addEventListener('click', myFunc, { once: true })\`. \`myFunc\` will execute only the first time the button is clicked and is then automatically removed.`,
+  "addeventlistener-options-passive": () =>
+    `(Conceptual) \`window.addEventListener('scroll', myFunc, { passive: true })\`. This tells the browser that \`myFunc\` will not call \`preventDefault()\`, allowing the browser to optimize scrolling for a smoother user experience.`,
+  "remove-event-listener": () =>
+    `(Conceptual) You must use a named function or store the callback in a variable. \`btn.addEventListener('click', handleClick);\` can be removed with \`btn.removeEventListener('click', handleClick);\`. You cannot remove an anonymous function.`,
+  "custom-events": () =>
+    `(Conceptual) Create: \`const myEvent = new CustomEvent('my-event', { detail: { data: 'hello' } });\`. Dispatch: \`el.dispatchEvent(myEvent);\`. Listen: \`el.addEventListener('my-event', e => console.log(e.detail.data));\`.`,
+  "domcontentloaded-vs-load": () =>
+    `(Conceptual) \`DOMContentLoaded\` fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. The \`window\` \`load\` event fires after all resources have loaded.`,
+  "event-phases": () =>
+    `(Conceptual) 1. Capturing Phase: The event travels from the \`window\` down to the target element's parent. 2. Target Phase: The event is handled by the target element itself. 3. Bubbling Phase: The event travels back up from the target's parent to the \`window\`.`,
+  "stop-immediate-propagation": () =>
+    `(Conceptual) If an element has two 'click' listeners, and the first one calls \`event.stopImmediatePropagation()\`, the second 'click' listener on that same element will NOT be executed.`,
+  "event-delegation-performance": () =>
+    `(Conceptual) Adding 1000 listeners uses more memory and takes more time to set up than adding just one. For a dynamic list where items are added/removed, delegation is much simpler as you don't need to add/remove listeners for each item.`,
+  "focus-and-blur-events": () =>
+    `(Conceptual) \`focus\` fires when an element (like an input) receives focus. \`blur\` fires when it loses focus. They are useful for input validation and UI changes. \`focusin\` and \`focusout\` are bubbling versions.`,
+  "event-coordinates": () =>
+    `(Conceptual) \`clientX/Y\` are coordinates relative to the visible part of the window (viewport). \`pageX/Y\` are coordinates relative to the top-left of the entire document, including the part that is scrolled out of view.`,
+  "delegation-with-closest": () =>
+    `(Conceptual) In a delegated listener on a list, instead of checking \`e.target.tagName\`, you can use \`const li = e.target.closest('li'); if (li) { ... }\`. This correctly finds the list item even if the user clicks on an icon or span inside it.`,
+  "input-vs-change-event": () =>
+    `(Conceptual) 'input' fires on every keystroke, paste, or change. 'change' fires only when the element loses focus after its value has been changed. 'input' is for real-time reactions; 'change' is for validation on exit.`,
+  "event-object-properties": () =>
+    `(Conceptual) \`event.type\`: "click". \`event.timeStamp\`: high-res time since page load. \`event.bubbles\`: boolean, true if the event bubbles. \`event.cancelable\`: boolean, true if preventDefault() can be called.`,
+  "mouseenter-vs-mouseover": () =>
+    `(Conceptual) Use \`mouseenter\` for hover effects on a parent element. It fires once. \`mouseover\` would fire again for every child element the mouse moves over, which is usually not what you want.`,
+  "pointer-events": () =>
+    `(Conceptual) They unify mouse, pen, and touch input. A single 'pointerdown' listener works for all three. The \`event.pointerType\` property tells you which device ('mouse', 'pen', 'touch') triggered the event.`,
+  "event-is-trusted": () =>
+    `(Conceptual) \`event.isTrusted\` is true if the event was generated by the user (e.g., a real click). It is false if the event was created and dispatched by code (e.g., \`element.dispatchEvent(new Event('click'))\`).`,
+  "form-reset-event": () =>
+    `(Conceptual) Add a listener to the \`<form>\` for the 'reset' event. It fires when a \`<button type="reset">\` is clicked. You can call \`event.preventDefault()\` to stop the form from clearing.`,
+  "window-error-event": () =>
+    `(Conceptual) \`window.addEventListener('error', event => { console.log('Uncaught error:', event.message); });\`. This acts as a global catch block for runtime errors that are not caught in try...catch.`,
+  "media-query-listener": () =>
+    `(Conceptual) \`const mq = window.matchMedia('(min-width: 600px)'); mq.addEventListener('change', event => { if(event.matches){...} });\`. The event fires whenever the condition's result changes.`,
+  "synthetic-events-react-conceptual": () =>
+    `(Conceptual) React wraps native browser events in a 'SyntheticEvent' object. This provides a consistent API across all browsers (e.g., you always use \`onChange\`, not \`oninput\`). React uses event delegation on the root for performance.`,
+  "event-modifier-keys": () =>
+    `(Conceptual) In a 'click' or 'keydown' event listener, you can check boolean properties like \`event.shiftKey\`, \`event.ctrlKey\`, \`event.altKey\`, and \`event.metaKey\` (Cmd/Win).`,
+  "touch-events": () =>
+    `(Conceptual) \`touchstart\`, \`touchmove\`, \`touchend\`. The event object has lists of touch points: \`event.touches\` (all fingers on screen), \`event.targetTouches\` (fingers on the element), and \`event.changedTouches\` (fingers involved in this specific event).`,
+  "event-composed-path": () =>
+    `(Conceptual) \`event.composedPath()\` returns an array of nodes the event will travel through, from the target up to the window. It's useful for debugging and for piercing through the Shadow DOM boundary.`,
+  "scroll-event": () =>
+    `(Conceptual) Add a listener to \`window\` or a scrollable \`div\` for the 'scroll' event. Inside, you can access \`element.scrollTop\` to know the scroll position. It fires very rapidly, so it should be debounced or throttled for performance.`,
+  "debouncing-events": () =>
+    `(Conceptual) A higher-order function that wraps an event handler. It uses \`setTimeout\` and \`clearTimeout\` to ensure the handler is only called after a period of inactivity (e.g., user stops typing).`,
+  "throttling-events": () =>
+    `(Conceptual) A higher-order function that wraps an event handler. It uses a flag or timestamp in a closure to ensure the handler is called at most once per interval (e.g., once every 200ms during a scroll).`,
+  "context-menu-event": () =>
+    `(Conceptual) \`element.addEventListener('contextmenu', e => { e.preventDefault(); showCustomMenu(); });\`. Preventing the default action stops the browser's right-click menu from appearing.`,
+  "drag-and-drop-events": () =>
+    `(Conceptual) An element with \`draggable="true"\` fires a \`dragstart\` event. A drop zone listens for \`dragover\` (and must call \`e.preventDefault()\`) and the final \`drop\` event to get the data.`,
+  "event-loop-conceptual": () =>
+    `(Conceptual) The Event Loop constantly checks if the Call Stack is empty. If it is, it takes a task from the Macrotask Queue, pushes it to the stack, and runs it. After the macrotask, it runs ALL tasks in the Microtask Queue. Then it repeats.`,
+  "focusin-vs-focus": () =>
+    `(Conceptual) \`focus\` does not bubble. If you want to use event delegation to know when any input inside a form gets focus, you must listen for the \`focusin\` event on the form element, because \`focusin\` bubbles.`,
+  "delegation-dynamic-elements": () =>
+    `(Conceptual) If you add a new \`<li>\` to a list, you would have to add a new listener to it. With delegation, the single listener on the parent \`<ul>\` will automatically handle events from the new \`<li>\` without any extra code.`,
+  "event-constructor": () =>
+    `(Conceptual) \`new Event('build', { bubbles: true, cancelable: true });\` creates a generic event that can be dispatched. This is simpler than \`CustomEvent\` if you don't need to pass custom data in the \`detail\` property.`,
+  "removing-all-listeners": () =>
+    `(Conceptual) The trick is: \`const newEl = oldEl.cloneNode(true); oldEl.parentNode.replaceChild(newEl, oldEl);\`. Cloning an element does not copy its event listeners.`,
+  "transitionend-event": () =>
+    `(Conceptual) \`element.addEventListener('transitionend', () => { console.log('Transition finished!'); });\`. This event fires when a CSS transition completes.`,
+  "animationend-event": () =>
+    `(Conceptual) \`element.addEventListener('animationend', () => { console.log('Animation finished!'); });\`. This event fires when a CSS animation completes.`,
+  "event-phase-property": () =>
+    `(Conceptual) Inside a listener, \`event.eventPhase\` returns a number: 1 for capturing, 2 for target, 3 for bubbling. This allows a single listener function to know which phase it's currently executing in.`,
+  "hashchange-event": () =>
+    `(Conceptual) \`window.addEventListener('hashchange', event => { console.log('New hash:', location.hash); });\`. This is a simple way to implement client-side routing for basic single-page apps.`,
+  "pointerevent-properties": () =>
+    `(Conceptual) \`event.pointerId\`: unique ID for the pointer. \`event.pointerType\`: "mouse", "pen", or "touch". \`event.pressure\`: pen pressure from 0-1. \`event.tiltX\`, \`event.tiltY\`: pen tilt angles.`,
+  "wheel-event": () =>
+    `(Conceptual) \`element.addEventListener('wheel', e => { e.preventDefault(); e.deltaY > 0 ? zoomOut() : zoomIn(); });\`. The \`deltaY\` property indicates the vertical scroll amount.`,
+  "event- bubbling-vs-delegation": () =>
+    `(Conceptual) Bubbling is the browser mechanism where an event travels up from a child to its parents. Delegation is a programming PATTERN that takes advantage of bubbling by placing a listener on a parent to handle events from its children.`,
+  "programmatic-event-dispatch": () =>
+    `(Conceptual) \`const myEvent = new Event('click', { bubbles: true }); myButton.dispatchEvent(myEvent);\`. This simulates a user click on the button, and the corresponding event listeners will be executed.`,
 };
-```

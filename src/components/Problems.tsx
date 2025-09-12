@@ -1,14 +1,15 @@
-
 import React, { useState, useMemo, useEffect } from "react";
 // FIX: Corrected import path to point to the index file within the problems directory.
 import { allProblems } from "../problems/index";
 import ProblemCard from "./ProblemCard";
-import type { Problem, Category } from "../types";
+import { Category, Problem } from "@/types";
 
 const Problems: React.FC<{ onExplain: (problem: Problem) => void }> = ({
   onExplain,
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<Category | "All">("All");
+  const [selectedCategory, setSelectedCategory] = useState<Category | "All">(
+    "All"
+  );
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -42,15 +43,22 @@ const Problems: React.FC<{ onExplain: (problem: Problem) => void }> = ({
     return filtered;
   }, [selectedCategory, searchTerm]);
 
-  const currentCategoryTitle = selectedCategory === "All" ? "All Problems" : selectedCategory;
+  const currentCategoryTitle =
+    selectedCategory === "All" ? "All Problems" : selectedCategory;
 
   return (
-    <section id="problems" className="py-24 px-4 md:px-8 bg-base-200 scroll-mt-20">
+    <section
+      id="problems"
+      className="py-24 px-4 md:px-8 bg-base-200 scroll-mt-20"
+    >
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold">Interactive JavaScript Problems</h2>
+          <h2 className="text-5xl font-bold">
+            Interactive JavaScript Problems
+          </h2>
           <p className="mt-4 text-lg text-base-content/70">
-            Test your knowledge with our library of {allProblems.length}+ interactive problems.
+            Test your knowledge with our library of {allProblems.length}+
+            interactive problems.
           </p>
         </div>
 
@@ -72,9 +80,23 @@ const Problems: React.FC<{ onExplain: (problem: Problem) => void }> = ({
                   onChange={(e) => setSearchTerm(e.target.value)}
                   aria-label="Search problems"
                 />
-                <button className="btn btn-square btn-primary" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <button
+                  className="btn btn-square btn-primary"
+                  aria-label="Search"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
                   </svg>
                 </button>
               </div>
@@ -93,7 +115,9 @@ const Problems: React.FC<{ onExplain: (problem: Problem) => void }> = ({
             </div>
           ) : (
             <div className="text-center py-16 bg-base-100 rounded-lg">
-              <p className="text-xl text-base-content/60">No problems found matching your criteria.</p>
+              <p className="text-xl text-base-content/60">
+                No problems found matching your criteria.
+              </p>
             </div>
           )}
         </div>

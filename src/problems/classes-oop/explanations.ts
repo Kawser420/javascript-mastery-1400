@@ -1,7 +1,5 @@
-
-
 export const explanations: Record<string, string> = {
-  'es6-classes': `
+  "es6-classes": `
 ### 💡 Problem Breakdown
 This problem introduces Object-Oriented Programming (OOP) in JavaScript using the ES6 \`class\` syntax. The goal is to create a "blueprint" (a class) for \`Person\` objects. Every person created from this blueprint should have a name and a method to introduce themselves.
 
@@ -29,7 +27,7 @@ p.greet();
 -   **Instance**: A specific object created from a class.
 -   **Constructor**: A special method for initializing a new instance of a class.
 `,
-  'class-inheritance': `
+  "class-inheritance": `
 ### 💡 Problem Breakdown
 This task is about inheritance, a core principle of OOP. You need to create a new class, \`Student\`, that is a more specialized version of the \`Person\` class. A \`Student\` should have all the properties and methods of a \`Person\` (like a name), plus its own unique properties and methods (like studying a subject).
 
@@ -57,7 +55,7 @@ class Student extends Person {
 -   **\`extends\`**: The keyword used to create a subclass.
 -   **\`super\`**: A keyword used to call corresponding methods of the superclass.
 `,
-  'class-static-methods': `
+  "class-static-methods": `
 ### 💡 Problem Breakdown
 The goal is to understand the difference between instance methods and static methods. A static method is a utility function that belongs to the class itself, not to any particular instance of the class. You can call it without creating a new object from the class.
 
@@ -77,7 +75,7 @@ MyClass.staticMethod();
 ### 📚 Key Concepts
 -   **Static Method**: A method that is callable on the class itself, not on an instance of the class. They are often used for creating utility functions that are related to a class but don't need instance-specific data (i.e., they don't use \`this\`).
 `,
-  'class-getters-setters': `
+  "class-getters-setters": `
 ### 💡 Problem Breakdown
 This problem is about creating "computed properties" on a class. Sometimes, a property's value depends on other properties. Getters and setters provide a way to handle this elegantly, allowing you to "get" a computed value as if it were a regular property and "set" it in a way that intelligently updates the underlying data.
 
@@ -105,7 +103,7 @@ class Person {
 -   **Setter**: A method that sets the value of a specific property. It allows you to run code when a property is written to.
 -   **Encapsulation**: Getters and setters hide the internal complexity of how data is stored, providing a simple public interface (\`fullName\`).
 `,
-  'class-private-fields': `
+  "class-private-fields": `
 ### 💡 Problem Breakdown
 True privacy for class properties was a long-requested feature in JavaScript. The goal is to create a class property that is completely inaccessible from outside the class instance. The modern syntax uses a hash \`#\` prefix.
 
@@ -136,7 +134,7 @@ const myWallet = new Wallet(100);
 -   **Encapsulation**: The bundling of data with the methods that operate on that data, and restricting direct access to some of the object's components. Private fields are a key tool for encapsulation.
 -   **Private Class Fields**: A feature for declaring fields that are only accessible within the class body.
 `,
-  'super-in-constructor': `
+  "super-in-constructor": `
 ### 💡 Problem Breakdown
 When a class extends another class, the subclass constructor must properly initialize the parent class part of the object. This is done by calling \`super()\`. The rule is that you must call \`super()\` *before* you can access the \`this\` keyword in the subclass constructor.
 
@@ -160,7 +158,7 @@ class Dog extends Animal {
 -   **Constructor Chaining**: The process of a subclass constructor calling its superclass constructor.
 -   **\`super()\`**: A special function call that invokes the parent class's constructor.
 `,
-  'method-overriding': `
+  "method-overriding": `
 ### 💡 Problem Breakdown
 Method overriding is a feature of inheritance where a subclass provides its own specific implementation for a method that is already defined in its superclass. This allows the subclass to "specialize" behavior.
 
@@ -187,7 +185,7 @@ myCat.speak(); // "Meow"
 -   **Method Overriding**: Providing a specific implementation for an inherited method in a subclass.
 -   **Polymorphism**: The ability of an object to take on many forms. Here, both an \`Animal\` and a \`Cat\` can \`.speak()\`, but they do so differently.
 `,
-  'super-in-methods': `
+  "super-in-methods": `
 ### 💡 Problem Breakdown
 Sometimes, when overriding a method, you don't want to completely replace the parent's behavior but rather *add* to it. The \`super\` keyword can be used within a method to call the parent's version of that same method.
 
@@ -210,7 +208,7 @@ class Employee extends Person {
 ### 📚 Key Concepts
 -   **\`super\` Keyword**: In a method, \`super\` refers to the parent object's prototype, allowing you to access the parent's methods.
 `,
-  'class-expression': `
+  "class-expression": `
 ### 💡 Problem Breakdown
 Just like functions, classes can be defined in two ways: declarations and expressions. A class expression allows you to define a class and assign it to a variable. This is useful for creating classes dynamically or passing them as arguments.
 
@@ -236,7 +234,7 @@ const Circle = class MyCircle {
 ### 📚 Key Concepts
 -   **Class Expression**: A way to define a class that can be assigned to a variable. Unlike declarations, class expressions are not hoisted.
 `,
-  'static-properties': `
+  "static-properties": `
 ### 💡 Problem Breakdown
 A static property is a property that belongs to the class itself, not to any instance of the class. It's shared across all instances and is accessed directly on the class name. It's useful for constants or configuration values related to the class.
 
@@ -259,7 +257,7 @@ console.log(instance.version); // undefined
 ### 📚 Key Concepts
 -   **Static Property**: A property of the class constructor itself, rather than of the instances.
 `,
-  'instanceof-with-classes': `
+  "instanceof-with-classes": `
 ### 💡 Problem Breakdown
 The \`instanceof\` operator is a reliable way to check the type of an object when working with classes. It checks if the class's \`.prototype\` object exists anywhere in the instance's prototype chain.
 
@@ -278,7 +276,7 @@ instanceB instanceof A; // true, because it inherited from A, so A.prototype is 
 ### 📚 Key Concepts
 -   **\`instanceof\` operator**: Checks the prototype chain of an object to determine if it's an instance of a given class.
 `,
-  'class-without-constructor': `
+  "class-without-constructor": `
 ### 💡 Problem Breakdown
 The \`constructor\` method is optional in a class definition. If you don't provide one, JavaScript will automatically create a default, empty constructor for you.
 
@@ -298,7 +296,7 @@ class SimpleWithDefault {
 ### 📚 Key Concepts
 -   **Default Methods**: JavaScript provides default implementations for certain class methods like the constructor if they are not explicitly defined.
 `,
-  'class-computed-method-names': `
+  "class-computed-method-names": `
 ### 💡 Problem Breakdown
 Just like with object literals, you can use a computed expression to define the name of a method in a class. The expression is evaluated, and its result is used as the method name.
 
@@ -320,7 +318,7 @@ g.sayHi(); // "Hello!"
 ### 📚 Key Concepts
 -   **Computed Property Names**: This syntax extends to method names in classes, allowing for dynamic method creation.
 `,
-  'class-public-fields': `
+  "class-public-fields": `
 ### 💡 Problem Breakdown
 This modern syntax (class fields) allows you to declare public properties directly on the class body, outside of the constructor. This can make the class structure clearer by listing all properties at the top.
 
@@ -344,7 +342,7 @@ c.count; // 1
 ### 📚 Key Concepts
 -   **Class Fields**: A syntax for declaring class properties directly in the class body.
 `,
-  'class-private-methods': `
+  "class-private-methods": `
 ### 💡 Problem Breakdown
 Similar to private fields, this feature allows you to declare methods that are only accessible from within the class itself. This is another key tool for encapsulation.
 
@@ -372,7 +370,7 @@ s.reveal(); // "This is a secret."
 ### 📚 Key Concepts
 -   **Private Class Methods**: A feature for creating methods that are truly private to a class.
 `,
-  'abstract-class-conceptual': `
+  "abstract-class-conceptual": `
 ### 💡 Problem Breakdown
 An abstract class is a class that is intended to be inherited from but not instantiated directly. It serves as a blueprint for other classes. JavaScript doesn't have a built-in \`abstract\` keyword, but the behavior can be simulated.
 
@@ -402,7 +400,7 @@ const c = new Circle(); // This works
 -   **Abstract Class**: A design pattern for creating base classes that are not meant to be instantiated.
 -   **\`new.target\`**: A meta-property that lets you detect whether a function was called with the \`new\` operator.
 `,
-  'polymorphism-example': `
+  "polymorphism-example": `
 ### 💡 Problem Breakdown
 Polymorphism is a core OOP concept where objects of different classes can respond to the same method call. A single interface (the method name) can be used for a general class of actions.
 
@@ -425,7 +423,7 @@ const results = shapes.map(s => s.draw());
 ### 📚 Key Concepts
 -   **Polymorphism**: From Greek, meaning "many forms." The ability of different objects to respond to the same message (method call) in different ways.
 `,
-  'chaining-class-methods': `
+  "chaining-class-methods": `
 ### 💡 Problem Breakdown
 Method chaining is a popular pattern where multiple methods are called on the same object in a single statement (e.g., \`object.doThis().doThat()\`). To enable this, each method in the chain must return a reference to the object itself (\`this\`).
 
@@ -451,7 +449,7 @@ const result = new Calculator().add(10).subtract(3).value; // result is 7
 -   **Method Chaining**: A syntax for invoking multiple method calls in a single statement.
 -   **Fluent Interface**: An API design that relies heavily on method chaining to be more readable.
 `,
-  'extends-built-in-array': `
+  "extends-built-in-array": `
 ### 💡 Problem Breakdown
 Classes can extend built-in JavaScript objects like \`Array\`, \`Error\`, and \`Map\`. This allows you to create custom versions of these objects with additional functionality while retaining all their original behavior.
 
@@ -474,7 +472,7 @@ arr.map(x => x * 2); // [2, 4, 6] (still works like a normal array)
 ### 📚 Key Concepts
 -   **Subclassing Built-ins**: The ability to extend core JavaScript objects to create more specialized versions.
 `,
-  'class-mixins-conceptual': `
+  "class-mixins-conceptual": `
 ### 💡 Problem Breakdown
 JavaScript only supports single inheritance (a class can only extend one other class). Mixins are a pattern that allows for a form of multiple inheritance, enabling a class to "mix in" methods from multiple sources.
 
@@ -504,7 +502,7 @@ myDuck.swim(); // "I'm swimming!"
 -   **Mixin**: A pattern for adding functionality to a class without using traditional inheritance.
 -   **Composition**: Building complex objects by combining simpler ones.
 `,
-  'class-this-lexical-arrow': `
+  "class-this-lexical-arrow": `
 ### 💡 Problem Breakdown
 A common issue in JavaScript classes is losing the \`this\` context when a method is passed as a callback (e.g., to an event listener). An arrow function used as a class field solves this elegantly because it doesn't have its own \`this\`; it lexically captures the \`this\` of the instance.
 
@@ -531,7 +529,7 @@ standaloneClick(); // Logs "My Component" correctly
 -   **Lexical \`this\`**: The behavior of arrow functions inheriting \`this\` from their parent scope.
 -   **Class Fields**: Using this modern syntax to define methods can help solve common \`this\`-related problems.
 `,
-  'class-static-init-block': `
+  "class-static-init-block": `
 ### 💡 Problem Breakdown
 A static initialization block is a modern feature that allows you to perform complex, one-time setup for a class when it is first defined and loaded by the JavaScript engine. This is useful for setting up static properties that require some computation.
 
@@ -554,7 +552,7 @@ MyClass.data; // "Initialized!"
 ### 📚 Key Concepts
 -   **Static Initialization Block**: A dedicated block for running one-time setup code for a class.
 `,
-  'class-error-subclass': `
+  "class-error-subclass": `
 ### 💡 Problem Breakdown
 Creating custom error types by extending the built-in \`Error\` class is a powerful pattern. It allows you to create more specific, descriptive errors that can be caught and handled differently from generic errors.
 
@@ -584,7 +582,7 @@ try {
 ### 📚 Key Concepts
 -   **Custom Errors**: A best practice for creating robust and maintainable applications with clear error handling paths.
 `,
-  'class-factory-pattern': `
+  "class-factory-pattern": `
 ### 💡 Problem Breakdown
 A Factory is a design pattern that provides an interface for creating objects in a superclass, but lets subclasses alter the type of objects that will be created. A simple factory function can return instances of different classes based on some input.
 
@@ -609,7 +607,7 @@ myPet.speak(); // "Woof"
 ### 📚 Key Concepts
 -   **Factory Pattern**: A creational design pattern for creating objects without specifying the exact class of the object that will be created.
 `,
-  'class-singleton-pattern': `
+  "class-singleton-pattern": `
 ### 💡 Problem Breakdown
 The Singleton pattern is a design pattern that restricts the instantiation of a class to a single object. This is useful when exactly one object is needed to coordinate actions across the system (e.g., a single database connection or a settings manager).
 
@@ -643,7 +641,7 @@ console.log(db1 === db2); // true
 ### 📚 Key Concepts
 -   **Singleton Pattern**: A creational pattern that ensures a class has only one instance and provides a global access point to it.
 `,
-  'class-composition-vs-inheritance': `
+  "class-composition-vs-inheritance": `
 ### 💡 Problem Breakdown
 This is a high-level software design principle. "Composition over inheritance" suggests that you should favor composing objects out of smaller, single-purpose objects rather than inheriting features from a large, monolithic base class. Composition often leads to more flexible and maintainable code.
 
@@ -669,7 +667,7 @@ class FlyingBird extends Bird { fly() { /*...*/ } }
 -   **Composition**: A "HAS-A" relationship. An object is composed of other objects.
 -   **Inheritance**: An "IS-A" relationship. An object is a more specific type of another object.
 `,
-  'class-method-binding': `
+  "class-method-binding": `
 ### 💡 Problem Breakdown
 When a class method is passed as a callback (e.g., to an event listener), it's detached from its instance, and its \`this\` context is lost. A common solution is to explicitly bind the method to the instance in the constructor.
 
@@ -697,7 +695,7 @@ callback(); // Logs "Click Me" correctly
 -   **\`.bind()\`**: Creates a new function with a fixed \`this\` context.
 -   **Execution Context**: Understanding that how a function is called determines its \`this\` value.
 `,
-  'class-private-static-fields': `
+  "class-private-static-fields": `
 ### 💡 Problem Breakdown
 A private static field is a property that belongs to the class itself (not instances) and is only accessible from within the class's own static or instance methods. It combines the features of static and private properties.
 
@@ -727,7 +725,7 @@ ApiConfig.getApiKey(); // "SECRET123"
 -   **Static Members**: Properties and methods that belong to the class, not instances.
 -   **Private Members**: Properties and methods accessible only within the class.
 `,
-  'class-private-static-methods': `
+  "class-private-static-methods": `
 ### 💡 Problem Breakdown
 A private static method is a utility function that belongs to the class itself and can only be called by other static methods within the same class. It's used for internal helper logic related to the class as a whole.
 
@@ -754,7 +752,7 @@ Validator.validate("test@example.com"); // "Valid"
 ### 📚 Key Concepts
 -   **Private Static Methods**: Encapsulated helper functions that operate on a class level.
 `,
-  'class-static-getters-setters': `
+  "class-static-getters-setters": `
 ### 💡 Problem Breakdown
 Just like with instance properties, you can define getters and setters for static properties. This allows you to run code when a static property is read from or written to, providing a controlled public interface for a private static field.
 
@@ -785,7 +783,7 @@ Theme.current; // "Current theme is light"
 ### 📚 Key Concepts
 -   **Accessors (Getters/Setters)**: Provide a clean API for interacting with class properties while hiding the internal implementation.
 `,
-  'class-iterable-protocol': `
+  "class-iterable-protocol": `
 ### 💡 Problem Breakdown
 The iterable protocol in JavaScript allows objects to define their own iteration behavior. By implementing a method whose key is \`Symbol.iterator\`, you can make your custom class work with constructs like the \`for...of\` loop and the spread syntax (\`[...]\`).
 
@@ -815,7 +813,7 @@ for (const num of range) {
 -   **\`Symbol.iterator\`**: A built-in symbol that specifies the default iterator for an object.
 -   **Generator Functions**: Functions that can be paused and resumed, producing a sequence of values.
 `,
-  'class-generator-method': `
+  "class-generator-method": `
 ### 💡 Problem Breakdown
 This is a more direct application of the previous concept. A generator method is a method within a class that is defined using the \`function*\` syntax (or \`* methodName()\`). It provides a convenient way to create an iterator for the class or for a specific purpose.
 
@@ -843,7 +841,7 @@ iterator.next().value; // "i"
 ### 📚 Key Concepts
 -   **Generator Method**: A class method that returns an iterator.
 `,
-  'class-species-pattern': `
+  "class-species-pattern": `
 ### 💡 Problem Breakdown
 The \`Symbol.species\` well-known symbol allows you to control which constructor is used by methods on a subclass that return new instances (like \`Array.prototype.map\`). By default, if you extend \`Array\` and call \`.map()\` on your subclass, it will return a new instance of your subclass. Sometimes you may want it to return a standard \`Array\` instead.
 
@@ -868,7 +866,7 @@ console.log(mapped instanceof Array);   // true
 ### 📚 Key Concepts
 -   **\`Symbol.species\`**: A "well-known symbol" used to specify a constructor function that is used to create derived objects.
 `,
-  'class-tostring-tag': `
+  "class-tostring-tag": `
 ### 💡 Problem Breakdown
 The default behavior of \`Object.prototype.toString.call(obj)\` returns a string like \`"[object Object]"\`. The \`Symbol.toStringTag\` well-known symbol allows you to customize the part after "object" for instances of your class, providing more descriptive type information.
 
@@ -888,7 +886,7 @@ Object.prototype.toString.call(instance); // "[object Custom]"
 ### 📚 Key Concepts
 -   **\`Symbol.toStringTag\`**: A well-known symbol that specifies the string value that is used in the default description of an object.
 `,
-  'class-protected-properties-conceptual': `
+  "class-protected-properties-conceptual": `
 ### 💡 Problem Breakdown
 While JavaScript has true private fields (\`#\`), it does not have a concept of "protected" (accessible to the class and its subclasses, but not externally). A widely adopted convention is to prefix a property name with an underscore (\`_\`) to signal that it is intended for internal use and should not be modified from the outside.
 
@@ -910,7 +908,7 @@ console.log(user._id); // 123
 ### 📚 Key Concepts
 -   **Programming Conventions**: Agreed-upon practices that are not enforced by the language but are followed by developers to improve code readability and maintainability.
 `,
-  'class-final-method-conceptual': `
+  "class-final-method-conceptual": `
 ### 💡 Problem Breakdown
 Some languages have a \`final\` keyword to prevent a method from being overridden by subclasses. JavaScript does not. However, this behavior can be simulated by checking in the parent constructor if the method has been changed on the subclass's prototype.
 
@@ -935,7 +933,7 @@ class Child extends Parent {
 ### 📚 Key Concepts
 -   **Defensive Programming**: Writing code that anticipates potential misuse and protects against it.
 `,
-  'class-interface-conceptual': `
+  "class-interface-conceptual": `
 ### 💡 Problem Breakdown
 An "interface" is a contract that specifies a set of methods a class must implement. Languages like TypeScript have formal interfaces. In plain JavaScript, you can simulate this by having a base class throw an error if a required method is not implemented by a subclass.
 
@@ -964,7 +962,7 @@ const goodStorage = new FileStorage(); // Works
 -   **Interface**: A description of the properties and methods that an object must have.
 -   **Duck Typing**: The principle that "if it walks like a duck and it quacks like a duck, then it must be a duck." This check enforces a form of duck typing.
 `,
-  'class-dependency-injection': `
+  "class-dependency-injection": `
 ### 💡 Problem Breakdown
 Dependency Injection (DI) is a design pattern where an object receives other objects that it depends on (its "dependencies") from an external source, rather than creating them itself. This makes code more modular, flexible, and easier to test.
 
@@ -989,7 +987,7 @@ const myApp = new App(myLogger); // Injecting the dependency
 -   **Dependency Injection**: A pattern where dependencies are passed into an object instead of being created by it.
 -   **Inversion of Control (IoC)**: DI is a form of IoC. The control of creating dependencies is inverted from the object itself to an external entity.
 `,
-  'class-command-pattern': `
+  "class-command-pattern": `
 ### 💡 Problem Breakdown
 The Command pattern is a behavioral design pattern that turns a request into a stand-alone object containing all information about the request. This lets you parameterize methods with different requests, delay or queue a request's execution, and support undoable operations.
 
@@ -1014,7 +1012,7 @@ turnOn.execute(); // "Light is ON"
 ### 📚 Key Concepts
 -   **Command Pattern**: A pattern that decouples the object that invokes an operation from the object that knows how to perform it.
 `,
-  'class-observer-pattern': `
+  "class-observer-pattern": `
 ### 💡 Problem Breakdown
 The Observer pattern is a behavioral design pattern where a "subject" object maintains a list of its dependents, called "observers," and notifies them automatically of any state changes, usually by calling one of their methods. It's the foundation of event-driven systems.
 
@@ -1043,7 +1041,7 @@ station.setTemperature(25); // Notifies the display
 ### 📚 Key Concepts
 -   **Observer Pattern**: A pattern for establishing a one-to-many dependency between objects.
 `,
-  'class-decorator-pattern': `
+  "class-decorator-pattern": `
 ### 💡 Problem Breakdown
 The Decorator pattern allows you to attach new behaviors to objects dynamically by placing them inside special "wrapper" objects. This is a flexible alternative to subclassing for extending functionality.
 
@@ -1068,7 +1066,7 @@ boldText.render(); // "<b>Hello</b>"
 ### 📚 Key Concepts
 -   **Decorator Pattern**: A structural pattern for adding new functionality to an object without altering its structure.
 `,
-  'class-adapter-pattern': `
+  "class-adapter-pattern": `
 ### 💡 Problem Breakdown
 The Adapter pattern acts as a bridge between two incompatible interfaces. It involves a single class which is responsible for joining functionalities of independent or incompatible interfaces.
 
@@ -1095,7 +1093,7 @@ adapter.fetchJson();
 ### 📚 Key Concepts
 -   **Adapter Pattern**: A structural pattern that allows objects with incompatible interfaces to collaborate.
 `,
-  'class-facade-pattern': `
+  "class-facade-pattern": `
 ### 💡 Problem Breakdown
 The Facade pattern provides a simplified, unified interface to a more complex set of subsystems or classes. It hides the complexity of the subsystems and provides a simple entry point for common tasks.
 
@@ -1124,7 +1122,7 @@ class HomeTheaterFacade { // Facade
 ### 📚 Key Concepts
 -   **Facade Pattern**: A structural pattern that provides a simplified interface to a complex system.
 `,
-  'class-proxy-pattern': `
+  "class-proxy-pattern": `
 ### 💡 Problem Breakdown
 A Proxy provides a surrogate or placeholder for another object to control access to it. It's structurally similar to a Decorator but is used for different purposes, such as lazy initialization, access control, or logging.
 
@@ -1153,7 +1151,7 @@ class ImageProxy {
 ### 📚 Key Concepts
 -   **Proxy Pattern**: A structural pattern for providing a placeholder for another object to control access to it.
 `,
-  'class-builder-pattern': `
+  "class-builder-pattern": `
 ### 💡 Problem Breakdown
 The Builder pattern is a creational pattern used to construct complex objects step by step. It separates the construction of a complex object from its representation, so the same construction process can create different representations.
 
@@ -1181,7 +1179,7 @@ const myPizza = new PizzaBuilder()
 ### 📚 Key Concepts
 -   **Builder Pattern**: A pattern for separating object construction from its representation.
 `,
-  'class-flyweight-pattern': `
+  "class-flyweight-pattern": `
 ### 💡 Problem Breakdown
 The Flyweight pattern is a structural pattern used to minimize memory usage by sharing as much data as possible with other similar objects. It's useful when you need to create a large number of similar objects.
 
@@ -1214,7 +1212,7 @@ class Tree {
 -   **Flyweight Pattern**: A pattern for sharing data to reduce memory consumption.
 -   **Intrinsic vs. Extrinsic State**: Intrinsic state is shared, while extrinsic state is unique to each object.
 `,
-  'class-mediator-pattern': `
+  "class-mediator-pattern": `
 ### 💡 Problem Breakdown
 The Mediator pattern is a behavioral pattern that lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
 
@@ -1239,7 +1237,7 @@ class User { // Colleague
 ### 📚 Key Concepts
 -   **Mediator Pattern**: A pattern that promotes loose coupling by keeping objects from referring to each other explicitly.
 `,
-  'class-memento-pattern': `
+  "class-memento-pattern": `
 ### 💡 Problem Breakdown
 The Memento pattern is a behavioral pattern that lets you save and restore the previous state of an object without revealing the details of its implementation. It's useful for implementing undo/redo functionality.
 
@@ -1265,7 +1263,7 @@ class History { // Caretaker
 ### 📚 Key Concepts
 -   **Memento Pattern**: A pattern for capturing and restoring an object's internal state.
 `,
-  'class-visitor-pattern': `
+  "class-visitor-pattern": `
 ### 💡 Problem Breakdown
 The Visitor pattern is a way of separating an algorithm from an object structure on which it operates. A key benefit is the ability to add new operations to existing object structures without modifying those structures.
 
@@ -1291,5 +1289,5 @@ shapes.forEach(shape => shape.accept(visitor));
 
 ### 📚 Key Concepts
 -   **Visitor Pattern**: A behavioral pattern for separating algorithms from the objects they operate on.
-`
+`,
 };

@@ -1,23 +1,47 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Problems from "./components/Problems";
-import Calculator from "./components/Calculator";
-import AIAssistant from "./components/AIAssistant";
-import Footer from "./components/Footer";
-import LoginModal from "./components/LoginModal";
-import SignupModal from "./components/SignupModal";
-import ExplanationModal from "./components/ExplanationModal";
-import Sidebar from "./components/Sidebar";
-import { allProblems } from "./problems/index";
 import type { Problem, Category, Theme } from "./types";
+import Sidebar from "./src/components/Sidebar";
+import Header from "./src/components/Header";
+import Hero from "./src/components/Hero";
+import Problems from "./src/components/Problems";
+import Calculator from "./src/components/Calculator";
+import AIAssistant from "./src/components/AIAssistant";
+import Footer from "./src/components/Footer";
+import LoginModal from "./src/components/LoginModal";
+import SignupModal from "./src/components/SignupModal";
+import ExplanationModal from "./src/components/ExplanationModal";
+import { allProblems } from "./src/problems";
 
 export const availableThemes: Theme[] = [
-  "light", "dark", "cupcake", "bumblebee", "emerald", "corporate", 
-  "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", 
-  "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", 
-  "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", 
-  "night", "coffee", "winter",
+  "light",
+  "dark",
+  "cupcake",
+  "bumblebee",
+  "emerald",
+  "corporate",
+  "synthwave",
+  "retro",
+  "cyberpunk",
+  "valentine",
+  "halloween",
+  "garden",
+  "forest",
+  "aqua",
+  "lofi",
+  "pastel",
+  "fantasy",
+  "wireframe",
+  "black",
+  "luxury",
+  "dracula",
+  "cmyk",
+  "autumn",
+  "business",
+  "acid",
+  "lemonade",
+  "night",
+  "coffee",
+  "winter",
 ];
 
 const App: React.FC = () => {
@@ -77,11 +101,36 @@ const App: React.FC = () => {
   };
 
   const categoryGroups: Record<string, Category[]> = {
-    "Fundamentals": ["Beginner Basics", "Functions & Scope", "Arrays & Strings", "Objects & Prototypes"],
-    "Core Concepts": ["ES6+ Features", "Closures & Lexical Environment", "Recursion", "Classes & OOP"],
-    "Asynchronous JS": ["Asynchronous JS", "Web APIs & DOM", "Event Handling & Propagation"],
-    "Advanced Topics": ["Functional Programming", "Data Structures", "Algorithms", "Advanced JS Features"],
-    "Ecosystem & Practices": ["Error Handling & Debugging", "Modules & Imports/Exports", "Testing & Performance", "Node.js & Backend JS", "Mini Projects"],
+    Fundamentals: [
+      "Beginner Basics",
+      "Functions & Scope",
+      "Arrays & Strings",
+      "Objects & Prototypes",
+    ],
+    "Core Concepts": [
+      "ES6+ Features",
+      "Closures & Lexical Environment",
+      "Recursion",
+      "Classes & OOP",
+    ],
+    "Asynchronous JS": [
+      "Asynchronous JS",
+      "Web APIs & DOM",
+      "Event Handling & Propagation",
+    ],
+    "Advanced Topics": [
+      "Functional Programming",
+      "Data Structures",
+      "Algorithms",
+      "Advanced JS Features",
+    ],
+    "Ecosystem & Practices": [
+      "Error Handling & Debugging",
+      "Modules & Imports/Exports",
+      "Testing & Performance",
+      "Node.js & Backend JS",
+      "Mini Projects",
+    ],
   };
 
   return (

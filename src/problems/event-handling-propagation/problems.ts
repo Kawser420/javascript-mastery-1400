@@ -1,10 +1,11 @@
-import type { Problem } from "../../types";
+import { Problem } from "@/types";
 
 export const problems: Problem[] = [
   {
     id: "event-bubbling",
     title: "Event Bubbling",
-    description: "Demonstrate event bubbling by attaching click listeners to three nested elements. Clicking the inner element should trigger all three listeners, from innermost to outermost.",
+    description:
+      "Demonstrate event bubbling by attaching click listeners to three nested elements. Clicking the inner element should trigger all three listeners, from innermost to outermost.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Bubbling",
@@ -12,7 +13,8 @@ export const problems: Problem[] = [
   {
     id: "event-capturing",
     title: "Event Capturing",
-    description: "Demonstrate the event capturing phase by attaching click listeners with the `capture: true` option. Clicking the inner element should trigger listeners from outermost to innermost.",
+    description:
+      "Demonstrate the event capturing phase by attaching click listeners with the `capture: true` option. Clicking the inner element should trigger listeners from outermost to innermost.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Capturing",
@@ -20,7 +22,8 @@ export const problems: Problem[] = [
   {
     id: "event-delegation",
     title: "Event Delegation",
-    description: "Attach a single event listener to a parent element to handle clicks from its child elements, a pattern known as event delegation.",
+    description:
+      "Attach a single event listener to a parent element to handle clicks from its child elements, a pattern known as event delegation.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Delegation",
@@ -28,7 +31,8 @@ export const problems: Problem[] = [
   {
     id: "stop-propagation",
     title: "Stop Event Propagation",
-    description: "Use `event.stopPropagation()` on a middle element to prevent a click event from bubbling up to its parent element.",
+    description:
+      "Use `event.stopPropagation()` on a middle element to prevent a click event from bubbling up to its parent element.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain stopPropagation",
@@ -36,7 +40,8 @@ export const problems: Problem[] = [
   {
     id: "prevent-default",
     title: "Prevent Default Action",
-    description: "Use `event.preventDefault()` to stop the default browser action for an event, such as preventing a form from submitting or a link from navigating.",
+    description:
+      "Use `event.preventDefault()` to stop the default browser action for an event, such as preventing a form from submitting or a link from navigating.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain preventDefault",
@@ -44,7 +49,8 @@ export const problems: Problem[] = [
   {
     id: "event-target-vs-currenttarget",
     title: "`event.target` vs `event.currentTarget`",
-    description: "Explain the difference between `event.target` (the element that triggered the event) and `event.currentTarget` (the element the listener is attached to) in the context of event delegation.",
+    description:
+      "Explain the difference between `event.target` (the element that triggered the event) and `event.currentTarget` (the element the listener is attached to) in the context of event delegation.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Difference",
@@ -52,7 +58,8 @@ export const problems: Problem[] = [
   {
     id: "this-in-event-handler",
     title: "`this` in Event Handlers",
-    description: "Explain how the value of `this` differs inside an event handler when using a traditional `function` versus an arrow function `() => {}`.",
+    description:
+      "Explain how the value of `this` differs inside an event handler when using a traditional `function` versus an arrow function `() => {}`.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `this`",
@@ -60,7 +67,8 @@ export const problems: Problem[] = [
   {
     id: "keyboard-events",
     title: "Keyboard Events",
-    description: "Explain the difference between `keydown`, `keyup`, and `keypress` events, and show how to access the `key` and `code` properties of the event object.",
+    description:
+      "Explain the difference between `keydown`, `keyup`, and `keypress` events, and show how to access the `key` and `code` properties of the event object.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Keyboard Events",
@@ -68,7 +76,8 @@ export const problems: Problem[] = [
   {
     id: "mouse-events",
     title: "Mouse Events",
-    description: "Explain the difference between `click`, `mousedown`, `mouseup`, `mousemove`, `mouseover`, and `mouseout` events.",
+    description:
+      "Explain the difference between `click`, `mousedown`, `mouseup`, `mousemove`, `mouseover`, and `mouseout` events.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Mouse Events",
@@ -76,7 +85,8 @@ export const problems: Problem[] = [
   {
     id: "addeventlistener-options-once",
     title: "Listener Option: `once`",
-    description: "Use the `{ once: true }` option in `addEventListener` to create a listener that automatically removes itself after being called once.",
+    description:
+      "Use the `{ once: true }` option in `addEventListener` to create a listener that automatically removes itself after being called once.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `once` option",
@@ -84,7 +94,8 @@ export const problems: Problem[] = [
   {
     id: "addeventlistener-options-passive",
     title: "Listener Option: `passive`",
-    description: "Explain the `{ passive: true }` option for scroll and touch event listeners, which can improve performance by telling the browser the listener will not call `preventDefault()`.",
+    description:
+      "Explain the `{ passive: true }` option for scroll and touch event listeners, which can improve performance by telling the browser the listener will not call `preventDefault()`.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `passive` option",
@@ -92,7 +103,8 @@ export const problems: Problem[] = [
   {
     id: "remove-event-listener",
     title: "Removing an Event Listener",
-    description: "Demonstrate how to properly remove an event listener using `removeEventListener`, which requires a named function.",
+    description:
+      "Demonstrate how to properly remove an event listener using `removeEventListener`, which requires a named function.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Removal",
@@ -100,7 +112,8 @@ export const problems: Problem[] = [
   {
     id: "custom-events",
     title: "Custom Events",
-    description: "Create and dispatch a custom event using `new CustomEvent()` and `element.dispatchEvent()`, and listen for it with `addEventListener`.",
+    description:
+      "Create and dispatch a custom event using `new CustomEvent()` and `element.dispatchEvent()`, and listen for it with `addEventListener`.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Custom Events",
@@ -108,7 +121,8 @@ export const problems: Problem[] = [
   {
     id: "domcontentloaded-vs-load",
     title: "Event: `DOMContentLoaded` vs `load`",
-    description: "Explain the difference between the `DOMContentLoaded` event (fires when the HTML is parsed) and the `window` `load` event (fires after all resources like images have loaded).",
+    description:
+      "Explain the difference between the `DOMContentLoaded` event (fires when the HTML is parsed) and the `window` `load` event (fires after all resources like images have loaded).",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Page Load Events",
@@ -116,7 +130,8 @@ export const problems: Problem[] = [
   {
     id: "event-phases",
     title: "The Three Event Phases",
-    description: "Explain the three phases of event propagation: the capturing phase, the target phase, and the bubbling phase.",
+    description:
+      "Explain the three phases of event propagation: the capturing phase, the target phase, and the bubbling phase.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Phases",
@@ -124,7 +139,8 @@ export const problems: Problem[] = [
   {
     id: "stop-immediate-propagation",
     title: "`event.stopImmediatePropagation()`",
-    description: "Explain how `event.stopImmediatePropagation()` differs from `stopPropagation()` by preventing any other listeners *on the same element* from being called.",
+    description:
+      "Explain how `event.stopImmediatePropagation()` differs from `stopPropagation()` by preventing any other listeners *on the same element* from being called.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Immediate Stop",
@@ -132,7 +148,8 @@ export const problems: Problem[] = [
   {
     id: "event-delegation-performance",
     title: "Performance Benefit of Delegation",
-    description: "Explain why using event delegation is more performant than adding hundreds of individual event listeners to a page.",
+    description:
+      "Explain why using event delegation is more performant than adding hundreds of individual event listeners to a page.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Performance",
@@ -140,7 +157,8 @@ export const problems: Problem[] = [
   {
     id: "focus-and-blur-events",
     title: "Focus and Blur Events",
-    description: "Explain the `focus` and `blur` events, which are commonly used with form elements to detect when a user enters or leaves an input field.",
+    description:
+      "Explain the `focus` and `blur` events, which are commonly used with form elements to detect when a user enters or leaves an input field.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Focus/Blur",
@@ -148,7 +166,8 @@ export const problems: Problem[] = [
   {
     id: "event-coordinates",
     title: "Mouse Event Coordinates",
-    description: "Explain the difference between coordinate properties on a mouse event, such as `clientX`/`clientY` and `pageX`/`pageY`.",
+    description:
+      "Explain the difference between coordinate properties on a mouse event, such as `clientX`/`clientY` and `pageX`/`pageY`.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Coordinates",
@@ -156,7 +175,8 @@ export const problems: Problem[] = [
   {
     id: "delegation-with-closest",
     title: "Delegation with `.closest()`",
-    description: "Show a modern and robust event delegation pattern using `event.target.closest(selector)` to find the correct child element to act upon.",
+    description:
+      "Show a modern and robust event delegation pattern using `event.target.closest(selector)` to find the correct child element to act upon.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `.closest()` Pattern",
@@ -164,7 +184,8 @@ export const problems: Problem[] = [
   {
     id: "input-vs-change-event",
     title: "The `input` vs `change` Event",
-    description: "Explain the difference between the `input` event (fires on every value modification) and the `change` event (fires when the value is committed, e.g., on blur).",
+    description:
+      "Explain the difference between the `input` event (fires on every value modification) and the `change` event (fires when the value is committed, e.g., on blur).",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `input` vs `change`",
@@ -172,7 +193,8 @@ export const problems: Problem[] = [
   {
     id: "event-object-properties",
     title: "Common Event Object Properties",
-    description: "Explain common properties of the event object, such as `type`, `timeStamp`, `bubbles`, and `cancelable`.",
+    description:
+      "Explain common properties of the event object, such as `type`, `timeStamp`, `bubbles`, and `cancelable`.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Event Properties",
@@ -180,7 +202,8 @@ export const problems: Problem[] = [
   {
     id: "mouseenter-vs-mouseover",
     title: "`mouseenter` vs `mouseover`",
-    description: "Explain the key difference: `mouseover` bubbles and fires for descendants, while `mouseenter` does not bubble and only fires for the element it's attached to.",
+    description:
+      "Explain the key difference: `mouseover` bubbles and fires for descendants, while `mouseenter` does not bubble and only fires for the element it's attached to.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `enter` vs `over`",
@@ -188,7 +211,8 @@ export const problems: Problem[] = [
   {
     id: "pointer-events",
     title: "Pointer Events",
-    description: "Explain Pointer Events (`pointerdown`, `pointermove`, `pointerup`) as the modern, unified way to handle input from a mouse, pen, or touchscreen.",
+    description:
+      "Explain Pointer Events (`pointerdown`, `pointermove`, `pointerup`) as the modern, unified way to handle input from a mouse, pen, or touchscreen.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Pointer Events",
@@ -196,7 +220,8 @@ export const problems: Problem[] = [
   {
     id: "event-is-trusted",
     title: "`event.isTrusted`",
-    description: "Explain the `isTrusted` property on an event, which is `true` for events generated by a user and `false` for events created by code (`dispatchEvent`).",
+    description:
+      "Explain the `isTrusted` property on an event, which is `true` for events generated by a user and `false` for events created by code (`dispatchEvent`).",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `isTrusted`",
@@ -204,7 +229,8 @@ export const problems: Problem[] = [
   {
     id: "form-reset-event",
     title: "Form `reset` Event",
-    description: "Explain how to listen for the `reset` event on a form, which fires when a reset button is clicked.",
+    description:
+      "Explain how to listen for the `reset` event on a form, which fires when a reset button is clicked.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `reset` Event",
@@ -212,7 +238,8 @@ export const problems: Problem[] = [
   {
     id: "window-error-event",
     title: "Global `error` Event",
-    description: "Explain how to set up a global error handler by listening for the `error` event on the `window` object to catch uncaught runtime errors.",
+    description:
+      "Explain how to set up a global error handler by listening for the `error` event on the `window` object to catch uncaught runtime errors.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Global Error Handler",
@@ -220,7 +247,8 @@ export const problems: Problem[] = [
   {
     id: "media-query-listener",
     title: "Media Query Change Listener",
-    description: "Demonstrate how to listen for 'change' events on a `MediaQueryList` object from `window.matchMedia` to react to viewport changes.",
+    description:
+      "Demonstrate how to listen for 'change' events on a `MediaQueryList` object from `window.matchMedia` to react to viewport changes.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Media Query Listener",
@@ -228,7 +256,8 @@ export const problems: Problem[] = [
   {
     id: "synthetic-events-react-conceptual",
     title: "React Synthetic Events (Conceptual)",
-    description: "Explain the concept of React's SyntheticEvent system, which wraps the browser's native events to provide a consistent cross-browser API.",
+    description:
+      "Explain the concept of React's SyntheticEvent system, which wraps the browser's native events to provide a consistent cross-browser API.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Synthetic Events",
@@ -236,7 +265,8 @@ export const problems: Problem[] = [
   {
     id: "event-modifier-keys",
     title: "Modifier Key Properties",
-    description: "Explain how to check for modifier keys like Shift, Ctrl, Alt, and Meta (Cmd/Win) on a keyboard or mouse event object (`shiftKey`, `ctrlKey`, `altKey`, `metaKey`).",
+    description:
+      "Explain how to check for modifier keys like Shift, Ctrl, Alt, and Meta (Cmd/Win) on a keyboard or mouse event object (`shiftKey`, `ctrlKey`, `altKey`, `metaKey`).",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Modifier Keys",
@@ -244,7 +274,8 @@ export const problems: Problem[] = [
   {
     id: "touch-events",
     title: "Touch Events",
-    description: "Explain the basic touch events (`touchstart`, `touchmove`, `touchend`) and how to access touch points from the `touches` property of the event object.",
+    description:
+      "Explain the basic touch events (`touchstart`, `touchmove`, `touchend`) and how to access touch points from the `touches` property of the event object.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Touch Events",
@@ -252,7 +283,8 @@ export const problems: Problem[] = [
   {
     id: "event-composed-path",
     title: "The `composedPath()` Method",
-    description: "Explain `event.composedPath()`, which returns an array of the event's path, useful for debugging and for piercing the Shadow DOM.",
+    description:
+      "Explain `event.composedPath()`, which returns an array of the event's path, useful for debugging and for piercing the Shadow DOM.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `composedPath`",
@@ -260,7 +292,8 @@ export const problems: Problem[] = [
   {
     id: "scroll-event",
     title: "The `scroll` Event",
-    description: "Explain how to listen for the `scroll` event on an element or the `window` to react to user scrolling. Mention performance considerations.",
+    description:
+      "Explain how to listen for the `scroll` event on an element or the `window` to react to user scrolling. Mention performance considerations.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `scroll` Event",
@@ -268,7 +301,8 @@ export const problems: Problem[] = [
   {
     id: "debouncing-events",
     title: "Debouncing Events",
-    description: "Explain the 'debouncing' technique for rate-limiting event handlers (like for a search input) to improve performance.",
+    description:
+      "Explain the 'debouncing' technique for rate-limiting event handlers (like for a search input) to improve performance.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Debouncing",
@@ -276,7 +310,8 @@ export const problems: Problem[] = [
   {
     id: "throttling-events",
     title: "Throttling Events",
-    description: "Explain the 'throttling' technique for rate-limiting event handlers (like for a scroll or resize event) to ensure they don't fire too often.",
+    description:
+      "Explain the 'throttling' technique for rate-limiting event handlers (like for a scroll or resize event) to ensure they don't fire too often.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Throttling",
@@ -284,7 +319,8 @@ export const problems: Problem[] = [
   {
     id: "context-menu-event",
     title: "The `contextmenu` Event",
-    description: "Explain how to handle the `contextmenu` event to create a custom right-click menu, and how to prevent the default browser menu.",
+    description:
+      "Explain how to handle the `contextmenu` event to create a custom right-click menu, and how to prevent the default browser menu.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `contextmenu`",
@@ -292,7 +328,8 @@ export const problems: Problem[] = [
   {
     id: "drag-and-drop-events",
     title: "Drag and Drop Events",
-    description: "Explain the sequence of events (`dragstart`, `dragover`, `drop`) involved in implementing native drag-and-drop functionality.",
+    description:
+      "Explain the sequence of events (`dragstart`, `dragover`, `drop`) involved in implementing native drag-and-drop functionality.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Drag & Drop",
@@ -300,7 +337,8 @@ export const problems: Problem[] = [
   {
     id: "event-loop-conceptual",
     title: "The Event Loop (Conceptual)",
-    description: "Provide a high-level explanation of the Event Loop, including the call stack, Web APIs, the callback queue (macrotasks), and the microtask queue.",
+    description:
+      "Provide a high-level explanation of the Event Loop, including the call stack, Web APIs, the callback queue (macrotasks), and the microtask queue.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Event Loop",
@@ -308,7 +346,8 @@ export const problems: Problem[] = [
   {
     id: "focusin-vs-focus",
     title: "`focusin` vs `focus`",
-    description: "Explain the difference between the `focus` event (which does not bubble) and the `focusin` event (which does bubble), making it useful for delegation.",
+    description:
+      "Explain the difference between the `focus` event (which does not bubble) and the `focusin` event (which does bubble), making it useful for delegation.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `focusin` vs `focus`",
@@ -316,7 +355,8 @@ export const problems: Problem[] = [
   {
     id: "delegation-dynamic-elements",
     title: "Delegation with Dynamic Elements",
-    description: "Explain why event delegation is the best solution for handling events on elements that are added to the DOM after the initial page load.",
+    description:
+      "Explain why event delegation is the best solution for handling events on elements that are added to the DOM after the initial page load.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Dynamic Elements",
@@ -324,7 +364,8 @@ export const problems: Problem[] = [
   {
     id: "event-constructor",
     title: "The `Event` Constructor",
-    description: "Show how to create a simple, generic event using `new Event()` and dispatch it.",
+    description:
+      "Show how to create a simple, generic event using `new Event()` and dispatch it.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `Event` Constructor",
@@ -332,7 +373,8 @@ export const problems: Problem[] = [
   {
     id: "removing-all-listeners",
     title: "Removing All Listeners (Trick)",
-    description: "Show the common trick for removing all event listeners from a node: cloning the node and replacing it with the clone.",
+    description:
+      "Show the common trick for removing all event listeners from a node: cloning the node and replacing it with the clone.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Removal Trick",
@@ -340,7 +382,8 @@ export const problems: Problem[] = [
   {
     id: "transitionend-event",
     title: "The `transitionend` Event",
-    description: "Explain how to listen for the `transitionend` event to be notified when a CSS transition has completed.",
+    description:
+      "Explain how to listen for the `transitionend` event to be notified when a CSS transition has completed.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `transitionend`",
@@ -348,7 +391,8 @@ export const problems: Problem[] = [
   {
     id: "animationend-event",
     title: "The `animationend` Event",
-    description: "Explain how to listen for the `animationend` event to be notified when a CSS animation has completed.",
+    description:
+      "Explain how to listen for the `animationend` event to be notified when a CSS animation has completed.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `animationend`",
@@ -356,7 +400,8 @@ export const problems: Problem[] = [
   {
     id: "event-phase-property",
     title: "`event.eventPhase`",
-    description: "Explain the `event.eventPhase` property, which returns a number indicating which phase of the event flow is currently being evaluated (CAPTURING_PHASE, AT_TARGET, BUBBLING_PHASE).",
+    description:
+      "Explain the `event.eventPhase` property, which returns a number indicating which phase of the event flow is currently being evaluated (CAPTURING_PHASE, AT_TARGET, BUBBLING_PHASE).",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `eventPhase`",
@@ -364,7 +409,8 @@ export const problems: Problem[] = [
   {
     id: "hashchange-event",
     title: "The `hashchange` Event",
-    description: "Explain how to listen for the `hashchange` event on the `window` object, which fires when the URL fragment identifier (the part after '#') changes.",
+    description:
+      "Explain how to listen for the `hashchange` event on the `window` object, which fires when the URL fragment identifier (the part after '#') changes.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `hashchange`",
@@ -372,7 +418,8 @@ export const problems: Problem[] = [
   {
     id: "pointerevent-properties",
     title: "PointerEvent Properties",
-    description: "Explain useful properties of a `PointerEvent` object, such as `pointerId`, `pointerType` ('mouse', 'pen', 'touch'), `pressure`, and `tiltX`.",
+    description:
+      "Explain useful properties of a `PointerEvent` object, such as `pointerId`, `pointerType` ('mouse', 'pen', 'touch'), `pressure`, and `tiltX`.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain PointerEvent",
@@ -380,7 +427,8 @@ export const problems: Problem[] = [
   {
     id: "wheel-event",
     title: "The `wheel` Event",
-    description: "Explain how to use the `wheel` event to detect when the user scrolls their mouse wheel, and how to access `deltaX`, `deltaY`, and `deltaZ` properties.",
+    description:
+      "Explain how to use the `wheel` event to detect when the user scrolls their mouse wheel, and how to access `deltaX`, `deltaY`, and `deltaZ` properties.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain `wheel` Event",
@@ -388,7 +436,8 @@ export const problems: Problem[] = [
   {
     id: "event- bubbling-vs-delegation",
     title: "Bubbling vs Delegation",
-    description: "Clarify the relationship: event delegation is a *pattern* that works *because* of the event bubbling mechanism.",
+    description:
+      "Clarify the relationship: event delegation is a *pattern* that works *because* of the event bubbling mechanism.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Explain Relationship",
@@ -396,10 +445,10 @@ export const problems: Problem[] = [
   {
     id: "programmatic-event-dispatch",
     title: "Programmatic Event Dispatch",
-    description: "Show how to programmatically trigger an event listener by creating and dispatching an event on an element.",
+    description:
+      "Show how to programmatically trigger an event listener by creating and dispatching an event on an element.",
     category: "Event Handling & Propagation",
     inputs: [],
     buttonText: "Show Programmatic Trigger",
   },
 ];
-```

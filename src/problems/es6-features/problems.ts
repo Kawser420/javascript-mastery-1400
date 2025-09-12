@@ -1,18 +1,27 @@
-import type { Problem } from "../../types";
+import { Problem } from "@/types";
 
 export const problems: Problem[] = [
   {
     id: "arrow-function-map",
     title: "Arrow Functions & `.map()`",
-    description: "Use an ES6 arrow function and the `.map()` method to create a new array where each number is doubled.",
+    description:
+      "Use an ES6 arrow function and the `.map()` method to create a new array where each number is doubled.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array of numbers (comma-separated)", type: "text", defaultValue: "1, 2, 3, 4" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers (comma-separated)",
+        type: "text",
+        defaultValue: "1, 2, 3, 4",
+      },
+    ],
     buttonText: "Double Numbers",
   },
   {
     id: "template-literals",
     title: "Template Literals",
-    description: "Use template literals (backticks) to create a multi-line string with embedded expressions.",
+    description:
+      "Use template literals (backticks) to create a multi-line string with embedded expressions.",
     category: "ES6+ Features",
     inputs: [
       { id: "name", label: "Name", type: "text", defaultValue: "Jane" },
@@ -23,42 +32,78 @@ export const problems: Problem[] = [
   {
     id: "array-destructuring",
     title: "Array Destructuring",
-    description: "Use destructuring assignment to unpack values from an array into distinct variables.",
+    description:
+      "Use destructuring assignment to unpack values from an array into distinct variables.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array (comma-separated)", type: "text", defaultValue: "1, 2, 3" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array (comma-separated)",
+        type: "text",
+        defaultValue: "1, 2, 3",
+      },
+    ],
     buttonText: "Destructure Array",
   },
   {
     id: "object-destructuring",
     title: "Object Destructuring",
-    description: "Use destructuring assignment to unpack properties from a JSON object into distinct variables.",
+    description:
+      "Use destructuring assignment to unpack properties from a JSON object into distinct variables.",
     category: "ES6+ Features",
-    inputs: [{ id: "json", label: "JSON Object", type: "textarea", defaultValue: '{"name": "John", "age": 30}' }],
+    inputs: [
+      {
+        id: "json",
+        label: "JSON Object",
+        type: "textarea",
+        defaultValue: '{"name": "John", "age": 30}',
+      },
+    ],
     buttonText: "Destructure Object",
   },
   {
     id: "rest-parameters",
     title: "Rest Parameters",
-    description: "Write a function that uses rest parameters to accept an indefinite number of arguments as an array and sum them.",
+    description:
+      "Write a function that uses rest parameters to accept an indefinite number of arguments as an array and sum them.",
     category: "ES6+ Features",
-    inputs: [{ id: "args", label: "Numbers to sum (comma-separated)", type: "text", defaultValue: "1, 2, 3, 4" }],
+    inputs: [
+      {
+        id: "args",
+        label: "Numbers to sum (comma-separated)",
+        type: "text",
+        defaultValue: "1, 2, 3, 4",
+      },
+    ],
     buttonText: "Sum with Rest",
   },
   {
     id: "spread-operator-arrays",
     title: "Spread Operator for Arrays",
-    description: "Use the spread operator (`...`) to combine two arrays into a single new array.",
+    description:
+      "Use the spread operator (`...`) to combine two arrays into a single new array.",
     category: "ES6+ Features",
     inputs: [
-      { id: "arr1", label: "First Array (comma-separated)", type: "text", defaultValue: "a, b, c" },
-      { id: "arr2", label: "Second Array (comma-separated)", type: "text", defaultValue: "d, e, f" },
+      {
+        id: "arr1",
+        label: "First Array (comma-separated)",
+        type: "text",
+        defaultValue: "a, b, c",
+      },
+      {
+        id: "arr2",
+        label: "Second Array (comma-separated)",
+        type: "text",
+        defaultValue: "d, e, f",
+      },
     ],
     buttonText: "Combine Arrays",
   },
   {
     id: "let-const-scope",
     title: "`let` and `const` Scope",
-    description: "Demonstrate the block-scoping behavior of `let` and `const` compared to `var`.",
+    description:
+      "Demonstrate the block-scoping behavior of `let` and `const` compared to `var`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Scopes",
@@ -66,7 +111,8 @@ export const problems: Problem[] = [
   {
     id: "default-parameters-es6",
     title: "Default Parameters",
-    description: "Write a function that uses ES6 default parameters to set a default value for an argument.",
+    description:
+      "Write a function that uses ES6 default parameters to set a default value for an argument.",
     category: "ES6+ Features",
     inputs: [{ id: "name", label: "Name (optional)", type: "text" }],
     buttonText: "Greet",
@@ -74,19 +120,38 @@ export const problems: Problem[] = [
   {
     id: "for-of-loop",
     title: "`for...of` Loop",
-    description: "Iterate over the elements of an array using the `for...of` loop.",
+    description:
+      "Iterate over the elements of an array using the `for...of` loop.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array to iterate", type: "text", defaultValue: "a,b,c" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array to iterate",
+        type: "text",
+        defaultValue: "a,b,c",
+      },
+    ],
     buttonText: "Iterate",
   },
   {
     id: "spread-operator-objects",
     title: "Spread Operator for Objects",
-    description: "Use the spread operator (`...`) to merge the properties of two objects.",
+    description:
+      "Use the spread operator (`...`) to merge the properties of two objects.",
     category: "ES6+ Features",
     inputs: [
-      { id: "obj1", label: "First Object (JSON)", type: "textarea", defaultValue: '{"a":1, "b":2}' },
-      { id: "obj2", label: "Second Object (JSON)", type: "textarea", defaultValue: '{"b":3, "c":4}' },
+      {
+        id: "obj1",
+        label: "First Object (JSON)",
+        type: "textarea",
+        defaultValue: '{"a":1, "b":2}',
+      },
+      {
+        id: "obj2",
+        label: "Second Object (JSON)",
+        type: "textarea",
+        defaultValue: '{"b":3, "c":4}',
+      },
     ],
     buttonText: "Merge Objects",
   },
@@ -101,7 +166,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-basics",
     title: "Async/Await Basics",
-    description: "Create an `async` function that `await`s a Promise-based function (like a delayed response).",
+    description:
+      "Create an `async` function that `await`s a Promise-based function (like a delayed response).",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Async Function",
@@ -109,7 +175,8 @@ export const problems: Problem[] = [
   {
     id: "es6-map-data-structure",
     title: "Map Data Structure",
-    description: "Use the `Map` object to store key-value pairs and demonstrate its basic methods (`set`, `get`, `has`).",
+    description:
+      "Use the `Map` object to store key-value pairs and demonstrate its basic methods (`set`, `get`, `has`).",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Map",
@@ -117,15 +184,24 @@ export const problems: Problem[] = [
   {
     id: "es6-set-data-structure",
     title: "Set Data Structure",
-    description: "Use the `Set` object to store a collection of unique values and demonstrate its basic methods (`add`, `has`, `delete`).",
+    description:
+      "Use the `Set` object to store a collection of unique values and demonstrate its basic methods (`add`, `has`, `delete`).",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array with duplicates", type: "text", defaultValue: "a,b,a,c,b" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array with duplicates",
+        type: "text",
+        defaultValue: "a,b,a,c,b",
+      },
+    ],
     buttonText: "Test Set",
   },
   {
     id: "symbol-data-type-es6",
     title: "Symbol Data Type",
-    description: "Create a `Symbol` and use it as a unique object key to avoid property name collisions.",
+    description:
+      "Create a `Symbol` and use it as a unique object key to avoid property name collisions.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Symbol",
@@ -133,7 +209,8 @@ export const problems: Problem[] = [
   {
     id: "destructuring-with-aliases",
     title: "Destructuring with Aliases",
-    description: "Use object destructuring to assign properties to variables with different names (aliases).",
+    description:
+      "Use object destructuring to assign properties to variables with different names (aliases).",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure with Alias",
@@ -141,7 +218,8 @@ export const problems: Problem[] = [
   {
     id: "destructuring-with-defaults",
     title: "Destructuring with Default Values",
-    description: "Use object destructuring to provide a default value for a property that might not exist on the object.",
+    description:
+      "Use object destructuring to provide a default value for a property that might not exist on the object.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure with Default",
@@ -149,23 +227,35 @@ export const problems: Problem[] = [
   {
     id: "array-destructuring-skip",
     title: "Skipping Items in Array Destructuring",
-    description: "Use array destructuring to extract only the first and third elements from an array, skipping the second.",
+    description:
+      "Use array destructuring to extract only the first and third elements from an array, skipping the second.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "one,two,three" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array",
+        type: "text",
+        defaultValue: "one,two,three",
+      },
+    ],
     buttonText: "Destructure and Skip",
   },
   {
     id: "array-destructuring-rest",
     title: "Array Destructuring with Rest",
-    description: "Use array destructuring to capture the first element in one variable and the rest of the elements in another array.",
+    description:
+      "Use array destructuring to capture the first element in one variable and the rest of the elements in another array.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4,5" }],
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4,5" },
+    ],
     buttonText: "Destructure with Rest",
   },
   {
     id: "promise-catch",
     title: "Promise `.catch()`",
-    description: "Create a Promise that rejects and handle the error using the `.catch()` method.",
+    description:
+      "Create a Promise that rejects and handle the error using the `.catch()` method.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Rejecting Promise",
@@ -173,7 +263,8 @@ export const problems: Problem[] = [
   {
     id: "promise-finally",
     title: "Promise `.finally()`",
-    description: "Demonstrate the `.finally()` method, which executes a callback when a Promise is settled (either resolved or rejected).",
+    description:
+      "Demonstrate the `.finally()` method, which executes a callback when a Promise is settled (either resolved or rejected).",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise with Finally",
@@ -181,7 +272,8 @@ export const problems: Problem[] = [
   {
     id: "promise-all",
     title: "Promise.all()",
-    description: "Use `Promise.all()` to wait for multiple Promises to resolve and get an array of their results.",
+    description:
+      "Use `Promise.all()` to wait for multiple Promises to resolve and get an array of their results.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise.all",
@@ -189,7 +281,8 @@ export const problems: Problem[] = [
   {
     id: "promise-race",
     title: "Promise.race()",
-    description: "Use `Promise.race()` to get the result of the first Promise in an iterable to settle (resolve or reject).",
+    description:
+      "Use `Promise.race()` to get the result of the first Promise in an iterable to settle (resolve or reject).",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise.race",
@@ -197,7 +290,8 @@ export const problems: Problem[] = [
   {
     id: "es6-classes-basic",
     title: "ES6 Classes (Basic)",
-    description: "Create a simple `Person` class with a constructor and a method using ES6 class syntax.",
+    description:
+      "Create a simple `Person` class with a constructor and a method using ES6 class syntax.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create Instance",
@@ -205,7 +299,8 @@ export const problems: Problem[] = [
   {
     id: "es6-modules-conceptual",
     title: "ES6 Modules (Conceptual)",
-    description: "Conceptually demonstrate how to `export` a function from one file and `import` it in another.",
+    description:
+      "Conceptually demonstrate how to `export` a function from one file and `import` it in another.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Module Code",
@@ -213,7 +308,8 @@ export const problems: Problem[] = [
   {
     id: "object-property-shorthand",
     title: "Object Property Shorthand",
-    description: "Create an object from variables that have the same name as the desired property keys.",
+    description:
+      "Create an object from variables that have the same name as the desired property keys.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create Object",
@@ -221,7 +317,8 @@ export const problems: Problem[] = [
   {
     id: "computed-property-names-es6",
     title: "Computed Property Names",
-    description: "Create an object where a property key is dynamically set from a variable.",
+    description:
+      "Create an object where a property key is dynamically set from a variable.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create Dynamic Object",
@@ -229,47 +326,78 @@ export const problems: Problem[] = [
   {
     id: "string-methods-es6",
     title: "New String Methods",
-    description: "Demonstrate the ES6 string methods `.startsWith()`, `.endsWith()`, and `.includes()`.",
+    description:
+      "Demonstrate the ES6 string methods `.startsWith()`, `.endsWith()`, and `.includes()`.",
     category: "ES6+ Features",
-    inputs: [{ id: "str", label: "String", type: "text", defaultValue: "Hello world" }],
+    inputs: [
+      { id: "str", label: "String", type: "text", defaultValue: "Hello world" },
+    ],
     buttonText: "Test String Methods",
   },
   {
     id: "array-from-es6",
     title: "`Array.from()`",
-    description: "Use `Array.from()` to create a new array from an array-like or iterable object (like a string).",
+    description:
+      "Use `Array.from()` to create a new array from an array-like or iterable object (like a string).",
     category: "ES6+ Features",
-    inputs: [{ id: "str", label: "String to convert", type: "text", defaultValue: "abc" }],
+    inputs: [
+      {
+        id: "str",
+        label: "String to convert",
+        type: "text",
+        defaultValue: "abc",
+      },
+    ],
     buttonText: "Create Array",
   },
   {
     id: "array-find-es6",
     title: "`Array.prototype.find()`",
-    description: "Use the `.find()` method to get the first element in an array that satisfies a provided testing function.",
+    description:
+      "Use the `.find()` method to get the first element in an array that satisfies a provided testing function.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "5,12,8,130,44" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "5,12,8,130,44",
+      },
+    ],
     buttonText: "Find first number > 10",
   },
   {
     id: "array-findindex-es6",
     title: "`Array.prototype.findIndex()`",
-    description: "Use the `.findIndex()` method to get the index of the first element in an array that satisfies a testing function.",
+    description:
+      "Use the `.findIndex()` method to get the index of the first element in an array that satisfies a testing function.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "5,8,12,130,44" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "5,8,12,130,44",
+      },
+    ],
     buttonText: "Find index of number > 10",
   },
   {
     id: "number-isinteger-es6",
     title: "`Number.isInteger()`",
-    description: "Use `Number.isInteger()` to determine whether a value is an integer.",
+    description:
+      "Use `Number.isInteger()` to determine whether a value is an integer.",
     category: "ES6+ Features",
-    inputs: [{ id: "num", label: "Value to check", type: "text", defaultValue: "123" }],
+    inputs: [
+      { id: "num", label: "Value to check", type: "text", defaultValue: "123" },
+    ],
     buttonText: "Check if Integer",
   },
   {
     id: "object-is-es6",
     title: "`Object.is()`",
-    description: "Demonstrate `Object.is()` for a stricter value comparison than `===`, especially for `NaN` and `-0/+0`.",
+    description:
+      "Demonstrate `Object.is()` for a stricter value comparison than `===`, especially for `NaN` and `-0/+0`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Object.is",
@@ -277,7 +405,8 @@ export const problems: Problem[] = [
   {
     id: "optional-chaining-operator",
     title: "Optional Chaining Operator (`?.`)",
-    description: "Safely access a deeply nested property of an object without checking for the existence of each intermediate property.",
+    description:
+      "Safely access a deeply nested property of an object without checking for the existence of each intermediate property.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Safely Access",
@@ -285,7 +414,8 @@ export const problems: Problem[] = [
   {
     id: "nullish-coalescing-operator",
     title: "Nullish Coalescing Operator (`??`)",
-    description: "Use the `??` operator to provide a default value for a variable that is `null` or `undefined`.",
+    description:
+      "Use the `??` operator to provide a default value for a variable that is `null` or `undefined`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Provide Default",
@@ -293,7 +423,8 @@ export const problems: Problem[] = [
   {
     id: "promise-allsettled",
     title: "Promise.allSettled()",
-    description: "Use `Promise.allSettled()` to wait for all promises in an iterable to settle, regardless of whether they resolve or reject.",
+    description:
+      "Use `Promise.allSettled()` to wait for all promises in an iterable to settle, regardless of whether they resolve or reject.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise.allSettled",
@@ -301,7 +432,8 @@ export const problems: Problem[] = [
   {
     id: "promise-any",
     title: "Promise.any()",
-    description: "Use `Promise.any()` to get the result of the first promise in an iterable to resolve. It rejects if all promises reject.",
+    description:
+      "Use `Promise.any()` to get the result of the first promise in an iterable to resolve. It rejects if all promises reject.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise.any",
@@ -309,7 +441,8 @@ export const problems: Problem[] = [
   {
     id: "string-matchall",
     title: "String `.matchAll()`",
-    description: "Use `.matchAll()` with a regular expression to get an iterator of all results matching a string.",
+    description:
+      "Use `.matchAll()` with a regular expression to get an iterator of all results matching a string.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Find All Matches",
@@ -317,7 +450,8 @@ export const problems: Problem[] = [
   {
     id: "dynamic-import",
     title: "Dynamic `import()` (Conceptual)",
-    description: "Show the conceptual syntax for dynamically importing a module, which returns a promise.",
+    description:
+      "Show the conceptual syntax for dynamically importing a module, which returns a promise.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Dynamic Import",
@@ -325,7 +459,8 @@ export const problems: Problem[] = [
   {
     id: "weakmap-es6",
     title: "WeakMap",
-    description: "Demonstrate a `WeakMap`, where keys must be objects and are held weakly, allowing for garbage collection.",
+    description:
+      "Demonstrate a `WeakMap`, where keys must be objects and are held weakly, allowing for garbage collection.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test WeakMap",
@@ -333,7 +468,8 @@ export const problems: Problem[] = [
   {
     id: "weakset-es6",
     title: "WeakSet",
-    description: "Demonstrate a `WeakSet`, a collection of objects that are held weakly.",
+    description:
+      "Demonstrate a `WeakSet`, a collection of objects that are held weakly.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test WeakSet",
@@ -341,7 +477,8 @@ export const problems: Problem[] = [
   {
     id: "iterator-protocol-conceptual",
     title: "The Iterator Protocol (Conceptual)",
-    description: "Explain the Iterator Protocol, where an object provides a `.next()` method that returns an object with `value` and `done` properties.",
+    description:
+      "Explain the Iterator Protocol, where an object provides a `.next()` method that returns an object with `value` and `done` properties.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain Iterator",
@@ -349,7 +486,8 @@ export const problems: Problem[] = [
   {
     id: "generator-function",
     title: "Generator Function (`function*`)",
-    description: "Create a simple generator function that uses `yield` to pause its execution and produce a sequence of values.",
+    description:
+      "Create a simple generator function that uses `yield` to pause its execution and produce a sequence of values.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Generator",
@@ -357,7 +495,8 @@ export const problems: Problem[] = [
   {
     id: "bigint-es2020",
     title: "`BigInt`",
-    description: "Demonstrate the `BigInt` primitive type for representing whole numbers larger than 2^53 - 1.",
+    description:
+      "Demonstrate the `BigInt` primitive type for representing whole numbers larger than 2^53 - 1.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use BigInt",
@@ -365,7 +504,8 @@ export const problems: Problem[] = [
   {
     id: "globalthis-es2020",
     title: "`globalThis`",
-    description: "Show how `globalThis` provides a standard way to access the global `this` value across all environments (browser, Node, etc.).",
+    description:
+      "Show how `globalThis` provides a standard way to access the global `this` value across all environments (browser, Node, etc.).",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show globalThis",
@@ -373,7 +513,8 @@ export const problems: Problem[] = [
   {
     id: "logical-assignment-operators",
     title: "Logical Assignment Operators",
-    description: "Demonstrate the logical assignment operators `&&=`, `||=`, and `??=`.",
+    description:
+      "Demonstrate the logical assignment operators `&&=`, `||=`, and `??=`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Operators",
@@ -381,7 +522,8 @@ export const problems: Problem[] = [
   {
     id: "numeric-separators",
     title: "Numeric Separators (`_`)",
-    description: "Use underscores as numeric separators to improve the readability of large number literals.",
+    description:
+      "Use underscores as numeric separators to improve the readability of large number literals.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Separators",
@@ -389,15 +531,19 @@ export const problems: Problem[] = [
   {
     id: "array-at-method",
     title: "Array `.at()` Method",
-    description: "Use the `.at()` method to access an element of an array using a negative index to count back from the end.",
+    description:
+      "Use the `.at()` method to access an element of an array using a negative index to count back from the end.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "a,b,c,d" }],
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "a,b,c,d" },
+    ],
     buttonText: "Get last element with .at()",
   },
   {
     id: "object-hasown",
     title: "`Object.hasOwn()`",
-    description: "Use the modern `Object.hasOwn()` static method as a safer alternative to `Object.prototype.hasOwnProperty`.",
+    description:
+      "Use the modern `Object.hasOwn()` static method as a safer alternative to `Object.prototype.hasOwnProperty`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test hasOwn",
@@ -405,7 +551,8 @@ export const problems: Problem[] = [
   {
     id: "async-await-error-handling",
     title: "Async/Await Error Handling",
-    description: "Use a `try...catch` block to handle errors from a rejected promise within an `async` function.",
+    description:
+      "Use a `try...catch` block to handle errors from a rejected promise within an `async` function.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Catch Async Error",
@@ -414,7 +561,8 @@ export const problems: Problem[] = [
   {
     id: "destructuring-function-params",
     title: "Destructuring Function Parameters",
-    description: "Write a function that accepts an object as an argument and uses destructuring directly in the parameter list.",
+    description:
+      "Write a function that accepts an object as an argument and uses destructuring directly in the parameter list.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Function",
@@ -422,23 +570,40 @@ export const problems: Problem[] = [
   {
     id: "array-flat",
     title: "Array `.flat()` Method",
-    description: "Use the `.flat()` method to create a new array with all sub-array elements concatenated into it recursively up to a specified depth.",
+    description:
+      "Use the `.flat()` method to create a new array with all sub-array elements concatenated into it recursively up to a specified depth.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Nested Array (JSON)", type: "textarea", defaultValue: "[1, [2, 3], [4, [5]]]" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Nested Array (JSON)",
+        type: "textarea",
+        defaultValue: "[1, [2, 3], [4, [5]]]",
+      },
+    ],
     buttonText: "Flatten Array",
   },
   {
     id: "array-flatmap",
     title: "Array `.flatMap()` Method",
-    description: "Use `.flatMap()` to first map each element using a mapping function, and then flatten the result into a new array. It's identical to a `map` followed by a `flat` of depth 1.",
+    description:
+      "Use `.flatMap()` to first map each element using a mapping function, and then flatten the result into a new array. It's identical to a `map` followed by a `flat` of depth 1.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array of Numbers", type: "text", defaultValue: "1,2,3" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Numbers",
+        type: "text",
+        defaultValue: "1,2,3",
+      },
+    ],
     buttonText: "Map and Flatten",
   },
   {
     id: "object-fromentries",
     title: "`Object.fromEntries()`",
-    description: "Use `Object.fromEntries()` to transform a list of key-value pairs (like an array of arrays) into an object.",
+    description:
+      "Use `Object.fromEntries()` to transform a list of key-value pairs (like an array of arrays) into an object.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create Object",
@@ -446,15 +611,24 @@ export const problems: Problem[] = [
   {
     id: "string-trimstart-trimend",
     title: "String `.trimStart()` & `.trimEnd()`",
-    description: "Demonstrate the use of `.trimStart()` and `.trimEnd()` to remove whitespace from only the beginning or end of a string.",
+    description:
+      "Demonstrate the use of `.trimStart()` and `.trimEnd()` to remove whitespace from only the beginning or end of a string.",
     category: "ES6+ Features",
-    inputs: [{ id: "str", label: "String with Whitespace", type: "text", defaultValue: "   hello   " }],
+    inputs: [
+      {
+        id: "str",
+        label: "String with Whitespace",
+        type: "text",
+        defaultValue: "   hello   ",
+      },
+    ],
     buttonText: "Trim Selectively",
   },
   {
     id: "symbol-description",
     title: "Symbol `.description` Property",
-    description: "Show how to access the optional description of a Symbol using the `.description` property.",
+    description:
+      "Show how to access the optional description of a Symbol using the `.description` property.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get Description",
@@ -462,7 +636,8 @@ export const problems: Problem[] = [
   {
     id: "well-known-symbol-iterator",
     title: "Well-Known Symbol: `Symbol.iterator`",
-    description: "Make a custom object iterable by implementing the `Symbol.iterator` method with a generator function.",
+    description:
+      "Make a custom object iterable by implementing the `Symbol.iterator` method with a generator function.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Iterate Custom Object",
@@ -470,7 +645,8 @@ export const problems: Problem[] = [
   {
     id: "generator-yield-delegation-es6",
     title: "Generator `yield*`",
-    description: "Use `yield*` to delegate the iteration from one generator to another iterable, like another generator or an array.",
+    description:
+      "Use `yield*` to delegate the iteration from one generator to another iterable, like another generator or an array.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Delegate Yield",
@@ -478,7 +654,8 @@ export const problems: Problem[] = [
   {
     id: "generator-passing-values",
     title: "Passing Values to Generators",
-    description: "Demonstrate how to pass a value back into a generator via the `.next(value)` method.",
+    description:
+      "Demonstrate how to pass a value back into a generator via the `.next(value)` method.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Two-Way Generator",
@@ -486,7 +663,8 @@ export const problems: Problem[] = [
   {
     id: "proxy-get-trap",
     title: "Proxy `get` Trap",
-    description: "Create a Proxy with a `get` trap to intercept and customize property access on an object.",
+    description:
+      "Create a Proxy with a `get` trap to intercept and customize property access on an object.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `get` Trap",
@@ -494,7 +672,8 @@ export const problems: Problem[] = [
   {
     id: "proxy-set-trap",
     title: "Proxy `set` Trap",
-    description: "Create a Proxy with a `set` trap to validate values before they are assigned to an object's property.",
+    description:
+      "Create a Proxy with a `set` trap to validate values before they are assigned to an object's property.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `set` Trap",
@@ -502,7 +681,8 @@ export const problems: Problem[] = [
   {
     id: "reflect-api-get-set",
     title: "`Reflect.get()` and `Reflect.set()`",
-    description: "Use `Reflect.get()` and `Reflect.set()` to access and modify object properties. These are often used within Proxy traps.",
+    description:
+      "Use `Reflect.get()` and `Reflect.set()` to access and modify object properties. These are often used within Proxy traps.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Reflect",
@@ -510,7 +690,8 @@ export const problems: Problem[] = [
   {
     id: "promise-chaining-es6",
     title: "Promise Chaining",
-    description: "Chain multiple `.then()` calls to perform a sequence of asynchronous operations.",
+    description:
+      "Chain multiple `.then()` calls to perform a sequence of asynchronous operations.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise Chain",
@@ -518,7 +699,8 @@ export const problems: Problem[] = [
   {
     id: "async-generator",
     title: "Async Generators",
-    description: "Create an async generator function (`async function*`) that yields Promises.",
+    description:
+      "Create an async generator function (`async function*`) that yields Promises.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Async Generator",
@@ -526,7 +708,8 @@ export const problems: Problem[] = [
   {
     id: "for-await-of-loop",
     title: "`for-await...of` Loop",
-    description: "Use the `for-await...of` loop to iterate over an async iterable, such as an async generator.",
+    description:
+      "Use the `for-await...of` loop to iterate over an async iterable, such as an async generator.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Iterate Asynchronously",
@@ -534,15 +717,19 @@ export const problems: Problem[] = [
   {
     id: "string-replaceall",
     title: "String `.replaceAll()`",
-    description: "Use the `.replaceAll()` method to replace all occurrences of a substring in a string, without needing a regular expression.",
+    description:
+      "Use the `.replaceAll()` method to replace all occurrences of a substring in a string, without needing a regular expression.",
     category: "ES6+ Features",
-    inputs: [{ id: "str", label: "String", type: "text", defaultValue: "cat dog cat" }],
+    inputs: [
+      { id: "str", label: "String", type: "text", defaultValue: "cat dog cat" },
+    ],
     buttonText: "Replace All 'cat'",
   },
   {
     id: "private-class-fields",
     title: "Private Class Fields (`#`)",
-    description: "Create a class with a private field using the `#` syntax to demonstrate true encapsulation.",
+    description:
+      "Create a class with a private field using the `#` syntax to demonstrate true encapsulation.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Private Field",
@@ -550,7 +737,8 @@ export const problems: Problem[] = [
   {
     id: "static-class-fields",
     title: "Static Class Fields",
-    description: "Define a static property directly on a class, which is shared across all instances.",
+    description:
+      "Define a static property directly on a class, which is shared across all instances.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Access Static Field",
@@ -558,7 +746,8 @@ export const problems: Problem[] = [
   {
     id: "top-level-await",
     title: "Top-Level `await` (Conceptual)",
-    description: "Explain how top-level `await` allows you to use the `await` keyword outside of an `async` function, at the top level of a module.",
+    description:
+      "Explain how top-level `await` allows you to use the `await` keyword outside of an `async` function, at the top level of a module.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain Top-Level Await",
@@ -566,7 +755,8 @@ export const problems: Problem[] = [
   {
     id: "object-destructuring-rest",
     title: "Object Destructuring with Rest",
-    description: "Use object destructuring to collect the remaining properties of an object into a new object.",
+    description:
+      "Use object destructuring to collect the remaining properties of an object into a new object.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure with Rest",
@@ -574,7 +764,8 @@ export const problems: Problem[] = [
   {
     id: "map-iteration",
     title: "Iterating a `Map`",
-    description: "Show how to iterate over the keys, values, and entries of a `Map` object using `for...of`.",
+    description:
+      "Show how to iterate over the keys, values, and entries of a `Map` object using `for...of`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Iterate Map",
@@ -582,7 +773,8 @@ export const problems: Problem[] = [
   {
     id: "set-from-array-spread",
     title: "Set from Array (Spread)",
-    description: "Use the spread syntax (`...`) to convert a `Set` back into an array of its unique elements.",
+    description:
+      "Use the spread syntax (`...`) to convert a `Set` back into an array of its unique elements.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Convert Set to Array",
@@ -590,7 +782,8 @@ export const problems: Problem[] = [
   {
     id: "tagged-template-literals",
     title: "Tagged Template Literals",
-    description: "Create a tag function that receives the string parts and interpolated values of a template literal, allowing you to parse it in a custom way.",
+    description:
+      "Create a tag function that receives the string parts and interpolated values of a template literal, allowing you to parse it in a custom way.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Tag Function",
@@ -598,7 +791,8 @@ export const problems: Problem[] = [
   {
     id: "arrow-function-no-this",
     title: "Arrow Function `this` Binding",
-    description: "Demonstrate that an arrow function does not have its own `this` context, instead inheriting it from the parent (lexical) scope.",
+    description:
+      "Demonstrate that an arrow function does not have its own `this` context, instead inheriting it from the parent (lexical) scope.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `this` Binding",
@@ -606,7 +800,8 @@ export const problems: Problem[] = [
   {
     id: "destructuring-swapping-vars",
     title: "Swapping Variables with Destructuring",
-    description: "Use array destructuring to swap the values of two variables in a single line.",
+    description:
+      "Use array destructuring to swap the values of two variables in a single line.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Swap Variables",
@@ -614,7 +809,8 @@ export const problems: Problem[] = [
   {
     id: "string-padstart-padend",
     title: "String `.padStart()` & `.padEnd()`",
-    description: "Use `.padStart()` and `.padEnd()` to pad a string with another string until it reaches a given length.",
+    description:
+      "Use `.padStart()` and `.padEnd()` to pad a string with another string until it reaches a given length.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Pad String",
@@ -622,7 +818,8 @@ export const problems: Problem[] = [
   {
     id: "object-getownpropertydescriptors",
     title: "`Object.getOwnPropertyDescriptors()`",
-    description: "Use `Object.getOwnPropertyDescriptors()` to get an object containing all own property descriptors of an object.",
+    description:
+      "Use `Object.getOwnPropertyDescriptors()` to get an object containing all own property descriptors of an object.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get All Descriptors",
@@ -630,15 +827,19 @@ export const problems: Problem[] = [
   {
     id: "array-includes-es7",
     title: "Array `.includes()`",
-    description: "Use the `.includes()` method to determine whether an array includes a certain value, a cleaner alternative to `indexOf`.",
+    description:
+      "Use the `.includes()` method to determine whether an array includes a certain value, a cleaner alternative to `indexOf`.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "a,b,c" }],
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "a,b,c" },
+    ],
     buttonText: "Check for 'b'",
   },
   {
     id: "async-await-parallel",
     title: "Parallel `await` with `Promise.all`",
-    description: "Show how to run multiple `async` operations in parallel and wait for all to complete using `await` with `Promise.all`.",
+    description:
+      "Show how to run multiple `async` operations in parallel and wait for all to complete using `await` with `Promise.all`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run in Parallel",
@@ -646,7 +847,8 @@ export const problems: Problem[] = [
   {
     id: "optional-chaining-with-functions",
     title: "Optional Chaining with Functions",
-    description: "Use optional chaining (`?.()`) to safely call a function that might not exist on an object.",
+    description:
+      "Use optional chaining (`?.()`) to safely call a function that might not exist on an object.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Safely Call Function",
@@ -654,7 +856,8 @@ export const problems: Problem[] = [
   {
     id: "regexp-lookbehind-assertions",
     title: "RegExp Lookbehind Assertions",
-    description: "Use a positive lookbehind assertion `(?<=...)` in a regular expression to match a pattern preceded by another pattern.",
+    description:
+      "Use a positive lookbehind assertion `(?<=...)` in a regular expression to match a pattern preceded by another pattern.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Lookbehind",
@@ -662,7 +865,8 @@ export const problems: Problem[] = [
   {
     id: "regexp-named-capture-groups",
     title: "RegExp Named Capture Groups",
-    description: "Use named capture groups `(?<name>...)` in a regular expression to access matched groups by name.",
+    description:
+      "Use named capture groups `(?<name>...)` in a regular expression to access matched groups by name.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Named Groups",
@@ -670,7 +874,8 @@ export const problems: Problem[] = [
   {
     id: "regexp-s-dotall-flag",
     title: "RegExp `s` (dotAll) Flag",
-    description: "Demonstrate the `s` flag for regular expressions, which allows the `.` character to match newline characters.",
+    description:
+      "Demonstrate the `s` flag for regular expressions, which allows the `.` character to match newline characters.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `s` Flag",
@@ -678,7 +883,8 @@ export const problems: Problem[] = [
   {
     id: "promise-finally-use-case",
     title: "Practical `.finally()` Use Case",
-    description: "Show a practical example of using `.finally()` to hide a loading indicator regardless of a promise's success or failure.",
+    description:
+      "Show a practical example of using `.finally()` to hide a loading indicator regardless of a promise's success or failure.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Use Case",
@@ -686,7 +892,8 @@ export const problems: Problem[] = [
   {
     id: "well-known-symbol-species",
     title: "Well-Known Symbol: `Symbol.species`",
-    description: "Use `Symbol.species` in a custom Array subclass to control what constructor is used by methods like `map`.",
+    description:
+      "Use `Symbol.species` in a custom Array subclass to control what constructor is used by methods like `map`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Species",
@@ -694,7 +901,8 @@ export const problems: Problem[] = [
   {
     id: "well-known-symbol-tostringtag",
     title: "`Symbol.toStringTag`",
-    description: "Customize the string returned by `Object.prototype.toString.call()` for a class instance by setting `Symbol.toStringTag`.",
+    description:
+      "Customize the string returned by `Object.prototype.toString.call()` for a class instance by setting `Symbol.toStringTag`.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get String Tag",
@@ -702,7 +910,8 @@ export const problems: Problem[] = [
   {
     id: "object-destructuring-in-loop",
     title: "Object Destructuring in `for...of` Loop",
-    description: "Use object destructuring within a `for...of` loop to easily access properties of objects in an array.",
+    description:
+      "Use object destructuring within a `for...of` loop to easily access properties of objects in an array.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Loop and Destructure",
@@ -710,11 +919,12 @@ export const problems: Problem[] = [
   {
     id: "set-operations-spread",
     title: "Set Operations with Spread",
-    description: "Perform set operations like union and intersection on arrays by converting them to `Set`s and using spread syntax.",
+    description:
+      "Perform set operations like union and intersection on arrays by converting them to `Set`s and using spread syntax.",
     category: "ES6+ Features",
     inputs: [
-        { id: "arr1", label: "Array 1", type: "text", defaultValue: "1,2,3" },
-        { id: "arr2", label: "Array 2", type: "text", defaultValue: "2,3,4" },
+      { id: "arr1", label: "Array 1", type: "text", defaultValue: "1,2,3" },
+      { id: "arr2", label: "Array 2", type: "text", defaultValue: "2,3,4" },
     ],
     buttonText: "Perform Set Operations",
   },
@@ -729,7 +939,8 @@ export const problems: Problem[] = [
   {
     id: "destructuring-function-return",
     title: "Destructuring a Function's Return Value",
-    description: "Write a function that returns an array or object, and use destructuring to capture the results in variables.",
+    description:
+      "Write a function that returns an array or object, and use destructuring to capture the results in variables.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Call and Destructure",
@@ -737,7 +948,8 @@ export const problems: Problem[] = [
   {
     id: "map-to-object",
     title: "Convert `Map` to `Object`",
-    description: "Convert a `Map` data structure into a plain JavaScript object.",
+    description:
+      "Convert a `Map` data structure into a plain JavaScript object.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Convert Map",
@@ -745,15 +957,24 @@ export const problems: Problem[] = [
   {
     id: "object-to-map",
     title: "Convert `Object` to `Map`",
-    description: "Convert a plain JavaScript object into a `Map` data structure.",
+    description:
+      "Convert a plain JavaScript object into a `Map` data structure.",
     category: "ES6+ Features",
-    inputs: [{ id: "json", label: "JSON Object", type: "textarea", defaultValue: '{"a":1, "b":2}' }],
+    inputs: [
+      {
+        id: "json",
+        label: "JSON Object",
+        type: "textarea",
+        defaultValue: '{"a":1, "b":2}',
+      },
+    ],
     buttonText: "Convert Object",
   },
   {
     id: "array-copywithin",
     title: "Array `.copyWithin()`",
-    description: "Use `.copyWithin()` to shallow copy part of an array to another location within the same array and return it without modifying its length.",
+    description:
+      "Use `.copyWithin()` to shallow copy part of an array to another location within the same array and return it without modifying its length.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use copyWithin",
@@ -761,7 +982,8 @@ export const problems: Problem[] = [
   {
     id: "array-fill",
     title: "Array `.fill()`",
-    description: "Use `.fill()` to change all elements in an array to a static value, from a start index to an end index.",
+    description:
+      "Use `.fill()` to change all elements in an array to a static value, from a start index to an end index.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use fill",
@@ -769,15 +991,24 @@ export const problems: Problem[] = [
   {
     id: "array-findlast",
     title: "Array `.findLast()` & `.findLastIndex()`",
-    description: "Use the `.findLast()` and `.findLastIndex()` methods to find a value/index by iterating an array from last to first.",
+    description:
+      "Use the `.findLast()` and `.findLastIndex()` methods to find a value/index by iterating an array from last to first.",
     category: "ES6+ Features",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "10,20,30,40,50" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array",
+        type: "text",
+        defaultValue: "10,20,30,40,50",
+      },
+    ],
     buttonText: "Find Last > 25",
   },
   {
     id: "array-with",
     title: "Array `.with()` (Immutable Update)",
-    description: "Use the `.with(index, value)` method to return a new array with the element at the given index replaced with the given value, without mutating the original array.",
+    description:
+      "Use the `.with(index, value)` method to return a new array with the element at the given index replaced with the given value, without mutating the original array.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use with()",
@@ -785,7 +1016,8 @@ export const problems: Problem[] = [
   {
     id: "array-toreversed-tosorted-tospliced",
     title: "Immutable Array Methods",
-    description: "Demonstrate the new immutable array methods `.toReversed()`, `.toSorted()`, and `.toSpliced()` which return a new array instead of mutating the original.",
+    description:
+      "Demonstrate the new immutable array methods `.toReversed()`, `.toSorted()`, and `.toSpliced()` which return a new array instead of mutating the original.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Immutable Methods",
@@ -793,7 +1025,8 @@ export const problems: Problem[] = [
   {
     id: "private-in-operator",
     title: "Private Field `in` Operator",
-    description: "Use the `in` operator to check if an object has a specific private field, which is not possible otherwise from outside the class.",
+    description:
+      "Use the `in` operator to check if an object has a specific private field, which is not possible otherwise from outside the class.",
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Check for Private Field",

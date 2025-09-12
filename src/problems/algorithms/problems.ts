@@ -1,14 +1,19 @@
-
-import type { Problem } from "../../types";
+import { Problem } from "@/types";
 
 export const problems: Problem[] = [
   {
     id: "two-sum",
     title: "Two Sum",
-    description: "Given an array of numbers and a target, return the indices of the two numbers that add up to the target.",
+    description:
+      "Given an array of numbers and a target, return the indices of the two numbers that add up to the target.",
     category: "Algorithms",
     inputs: [
-      { id: "arr", label: "Array of numbers (comma-separated)", type: "text", defaultValue: "2, 7, 11, 15" },
+      {
+        id: "arr",
+        label: "Array of numbers (comma-separated)",
+        type: "text",
+        defaultValue: "2, 7, 11, 15",
+      },
       { id: "target", label: "Target Sum", type: "number", defaultValue: 9 },
     ],
     buttonText: "Find Indices",
@@ -16,21 +21,33 @@ export const problems: Problem[] = [
   {
     id: "linear-search",
     title: "Linear Search",
-    description: "Implement a linear search algorithm to find the index of a target value in an array.",
+    description:
+      "Implement a linear search algorithm to find the index of a target value in an array.",
     category: "Algorithms",
     inputs: [
-        { id: "arr", label: "Array (comma-separated)", type: "text", defaultValue: "10, 20, 80, 30, 60" },
-        { id: "target", label: "Target Value", type: "number", defaultValue: 30 },
+      {
+        id: "arr",
+        label: "Array (comma-separated)",
+        type: "text",
+        defaultValue: "10, 20, 80, 30, 60",
+      },
+      { id: "target", label: "Target Value", type: "number", defaultValue: 30 },
     ],
     buttonText: "Linear Search",
   },
   {
     id: "binary-search",
     title: "Binary Search",
-    description: "Implement a binary search algorithm to find the index of a target value in a sorted array.",
+    description:
+      "Implement a binary search algorithm to find the index of a target value in a sorted array.",
     category: "Algorithms",
     inputs: [
-      { id: "arr", label: "Sorted Array (comma-separated)", type: "text", defaultValue: "2, 5, 7, 8, 11, 12" },
+      {
+        id: "arr",
+        label: "Sorted Array (comma-separated)",
+        type: "text",
+        defaultValue: "2, 5, 7, 8, 11, 12",
+      },
       { id: "target", label: "Target Value", type: "number", defaultValue: 11 },
     ],
     buttonText: "Binary Search",
@@ -38,39 +55,67 @@ export const problems: Problem[] = [
   {
     id: "bubble-sort",
     title: "Bubble Sort",
-    description: "Implement the bubble sort algorithm to sort an array of numbers in ascending order.",
+    description:
+      "Implement the bubble sort algorithm to sort an array of numbers in ascending order.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of numbers (comma-separated)", type: "text", defaultValue: "64, 34, 25, 12, 22, 11, 90" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers (comma-separated)",
+        type: "text",
+        defaultValue: "64, 34, 25, 12, 22, 11, 90",
+      },
+    ],
     buttonText: "Bubble Sort",
   },
   {
     id: "selection-sort",
     title: "Selection Sort",
-    description: "Implement the selection sort algorithm to sort an array of numbers in ascending order.",
+    description:
+      "Implement the selection sort algorithm to sort an array of numbers in ascending order.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "64, 25, 12, 22, 11" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "64, 25, 12, 22, 11",
+      },
+    ],
     buttonText: "Selection Sort",
   },
   {
     id: "insertion-sort",
     title: "Insertion Sort",
-    description: "Implement the insertion sort algorithm to sort an array of numbers in ascending order.",
+    description:
+      "Implement the insertion sort algorithm to sort an array of numbers in ascending order.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "12, 11, 13, 5, 6" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "12, 11, 13, 5, 6",
+      },
+    ],
     buttonText: "Insertion Sort",
   },
   {
     id: "fizzbuzz",
     title: "FizzBuzz Challenge",
-    description: 'Write a function that prints numbers from 1 to n. For multiples of 3, print "Fizz". For multiples of 5, print "Buzz". For multiples of both, print "FizzBuzz".',
+    description:
+      'Write a function that prints numbers from 1 to n. For multiples of 3, print "Fizz". For multiples of 5, print "Buzz". For multiples of both, print "FizzBuzz".',
     category: "Algorithms",
-    inputs: [{ id: "num", label: "Count up to", type: "number", defaultValue: 15 }],
+    inputs: [
+      { id: "num", label: "Count up to", type: "number", defaultValue: 15 },
+    ],
     buttonText: "Run FizzBuzz",
   },
   {
     id: "merge-sort-conceptual",
     title: "Merge Sort (Conceptual)",
-    description: "Explain the recursive 'divide and conquer' nature of the Merge Sort algorithm.",
+    description:
+      "Explain the recursive 'divide and conquer' nature of the Merge Sort algorithm.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Merge Sort",
@@ -78,7 +123,8 @@ export const problems: Problem[] = [
   {
     id: "quick-sort-conceptual",
     title: "Quick Sort (Conceptual)",
-    description: "Explain the recursive 'divide and conquer' nature of the Quick Sort algorithm, including the role of the pivot.",
+    description:
+      "Explain the recursive 'divide and conquer' nature of the Quick Sort algorithm, including the role of the pivot.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Quick Sort",
@@ -86,23 +132,35 @@ export const problems: Problem[] = [
   {
     id: "kadanes-algorithm",
     title: "Maximum Subarray Sum (Kadane's)",
-    description: "Given an integer array, find the contiguous subarray which has the largest sum and return its sum.",
+    description:
+      "Given an integer array, find the contiguous subarray which has the largest sum and return its sum.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of Integers", type: "text", defaultValue: "-2,1,-3,4,-1,2,1,-5,4" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Integers",
+        type: "text",
+        defaultValue: "-2,1,-3,4,-1,2,1,-5,4",
+      },
+    ],
     buttonText: "Find Max Sum",
   },
   {
     id: "greedy-coin-change",
     title: "Greedy Algorithm: Coin Change",
-    description: "Implement a greedy algorithm to make change for a given amount using a fixed set of coin denominations.",
+    description:
+      "Implement a greedy algorithm to make change for a given amount using a fixed set of coin denominations.",
     category: "Algorithms",
-    inputs: [{ id: "amount", label: "Amount", type: "number", defaultValue: 46 }],
+    inputs: [
+      { id: "amount", label: "Amount", type: "number", defaultValue: 46 },
+    ],
     buttonText: "Make Change",
   },
   {
     id: "is-prime",
     title: "Check if Prime",
-    description: "Write a function to determine if a given number is a prime number.",
+    description:
+      "Write a function to determine if a given number is a prime number.",
     category: "Algorithms",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 29 }],
     buttonText: "Check Prime",
@@ -110,39 +168,72 @@ export const problems: Problem[] = [
   {
     id: "sieve-of-eratosthenes",
     title: "Sieve of Eratosthenes",
-    description: "Implement the Sieve of Eratosthenes algorithm to find all prime numbers up to a given number.",
+    description:
+      "Implement the Sieve of Eratosthenes algorithm to find all prime numbers up to a given number.",
     category: "Algorithms",
-    inputs: [{ id: "num", label: "Find primes up to", type: "number", defaultValue: 30 }],
+    inputs: [
+      {
+        id: "num",
+        label: "Find primes up to",
+        type: "number",
+        defaultValue: 30,
+      },
+    ],
     buttonText: "Find Primes",
   },
   {
     id: "fibonacci-iterative",
     title: "Fibonacci Sequence (Iterative)",
-    description: "Write an efficient, iterative function to find the Nth number in the Fibonacci sequence.",
+    description:
+      "Write an efficient, iterative function to find the Nth number in the Fibonacci sequence.",
     category: "Algorithms",
-    inputs: [{ id: "num", label: "Nth number to find", type: "number", defaultValue: 10 }],
+    inputs: [
+      {
+        id: "num",
+        label: "Nth number to find",
+        type: "number",
+        defaultValue: 10,
+      },
+    ],
     buttonText: "Find Nth Fibonacci",
   },
   {
     id: "climbing-stairs",
     title: "Climbing Stairs",
-    description: "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    description:
+      "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
     category: "Algorithms",
-    inputs: [{ id: "steps", label: "Number of Steps", type: "number", defaultValue: 5 }],
+    inputs: [
+      {
+        id: "steps",
+        label: "Number of Steps",
+        type: "number",
+        defaultValue: 5,
+      },
+    ],
     buttonText: "Count Ways",
   },
   {
     id: "best-time-to-buy-sell-stock-algo",
     title: "Best Time to Buy and Sell Stock",
-    description: "Given an array of stock prices, find the maximum profit you can make by buying on one day and selling on a future day.",
+    description:
+      "Given an array of stock prices, find the maximum profit you can make by buying on one day and selling on a future day.",
     category: "Algorithms",
-    inputs: [{ id: "prices", label: "Array of Prices", type: "text", defaultValue: "7,1,5,3,6,4" }],
+    inputs: [
+      {
+        id: "prices",
+        label: "Array of Prices",
+        type: "text",
+        defaultValue: "7,1,5,3,6,4",
+      },
+    ],
     buttonText: "Find Max Profit",
   },
   {
     id: "euclidean-algorithm-gcd",
     title: "Euclidean Algorithm for GCD",
-    description: "Write a function to find the greatest common divisor (GCD) of two numbers using the Euclidean algorithm.",
+    description:
+      "Write a function to find the greatest common divisor (GCD) of two numbers using the Euclidean algorithm.",
     category: "Algorithms",
     inputs: [
       { id: "a", label: "First Number", type: "number", defaultValue: 60 },
@@ -153,7 +244,8 @@ export const problems: Problem[] = [
   {
     id: "knapsack-problem-conceptual",
     title: "0/1 Knapsack Problem (Conceptual)",
-    description: "Explain the recursive/dynamic programming solution to the 0/1 knapsack problem.",
+    description:
+      "Explain the recursive/dynamic programming solution to the 0/1 knapsack problem.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Knapsack",
@@ -161,7 +253,8 @@ export const problems: Problem[] = [
   {
     id: "longest-common-subsequence-conceptual",
     title: "Longest Common Subsequence (Conceptual)",
-    description: "Explain the dynamic programming approach to finding the length of the longest common subsequence between two strings.",
+    description:
+      "Explain the dynamic programming approach to finding the length of the longest common subsequence between two strings.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain LCS",
@@ -169,7 +262,8 @@ export const problems: Problem[] = [
   {
     id: "edit-distance-conceptual",
     title: "Edit Distance (Conceptual)",
-    description: "Explain the dynamic programming approach to finding the minimum number of operations required to convert one string into another.",
+    description:
+      "Explain the dynamic programming approach to finding the minimum number of operations required to convert one string into another.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Edit Distance",
@@ -185,7 +279,8 @@ export const problems: Problem[] = [
   {
     id: "backtracking-permutations-conceptual",
     title: "Backtracking: Permutations (Conceptual)",
-    description: "Explain the backtracking recursive approach to generating all permutations of a set of elements.",
+    description:
+      "Explain the backtracking recursive approach to generating all permutations of a set of elements.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Permutations",
@@ -193,7 +288,8 @@ export const problems: Problem[] = [
   {
     id: "graph-dfs-algo-conceptual",
     title: "Graph DFS Traversal (Conceptual)",
-    description: "Explain how a Depth-First Search (DFS) traversal works on a graph, including the use of a stack and a 'visited' set.",
+    description:
+      "Explain how a Depth-First Search (DFS) traversal works on a graph, including the use of a stack and a 'visited' set.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain DFS",
@@ -201,7 +297,8 @@ export const problems: Problem[] = [
   {
     id: "graph-bfs-algo-conceptual",
     title: "Graph BFS Traversal (Conceptual)",
-    description: "Explain how a Breadth-First Search (BFS) traversal works on a graph, including the use of a queue and a 'visited' set.",
+    description:
+      "Explain how a Breadth-First Search (BFS) traversal works on a graph, including the use of a queue and a 'visited' set.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain BFS",
@@ -209,7 +306,8 @@ export const problems: Problem[] = [
   {
     id: "dijkstra-algorithm-conceptual",
     title: "Dijkstra's Algorithm (Conceptual)",
-    description: "Explain Dijkstra's algorithm for finding the shortest path between nodes in a weighted graph.",
+    description:
+      "Explain Dijkstra's algorithm for finding the shortest path between nodes in a weighted graph.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Dijkstra's",
@@ -217,7 +315,8 @@ export const problems: Problem[] = [
   {
     id: "counting-sort-conceptual",
     title: "Counting Sort (Conceptual)",
-    description: "Explain the Counting Sort algorithm, a non-comparison based sorting technique for integers in a specific range.",
+    description:
+      "Explain the Counting Sort algorithm, a non-comparison based sorting technique for integers in a specific range.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Counting Sort",
@@ -225,7 +324,8 @@ export const problems: Problem[] = [
   {
     id: "radix-sort-conceptual",
     title: "Radix Sort (Conceptual)",
-    description: "Explain the Radix Sort algorithm, a non-comparison based integer sorting algorithm that sorts digit by digit.",
+    description:
+      "Explain the Radix Sort algorithm, a non-comparison based integer sorting algorithm that sorts digit by digit.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Radix Sort",
@@ -233,7 +333,8 @@ export const problems: Problem[] = [
   {
     id: "heap-sort-conceptual",
     title: "Heap Sort (Conceptual)",
-    description: "Explain the Heap Sort algorithm, which uses a Max Heap data structure to sort an array in-place.",
+    description:
+      "Explain the Heap Sort algorithm, which uses a Max Heap data structure to sort an array in-place.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Heap Sort",
@@ -241,7 +342,8 @@ export const problems: Problem[] = [
   {
     id: "sliding-window-maximum-conceptual",
     title: "Sliding Window Maximum (Conceptual)",
-    description: "Explain the sliding window technique and how a deque can be used to efficiently find the maximum in each window of a moving subarray.",
+    description:
+      "Explain the sliding window technique and how a deque can be used to efficiently find the maximum in each window of a moving subarray.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Sliding Window",
@@ -249,7 +351,8 @@ export const problems: Problem[] = [
   {
     id: "kmp-algorithm-conceptual",
     title: "KMP String Search (Conceptual)",
-    description: "Explain the Knuth-Morris-Pratt (KMP) algorithm for efficient string searching, which preprocesses the pattern to avoid redundant comparisons.",
+    description:
+      "Explain the Knuth-Morris-Pratt (KMP) algorithm for efficient string searching, which preprocesses the pattern to avoid redundant comparisons.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain KMP",
@@ -257,7 +360,8 @@ export const problems: Problem[] = [
   {
     id: "rabin-karp-algorithm-conceptual",
     title: "Rabin-Karp Algorithm (Conceptual)",
-    description: "Explain the Rabin-Karp algorithm, a string-searching algorithm that uses hashing to find any one of a set of pattern strings in a text.",
+    description:
+      "Explain the Rabin-Karp algorithm, a string-searching algorithm that uses hashing to find any one of a set of pattern strings in a text.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Rabin-Karp",
@@ -265,7 +369,8 @@ export const problems: Problem[] = [
   {
     id: "big-o-notation-algo",
     title: "Big-O Notation (Conceptual)",
-    description: "Explain the concept of Big-O notation for describing the time and space complexity of algorithms.",
+    description:
+      "Explain the concept of Big-O notation for describing the time and space complexity of algorithms.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Big-O",
@@ -273,7 +378,8 @@ export const problems: Problem[] = [
   {
     id: "count-set-bits",
     title: "Count Set Bits",
-    description: "Write a function to count the number of set bits (1s) in the binary representation of a number.",
+    description:
+      "Write a function to count the number of set bits (1s) in the binary representation of a number.",
     category: "Algorithms",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 13 }],
     buttonText: "Count Bits",
@@ -281,31 +387,46 @@ export const problems: Problem[] = [
   {
     id: "single-number",
     title: "Single Number",
-    description: "Given a non-empty array of integers where every element appears twice except for one, find that single one.",
+    description:
+      "Given a non-empty array of integers where every element appears twice except for one, find that single one.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "4,1,2,1,2" }],
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "4,1,2,1,2" },
+    ],
     buttonText: "Find Single Number",
   },
   {
     id: "pascals-triangle",
     title: "Pascal's Triangle",
-    description: "Given an integer numRows, return the first numRows of Pascal's triangle.",
+    description:
+      "Given an integer numRows, return the first numRows of Pascal's triangle.",
     category: "Algorithms",
-    inputs: [{ id: "rows", label: "Number of Rows", type: "number", defaultValue: 5 }],
+    inputs: [
+      { id: "rows", label: "Number of Rows", type: "number", defaultValue: 5 },
+    ],
     buttonText: "Generate Triangle",
   },
   {
     id: "dutch-national-flag-problem",
     title: "Dutch National Flag Problem",
-    description: "Given an array containing only 0s, 1s, and 2s, sort the array in-place in a single pass.",
+    description:
+      "Given an array containing only 0s, 1s, and 2s, sort the array in-place in a single pass.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of 0s, 1s, 2s", type: "text", defaultValue: "2,0,2,1,1,0" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of 0s, 1s, 2s",
+        type: "text",
+        defaultValue: "2,0,2,1,1,0",
+      },
+    ],
     buttonText: "Sort Colors",
   },
   {
     id: "divide-and-conquer-conceptual",
     title: "Divide and Conquer (Conceptual)",
-    description: "Explain the 'Divide and Conquer' algorithmic paradigm with examples like Merge Sort and Binary Search.",
+    description:
+      "Explain the 'Divide and Conquer' algorithmic paradigm with examples like Merge Sort and Binary Search.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Paradigm",
@@ -313,7 +434,8 @@ export const problems: Problem[] = [
   {
     id: "dynamic-programming-conceptual",
     title: "Dynamic Programming (Conceptual)",
-    description: "Explain the 'Dynamic Programming' paradigm, focusing on overlapping subproblems and optimal substructure, with Fibonacci as an example.",
+    description:
+      "Explain the 'Dynamic Programming' paradigm, focusing on overlapping subproblems and optimal substructure, with Fibonacci as an example.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain DP",
@@ -321,7 +443,8 @@ export const problems: Problem[] = [
   {
     id: "greedy-algorithms-conceptual",
     title: "Greedy Algorithms (Conceptual)",
-    description: "Explain the 'Greedy' algorithmic paradigm, where a locally optimal choice is made at each stage with the hope of finding a global optimum.",
+    description:
+      "Explain the 'Greedy' algorithmic paradigm, where a locally optimal choice is made at each stage with the hope of finding a global optimum.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Greedy",
@@ -329,7 +452,8 @@ export const problems: Problem[] = [
   {
     id: "backtracking-conceptual",
     title: "Backtracking (Conceptual)",
-    description: "Explain the 'Backtracking' algorithmic paradigm as a way to solve problems by incrementally building solutions and abandoning paths that fail.",
+    description:
+      "Explain the 'Backtracking' algorithmic paradigm as a way to solve problems by incrementally building solutions and abandoning paths that fail.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Backtracking",
@@ -337,7 +461,8 @@ export const problems: Problem[] = [
   {
     id: "a-star-search-conceptual",
     title: "A* Search Algorithm (Conceptual)",
-    description: "Explain the A* (A-star) search algorithm for pathfinding, which uses heuristics to guide its search towards the goal.",
+    description:
+      "Explain the A* (A-star) search algorithm for pathfinding, which uses heuristics to guide its search towards the goal.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain A*",
@@ -345,7 +470,8 @@ export const problems: Problem[] = [
   {
     id: "bellman-ford-conceptual",
     title: "Bellman-Ford Algorithm (Conceptual)",
-    description: "Explain the Bellman-Ford algorithm for finding the shortest paths from a single source, which can handle negative edge weights.",
+    description:
+      "Explain the Bellman-Ford algorithm for finding the shortest paths from a single source, which can handle negative edge weights.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Bellman-Ford",
@@ -353,7 +479,8 @@ export const problems: Problem[] = [
   {
     id: "floyd-warshall-conceptual",
     title: "Floyd-Warshall Algorithm (Conceptual)",
-    description: "Explain the Floyd-Warshall algorithm for finding the shortest paths between all pairs of vertices in a weighted graph.",
+    description:
+      "Explain the Floyd-Warshall algorithm for finding the shortest paths between all pairs of vertices in a weighted graph.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Floyd-Warshall",
@@ -361,7 +488,8 @@ export const problems: Problem[] = [
   {
     id: "randomized-algorithms-conceptual",
     title: "Randomized Algorithms (Conceptual)",
-    description: "Explain the concept of randomized algorithms, which use a degree of randomness as part of their logic (e.g., randomized Quick Sort).",
+    description:
+      "Explain the concept of randomized algorithms, which use a degree of randomness as part of their logic (e.g., randomized Quick Sort).",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Randomization",
@@ -369,15 +497,24 @@ export const problems: Problem[] = [
   {
     id: "boyer-moore-voting-algorithm",
     title: "Boyer-Moore Voting Algorithm",
-    description: "Implement the Boyer-Moore Voting Algorithm to find the majority element in an array in O(n) time and O(1) space.",
+    description:
+      "Implement the Boyer-Moore Voting Algorithm to find the majority element in an array in O(n) time and O(1) space.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of Numbers", type: "text", defaultValue: "2,2,1,1,1,2,2" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Numbers",
+        type: "text",
+        defaultValue: "2,2,1,1,1,2,2",
+      },
+    ],
     buttonText: "Find Majority Element",
   },
   {
     id: "tries-conceptual",
     title: "Tries (Prefix Trees) (Conceptual)",
-    description: "Explain the Trie data structure and its algorithmic use cases for efficient string prefix searches, like in autocomplete systems.",
+    description:
+      "Explain the Trie data structure and its algorithmic use cases for efficient string prefix searches, like in autocomplete systems.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Tries",
@@ -385,10 +522,16 @@ export const problems: Problem[] = [
   {
     id: "k-closest-points",
     title: "K Closest Points to Origin",
-    description: "Given an array of points, find the K closest points to the origin (0, 0).",
+    description:
+      "Given an array of points, find the K closest points to the origin (0, 0).",
     category: "Algorithms",
     inputs: [
-      { id: "points", label: "Points (JSON array of arrays)", type: "textarea", defaultValue: "[[1,3],[-2,2]]" },
+      {
+        id: "points",
+        label: "Points (JSON array of arrays)",
+        type: "textarea",
+        defaultValue: "[[1,3],[-2,2]]",
+      },
       { id: "k", label: "K", type: "number", defaultValue: 1 },
     ],
     buttonText: "Find K Closest",
@@ -396,7 +539,8 @@ export const problems: Problem[] = [
   {
     id: "top-k-frequent-elements",
     title: "Top K Frequent Elements",
-    description: "Given an integer array and an integer k, return the k most frequent elements.",
+    description:
+      "Given an integer array and an integer k, return the k most frequent elements.",
     category: "Algorithms",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,1,1,2,2,3" },
@@ -407,7 +551,8 @@ export const problems: Problem[] = [
   {
     id: "lru-cache-algo-conceptual",
     title: "LRU Cache (Conceptual)",
-    description: "Explain the algorithm and data structures (Hash Map and Doubly Linked List) used to implement a Least Recently Used (LRU) cache.",
+    description:
+      "Explain the algorithm and data structures (Hash Map and Doubly Linked List) used to implement a Least Recently Used (LRU) cache.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain LRU Cache",
@@ -415,7 +560,8 @@ export const problems: Problem[] = [
   {
     id: "min-stack-conceptual",
     title: "Min Stack (Conceptual)",
-    description: "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
+    description:
+      "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Min Stack",
@@ -423,7 +569,8 @@ export const problems: Problem[] = [
   {
     id: "huffman-coding-conceptual",
     title: "Huffman Coding (Conceptual)",
-    description: "Explain the greedy algorithm of Huffman coding for lossless data compression, which uses a priority queue to build a prefix tree.",
+    description:
+      "Explain the greedy algorithm of Huffman coding for lossless data compression, which uses a priority queue to build a prefix tree.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Huffman Coding",
@@ -431,7 +578,8 @@ export const problems: Problem[] = [
   {
     id: "water-jug-problem-conceptual",
     title: "Water Jug Problem (Conceptual)",
-    description: "Explain how to solve the classic water jug riddle (measuring a specific amount of water with two jugs of different capacities) using a graph search algorithm like BFS.",
+    description:
+      "Explain how to solve the classic water jug riddle (measuring a specific amount of water with two jugs of different capacities) using a graph search algorithm like BFS.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Water Jugs",
@@ -439,7 +587,8 @@ export const problems: Problem[] = [
   {
     id: "manachers-algorithm-conceptual",
     title: "Manacher's Algorithm (Conceptual)",
-    description: "Explain Manacher's algorithm for finding the longest palindromic substring in linear time O(n).",
+    description:
+      "Explain Manacher's algorithm for finding the longest palindromic substring in linear time O(n).",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Manacher's",
@@ -447,7 +596,8 @@ export const problems: Problem[] = [
   {
     id: "union-find-conceptual",
     title: "Union-Find (DSU) Algorithm",
-    description: "Explain the Union-Find algorithm and its use in a Disjoint Set Union (DSU) data structure for detecting cycles in a graph or grouping connected components.",
+    description:
+      "Explain the Union-Find algorithm and its use in a Disjoint Set Union (DSU) data structure for detecting cycles in a graph or grouping connected components.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Union-Find",
@@ -455,7 +605,8 @@ export const problems: Problem[] = [
   {
     id: "ford-fulkerson-conceptual",
     title: "Ford-Fulkerson Algorithm (Conceptual)",
-    description: "Explain the Ford-Fulkerson method for computing the maximum flow in a flow network.",
+    description:
+      "Explain the Ford-Fulkerson method for computing the maximum flow in a flow network.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Max Flow",
@@ -463,7 +614,8 @@ export const problems: Problem[] = [
   {
     id: "reservoir-sampling-conceptual",
     title: "Reservoir Sampling (Conceptual)",
-    description: "Explain the Reservoir Sampling algorithm, a randomized algorithm for choosing a simple random sample of k items from a list of items of unknown size.",
+    description:
+      "Explain the Reservoir Sampling algorithm, a randomized algorithm for choosing a simple random sample of k items from a list of items of unknown size.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Sampling",
@@ -471,7 +623,8 @@ export const problems: Problem[] = [
   {
     id: "b-tree-algo-conceptual",
     title: "B-Tree Algorithms (Conceptual)",
-    description: "Explain the search, insertion, and deletion algorithms for a B-Tree, focusing on node splitting and merging to maintain balance.",
+    description:
+      "Explain the search, insertion, and deletion algorithms for a B-Tree, focusing on node splitting and merging to maintain balance.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain B-Tree Algos",
@@ -479,7 +632,8 @@ export const problems: Problem[] = [
   {
     id: "aho-corasick-conceptual",
     title: "Aho-Corasick Algorithm (Conceptual)",
-    description: "Explain the Aho-Corasick algorithm, a string-searching algorithm that can find all occurrences of a finite set of keywords in a text simultaneously.",
+    description:
+      "Explain the Aho-Corasick algorithm, a string-searching algorithm that can find all occurrences of a finite set of keywords in a text simultaneously.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Aho-Corasick",
@@ -487,7 +641,8 @@ export const problems: Problem[] = [
   {
     id: "fft-conceptual",
     title: "Fast Fourier Transform (FFT) (Conceptual)",
-    description: "Explain the concept of the Fast Fourier Transform (FFT), a divide-and-conquer algorithm for efficiently computing the discrete Fourier transform, often used in signal processing and polynomial multiplication.",
+    description:
+      "Explain the concept of the Fast Fourier Transform (FFT), a divide-and-conquer algorithm for efficiently computing the discrete Fourier transform, often used in signal processing and polynomial multiplication.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain FFT",
@@ -495,7 +650,8 @@ export const problems: Problem[] = [
   {
     id: "miller-rabin-primality-conceptual",
     title: "Miller-Rabin Primality Test (Conceptual)",
-    description: "Explain the Miller-Rabin test, a probabilistic algorithm for determining if a given number is likely to be prime.",
+    description:
+      "Explain the Miller-Rabin test, a probabilistic algorithm for determining if a given number is likely to be prime.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Miller-Rabin",
@@ -503,94 +659,159 @@ export const problems: Problem[] = [
   {
     id: "longest-increasing-subsequence",
     title: "Longest Increasing Subsequence",
-    description: "Given an integer array, return the length of the longest strictly increasing subsequence. (DP)",
+    description:
+      "Given an integer array, return the length of the longest strictly increasing subsequence. (DP)",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of Numbers", type: "text", defaultValue: "10,9,2,5,3,7,101,18" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Numbers",
+        type: "text",
+        defaultValue: "10,9,2,5,3,7,101,18",
+      },
+    ],
     buttonText: "Find LIS Length",
   },
   {
     id: "coin-change",
     title: "Coin Change",
-    description: "Given an array of coin denominations and an amount, find the minimum number of coins to make that amount. (DP)",
+    description:
+      "Given an array of coin denominations and an amount, find the minimum number of coins to make that amount. (DP)",
     category: "Algorithms",
     inputs: [
-        { id: "coins", label: "Coins (comma-separated)", type: "text", defaultValue: "1,2,5" },
-        { id: "amount", label: "Amount", type: "number", defaultValue: 11 },
+      {
+        id: "coins",
+        label: "Coins (comma-separated)",
+        type: "text",
+        defaultValue: "1,2,5",
+      },
+      { id: "amount", label: "Amount", type: "number", defaultValue: 11 },
     ],
     buttonText: "Find Min Coins",
   },
   {
     id: "word-break-algo",
     title: "Word Break",
-    description: "Given a string and a dictionary of words, determine if the string can be segmented into a sequence of dictionary words. (DP)",
+    description:
+      "Given a string and a dictionary of words, determine if the string can be segmented into a sequence of dictionary words. (DP)",
     category: "Algorithms",
     inputs: [
-        { id: "s", label: "String", type: "text", defaultValue: "leetcode" },
-        { id: "wordDict", label: "Word Dictionary (comma-separated)", type: "text", defaultValue: "leet,code" },
+      { id: "s", label: "String", type: "text", defaultValue: "leetcode" },
+      {
+        id: "wordDict",
+        label: "Word Dictionary (comma-separated)",
+        type: "text",
+        defaultValue: "leet,code",
+      },
     ],
     buttonText: "Check Word Break",
   },
   {
     id: "rotate-array",
     title: "Rotate Array",
-    description: "Given an array, rotate the array to the right by k steps, where k is non-negative.",
+    description:
+      "Given an array, rotate the array to the right by k steps, where k is non-negative.",
     category: "Algorithms",
     inputs: [
-        { id: "arr", label: "Array of Numbers", type: "text", defaultValue: "1,2,3,4,5,6,7" },
-        { id: "k", label: "Steps (k)", type: "number", defaultValue: 3 },
+      {
+        id: "arr",
+        label: "Array of Numbers",
+        type: "text",
+        defaultValue: "1,2,3,4,5,6,7",
+      },
+      { id: "k", label: "Steps (k)", type: "number", defaultValue: 3 },
     ],
     buttonText: "Rotate",
   },
   {
     id: "find-the-duplicate-number-algo",
     title: "Find the Duplicate Number",
-    description: "Given an array containing n + 1 integers where each integer is between 1 and n, find the single duplicate number.",
+    description:
+      "Given an array containing n + 1 integers where each integer is between 1 and n, find the single duplicate number.",
     category: "Algorithms",
-    inputs: [{ id: "arr", label: "Array of Numbers", type: "text", defaultValue: "1,3,4,2,2" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Numbers",
+        type: "text",
+        defaultValue: "1,3,4,2,2",
+      },
+    ],
     buttonText: "Find Duplicate",
   },
   {
     id: "kth-largest-element-in-array",
     title: "Kth Largest Element in an Array",
-    description: "Given an integer array and an integer k, return the kth largest element in the array.",
+    description:
+      "Given an integer array and an integer k, return the kth largest element in the array.",
     category: "Algorithms",
     inputs: [
-        { id: "arr", label: "Array of Numbers", type: "text", defaultValue: "3,2,1,5,6,4" },
-        { id: "k", label: "K", type: "number", defaultValue: 2 },
+      {
+        id: "arr",
+        label: "Array of Numbers",
+        type: "text",
+        defaultValue: "3,2,1,5,6,4",
+      },
+      { id: "k", label: "K", type: "number", defaultValue: 2 },
     ],
     buttonText: "Find Kth Largest",
   },
   {
     id: "valid-sudoku",
     title: "Valid Sudoku",
-    description: "Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the rules.",
+    description:
+      "Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the rules.",
     category: "Algorithms",
-    inputs: [{ id: "board", label: "Board (JSON 2D array of strings)", type: "textarea", defaultValue: '[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]' }],
+    inputs: [
+      {
+        id: "board",
+        label: "Board (JSON 2D array of strings)",
+        type: "textarea",
+        defaultValue:
+          '[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]',
+      },
+    ],
     buttonText: "Validate Sudoku",
   },
   {
     id: "search-in-rotated-sorted-array",
     title: "Search in Rotated Sorted Array",
-    description: "Given a sorted array that has been rotated at some pivot, search for a target value. (Binary Search variation)",
+    description:
+      "Given a sorted array that has been rotated at some pivot, search for a target value. (Binary Search variation)",
     category: "Algorithms",
     inputs: [
-        { id: "arr", label: "Rotated Sorted Array", type: "text", defaultValue: "4,5,6,7,0,1,2" },
-        { id: "target", label: "Target", type: "number", defaultValue: 0 },
+      {
+        id: "arr",
+        label: "Rotated Sorted Array",
+        type: "text",
+        defaultValue: "4,5,6,7,0,1,2",
+      },
+      { id: "target", label: "Target", type: "number", defaultValue: 0 },
     ],
     buttonText: "Search",
   },
   {
     id: "number-of-islands-algo",
     title: "Number of Islands",
-    description: "Given a 2D grid map of '1's (land) and '0's (water), count the number of islands. (Graph Traversal)",
+    description:
+      "Given a 2D grid map of '1's (land) and '0's (water), count the number of islands. (Graph Traversal)",
     category: "Algorithms",
-    inputs: [{ id: "grid", label: "Grid (JSON 2D array of strings)", type: "textarea", defaultValue: '[["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]' }],
+    inputs: [
+      {
+        id: "grid",
+        label: "Grid (JSON 2D array of strings)",
+        type: "textarea",
+        defaultValue:
+          '[["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]',
+      },
+    ],
     buttonText: "Count Islands",
   },
   {
     id: "kruskals-algorithm-conceptual",
     title: "Kruskal's Algorithm (Conceptual)",
-    description: "Explain Kruskal's greedy algorithm for finding a Minimum Spanning Tree (MST), which involves sorting edges and using a Union-Find data structure.",
+    description:
+      "Explain Kruskal's greedy algorithm for finding a Minimum Spanning Tree (MST), which involves sorting edges and using a Union-Find data structure.",
     category: "Algorithms",
     inputs: [],
     buttonText: "Explain Kruskal's",

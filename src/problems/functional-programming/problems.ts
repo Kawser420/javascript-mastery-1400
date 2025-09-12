@@ -1,34 +1,59 @@
-import type { Problem } from "../../types";
+import { Problem } from "@/types";
 
 export const problems: Problem[] = [
   {
     id: "fp-map-double",
     title: "FP: Double Array Elements",
-    description: "Use the `map` higher-order function to create a new array where each number from the input array is doubled.",
+    description:
+      "Use the `map` higher-order function to create a new array where each number from the input array is doubled.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers (comma-separated)", type: "text", defaultValue: "1, 2, 3, 4, 5" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers (comma-separated)",
+        type: "text",
+        defaultValue: "1, 2, 3, 4, 5",
+      },
+    ],
     buttonText: "Map and Double",
   },
   {
     id: "fp-filter-even",
     title: "FP: Filter for Even Numbers",
-    description: "Use the `filter` higher-order function to create a new array containing only the even numbers from the input array.",
+    description:
+      "Use the `filter` higher-order function to create a new array containing only the even numbers from the input array.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers (comma-separated)", type: "text", defaultValue: "1, 2, 3, 4, 5, 6, 7, 8" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers (comma-separated)",
+        type: "text",
+        defaultValue: "1, 2, 3, 4, 5, 6, 7, 8",
+      },
+    ],
     buttonText: "Filter Evens",
   },
   {
     id: "fp-reduce-sum",
     title: "FP: Sum with Reduce",
-    description: "Use the `reduce` higher-order function to calculate the sum of all numbers in an array.",
+    description:
+      "Use the `reduce` higher-order function to calculate the sum of all numbers in an array.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers (comma-separated)", type: "text", defaultValue: "10, 20, 30, 40" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers (comma-separated)",
+        type: "text",
+        defaultValue: "10, 20, 30, 40",
+      },
+    ],
     buttonText: "Reduce to Sum",
   },
   {
     id: "currying-simple",
     title: "Simple Currying",
-    description: "Create a curried function `add(a)(b)` that takes two numbers in separate function calls and returns their sum.",
+    description:
+      "Create a curried function `add(a)(b)` that takes two numbers in separate function calls and returns their sum.",
     category: "Functional Programming",
     inputs: [
       { id: "num1", label: "First Number", type: "number", defaultValue: 10 },
@@ -39,7 +64,8 @@ export const problems: Problem[] = [
   {
     id: "pure-function-example",
     title: "Pure Function Example",
-    description: "Write a pure function `square(n)` that returns the square of a number. It should be deterministic and have no side effects.",
+    description:
+      "Write a pure function `square(n)` that returns the square of a number. It should be deterministic and have no side effects.",
     category: "Functional Programming",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 8 }],
     buttonText: "Calculate Square",
@@ -47,7 +73,8 @@ export const problems: Problem[] = [
   {
     id: "higher-order-function-basic",
     title: "Higher-Order Function: Basic",
-    description: "Create a higher-order function that takes a function as an argument and calls it.",
+    description:
+      "Create a higher-order function that takes a function as an argument and calls it.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Run HOF",
@@ -55,15 +82,24 @@ export const problems: Problem[] = [
   {
     id: "immutability-array",
     title: "Immutability with Arrays",
-    description: "Demonstrate an immutable way to add an element to an array using the spread syntax, without changing the original array.",
+    description:
+      "Demonstrate an immutable way to add an element to an array using the spread syntax, without changing the original array.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array (comma-separated)", type: "text", defaultValue: "a,b,c" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array (comma-separated)",
+        type: "text",
+        defaultValue: "a,b,c",
+      },
+    ],
     buttonText: "Add Immutably",
   },
   {
     id: "immutability-object",
     title: "Immutability with Objects",
-    description: "Demonstrate an immutable way to update a property on an object using the spread syntax.",
+    description:
+      "Demonstrate an immutable way to update a property on an object using the spread syntax.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Update Immutably",
@@ -71,47 +107,83 @@ export const problems: Problem[] = [
   {
     id: "function-composition",
     title: "Function Composition",
-    description: "Create a `compose` function that takes two functions, `f` and `g`, and returns a new function that computes `f(g(x))`.",
+    description:
+      "Create a `compose` function that takes two functions, `f` and `g`, and returns a new function that computes `f(g(x))`.",
     category: "Functional Programming",
-    inputs: [{ id: "num", label: "Input Number", type: "number", defaultValue: 5 }],
+    inputs: [
+      { id: "num", label: "Input Number", type: "number", defaultValue: 5 },
+    ],
     buttonText: "Compose and Run",
   },
   {
     id: "fp-reduce-to-object",
     title: "FP: Reduce to Object",
-    description: "Use `reduce` to transform an array of key-value pairs into an object.",
+    description:
+      "Use `reduce` to transform an array of key-value pairs into an object.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of pairs (JSON)", type: "textarea", defaultValue: '[["a", 1], ["b", 2]]' }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of pairs (JSON)",
+        type: "textarea",
+        defaultValue: '[["a", 1], ["b", 2]]',
+      },
+    ],
     buttonText: "Reduce to Object",
   },
   {
     id: "partial-application",
     title: "Partial Application",
-    description: "Create a function `add(a, b)` and use it to create a partially applied function `addTen` that always adds 10 to its argument.",
+    description:
+      "Create a function `add(a, b)` and use it to create a partially applied function `addTen` that always adds 10 to its argument.",
     category: "Functional Programming",
-    inputs: [{ id: "num", label: "Number to add 10 to", type: "number", defaultValue: 5 }],
+    inputs: [
+      {
+        id: "num",
+        label: "Number to add 10 to",
+        type: "number",
+        defaultValue: 5,
+      },
+    ],
     buttonText: "Use Partial Function",
   },
   {
     id: "fp-find-first-even",
     title: "FP: Find First Even Number",
-    description: "Use the `find` higher-order function to find the first even number in an array.",
+    description:
+      "Use the `find` higher-order function to find the first even number in an array.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "1,3,5,6,7,8" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,3,5,6,7,8",
+      },
+    ],
     buttonText: "Find First Even",
   },
   {
     id: "point-free-style",
     title: "Point-Free Style",
-    description: "Rewrite a function that takes an array and doubles its values from `arr => arr.map(x => x * 2)` to a point-free style.",
+    description:
+      "Rewrite a function that takes an array and doubles its values from `arr => arr.map(x => x * 2)` to a point-free style.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "1,2,3" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,2,3",
+      },
+    ],
     buttonText: "Run Point-Free",
   },
   {
     id: "side-effects-conceptual",
     title: "Side Effects (Conceptual)",
-    description: "Explain what a side effect is in the context of functions and provide examples of impure functions.",
+    description:
+      "Explain what a side effect is in the context of functions and provide examples of impure functions.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Side Effects",
@@ -119,7 +191,8 @@ export const problems: Problem[] = [
   {
     id: "referential-transparency-conceptual",
     title: "Referential Transparency (Conceptual)",
-    description: "Explain the concept of referential transparency, a property of pure functions where a function call can be replaced by its return value without changing the program's behavior.",
+    description:
+      "Explain the concept of referential transparency, a property of pure functions where a function call can be replaced by its return value without changing the program's behavior.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Concept",
@@ -127,31 +200,51 @@ export const problems: Problem[] = [
   {
     id: "fp-every-check",
     title: "FP: Check with `every`",
-    description: "Use the `every` higher-order function to check if all numbers in an array are greater than 0.",
+    description:
+      "Use the `every` higher-order function to check if all numbers in an array are greater than 0.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "1,5,9,12" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,5,9,12",
+      },
+    ],
     buttonText: "Check if all are positive",
   },
   {
     id: "fp-some-check",
     title: "FP: Check with `some`",
-    description: "Use the `some` higher-order function to check if any number in an array is negative.",
+    description:
+      "Use the `some` higher-order function to check if any number in an array is negative.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "1,5,-2,8" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,5,-2,8",
+      },
+    ],
     buttonText: "Check if any are negative",
   },
   {
     id: "function-piping",
     title: "Function Piping",
-    description: "Create a `pipe` function that takes multiple functions and chains them together in a left-to-right sequence.",
+    description:
+      "Create a `pipe` function that takes multiple functions and chains them together in a left-to-right sequence.",
     category: "Functional Programming",
-    inputs: [{ id: "num", label: "Input Number", type: "number", defaultValue: 5 }],
+    inputs: [
+      { id: "num", label: "Input Number", type: "number", defaultValue: 5 },
+    ],
     buttonText: "Pipe and Run",
   },
   {
     id: "immutable-deep-update",
     title: "Immutable Deep Update",
-    description: "Demonstrate how to immutably update a nested property in an object using spread syntax at each level.",
+    description:
+      "Demonstrate how to immutably update a nested property in an object using spread syntax at each level.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Perform Deep Update",
@@ -159,25 +252,45 @@ export const problems: Problem[] = [
   {
     id: "fp-reduce-right",
     title: "FP: `reduceRight`",
-    description: "Use `reduceRight` to process an array from right to left, for example, to reverse a string.",
+    description:
+      "Use `reduceRight` to process an array from right to left, for example, to reverse a string.",
     category: "Functional Programming",
-    inputs: [{ id: "str", label: "String", type: "text", defaultValue: "hello" }],
+    inputs: [
+      { id: "str", label: "String", type: "text", defaultValue: "hello" },
+    ],
     buttonText: "Reverse with reduceRight",
   },
   {
     id: "fp-map-objects",
     title: "FP: Map Over Objects",
-    description: "Use `.map()` on an array of objects to extract a specific property from each object, creating a new array of those properties.",
+    description:
+      "Use `.map()` on an array of objects to extract a specific property from each object, creating a new array of those properties.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of Objects (JSON)", type: "textarea", defaultValue: '[{"name": "Alice"}, {"name": "Bob"}]' }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Objects (JSON)",
+        type: "textarea",
+        defaultValue: '[{"name": "Alice"}, {"name": "Bob"}]',
+      },
+    ],
     buttonText: "Extract Names",
   },
   {
     id: "fp-filter-objects",
     title: "FP: Filter Objects",
-    description: "Use `.filter()` on an array of objects to create a new array containing only the objects that meet a certain condition.",
+    description:
+      "Use `.filter()` on an array of objects to create a new array containing only the objects that meet a certain condition.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of Objects (JSON)", type: "textarea", defaultValue: '[{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}]' }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Objects (JSON)",
+        type: "textarea",
+        defaultValue:
+          '[{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}]',
+      },
+    ],
     buttonText: "Filter for Age > 28",
   },
   {
@@ -185,13 +298,21 @@ export const problems: Problem[] = [
     title: "FP: Find Maximum with Reduce",
     description: "Use `.reduce()` to find the maximum number in an array.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "1, 9, 2, 8, 5" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1, 9, 2, 8, 5",
+      },
+    ],
     buttonText: "Find Max",
   },
   {
     id: "memoization-closure-fp",
     title: "Memoization with Closures",
-    description: "Implement a higher-order function `memoize` that takes a function and returns a memoized version of it using a closure for the cache.",
+    description:
+      "Implement a higher-order function `memoize` that takes a function and returns a memoized version of it using a closure for the cache.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Test Memoization",
@@ -199,7 +320,8 @@ export const problems: Problem[] = [
   {
     id: "currying-advanced",
     title: "Advanced Currying",
-    description: "Create a generic `curry` function that can convert any multi-argument function into a curried one.",
+    description:
+      "Create a generic `curry` function that can convert any multi-argument function into a curried one.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Curry a Function",
@@ -207,15 +329,24 @@ export const problems: Problem[] = [
   {
     id: "fp-chaining-methods",
     title: "FP: Chaining Methods",
-    description: "Chain `.filter()` and `.map()` together to perform a multi-step data transformation in a single statement.",
+    description:
+      "Chain `.filter()` and `.map()` together to perform a multi-step data transformation in a single statement.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "1,2,3,4,5,6" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,2,3,4,5,6",
+      },
+    ],
     buttonText: "Filter Evens and Double",
   },
   {
     id: "fp-declarative-vs-imperative",
     title: "Declarative vs. Imperative (Conceptual)",
-    description: "Compare the imperative (a `for` loop with an `if` statement) and declarative (`.filter()`) ways of solving the same problem.",
+    description:
+      "Compare the imperative (a `for` loop with an `if` statement) and declarative (`.filter()`) ways of solving the same problem.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Compare Styles",
@@ -223,7 +354,8 @@ export const problems: Problem[] = [
   {
     id: "fp-first-class-functions",
     title: "First-Class Functions",
-    description: "Demonstrate that functions are 'first-class citizens' by storing them in an array and then iterating and calling them.",
+    description:
+      "Demonstrate that functions are 'first-class citizens' by storing them in an array and then iterating and calling them.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Call Functions from Array",
@@ -231,31 +363,57 @@ export const problems: Problem[] = [
   {
     id: "fp-flatmap",
     title: "FP: `flatMap`",
-    description: "Use `.flatMap()` to both map over an array and flatten the result by one level.",
+    description:
+      "Use `.flatMap()` to both map over an array and flatten the result by one level.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of sentences", type: "text", defaultValue: "hello world,how are you" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of sentences",
+        type: "text",
+        defaultValue: "hello world,how are you",
+      },
+    ],
     buttonText: "Get All Words",
   },
   {
     id: "fp-sorting-immutably",
     title: "Immutable Sorting",
-    description: "Show how to sort an array immutably by first creating a copy using the spread syntax or `.slice()`.",
+    description:
+      "Show how to sort an array immutably by first creating a copy using the spread syntax or `.slice()`.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "3,1,4,2" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "3,1,4,2",
+      },
+    ],
     buttonText: "Sort Immutably",
   },
   {
     id: "fp-group-by",
     title: "FP: Group By with Reduce",
-    description: "Use `.reduce()` to group an array of objects by a specific property.",
+    description:
+      "Use `.reduce()` to group an array of objects by a specific property.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of Objects (JSON)", type: "textarea", defaultValue: '[{"type": "fruit", "name": "apple"}, {"type": "veg", "name": "carrot"}, {"type": "fruit", "name": "banana"}]' }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Objects (JSON)",
+        type: "textarea",
+        defaultValue:
+          '[{"type": "fruit", "name": "apple"}, {"type": "veg", "name": "carrot"}, {"type": "fruit", "name": "banana"}]',
+      },
+    ],
     buttonText: "Group by Type",
   },
   {
     id: "fp-transducer-conceptual",
     title: "Transducers (Conceptual)",
-    description: "Explain the concept of transducers as a high-performance way to compose multiple transformations (`map`, `filter`) without creating intermediate arrays.",
+    description:
+      "Explain the concept of transducers as a high-performance way to compose multiple transformations (`map`, `filter`) without creating intermediate arrays.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Transducers",
@@ -263,7 +421,8 @@ export const problems: Problem[] = [
   {
     id: "fp-functor-conceptual",
     title: "Functors (Conceptual)",
-    description: "Explain the concept of a Functor as a data structure that can be 'mapped' over, like an Array with its `.map()` method.",
+    description:
+      "Explain the concept of a Functor as a data structure that can be 'mapped' over, like an Array with its `.map()` method.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Functor",
@@ -271,7 +430,8 @@ export const problems: Problem[] = [
   {
     id: "fp-monad-conceptual",
     title: "Monads (Conceptual)",
-    description: "Provide a simple, high-level explanation of a Monad as a data structure that can be mapped over and 'flattened' (like a Promise or `flatMap`).",
+    description:
+      "Provide a simple, high-level explanation of a Monad as a data structure that can be mapped over and 'flattened' (like a Promise or `flatMap`).",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Monad",
@@ -279,7 +439,8 @@ export const problems: Problem[] = [
   {
     id: "fp-arity",
     title: "Function Arity",
-    description: "Explain function arity (the number of arguments a function expects) and its relevance in functional programming, especially for currying.",
+    description:
+      "Explain function arity (the number of arguments a function expects) and its relevance in functional programming, especially for currying.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Arity",
@@ -287,9 +448,12 @@ export const problems: Problem[] = [
   {
     id: "fp-recursively-map",
     title: "Recursive Mapping",
-    description: "Implement a recursive version of the `.map()` function to understand its underlying principles.",
+    description:
+      "Implement a recursive version of the `.map()` function to understand its underlying principles.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" }],
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" },
+    ],
     buttonText: "Run Recursive Map",
   },
   {
@@ -297,7 +461,9 @@ export const problems: Problem[] = [
     title: "Recursive Filtering",
     description: "Implement a recursive version of the `.filter()` function.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" }],
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" },
+    ],
     buttonText: "Run Recursive Filter",
   },
   {
@@ -305,21 +471,27 @@ export const problems: Problem[] = [
     title: "Recursive Reduce",
     description: "Implement a recursive version of the `.reduce()` function.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" }],
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" },
+    ],
     buttonText: "Run Recursive Reduce",
   },
   {
     id: "fp-identity-function",
     title: "The Identity Function",
-    description: "Write an identity function (`x => x`) and explain its role as a default or placeholder in functional programming patterns.",
+    description:
+      "Write an identity function (`x => x`) and explain its role as a default or placeholder in functional programming patterns.",
     category: "Functional Programming",
-    inputs: [{ id: "val", label: "Any value", type: "text", defaultValue: "hello" }],
+    inputs: [
+      { id: "val", label: "Any value", type: "text", defaultValue: "hello" },
+    ],
     buttonText: "Run Identity",
   },
   {
     id: "fp-tap-utility",
     title: "The `tap` Utility",
-    description: "Create a `tap` function that takes a value, performs a side effect with it (like `console.log`), and then returns the original value. Useful for debugging chains.",
+    description:
+      "Create a `tap` function that takes a value, performs a side effect with it (like `console.log`), and then returns the original value. Useful for debugging chains.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Test `tap`",
@@ -327,26 +499,36 @@ export const problems: Problem[] = [
   {
     id: "fp-zip-arrays",
     title: "Zip Two Arrays",
-    description: "Create a `zip` function that takes two arrays and returns a new array of pairs, where each pair contains one element from each of the original arrays.",
+    description:
+      "Create a `zip` function that takes two arrays and returns a new array of pairs, where each pair contains one element from each of the original arrays.",
     category: "Functional Programming",
     inputs: [
-        { id: "arr1", label: "Array 1", type: "text", defaultValue: "a,b,c" },
-        { id: "arr2", label: "Array 2", type: "text", defaultValue: "1,2,3" },
+      { id: "arr1", label: "Array 1", type: "text", defaultValue: "a,b,c" },
+      { id: "arr2", label: "Array 2", type: "text", defaultValue: "1,2,3" },
     ],
     buttonText: "Zip Arrays",
   },
   {
     id: "fp-partition-array",
     title: "Partition an Array",
-    description: "Create a `partition` function that takes an array and a predicate, and returns an array with two sub-arrays: one with elements that passed the predicate, and one with elements that failed.",
+    description:
+      "Create a `partition` function that takes an array and a predicate, and returns an array with two sub-arrays: one with elements that passed the predicate, and one with elements that failed.",
     category: "Functional Programming",
-    inputs: [{ id: "arr", label: "Array of numbers", type: "text", defaultValue: "1,2,3,4,5" }],
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,2,3,4,5",
+      },
+    ],
     buttonText: "Partition Evens/Odds",
   },
   {
     id: "fp-debounce-function",
     title: "Debounce Function",
-    description: "Implement a `debounce` higher-order function that delays invoking a function until after a certain amount of time has passed without it being called.",
+    description:
+      "Implement a `debounce` higher-order function that delays invoking a function until after a certain amount of time has passed without it being called.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Show Debounce Logic",
@@ -354,7 +536,8 @@ export const problems: Problem[] = [
   {
     id: "fp-throttle-function",
     title: "Throttle Function",
-    description: "Implement a `throttle` higher-order function that ensures a function is only called at most once per every specified time period.",
+    description:
+      "Implement a `throttle` higher-order function that ensures a function is only called at most once per every specified time period.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Show Throttle Logic",
@@ -362,7 +545,8 @@ export const problems: Problem[] = [
   {
     id: "immutable-update-nested-array",
     title: "Immutable Update in Nested Array",
-    description: "Demonstrate how to immutably update an item inside an array that is itself a property of an object.",
+    description:
+      "Demonstrate how to immutably update an item inside an array that is itself a property of an object.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Update Item in Array",
@@ -370,7 +554,8 @@ export const problems: Problem[] = [
   {
     id: "fp-function-lifting",
     title: "Function Lifting (Conceptual)",
-    description: "Explain the concept of 'lifting' a function, where a function that operates on simple values is transformed into a function that operates on values within a context (like an array or promise).",
+    description:
+      "Explain the concept of 'lifting' a function, where a function that operates on simple values is transformed into a function that operates on values within a context (like an array or promise).",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Lifting",
@@ -378,7 +563,8 @@ export const problems: Problem[] = [
   {
     id: "fp-applicative-functor-conceptual",
     title: "Applicative Functors (Conceptual)",
-    description: "Provide a high-level explanation of an Applicative Functor as a Functor with an `ap` method, which can apply a function inside a context to a value inside another context.",
+    description:
+      "Provide a high-level explanation of an Applicative Functor as a Functor with an `ap` method, which can apply a function inside a context to a value inside another context.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Applicative",
@@ -386,7 +572,8 @@ export const problems: Problem[] = [
   {
     id: "fp-once-function",
     title: "Create a `once` function",
-    description: "Write a higher-order function `once` that takes a function and returns a new function that can only be called one time.",
+    description:
+      "Write a higher-order function `once` that takes a function and returns a new function that can only be called one time.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Test `once`",
@@ -394,7 +581,8 @@ export const problems: Problem[] = [
   {
     id: "fp-flip-arguments",
     title: "The `flip` Utility",
-    description: "Create a `flip` function that takes a binary function (a function with two arguments) and returns a new function that takes its arguments in the reverse order.",
+    description:
+      "Create a `flip` function that takes a binary function (a function with two arguments) and returns a new function that takes its arguments in the reverse order.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Test `flip`",
@@ -402,7 +590,8 @@ export const problems: Problem[] = [
   {
     id: "fp-prop-utility",
     title: "The `prop` Utility",
-    description: "Create a `prop` function that takes a property name and returns a new function that can retrieve that property from an object.",
+    description:
+      "Create a `prop` function that takes a property name and returns a new function that can retrieve that property from an object.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Test `prop`",
@@ -410,7 +599,8 @@ export const problems: Problem[] = [
   {
     id: "fp-idempotence-conceptual",
     title: "Idempotence (Conceptual)",
-    description: "Explain the concept of idempotence, where applying an operation multiple times has the same effect as applying it once (e.g., `Math.abs(Math.abs(-10))` is the same as `Math.abs(-10)`).",
+    description:
+      "Explain the concept of idempotence, where applying an operation multiple times has the same effect as applying it once (e.g., `Math.abs(Math.abs(-10))` is the same as `Math.abs(-10)`).",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Idempotence",
@@ -418,7 +608,8 @@ export const problems: Problem[] = [
   {
     id: "fp-y-combinator-conceptual",
     title: "Y Combinator (Conceptual)",
-    description: "Provide a high-level, conceptual explanation of the Y Combinator as a fixed-point combinator that allows for creating anonymous recursive functions.",
+    description:
+      "Provide a high-level, conceptual explanation of the Y Combinator as a fixed-point combinator that allows for creating anonymous recursive functions.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Y Combinator",
@@ -426,7 +617,8 @@ export const problems: Problem[] = [
   {
     id: "fp-monoid-conceptual",
     title: "Monoids (Conceptual)",
-    description: "Explain the concept of a Monoid: a type with an associative binary `concat` operation and an `empty` identity value (e.g., Array with concatenation and `[]`).",
+    description:
+      "Explain the concept of a Monoid: a type with an associative binary `concat` operation and an `empty` identity value (e.g., Array with concatenation and `[]`).",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Monoid",
@@ -434,107 +626,149 @@ export const problems: Problem[] = [
   {
     id: "fp-difference-arrays",
     title: "FP: Difference of Arrays",
-    description: "Create a function that finds the difference between two arrays (elements in the first array but not the second).",
+    description:
+      "Create a function that finds the difference between two arrays (elements in the first array but not the second).",
     category: "Functional Programming",
     inputs: [
-      { id: "arr1", label: "First Array", type: "text", defaultValue: "1,2,3,4" },
-      { id: "arr2", label: "Second Array", type: "text", defaultValue: "3,4,5" }
+      {
+        id: "arr1",
+        label: "First Array",
+        type: "text",
+        defaultValue: "1,2,3,4",
+      },
+      {
+        id: "arr2",
+        label: "Second Array",
+        type: "text",
+        defaultValue: "3,4,5",
+      },
     ],
-    buttonText: "Find Difference"
+    buttonText: "Find Difference",
   },
   {
     id: "fp-pluck-utility",
     title: "The `pluck` Utility",
-    description: "Create a `pluck` function that takes a property name and an array of objects, and returns an array of the values for that property.",
+    description:
+      "Create a `pluck` function that takes a property name and an array of objects, and returns an array of the values for that property.",
     category: "Functional Programming",
     inputs: [
-      { id: "arr", label: "Array of Objects (JSON)", type: "textarea", defaultValue: '[{"name": "Alice"}, {"name": "Bob"}]' },
-      { id: "prop", label: "Property to Pluck", type: "text", defaultValue: "name" }
+      {
+        id: "arr",
+        label: "Array of Objects (JSON)",
+        type: "textarea",
+        defaultValue: '[{"name": "Alice"}, {"name": "Bob"}]',
+      },
+      {
+        id: "prop",
+        label: "Property to Pluck",
+        type: "text",
+        defaultValue: "name",
+      },
     ],
-    buttonText: "Pluck Property"
+    buttonText: "Pluck Property",
   },
   {
     id: "fp-memoize-with-key",
     title: "Memoize with Custom Key",
-    description: "Create a `memoizeWith` function that is like `memoize`, but takes a key-generating function for more complex caching.",
+    description:
+      "Create a `memoizeWith` function that is like `memoize`, but takes a key-generating function for more complex caching.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Test MemoizeWith"
+    buttonText: "Test MemoizeWith",
   },
   {
     id: "fp-unary-function",
     title: "The `unary` Utility",
-    description: "Create a `unary` function that takes a multi-argument function and returns a new function that only accepts one argument.",
+    description:
+      "Create a `unary` function that takes a multi-argument function and returns a new function that only accepts one argument.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Test `unary`"
+    buttonText: "Test `unary`",
   },
   {
     id: "fp-binary-function",
     title: "The `binary` Utility",
-    description: "Create a `binary` function that takes a multi-argument function and returns a new function that only accepts two arguments.",
+    description:
+      "Create a `binary` function that takes a multi-argument function and returns a new function that only accepts two arguments.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Test `binary`"
+    buttonText: "Test `binary`",
   },
   {
     id: "fp-converge-utility",
     title: "The `converge` Utility",
-    description: "Create a `converge` function that takes a converging function and a list of branching functions. The branching functions are applied to the arguments, and their results are passed to the converging function.",
+    description:
+      "Create a `converge` function that takes a converging function and a list of branching functions. The branching functions are applied to the arguments, and their results are passed to the converging function.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Test `converge`"
+    buttonText: "Test `converge`",
   },
   {
     id: "fp-trampoline-recursion",
     title: "Trampolining for Recursion",
-    description: "Implement a `trampoline` utility to execute a mutually recursive function without blowing the call stack.",
+    description:
+      "Implement a `trampoline` utility to execute a mutually recursive function without blowing the call stack.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Test Trampoline"
+    buttonText: "Test Trampoline",
   },
   {
     id: "lens-conceptual",
     title: "Lenses (Conceptual)",
-    description: "Explain the concept of a Lens as a functional tool for getting and setting values in nested data structures immutably.",
+    description:
+      "Explain the concept of a Lens as a functional tool for getting and setting values in nested data structures immutably.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Explain Lenses"
+    buttonText: "Explain Lenses",
   },
   {
     id: "fp-intersection-arrays",
     title: "FP: Intersection of Arrays",
-    description: "Create a function that finds the intersection of two arrays (elements present in both).",
+    description:
+      "Create a function that finds the intersection of two arrays (elements present in both).",
     category: "Functional Programming",
     inputs: [
       { id: "arr1", label: "First Array", type: "text", defaultValue: "1,2,3" },
-      { id: "arr2", label: "Second Array", type: "text", defaultValue: "2,3,4" }
+      {
+        id: "arr2",
+        label: "Second Array",
+        type: "text",
+        defaultValue: "2,3,4",
+      },
     ],
-    buttonText: "Find Intersection"
+    buttonText: "Find Intersection",
   },
   {
     id: "fp-union-arrays",
     title: "FP: Union of Arrays",
-    description: "Create a function that finds the union of two arrays (all unique elements from both).",
+    description:
+      "Create a function that finds the union of two arrays (all unique elements from both).",
     category: "Functional Programming",
     inputs: [
       { id: "arr1", label: "First Array", type: "text", defaultValue: "1,2,3" },
-      { id: "arr2", label: "Second Array", type: "text", defaultValue: "2,3,4" }
+      {
+        id: "arr2",
+        label: "Second Array",
+        type: "text",
+        defaultValue: "2,3,4",
+      },
     ],
-    buttonText: "Find Union"
+    buttonText: "Find Union",
   },
   {
     id: "fp-negate-predicate",
     title: "The `negate` Utility",
-    description: "Create a `negate` function that takes a predicate function and returns a new predicate function that will return the opposite boolean value.",
+    description:
+      "Create a `negate` function that takes a predicate function and returns a new predicate function that will return the opposite boolean value.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Test `negate`"
+    buttonText: "Test `negate`",
   },
   {
     id: "fp-maybe-monad-conceptual",
     title: "Maybe Monad (Conceptual)",
-    description: "Explain the Maybe monad (also known as Option) as a way to safely handle `null` or `undefined` values in a functional way, avoiding null checks.",
+    description:
+      "Explain the Maybe monad (also known as Option) as a way to safely handle `null` or `undefined` values in a functional way, avoiding null checks.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Maybe Monad",
@@ -542,7 +776,8 @@ export const problems: Problem[] = [
   {
     id: "fp-either-monad-conceptual",
     title: "Either Monad (Conceptual)",
-    description: "Explain the Either monad as a way to handle functions that can fail, by returning either a `Right` (success) or a `Left` (error) value.",
+    description:
+      "Explain the Either monad as a way to handle functions that can fail, by returning either a `Right` (success) or a `Left` (error) value.",
     category: "Functional Programming",
     inputs: [],
     buttonText: "Explain Either Monad",
@@ -550,17 +785,21 @@ export const problems: Problem[] = [
   {
     id: "fp-all-any-utilities",
     title: "The `all` and `any` Utilities",
-    description: "Create `all` (like `every`) and `any` (like `some`) functions that take a predicate and an array.",
+    description:
+      "Create `all` (like `every`) and `any` (like `some`) functions that take a predicate and an array.",
     category: "Functional Programming",
-    inputs: [{id: "arr", label: "Array", type: "text", defaultValue: "2,4,7,8"}],
-    buttonText: "Test all/any"
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "2,4,7,8" },
+    ],
+    buttonText: "Test all/any",
   },
   {
     id: "fp-immutable-splice",
     title: "Immutable Splice",
-    description: "Write a pure function that mimics `splice` by returning a new array with an element removed, without mutating the original.",
+    description:
+      "Write a pure function that mimics `splice` by returning a new array with an element removed, without mutating the original.",
     category: "Functional Programming",
     inputs: [],
-    buttonText: "Test Immutable Splice"
-  }
+    buttonText: "Test Immutable Splice",
+  },
 ];

@@ -1,2 +1,3 @@
 # javascript-mastery-1000
-Achieve JavaScript mastery with 1000+ interactive challenges, runnable examples, unit tests, and AI-powered explanations.
+
+Achieve JavaScript mastery with 1400+ interactive challenges, runnable examples, unit tests, and AI-powered explanations.
