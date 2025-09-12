@@ -1108,8 +1108,20 @@ const stopwatch = (function() {
     }
   }
   
-  // ... stop and getTime methods ...
-
+  function stop() {
+    if (running) {
+      running = false;
+      elapsed = Date.now() - startTime;
+    }
+  }
+  
+  function getTime() {
+    if (running) {
+      return Date.now() - startTime;
+    }
+    return elapsed;
+  }
+  
   return { start, stop, getTime };
 })();
 \`\`\`
@@ -1154,6 +1166,14 @@ An object method uses \`setTimeout\` with a traditional function, which fails, a
 \`\`\`javascript
 const myObject = {
   name: "My Object",
+  
+  // Using a traditional function (problematic)
+  processWithTraditional: function() {
+    setTimeout(function() {
+      // 'this' here is NOT myObject, it's the global object (or undefined in strict mode)
+      console.log(this.name); // undefined or error
+    }, 100);
+  },
   
   // Using an arrow function (modern solution)
   processWithArrow: function() {
@@ -1288,11 +1308,20 @@ for (var i = 0; i < 3; i++) {
 }
 // This will log 3, 3, 3 because the loop finishes and 'i' is 3
 // before any of the callbacks run.
+
+// The RIGHT way
+for (let i = 0; i < 3; i++) {
+    setTimeout(() => {
+        console.log(i);
+    }, 10);
+}
+// This will log 0, 1, 2 because each iteration creates a new 'i'
 \`\`\`
-1. **Single Variable**: \`var\` creates a single, function-scoped \`i\` variable. All callbacks reference this one variable.
-2. **The Fix**: Using \`let\` instead of \`var\` solves this, because \`let\` creates a new block-scoped variable for each iteration of the loop, so each closure captures a different variable with the correct value.
+1.  **Single Variable with `var`**: Using \`var\` creates a single, function-scoped \`i\` variable. All callbacks reference this one variable, which has the value 3 by the time the callbacks execute.
+2.  **Fix with `let`**: Using \`let\` creates a new block-scoped variable for each iteration, so each closure captures a different \`i\` with the correct value.
 
 ### 📚 Key Concepts
-- **Block Scope vs. Function Scope**: The critical difference between \`let\` and \`var\` that causes this behavior.
+-   **Block Scope vs. Function Scope**: The critical difference between \`let\` and \`var\` that causes this behavior.
+-   **Closure Capture**: Closures capture variables by reference, not by value, which is why `var` causes issues in loops.
 `,
 };
