@@ -94,7 +94,7 @@ function power(base, exponent) {
 `,
   "reverse-string-recursive": `
 ### 💡 Problem Breakdown
-The task is to reverse a string using recursion. The recursive logic is: "the reverse of a string is the first character appended to the reverse of the rest of the string."
+The task is to reverse a string using recursion. The recursive logic is: "the reverse of a string is the reverse of the rest of the string, with the first character appended to the end."
 
 ### ⚙️ Solution Walkthrough
 The function repeatedly peels off the first character and appends it to the recursive result.
@@ -172,7 +172,7 @@ function rangeOfNumbers(startNum, endNum) {
 The Greatest Common Divisor (GCD) of two integers is the largest positive integer that divides both numbers without leaving a remainder. The Euclidean algorithm is a very efficient method for computing the GCD, and it has a natural recursive structure.
 
 ### ⚙️ Solution Walkthrough
-The algorithm is based on the principle that the greatest common divisor of two numbers does not change if the larger number is replaced by its difference with the smaller number. A more efficient implementation uses the remainder. The recursive logic is \`gcd(a, b) = gcd(b, a % b)\`.
+The algorithm is based on the principle that the greatest common divisor of two numbers does not change if the larger number is replaced by its remainder when divided by the smaller number. The recursive logic is \`gcd(a, b) = gcd(b, a % b)\`.
 \`\`\`javascript
 function gcd(a, b) {
   // Base Case: When the second number is 0, the GCD is the first number.
@@ -361,7 +361,7 @@ function inOrder(node) {
 The goal is to find all possible orderings (permutations) of the characters in a string. For "abc", we want to find "abc", "acb", "bac", "bca", "cab", "cba".
 
 ### ⚙️ Solution Walkthrough
-This is a classic backtracking problem. The function iterates through each character of the string. For each character, it's chosen as the first character of a permutation. Then, the function recursively finds all permutations of the *remaining* characters and appends them.
+This is a classic backtracking problem. The function iterates through each character of the string. For each character, it's chosen as the first character of a permutation. Then, the function recursively finds all permutations of the *remaining* characters and prepends the chosen character.
 \`\`\`javascript
 function stringPermutations(str) {
   if (str.length <= 1) return [str]; // Base case
@@ -422,19 +422,23 @@ function collatzSteps(n, steps = 0) {
 The task is to find the total number of unique paths from the top-left corner (0,0) to the bottom-right corner (m-1, n-1) of an m x n grid, with the only allowed moves being right and down.
 
 ### ⚙️ Solution Walkthrough
-The recursive logic is: "the number of paths to get to cell (r, c) is the sum of the paths to get to the cell above it (r-1, c) and the paths to get to the cell to its left (r, c-1)." We can also think of it from the start: the number of paths from (r, c) is the sum of paths from (r+1, c) and paths from (r, c+1).
+The recursive logic is: "the number of paths to get to the destination from cell (r, c) is the sum of the paths from the cell below it (r+1, c) and the paths from the cell to its right (r, c+1)."
 \`\`\`javascript
-function countPaths(m, n) {
-  // Base Case: If we are on the first row or first column, there's only one way to get there.
-  if (m === 1 || n === 1) {
+function countPaths(r, c, m, n) {
+  // Base Case: If we go out of bounds, this is not a valid path.
+  if (r >= m || c >= n) {
+    return 0;
+  }
+  // Base Case: If we reach the destination, this is one valid path.
+  if (r === m - 1 && c === n - 1) {
     return 1;
   }
   // Recursive Case: Sum of paths from moving down and paths from moving right.
-  return countPaths(m - 1, n) + countPaths(m, n - 1);
+  return countPaths(r + 1, c, m, n) + countPaths(r, c + 1, m, n);
 }
 \`\`\`
-1.  **Base Case**: Any cell in the first row (\`m=1\`) or first column (\`n=1\`) has only one path to reach it (by only moving right or only moving down). This is our stopping condition.
-2.  **Recursive Case**: For any other cell, the total paths are the sum of the paths from the two cells that could have led to it.
+1.  **Base Cases**: Any path that goes off the grid is invalid (0 paths). A path that reaches the target destination is valid (1 path).
+2.  **Recursive Case**: For any other cell, the total paths are the sum of the paths from the two cells it can move to.
 
 ### 📚 Key Concepts
 - **Dynamic Programming**: This problem is a classic example of dynamic programming, where the solution to a larger problem is built from the solutions of its subproblems. The recursive solution is clear but inefficient due to re-calculating the same subproblems. Memoization would optimize it significantly.
@@ -876,7 +880,7 @@ The recursive function iterates through the keys of the current object. If it fi
 \`\`\`javascript
 function findInObject(obj, keyToFind) {
   // Check the current level of the object.
-  if (obj.hasOwnProperty(keyToFind)) {
+  if (Object.prototype.hasOwnProperty.call(obj, keyToFind)) {
     return obj[keyToFind];
   }
   
@@ -902,7 +906,7 @@ function findInObject(obj, keyToFind) {
 
 ### 📚 Key Concepts
 - **Depth-First Search (DFS)**: This is essentially a DFS algorithm applied to an object's structure.
-- **Safe Property Checking**: Using \`obj.hasOwnProperty(key)\` is safer than a simple \`if (obj[key])\` check, as it correctly handles cases where a property might exist but have a "falsy" value (like \`0\`, \`false\`, or an empty string).
+- **Safe Property Checking**: Using \`Object.prototype.hasOwnProperty.call(obj, key)\` is safer than a simple \`if (obj[key])\` check, as it correctly handles cases where a property might exist but have a "falsy" value (like \`0\`, \`false\`, or an empty string).
 `,
   "count-down-up-recursive": `
 ### 💡 Problem Breakdown
@@ -1209,7 +1213,7 @@ function subsets(arr) {
   const subsetsWithoutFirst = subsets(rest);
   
   // Create new subsets by adding the first element to each of the existing subsets.
-  const subsetsWithFirst = subsetsWithoutFirst.map(sub => [first].concat(sub));
+  const subsetsWithFirst = subsetsWithoutFirst.map(sub => [first, ...sub]);
   
   // Combine both sets of subsets.
   return [...subsetsWithoutFirst, ...subsetsWithFirst];
