@@ -1,3 +1,5 @@
+// import type { Problem } from "../../types";
+
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
