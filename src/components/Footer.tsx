@@ -1,51 +1,184 @@
-
-import React from 'react';
+import React from "react";
+import {
+  FaGithub,
+  FaTwitter,
+  FaLinkedin,
+  FaYoutube,
+  FaDiscord,
+} from "react-icons/fa";
 
 const Footer: React.FC = () => {
-    return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
-            <nav>
-                <h6 className="footer-title">Problem Categories</h6> 
-                <a href="#problems" className="link link-hover">Beginner Basics</a>
-                <a href="#problems" className="link link-hover">Functions & Scope</a>
-                <a href="#problems" className="link link-hover">Arrays & Strings</a>
-                <a href="#problems" className="link link-hover">Objects & Prototypes</a>
-                <a href="#problems" className="link link-hover">ES6+ Features</a>
-            </nav> 
-            <nav>
-                <h6 className="footer-title">Company</h6> 
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-            </nav> 
-            <nav>
-                <h6 className="footer-title">Legal</h6> 
-                <a className="link link-hover">Terms of use</a>
-                <a className="link link-hover">Privacy policy</a>
-            </nav> 
-            <form>
-                <h6 className="footer-title">Newsletter</h6> 
-                <fieldset className="form-control w-80">
-                <label className="label">
-                    <span className="label-text">Enter your email address</span>
-                </label> 
-                <div className="join">
-                    <input type="text" placeholder="username@site.com" className="input input-bordered join-item" /> 
-                    <button className="btn btn-primary join-item">Subscribe</button>
-                </div>
-                </fieldset>
-            </form>
-             <aside className="footer-center grid-flow-col-dense col-span-full mt-8 pt-8 border-t border-base-300">
-                <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-start">
-                   <p>Copyright © {new Date().getFullYear()} - All right reserved by JS Mastery Hub</p>
-                </div>
-                <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-                    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.296 1.634 4.208 3.803 4.649-.625.17-1.284.26-1.96.26-.305 0-.6-.03- .89-.086.635 1.884 2.473 3.268 4.653 3.308-1.625 1.27-3.666 2.022-5.88 2.022-.382 0-.76-.022-1.13-.066 2.099 1.35 4.596 2.13 7.343 2.13 8.814 0 13.633-7.305 13.633-13.633 0-.207-.005-.413-.013-.618.94-.678 1.75-1.52 2.4-2.5z"></path></svg></a>
-                    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-                    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
-                </div>
-            </aside>
-        </footer>
-    );
+  return (
+    <footer className="bg-base-200 text-base-content pt-16">
+      {/* Top grid */}
+      <div className="max-w-7xl mx-auto grid gap-10 px-6 md:grid-cols-4">
+        {/* Brand / Newsletter */}
+        <div>
+          <h2 className="text-2xl font-bold tracking-tight">JS Mastery Hub</h2>
+          <p className="mt-2 text-sm opacity-80">
+            Master modern JavaScript through 1400+ carefully crafted problems,
+            detailed explanations, and interactive solutions.
+          </p>
+          <form className="mt-5">
+            <label className="block text-sm mb-1 font-medium">
+              Subscribe to our newsletter
+            </label>
+            <div className="join w-full">
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="input input-bordered join-item flex-1"
+              />
+              <button className="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </form>
+        </div>
+
+        {/* Problem Categories */}
+        <nav aria-label="Problem Categories">
+          <h6 className="footer-title">Problem Categories</h6>
+          <ul className="space-y-1">
+            {[
+              "Fundamentals",
+              "Core Concepts",
+              "Asynchronous JS",
+              "Advanced Topics",
+              "Ecosystem & Practices",
+              ,
+            ].map((cat) => (
+              <li key={cat}>
+                <a href="#problems" className="link link-hover">
+                  {cat}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Resources */}
+        <nav aria-label="Resources">
+          <h6 className="footer-title">Resources</h6>
+          <ul className="space-y-1">
+            <li>
+              <a href="/docs" className="link link-hover">
+                Documentation
+              </a>
+            </li>
+            <li>
+              <a href="/blog" className="link link-hover">
+                Blog & Tutorials
+              </a>
+            </li>
+            <li>
+              <a href="/roadmap" className="link link-hover">
+                Learning Roadmap
+              </a>
+            </li>
+            <li>
+              <a href="/faq" className="link link-hover">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="/support" className="link link-hover">
+                Support & Feedback
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Company */}
+        <nav aria-label="Company">
+          <h6 className="footer-title">Company</h6>
+          <ul className="space-y-1">
+            <li>
+              <a href="/about" className="link link-hover">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/careers" className="link link-hover">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="link link-hover">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="/terms" className="link link-hover">
+                Terms of Use
+              </a>
+            </li>
+            <li>
+              <a href="/privacy" className="link link-hover">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-base-300 mt-10"></div>
+
+      {/* Bottom bar */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 py-6 px-6">
+        <p className="text-sm opacity-80">
+          © {new Date().getFullYear()} JS Mastery Hub. All rights reserved.
+        </p>
+
+        <div className="flex gap-5 text-xl">
+          <a
+            href="https://github.com/your-org/your-repo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://x.com/your-handle"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+            aria-label="X (Twitter)"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/your-company"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://youtube.com/your-channel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+            aria-label="YouTube"
+          >
+            <FaYoutube />
+          </a>
+          <a
+            href="https://discord.gg/your-invite"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+            aria-label="Discord"
+          >
+            <FaDiscord />
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
