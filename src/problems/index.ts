@@ -27,6 +27,10 @@ import { problems as recursionProblems } from "./recursion/problems";
 import { solvers as recursionSolvers } from "./recursion/solvers";
 import { explanations as recursionExplanations } from "./recursion/explanations";
 
+import { problems as algorithmsProblems } from "./algorithms/problems";
+import { solvers as algorithmsSolvers } from "./algorithms/solvers";
+import { explanations as algorithmsExplanations } from "./algorithms/explanations";
+
 // Other categories are empty, so they are not included, but their files are made into valid modules.
 
 export const allProblems: Problem[] = [
@@ -37,6 +41,7 @@ export const allProblems: Problem[] = [
   ...classesOopProblems,
   ...closuresLexicalEnvironmentProblems,
   ...recursionProblems,
+  ...algorithmsProblems,
 ];
 
 export const allSolvers: Record<string, Function> = {
@@ -47,6 +52,7 @@ export const allSolvers: Record<string, Function> = {
   ...classesOopSolvers,
   ...closuresLexicalEnvironmentSolvers,
   ...recursionSolvers,
+  ...algorithmsSolvers,
 };
 
 export const staticExplanations: Record<string, string> = {
@@ -57,4 +63,5 @@ export const staticExplanations: Record<string, string> = {
   ...classesOopExplanations,
   ...closuresLexicalEnvironmentExplanations,
   ...recursionExplanations,
+  ...algorithmsExplanations,
 };
