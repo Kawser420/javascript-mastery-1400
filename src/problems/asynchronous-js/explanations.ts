@@ -1,7 +1,7 @@
 export const explanations: Record<string, string> = {
-  'settimeout-callback': `
+  "settimeout-callback": `
 ### 💡 Problem Breakdown
-This is a foundational asynchronous operation in JavaScript. The goal is to execute a piece of code, but not immediately—only after a specified amount of time has passed. This illustrates the non-blocking nature of JavaScript and introduces the concept of a "macrotask".
+This is a foundational asynchronous operation in JavaScript. The goal is to execute a piece of code, but not immediately—only after a specified amount of time has passed. This illustrates the non-blocking nature of JavaScript and introduces the concept of a "macrotask."
 
 ### ⚙️ Solution Walkthrough
 The \`setTimeout\` function is used to schedule the execution of a callback function.
@@ -13,18 +13,18 @@ function delayedExecution(delay) {
   }, delay);
 }
 \`\`\`
-1.  **\`setTimeout(callback, delay)\`**: This Web API schedules the \`callback\` function to be added to the macrotask queue after the \`delay\` (in milliseconds) has passed.
-2.  **Non-blocking**: The JavaScript engine does *not* wait. It sets the timer and immediately continues executing any code that comes after the \`setTimeout\` call.
-3.  **Event Loop**: After the main script has finished and the call stack is empty, the event loop will pick up tasks from the queue. Once the timer expires, the callback is moved from the Web API environment to the macrotask queue, ready to be executed.
+1. **\`setTimeout(callback, delay)\`**: This Web API schedules the \`callback\` function to be added to the macrotask queue after the \`delay\` (in milliseconds) has passed.<grok-card data-id="deba04" data-type="citation_card"></grok-card>
+2. **Non-blocking**: The JavaScript engine does *not* wait. It sets the timer and immediately continues executing any code that comes after the \`setTimeout\` call.<grok-card data-id="c2630f" data-type="citation_card"></grok-card>
+3. **Event Loop**: After the main script has finished and the call stack is empty, the event loop will pick up tasks from the queue. Once the timer expires, the callback is moved from the Web API environment to the macrotask queue, ready to be executed.<grok-card data-id="e64a0b" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Asynchronous Operations**: Actions that don't complete immediately. JavaScript doesn't block and wait for them.
--   **Callback Function**: A function passed as an argument to another function, to be "called back" at a later time.
--   **Event Loop & Macrotask Queue**: The core mechanism in JavaScript runtimes that handles asynchronous tasks. \`setTimeout\`, \`setInterval\`, and I/O operations are macrotasks.
+- **Asynchronous Operations**: Actions that don't complete immediately. JavaScript doesn't block and wait for them.
+- **Callback Function**: A function passed as an argument to another function, to be "called back" at a later time.
+- **Event Loop & Macrotask Queue**: The core mechanism in JavaScript runtimes that handles asynchronous tasks. \`setTimeout\`, \`setInterval\`, and I/O operations are macrotasks.<grok-card data-id="ba6d82" data-type="citation_card"></grok-card>
 `,
-  'promise-creation': `
+  "promise-creation": `
 ### 💡 Problem Breakdown
-A \`Promise\` is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. This problem is about creating a basic promise that successfully completes or "resolves".
+A \`Promise\` is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. This problem is about creating a basic promise that successfully completes or "resolves."
 
 ### ⚙️ Solution Walkthrough
 The \`Promise\` constructor takes a function (the "executor") which is given two arguments: a \`resolve\` function and a \`reject\` function. We call \`resolve\` to signal a successful completion.
@@ -42,15 +42,15 @@ myPromise.then(result => {
   console.log(result); // "Operation was successful!"
 });
 \`\`\`
-1.  **Executor Function**: \`(resolve, reject) => { ... }\` runs immediately when the promise is created.
-2.  **\`resolve(value)\`**: This function is called to change the promise's state from "pending" to "fulfilled". The \`value\` is passed to any \`.then()\` handlers.
-3.  **\`.then(handler)\`**: This method is used to schedule a callback to be executed when the promise is fulfilled.
+1. **Executor Function**: \`(resolve, reject) => { ... }\` runs immediately when the promise is created.<grok-card data-id="685a9c" data-type="citation_card"></grok-card>
+2. **\`resolve(value)\`**: This function is called to change the promise's state from "pending" to "fulfilled". The \`value\` is passed to any \`.then()\` handlers.<grok-card data-id="cfa195" data-type="citation_card"></grok-card>
+3. **\`.then(handler)\`**: This method is used to schedule a callback to be executed when the promise is fulfilled.<grok-card data-id="5188c0" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promise**: An object representing a future value. It can be in one of three states: pending, fulfilled, or rejected.
--   **\`resolve\`**: The function to call to fulfill a promise.
+- **Promise**: An object representing a future value. It can be in one of three states: pending, fulfilled, or rejected.<grok-card data-id="1e38b9" data-type="citation_card"></grok-card>
+- **\`resolve\`**: The function to call to fulfill a promise.<grok-card data-id="a63f40" data-type="citation_card"></grok-card>
 `,
-  'promise-rejection': `
+  "promise-rejection": `
 ### 💡 Problem Breakdown
 This is the other side of a Promise: handling failure. If an asynchronous operation fails, the promise should be "rejected". This rejection needs to be handled to prevent "unhandled promise rejection" errors.
 
@@ -70,15 +70,15 @@ failingPromise
     console.error(error.message); // "Operation failed!"
   });
 \`\`\`
-1.  **\`reject(reason)\`**: This function is called to change the promise's state from "pending" to "rejected". The \`reason\` (usually an \`Error\` object) is passed to any \`.catch()\` handlers.
-2.  **\`.catch(handler)\`**: This method schedules a callback to be executed if the promise is rejected.
+1. **\`reject(reason)\`**: This function is called to change the promise's state from "pending" to "rejected". The \`reason\` (usually an \`Error\` object) is passed to any \`.catch()\` handlers.<grok-card data-id="dd8e26" data-type="citation_card"></grok-card>
+2. **\`.catch(handler)\`**: This method schedules a callback to be executed if the promise is rejected.<grok-card data-id="60c59d" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promise Rejection**: The state of a promise that represents a failed operation.
--   **\`reject\`**: The function to call to reject a promise.
--   **\`.catch()\`**: The method for handling promise rejections.
+- **Promise Rejection**: The state of a promise that represents a failed operation.<grok-card data-id="4848f7" data-type="citation_card"></grok-card>
+- **\`reject\`**: The function to call to reject a promise.<grok-card data-id="7d6cc8" data-type="citation_card"></grok-card>
+- **\`.catch()\`**: The method for handling promise rejections.<grok-card data-id="5a3ea8" data-type="citation_card"></grok-card>
 `,
-  'fetch-api-data': `
+  "fetch-api-data": `
 ### 💡 Problem Breakdown
 The \`fetch\` API is the modern, promise-based way to make network requests in the browser. The task is to use \`fetch\` to retrieve data from a public API and display it.
 
@@ -98,15 +98,15 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
     console.error("Fetch failed:", error);
   });
 \`\`\`
-1.  **\`fetch(url)\`**: Returns a promise that resolves to the HTTP \`Response\`.
-2.  **\`response.json()\`**: Returns another promise that resolves with the result of parsing the response body text as JSON.
-3.  **Chaining**: We use a chain of \`.then()\` calls to handle these two asynchronous steps in sequence.
+1. **\`fetch(url)\`**: Returns a promise that resolves to the HTTP \`Response\`.<grok-card data-id="e80fd9" data-type="citation_card"></grok-card>
+2. **\`response.json()\`**: Returns another promise that resolves with the result of parsing the response body text as JSON.<grok-card data-id="6c8bb0" data-type="citation_card"></grok-card>
+3. **Chaining**: We use a chain of \`.then()\` calls to handle these two asynchronous steps in sequence.<grok-card data-id="10c669" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Fetch API**: A browser interface for making network requests.
--   **Promise Chaining**: Handling a sequence of asynchronous operations.
+- **Fetch API**: A browser interface for making network requests.<grok-card data-id="57301b" data-type="citation_card"></grok-card>
+- **Promise Chaining**: Handling a sequence of asynchronous operations.<grok-card data-id="e37383" data-type="citation_card"></grok-card>
 `,
-  'async-await-syntax': `
+  "async-await-syntax": `
 ### 💡 Problem Breakdown
 \`async/await\` is modern (ES2017) syntax built on top of Promises. It allows you to write asynchronous code that looks and feels synchronous, which is often easier to read, write, and debug than long \`.then()\` chains.
 
@@ -124,14 +124,14 @@ async function fetchTodo() {
 }
 fetchTodo();
 \`\`\`
-1.  **\`async function\`**: The \`async\` keyword makes a function return a promise implicitly.
-2.  **\`await\`**: The \`await\` keyword can only be used inside an \`async\` function. It pauses execution, waits for the promise on its right to resolve, and then resumes with the resolved value.
-3.  **Error Handling**: With \`async/await\`, you can use standard synchronous \`try...catch\` blocks for error handling.
+1. **\`async function\`**: The \`async\` keyword makes a function return a promise implicitly.<grok-card data-id="53ca9c" data-type="citation_card"></grok-card>
+2. **\`await\`**: The \`await\` keyword can only be used inside an \`async\` function. It pauses execution, waits for the promise on its right to resolve, and then resumes with the resolved value.<grok-card data-id="ef8eb3" data-type="citation_card"></grok-card>
+3. **Error Handling**: With \`async/await\`, you can use standard synchronous \`try...catch\` blocks for error handling.<grok-card data-id="d44bc4" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`async/await\`**: Syntactic sugar for handling Promises that improves code readability and simplifies error handling.
+- **\`async/await\`**: Syntactic sugar for handling Promises that improves code readability and simplifies error handling.<grok-card data-id="4dbaf4" data-type="citation_card"></grok-card>
 `,
-  'promise-chaining': `
+  "promise-chaining": `
 ### 💡 Problem Breakdown
 The \`.then()\` method of a Promise always returns a *new* promise. This is what allows you to chain them. You can perform a sequence of asynchronous or synchronous steps, where each step depends on the result of the previous one.
 
@@ -152,13 +152,13 @@ Promise.resolve(10)
     console.log('Final:', finalValue); // 25
   });
 \`\`\`
-1.  **Passing Values**: The resolved value of one promise is passed as the argument to the next \`.then()\` handler in the chain.
-2.  **Returning Promises**: You can also return another promise from a \`.then()\` handler, and the chain will wait for that new promise to resolve before continuing.
+1. **Passing Values**: The resolved value of one promise is passed as the argument to the next \`.then()\` handler in the chain.<grok-card data-id="c0dbf0" data-type="citation_card"></grok-card>
+2. **Returning Promises**: You can also return another promise from a \`.then()\` handler, and the chain will wait for that new promise to resolve before continuing.<grok-card data-id="9c1e4c" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promise Chaining**: The core mechanism for handling sequential asynchronous tasks with promises.
+- **Promise Chaining**: The core mechanism for handling sequential asynchronous tasks with promises.<grok-card data-id="de0767" data-type="citation_card"></grok-card>
 `,
-  'async-await-error-handling': `
+  "async-await-error-handling": `
 ### 💡 Problem Breakdown
 A key advantage of \`async/await\` is that it allows you to handle errors from asynchronous operations using standard, synchronous \`try...catch\` blocks. This is often cleaner and more intuitive than chaining \`.catch()\` methods.
 
@@ -175,13 +175,13 @@ async function testError() {
 }
 testError();
 \`\`\`
-1.  **\`await\` Rejection**: When you \`await\` a promise that rejects, it throws an exception at that line.
-2.  **\`try...catch\`**: This exception is then caught by the surrounding \`try...catch\` block, just like a synchronous error.
+1. **\`await\` Rejection**: When you \`await\` a promise that rejects, it throws an exception at that line.<grok-card data-id="5bf077" data-type="citation_card"></grok-card>
+2. **\`try...catch\`**: This exception is then caught by the surrounding \`try...catch\` block, just like a synchronous error.<grok-card data-id="e4b251" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Asynchronous Error Handling**: Using \`try...catch\` with \`async/await\` provides a unified error handling model for both sync and async code.
+- **Asynchronous Error Handling**: Using \`try...catch\` with \`async/await\` provides a unified error handling model for both sync and async code.<grok-card data-id="1fcbc1" data-type="citation_card"></grok-card>
 `,
-  'promise-all': `
+  "promise-all": `
 ### 💡 Problem Breakdown
 \`Promise.all()\` is a static method that takes an array of promises. It returns a single new promise that fulfills when *all* of the input promises have fulfilled. The resolved value is an array of the results from the input promises, in the same order.
 
@@ -196,13 +196,13 @@ Promise.all([p1, p2]).then(values => {
   console.log(values);
 });
 \`\`\`
-This is useful for running multiple independent asynchronous operations concurrently and then doing something after they have all finished.
+This is useful for running multiple independent asynchronous operations concurrently and then doing something after they have all finished.<grok-card data-id="4b8451" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.all()\`**: A method for concurrently executing multiple async operations and waiting for them all to complete successfully.
--   **Concurrency**: Starting multiple tasks at the same time.
+- **\`Promise.all()\`**: A method for concurrently executing multiple async operations and waiting for them all to complete successfully.<grok-card data-id="d46716" data-type="citation_card"></grok-card>
+- **Concurrency**: Starting multiple tasks at the same time.<grok-card data-id="61712a" data-type="citation_card"></grok-card>
 `,
-  'promise-all-rejection': `
+  "promise-all-rejection": `
 ### 💡 Problem Breakdown
 An important behavior of \`Promise.all()\` is that it is "fail-fast." If *any* of the input promises reject, the main \`Promise.all()\` promise immediately rejects with the reason of that first promise that rejected. It does not wait for the other promises to finish.
 
@@ -221,9 +221,9 @@ Promise.all([p1, p2])
   });
 \`\`\`
 ### 📚 Key Concepts
--   **Fail-Fast Behavior**: A characteristic of \`Promise.all()\` where it rejects immediately on the first failure.
+- **Fail-Fast Behavior**: A characteristic of \`Promise.all()\` where it rejects immediately on the first failure.<grok-card data-id="847bad" data-type="citation_card"></grok-card>
 `,
-  'promise-race': `
+  "promise-race": `
 ### 💡 Problem Breakdown
 \`Promise.race()\` is a static method that takes an array of promises. It returns a new promise that settles (either fulfills or rejects) as soon as the *first* promise in the array settles.
 
@@ -237,12 +237,12 @@ Promise.race([p1, p2]).then(result => {
   console.log(result); // "two"
 });
 \`\`\`
-1.  **First to Settle**: \`p2\` will resolve after 100ms. Since this is before \`p1\` resolves (at 500ms), the promise returned by \`Promise.race()\` will resolve with the value "two".
+1. **First to Settle**: \`p2\` will resolve after 100ms. Since this is before \`p1\` resolves (at 500ms), the promise returned by \`Promise.race()\` will resolve with the value "two".<grok-card data-id="c75a91" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.race()\`**: A method for handling multiple promises where you only care about the result of the first one to finish. Useful for scenarios like a timeout.
+- **\`Promise.race()\`**: A method for handling multiple promises where you only care about the result of the first one to finish. Useful for scenarios like a timeout.<grok-card data-id="2a93ec" data-type="citation_card"></grok-card>
 `,
-  'event-loop-macrotask-microtask': `
+  "event-loop-macrotask-microtask": `
 ### 💡 Problem Breakdown
 This is a core conceptual problem about the JavaScript Event Loop. The Event Loop has different queues for different types of asynchronous tasks. The two main queues are the **Macrotask Queue** (or just "task queue") and the **Microtask Queue**. The key rule is: after each macrotask, the event loop runs *all* tasks in the microtask queue to completion before starting the next macrotask.
 
@@ -262,17 +262,17 @@ Promise.resolve().then(() => {
 console.log('End');
 \`\`\`
 **Output Order:**
-1.  \`Start\` (Synchronous)
-2.  \`End\` (Synchronous)
-3.  \`Promise (Microtask)\` (Microtask queue is flushed after sync code)
-4.  \`Timeout (Macrotask)\` (Event loop pulls this from the macrotask queue next)
+1. \`Start\` (Synchronous)
+2. \`End\` (Synchronous)
+3. \`Promise (Microtask)\` (Microtask queue is flushed after sync code)<grok-card data-id="b8400b" data-type="citation_card"></grok-card>
+4. \`Timeout (Macrotask)\` (Event loop pulls this from the macrotask queue next)<grok-card data-id="05882d" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Event Loop**: The mechanism that allows JavaScript to be non-blocking.
--   **Macrotask Queue**: For tasks like \`setTimeout\`, \`setInterval\`, I/O, UI rendering.
--   **Microtask Queue**: For tasks like \`Promise.then()\`, \`process.nextTick\` (Node.js). Microtasks have higher priority.
+- **Event Loop**: The mechanism that allows JavaScript to be non-blocking.<grok-card data-id="8d4b48" data-type="citation_card"></grok-card>
+- **Macrotask Queue**: For tasks like \`setTimeout\`, \`setInterval\`, I/O, UI rendering.<grok-card data-id="c07475" data-type="citation_card"></grok-card>
+- **Microtask Queue**: For tasks like \`Promise.then()\`, \`process.nextTick\` (Node.js). Microtasks have higher priority.<grok-card data-id="c3503e" data-type="citation_card"></grok-card>
 `,
-  'callback-hell-conceptual': `
+  "callback-hell-conceptual": `
 ### 💡 Problem Breakdown
 "Callback hell" (or the "pyramid of doom") is an anti-pattern that arises from deeply nested asynchronous callbacks. As each async operation depends on the one before it, the code becomes increasingly indented, making it extremely difficult to read, reason about, and handle errors in.
 
@@ -289,14 +289,14 @@ getData(function (a) {
   }, handleErrorB);
 }, handleErrorA);
 \`\`\`
-1.  **Readability**: The deep nesting makes the logical flow hard to follow.
-2.  **Error Handling**: Managing errors at each separate level is cumbersome.
-3.  **The Solution**: Promises and \`async/await\` were specifically designed to solve this problem, allowing you to write asynchronous code in a flat, linear, and more readable style.
+1. **Readability**: The deep nesting makes the logical flow hard to follow.<grok-card data-id="b19983" data-type="citation_card"></grok-card>
+2. **Error Handling**: Managing errors at each separate level is cumbersome.<grok-card data-id="f340e1" data-type="citation_card"></grok-card>
+3. **The Solution**: Promises and \`async/await\` were specifically designed to solve this problem, allowing you to write asynchronous code in a flat, linear, and more readable style.<grok-card data-id="b6caa5" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Callback Hell**: An anti-pattern resulting from deeply nested asynchronous callbacks.
+- **Callback Hell**: An anti-pattern resulting from deeply nested asynchronous callbacks.<grok-card data-id="2e4836" data-type="citation_card"></grok-card>
 `,
-  'promisify-callback-function': `
+  "promisify-callback-function": `
 ### 💡 Problem Breakdown
 "Promisification" is the process of converting a function that takes a classic "error-first" callback into a function that returns a promise. This allows you to use older, callback-based APIs with modern promise-based syntax like \`.then()\` or \`async/await\`.
 
@@ -327,14 +327,14 @@ function promisified(val) {
   });
 }
 \`\`\`
-1.  **Return \`new Promise\`**: The wrapper immediately returns a promise.
-2.  **Call Original**: Inside the executor, we call the original function.
-3.  **Resolve/Reject**: In the callback of the original function, we check the \`err\` argument. If it exists, we \`reject\` the promise. Otherwise, we \`resolve\` it with the result.
+1. **Return \`new Promise\`**: The wrapper immediately returns a promise.<grok-card data-id="84a366" data-type="citation_card"></grok-card>
+2. **Call Original**: Inside the executor, we call the original function.<grok-card data-id="c1c1c6" data-type="citation_card"></grok-card>
+3. **Resolve/Reject**: In the callback of the original function, we check the \`err\` argument. If it exists, we \`reject\` the promise. Otherwise, we \`resolve\` it with the result.<grok-card data-id="420c7a" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promisification**: A pattern for modernizing callback-based APIs.
+- **Promisification**: A pattern for modernizing callback-based APIs.<grok-card data-id="eb78d6" data-type="citation_card"></grok-card>
 `,
-  'promise-finally': `
+  "promise-finally": `
 ### 💡 Problem Breakdown
 The \`.finally()\` method (ES2018) is used to specify a callback that will be executed when a promise is "settled" – that is, either fulfilled (resolved) or rejected. It's useful for cleanup code that needs to run regardless of the outcome, like hiding a loading spinner.
 
@@ -348,12 +348,12 @@ new Promise(resolve => resolve("Success"))
     console.log("This will run no matter what.");
   });
 \`\`\`
-1.  **`.finally(handler)`**: The handler function receives no arguments and its return value is ignored.
+1. **\`.finally(handler)\`**: The handler function receives no arguments and its return value is ignored.
 
 ### 📚 Key Concepts
--   **`.finally()`**: A method for running cleanup code after a promise settles.
+- **\`.finally()\`**: A method for running cleanup code after a promise settles.
 `,
-  'async-await-sequential': `
+  "async-await-sequential": `
 ### 💡 Problem Breakdown
 A common requirement in asynchronous programming is to perform a series of operations in a specific order, where each operation must wait for the previous one to complete. \`async/await\` makes this incredibly simple and readable.
 
@@ -370,12 +370,12 @@ async function doSteps() {
   console.log(\`Step 2 finished with: \${result2}\`);
 }
 \`\`\`
-The total execution time will be the sum of the delays, as the second operation doesn't start until the first one is complete.
+The total execution time will be the sum of the delays, as the second operation doesn't start until the first one is complete.<grok-card data-id="11c000" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Sequential Execution**: \`async/await\` provides a linear, top-to-bottom code flow for sequential asynchronous tasks.
+- **Sequential Execution**: \`async/await\` provides a linear, top-to-bottom code flow for sequential asynchronous tasks.<grok-card data-id="c4367e" data-type="citation_card"></grok-card>
 `,
-  'async-await-parallel': `
+  "async-await-parallel": `
 ### 💡 Problem Breakdown
 When asynchronous operations do not depend on each other, it's much more efficient to run them in parallel (concurrently) rather than sequentially. The goal is to start all operations at once and then wait for them all to finish.
 
@@ -392,13 +392,13 @@ async function doParallel() {
   console.log(\`Finished with: \${result1}, \${result2}\`);
 }
 \`\`\`
-The total execution time will be the time of the *longest* operation, not the sum of them.
+The total execution time will be the time of the *longest* operation, not the sum of them.<grok-card data-id="dc51dd" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Concurrency**: Running multiple tasks at the same time.
--   **\`Promise.all()\`**: The primary tool for managing concurrent promise-based operations.
+- **Concurrency**: Running multiple tasks at the same time.<grok-card data-id="5181d8" data-type="citation_card"></grok-card>
+- **\`Promise.all()\`**: The primary tool for managing concurrent promise-based operations.<grok-card data-id="3f3fa0" data-type="citation_card"></grok-card>
 `,
-  'promise-allsettled': `
+  "promise-allsettled": `
 ### 💡 Problem Breakdown
 \`Promise.allSettled()\` (ES2020) is a promise combinator that is useful when you want to know the outcome of several independent asynchronous operations. Unlike \`Promise.all\`, it never rejects. It waits for all promises to settle (either fulfill or reject) and then returns a promise that resolves with an array of objects describing the outcome of each promise.
 
@@ -416,12 +416,12 @@ Promise.allSettled([p1, p2]).then(results => {
   ] */
 });
 \`\`\`
-This is ideal for when you want to process the results of all operations, even if some of them failed.
+This is ideal for when you want to process the results of all operations, even if some of them failed.<grok-card data-id="fec578" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.allSettled()\`**: A method to get the outcome of every promise in an iterable, without the fail-fast behavior of \`Promise.all\`.
+- **\`Promise.allSettled()\`**: A method to get the outcome of every promise in an iterable, without the fail-fast behavior of \`Promise.all\`.<grok-card data-id="af7b2a" data-type="citation_card"></grok-card>
 `,
-  'promise-any': `
+  "promise-any": `
 ### 💡 Problem Breakdown
 \`Promise.any()\` (ES2021) takes an array of promises and returns a single promise that fulfills as soon as *any* of the input promises fulfill, with the value of that first fulfilled promise. It's the opposite of \`Promise.all\` in this regard. It only rejects if *all* of the input promises reject.
 
@@ -435,13 +435,13 @@ Promise.any([p1, p2]).then(result => {
   console.log(result); // "First Success"
 });
 \`\`\`
-This is useful for scenarios like fetching a resource from multiple endpoints and taking whichever one responds fastest.
+This is useful for scenarios like fetching a resource from multiple endpoints and taking whichever one responds fastest.<grok-card data-id="eaa18e" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.any()\`**: A method to get the value of the first promise to fulfill.
--   **Redundancy**: A common use case for this method is to build redundant, fault-tolerant systems.
+- **\`Promise.any()\`**: A method to get the value of the first promise to fulfill.<grok-card data-id="6fcd0c" data-type="citation_card"></grok-card>
+- **Redundancy**: A common use case for this method is to build redundant, fault-tolerant systems.<grok-card data-id="f4fced" data-type="citation_card"></grok-card>
 `,
-  'fetch-post-request': `
+  "fetch-post-request": `
 ### 💡 Problem Breakdown
 The \`fetch\` API can be used for any HTTP method, not just GET. To make a POST request, you need to provide a second argument to \`fetch\`: an options object that specifies the method, headers, and body of the request.
 
@@ -461,15 +461,15 @@ async function postData(url = '', data = {}) {
 
 postData('https://jsonplaceholder.typicode.com/posts', { title: 'foo', body: 'bar' });
 \`\`\`
-1.  **\`method: 'POST'\`**: Specifies the HTTP method.
-2.  **`headers`**: An object containing request headers. \`Content-Type\` is crucial for the server to understand the format of the body.
-3.  **`body`**: The data to be sent. It must be a string, so we use \`JSON.stringify()\` for JSON data.
+1. **\`method: 'POST'\`**: Specifies the HTTP method.<grok-card data-id="9a1dbc" data-type="citation_card"></grok-card>
+2. **\`headers\`**: An object containing request headers. \`Content-Type\` is crucial for the server to understand the format of the body.<grok-card data-id="0d5fd9" data-type="citation_card"></grok-card>
+3. **\`body\`**: The data to be sent. It must be a string, so we use \`JSON.stringify()\` for JSON data.<grok-card data-id="16a535" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **HTTP Methods**: Understanding different HTTP verbs like GET, POST, PUT, DELETE.
--   **HTTP Headers**: Metadata sent with a request to provide information to the server.
+- **HTTP Methods**: Understanding different HTTP verbs like GET, POST, PUT, DELETE.<grok-card data-id="46c46e" data-type="citation_card"></grok-card>
+- **HTTP Headers**: Metadata sent with a request to provide information to the server.<grok-card data-id="1425b8" data-type="citation_card"></grok-card>
 `,
-  'fetch-error-handling': `
+  "fetch-error-handling": `
 ### 💡 Problem Breakdown
 A common pitfall with the \`fetch\` API is that it only rejects its promise on a network failure (e.g., DNS error, no internet connection). It does **not** reject on HTTP error statuses like 404 (Not Found) or 500 (Internal Server Error). You must check for these manually.
 
@@ -495,14 +495,14 @@ async function checkStatus(url) {
 
 checkStatus('https://jsonplaceholder.typicode.com/posts/9999'); // Will trigger the error
 \`\`\`
-1.  **`response.ok`**: This is a boolean property that is \`true\` for successful HTTP statuses (200-299).
-2.  **Manual \`throw\`**: If \`response.ok\` is false, we must manually \`throw\` an error to trigger our \`catch\` block.
+1. **\`response.ok\`**: This is a boolean property that is \`true\` for successful HTTP statuses (200-299).<grok-card data-id="4c94d4" data-type="citation_card"></grok-card>
+2. **Manual \`throw\`**: If \`response.ok\` is false, we must manually \`throw\` an error to trigger our \`catch\` block.<grok-card data-id="59eec4" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **HTTP Status Codes**: Understanding what codes like 200, 404, and 500 mean.
--   **Defensive Programming**: Explicitly checking for error conditions instead of assuming success.
+- **HTTP Status Codes**: Understanding what codes like 200, 404, and 500 mean.<grok-card data-id="ee4ee3" data-type="citation_card"></grok-card>
+- **Defensive Programming**: Explicitly checking for error conditions instead of assuming success.<grok-card data-id="f1fd4e" data-type="citation_card"></grok-card>
 `,
-  'setinterval-and-clear': `
+  "setinterval-and-clear": `
 ### 💡 Problem Breakdown
 \`setInterval\` is a Web API similar to \`setTimeout\`, but it executes a callback function repeatedly at a specified interval. It's crucial to have a way to stop this repetition, which is done using \`clearInterval\`.
 
@@ -522,20 +522,20 @@ const intervalId = setInterval(() => {
   }
 }, 500);
 \`\`\`
-1.  **`setInterval(callback, delay)`**: Schedules the callback to run every \`delay\` milliseconds.
-2.  **`intervalId`**: The function returns a numeric ID.
-3.  **`clearInterval(id)`**: This function is used to stop the interval associated with the given ID.
+1. **\`setInterval(callback, delay)\`**: Schedules the callback to run every \`delay\` milliseconds.<grok-card data-id="eafd87" data-type="citation_card"></grok-card>
+2. **\`intervalId\`**: The function returns a numeric ID.<grok-card data-id="645cc5" data-type="citation_card"></grok-card>
+3. **\`clearInterval(id)\`**: This function is used to stop the interval associated with the given ID.<grok-card data-id="73865c" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Timers**: Using APIs to schedule code execution in the future.
--   **Resource Management**: It's important to clear intervals when they are no longer needed to prevent memory leaks and unwanted code execution.
+- **Timers**: Using APIs to schedule code execution in the future.<grok-card data-id="be9ca2" data-type="citation_card"></grok-card>
+- **Resource Management**: It's important to clear intervals when they are no longer needed to prevent memory leaks and unwanted code execution.<grok-card data-id="af2185" data-type="citation_card"></grok-card>
 `,
-  'microtask-queue-order': `
+  "microtask-queue-order": `
 ### 💡 Problem Breakdown
-This is a conceptual problem that delves deeper into the event loop. When a promise resolves, its `.then()` callbacks are added to the microtask queue. The event loop will always execute *all* tasks currently in the microtask queue before moving on to the next macrotask. Microtasks themselves are also executed in the order they were queued.
+This is a conceptual problem that delves deeper into the event loop. When a promise resolves, its \`.then()\` callbacks are added to the microtask queue. The event loop will always execute *all* tasks currently in the microtask queue before moving on to the next macrotask. Microtasks themselves are also executed in the order they were queued.
 
 ### ⚙️ Solution Walkthrough
-Multiple `.then()` handlers are attached to the same resolved promise.
+Multiple \`.then()\` handlers are attached to the same resolved promise.
 \`\`\`javascript
 const p = Promise.resolve();
 
@@ -549,13 +549,13 @@ console.log('Sync');
 2. \`Microtask 1\`
 3. \`Microtask 2\`
 
-The synchronous code runs first. Then, the event loop finds two tasks in the microtask queue and runs them in the order they were added.
+The synchronous code runs first. Then, the event loop finds two tasks in the microtask queue and runs them in the order they were added.<grok-card data-id="b34263" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Microtask Queue**: A high-priority queue for short, immediate follow-up tasks.
--   **FIFO (First-In, First-Out)**: Both the macrotask and microtask queues generally follow a FIFO execution order.
+- **Microtask Queue**: A high-priority queue for short, immediate follow-up tasks.<grok-card data-id="03200c" data-type="citation_card"></grok-card>
+- **FIFO (First-In, First-Out)**: Both the macrotask and microtask queues generally follow a FIFO execution order.<grok-card data-id="33601f" data-type="citation_card"></grok-card>
 `,
-  'async-iife': `
+  "async-iife": `
 ### 💡 Problem Breakdown
 An Immediately Invoked Function Expression (IIFE) can be made \`async\`. This is a common pattern for running an asynchronous operation at the top level of a script, especially in environments that don't yet support top-level \`await\`.
 
@@ -572,14 +572,14 @@ An anonymous function is declared with \`async\` and then immediately invoked.
   }
 })();
 \`\`\`
-1.  **`(async () => { ... })`**: Defines an anonymous async function expression.
-2.  **`()`**: The final parentheses execute it immediately.
-3.  **Benefit**: This creates a self-contained async scope, allowing you to use \`await\` without creating a named function.
+1. **\`(async () => { ... })\`**: Defines an anonymous async function expression.<grok-card data-id="1ffd3d" data-type="citation_card"></grok-card>
+2. **\`()\`**: The final parentheses execute it immediately.<grok-card data-id="7cd69d" data-type="citation_card"></grok-card>
+3. **Benefit**: This creates a self-contained async scope, allowing you to use \`await\` without creating a named function.<grok-card data-id="1c0e52" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Async IIFE**: A pattern for running async code at the script level.
+- **Async IIFE**: A pattern for running async code at the script level.<grok-card data-id="89253d" data-type="citation_card"></grok-card>
 `,
-  'promise-resolve-static': `
+  "promise-resolve-static": `
 ### 💡 Problem Breakdown
 \`Promise.resolve(value)\` is a static helper method that returns a \`Promise\` object that is resolved with the given value. If the value is a promise itself, that promise is returned. If the value is a "thenable" (an object with a \`.then\` method), the returned promise will "follow" that thenable.
 
@@ -590,12 +590,12 @@ const p = Promise.resolve("Instant Success");
 
 p.then(value => console.log(value)); // "Instant Success"
 \`\`\`
-This is useful as a shortcut for creating a promise that you know will be immediately successful, often as a starting point for a promise chain or in test environments.
+This is useful as a shortcut for creating a promise that you know will be immediately successful, often as a starting point for a promise chain or in test environments.<grok-card data-id="f38cf1" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.resolve()\`**: A factory method for creating fulfilled promises.
+- **\`Promise.resolve()\`**: A factory method for creating fulfilled promises.<grok-card data-id="4777f1" data-type="citation_card"></grok-card>
 `,
-  'promise-reject-static': `
+  "promise-reject-static": `
 ### 💡 Problem Breakdown
 \`Promise.reject(reason)\` is a static helper method that returns a \`Promise\` object that is rejected with the given reason.
 
@@ -606,12 +606,12 @@ const p = Promise.reject(new Error("Instant Failure"));
 
 p.catch(error => console.error(error.message)); // "Instant Failure"
 \`\`\`
-This is a concise way to create a promise that is guaranteed to fail, often used for signaling errors early in an async function.
+This is a concise way to create a promise that is guaranteed to fail, often used for signaling errors early in an async function.<grok-card data-id="509b93" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.reject()\`**: A factory method for creating rejected promises.
+- **\`Promise.reject()\`**: A factory method for creating rejected promises.<grok-card data-id="a1bfcb" data-type="citation_card"></grok-card>
 `,
-  'async-generator-conceptual': `
+  "async-generator-conceptual": `
 ### 💡 Problem Breakdown
 An async generator (\`async function*\`) is a powerful feature that combines the pausable nature of generators with the non-blocking nature of async functions. It allows you to create an "async iterable" – a sequence of values that are generated asynchronously.
 
@@ -633,16 +633,16 @@ async function* fetchPages(url) {
   }
 }
 \`\`\`
-1.  **\`async function*\`**: The syntax for an async generator.
-2.  **\`await\`**: Can be used to wait for async operations.
-3.  **\`yield\`**: Produces the next value in the async sequence.
-4.  **Consumption**: This is consumed using a \`for-await...of\` loop.
+1. **\`async function*\`**: The syntax for an async generator.<grok-card data-id="883807" data-type="citation_card"></grok-card>
+2. **\`await\`**: Can be used to wait for async operations.<grok-card data-id="e3c0ff" data-type="citation_card"></grok-card>
+3. **\`yield\`**: Produces the next value in the async sequence.<grok-card data-id="1d083e" data-type="citation_card"></grok-card>
+4. **Consumption**: This is consumed using a \`for-await...of\` loop.<grok-card data-id="e43ed6" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Async Generator**: A function that returns an async iterator.
--   **Async Iterable**: An object that can be iterated over asynchronously.
+- **Async Generator**: A function that returns an async iterator.<grok-card data-id="b7eb63" data-type="citation_card"></grok-card>
+- **Async Iterable**: An object that can be iterated over asynchronously.<grok-card data-id="c0afa6" data-type="citation_card"></grok-card>
 `,
-  'for-await-of-loop-conceptual': `
+  "for-await-of-loop-conceptual": `
 ### 💡 Problem Breakdown
 The \`for-await...of\` loop (ES2018) is the counterpart to the regular \`for...of\` loop, but for **async iterables**. It allows you to iterate over a sequence of values that are generated asynchronously, automatically handling the \`await\`ing of each value.
 
@@ -659,12 +659,12 @@ async function consumePages() {
   }
 }
 \`\`\`
-This provides a very clean, synchronous-looking syntax for processing asynchronous data streams.
+This provides a very clean, synchronous-looking syntax for processing asynchronous data streams.<grok-card data-id="c58bcd" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`for-await...of\`**: A loop for iterating over async iterables.
+- **\`for-await...of\`**: A loop for iterating over async iterables.<grok-card data-id="7e4d8a" data-type="citation_card"></grok-card>
 `,
-  'web-workers-conceptual': `
+  "web-workers-conceptual": `
 ### 💡 Problem Breakdown
 JavaScript in the browser runs on a single main thread. If you run a long, computationally expensive task on this thread, the entire user interface (UI) will freeze and become unresponsive. Web Workers solve this by allowing you to run a script on a background thread, completely separate from the main thread.
 
@@ -693,14 +693,14 @@ self.onmessage = function(e) {
   self.postMessage(result);
 };
 \`\`\`
-1.  **Isolation**: The worker cannot directly access the DOM.
-2.  **Communication**: Communication happens via a messaging system (\`postMessage\` and \`onmessage\`).
+1. **Isolation**: The worker cannot directly access the DOM.<grok-card data-id="60adda" data-type="citation_card"></grok-card>
+2. **Communication**: Communication happens via a messaging system (\`postMessage\` and \`onmessage\`).<grok-card data-id="a950c6" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Web Workers**: A browser API for running scripts in the background.
--   **Multi-threading**: A way to achieve concurrency and prevent the UI from freezing.
+- **Web Workers**: A browser API for running scripts in the background.<grok-card data-id="13bea0" data-type="citation_card"></grok-card>
+- **Multi-threading**: A way to achieve concurrency and prevent the UI from freezing.<grok-card data-id="6df4d6" data-type="citation_card"></grok-card>
 `,
-  'abortcontroller-fetch': `
+  "abortcontroller-fetch": `
 ### 💡 Problem Breakdown
 The \`AbortController\` API provides a standard way to abort asynchronous tasks, most notably \`fetch\` requests. This is useful for scenarios like a user navigating away from a page while a request is still in progress, or cancelling a search when the user types something new.
 
@@ -721,14 +721,14 @@ fetch('https://some-slow-api.com/data', { signal })
 // After a short time, abort the request
 setTimeout(() => controller.abort(), 100);
 \`\`\`
-1.  **\`new AbortController()\`**: Creates a controller instance.
-2.  **`controller.signal`**: The \`signal\` property is an \`AbortSignal\` object that is passed to the async API.
-3.  **`controller.abort()`**: Calling this method signals to the API that the operation should be aborted. This causes the \`fetch\` promise to reject with an \`AbortError\`.
+1. **\`new AbortController()\`**: Creates a controller instance.<grok-card data-id="8ff24f" data-type="citation_card"></grok-card>
+2. **\`controller.signal\`**: The \`signal\` property is an \`AbortSignal\` object that is passed to the async API.<grok-card data-id="f2d55b" data-type="citation_card"></grok-card>
+3. **\`controller.abort()\`**: Calling this method signals to the API that the operation should be aborted. This causes the \`fetch\` promise to reject with an \`AbortError\`.<grok-card data-id="383264" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`AbortController\`**: A standard API for cancelling async operations.
+- **\`AbortController\`**: A standard API for cancelling async operations.<grok-card data-id="387214" data-type="citation_card"></grok-card>
 `,
-  'async-function-return-value': `
+  "async-function-return-value": `
 ### 💡 Problem Breakdown
 An \`async\` function *always* returns a Promise.
 - If the function explicitly returns a non-Promise value, the promise it returns will *resolve* with that value.
@@ -748,9 +748,9 @@ console.log(returnValue instanceof Promise); // true
 returnValue.then(val => console.log(val)); // "Some data"
 \`\`\`
 ### 📚 Key Concepts
--   **\`async\` Functions**: A core part of modern asynchronous JavaScript. They provide a cleaner syntax for functions that work with promises.
+- **\`async\` Functions**: A core part of modern asynchronous JavaScript. They provide a cleaner syntax for functions that work with promises.<grok-card data-id="0cb5cc" data-type="citation_card"></grok-card>
 `,
-  'then-chain-vs-await-sequence': `
+  "then-chain-vs-await-sequence": `
 ### 💡 Problem Breakdown
 This is a conceptual comparison. A sequence of dependent asynchronous operations can be written with a \`.then()\` chain or with a sequence of \`await\` statements. Functionally, they are very similar, but \`async/await\` is often considered more readable.
 
@@ -776,12 +776,12 @@ async function awaitSequence() {
   return result3;
 }
 \`\`\`
-The \`async/await\` version looks like standard synchronous code, which makes it easier to follow the logic and debug.
+The \`async/await\` version looks like standard synchronous code, which makes it easier to follow the logic and debug.<grok-card data-id="00fe89" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Readability**: A key goal of modern language features is to make code easier for humans to read and maintain.
+- **Readability**: A key goal of modern language features is to make code easier for humans to read and maintain.<grok-card data-id="4534bb" data-type="citation_card"></grok-card>
 `,
-  'top-level-await-conceptual': `
+  "top-level-await-conceptual": `
 ### 💡 Problem Breakdown
 Top-level \`await\` (ES2022) is a feature that allows the \`await\` keyword to be used at the top level of an ES module. This means you don't need to wrap it in an \`async\` function. It's particularly useful for modules that need to perform an async operation to initialize themselves.
 
@@ -798,9 +798,9 @@ import { config } from './config.js';
 console.log(config);
 \`\`\`
 ### 📚 Key Concepts
--   **Top-Level \`await\`**: A feature for handling async setup and initialization within modules.
+- **Top-Level \`await\`**: A feature for handling async setup and initialization within modules.<grok-card data-id="5c7c30" data-type="citation_card"></grok-card>
 `,
-  'promise-in-constructor-antipattern': `
+  "promise-in-constructor-antipattern": `
 ### 💡 Problem Breakdown
 This is a common mistake for developers new to Promises. It involves unnecessarily wrapping a value that is *already* a Promise inside a \`new Promise()\` constructor. This adds unnecessary complexity and can make error handling more difficult.
 
@@ -823,12 +823,12 @@ function goodWrapper() {
   return fetchData();
 }
 \`\`\`
-The \`Promise\` constructor should only be used to "promisify" older, callback-based APIs. If a function already returns a promise, you should just return it directly.
+The \`Promise\` constructor should only be used to "promisify" older, callback-based APIs. If a function already returns a promise, you should just return it directly.<grok-card data-id="036c27" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promise Composition**: Understanding that promises can be returned directly from \`.then()\` handlers and \`async\` functions to continue a chain.
+- **Promise Composition**: Understanding that promises can be returned directly from \`.then()\` handlers and \`async\` functions to continue a chain.<grok-card data-id="d217e7" data-type="citation_card"></grok-card>
 `,
-  'promise-constructor-use-case': `
+  "promise-constructor-use-case": `
 ### 💡 Problem Breakdown
 The primary *valid* use case for the \`new Promise()\` constructor is to adapt an asynchronous API that does not already use promises (e.g., one that uses callbacks or events) to the promise-based world.
 
@@ -851,9 +851,9 @@ async function run() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Promisification**: The pattern of converting callback-based APIs into promise-returning functions.
+- **Promisification**: The pattern of converting callback-based APIs into promise-returning functions.<grok-card data-id="0db69a" data-type="citation_card"></grok-card>
 `,
-  'requestanimationframe-conceptual': `
+  "requestanimationframe-conceptual": `
 ### 💡 Problem Breakdown
 \`requestAnimationFrame\` (rAF) is a browser API that is the preferred way to run animations in JavaScript. It tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. This is much more efficient and smoother than using \`setInterval\`.
 
@@ -877,13 +877,13 @@ function animationLoop() {
 // Start the animation
 requestAnimationFrame(animationLoop);
 \`\`\`
-1.  **Browser Optimization**: The browser can optimize animations scheduled with rAF, for example, by not running them when the tab is in the background.
-2.  **Timing**: The callback is typically run about 60 times per second, but this can vary depending on the display's refresh rate and system load.
+1. **Browser Optimization**: The browser can optimize animations scheduled with rAF, for example, by not running them when the tab is in the background.<grok-card data-id="a239d2" data-type="citation_card"></grok-card>
+2. **Timing**: The callback is typically run about 60 times per second, but this can vary depending on the display's refresh rate and system load.<grok-card data-id="52ee85" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`requestAnimationFrame\`**: The standard API for creating efficient JavaScript animations.
+- **\`requestAnimationFrame\`**: The standard API for creating efficient JavaScript animations.<grok-card data-id="5c2c15" data-type="citation_card"></grok-card>
 `,
-  'event-loop-starvation-conceptual': `
+  "event-loop-starvation-conceptual": `
 ### 💡 Problem Breakdown
 The event loop works because tasks (both macro and micro) are generally short. If a task takes too long, it "starves" the event loop, preventing other tasks from running. This can freeze a web page's UI or make a server unresponsive.
 
@@ -904,13 +904,13 @@ function microtaskLoop() {
 }
 microtaskLoop();
 \`\`\`
-1.  **Blocking**: As long as a synchronous task is running on the call stack, the event loop is blocked and cannot process anything from the macrotask or microtask queues.
-2.  **Microtask Starvation**: Because the microtask queue is fully flushed after each macrotask, a loop that continuously adds new microtasks can prevent the event loop from ever getting to the next macrotask (like rendering or a \`setTimeout\`).
+1. **Blocking**: As long as a synchronous task is running on the call stack, the event loop is blocked and cannot process anything from the macrotask or microtask queues.<grok-card data-id="94bfc6" data-type="citation_card"></grok-card>
+2. **Microtask Starvation**: Because the microtask queue is fully flushed after each macrotask, a loop that continuously adds new microtasks can prevent the event loop from ever getting to the next macrotask (like rendering or a \`setTimeout\`).<grok-card data-id="721c14" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Non-blocking I/O**: The philosophy behind Node.js and modern web development is to avoid long-running synchronous tasks that can starve the event loop.
+- **Non-blocking I/O**: The philosophy behind Node.js and modern web development is to avoid long-running synchronous tasks that can starve the event loop.<grok-card data-id="e65a9a" data-type="citation_card"></grok-card>
 `,
-  'promise-from-thenable': `
+  "promise-from-thenable": `
 ### 💡 Problem Breakdown
 A "thenable" is an object that has a \`.then()\` method, making it behave like a Promise. The \`Promise.resolve()\` method and the \`await\` keyword are smart enough to handle thenables, converting them into a standard Promise that follows their outcome.
 
@@ -928,12 +928,12 @@ async function run() {
   console.log(result); // "Resolved from a thenable!"
 }
 \`\`\`
-This interoperability is a key feature of the promise ecosystem.
+This interoperability is a key feature of the promise ecosystem.<grok-card data-id="47f2b9" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Thenable**: An object that defines a \`.then\` method, making it compatible with promise-based tools.
+- **Thenable**: An object that defines a \`.then\` method, making it compatible with promise-based tools.<grok-card data-id="adbfde" data-type="citation_card"></grok-card>
 `,
-  'async-function-as-method': `
+  "async-function-as-method": `
 ### 💡 Problem Breakdown
 You can define an \`async\` method directly within an ES6 class or an object literal. When this method is called, it automatically returns a promise.
 
@@ -951,9 +951,9 @@ const service = new DataService();
 service.fetchData(1).then(result => console.log(result));
 \`\`\`
 ### 📚 Key Concepts
--   **\`async\` Methods**: A clean syntax for defining asynchronous methods in classes and objects.
+- **\`async\` Methods**: A clean syntax for defining asynchronous methods in classes and objects.<grok-card data-id="efaac0" data-type="citation_card"></grok-card>
 `,
-  'async-error-propagation': `
+  "async-error-propagation": `
 ### 💡 Problem Breakdown
 Errors propagate naturally through \`async/await\` chains. If you \`await\` a function that throws an error (or returns a rejected promise), the \`await\` expression itself will throw that error, which can then be caught by a \`try...catch\` block in the calling function.
 
@@ -972,18 +972,18 @@ async function outer() {
   }
 }
 \`\`\`
-This shows that you don't need to put a \`try...catch\` block in every single async function; you can often handle errors at a higher level.
+This shows that you don't need to put a \`try...catch\` block in every single async function; you can often handle errors at a higher level.<grok-card data-id="8c2eda" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Error Propagation**: The process by which an error is passed up the call stack (or async call chain).
+- **Error Propagation**: The process by which an error is passed up the call stack (or async call chain).<grok-card data-id="7016ae" data-type="citation_card"></grok-card>
 `,
-  'microtask-vs-macrotask-timing': `
+  "microtask-vs-macrotask-timing": `
 ### 💡 Problem Breakdown
 This is a conceptual problem about the detailed execution order in the Node.js event loop, which has more distinct phases than the browser's loop. The general order of priority for async tasks is:
-1.  Synchronous Code
-2.  \`process.nextTick()\` callbacks (its own special queue)
-3.  Microtasks (\`Promise.then\`)
-4.  Macrotasks (in different phases: timers like \`setTimeout\`, then I/O, then \`setImmediate\`, then close callbacks)
+1. Synchronous Code
+2. \`process.nextTick()\` callbacks (its own special queue)
+3. Microtasks (\`Promise.then\`)
+4. Macrotasks (in different phases: timers like \`setTimeout\`, then I/O, then \`setImmediate\`, then close callbacks)
 
 ### ⚙️ Solution Walkthrough
 A conceptual log order.
@@ -1003,9 +1003,9 @@ console.log('Sync');
 // Immediate
 \`\`\`
 ### 📚 Key Concepts
--   **Node.js Event Loop**: A more complex event loop with distinct phases for different types of async operations.
+- **Node.js Event Loop**: A more complex event loop with distinct phases for different types of async operations.<grok-card data-id="1d525b" data-type="citation_card"></grok-card>
 `,
-  'promise-race-rejection': `
+  "promise-race-rejection": `
 ### 💡 Problem Breakdown
 This problem demonstrates the behavior of \`Promise.race()\` when one of the promises rejects. The \`Promise.race()\` promise will settle as soon as the first input promise settles, and it will adopt that promise's outcome. If the first one to finish is a rejection, \`Promise.race()\` will reject.
 
@@ -1020,11 +1020,11 @@ Promise.race([p1, p2])
   .catch(err => console.error(err)); // "Failure"
 \`\`\`
 ### 📚 Key Concepts
--   **\`Promise.race()\`**: Settles with the result of the first promise to settle, whether it's a fulfillment or a rejection.
+- **\`Promise.race()\`**: Settles with the result of the first promise to settle, whether it's a fulfillment or a rejection.<grok-card data-id="0bd5e0" data-type="citation_card"></grok-card>
 `,
-  'async-await-in-map': `
+  "async-await-in-map": `
 ### 💡 Problem Breakdown
-This is a very common pitfall. The \`.map()\` array method is not "promise-aware." If you pass an \`async\` function to \`.map()`, it will start all the async operations, but it will **not** wait for them to complete. It will immediately return an array of pending Promises.
+This is a very common pitfall. The \`.map()\` array method is not "promise-aware." If you pass an \`async\` function to \`.map()\`, it will start all the async operations, but it will **not** wait for them to complete. It will immediately return an array of pending Promises.
 
 ### ⚙️ Solution Walkthrough
 The incorrect and correct ways are shown.
@@ -1044,13 +1044,13 @@ async function processArray() {
   return results;
 }
 \`\`\`
-1.  **The Pitfall**: \`.map()\` is synchronous and doesn't know about \`await\`. It calls the \`async\` function for each item and moves on.
-2.  **The Solution**: First, use \`.map()\` to create an array of promises (starting all the operations concurrently), and then use \`await Promise.all()\` to wait for them all to finish.
+1. **The Pitfall**: \`.map()\` is synchronous and doesn't know about \`await\`. It calls the \`async\` function for each item and moves on.<grok-card data-id="863bb6" data-type="citation_card"></grok-card>
+2. **The Solution**: First, use \`.map()\` to create an array of promises (starting all the operations concurrently), and then use \`await Promise.all()\` to wait for them all to finish.<grok-card data-id="01bee2" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promise-Awareness**: Understanding which language constructs and methods work directly with promises and which do not.
+- **Promise-Awareness**: Understanding which language constructs and methods work directly with promises and which do not.<grok-card data-id="4ccbf5" data-type="citation_card"></grok-card>
 `,
-  'promise-any-rejection': `
+  "promise-any-rejection": `
 ### 💡 Problem Breakdown
 \`Promise.any()\` rejects only when *all* of its input promises have rejected. When it does, it rejects with a special \`AggregateError\` object. This error object has an \`.errors\` property which is an array containing all the individual rejection reasons.
 
@@ -1068,9 +1068,9 @@ Promise.any([p1, p2])
   });
 \`\`\`
 ### 📚 Key Concepts
--   **\`AggregateError\`**: A special error subclass used by \`Promise.any()\` to collect multiple errors.
+- **\`AggregateError\`**: A special error subclass used by \`Promise.any()\` to collect multiple errors.<grok-card data-id="249b7d" data-type="citation_card"></grok-card>
 `,
-  'fetch-with-headers': `
+  "fetch-with-headers": `
 ### 💡 Problem Breakdown
 HTTP headers are key-value pairs sent with a request to provide additional information to the server. The \`fetch\` API allows you to easily add custom headers via its options object.
 
@@ -1087,17 +1087,17 @@ async function getDataWithAuth() {
   return response.json();
 }
 \`\`\`
-1.  **`headers` property**: This property in the \`fetch\` options object takes an object of key-value pairs for the headers you want to send.
+1. **\`headers\` property**: This property in the \`fetch\` options object takes an object of key-value pairs for the headers you want to send.<grok-card data-id="57023f" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **HTTP Headers**: A fundamental part of the HTTP protocol used for authentication, content negotiation, caching, and more.
+- **HTTP Headers**: A fundamental part of the HTTP protocol used for authentication, content negotiation, caching, and more.<grok-card data-id="e94d7b" data-type="citation_card"></grok-card>
 `,
-  'promise-chain-error-handling': `
+  "promise-chain-error-handling": `
 ### 💡 Problem Breakdown
 One of the powerful features of promise chains is that a single \`.catch()\` at the end of the chain can handle a rejection from *any* of the preceding \`.then()\` blocks. When a promise in the chain rejects, the execution immediately jumps to the next available \`.catch()\` handler, skipping any intermediate \`.then()\` handlers.
 
 ### ⚙️ Solution Walkthrough
-An error is thrown in the first \`.then()`, skipping the second \`.then()\` and being caught by the final \`.catch()`.
+An error is thrown in the first \`.then()\`, skipping the second \`.then()\` and being caught by the final \`.catch()\`.
 \`\`\`javascript
 Promise.resolve()
   .then(() => {
@@ -1112,9 +1112,9 @@ Promise.resolve()
   });
 \`\`\`
 ### 📚 Key Concepts
--   **Error Propagation in Promises**: Errors are passed down the promise chain to the nearest rejection handler.
+- **Error Propagation in Promises**: Errors are passed down the promise chain to the nearest rejection handler.<grok-card data-id="301c18" data-type="citation_card"></grok-card>
 `,
-  'callback-vs-promise-readability': `
+  "callback-vs-promise-readability": `
 ### 💡 Problem Breakdown
 This is a conceptual problem to highlight the primary motivation for Promises. Promises allow you to write asynchronous code in a linear, composable way that is much easier to read and maintain than deeply nested callbacks.
 
@@ -1137,13 +1137,13 @@ step1()
   .then(result3 => { /* ... */ })
   .catch(handleError);
 \`\`\`
-The promise chain is flat, easier to read from top to bottom, and has a single, clean path for error handling.
+The promise chain is flat, easier to read from top to bottom, and has a single, clean path for error handling.<grok-card data-id="e45599" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Readability**: Writing code that is easy for humans to understand.
--   **Composability**: The ability to combine smaller pieces of logic (promises) into more complex ones.
+- **Readability**: Writing code that is easy for humans to understand.<grok-card data-id="23c689" data-type="citation_card"></grok-card>
+- **Composability**: The ability to combine smaller pieces of logic (promises) into more complex ones.<grok-card data-id="76c527" data-type="citation_card"></grok-card>
 `,
-  'async-await-destructuring': `
+  "async-await-destructuring": `
 ### 💡 Problem Breakdown
 This combines two modern JavaScript features. You can \`await\` a promise that resolves to an object and immediately destructure the result into variables in a single, concise statement.
 
@@ -1161,9 +1161,9 @@ async function processUser() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Syntactic Sugar**: A combination of features that allows for very expressive and clean code.
+- **Syntactic Sugar**: A combination of features that allows for very expressive and clean code.<grok-card data-id="7054dd" data-type="citation_card"></grok-card>
 `,
-  'creating-promise-race-manually': `
+  "creating-promise-race-manually": `
 ### 💡 Problem Breakdown
 This is a conceptual problem to understand how promise combinators can be built. You could implement \`Promise.race\` by creating a new promise. Then, iterate over the input promises and attach both a \`resolve\` and a \`reject\` handler to each one. The first handler to be called will settle the new, outer promise.
 
@@ -1178,13 +1178,13 @@ function myRace(promises) {
   });
 }
 \`\`\`
-1.  **\`Promise.resolve(p)\`**: This handles cases where items in the input array are not promises.
-2.  **`then(resolve, reject)`**: For each promise, we tell it to call our main \`resolve\` on success and our main \`reject\` on failure. Since promises can only be settled once, the first one to do so "wins".
+1. **\`Promise.resolve(p)\`**: This handles cases where items in the input array are not promises.<grok-card data-id="ff36a7" data-type="citation_card"></grok-card>
+2. **\`then(resolve, reject)\`**: For each promise, we tell it to call our main \`resolve\` on success and our main \`reject\` on failure. Since promises can only be settled once, the first one to do so "wins".<grok-card data-id="2d7d5a" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promise Constructor**: The fundamental building block for creating custom promise-based logic.
+- **Promise Constructor**: The fundamental building block for creating custom promise-based logic.<grok-card data-id="625fe9" data-type="citation_card"></grok-card>
 `,
-  'awaiting-non-promise': `
+  "awaiting-non-promise": `
 ### 💡 Problem Breakdown
 The \`await\` keyword is designed to work with promises. However, if you \`await\` a value that is not a promise (a "non-thenable"), JavaScript will treat it as if it were an immediately resolved promise with that value.
 
@@ -1196,12 +1196,12 @@ async function test() {
   console.log(result); // 42
 }
 \`\`\`
-The function will still pause briefly (the value is wrapped in a resolved promise and passed to the microtask queue) and then resume with the value.
+The function will still pause briefly (the value is wrapped in a resolved promise and passed to the microtask queue) and then resume with the value.<grok-card data-id="3dca3c" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`await\` operator**: A flexible operator that can handle both promise and non-promise values.
+- **\`await\` operator**: A flexible operator that can handle both promise and non-promise values.<grok-card data-id="e80069" data-type="citation_card"></grok-card>
 `,
-  'async-iteration-protocol-conceptual': `
+  "async-iteration-protocol-conceptual": `
 ### 💡 Problem Breakdown
 This is the asynchronous version of the iterator protocol. An object is an **async iterable** if it has a method with the key \`Symbol.asyncIterator\`. This method must return an **async iterator** object. The async iterator must have a \`.next()\` method that returns a **Promise** which resolves to the standard \`{ value, done }\` object.
 
@@ -1225,9 +1225,9 @@ const myAsyncIterable = {
 // This would be consumed with a for-await...of loop.
 \`\`\`
 ### 📚 Key Concepts
--   **Async Iterator Protocol**: The set of rules that allow constructs like \`for-await...of\` to traverse an asynchronous sequence.
+- **Async Iterator Protocol**: The set of rules that allow constructs like \`for-await...of\` to traverse an asynchronous sequence.<grok-card data-id="4c0815" data-type="citation_card"></grok-card>
 `,
-  'custom-promise-class-conceptual': `
+  "custom-promise-class-conceptual": `
 ### 💡 Problem Breakdown
 You can create a custom promise class by extending the built-in \`Promise\` class. This allows you to add custom methods to your promise instances. A key part of this is using the \`Symbol.species\` static getter to ensure that methods like \`.then()\` return instances of the base \`Promise\` class, which is usually the desired behavior.
 
@@ -1248,10 +1248,10 @@ class MyPromise extends Promise {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Subclassing**: Extending built-in JavaScript classes.
--   **\`Symbol.species\`**: A symbol that controls which constructor is used by methods that create new instances.
+- **Subclassing**: Extending built-in JavaScript classes.<grok-card data-id="0180f5" data-type="citation_card"></grok-card>
+- **\`Symbol.species\`**: A symbol that controls which constructor is used by methods that create new instances.<grok-card data-id="21148b" data-type="citation_card"></grok-card>
 `,
-  'promise-chain-vs-nested-then': `
+  "promise-chain-vs-nested-then": `
 ### 💡 Problem Breakdown
 This illustrates a common mistake. A proper promise chain is flat. Incorrectly nesting a \`.then()\` call inside another \`.then()\` handler without returning the inner promise creates a "pyramid" structure and breaks the clean flow and error handling of the chain.
 
@@ -1275,9 +1275,9 @@ promise1
   });
 \`\`\`
 ### 📚 Key Concepts
--   **Promise Flattening**: A key feature of promise chains is that if you return a promise from a \`.then()\` handler, the chain automatically "unwraps" it and waits for it to settle.
+- **Promise Flattening**: A key feature of promise chains is that if you return a promise from a \`.then()\` handler, the chain automatically "unwraps" it and waits for it to settle.<grok-card data-id="2fccb2" data-type="citation_card"></grok-card>
 `,
-  'async-await-in-loops': `
+  "async-await-in-loops": `
 ### 💡 Problem Breakdown
 Using \`await\` inside a standard \`for\` loop or a \`for...of\` loop is a straightforward way to process a sequence of asynchronous tasks one by one (sequentially).
 
@@ -1293,12 +1293,12 @@ async function processSequentially(ids) {
   }
 }
 \`\`\`
-This pattern is very useful when the result of one operation is needed for the next, or when you want to avoid overwhelming an API with too many concurrent requests.
+This pattern is very useful when the result of one operation is needed for the next, or when you want to avoid overwhelming an API with too many concurrent requests.<grok-card data-id="ba48fe" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Sequential Iteration**: A simple and readable pattern for processing async tasks in order.
+- **Sequential Iteration**: A simple and readable pattern for processing async tasks in order.<grok-card data-id="201161" data-type="citation_card"></grok-card>
 `,
-  'fetch-request-mode': `
+  "fetch-request-mode": `
 ### 💡 Problem Breakdown
 The \`mode\` option in the \`fetch\` API's options object controls how it handles cross-origin requests, which are subject to the Cross-Origin Resource Sharing (CORS) policy.
 - **\`cors\`** (default): The standard mode. It respects CORS headers from the server. If the server doesn't permit the request, it will fail.
@@ -1306,9 +1306,9 @@ The \`mode\` option in the \`fetch\` API's options object controls how it handle
 - **\`same-origin\`**: This mode will cause the request to fail if it's not made to the same origin.
 
 ### 📚 Key Concepts
--   **CORS (Cross-Origin Resource Sharing)**: A browser security mechanism that controls how web pages request resources from a different domain.
+- **CORS (Cross-Origin Resource Sharing)**: A browser security mechanism that controls how web pages request resources from a different domain.<grok-card data-id="86190f" data-type="citation_card"></grok-card>
 `,
-  'async-function-in-object': `
+  "async-function-in-object": `
 ### 💡 Problem Breakdown
 You can define an async function as a method in an object literal using either the \`async\` keyword with a traditional function expression or the \`async\` method shorthand.
 
@@ -1325,9 +1325,9 @@ const apiService = {
 apiService.getData().then(data => console.log(data));
 \`\`\`
 ### 📚 Key Concepts
--   **Async Methods**: A concise syntax for defining methods that return promises.
+- **Async Methods**: A concise syntax for defining methods that return promises.<grok-card data-id="4951e4" data-type="citation_card"></grok-card>
 `,
-  'promise-chain-with-sync-return': `
+  "promise-chain-with-sync-return": `
 ### 💡 Problem Breakdown
 This demonstrates the flexibility of promise chains. If a \`.then()\` handler returns a regular, non-promise value, the promise chain doesn't break. The chain simply wraps that value in an immediately resolved promise and passes it to the next \`.then()\` handler.
 
@@ -1344,9 +1344,9 @@ Promise.resolve(10)
   });
 \`\`\`
 ### 📚 Key Concepts
--   **Promise Resolution**: A promise chain can handle both synchronous and asynchronous transformations.
+- **Promise Resolution**: A promise chain can handle both synchronous and asynchronous transformations.<grok-card data-id="fad813" data-type="citation_card"></grok-card>
 `,
-  'async-resource-management': `
+  "async-resource-management": `
 ### 💡 Problem Breakdown
 This is a conceptual problem about a robust pattern for managing resources that need to be acquired and then released, especially in asynchronous code. The \`try...finally\` block is perfect for this, as the \`finally\` block is guaranteed to execute whether the \`try\` block succeeds or fails.
 
@@ -1370,9 +1370,9 @@ async function performQuery() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **\`try...finally\`**: A control flow statement that guarantees the execution of cleanup code.
+- **\`try...finally\`**: A control flow statement that guarantees the execution of cleanup code.<grok-card data-id="397f30" data-type="citation_card"></grok-card>
 `,
-  'indexeddb-promise-wrapper': `
+  "indexeddb-promise-wrapper": `
 ### 💡 Problem Breakdown
 The IndexedDB API is a low-level browser API for client-side storage. It's powerful but event-based and uses callbacks, which can be cumbersome. This problem is about the common practice of wrapping its operations in Promises to make it compatible with \`async/await\`.
 
@@ -1394,9 +1394,9 @@ function getFromDb(key) {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Promisification**: The pattern of converting older, event- or callback-based APIs into promise-returning functions.
+- **Promisification**: The pattern of converting older, event- or callback-based APIs into promise-returning functions.<grok-card data-id="94f3cd" data-type="citation_card"></grok-card>
 `,
-  'websocket-communication-conceptual': `
+  "websocket-communication-conceptual": `
 ### 💡 Problem Breakdown
 WebSockets provide a full-duplex communication channel over a single, long-lived TCP connection. This is different from the request-response model of HTTP. It's ideal for real-time applications like chat apps or live data feeds. The API is event-driven.
 
@@ -1422,10 +1422,10 @@ ws.onerror = (error) => { /* ... */ };
 ws.onclose = () => { /* ... */ };
 \`\`\`
 ### 📚 Key Concepts
--   **WebSocket**: A protocol for persistent, real-time, two-way communication.
--   **Event-Driven API**: The API relies on event handlers to manage the connection and data flow.
+- **WebSocket**: A protocol for persistent, real-time, two-way communication.<grok-card data-id="6c9e4b" data-type="citation_card"></grok-card>
+- **Event-Driven API**: The API relies on event handlers to manage the connection and data flow.<grok-card data-id="8ebded" data-type="citation_card"></grok-card>
 `,
-  'server-sent-events-conceptual': `
+  "server-sent-events-conceptual": `
 ### 💡 Problem Breakdown
 Server-Sent Events (SSE) is a standard that allows a web page to get updates from a server automatically. Unlike WebSockets, it's a one-way connection (server to client). It's simpler than WebSockets and is great for things like live news feeds or stock tickers.
 
@@ -1449,27 +1449,27 @@ eventSource.onerror = (err) => {
 };
 \`\`\`
 ### 📚 Key Concepts
--   **Server-Sent Events (SSE)**: A technology for one-way, server-to-client communication.
--   **\`EventSource\` API**: The browser API for consuming an SSE stream.
+- **Server-Sent Events (SSE)**: A technology for one-way, server-to-client communication.<grok-card data-id="fd0da6" data-type="citation_card"></grok-card>
+- **\`EventSource\` API**: The browser API for consuming an SSE stream.<grok-card data-id="7db84b" data-type="citation_card"></grok-card>
 `,
-  'async-batching-requests': `
+  "async-batching-requests": `
 ### 💡 Problem Breakdown
 This is a conceptual performance optimization pattern. If you have a function that might be called many times in quick succession (e.g., logging an event for every click), it can be inefficient to send a network request for each call. Batching involves collecting these calls into a queue and sending them all in a single network request after a short delay.
 
 ### ⚙️ Solution Walkthrough
 The logic combines a queue with a debounced function.
-1.  Create a queue array (e.g., \`let requestQueue = [];\`).
-2.  The public function that users call simply pushes its arguments into the \`requestQueue\`.
-3.  Have a separate "debounced" function that:
+1. Create a queue array (e.g., \`let requestQueue = [];\`).
+2. The public function that users call simply pushes its arguments into the \`requestQueue\`.
+3. Have a separate "debounced" function that:
     - Checks if the queue is empty. If so, does nothing.
     - If not, it makes a copy of the queue and then clears the original.
     - It sends the copied data in a single batch API call after a short period of inactivity.
 
 ### 📚 Key Concepts
--   **Batching**: A performance pattern to reduce the number of network requests.
--   **Debouncing**: A rate-limiting technique used to trigger the batch submission.
+- **Batching**: A performance pattern to reduce the number of network requests.<grok-card data-id="8ce6ae" data-type="citation_card"></grok-card>
+- **Debouncing**: A rate-limiting technique used to trigger the batch submission.<grok-card data-id="230032" data-type="citation_card"></grok-card>
 `,
-  'promise-timeout-race': `
+  "promise-timeout-race": `
 ### 💡 Problem Breakdown
 A common requirement is to have an asynchronous operation fail if it takes too long. This can be implemented elegantly using \`Promise.race()\`. You "race" the actual operation's promise against a timer promise that is set to reject.
 
@@ -1486,12 +1486,12 @@ function withTimeout(promise, ms) {
   return Promise.race([promise, timeoutPromise]);
 }
 \`\`\`
-If \`promise\` resolves before \`ms\`, the \`withTimeout\` promise resolves with its value. If the \`timeoutPromise\` rejects first, the \`withTimeout\` promise rejects with the timeout error.
+If \`promise\` resolves before \`ms\`, the \`withTimeout\` promise resolves with its value. If the \`timeoutPromise\` rejects first, the \`withTimeout\` promise rejects with the timeout error.<grok-card data-id="f74559" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.race()\`**: A perfect tool for implementing timeouts.
+- **\`Promise.race()\`**: A perfect tool for implementing timeouts.<grok-card data-id="357eb4" data-type="citation_card"></grok-card>
 `,
-  'async-retry-pattern': `
+  "async-retry-pattern": `
 ### 💡 Problem Breakdown
 Network requests can fail for transient reasons. A retry pattern is a way to make an application more resilient by automatically re-attempting a failed asynchronous operation a certain number of times.
 
@@ -1514,10 +1514,10 @@ async function retry(asyncFn, maxAttempts) {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Resilience**: Designing systems that can gracefully handle transient failures.
--   **Error Handling**: Using \`try...catch\` within a loop to control the retry logic.
+- **Resilience**: Designing systems that can gracefully handle transient failures.<grok-card data-id="da5819" data-type="citation_card"></grok-card>
+- **Error Handling**: Using \`try...catch\` within a loop to control the retry logic.<grok-card data-id="11277c" data-type="citation_card"></grok-card>
 `,
-  'mutationobserver-conceptual': `
+  "mutationobserver-conceptual": `
 ### 💡 Problem Breakdown
 The \`MutationObserver\` API provides a way to watch for changes being made to the DOM tree. It's designed to be more efficient than older methods like Mutation Events. The callbacks are executed asynchronously as microtasks.
 
@@ -1538,9 +1538,9 @@ observer.observe(targetNode, config);
 // To stop observing: observer.disconnect();
 \`\`\`
 ### 📚 Key Concepts
--   **\`MutationObserver\`**: A browser API for observing DOM changes.
+- **\`MutationObserver\`**: A browser API for observing DOM changes.<grok-card data-id="495825" data-type="citation_card"></grok-card>
 `,
-  'intersectionobserver-conceptual': `
+  "intersectionobserver-conceptual": `
 ### 💡 Problem Breakdown
 The \`IntersectionObserver\` API provides an efficient way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport. This is the modern API for implementing lazy loading of images and infinite scrolling.
 
@@ -1563,9 +1563,9 @@ const observer = new IntersectionObserver(callback, options);
 observer.observe(target);
 \`\`\`
 ### 📚 Key Concepts
--   **\`IntersectionObserver\`**: An efficient API for detecting element visibility.
+- **\`IntersectionObserver\`**: An efficient API for detecting element visibility.<grok-card data-id="a143c4" data-type="citation_card"></grok-card>
 `,
-  'web-bluetooth-conceptual': `
+  "web-bluetooth-conceptual": `
 ### 💡 Problem Breakdown
 The Web Bluetooth API allows web applications to discover and communicate with Bluetooth Low Energy (BLE) devices. The API is heavily promise-based, making it suitable for use with \`async/await\`.
 
@@ -1582,10 +1582,10 @@ async function connectToDevice() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Web Bluetooth API**: An API for interacting with BLE peripherals.
--   **Promise-based API**: Most modern Web APIs that involve asynchronous steps return promises.
+- **Web Bluetooth API**: An API for interacting with BLE peripherals.<grok-card data-id="d2660e" data-type="citation_card"></grok-card>
+- **Promise-based API**: Most modern Web APIs that involve asynchronous steps return promises.<grok-card data-id="0569fd" data-type="citation_card"></grok-card>
 `,
-  'web-usb-conceptual': `
+  "web-usb-conceptual": `
 ### 💡 Problem Breakdown
 The WebUSB API provides a way for web applications to interact with USB devices. Similar to the Web Bluetooth API, it is promise-based and requires explicit user permission for security.
 
@@ -1601,9 +1601,9 @@ async function connectToUsb() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **WebUSB API**: An API for interacting with USB devices from the browser.
+- **WebUSB API**: An API for interacting with USB devices from the browser.<grok-card data-id="36d99f" data-type="citation_card"></grok-card>
 `,
-  'async-clipboard-api': `
+  "async-clipboard-api": `
 ### 💡 Problem Breakdown
 The modern Asynchronous Clipboard API provides a promise-based way to read from and write to the system clipboard. It's more powerful and secure than the older \`document.execCommand()\` method.
 
@@ -1625,9 +1625,9 @@ async function pasteText() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Async Clipboard API**: The modern, secure, and promise-based API for clipboard access.
+- **Async Clipboard API**: The modern, secure, and promise-based API for clipboard access.<grok-card data-id="1d953b" data-type="citation_card"></grok-card>
 `,
-  'async-queue-processing': `
+  "async-queue-processing": `
 ### 💡 Problem Breakdown
 The task is to implement a queue that processes asynchronous tasks sequentially. This means the next task in the queue should not begin until the current task's promise has resolved.
 
@@ -1651,9 +1651,9 @@ class AsyncQueue {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Asynchronous Control Flow**: A pattern for managing the execution order of multiple async tasks.
+- **Asynchronous Control Flow**: A pattern for managing the execution order of multiple async tasks.<grok-card data-id="65886d" data-type="citation_card"></grok-card>
 `,
-  'macrotask-rendering-conceptual': `
+  "macrotask-rendering-conceptual": `
 ### 💡 Problem Breakdown
 This is a conceptual problem about how the event loop interacts with browser rendering. The browser's rendering pipeline (style, layout, paint) is typically scheduled as a macrotask. This means that after one macrotask (like a \`click\` handler) finishes, the browser will first empty the entire microtask queue, and *then* it will perform any necessary rendering updates, and *then* it will pick the next macrotask from the queue.
 
@@ -1667,13 +1667,13 @@ function microtaskLoop() {
 }
 microtaskLoop();
 \`\`\`
-The event loop never gets a chance to move on to the rendering macrotask because the microtask queue never becomes empty.
+The event loop never gets a chance to move on to the rendering macrotask because the microtask queue never becomes empty.<grok-card data-id="dc136c" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Rendering Pipeline**: The steps the browser takes to display content.
--   **Event Loop**: The orchestrator of all tasks, including rendering.
+- **Rendering Pipeline**: The steps the browser takes to display content.<grok-card data-id="1f2bb2" data-type="citation_card"></grok-card>
+- **Event Loop**: The orchestrator of all tasks, including rendering.<grok-card data-id="9b2603" data-type="citation_card"></grok-card>
 `,
-  'promise-is-thenable': `
+  "promise-is-thenable": `
 ### 💡 Problem Breakdown
 This is a conceptual problem about promise interoperability. A "thenable" is any object with a \`.then()\` method. Promise-aware libraries and language features like \`await\` will treat thenables like native promises. The check for this is straightforward.
 
@@ -1687,23 +1687,23 @@ function isThenable(val) {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Duck Typing**: "If it walks like a duck and quacks like a duck, then it must be a duck." If an object has a \`.then\` method, we can treat it like a promise.
+- **Duck Typing**: "If it walks like a duck and quacks like a duck, then it must be a duck." If an object has a \`.then\` method, we can treat it like a promise.<grok-card data-id="4168c6" data-type="citation_card"></grok-card>
 `,
-  'async-await-vs-generators': `
+  "async-await-vs-generators": `
 ### 💡 Problem Breakdown
 This is a conceptual problem about the history and implementation of async/await. Before \`async/await\` was introduced, developers used libraries that combined generators and promises to achieve a similar synchronous-looking control flow. \`async/await\` is essentially syntactic sugar over this pattern.
 
 ### ⚙️ Solution Walkthrough
-1.  An \`async\` function can be thought of as a **generator** that only \`yield\`s promises.
-2.  The \`await\` keyword is like \`yield\`.
-3.  A "coroutine" or "runner" function takes the generator's iterator. It calls \`.next()`. When it gets a yielded promise, it waits for that promise to resolve, and then calls \`.next()\` again, passing the resolved value back into the generator.
-This is exactly what transpilers like Babel do to convert \`async/await\` to older JavaScript.
+1. An \`async\` function can be thought of as a **generator** that only \`yield\`s promises.
+2. The \`await\` keyword is like \`yield\`.
+3. A "coroutine" or "runner" function takes the generator's iterator. It calls \`.next()\`. When it gets a yielded promise, it waits for that promise to resolve, and then calls \`.next()\` again, passing the resolved value back into the generator.
+This is exactly what transpilers like Babel do to convert \`async/await\` to older JavaScript.<grok-card data-id="e00eab" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Syntactic Sugar**: A feature that provides a cleaner syntax for an existing capability.
--   **Generators**: The underlying mechanism that makes the pausable nature of \`async/await\` possible.
+- **Syntactic Sugar**: A feature that provides a cleaner syntax for an existing capability.<grok-card data-id="70b6ed" data-type="citation_card"></grok-card>
+- **Generators**: The underlying mechanism that makes the pausable nature of \`async/await\` possible.<grok-card data-id="bc25c1" data-type="citation_card"></grok-card>
 `,
-  'promise-chain-flattening': `
+  "promise-chain-flattening": `
 ### 💡 Problem Breakdown
 A key feature of promise chains is that they automatically "unwrap" or "flatten" promises returned from a \`.then()\` handler. If you return a new promise, the chain doesn't resolve with that promise object itself; instead, the chain "unwraps" \`p2\`, waits for it to settle, and then adopts its final state and value.
 
@@ -1722,9 +1722,9 @@ Promise.resolve()
   });
 \`\`\`
 ### 📚 Key Concepts
--   **Promise Flattening**: This "unwrapping" behavior is what keeps promise chains flat and readable.
+- **Promise Flattening**: This "unwrapping" behavior is what keeps promise chains flat and readable.<grok-card data-id="3ebc53" data-type="citation_card"></grok-card>
 `,
-  'fetch-credentials-option': `
+  "fetch-credentials-option": `
 ### 💡 Problem Breakdown
 The \`credentials\` option in the \`fetch\` API's options object controls whether cookies and other credentials are sent with cross-origin requests.
 - **\`omit\`** (default): Never sends cookies or HTTP authentication headers.
@@ -1732,10 +1732,10 @@ The \`credentials\` option in the \`fetch\` API's options object controls whethe
 - **\`include\`**: Always sends credentials, even for cross-origin requests. The server must respond with the \`Access-Control-Allow-Credentials: true\` header for this to work.
 
 ### 📚 Key Concepts
--   **CORS (Cross-Origin Resource Sharing)**: A browser security mechanism that controls how web pages request resources from a different domain.
--   **Credentials**: Information like cookies and authentication headers used to identify a user.
+- **CORS (Cross-Origin Resource Sharing)**: A browser security mechanism that controls how web pages request resources from a different domain.<grok-card data-id="e3f843" data-type="citation_card"></grok-card>
+- **Credentials**: Information like cookies and authentication headers used to identify a user.<grok-card data-id="b4c4c6" data-type="citation_card"></grok-card>
 `,
-  'event-loop-node-vs-browser': `
+  "event-loop-node-vs-browser": `
 ### 💡 Problem Breakdown
 While the core concept is the same (a loop that processes tasks from a queue), the event loops in Node.js and browsers have different implementations.
 - **Browser Event Loop**: Simpler. It has one macrotask queue and one microtask queue. It takes one macrotask, runs it, then empties the entire microtask queue, then renders (if needed), then repeats.
@@ -1750,9 +1750,9 @@ While the core concept is the same (a loop that processes tasks from a queue), t
 Microtasks (from \`process.nextTick\` and Promises) are executed *between* these phases.
 
 ### 📚 Key Concepts
--   **Runtime Environment**: The specific environment dictates the implementation details of the event loop.
+- **Runtime Environment**: The specific environment dictates the implementation details of the event loop.<grok-card data-id="0acae2" data-type="citation_card"></grok-card>
 `,
-  'async-sleep-function': `
+  "async-sleep-function": `
 ### 💡 Problem Breakdown
 The task is to create a \`sleep\` or \`delay\` function that pauses execution within an \`async\` function. Since we can't block the main thread, the function must be asynchronous and return a promise.
 
@@ -1770,9 +1770,9 @@ async function run() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Promisification**: Wrapping a callback-based API (\`setTimeout\`) to create a promise-based one.
+- **Promisification**: Wrapping a callback-based API (\`setTimeout\`) to create a promise-based one.<grok-card data-id="c944b0" data-type="citation_card"></grok-card>
 `,
-  'promise-callback-timing': `
+  "promise-callback-timing": `
 ### 💡 Problem Breakdown
 A crucial rule of Promises is that \`.then()\` callbacks are *always* executed asynchronously in the microtask queue, even if the promise is already resolved. This ensures a consistent and predictable execution order.
 
@@ -1785,12 +1785,12 @@ console.log('B');
 
 // Output: A, B, C
 \`\`\`
-Even though the promise is already resolved when \`.then()\` is called, the callback ('C') is placed in the microtask queue and waits for the current synchronous code ('B') to finish executing.
+Even though the promise is already resolved when \`.then()\` is called, the callback ('C') is placed in the microtask queue and waits for the current synchronous code ('B') to finish executing.<grok-card data-id="183b9b" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Asynchronous Execution**: Promise callbacks never run synchronously.
+- **Asynchronous Execution**: Promise callbacks never run synchronously.<grok-card data-id="96e219" data-type="citation_card"></grok-card>
 `,
-  'async-function-composition': `
+  "async-function-composition": `
 ### 💡 Problem Breakdown
 "Composition" is the process of combining functions where the output of one becomes the input of the next. This is straightforward to do with async functions using \`async/await\`.
 
@@ -1807,29 +1807,29 @@ async function getPostsForUser(id) {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Function Composition**: A fundamental pattern for building complex logic from smaller pieces. \`async/await\` makes this pattern clean for asynchronous operations.
+- **Function Composition**: A fundamental pattern for building complex logic from smaller pieces. \`async/await\` makes this pattern clean for asynchronous operations.<grok-card data-id="eb2a38" data-type="citation_card"></grok-card>
 `,
-  'promise-all-vs-allsettled': `
+  "promise-all-vs-allsettled": `
 ### 💡 Problem Breakdown
 This is a conceptual comparison of two promise combinators.
 - **\`Promise.all\`**: Use when you have multiple interdependent tasks that must **all** succeed. It's "fail-fast" – if one fails, the whole thing fails immediately. The result is an array of values.
 - **\`Promise.allSettled\`**: Use when you have multiple independent tasks and you want to know the outcome of **every single one**, regardless of success or failure. It never rejects. The result is an array of status objects (\`{status, value}\` or \`{status, reason}\`).
 
 ### 📚 Key Concepts
--   **Promise Combinators**: Static methods on the \`Promise\` object for working with multiple promises at once.
+- **Promise Combinators**: Static methods on the \`Promise\` object for working with multiple promises at once.<grok-card data-id="8f508b" data-type="citation_card"></grok-card>
 `,
-  'race-vs-any': `
+  "race-vs-any": `
 ### 💡 Problem Breakdown
 This is a conceptual comparison of two similar promise combinators.
 - **\`Promise.race\`**: Fulfills or rejects as soon as the **first** promise in the iterable settles (fulfills or rejects). It takes on that first promise's outcome.
 - **\`Promise.any\`**: Fulfills as soon as the **first** promise in the iterable **fulfills**. It only rejects if *all* promises in the iterable reject.
 
-Use \`race\` for things like timeouts (race a promise against a rejecting timer). Use \`any\` for redundancy (race multiple sources and take the first one that successfully returns data).
+Use \`race\` for things like timeouts (race a promise against a rejecting timer). Use \`any\` for redundancy (race multiple sources and take the first one that successfully returns data).<grok-card data-id="896c03" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Promise Combinators**: Choosing the right combinator depends on the specific logic you need to implement.
+- **Promise Combinators**: Choosing the right combinator depends on the specific logic you need to implement.<grok-card data-id="6bed07" data-type="citation_card"></grok-card>
 `,
-  'async-await-in-foreach-pitfall': `
+  "async-await-in-foreach-pitfall": `
 ### 💡 Problem Breakdown
 This is a very common pitfall. The \`.forEach()\` array method is not promise-aware. If you use an \`async\` callback with it, \`.forEach\` will **not** wait for the promises to complete. It will start all the operations and then the surrounding code will continue immediately.
 
@@ -1847,9 +1847,9 @@ async function processArray(arr) {
 // or .map with Promise.all for parallel processing.
 \`\`\`
 ### 📚 Key Concepts
--   **Promise-Awareness**: Standard loops like \`for...of\` work with \`await\`, but functional iteration methods like \`forEach\` do not.
+- **Promise-Awareness**: Standard loops like \`for...of\` work with \`await\`, but functional iteration methods like \`forEach\` do not.<grok-card data-id="fed73b" data-type="citation_card"></grok-card>
 `,
-  'async-function-constructor-conceptual': `
+  "async-function-constructor-conceptual": `
 ### 💡 Problem Breakdown
 Similar to the \`Function\` constructor, there is an \`AsyncFunction\` constructor for creating async functions from strings. It is not a global property but can be accessed from the prototype of an async function. It shares all the same security and performance drawbacks as the regular \`Function\` constructor.
 
@@ -1863,9 +1863,9 @@ const myAsyncFunc = new AsyncFunction('a', 'b', 'return await Promise.resolve(a 
 myAsyncFunc(2, 3).then(console.log); // 5
 \`\`\`
 ### 📚 Key Concepts
--   **Dynamic Function Creation**: A rarely used feature for creating functions from strings at runtime.
+- **Dynamic Function Creation**: A rarely used feature for creating functions from strings at runtime.<grok-card data-id="3dd3e7" data-type="citation_card"></grok-card>
 `,
-  'await-in-conditional': `
+  "await-in-conditional": `
 ### 💡 Problem Breakdown
 The \`await\` keyword is an expression that resolves to a value. As such, it can be used anywhere a value is expected, including inside an \`if\` statement or a ternary operator.
 
@@ -1883,9 +1883,9 @@ async function checkCondition() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **\`await\` as an Expression**: \`await\` is not just a statement; it's an operator that evaluates to the resolved value of a promise.
+- **\`await\` as an Expression**: \`await\` is not just a statement; it's an operator that evaluates to the resolved value of a promise.<grok-card data-id="f00c92" data-type="citation_card"></grok-card>
 `,
-  'promise-chain-return-value': `
+  "promise-chain-return-value": `
 ### 💡 Problem Breakdown
 A promise chain is itself a promise. The final state and value of that chain are determined by the last handler in the chain.
 - If the last handler is a \`.then()\` and it returns a value, the chain resolves with that value.
@@ -1907,9 +1907,9 @@ const p = Promise.reject("Initial Error")
 // p will resolve with "Final value is: Default Value"
 \`\`\`
 ### 📚 Key Concepts
--   **Error Handling and Recovery**: A \`.catch()\` block can be used to recover from an error in a promise chain and allow it to continue with a successful outcome.
+- **Error Handling and Recovery**: A \`.catch()\` block can be used to recover from an error in a promise chain and allow it to continue with a successful outcome.<grok-card data-id="3bd18d" data-type="citation_card"></grok-card>
 `,
-  'async-mutex-conceptual': `
+  "async-mutex-conceptual": `
 ### 💡 Problem Breakdown
 A Mutex (Mutual Exclusion lock) is a mechanism to ensure that only one piece of code can access a "critical section" or resource at a time. This can be implemented for async operations using a promise chain to queue up tasks.
 
@@ -1933,12 +1933,12 @@ class Mutex {
 // mutex.acquire(() => criticalTask1());
 // mutex.acquire(() => criticalTask2()); // This will wait for task1 to finish
 \`\`\`
-Each new task is chained onto the \`lock\` promise. The \`.then()\` ensures that the new task doesn't start until the previous one has finished.
+Each new task is chained onto the \`lock\` promise. The \`.then()\` ensures that the new task doesn't start until the previous one has finished.<grok-card data-id="88f3ab" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Concurrency Control**: A pattern for managing access to a shared resource to prevent race conditions.
+- **Concurrency Control**: A pattern for managing access to a shared resource to prevent race conditions.<grok-card data-id="0ff21a" data-type="citation_card"></grok-card>
 `,
-  'promise-withresolvables': `
+  "promise-withresolvables": `
 ### 💡 Problem Breakdown
 \`Promise.withResolvables()\` is a new static method (ES2024) that creates a promise and exposes its \`resolve\` and \`reject\` functions. This is a convenience method that simplifies patterns where you need to create a promise and resolve/reject it from outside the constructor's scope.
 
@@ -1953,12 +1953,12 @@ promise.then(console.log);
 // And resolve it from somewhere else, later
 setTimeout(() => resolve("Resolved from outside!"), 100);
 \`\`\`
-This avoids having to define \`let resolveFunc;\` outside the scope of a \`new Promise\` constructor.
+This avoids having to define \`let resolveFunc;\` outside the scope of a \`new Promise\` constructor.<grok-card data-id="5aba77" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`Promise.withResolvables()\`**: A new utility for creating promises where the settlement functions are needed externally.
+- **\`Promise.withResolvables()\`**: A new utility for creating promises where the settlement functions are needed externally.<grok-card data-id="60c060" data-type="citation_card"></grok-card>
 `,
-  'fetch-response-types': `
+  "fetch-response-types": `
 ### 💡 Problem Breakdown
 The \`Response\` object returned by \`fetch\` has several methods to parse the response body in different formats. The most common are:
 - **\`.json()\`**: Parses the body as JSON, returning a promise that resolves with a JavaScript object.
@@ -1968,9 +1968,9 @@ The \`Response\` object returned by \`fetch\` has several methods to parse the r
 - **\`.arrayBuffer()\`**: Returns a promise that resolves with an \`ArrayBuffer\`, for low-level binary data manipulation.
 
 ### 📚 Key Concepts
--   **Data Formats**: Understanding how data is represented and how to parse it is crucial for working with APIs.
+- **Data Formats**: Understanding how data is represented and how to parse it is crucial for working with APIs.<grok-card data-id="b02235" data-type="citation_card"></grok-card>
 `,
-  'messagechannel-conceptual': `
+  "messagechannel-conceptual": `
 ### 💡 Problem Breakdown
 The \`MessageChannel\` API provides a way to create a two-way, asynchronous communication channel between two different JavaScript contexts (like a main window and an iframe, or two Web Workers).
 
@@ -1981,10 +1981,10 @@ const channel = new MessageChannel();
 const port1 = channel.port1;
 const port2 = channel.port2;
 
-// In Context 1 (e.e., main window)
+// In Context 1 (e.g., main window)
 port1.onmessage = event => console.log('Msg from context 2:', event.data);
 
-// Send port2 to Context 2 (e.e., an iframe)
+// Send port2 to Context 2 (e.g., an iframe)
 iframe.contentWindow.postMessage('init', '*', [port2]);
 
 // In Context 2 (iframe)
@@ -1993,10 +1993,10 @@ port2.onmessage = event => console.log('Msg from context 1:', event.data);
 port2.postMessage('Hello from iframe!');
 \`\`\`
 ### 📚 Key Concepts
--   **\`MessageChannel\`**: A Web API for creating a direct communication channel.
--   **Transferable Objects**: \`MessagePort\` objects are "transferable," meaning they can be passed between contexts without being copied, which is highly efficient.
+- **\`MessageChannel\`**: A Web API for creating a direct communication channel.<grok-card data-id="ebf9bc" data-type="citation_card"></grok-card>
+- **Transferable Objects**: \`MessagePort\` objects are "transferable," meaning they can be passed between contexts without being copied, which is highly efficient.<grok-card data-id="5d6ef5" data-type="citation_card"></grok-card>
 `,
-  'web-locks-api-conceptual': `
+  "web-locks-api-conceptual": `
 ### 💡 Problem Breakdown
 The Web Locks API allows multiple tabs or workers of the same origin to coordinate and prevent race conditions when accessing a shared resource, like IndexedDB or a network resource. It provides an asynchronous, promise-based locking mechanism.
 
@@ -2015,10 +2015,10 @@ async function updateResource() {
 }
 \`\`\`
 ### 📚 Key Concepts
--   **Web Locks API**: A browser API for managing locks on resources to prevent race conditions.
--   **Race Condition**: A bug that occurs when the outcome of an operation depends on the unpredictable timing of concurrent events.
+- **Web Locks API**: A browser API for managing locks on resources to prevent race conditions.<grok-card data-id="fd6758" data-type="citation_card"></grok-card>
+- **Race Condition**: A bug that occurs when the outcome of an operation depends on the unpredictable timing of concurrent events.<grok-card data-id="8489f5" data-type="citation_card"></grok-card>
 `,
-  'promise-then-onfulfilled-onrejected': `
+  "promise-then-onfulfilled-onrejected": `
 ### 💡 Problem Breakdown
 The \`.then()\` method can actually take two arguments: the first is the \`onFulfilled\` callback (for success), and the second is the \`onRejected\` callback (for failure). Using the second argument is an alternative to chaining a \`.catch()\` method.
 
@@ -2031,12 +2031,12 @@ Promise.reject("Error")
     reason => console.log('Rejected:', reason) // This is called
   );
 \`\`\`
-**Note**: A key difference is that a \`.catch()\` at the end of a chain will catch rejections from *any* preceding \`.then()\`, whereas the \`onRejected\` handler only catches rejections from the promise it's directly attached to.
+**Note**: A key difference is that a \`.catch()\` at the end of a chain will catch rejections from *any* preceding \`.then()\`, whereas the \`onRejected\` handler only catches rejections from the promise it's directly attached to.<grok-card data-id="b2ce15" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **\`.then(onFulfilled, onRejected)\`**: The full signature of the \`.then()\` method.
+- **\`.then(onFulfilled, onRejected)\`**: The full signature of the \`.then()\` method.<grok-card data-id="9ab537" data-type="citation_card"></grok-card>
 `,
-  'async-await-return-promise': `
+  "async-await-return-promise": `
 ### 💡 Problem Breakdown
 This is a conceptual clarification. An \`async\` function is syntactic sugar for a function that returns a promise. Therefore, \`await\`ing an \`async\` function is functionally identical to \`await\`ing a regular function that explicitly returns a promise.
 
@@ -2058,9 +2058,9 @@ function fn2() {
 // const result = await fn2();
 \`\`\`
 ### 📚 Key Concepts
--   **\`async/await\`**: Syntactic sugar that simplifies working with promises.
+- **\`async/await\`**: Syntactic sugar that simplifies working with promises.<grok-card data-id="774ff3" data-type="citation_card"></grok-card>
 `,
-  'broadcast-channel-conceptual': `
+  "broadcast-channel-conceptual": `
 ### 💡 Problem Breakdown
 The \`BroadcastChannel\` API provides a simple way for different browsing contexts (tabs, windows, iframes, workers) of the **same origin** to send and receive messages. It's a one-to-many communication system.
 
@@ -2078,42 +2078,42 @@ bc.onmessage = (event) => {
 };
 \`\`\`
 ### 📚 Key Concepts
--   **\`BroadcastChannel\`**: A browser API for cross-context communication on the same origin.
+- **\`BroadcastChannel\`**: A browser API for cross-context communication on the same origin.<grok-card data-id="29ae14" data-type="citation_card"></grok-card>
 `,
-  'what-is-a-macrotask-conceptual': `
+  "what-is-a-macrotask-conceptual": `
 ### 💡 Problem Breakdown
 This is a core concept of the event loop. A **macrotask** (also called a "task") represents a distinct, self-contained piece of work that the JavaScript engine needs to do. The event loop picks one macrotask from its queue in each "tick."
 
 ### ⚙️ Solution Walkthrough
 Common examples of macrotasks include:
--   Executing the main script itself.
--   A callback for \`setTimeout\` or \`setInterval\`.
--   A callback for a user event, like a \`click\` or \`keydown\`.
--   I/O operations in Node.js.
--   The browser's rendering cycle (style, layout, paint).
+- Executing the main script itself.
+- A callback for \`setTimeout\` or \`setInterval\`.
+- A callback for a user event, like a \`click\` or \`keydown\`.
+- I/O operations in Node.js.
+- The browser's rendering cycle (style, layout, paint).
 
-After one macrotask completes, the engine will run all available microtasks before starting the next macrotask.
+After one macrotask completes, the engine will run all available microtasks before starting the next macrotask.<grok-card data-id="2c274c" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Macrotask Queue**: The primary queue for asynchronous events in the JavaScript runtime.
+- **Macrotask Queue**: The primary queue for asynchronous events in the JavaScript runtime.<grok-card data-id="8c3540" data-type="citation_card"></grok-card>
 `,
-  'what-is-a-microtask-conceptual': `
+  "what-is-a-microtask-conceptual": `
 ### 💡 Problem Breakdown
 A **microtask** is a short function that needs to run immediately after the currently executing script finishes, but before the browser has a chance to do other things like rendering or running the next macrotask. They have a higher priority than macrotasks.
 
 ### ⚙️ Solution Walkthrough
 Common examples of microtasks include:
--   A callback for a promise's \`.then()\`, \`.catch()\`, or \`.finally()`.
--   Callbacks for \`MutationObserver\`.
--   Functions queued with \`queueMicrotask()\`.
--   Callbacks for \`process.nextTick()\` in Node.js (which has even higher priority than other microtasks).
+- A callback for a promise's \`.then()\`, \`.catch()\`, or \`.finally()\`.
+- Callbacks for \`MutationObserver\`.
+- Functions queued with \`queueMicrotask()\`.
+- Callbacks for \`process.nextTick()\` in Node.js (which has even higher priority than other microtasks).
 
-The entire microtask queue is always emptied after each macrotask completes.
+The entire microtask queue is always emptied after each macrotask completes.<grok-card data-id="d2c959" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Microtask Queue**: A high-priority queue that allows for immediate follow-up actions to the currently executing code.
+- **Microtask Queue**: A high-priority queue that allows for immediate follow-up actions to the currently executing code.<grok-card data-id="43d53f" data-type="citation_card"></grok-card>
 `,
-  'queuemicrotask-api': `
+  "queuemicrotask-api": `
 ### 💡 Problem Breakdown
 The \`queueMicrotask()\` global function provides a standard way to queue a function to be executed as a microtask. This is useful when you want to ensure a piece of code runs asynchronously but before the next macrotask (like \`setTimeout\`).
 
@@ -2130,9 +2130,9 @@ console.log('Sync 2');
 // Output: Sync 1, Sync 2, Microtask, Timeout (Macro)
 \`\`\`
 ### 📚 Key Concepts
--   **\`queueMicrotask()\`**: A browser and Node.js API for queuing microtasks directly.
+- **\`queueMicrotask()\`**: A browser and Node.js API for queuing microtasks directly.<grok-card data-id="141a23" data-type="citation_card"></grok-card>
 `,
-  'promise-unwrapping-conceptual': `
+  "promise-unwrapping-conceptual": `
 ### 💡 Problem Breakdown
 This is a key feature of promise chains that prevents nesting. If you return a promise (\`p2\`) from inside a \`.then()\` handler, the chain doesn't simply resolve with the \`p2\` promise object. Instead, the chain "unwraps" \`p2\`, waits for it to settle, and then adopts its final state and value.
 
@@ -2150,21 +2150,21 @@ Promise.resolve()
   });
 \`\`\`
 ### 📚 Key Concepts
--   **Promise Flattening**: This "unwrapping" behavior is what keeps promise chains flat and readable.
+- **Promise Flattening**: This "unwrapping" behavior is what keeps promise chains flat and readable.<grok-card data-id="a54534" data-type="citation_card"></grok-card>
 `,
-  'async-pool-pattern-conceptual': `
+  "async-pool-pattern-conceptual": `
 ### 💡 Problem Breakdown
 An async pool (or concurrency limiter) is a pattern used to process a large number of asynchronous tasks while limiting the number of tasks that run concurrently. This is crucial for avoiding rate limits on an API or overwhelming a system with too many open connections.
 
 ### ⚙️ Solution Walkthrough
 A conceptual implementation.
-1.  You have a list of all tasks to be run.
-2.  You have a pool of "workers," which is a small array (e.e., of size 5).
-3.  Start the first 5 tasks from the list.
-4.  Each time a task completes, it picks the next available task from the main list and starts it.
-5.  This can be managed using \`Promise.all()\` on the worker pool or with more complex promise chain logic to ensure a worker always has a task if one is available.
+1. You have a list of all tasks to be run.
+2. You have a pool of "workers," which is a small array (e.g., of size 5).
+3. Start the first 5 tasks from the list.
+4. Each time a task completes, it picks the next available task from the main list and starts it.
+5. This can be managed using \`Promise.all()\` on the worker pool or with more complex promise chain logic to ensure a worker always has a task if one is available.<grok-card data-id="8a644c" data-type="citation_card"></grok-card>
 
 ### 📚 Key Concepts
--   **Concurrency Control**: A pattern for managing the execution of multiple async tasks to control resource usage.
+- **Concurrency Control**: A pattern for managing the execution of multiple async tasks to control resource usage.<grok-card data-id="0ca7a8" data-type="citation_card"></grok-card>
 `,
 };
