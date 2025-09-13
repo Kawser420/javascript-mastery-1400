@@ -1,6 +1,5 @@
-
 export const explanations: Record<string, string> = {
-  'implement-stack': `
+  "implement-stack": `
 ### 💡 Problem Breakdown
 The task is to implement a Stack, a fundamental data structure. A stack follows the **LIFO** (Last-In, First-Out) principle. Think of it like a stack of plates: the last plate you put on top is the first one you take off. We need to create a class with the core methods: \`push\`, \`pop\`, \`peek\`, and \`isEmpty\`.
 
@@ -30,7 +29,8 @@ class Stack {
 -   **Stack**: A linear data structure following a LIFO (Last-In, First-Out) order.
 -   **Abstraction**: We create a new \`Stack\` abstraction using an existing one (\`Array\`), exposing a specific set of methods to interact with our data.
 `,
-  'implement-queue': `
+
+  "implement-queue": `
 ### 💡 Problem Breakdown
 This problem requires implementing a Queue, another fundamental data structure. A queue follows the **FIFO** (First-In, First-Out) principle. Think of a queue of people waiting in line: the first person to get in line is the first person to be served.
 
@@ -58,7 +58,8 @@ class Queue {
 ### 📚 Key Concepts
 -   **Queue**: A linear data structure which follows a FIFO (First-In, First-Out) order.
 `,
-  'implement-singly-linked-list': `
+
+  "implement-singly-linked-list": `
 ### 💡 Problem Breakdown
 A Linked List is a linear data structure where elements (\`Nodes\`) are not stored at contiguous memory locations but are linked using pointers. Each node contains its data and a reference (a \`"next"\` pointer) to the next node in the sequence.
 
@@ -100,7 +101,8 @@ class LinkedList {
 -   **Head**: The first node in a linked list. It's the only entry point to traverse the list.
 -   **Traversal**: The process of visiting each node in the list, usually by starting at the head and following the \`next\` pointers.
 `,
-  'implement-doubly-linked-list': `
+
+  "implement-doubly-linked-list": `
 ### 💡 Problem Breakdown
 A Doubly Linked List is an enhancement of a singly linked list. Each node contains its data, a pointer to the *next* node, and a pointer to the *previous* node. This allows for traversal in both directions.
 
@@ -125,7 +127,8 @@ For example, when appending, you would set the new node's \`prev\` to the old ta
 -   **Doubly Linked List**: A linked list where nodes are connected bidirectionally.
 -   **Traversal**: Can be done forwards (using \`next\`) or backwards (using \`prev\`).
 `,
-  'implement-hash-table': `
+
+  "implement-hash-table": `
 ### 💡 Problem Breakdown
 A Hash Table (or Hash Map) is a data structure that maps keys to values for highly efficient lookup. It uses a "hash function" to compute an index, or "bucket," from a key, where the value can be stored.
 
@@ -161,7 +164,8 @@ class HashTable {
 -   **Hash Function**: A function that maps data of arbitrary size to a fixed-size value.
 -   **Collision**: When two distinct keys hash to the same index.
 `,
-  'binary-search-tree-insertion': `
+
+  "binary-search-tree-insertion": `
 ### 💡 Problem Breakdown
 A Binary Search Tree (BST) is a node-based binary tree data structure with a specific property: for any given node, all values in its left subtree are less than the node's value, and all values in its right subtree are greater. The task is to implement the insertion method.
 
@@ -199,7 +203,8 @@ class BST {
 ### 📚 Key Concepts
 -   **Binary Search Tree (BST)**: A sorted tree data structure that allows for fast lookups, additions, and removals (O(log n) on average for a balanced tree).
 `,
-  'binary-search-tree-find': `
+
+  "binary-search-tree-find": `
 ### 💡 Problem Breakdown
 The structure of a BST makes searching very efficient. The task is to add a method that finds if a value exists in the tree.
 
@@ -226,7 +231,8 @@ Because you discard half of the remaining tree at each step, this search is very
 ### 📚 Key Concepts
 -   **Tree Traversal**: The process of visiting nodes in a tree. Searching is a form of traversal.
 `,
-  'binary-search-tree-traversal': `
+
+  "binary-search-tree-traversal": `
 ### 💡 Problem Breakdown
 This is a conceptual problem about the three main Depth-First Search (DFS) traversal methods for a binary tree. The order in which you "visit" the root node relative to its left and right children defines the traversal.
 
@@ -253,7 +259,8 @@ function postOrder(node) {
 ### 📚 Key Concepts
 -   **Depth-First Search (DFS)**: A traversal algorithm that explores as far as possible down each branch before backtracking.
 `,
-  'tree-bfs-traversal': `
+
+  "tree-bfs-traversal": `
 ### 💡 Problem Breakdown
 Breadth-First Search (BFS) is another way to traverse a tree. Instead of going deep down one branch, it explores the tree level by level. It visits all the nodes at depth 0 (the root), then all nodes at depth 1, and so on.
 
@@ -284,7 +291,8 @@ function bfs(root) {
 -   **Breadth-First Search (BFS)**: A traversal algorithm that explores nodes level by level.
 -   **Queue**: The core data structure that enables the FIFO (First-In, First-Out) exploration required for BFS.
 `,
-  'implement-graph-conceptual': `
+
+  "implement-graph-conceptual": `
 ### 💡 Problem Breakdown
 A Graph is a non-linear data structure consisting of "vertices" (or nodes) and "edges" that connect them. There are two primary ways to represent a graph in code:
 1.  **Adjacency List**: This is the most common representation. It's a map or an object where the keys are the vertices, and the values are an array of the vertices that are adjacent to it (its "neighbors"). This is very space-efficient for "sparse" graphs (graphs with relatively few edges).
@@ -293,7 +301,8 @@ A Graph is a non-linear data structure consisting of "vertices" (or nodes) and "
 ### 📚 Key Concepts
 -   **Graph**: A data structure representing a set of objects where some pairs of objects are connected by links.
 `,
-  'graph-dfs-traversal-conceptual': `
+
+  "graph-dfs-traversal-conceptual": `
 ### 💡 Problem Breakdown
 Depth-First Search (DFS) on a graph is similar to DFS on a tree. It explores as far as possible along each branch before backtracking. The key difference is that graphs can have cycles, so we must keep track of visited nodes to avoid infinite loops.
 
@@ -317,7 +326,8 @@ function dfs(startNode, graph, visited = new Set()) {
 -   **Depth-First Search (DFS)**: A graph traversal algorithm.
 -   **Visited Set**: A crucial data structure to prevent infinite loops in graphs with cycles.
 `,
-  'graph-bfs-traversal-conceptual': `
+
+  "graph-bfs-traversal-conceptual": `
 ### 💡 Problem Breakdown
 Breadth-First Search (BFS) on a graph explores neighbors of the starting node first, then the neighbors of those neighbors, and so on, level by level. It's useful for finding the shortest path in an unweighted graph.
 
@@ -346,7 +356,8 @@ function bfs(startNode, graph) {
 -   **Breadth-First Search (BFS)**: A graph traversal algorithm.
 -   **Queue**: The core data structure that enables the level-by-level exploration.
 `,
-  'implement-trie': `
+
+  "implement-trie": `
 ### 💡 Problem Breakdown
 A Trie (pronounced "try"), also known as a prefix tree, is a tree-like data structure that is very efficient for storing and retrieving strings. Each node represents a character, and the path from the root to a node represents a prefix.
 
@@ -375,32 +386,35 @@ class Trie {
 -   **Trie**: A data structure optimized for string prefix operations.
 -   **Use Cases**: Commonly used for autocomplete features and spell checkers.
 `,
-  'implement-max-heap': `
+
+  "implement-max-heap": `
 ### 💡 Problem Breakdown
 A Heap is a specialized tree-based data structure that satisfies the "heap property." In a **Max Heap**, for any given node, its value is greater than or equal to the values of its children. Heaps are often implemented using an array for efficiency.
 
 ### ⚙️ Solution Walkthrough
 The implementation uses an array and helper methods to find parent/child indices.
-1.  **`insert`**: Add the new element to the end of the array. Then, "bubble up" the element: compare it with its parent and swap if it's larger. Repeat until the heap property is restored.
-2.  **`extractMax`**: The maximum element is always at the root (index 0). To remove it, swap it with the last element in the array and pop it. Then, "sink down" the new root: compare it with its children and swap with the larger child. Repeat until the heap property is restored.
+1.  **\`insert\`**: Add the new element to the end of the array. Then, "bubble up" the element: compare it with its parent and swap if it's larger. Repeat until the heap property is restored.
+2.  **\`extractMax\`**: The maximum element is always at the root (index 0). To remove it, swap it with the last element in the array and pop it. Then, "sink down" the new root: compare it with its children and swap with the larger child. Repeat until the heap property is restored.
 
 ### 📚 Key Concepts
 -   **Heap**: A data structure for efficiently finding the min or max element.
 -   **Use Cases**: Priority Queues and the Heap Sort algorithm.
 `,
-  'implement-min-heap': `
+
+  "implement-min-heap": `
 ### 💡 Problem Breakdown
 A **Min Heap** is the opposite of a Max Heap. For any given node, its value is less than or equal to the values of its children. The minimum element of the collection is always at the root.
 
 ### ⚙️ Solution Walkthrough
 The logic is the same as a Max Heap, but the comparisons are reversed.
-1.  **`insert`**: Add to the end and "bubble up," swapping with the parent if the new element is *smaller*.
-2.  **`extractMin`**: Swap the root with the last element and pop. Then, "sink down" the new root by swapping it with its *smaller* child until the heap property is restored.
+1.  **\`insert\`**: Add to the end and "bubble up," swapping with the parent if the new element is *smaller*.
+2.  **\`extractMin\`**: Swap the root with the last element and pop. Then, "sink down" the new root by swapping it with its *smaller* child until the heap property is restored.
 
 ### 📚 Key Concepts
 -   **Min Heap**: A data structure for efficiently finding the minimum element.
 `,
-  'queue-from-stacks': `
+
+  "queue-from-stacks": `
 ### 💡 Problem Breakdown
 This is a classic interview question that tests your understanding of the underlying principles of stacks (LIFO) and queues (FIFO). The goal is to simulate FIFO behavior using two LIFO structures.
 
@@ -416,7 +430,8 @@ This process is called "amortized O(1)" because while the transfer operation is 
 ### 📚 Key Concepts
 -   **Data Structure Simulation**: Implementing one data structure's behavior using others.
 `,
-  'stack-from-queues': `
+
+  "stack-from-queues": `
 ### 💡 Problem Breakdown
 This is the inverse of the previous problem: simulating LIFO behavior using two FIFO structures. This is generally less efficient.
 
@@ -430,7 +445,8 @@ This makes the \`push\` operation expensive (O(n)).
 ### 📚 Key Concepts
 -   **Data Structure Simulation**: Demonstrates a deeper understanding of the properties of queues and stacks.
 `,
-  'linked-list-find-middle': `
+
+  "linked-list-find-middle": `
 ### 💡 Problem Breakdown
 The task is to find the middle node of a singly linked list. A naive solution would be to traverse it once to find the length, then traverse it again to the \`length / 2\` node. The challenge is to do it in a single pass.
 
@@ -443,7 +459,8 @@ The "slow and fast pointer" technique is used.
 ### 📚 Key Concepts
 -   **Two-Pointer Technique**: A common and powerful pattern for solving linked list problems efficiently.
 `,
-  'linked-list-detect-cycle': `
+
+  "linked-list-detect-cycle": `
 ### 💡 Problem Breakdown
 The task is to determine if a linked list contains a cycle (i.e., a node's \`next\` pointer points back to a previous node in the list).
 
@@ -457,7 +474,8 @@ This is the classic application of Floyd's Cycle-Finding Algorithm, also known a
 ### 📚 Key Concepts
 -   **Floyd's Cycle-Finding Algorithm**: A pointer algorithm for detecting cycles in a sequence.
 `,
-  'linked-list-reverse': `
+
+  "linked-list-reverse": `
 ### 💡 Problem Breakdown
 The task is to reverse a singly linked list in-place. This means the direction of all the \`next\` pointers must be flipped.
 
@@ -474,7 +492,8 @@ An iterative solution uses three pointers: \`prev\`, \`current\`, and \`next\`.
 ### 📚 Key Concepts
 -   **Pointer Manipulation**: The core of linked list problems involves carefully managing and re-assigning pointers.
 `,
-  'bst-validation': `
+
+  "bst-validation": `
 ### 💡 Problem Breakdown
 The task is to check if a binary tree is a valid Binary Search Tree. It's not enough to just check if \`node.left.value < node.value < node.right.value\`. A node in the left subtree must be less than *all* of its ancestors on the right, and vice versa.
 
@@ -497,7 +516,8 @@ function isValidBST(node, min = null, max = null) {
 ### 📚 Key Concepts
 -   **Constraint Propagation**: The recursive calls pass down updated \`min\` and \`max\` constraints that must be satisfied by all nodes in that subtree.
 `,
-  'bst-min-max': `
+
+  "bst-min-max": `
 ### 💡 Problem Breakdown
 Due to the properties of a Binary Search Tree, finding the minimum and maximum values is very simple.
 
@@ -516,7 +536,8 @@ function findMin(node) {
 ### 📚 Key Concepts
 -   **BST Property**: The inherent ordering of a BST makes finding extremes a simple traversal.
 `,
-  'bst-height': `
+
+  "bst-height": `
 ### 💡 Problem Breakdown
 The height (or depth) of a binary tree is the length of the longest path from the root node down to the furthest leaf node. The task is to calculate this using recursion.
 
@@ -539,7 +560,8 @@ function findHeight(node) {
 ### 📚 Key Concepts
 -   **Recursive Definition**: Translating the definition of a property (height) into a recursive function.
 `,
-  'bst-is-balanced': `
+
+  "bst-is-balanced": `
 ### 💡 Problem Breakdown
 A height-balanced binary tree is a tree in which the depth of the two subtrees of *every* node never differ by more than one. This property is important for ensuring that operations on the tree remain efficient (O(log n)).
 
@@ -553,7 +575,8 @@ A recursive function can check for balance. The function should return the heigh
 ### 📚 Key Concepts
 -   **Balanced Binary Tree**: A key property for maintaining the performance guarantees of a BST.
 `,
-  'bst-level-order-traversal': `
+
+  "bst-level-order-traversal": `
 ### 💡 Problem Breakdown
 This is another name for a Breadth-First Search (BFS) on a tree. The goal is to traverse the tree level by level, from left to right, and return the node values in a nested array, where each inner array represents a level.
 
@@ -573,7 +596,8 @@ A Queue is used to perform the BFS. The key trick is to know the number of nodes
 -   **Breadth-First Search (BFS)**: A traversal algorithm that explores nodes level by level.
 -   **Queue**: The core data structure for BFS.
 `,
-  'bst-lowest-common-ancestor': `
+
+  "bst-lowest-common-ancestor": `
 ### 💡 Problem Breakdown
 The Lowest Common Ancestor (LCA) of two nodes in a tree is the deepest node that has both nodes as descendants. In a BST, its ordered property allows for a very efficient search.
 
@@ -586,20 +610,22 @@ Start at the root of the BST.
 ### 📚 Key Concepts
 -   **BST Property**: Leveraging the sorted nature of the tree to efficiently find the LCA in O(log n) time.
 `,
-  'implement-priority-queue': `
+
+  "implement-priority-queue": `
 ### 💡 Problem Breakdown
 A Priority Queue is an abstract data type where each element has a "priority" associated with it. Elements with higher priority are served before elements with lower priority. It's often implemented using a Heap data structure for efficiency.
 
 ### ⚙️ Solution Walkthrough
 A Min Heap is a good choice for the underlying structure, where a smaller number indicates a higher priority.
-1.  **`enqueue(value, priority)`**: Create a node with the value and priority. Insert this node into the Min Heap. The heap's "bubble up" logic will place it in the correct position based on its priority in O(log n) time.
-2.  **`dequeue()`**: Call `extractMin` on the Min Heap. This will remove and return the root of the heap (the element with the highest priority) and restructure the heap, all in O(log n) time.
+1.  **\`enqueue(value, priority)\`**: Create a node with the value and priority. Insert this node into the Min Heap. The heap's "bubble up" logic will place it in the correct position based on its priority in O(log n) time.
+2.  **\`dequeue()\`**: Call \`extractMin\` on the Min Heap. This will remove and return the root of the heap (the element with the highest priority) and restructure the heap, all in O(log n) time.
 
 ### 📚 Key Concepts
 -   **Priority Queue**: A data structure for managing items with priorities.
 -   **Heap**: The ideal underlying data structure for an efficient Priority Queue implementation.
 `,
-  'hash-table-collision-handling': `
+
+  "hash-table-collision-handling": `
 ### 💡 Problem Breakdown
 A "hash collision" occurs when a hash function generates the same index for two different keys. Since you can't store both values in the same array slot, you need a strategy to handle this.
 ### ⚙️ Solution Walkthrough
@@ -609,7 +635,8 @@ A "hash collision" occurs when a hash function generates the same index for two 
 ### 📚 Key Concepts
 -   **Collision**: A fundamental problem in hashing that must be handled for a hash table to work correctly.
 `,
-  'linked-list-remove-duplicates': `
+
+  "linked-list-remove-duplicates": `
 ### 💡 Problem Breakdown
 The task is to remove duplicate values from an unsorted singly linked list.
 
@@ -626,7 +653,8 @@ The task is to remove duplicate values from an unsorted singly linked list.
 ### 📚 Key Concepts
 -   **Time-Space Tradeoff**: The solution with a buffer is faster (O(n) time) but uses extra space (O(n) space). The solution without a buffer is slower (O(n^2) time) but uses constant extra space.
 `,
-  'linked-list-find-nth-to-last': `
+
+  "linked-list-find-nth-to-last": `
 ### 💡 Problem Breakdown
 The goal is to find the nth-to-last element of a singly linked list. For example, if n=2, you want the second-to-last element.
 
@@ -640,7 +668,8 @@ The most efficient solution uses the two-pointer technique.
 ### 📚 Key Concepts
 -   **Two-Pointer Technique**: A versatile pattern for solving linked list problems that involve finding nodes based on their position or relationship.
 `,
-'implement-deque': `
+
+  "implement-deque": `
 ### 💡 Problem Breakdown
 A Deque (pronounced "deck") stands for Double-Ended Queue. It's a hybrid data structure that combines the properties of a stack and a queue. You can add and remove elements from both the front and the back.
 
@@ -659,25 +688,27 @@ class Deque {
     removeRear() { return this.items.pop(); }
 }
 \`\`\`
-**Note**: For performance-critical applications, using `.shift()` and `.unshift()` can be inefficient (O(n)). A more optimal implementation would use a doubly linked list.
+**Note**: For performance-critical applications, using \`.shift()\` and \`.unshift()\` can be inefficient (O(n)). A more optimal implementation would use a doubly linked list.
 
 ### 📚 Key Concepts
 - **Deque**: A generalized version of a queue that allows insertion and deletion at both ends.
 `,
-'trie-autocomplete': `
+
+  "trie-autocomplete": `
 ### 💡 Problem Breakdown
 This is a classic application of a Trie. The goal is to add a method that, given a prefix string, returns all the words stored in the Trie that start with that prefix.
 
 ### ⚙️ Solution Walkthrough
 The solution involves two main steps:
 1.  **Traverse to Prefix Node**: First, traverse the Trie from the root down to the node that represents the end of the input prefix. If the prefix doesn't exist in the Trie, return an empty array.
-2.  **DFS from Prefix Node**: Once you have the prefix node, perform a Depth-First Search (DFS) or Breadth-First Search (BFS) on the subtree starting from that node. Collect all words by recursively exploring all paths. A word is found when you reach a node where `isEndOfWord` is true.
+2.  **DFS from Prefix Node**: Once you have the prefix node, perform a Depth-First Search (DFS) or Breadth-First Search (BFS) on the subtree starting from that node. Collect all words by recursively exploring all paths. A word is found when you reach a node where \`isEndOfWord\` is true.
 
 ### 📚 Key Concepts
 - **Trie**: The ideal data structure for prefix-based searches.
 - **Depth-First Search (DFS)**: A recursive traversal algorithm perfect for exploring all paths from a given node.
 `,
-'bst-delete-node': `
+
+  "bst-delete-node": `
 ### 💡 Problem Breakdown
 Deleting a node from a Binary Search Tree is the most complex operation, as you must maintain the BST property after removal. There are three cases to consider for the node to be deleted.
 
@@ -694,7 +725,8 @@ A recursive function is often used to find and delete the node.
 - **In-order Successor**: The next node in the in-order traversal, crucial for deletion.
 - **Recursive Deletion**: The problem is simplified by reducing the two-child case to a one-child or zero-child case.
 `,
-'graph-dijkstra-conceptual': `
+
+  "graph-dijkstra-conceptual": `
 ### 💡 Problem Breakdown
 Dijkstra's algorithm is a classic algorithm for finding the shortest paths from a single starting node to all other nodes in a **weighted graph with non-negative edge weights**.
 
@@ -714,7 +746,8 @@ It's a greedy algorithm that uses a priority queue to be efficient.
 - **Greedy Algorithm**: At each step, it chooses the locally optimal path (the closest unvisited node).
 - **Priority Queue**: The key data structure that makes Dijkstra's efficient by always providing the next closest node to visit.
 `,
-'graph-has-cycle-conceptual': `
+
+  "graph-has-cycle-conceptual": `
 ### 💡 Problem Breakdown
 The task is to determine if a graph contains a cycle. The approach is different for directed vs. undirected graphs. This explanation focuses on a **directed graph**.
 
@@ -734,7 +767,8 @@ A Depth-First Search (DFS) is used. To detect a cycle, we need to track not just
 - **Depth-First Search (DFS)**: The core traversal algorithm.
 - **Back Edge**: In a DFS traversal, an edge that points from a node to one of its ancestors in the DFS tree. A back edge indicates a cycle.
 `,
-'set-data-structure-usage': `
+
+  "set-data-structure-usage": `
 ### 💡 Problem Breakdown
 The ES6 \`Set\` data structure is designed to store a collection of unique values. This makes it an extremely efficient and straightforward tool for finding the number of unique elements in an array.
 
@@ -747,13 +781,14 @@ const uniqueNumbers = new Set(numbers);
 console.log(uniqueNumbers.size); // 4
 \`\`\`
 1.  **\`new Set(iterable)\`**: The \`Set\` constructor can take any iterable object (like an array). It automatically iterates over the elements and adds only the unique ones to the new \`Set\`.
-2.  **`.size`**: This property returns the number of elements in the \`Set\`.
+2.  **\`.size\`**: This property returns the number of elements in the \`Set\`.
 
 ### 📚 Key Concepts
-- **`Set`**: A built-in data structure for storing unique values.
+- **\`Set\`**: A built-in data structure for storing unique values.
 - **Uniqueness**: A common requirement in data processing, made simple by the \`Set\` object.
 `,
-'map-data-structure-usage': `
+
+  "map-data-structure-usage": `
 ### 💡 Problem Breakdown
 The ES6 \`Map\` data structure is ideal for creating frequency counters, where you map an item to its count. It's generally preferred over using a plain object for this task because it avoids prototype chain issues and can handle non-string keys.
 
@@ -769,14 +804,15 @@ for (const char of str) {
 }
 // frequencyMap will be {'h' => 1, 'e' => 1, 'l' => 2, 'o' => 1}
 \`\`\`
-1.  **`map.get(char) || 0`**: This is a concise way to get the current count or default to 0 if the character hasn't been seen yet.
-2.  **`map.set(char, ...)`**: This sets the new, incremented count for the character.
+1.  **\`map.get(char) || 0\`**: This is a concise way to get the current count or default to 0 if the character hasn't been seen yet.
+2.  **\`map.set(char, ...)\`**: This sets the new, incremented count for the character.
 
 ### 📚 Key Concepts
-- **`Map`**: A built-in data structure for key-value pairs.
+- **\`Map\`**: A built-in data structure for key-value pairs.
 - **Frequency Counter**: A common pattern for solving many problems involving strings and arrays.
 `,
-'linked-list-is-palindrome': `
+
+  "linked-list-is-palindrome": `
 ### 💡 Problem Breakdown
 The task is to check if a singly linked list is a palindrome (reads the same forwards and backwards). The challenge is that you can't easily iterate backwards in a singly linked list.
 
@@ -791,7 +827,8 @@ An efficient solution involves a few steps:
 - **Two-Pointer Technique**: Used to efficiently find the middle of the list.
 - **In-place Reversal**: The sub-list reversal is a key part of the algorithm.
 `,
-'bst-successor-conceptual': `
+
+  "bst-successor-conceptual": `
 ### 💡 Problem Breakdown
 The "in-order successor" of a node 'n' in a Binary Search Tree is the node that would be visited immediately after 'n' in an in-order traversal. This is the node with the smallest value that is still larger than 'n'.
 
@@ -804,7 +841,8 @@ There are two main cases for a node 'n':
 - **In-order Traversal**: The fundamental concept that defines what a "successor" is.
 - **BST Property**: The ordered nature of the tree is used to efficiently find the successor.
 `,
-'graph-topological-sort-conceptual': `
+
+  "graph-topological-sort-conceptual": `
 ### 💡 Problem Breakdown
 Topological Sort is an algorithm for ordering the vertices of a **Directed Acyclic Graph (DAG)**. For every directed edge from vertex \`u\` to vertex \`v\`, \`u\` must come before \`v\` in the ordering. This is commonly used for scheduling tasks with dependencies (e.g., you must take "Calculus I" before "Calculus II").
 
@@ -822,7 +860,8 @@ A common algorithm uses Depth-First Search (DFS).
 - **Directed Acyclic Graph (DAG)**: A directed graph with no cycles, which is a prerequisite for topological sorting.
 - **Depth-First Search (DFS)**: The core traversal algorithm used to determine the ordering.
 `,
-'lru-cache-conceptual': `
+
+  "lru-cache-conceptual": `
 ### 💡 Problem Breakdown
 LRU stands for "Least Recently Used." An LRU cache is a fixed-size cache that automatically evicts the least recently used item when it needs to make space for a new item. The challenge is to design this data structure with \`get\` and \`put\` operations that run in O(1) average time complexity.
 
@@ -830,8 +869,8 @@ LRU stands for "Least Recently Used." An LRU cache is a fixed-size cache that au
 The optimal solution requires combining two data structures:
 1.  **A Hash Map (like a JavaScript \`Map\`)**: This provides O(1) lookup of items by their key. The map will store the key and a reference (or pointer) to a node in a linked list.
 2.  **A Doubly Linked List**: This is used to maintain the order of use. The list will have a "most recently used" end and a "least recently used" end.
--   **`get(key)`**: Look up the key in the map. If it exists, get the corresponding node from the linked list, move that node to the "most recently used" end of the list, and return its value.
--   **`put(key, value)`**: If the key exists, update its value and move its node to the "most recently used" end. If it's a new key:
+-   **\`get(key)\`**: Look up the key in the map. If it exists, get the corresponding node from the linked list, move that node to the "most recently used" end of the list, and return its value.
+-   **\`put(key, value)\`**: If the key exists, update its value and move its node to the "most recently used" end. If it's a new key:
     - If the cache is full, remove the item at the "least recently used" end of the list (and also from the map).
     - Create a new node, add it to the "most recently used" end of the list, and add the key and node reference to the map.
 
@@ -840,7 +879,8 @@ The optimal solution requires combining two data structures:
 -   **Hash Map**: Allows for O(1) lookup.
 -   **Data Structure Combination**: Combining the strengths of two different data structures to meet complex requirements.
 `,
-'bst-from-sorted-array': `
+
+  "bst-from-sorted-array": `
 ### 💡 Problem Breakdown
 The goal is to convert a sorted array into a height-balanced Binary Search Tree. A height-balanced tree is important for ensuring that search operations remain efficient (O(log n)).
 
@@ -861,7 +901,8 @@ This approach naturally creates a balanced tree because we are always picking th
 - **Divide and Conquer**: The core strategy of splitting the array and recursively solving for the sub-arrays.
 - **Height-Balanced BST**: A tree where the depth of the two subtrees of every node never differs by more than one.
 `,
-'implement-adjacency-list': `
+
+  "implement-adjacency-list": `
 ### 💡 Problem Breakdown
 An adjacency list is the most common way to represent a graph in code, especially for sparse graphs. It's a map where each key is a vertex, and its value is a list (e.g., an array) of all the vertices it's connected to.
 
@@ -885,13 +926,14 @@ class Graph {
 }
 \`\`\`
 1.  **\`adjacencyList\`**: A plain object is used to store the list.
-2.  **`addVertex`**: Adds a new key to the list with an empty array.
-3.  **`addEdge`**: Adds each vertex to the other's list of neighbors.
+2.  **\`addVertex\`**: Adds a new key to the list with an empty array.
+3.  **\`addEdge\`**: Adds each vertex to the other's list of neighbors.
 
 ### 📚 Key Concepts
 - **Graph Representation**: A fundamental concept in graph theory.
 `,
-'number-of-islands-conceptual': `
+
+  "number-of-islands-conceptual": `
 ### 💡 Problem Breakdown
 This is a classic graph traversal problem disguised in a grid. An "island" is a group of connected '1's (land). The goal is to count how many distinct islands exist in the grid.
 
@@ -909,7 +951,8 @@ The approach is to iterate through the entire grid.
 - **Graph Traversal (DFS/BFS)**: The core algorithm used to find and mark all parts of an island.
 - **Implicit Graph**: The grid can be thought of as a graph where each cell is a node and adjacent land cells have edges between them.
 `,
-'bst-serialize-deserialize-conceptual': `
+
+  "bst-serialize-deserialize-conceptual": `
 ### 💡 Problem Breakdown
 This is a common interview problem that tests your understanding of tree traversals.
 - **Serialization**: The process of converting a tree structure into a format (like a string) that can be stored or transmitted.
@@ -935,7 +978,8 @@ A **Pre-order Traversal** is a very common and effective way to serialize a tree
 -   **Tree Traversal**: Pre-order traversal is key because it processes the root before its children, which makes reconstruction straightforward.
 -   **Serialization**: Converting data structures to a storable/transmittable format.
 `,
-'avl-tree-conceptual': `
+
+  "avl-tree-conceptual": `
 ### 💡 Problem Breakdown
 An AVL Tree is a self-balancing Binary Search Tree. The "balance factor" of a node (the height of its left subtree minus the height of its right subtree) is always maintained to be -1, 0, or 1. This guarantees that the tree's height is always logarithmic, ensuring that operations like insertion, deletion, and search are always efficient (O(log n)).
 
@@ -950,7 +994,8 @@ The key to an AVL tree is the **rotation** process.
 - **Self-Balancing BST**: A type of BST that automatically maintains a balanced height.
 - **Rotations**: The core operations (left and right rotations) used to rebalance the tree structure after modifications.
 `,
-'red-black-tree-conceptual': `
+
+  "red-black-tree-conceptual": `
 ### 💡 Problem Breakdown
 A Red-Black Tree is another type of self-balancing Binary Search Tree. Instead of storing heights, it maintains balance by enforcing a set of rules about the "color" (red or black) of each node.
 
@@ -961,7 +1006,8 @@ The five rules of a Red-Black Tree (e.g., "a red node cannot have a red child," 
 - **Self-Balancing BST**: A different strategy for achieving the same goal as an AVL tree.
 - **Node Coloring**: The core mechanism used to track and enforce the tree's balance properties.
 `,
-'b-tree-conceptual': `
+
+  "b-tree-conceptual": `
 ### 💡 Problem Breakdown
 A B-Tree is a self-balancing tree data structure that generalizes the binary search tree, allowing for nodes with more than two children. Unlike a BST, a node in a B-Tree can contain multiple keys. This is what makes it ideal for systems that read and write large blocks of data, like databases and filesystems.
 
@@ -974,14 +1020,15 @@ A B-Tree is a self-balancing tree data structure that generalizes the binary sea
 - **B-Tree**: A specialized tree optimized for on-disk storage.
 - **Fanout**: The number of children a node can have.
 `,
-'bloom-filter-conceptual': `
+
+  "bloom-filter-conceptual": `
 ### 💡 Problem Breakdown
 A Bloom Filter is a space-efficient, probabilistic data structure used to test whether an element is a member of a set. It is "probabilistic" because it can have **false positives** (it might say an element is in the set when it's not) but it can **never** have **false negatives** (if it says an element is not in the set, it is definitely not in the set).
 
 ### ⚙️ Solution Walkthrough
 1.  **Setup**: An m-bit array, initially all set to 0, and k different hash functions.
-2.  **`add(item)`**: To add an item, feed it to the k hash functions to get k array positions. Set the bits at all these positions to 1.
-3.  **`check(item)`**: To check if an item is in the set, feed it to the k hash functions to get k array positions. Check if the bits at *all* these positions are 1.
+2.  **\`add(item)\`**: To add an item, feed it to the k hash functions to get k array positions. Set the bits at all these positions to 1.
+3.  **\`check(item)\`**: To check if an item is in the set, feed it to the k hash functions to get k array positions. Check if the bits at *all* these positions are 1.
     - If any of the bits is 0, the item is definitely not in the set.
     - If all the bits are 1, the item is *probably* in the set. It could be a false positive if other items happened to set the same bits.
 
@@ -989,7 +1036,8 @@ A Bloom Filter is a space-efficient, probabilistic data structure used to test w
 - **Probabilistic Data Structure**: A data structure that may produce erroneous results but with a known probability.
 - **Use Cases**: Useful in cases where false positives are acceptable, such as checking for previously seen articles for a user or checking for malicious URLs in a browser.
 `,
-'skip-list-conceptual': `
+
+  "skip-list-conceptual": `
 ### 💡 Problem Breakdown
 A Skip List is a probabilistic data structure that provides an alternative to balanced trees for storing sorted data. It's essentially a linked list with additional pointers that form "express lanes," allowing for faster searching.
 
@@ -1002,7 +1050,8 @@ A Skip List is a probabilistic data structure that provides an alternative to ba
 - **Probabilistic Data Structure**: The random nature of the levels provides good performance on average (O(log n) for search, insertion, and deletion).
 - **Linked List Enhancement**: A way to get tree-like performance from a list-like structure.
 `,
-'graph-clone-conceptual': `
+
+  "graph-clone-conceptual": `
 ### 💡 Problem Breakdown
 The task is to create a deep copy of a graph. This means creating new nodes for every node in the original graph and ensuring the connections (edges) between the new nodes match the connections in the original. The main challenge is handling cycles and ensuring each original node is only cloned once.
 
@@ -1022,7 +1071,8 @@ A hash map is essential to store the mapping between the original nodes and thei
 - **Graph Traversal**: The core mechanism for visiting every node and edge.
 - **Hash Map**: Used to track visited/cloned nodes to prevent infinite loops and redundant work.
 `,
-'graph-prims-algorithm-conceptual': `
+
+  "graph-prims-algorithm-conceptual": `
 ### 💡 Problem Breakdown
 A Minimum Spanning Tree (MST) is a subset of the edges of a connected, weighted, undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight. Prim's algorithm is a greedy algorithm to find an MST.
 
@@ -1039,7 +1089,8 @@ A Minimum Spanning Tree (MST) is a subset of the edges of a connected, weighted,
 - **Greedy Algorithm**: At each step, it makes the locally optimal choice by adding the cheapest possible edge.
 - **Priority Queue**: The key data structure for efficiently finding the next cheapest edge.
 `,
-'graph-kruskals-algorithm-conceptual': `
+
+  "graph-kruskals-algorithm-conceptual": `
 ### 💡 Problem Breakdown
 Kruskal's algorithm is another greedy algorithm for finding a Minimum Spanning Tree (MST) in a connected, weighted, undirected graph.
 
@@ -1056,7 +1107,8 @@ Kruskal's algorithm is another greedy algorithm for finding a Minimum Spanning T
 - **Greedy Algorithm**: It makes the locally optimal choice by considering the cheapest edges first.
 - **Disjoint Set Union (DSU)**: The key data structure for efficiently detecting cycles.
 `,
-'disjoint-set-union-conceptual': `
+
+  "disjoint-set-union-conceptual": `
 ### 💡 Problem Breakdown
 A Disjoint Set Union (DSU), also known as a Union-Find data structure, is a data structure that tracks a partition of a set into disjoint (non-overlapping) subsets. It provides two main operations with near-constant time complexity on average.
 
@@ -1069,7 +1121,8 @@ It's typically implemented with an array, where \`parent[i]\` stores the parent 
 - **Disjoint Sets**: A collection of sets with no common elements.
 - **Use Cases**: Kruskal's algorithm for MSTs, detecting cycles in graphs.
 `,
-'fenwick-tree-conceptual': `
+
+  "fenwick-tree-conceptual": `
 ### 💡 Problem Breakdown
 A Fenwick Tree, or Binary Indexed Tree (BIT), is a data structure that can efficiently perform two operations on an array of numbers:
 1.  Update an element's value.
@@ -1085,7 +1138,8 @@ A BIT is stored in an array. Each index in the BIT array stores the sum of a spe
 - **Prefix Sum**: A running total of an array.
 - **Bitwise Operations**: The core of the Fenwick Tree's efficient index manipulation.
 `,
-'segment-tree-conceptual': `
+
+  "segment-tree-conceptual": `
 ### 💡 Problem Breakdown
 A Segment Tree is a powerful tree-based data structure used for storing information about intervals or segments. It's particularly efficient for performing range queries (e.g., "what is the minimum value in the range from index \`i\` to \`j\`?") and range updates.
 
@@ -1098,7 +1152,8 @@ A Segment Tree is a powerful tree-based data structure used for storing informat
 - **Range Queries**: A common type of database or algorithmic query.
 - **Divide and Conquer**: The underlying principle for the tree's structure and its query/update algorithms.
 `,
-'linked-list-partition': `
+
+  "linked-list-partition": `
 ### 💡 Problem Breakdown
 The task is to reorder a linked list based on a pivot value \`x\`. All nodes with values less than \`x\` should come before all nodes with values greater than or equal to \`x\`. The relative order within the two partitions does not need to be preserved.
 
@@ -1114,7 +1169,8 @@ A simple and stable approach is to create two new, separate linked lists: a "les
 - **Pointer Manipulation**: A core linked list skill involving rearranging \`next\` pointers.
 - **Dummy Nodes**: Using a dummy head node is a common trick that simplifies list manipulation code by avoiding special cases for an empty list.
 `,
-'linked-list-sum-lists': `
+
+  "linked-list-sum-lists": `
 ### 💡 Problem Breakdown
 This is a classic interview question. You are given two linked lists where each node represents a digit of a number in reverse order. The task is to add these two numbers and return the result as a new linked list in the same format.
 
@@ -1135,7 +1191,8 @@ You can iterate through both lists simultaneously, just like you would perform a
 - **Linked List Traversal**: Iterating through lists simultaneously.
 - **Schoolbook Arithmetic**: The algorithm mimics the process of manual addition.
 `,
-'bst-tree-to-doubly-linked-list': `
+
+  "bst-tree-to-doubly-linked-list": `
 ### 💡 Problem Breakdown
 The task is to convert a Binary Search Tree into a sorted, circular Doubly Linked List, in-place. The "left" pointer of the tree node should become the "prev" pointer, and the "right" pointer should become the "next" pointer.
 
@@ -1156,7 +1213,8 @@ This can be solved elegantly with an in-order traversal. The key is to keep trac
 - **In-order Traversal**: The core traversal method that visits nodes in sorted order.
 - **In-place Modification**: Re-wiring the existing node pointers to form the new data structure.
 `,
-'graph-bellman-ford-conceptual': `
+
+  "graph-bellman-ford-conceptual": `
 ### 💡 Problem Breakdown
 The Bellman-Ford algorithm finds the shortest paths from a single source vertex to all other vertices in a weighted, directed graph. Its key advantage over Dijkstra's is that it can handle graphs with **negative edge weights**.
 
@@ -1171,7 +1229,8 @@ The algorithm is simpler but less efficient than Dijkstra's.
 - **Shortest Path Algorithm**: An algorithm for finding the path with the minimum total weight.
 - **Negative Weight Cycles**: A cycle in a graph whose edges sum to a negative value. Bellman-Ford can detect these.
 `,
-'graph-floyd-warshall-conceptual': `
+
+  "graph-floyd-warshall-conceptual": `
 ### 💡 Problem Breakdown
 The Floyd-Warshall algorithm is an algorithm for finding the shortest paths between **all pairs** of vertices in a weighted, directed graph (the "all-pairs shortest path" problem). It can handle negative edge weights but not negative cycles.
 
@@ -1189,20 +1248,22 @@ After the loops complete, the matrix will contain the shortest path distances be
 - **All-Pairs Shortest Path**: A different class of shortest path problem from the single-source problems solved by Dijkstra's and Bellman-Ford.
 - **Dynamic Programming**: The algorithm iteratively builds up the solution by considering all possible intermediate vertices.
 `,
-'circular-queue': `
+
+  "circular-queue": `
 ### 💡 Problem Breakdown
 A standard queue implemented with an array can be inefficient because the \`shift()\` operation takes O(n) time. A circular queue (or circular buffer) is a fixed-size queue that uses an array and two pointers (\`head\` and \`tail\`) to achieve O(1) time complexity for both enqueue and dequeue operations.
 
 ### ⚙️ Solution Walkthrough
 1.  **Structure**: An array of a fixed size, and \`head\` and \`tail\` pointers, initially at 0. A \`count\` variable is also useful.
-2.  **`enqueue(item)`**: Add the item at the \`tail\` index. Increment \`tail\`. If \`tail\` reaches the end of the array, it "wraps around" to 0. This wrap-around is done using the modulo operator: \`tail = (tail + 1) % capacity\`. Check for overflow (queue is full).
-3.  **`dequeue()`**: Remove the item from the \`head\` index. Increment \`head\` in the same circular manner: \`head = (head + 1) % capacity\`. Check for underflow (queue is empty).
+2.  **\`enqueue(item)\`**: Add the item at the \`tail\` index. Increment \`tail\`. If \`tail\` reaches the end of the array, it "wraps around" to 0. This wrap-around is done using the modulo operator: \`tail = (tail + 1) % capacity\`. Check for overflow (queue is full).
+3.  **\`dequeue()\`**: Remove the item from the \`head\` index. Increment \`head\` in the same circular manner: \`head = (head + 1) % capacity\`. Check for underflow (queue is empty).
 
 ### 📚 Key Concepts
 - **Circular Buffer**: A data structure that uses a single, fixed-size buffer as if it were connected end-to-end.
 - **Modulo Arithmetic**: The key to implementing the "wrap-around" behavior of the pointers.
 `,
-'trie-delete-word': `
+
+  "trie-delete-word": `
 ### 💡 Problem Breakdown
 Deleting a word from a Trie is more complex than insertion because you must only remove nodes that are not part of another word's prefix.
 
@@ -1216,7 +1277,8 @@ A recursive approach is often used.
 ### 📚 Key Concepts
 - **Recursive Deletion**: Traversing a data structure to a point and then cleaning up nodes on the way back up the call stack.
 `,
-'heap-heapify-conceptual': `
+
+  "heap-heapify-conceptual": `
 ### 💡 Problem Breakdown
 "Heapify" is the process of building a valid heap from an unsorted array. A naive approach would be to create an empty heap and insert each element one by one, which takes O(n log n) time. A more efficient, bottom-up algorithm can do it in O(n) time.
 
@@ -1231,7 +1293,8 @@ By starting from the bottom, we ensure that by the time we process a node, its s
 ### 📚 Key Concepts
 - **Heapify**: An efficient algorithm for building a heap in linear time.
 `,
-'bst-kth-smallest-element': `
+
+  "bst-kth-smallest-element": `
 ### 💡 Problem Breakdown
 The task is to find the kth smallest element in a Binary Search Tree.
 
@@ -1246,7 +1309,8 @@ A more optimized solution can stop the traversal early. You can perform an in-or
 ### 📚 Key Concepts
 - **In-order Traversal**: The fundamental traversal method for getting sorted data from a BST.
 `,
-'graph-bipartite-check-conceptual': `
+
+  "graph-bipartite-check-conceptual": `
 ### 💡 Problem Breakdown
 A graph is bipartite if its vertices can be divided into two disjoint and independent sets, U and V, such that every edge connects a vertex in U to one in V. In other words, there are no edges that connect two vertices within the same set.
 
@@ -1266,7 +1330,8 @@ This can be solved using a graph traversal (BFS or DFS) and a "coloring" scheme.
 - **Bipartite Graph**: A fundamental property of graphs.
 - **Graph Coloring**: A technique used in many graph algorithms to track state during a traversal.
 `,
-'fenwick-tree-range-sum-conceptual': `
+
+  "fenwick-tree-range-sum-conceptual": `
 ### 💡 Problem Breakdown
 A Fenwick Tree (or Binary Indexed Tree) is highly efficient at calculating prefix sums (sum from the start to index \`i\`). The task is to calculate the sum of an arbitrary range \`[i, j]\`.
 
@@ -1287,7 +1352,8 @@ Since both \`query\` operations take O(log n) time, the range sum query is also 
 ### 📚 Key Concepts
 - **Prefix Sum**: A technique where pre-calculating running totals allows for rapid calculation of range sums.
 `,
-'segment-tree-range-update-conceptual': `
+
+  "segment-tree-range-update-conceptual": `
 ### 💡 Problem Breakdown
 While a simple Segment Tree can handle range queries, updating every element in a range one by one is inefficient (O(n)). **Lazy propagation** is an optimization technique that allows for range updates in O(log n) time.
 
@@ -1301,19 +1367,21 @@ While a simple Segment Tree can handle range queries, updating every element in 
 ### 📚 Key Concepts
 - **Lazy Propagation**: A technique for deferring updates on a data structure until they are needed, allowing for efficient range updates.
 `,
-'sparse-table-conceptual': `
+
+  "sparse-table-conceptual": `
 ### 💡 Problem Breakdown
 A Sparse Table is a data structure used to answer range queries on a static (unchanging) array very quickly. The most common use is for Range Minimum/Maximum Query (RMQ). After a preprocessing step, it can answer any range query in O(1) time.
 
 ### ⚙️ Solution Walkthrough
 1.  **Preprocessing (O(n log n))**: Create a 2D table, \`st\`. \`st[i][j]\` will store the answer (e.g., the minimum) for the range starting at index \`i\` with length \`2^j\`. This table is built up using dynamic programming.
-2.  **Query (O(1))**: To find the minimum in a range \`[L, R]\`, find the largest power of two, \`k\`, that is less than or equal to the range length. The answer is the minimum of two pre-calculated values: the minimum of the range starting at \`L\` of length \`2^k\`, and the minimum of the range ending at \`R\` of length \`2^k\`. These two ranges will overlap, but for an idempotent operation like `min`, this is fine.
+2.  **Query (O(1))**: To find the minimum in a range \`[L, R]\`, find the largest power of two, \`k\`, that is less than or equal to the range length. The answer is the minimum of two pre-calculated values: the minimum of the range starting at \`L\` of length \`2^k\`, and the minimum of the range ending at \`R\` of length \`2^k\`. These two ranges will overlap, but for an idempotent operation like \`min\`, this is fine.
 
 ### 📚 Key Concepts
-- **Idempotent Operation**: An operation where applying it multiple times has the same result as applying it once (e.g., `min(a, a) = a`).
+- **Idempotent Operation**: An operation where applying it multiple times has the same result as applying it once (e.g., \`min(a, a) = a\`).
 - **Dynamic Programming**: Used in the preprocessing step to build the table.
 `,
-'suffix-array-conceptual': `
+
+  "suffix-array-conceptual": `
 ### 💡 Problem Breakdown
 A Suffix Array is a data structure used for advanced string searching. It is a sorted array of all the suffixes of a given string. For the string "banana", the suffixes are "banana", "anana", "nana", "ana", "na", "a". The suffix array would be the sorted indices of these suffixes.
 
@@ -1328,7 +1396,8 @@ An **LCP (Longest Common Prefix) array** is often built alongside a suffix array
 - **Suffix**: A substring that starts from a particular index and goes to the end of the string.
 - **String Algorithms**: A field of computer science dedicated to the efficient processing of strings.
 `,
-'k-d-tree-conceptual': `
+
+  "k-d-tree-conceptual": `
 ### 💡 Problem Breakdown
 A K-D Tree (k-dimensional tree) is a space-partitioning data structure for organizing points in a k-dimensional space. It is a binary tree where each level splits the data along a different dimension.
 
