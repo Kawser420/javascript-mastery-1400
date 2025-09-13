@@ -1,8 +1,7 @@
-
 export const explanations: Record<string, string> = {
-  'simple-function-return': `
+  "simple-function-return": `
 ### 💡 Problem Breakdown
-This is the most basic form of a function. The goal is to define a reusable block of code that, when called, performs a simple action: returning a specific string of text.
+This is the most basic form of a function. The goal is to define a reusable block of code that returns a specific string.
 
 ### ⚙️ Solution Walkthrough
 The solution uses a standard function declaration.
@@ -12,37 +11,39 @@ function greet() {
 }
 greet();
 \`\`\`
-1.  **\`function greet()\`**: The \`function\` keyword is used to declare a function named \`greet\`.
-2.  **\`return "..."\`**: The \`return\` statement specifies the value that the function will output.
-3.  **\`greet()\`**: This is the function call. It executes the code inside the \`greet\` function.
+1. **function greet()**: The function keyword declares a function named greet.
+2. **return "..."**: The return statement specifies the value to output.
+3. **greet()**: This executes the code inside the greet function.
 
 ### 📚 Key Concepts
--   **Function Declaration**: A traditional way to define a function using the \`function\` keyword.
--   **\`return\` Statement**: Ends function execution and specifies a value to be returned.
+- **Function Declaration**: Traditional way to define a function.
+- **return Statement**: Ends function execution and returns a value.
 `,
-  'function-with-parameters': `
+
+  "function-with-parameters": `
 ### 💡 Problem Breakdown
-Functions become powerful when they can accept input. This problem involves writing a function that takes two inputs (parameters) and uses them in a calculation.
+Functions become powerful when they accept input. This problem involves writing a function that takes two numbers and returns their product.
 
 ### ⚙️ Solution Walkthrough
-The function is defined with two parameters, \`x\` and \`y\`, and returns their product.
+The function is defined with two parameters and returns their product.
 \`\`\`javascript
 function multiply(x, y) {
     return x * y;
 }
 multiply(8, 4); // 32
 \`\`\`
-1. **Parameters \`(x, y)\`**: These are placeholders for the values that will be passed into the function when it's called.
-2. **Arguments \`(8, 4)\`**: The actual values passed to a function are called arguments.
-3. **Return Value**: The function performs a multiplication and returns the result.
+1. **Parameters (x, y)**: Placeholders for values passed to the function.
+2. **Arguments (8, 4)**: Actual values passed when calling the function.
+3. **Return Value**: The result of the multiplication.
 
 ### 📚 Key Concepts
-- **Parameters**: Variables listed as part of a function definition.
-- **Arguments**: The actual values passed to the function when it is invoked.
+- **Parameters**: Variables listed in function definition.
+- **Arguments**: Actual values passed to the function.
 `,
-  'arrow-function-syntax': `
+
+  "arrow-function-syntax": `
 ### 💡 Problem Breakdown
-The goal is to perform a simple calculation using the modern ES6 arrow function syntax. Arrow functions provide a more concise way to write functions, especially for simple, one-line operations.
+The goal is to rewrite a function using arrow function syntax, which provides a more concise way to write functions.
 
 ### ⚙️ Solution Walkthrough
 The solution defines and calls a one-line arrow function.
@@ -50,1712 +51,1871 @@ The solution defines and calls a one-line arrow function.
 const square = (n) => n * n;
 square(9); // 81
 \`\`\`
-1.  **\`const square = ...\`**: An arrow function is an expression, so it is typically assigned to a variable.
-2.  **\`(n) => ...\`**: This is the core syntax. \`(n)\` are the parameters, \`=>\` separates them from the body.
-3.  **\`n * n\`**: Because the body is a single expression and has no curly braces \`{}\`, the result is implicitly returned.
+1. **const square = ...**: Arrow function assigned to a variable.
+2. **(n) => ...**: Core arrow function syntax.
+3. **n * n**: Single expression implicitly returned.
 
 ### 📚 Key Concepts
--   **Arrow Function**: A compact alternative to a traditional function expression.
--   **Implicit Return**: A feature of arrow functions where a single-expression body automatically returns its result.
+- **Arrow Function**: Compact alternative to traditional functions.
+- **Implicit Return**: Single-expression body automatically returns result.
 `,
-  'function-declaration': `
+
+  "function-declaration": `
 ### 💡 Problem Breakdown
-A function declaration is the "classic" way to define a function in JavaScript. A key feature is that declarations are "hoisted," meaning the JavaScript engine moves them to the top of their scope before code execution.
+Function declarations are "hoisted," meaning they can be called before they appear in code.
 
 ### ⚙️ Solution Walkthrough
-A function is defined using the \`function\` keyword, followed by the function name, parameters, and body.
+A function is defined using the function keyword.
 \`\`\`javascript
-// The function can be called before it is defined
-const result = declaredFunction(); 
+const result = declaredFunction(); // Works due to hoisting
 
 function declaredFunction() {
     return "This function was hoisted!";
 }
 \`\`\`
-1. **\`function declaredFunction() { ... }\`**: This entire block is a function declaration.
-2. **Hoisting**: The JavaScript interpreter conceptually moves the entire function declaration to the top of its current scope, which is why it can be called before it appears in the code.
+1. **function declaredFunction()**: Function declaration.
+2. **Hoisting**: JavaScript moves declarations to the top of their scope.
 
 ### 📚 Key Concepts
-- **Function Declaration**: A statement that defines a named function.
-- **Hoisting**: A JavaScript mechanism where variable and function declarations are moved to the top of their scope before code execution.
+- **Function Declaration**: Statement that defines a named function.
+- **Hoisting**: Mechanism where declarations are moved to top of scope.
 `,
-  'function-expression': `
+
+  "function-expression": `
 ### 💡 Problem Breakdown
-A function expression defines a function as part of a larger expression, typically a variable assignment. Unlike declarations, function expressions are not fully hoisted.
+Function expressions define functions as part of variable assignments and are not fully hoisted.
 
 ### ⚙️ Solution Walkthrough
-An anonymous function is created and assigned to a constant \`expressionFunction\`.
+An anonymous function is assigned to a variable.
 \`\`\`javascript
-// This would cause a TypeError because expressionFunction is not a function yet
-// expressionFunction(); 
-
 const expressionFunction = function() {
     return "This is a function expression.";
 };
-
-// It must be called after it is defined
-expressionFunction();
+expressionFunction(); // Must be called after assignment
 \`\`\`
-1. **\`const expressionFunction = ...\`**: A variable is declared.
-2. **\`function() { ... }\`**: An anonymous function is created.
-3. **Assignment**: The function is assigned as the value for the \`expressionFunction\` variable.
-4. **Hoisting Behavior**: While the variable declaration \`const expressionFunction\` is hoisted, its assignment (the function itself) is not. This is why you cannot call it before the line where it is defined.
+1. **const expressionFunction = ...**: Variable declaration.
+2. **function() {...}**: Anonymous function.
+3. **Assignment**: Function assigned as variable value.
 
 ### 📚 Key Concepts
-- **Function Expression**: A syntax to define a function that can be anonymous and assigned to a variable.
+- **Function Expression**: Syntax to define anonymous functions assigned to variables.
 `,
-  'default-parameters': `
+
+  "default-parameters": `
 ### 💡 Problem Breakdown
-Default parameters, introduced in ES6, allow you to initialize function parameters with default values if no value or \`undefined\` is passed. This makes functions more robust and avoids manual checks for undefined parameters.
+Default parameters allow initializing parameters with default values if no value is passed.
 
 ### ⚙️ Solution Walkthrough
-The \`userName\` parameter is given a default value of "Guest" directly in the function signature.
+The userName parameter has a default value.
 \`\`\`javascript
 function greet(userName = "Guest") {
     return \`Hello, \${userName}!\`;
 }
-
 greet("Alice"); // "Hello, Alice!"
 greet();        // "Hello, Guest!"
 \`\`\`
-1. **\`userName = "Guest"\`**: This is the default parameter syntax.
-2. **Execution**: If the \`greet\` function is called with an argument, \`userName\` takes that argument's value. If it's called with no arguments, \`userName\` is assigned the default value "Guest".
+1. **userName = "Guest"**: Default parameter syntax.
+2. **Execution**: Uses argument if provided, otherwise uses default.
 
 ### 📚 Key Concepts
-- **Default Parameters**: A feature for specifying default values for function parameters.
+- **Default Parameters**: Feature for specifying default parameter values.
 `,
-  'rest-parameters-sum': `
+
+  "rest-parameters-sum": `
 ### 💡 Problem Breakdown
-Rest parameter syntax allows a function to accept an indefinite number of arguments as an array. This provides a more modern and cleaner alternative to the older \`arguments\` object.
+Rest parameter syntax allows functions to accept indefinite arguments as an array.
 
 ### ⚙️ Solution Walkthrough
-The \`...args\` syntax gathers all arguments passed to the \`sum\` function into a true array named \`args\`.
+The ...args syntax gathers all arguments into an array.
 \`\`\`javascript
 function sum(...args) {
     return args.reduce((total, current) => total + current, 0);
 }
-
 sum(1, 2, 3, 4, 5); // 15
 \`\`\`
-1. **\`...args\`**: This must be the last parameter in the function definition. It collects all remaining arguments.
-2. **True Array**: \`args\` is a real JavaScript array, so we can immediately use array methods like \`.reduce()\` on it.
+1. **...args**: Collects all remaining arguments.
+2. **True Array**: args is a real JavaScript array.
 
 ### 📚 Key Concepts
-- **Rest Parameters**: A syntax for representing an indefinite number of arguments as an array.
+- **Rest Parameters**: Syntax for representing indefinite arguments as an array.
 `,
-  'iife-pattern': `
+
+  "iife-pattern": `
 ### 💡 Problem Breakdown
-An Immediately Invoked Function Expression (IIFE) is a design pattern where a function is defined and executed at the same time. It's primarily used to create a private scope to avoid polluting the global namespace.
+IIFE (Immediately Invoked Function Expression) creates a private scope and executes immediately.
 
 ### ⚙️ Solution Walkthrough
-A function expression is wrapped in parentheses, and then immediately invoked with a final pair of parentheses.
+Function expression wrapped and immediately invoked.
 \`\`\`javascript
 const result = (function() {
     const privateVar = "I'm private!";
     return \`This IIFE returned: "\${privateVar}"\`;
 })();
-// 'result' is "This IIFE returned: "I'm private!""
-// 'privateVar' is not accessible here.
+// privateVar is not accessible here
 \`\`\`
-1. **\`(function(){...})\`**: This creates a function expression.
-2. **\`()\`**: The second pair of parentheses at the end executes the function immediately.
-3. **Private Scope**: Variables declared inside the IIFE are only accessible within that function.
+1. **(function(){...})**: Creates function expression.
+2. **()**: Executes function immediately.
 
 ### 📚 Key Concepts
-- **IIFE**: A common pattern for creating local scopes and avoiding global variable conflicts.
+- **IIFE**: Pattern for creating private scopes and avoiding global pollution.
 `,
-  'hoisting-declaration': `
+
+  "hoisting-declaration": `
 ### 💡 Problem Breakdown
-Hoisting is a JavaScript mechanism where the interpreter appears to move declarations of functions, variables, or classes to the top of their scope, prior to execution of the code. Function declarations are hoisted completely (both name and body).
+Function declarations are fully hoisted, allowing them to be called before they're defined.
 
 ### ⚙️ Solution Walkthrough
-The \`declaredFunction\` is called before its physical location in the code. This works without error.
+Function is called before its declaration.
 \`\`\`javascript
-// No error is thrown here.
-const result = declaredFunction(); 
+const result = declaredFunction(); // Works
 
 function declaredFunction() {
     return "This function was hoisted!";
 }
 \`\`\`
-1. **Declaration Pass**: Before executing the code, the JavaScript engine makes a pass to find all function declarations and conceptually "moves" them to the top of their scope.
-2. **Execution Pass**: When the code is executed, \`declaredFunction\` is already known and available for use.
+1. **Hoisting**: JavaScript moves function declarations to the top.
+2. **Execution**: Function is available throughout the scope.
 
 ### 📚 Key Concepts
-- **Hoisting**: A core JavaScript behavior related to how execution contexts are created.
+- **Hoisting**: JavaScript's behavior of moving declarations to the top.
 `,
-  'hoisting-expression-var': `
+
+  "hoisting-expression-var": `
 ### 💡 Problem Breakdown
-While function declarations are fully hoisted, function expressions assigned to variables have different hoisting behavior. If a \`var\` is used, the variable declaration is hoisted, but its assignment (the function) is not. This leads to a common error.
+Function expressions assigned to var variables have their declaration hoisted but not their assignment.
 
 ### ⚙️ Solution Walkthrough
-An attempt to call \`expressionFunc\` is made before its definition.
+Calling before assignment results in error.
 \`\`\`javascript
-try {
-    expressionFunc(); // This will throw a TypeError
-} catch (e) {
-    console.log(e.name); // "TypeError"
-}
-
-var expressionFunc = function() {
-    console.log("This will not run yet.");
-};
+console.log(myFunc); // undefined
+var myFunc = function() { return "Expression"; };
 \`\`\`
-1. **Hoisted Declaration**: The engine processes \`var expressionFunc;\` at the top of the scope. At this point, \`expressionFunc\` exists but its value is \`undefined\`.
-2. **Execution Error**: When \`expressionFunc()\` is called, it's like trying to invoke \`undefined()\`, which results in a \`TypeError\`.
+1. **Variable Hoisting**: Declaration is hoisted, assignment is not.
+2. **undefined**: Variable exists but has no value yet.
 
 ### 📚 Key Concepts
-- **Hoisting with \`var\`**: Only the declaration is hoisted, not the initialization.
+- **Variable Hoisting**: Only declarations are hoisted, not assignments.
 `,
-  'global-scope': `
+
+  "global-scope": `
 ### 💡 Problem Breakdown
-The global scope is the outermost scope in a JavaScript environment. Variables declared here are accessible from any other scope in the program. In browsers, the global object is \`window\`.
+Variables declared outside functions have global scope and are accessible everywhere.
 
 ### ⚙️ Solution Walkthrough
-A variable is declared outside any function, making it global. A function then accesses this variable.
+Variable declared in global scope.
 \`\`\`javascript
-// This is in the global scope
-let globalVar = "I am everywhere!";
+const globalVar = "I'm global";
 
 function accessGlobal() {
-    return globalVar; // Accesses the variable from the outer scope
+    return globalVar; // Accessible here
 }
-accessGlobal(); // "I am everywhere!"
 \`\`\`
-1. **Global Declaration**: \`globalVar\` is not inside any function, so it's global.
-2. **Scope Chain Lookup**: When \`accessGlobal\` runs, it looks for \`globalVar\` in its own scope. Not finding it, it looks up the scope chain to the next outer scope (the global one), where it finds the variable.
+1. **Global Declaration**: Outside any function or block.
+2. **Global Access**: Available throughout the program.
 
 ### 📚 Key Concepts
-- **Global Scope**: The top-level scope. Over-reliance on global variables is generally discouraged as it can lead to naming conflicts and hard-to-debug code.
+- **Global Scope**: The outermost scope in JavaScript.
 `,
-  'function-scope': `
+
+  "function-scope": `
 ### 💡 Problem Breakdown
-Variables declared with \`var\` inside a function are "function-scoped." This means they are only accessible anywhere within that function, but not outside of it.
+Variables declared with var inside a function are function-scoped.
 
 ### ⚙️ Solution Walkthrough
-A variable \`scopedVar\` is declared with \`var\` inside a function. An attempt to access it from outside would fail.
+Variable accessible only within function.
 \`\`\`javascript
-function myFunction() {
-    var scopedVar = "I am private to this function.";
-    console.log(scopedVar);
+function test() {
+    var functionScoped = "Only in function";
+    return functionScoped;
 }
-myFunction(); // Logs the message
-// console.log(scopedVar); // Throws a ReferenceError
+// console.log(functionScoped); // Error
 \`\`\`
-1. **Local Variable**: \`scopedVar\` is local to \`myFunction\`.
-2. **Encapsulation**: This is a fundamental way JavaScript encapsulates state within functions, preventing it from leaking into other parts of the program.
+1. **Function Scope**: Variables are confined to the function.
+2. **No External Access**: Cannot be accessed outside function.
 
 ### 📚 Key Concepts
-- **Function Scope**: The scope created by a function. Variables declared with \`var\` are scoped to the entire function.
+- **Function Scope**: Variables are limited to their containing function.
 `,
-  'block-scope-let': `
+
+  "block-scope-let": `
 ### 💡 Problem Breakdown
-ES6 introduced \`let\` and \`const\`, which are "block-scoped." A block is any section of code within curly braces \`{}\` (e.g., in an \`if\` statement or a \`for\` loop). Variables declared with \`let\` are only accessible within that block.
+let and const declarations are block-scoped, confined to their containing block.
 
 ### ⚙️ Solution Walkthrough
-A variable \`blockVar\` is declared inside an \`if\` block. It is not accessible after the block ends.
+Variable accessible only within block.
 \`\`\`javascript
 if (true) {
-    let blockVar = "I am only visible in this block.";
-    console.log(blockVar);
+    let blockScoped = "Only in block";
 }
-// console.log(blockVar); // Throws a ReferenceError
+// console.log(blockScoped); // Error
 \`\`\`
-1. **Block Scope**: The scope of \`blockVar\` is limited to the \`{}\` of the \`if\` statement.
-2. **`let` vs. `var`**: If \`var\` had been used instead of \`let\`, the variable would have been accessible outside the block (scoped to the function or global scope), which is a common source of bugs.
+1. **Block Scope**: Variables limited to their block.
+2. **Temporal Dead Zone**: Cannot access before declaration.
 
 ### 📚 Key Concepts
-- **Block Scope**: The scope created by a pair of curly braces. \`let\` and \`const\` enable this more granular level of scoping.
+- **Block Scope**: Variables confined to their block.
 `,
-  'scope-chain': `
+
+  "scope-chain": `
 ### 💡 Problem Breakdown
-The scope chain is the mechanism that allows a function to access variables from its containing (lexical) scopes. When a variable is used, the JavaScript engine searches the current scope, then the outer scope, then the next outer scope, and so on, up to the global scope, until it finds the variable.
+JavaScript uses lexical scoping - inner functions can access variables from outer functions.
 
 ### ⚙️ Solution Walkthrough
-A deeply nested function \`child\` accesses variables from its parent and grandparent scopes.
+Nested function accessing outer variables.
 \`\`\`javascript
-const grandParentVar = "Grandparent";
-
-function parent() {
-    const parentVar = "Parent";
-    function child() {
-        return \`Child can see: \${parentVar} and \${grandParentVar}\`;
+function outer() {
+    const outerVar = "outer";
+    function inner() {
+        return outerVar; // Access outer variable
     }
-    return child();
-}
-parent();
-\`\`\`
-1. **Innermost Scope**: \`child\`'s scope is searched first.
-2. **Outer Scope**: \`parent\`'s scope is searched next.
-3. **Global Scope**: The global scope is searched last.
-
-### 📚 Key Concepts
-- **Scope Chain**: The ordered list of scopes that are searched to resolve a variable's value.
-- **Lexical Scoping**: The scope chain is determined by how the functions are nested in the source code (lexically), not by how they are called.
-`,
-  'pure-function': `
-### 💡 Problem Breakdown
-A pure function is a fundamental concept in functional programming. It has two main properties:
-1.  **Deterministic**: Given the same input, it will always return the same output.
-2.  **No Side Effects**: It does not modify any state outside of its own scope (e.g., no modifying global variables, no writing to the console or a file).
-
-### ⚙️ Solution Walkthrough
-The \`double\` function is pure. Its output depends only on its input \`n\`, and it doesn't change anything else in the program.
-\`\`\`javascript
-function double(n) {
-    return n * 2;
+    return inner();
 }
 \`\`\`
-Pure functions are predictable, testable, and easier to reason about, which makes them a cornerstone of writing reliable software.
+1. **Scope Chain**: Inner functions can access outer scopes.
+2. **Lexical Scoping**: Based on where functions are declared.
 
 ### 📚 Key Concepts
-- **Pure Function**: A function that is deterministic and has no side effects.
-- **Side Effects**: Any interaction a function has with the outside world beyond its return value.
+- **Scope Chain**: Hierarchy of accessible scopes.
 `,
-  'impure-function': `
+
+  "pure-function": `
 ### 💡 Problem Breakdown
-An impure function is the opposite of a pure function. It may produce different outputs for the same input, or it may have side effects, meaning it modifies state outside of its own scope.
+Pure functions always return the same output for the same input and have no side effects.
 
 ### ⚙️ Solution Walkthrough
-The \`incrementExternal\` function modifies a variable \`externalCounter\` that exists outside of its own scope. This is a side effect.
+Function with no side effects.
 \`\`\`javascript
-let externalCounter = 0; // External state
-
-function incrementExternal() {
-    externalCounter++; // This is a side effect
-    return \`Counter is now: \${externalCounter}\`;
+function pureAdd(a, b) {
+    return a + b; // No side effects
 }
 \`\`\`
-The output of \`incrementExternal()\` depends on the previous state of \`externalCounter\`, so it is not deterministic.
+1. **Deterministic**: Same input → same output.
+2. **No Side Effects**: Doesn't modify external state.
 
 ### 📚 Key Concepts
-- **Impure Function**: A function that has side effects or whose output is not solely determined by its inputs.
-- **Side Effects**: Modifying external variables, logging to the console, making network requests, and changing the DOM are all examples of side effects.
+- **Pure Function**: No side effects, deterministic.
 `,
-  'higher-order-function-argument': `
+
+  "impure-function": `
 ### 💡 Problem Breakdown
-A higher-order function is a function that either takes one or more functions as arguments, or returns a function as its result. This problem demonstrates passing a function as an argument.
+Impure functions may have side effects or return different results for same inputs.
 
 ### ⚙️ Solution Walkthrough
-The \`applyOperation\` function is a higher-order function. It takes a value \`val\` and a function \`operation\` as arguments. It then calls the \`operation\` function, passing \`val\` to it.
+Function with side effects.
 \`\`\`javascript
-const square = (n) => n * n;
-const double = (n) => n * 2;
-
-const applyOperation = (val, operation) => operation(val);
-
-applyOperation(5, square); // 25
-applyOperation(5, double); // 10
+let counter = 0;
+function impureIncrement() {
+    counter++; // Side effect
+    return counter;
+}
 \`\`\`
-1. **Function as Argument**: \`square\` and \`double\` are passed as the \`operation\` argument.
-2. **Callback Execution**: Inside \`applyOperation\`, the \`operation\` parameter (which holds the passed-in function) is invoked.
+1. **Side Effects**: Modifies external state.
+2. **Non-Deterministic**: May return different results.
 
 ### 📚 Key Concepts
-- **Higher-Order Function**: A function that takes another function as an argument or returns a function.
-- **Callback Function**: A function passed into another function as an argument, which is then invoked inside the outer function.
+- **Impure Function**: Has side effects or non-deterministic.
 `,
-  'higher-order-function-return': `
+
+  "higher-order-function-argument": `
 ### 💡 Problem Breakdown
-This is the other side of higher-order functions: a function that *returns* a new function. This is often used to create "function factories" that produce specialized functions based on some initial configuration.
+Higher-order functions accept other functions as arguments.
 
 ### ⚙️ Solution Walkthrough
-The \`createMultiplier\` function takes a \`factor\` and returns a new function. This returned function "remembers" the \`factor\` and multiplies its own argument by it.
+Function accepting another function.
 \`\`\`javascript
-const createMultiplier = (factor) => {
-    // This returned function is a closure
-    return (number) => number * factor;
-};
-
-const multiplyBy3 = createMultiplier(3);
-multiplyBy3(7); // 21
+function operate(a, b, operation) {
+    return operation(a, b);
+}
+operate(5, 3, (x, y) => x * y);
 \`\`\`
-1. **Function Factory**: \`createMultiplier\` creates and returns a new function.
-2. **Closure**: The returned function has access to the \`factor\` variable from its parent scope, even after \`createMultiplier\` has finished executing. This is a closure.
+1. **Function as Argument**: Passing functions to other functions.
+2. **Callback**: The function being passed.
 
 ### 📚 Key Concepts
-- **Closures**: The mechanism that allows an inner function to access variables from its outer (enclosing) function's scope.
+- **Higher-Order Function**: Accepts or returns functions.
 `,
-  'sync-callback': `
+
+  "higher-order-function-return": `
 ### 💡 Problem Breakdown
-A synchronous callback is a function passed as an argument that is executed immediately within the outer function, blocking further execution until it completes. This is in contrast to asynchronous callbacks (like in \`setTimeout\`) which are executed later.
+Higher-order functions can return other functions.
 
 ### ⚙️ Solution Walkthrough
-A \`processArray\` function iterates over an array and executes a callback for each item. The main thread of execution waits for the entire loop and all callback executions to finish.
+Function returning another function.
 \`\`\`javascript
-function processArray(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        callback(array[i]);
+function multiplier(factor) {
+    return function(x) {
+        return x * factor;
+    };
+}
+const double = multiplier(2);
+\`\`\`
+1. **Function Factory**: Creates and returns functions.
+2. **Closure**: Returned function remembers its creation environment.
+
+### 📚 Key Concepts
+- **Function Factory**: Function that creates other functions.
+`,
+
+  "sync-callback": `
+### 💡 Problem Breakdown
+Synchronous callbacks are executed immediately during function execution.
+
+### ⚙️ Solution Walkthrough
+Callback executed immediately.
+\`\`\`javascript
+function processArray(arr, callback) {
+    for (let item of arr) {
+        callback(item);
     }
 }
-let result = '';
-processArray(["apple", "banana"], (item) => { result += item + ' '; });
-// By the time this line is reached, 'result' is "apple banana "
+processArray([1, 2, 3], console.log);
 \`\`\`
-1. **Immediate Execution**: The callback function is called and completes for each item before the \`processArray\` function itself can return. Array methods like \`forEach\`, \`map\`, and \`filter\` all use synchronous callbacks.
+1. **Immediate Execution**: Callback runs during function execution.
+2. **Blocking**: Execution waits for callback to complete.
 
 ### 📚 Key Concepts
-- **Synchronous Execution**: Code is executed line by line, in order. Each operation must complete before the next one begins.
+- **Synchronous Callback**: Executed immediately during function call.
 `,
-  'arguments-object': `
+
+  "arguments-object": `
 ### 💡 Problem Breakdown
-The \`arguments\` object is an array-like object accessible inside **traditional functions** that contains the values of the arguments passed to that function. It's considered somewhat "legacy" as modern rest parameters (\`...args\`) are generally preferred. Arrow functions do not have their own \`arguments\` object.
+The arguments object is available in functions and contains all passed arguments.
 
 ### ⚙️ Solution Walkthrough
-A traditional \`function\` is used to access the \`arguments\` object, which is then looped over.
+Accessing function arguments.
 \`\`\`javascript
-function sum() { // No named parameters
+function sum() {
     let total = 0;
     for (let i = 0; i < arguments.length; i++) {
         total += arguments[i];
     }
     return total;
 }
-sum(10, 20, 30); // 60
 \`\`\`
-1. **Array-like**: \`arguments\` has a \`length\` property and can be indexed, but it is not a true array and does not have methods like \`forEach\` or \`reduce\` (unless you convert it first).
+1. **arguments Object**: Array-like object containing all arguments.
+2. **No Parameters Needed**: Works even without formal parameters.
 
 ### 📚 Key Concepts
-- **\`arguments\` object**: A special object available in non-arrow functions that provides access to the arguments passed to the function.
+- **arguments Object**: Contains all arguments passed to a function.
 `,
-  'object-method-this': `
+
+  "object-method-this": `
 ### 💡 Problem Breakdown
-When a function is called as a method of an object (\`object.method()\`), its \`this\` keyword is automatically set to the object the method was called on. This allows methods to access other properties of the same object.
+Methods are functions attached to objects, and this refers to the object.
 
 ### ⚙️ Solution Walkthrough
-A \`person\` object has a \`greet\` method that uses \`this.name\` to access the \`name\` property of the \`person\` object itself.
+Method using this keyword.
 \`\`\`javascript
 const person = {
-    name: "Alice",
-    greet: function() {
-        return \`Hello, my name is \${this.name}.\`;
-    }
-};
-person.greet(); // "Hello, my name is Alice."
-\`\`\`
-1. **Method Invocation Context**: The way the function is called (\`person.greet()\`) determines the value of \`this\`.
-
-### 📚 Key Concepts
-- **\`this\` Keyword**: A reference to the current execution context. In an object method call, it refers to the object.
-`,
-  'this-global-scope': `
-### 💡 Problem Breakdown
-This is a conceptual problem. In the global scope (outside of any function), \`this\` refers to the global object. In a web browser, the global object is \`window\`.
-
-### ⚙️ Solution Walkthrough
-Checking \`this\` in the global scope of a browser's console.
-\`\`\`javascript
-// In a browser's global scope (non-strict mode)
-console.log(this === window); // true
-
-var myGlobal = "hello";
-console.log(this.myGlobal); // "hello" (because 'var' adds to the global object)
-\`\`\`
-1. **Global Context**: The default execution context is the global object.
-2. **Strict Mode Difference**: In strict mode (\`'use strict';\`), \`this\` in the global scope is still the global object, but \`this\` inside a regular function called without a specific context will be \`undefined\` instead of the global object.
-
-### 📚 Key Concepts
-- **Global Object**: The top-level object in the JavaScript scope chain (\`window\` in browsers).
-`,
-  'this-arrow-function-lexical': `
-### 💡 Problem Breakdown
-This is a key feature and a major difference between arrow functions and traditional functions. Arrow functions do **not** have their own \`this\` binding. Instead, they inherit \`this\` from the surrounding (parent) scope where they were defined. This is called "lexical \`this\`".
-
-### ⚙️ Solution Walkthrough
-An arrow function is used as a callback inside a method. It correctly captures the \`this\` of the method.
-\`\`\`javascript
-const myObject = {
-    name: "My Object",
-    process() {
-        setTimeout(() => {
-            // This arrow function inherits 'this' from the 'process' method.
-            console.log(this.name); // "My Object"
-        }, 100);
+    name: "John",
+    greet() {
+        return \`Hello, \${this.name}\`;
     }
 };
 \`\`\`
-1. **Lexical Capture**: The arrow function "captures" the \`this\` from its surrounding environment (\`process\`), where \`this\` correctly refers to \`myObject\`. This avoids the common problem where a traditional \`function\` callback would have its \`this\` set to the global object.
+1. **Method**: Function attached to an object.
+2. **this Context**: Refers to the owning object.
 
 ### 📚 Key Concepts
-- **Lexical \`this\`**: The behavior of arrow functions that makes them predictable and extremely useful for callbacks.
+- **Method**: Function that is a property of an object.
 `,
-  'function-call-method': `
+
+  "this-global-scope": `
 ### 💡 Problem Breakdown
-The \`.call()\` method is a way to invoke a function while explicitly specifying what the \`this\` keyword should refer to inside that function. It allows you to "borrow" a method from one object and apply it to another. Arguments are passed individually after the \`this\` context.
+In global scope, this refers to the global object (window in browsers).
 
 ### ⚙️ Solution Walkthrough
-A standalone \`greet\` function is "called" with the context of \`person2\`, making \`this\` inside \`greet\` refer to \`person2\`.
+this in global context.
 \`\`\`javascript
-const person2 = { name: "Jane" };
+console.log(this); // Window in browsers
+\`\`\`
+1. **Global Context**: Outside any function.
+2. **Global Object**: Refers to the global environment.
 
+### 📚 Key Concepts
+- **Global this**: Refers to the global object.
+`,
+
+  "this-arrow-function-lexical": `
+### 💡 Problem Breakdown
+Arrow functions don't have their own this binding - they inherit it from the surrounding scope.
+
+### ⚙️ Solution Walkthrough
+Arrow function using lexical this.
+\`\`\`javascript
+const obj = {
+    value: 42,
+    getValue: () => this.value // Inherits this
+};
+\`\`\`
+1. **Lexical this**: Inherited from surrounding scope.
+2. **No Binding**: Doesn't have its own this.
+
+### 📚 Key Concepts
+- **Lexical this**: Inherited from parent scope.
+`,
+
+  "function-call-method": `
+### 💡 Problem Breakdown
+The call() method calls a function with a specified this value and arguments.
+
+### ⚙️ Solution Walkthrough
+Using call to set this context.
+\`\`\`javascript
 function greet() {
-    return \`Hello, \${this.name}!\`;
+    return \`Hello, \${this.name}\`;
 }
-
-greet.call(person2); // "Hello, Jane!"
+const person = {name: "Alice"};
+greet.call(person);
 \`\`\`
-1. **\`function.call(thisArg, arg1, arg2, ...)\`**:
-   - \`thisArg\`: The value to be used as \`this\` inside the function call.
-   - \`arg1, ...\`: Arguments to be passed to the function.
+1. **Explicit this**: Manually set this value.
+2. **Argument Passing**: Pass arguments individually.
 
 ### 📚 Key Concepts
-- **\`.call()\`**: A method on functions to invoke them with a specific \`this\` context and individual arguments.
+- **call()**: Method to call functions with explicit this.
 `,
-  'function-apply-method': `
+
+  "function-apply-method": `
 ### 💡 Problem Breakdown
-The \`.apply()\` method is very similar to \`.call()\`. It also invokes a function with a specified \`this\` context. The only difference is how it accepts arguments: \`.apply()\` takes arguments as an array (or an array-like object).
+The apply() method calls a function with a specified this value and arguments as array.
 
 ### ⚙️ Solution Walkthrough
-\`.apply()\` is used to pass an array of numbers to \`Math.max\`, which normally expects individual arguments.
+Using apply to set this context.
 \`\`\`javascript
-const numbers = [5, 6, 2, 3, 7];
-
-// Instead of Math.max(5, 6, 2, 3, 7)
-const max = Math.max.apply(null, numbers); // 7
+function introduce(name, age) {
+    return \`\${name} is \${age} years old\`;
+}
+introduce.apply(null, ["Alice", 30]);
 \`\`\`
-1. **\`function.apply(thisArg, [argsArray])\`**:
-   - \`thisArg\`: The \`this\` context. For utility functions like \`Math.max\` that don't use \`this\`, \`null\` is typically used.
-   - \`[argsArray]\`: An array of arguments.
+1. **Array Arguments**: Pass arguments as array.
+2. **this Binding**: Set this context.
 
 ### 📚 Key Concepts
-- **\`.apply()\`**: A method on functions to invoke them with a specific \`this\` context and an array of arguments.
+- **apply()**: Similar to call() but with array arguments.
 `,
-  'function-bind-method': `
+
+  "function-bind-method": `
 ### 💡 Problem Breakdown
-The \`.bind()\` method creates a **new function** that, when called, has its \`this\` keyword permanently set to the provided value. Unlike \`.call()\` and \`.apply()`, \`.bind()\` does **not** execute the function immediately. It returns a new, bound function that can be called later.
+The bind() method creates a new function with a bound this value and optional arguments.
 
 ### ⚙️ Solution Walkthrough
-A method is detached from its object, losing its \`this\` context. \`.bind()\` is used to create a new version of the function with the context permanently fixed.
+Creating bound function.
 \`\`\`javascript
-const module = {
-    x: 42,
-    getX: function() { return this.x; }
-};
-
-const unboundGetX = module.getX;
-const boundGetX = unboundGetX.bind(module);
-boundGetX(); // 42
+function multiply(a, b) {
+    return a * b;
+}
+const double = multiply.bind(null, 2);
 \`\`\`
-1. **\`function.bind(thisArg)\`**: Returns a new function.
-2. **Permanent Binding**: The returned \`boundGetX\` will *always* have \`this\` set to \`module\`, no matter how or where it is called. This is extremely useful for event listeners and callbacks.
+1. **Function Binding**: Create new function with bound context.
+2. **Partial Application**: Pre-set some arguments.
 
 ### 📚 Key Concepts
-- **\`.bind()\`**: A method for creating a new function with a fixed \`this\` value.
+- **bind()**: Creates new function with bound context.
 `,
-  'recursive-countdown': `
+
+  "recursive-countdown": `
 ### 💡 Problem Breakdown
-A recursive function is one that calls itself to solve a problem. The task is to create a countdown by repeatedly calling the function with a smaller number until it reaches a "base case" that stops the recursion.
+Recursive functions call themselves to solve problems by breaking them down.
 
 ### ⚙️ Solution Walkthrough
-The \`countdown\` function calls itself with \`n - 1\`.
+Function calling itself.
 \`\`\`javascript
-let result = [];
 function countdown(n) {
-    if (n < 1) { // Base case
-        return;
-    }
-    result.push(n);
-    countdown(n - 1); // Recursive step
+    if (n <= 0) return;
+    console.log(n);
+    countdown(n - 1);
 }
-countdown(5); // result will be [5, 4, 3, 2, 1]
 \`\`\`
-1. **Base Case**: \`if (n < 1)\` is the condition that stops the chain of calls.
-2. **Recursive Step**: \`countdown(n - 1)\` is the call that continues the process with a smaller version of the problem.
+1. **Base Case**: Condition to stop recursion.
+2. **Recursive Call**: Function calls itself.
 
 ### 📚 Key Concepts
-- **Recursion**: A fundamental programming concept where a function calls itself.
-- **Call Stack**: Each recursive call adds a new frame to the call stack. The base case allows the stack to unwind without overflowing.
+- **Recursion**: Function that calls itself.
 `,
-  'first-class-functions': `
+
+  "first-class-functions": `
 ### 💡 Problem Breakdown
-In JavaScript, functions are "first-class citizens." This means a function is just another type of value. It can be treated like any other variable: it can be assigned to variables, stored in arrays, passed as an argument to other functions, and returned from functions.
+In JavaScript, functions are first-class citizens - they can be treated like any other value.
 
 ### ⚙️ Solution Walkthrough
-A function expression is assigned to a variable \`greet\`, and then that variable is assigned to another variable \`myFunc\`.
+Treating functions as values.
 \`\`\`javascript
-const greet = function() {
-    return "I'm a first-class function!";
-};
-
-const myFunc = greet;
-myFunc();
+const sayHello = function() { return "Hello"; };
+const func = sayHello; // Assign to variable
 \`\`\`
-This demonstrates that the function itself is a value that can be passed around.
+1. **Function Assignment**: Can be assigned to variables.
+2. **Function Passing**: Can be passed as arguments.
 
 ### 📚 Key Concepts
-- **First-Class Functions**: A core feature of JavaScript that enables functional programming patterns.
+- **First-Class Functions**: Treated like any other value.
 `,
-  'named-function-expression': `
+
+  "named-function-expression": `
 ### 💡 Problem Breakdown
-A function expression can optionally have a name. This name is primarily useful for two things: debugging (the name will appear in stack traces) and recursion (the function can refer to itself via its name from within its own body).
+Named function expressions have a name that is only accessible within the function.
 
 ### ⚙️ Solution Walkthrough
-The function expression is given the name \`fac\`, which is then used for the recursive call.
+Function expression with name.
 \`\`\`javascript
 const factorial = function fac(n) {
-    return n < 2 ? 1 : n * fac(n - 1);
+    return n <= 1 ? 1 : n * fac(n - 1);
 };
-factorial(5); // 120
 \`\`\`
-1. **Internal Name**: The name (\`fac\`) is only available in the function's own scope.
-2. **Recursion**: Using the internal name makes the recursive call independent of the variable (\`factorial\`) it was assigned to.
+1. **Internal Name**: Only accessible inside function.
+2. **Self-Reference**: Useful for recursion.
 
 ### 📚 Key Concepts
-- **Named Function Expression**: A function expression with an identifier, useful for debugging and self-reference.
+- **Named Expression**: Function expression with name.
 `,
-  'function-shadowing': `
+
+  "function-shadowing": `
 ### 💡 Problem Breakdown
-Variable shadowing occurs when a variable declared within a certain scope (e.g., an inner function) has the same name as a variable in an outer scope. When this happens, the inner variable "shadows" or takes precedence over the outer one within its own scope.
+Variable shadowing occurs when a variable in an inner scope has the same name as one in an outer scope.
 
 ### ⚙️ Solution Walkthrough
-Both the outer and inner scopes have a variable named \`x\`.
+Inner variable shadows outer variable.
 \`\`\`javascript
-let x = "outer";
-function testShadow() {
-    let x = "inner";
-    return \`Inside function, x is "\${x}"\`;
+const x = "global";
+function test() {
+    const x = "local"; // Shadows global x
+    return x;
 }
-// testShadow() returns "Inside function, x is "inner""
 \`\`\`
-1. **Scope Resolution**: When the code inside \`testShadow\` looks for \`x\`, it finds the one declared locally and stops searching up the scope chain.
+1. **Scope Hierarchy**: Inner scopes can shadow outer variables.
+2. **Name Precedence**: Inner variable takes precedence.
 
 ### 📚 Key Concepts
-- **Variable Shadowing**: A behavior of nested scopes that can sometimes be a source of bugs if not intended.
+- **Variable Shadowing**: Inner variable hides outer variable.
 `,
-  'anonymous-function': `
+
+  "anonymous-function": `
 ### 💡 Problem Breakdown
-An anonymous function is a function that is defined without a name. They are very common in JavaScript, especially when used as function expressions or as callback functions passed to other methods.
+Anonymous functions are functions without a name, often used as callbacks.
 
 ### ⚙️ Solution Walkthrough
-An anonymous function is passed directly as the callback to \`setTimeout\`.
+Function without name.
 \`\`\`javascript
-setTimeout(() => {
-    console.log("Hi");
+setTimeout(function() {
+    console.log("Anonymous function");
 }, 1000);
 \`\`\`
-1. **No Identifier**: There is no name between the \`()\` for arrow functions and the parameter list.
+1. **No Name**: Function without identifier.
+2. **Callback Usage**: Commonly used for callbacks.
 
 ### 📚 Key Concepts
-- **Anonymous Function**: A function without a name identifier.
+- **Anonymous Function**: Function without a name.
 `,
-  'implicit-return-arrow': `
+
+  "implicit-return-arrow": `
 ### 💡 Problem Breakdown
-A key syntactic feature of arrow functions is "implicit return." If the function body consists of only a single expression (with no curly braces \`{}\`), the result of that expression is automatically returned.
+Arrow functions with a single expression can implicitly return without the return keyword.
 
 ### ⚙️ Solution Walkthrough
-An arrow function is defined on a single line without curly braces or a \`return\` keyword.
+Arrow function with implicit return.
 \`\`\`javascript
-const double = (n) => n * 2;
+const double = (x) => x * 2; // Implicit return
 \`\`\`
-1. **Concise Body**: The lack of \`{}\` signals to the JavaScript engine that the expression \`n * 2\` should be evaluated and its result returned.
+1. **Concise Syntax**: No curly braces needed.
+2. **Implicit Return**: Automatically returns expression result.
 
 ### 📚 Key Concepts
-- **Implicit Return**: A feature that makes arrow functions very concise for simple data transformations.
+- **Implicit Return**: Automatic return in arrow functions.
 `,
-  'function-length-property': `
+
+  "function-length-property": `
 ### 💡 Problem Breakdown
-Every function in JavaScript has a built-in \`.length\` property. This property returns an integer indicating the number of named parameters the function expects (its "arity").
+The length property of a function indicates the number of parameters it expects.
 
 ### ⚙️ Solution Walkthrough
-The \`.length\` property is accessed on a function.
+Checking function length.
 \`\`\`javascript
 function example(a, b, c) {}
 console.log(example.length); // 3
 \`\`\`
-1. **Arity**: The \`.length\` property indicates the number of formal parameters. It does not count rest parameters.
+1. **Parameter Count**: Number of formal parameters.
+2. **Function Property**: Available on all functions.
 
 ### 📚 Key Concepts
-- **Function Arity**: The number of arguments a function is declared to accept.
+- **Function Length**: Number of expected parameters.
 `,
-  'scope-let-vs-var-loop': `
+
+  "scope-let-vs-var-loop": `
 ### 💡 Problem Breakdown
-This illustrates one of the most important reasons to prefer \`let\` over \`var\`. When a closure is created in a loop, \`let\` creates a new variable for each iteration, whereas \`var\` creates a single variable for the whole loop.
+let and var behave differently in loops due to their scoping rules.
 
 ### ⚙️ Solution Walkthrough
-A loop with \`setTimeout\` demonstrates the different behaviors.
+Loop with different variable declarations.
 \`\`\`javascript
-// 'var' logs 3, 3, 3
 for (var i = 0; i < 3; i++) {
-    setTimeout(() => console.log(i), 10);
+    setTimeout(() => console.log(i), 100); // 3,3,3
 }
-
-// 'let' logs 0, 1, 2
 for (let j = 0; j < 3; j++) {
-    setTimeout(() => console.log(j), 10);
+    setTimeout(() => console.log(j), 100); // 0,1,2
 }
 \`\`\`
-1. **\`var\` Behavior**: All three callbacks form a closure over the *same* \`i\` variable.
-2. **\`let\` Behavior**: \`let\` is block-scoped. For each iteration, a new \`j\` variable is created. Each callback closes over a *different* \`j\` variable.
+1. **var Scoping**: Function-scoped, shared across iterations.
+2. **let Scoping**: Block-scoped, new binding each iteration.
 
 ### 📚 Key Concepts
-- **Block Scope vs. Function Scope**: The critical difference between \`let\`/\`const\` and \`var\`.
+- **Loop Scoping**: Different behavior between var and let.
 `,
-  'pass-by-value': `
+
+  "pass-by-value": `
 ### 💡 Problem Breakdown
-When a primitive value (like a \`Number\`, \`String\`, or \`Boolean\`) is passed as an argument to a function, a *copy* of the value is created. Modifying this copy does not affect the original variable.
+Primitive values are passed by value - a copy is made when passed to functions.
 
 ### ⚙️ Solution Walkthrough
-A number is passed to a function that tries to modify it. The original number remains unchanged.
+Primitive value passing.
 \`\`\`javascript
-let a = 10;
-function modify(val) { val = 20; }
+let a = 1;
+function modify(val) {
+    val = 2; // Doesn't affect original
+}
 modify(a);
-console.log(a); // 10
 \`\`\`
+1. **Value Copy**: Primitive values are copied.
+2. **No Side Effects**: Changes don't affect original.
+
 ### 📚 Key Concepts
-- **Pass by Value**: A parameter-passing mechanism where a copy of the argument's value is used.
+- **Pass by Value**: Primitive values are copied when passed.
 `,
-  'pass-by-reference': `
+
+  "pass-by-reference": `
 ### 💡 Problem Breakdown
-When an object (including arrays) is passed as an argument, a copy of the *reference* (the memory address) is passed. Modifying the object's properties inside the function *will* affect the original object.
+Objects are passed by reference - the function receives a reference to the original object.
 
 ### ⚙️ Solution Walkthrough
-An object is passed to a function which modifies one of its properties. The change is visible outside the function.
+Object passing.
 \`\`\`javascript
-let obj = { x: 10 };
-function modify(o) { o.x = 20; }
+const obj = {value: 1};
+function modify(object) {
+    object.value = 2; // Affects original
+}
 modify(obj);
-console.log(obj.x); // 20
 \`\`\`
+1. **Reference Passing**: Objects are passed by reference.
+2. **Side Effects**: Changes affect the original object.
+
 ### 📚 Key Concepts
-- **Pass by Reference (Sharing)**: A parameter-passing mechanism where a reference to the argument is used.
+- **Pass by Reference**: Objects are passed by reference.
 `,
-  'function-constructor': `
+
+  "function-constructor": `
 ### 💡 Problem Breakdown
-This is a conceptual problem about an alternative, but rarely recommended, way to create functions. The \`Function\` constructor creates a new \`Function\` object. The arguments and function body are passed as strings.
+The Function constructor can create functions from strings, but is generally not recommended.
 
 ### ⚙️ Solution Walkthrough
-A new \`sum\` function is created by passing strings to the \`Function\` constructor.
+Creating function with constructor.
 \`\`\`javascript
-const sum = new Function('a', 'b', 'return a + b');
-sum(2, 6); // 8
+const add = new Function('a', 'b', 'return a + b');
 \`\`\`
-1. **Security and Performance**: This is not recommended because code in strings is harder for the engine to optimize and can be a security risk (similar to \`eval()\`).
-2. **Scope**: Functions created this way only have access to the global scope.
+1. **String Evaluation**: Code is evaluated from strings.
+2. **Security Risk**: Potential security issues.
 
 ### 📚 Key Concepts
-- **\`Function\` Constructor**: A less common method for creating functions dynamically from strings.
+- **Function Constructor**: Creates functions from strings.
 `,
-  'currying-multiply': `
+
+  "currying-multiply": `
 ### 💡 Problem Breakdown
-Currying is a technique of transforming a function that takes multiple arguments into a sequence of functions that each take a single argument. This problem applies the concept to multiplication.
+Currying transforms a function that takes multiple arguments into a sequence of functions.
 
 ### ⚙️ Solution Walkthrough
-A series of nested functions is created. Each inner function is a closure that "remembers" the arguments from the outer functions.
+Curried multiplication function.
 \`\`\`javascript
 const multiply = (a) => (b) => (c) => a * b * c;
 multiply(2)(3)(4); // 24
 \`\`\`
+1. **Function Sequencing**: Series of single-argument functions.
+2. **Partial Application**: Apply arguments step by step.
+
 ### 📚 Key Concepts
-- **Currying**: A functional programming pattern made possible by closures.
+- **Currying**: Transforming multi-argument functions.
 `,
-  'partial-application': `
+
+  "partial-application": `
 ### 💡 Problem Breakdown
-Partial application involves creating a new function by "pre-filling" some of the arguments of an existing function. \`.bind()\` is a perfect tool for this.
+Partial application involves fixing some arguments of a function, producing a new function.
 
 ### ⚙️ Solution Walkthrough
-\`.bind()\` is used to create a new \`addTen\` function from a generic \`add\` function.
+Partially applying function.
 \`\`\`javascript
-function add(a, b) { return a + b; }
-const addTen = add.bind(null, 10);
-addTen(5); // 15
+function multiply(a, b) { return a * b; }
+const double = multiply.bind(null, 2);
 \`\`\`
-1. **\`add.bind(null, 10)\`**:
-   - \`null\`: We don't care about the \`this\` context here.
-   - \`10\`: This value is permanently "bound" as the first argument to \`add\`.
+1. **Argument Fixing**: Pre-setting some arguments.
+2. **New Function**: Creating specialized functions.
 
 ### 📚 Key Concepts
-- **Partial Application**: A technique for creating specialized functions from more general ones.
+- **Partial Application**: Fixing some function arguments.
 `,
-  'this-event-handler': `
+
+  "this-event-handler": `
 ### 💡 Problem Breakdown
-This is a conceptual problem about how \`this\` behaves in DOM event handlers. When a traditional \`function\` is used as an event handler, the browser automatically sets \`this\` inside the handler to be the DOM element that triggered the event.
+In event handlers, this typically refers to the element that received the event.
 
 ### ⚙️ Solution Walkthrough
-A click handler is attached to a button.
+this in event handler.
 \`\`\`javascript
-const button = document.getElementById('myBtn');
 button.addEventListener('click', function() {
-    console.log(this.textContent);
+    console.log(this); // The button element
 });
 \`\`\`
-1. **Event Context**: If an arrow function were used, \`this\` would not refer to the button. It would be inherited from the surrounding scope.
+1. **Event Context**: this refers to the event target.
+2. **Dynamic Binding**: Value depends on how function is called.
 
 ### 📚 Key Concepts
-- **Event Handling**: A core part of front-end JavaScript.
+- **Event Handler this**: Refers to the event target.
 `,
-  'function-as-object-property': `
+
+  "function-as-object-property": `
 ### 💡 Problem Breakdown
-Because functions are first-class citizens, they can be used as the value for an object's property. When a function is a property of an object, it's called a "method."
+Functions can be properties of objects, in which case they're called methods.
 
 ### ⚙️ Solution Walkthrough
-A \`config\` object is created with a \`run\` property whose value is a function.
+Function as object property.
 \`\`\`javascript
-const config = {
-    id: 1,
-    run: () => "Running the config function!"
+const obj = {
+    method() {
+        return "I'm a method";
+    }
 };
-config.run();
 \`\`\`
-### 📚 Key Concepts
-- **Method**: A function that is a property of an object.
-`,
-  'hoisting-var-declaration': `
-### 💡 Problem Breakdown
-This is a conceptual problem that revisits hoisting with \`var\`. While the declaration \`var myVar;\` is hoisted, its assignment \`myVar = 5;\` is not. This means the variable exists but its value is \`undefined\` until the assignment line.
-
-### ⚙️ Solution Walkthrough
-The code attempts to log a \`var\` before its assignment.
-\`\`\`javascript
-console.log(myVar); // undefined
-var myVar = 5;
-console.log(myVar); // 5
-\`\`\`
-### 📚 Key Concepts
-- **Hoisting**: Only declarations are hoisted, not initializations.
-`,
-  'temporal-dead-zone-let': `
-### 💡 Problem Breakdown
-Variables declared with \`let\` and \`const\` are hoisted, but are in a "Temporal Dead Zone" (TDZ) until the declaration is encountered. Accessing a variable in the TDZ results in a \`ReferenceError\`.
-
-### ⚙️ Solution Walkthrough
-The code attempts to access a \`let\` variable before its declaration.
-\`\`\`javascript
-try {
-    console.log(myLet); // ReferenceError
-} catch (e) {}
-let myLet = 5;
-\`\`\`
-1. **TDZ**: The TDZ prevents you from accidentally using a variable before it has been declared.
+1. **Method**: Function that is an object property.
+2. **this Binding**: Methods have access to object via this.
 
 ### 📚 Key Concepts
-- **Temporal Dead Zone (TDZ)**: The period of time during which a \`let\` or \`const\` variable exists but cannot be accessed.
+- **Method**: Function that is an object property.
 `,
-  'arrow-function-no-arguments': `
+
+  "hoisting-var-declaration": `
 ### 💡 Problem Breakdown
-Arrow functions do not have their own \`arguments\` object. To access all arguments passed to an arrow function, you must use rest parameters.
+var declarations are hoisted to the top of their scope but initialized as undefined.
 
 ### ⚙️ Solution Walkthrough
-An arrow function attempts to access \`arguments\`, which fails.
+var hoisting behavior.
 \`\`\`javascript
-const myArrowFuncWithRest = (...args) => {
-    return args; // 'args' is a true array
+console.log(x); // undefined
+var x = 5;
+\`\`\`
+1. **Declaration Hoisting**: Declaration moved to top.
+2. **Undefined Initialization**: Initialized as undefined.
+
+### 📚 Key Concepts
+- **var Hoisting**: Declarations hoisted, assignments not.
+`,
+
+  "temporal-dead-zone-let": `
+### 💡 Problem Breakdown
+let and const declarations are hoisted but cannot be accessed before declaration (Temporal Dead Zone).
+
+### ⚙️ Solution Walkthrough
+TDZ with let.
+\`\`\`javascript
+console.log(x); // ReferenceError
+let x = 5;
+\`\`\`
+1. **TDZ**: Cannot access variable before declaration.
+2. **Hoisting Difference**: Different from var hoisting.
+
+### 📚 Key Concepts
+- **Temporal Dead Zone**: Cannot access let/const before declaration.
+`,
+
+  "arrow-function-no-arguments": `
+### 💡 Problem Breakdown
+Arrow functions don't have their own arguments object.
+
+### ⚙️ Solution Walkthrough
+No arguments in arrow functions.
+\`\`\`javascript
+const func = () => {
+    console.log(arguments); // ReferenceError
 };
-myArrowFuncWithRest(1, 2, 3); // [1, 2, 3]
 \`\`\`
+1. **No arguments**: Arrow functions lack arguments object.
+2. **Rest Parameters**: Use ...args instead.
+
 ### 📚 Key Concepts
-- **Rest Parameters (\`...args\`)**: The modern way to handle an indefinite number of arguments in all functions.
+- **Arrow Function Limitations**: No arguments object.
 `,
-  'iife-with-params': `
+
+  "iife-with-params": `
 ### 💡 Problem Breakdown
-An IIFE can accept arguments, just like any other function. This is useful for passing in global objects or for providing initial configuration values.
+IIFEs can accept parameters just like regular functions.
 
 ### ⚙️ Solution Walkthrough
-A parameter \`p\` is defined for the IIFE, and a value is passed in the final pair of parentheses.
+IIFE with parameters.
 \`\`\`javascript
-const myParam = "Hello IIFE";
-(function(p) {
-    console.log(\`The IIFE received: "\${p}"\`);
-})(myParam);
+const result = (function(name) {
+    return \`Hello, \${name}\`;
+})("World");
 \`\`\`
+1. **Parameter Passing**: Pass arguments to IIFE.
+2. **Immediate Execution**: Executed with passed arguments.
+
 ### 📚 Key Concepts
-- **IIFE**: A flexible pattern for creating private scopes with initial values.
+- **IIFE with Parameters**: Immediately invoked with arguments.
 `,
-  'function-overwriting': `
+
+  "function-overwriting": `
 ### 💡 Problem Breakdown
-JavaScript does not support "function overloading". If you declare a function with a name that has already been used, the new definition will overwrite the old one.
+Functions can be overwritten by assigning new values to them.
 
 ### ⚙️ Solution Walkthrough
-Two function expressions are assigned to the same variable. The second one overwrites the first.
+Overwriting function.
 \`\`\`javascript
-let myFunction = function() { return "First"; };
-myFunction = function() { return "Second"; };
-myFunction(); // "Second"
+function greet() { return "Hello"; }
+greet = function() { return "Hi"; }; // Overwritten
 \`\`\`
+1. **Function Reassignment**: Functions can be reassigned.
+2. **Dynamic Nature**: JavaScript's dynamic typing allows this.
+
 ### 📚 Key Concepts
-- **Function Overwriting**: The last function definition for a given name is the one that will be used.
+- **Function Overwriting**: Replacing function implementation.
 `,
-  'callback-hell-conceptual': `
+
+  "callback-hell-conceptual": `
 ### 💡 Problem Breakdown
-"Callback hell" describes a situation where multiple nested asynchronous callbacks make code hard to read and debug. Each callback is indented further than the last, creating a pyramid shape.
+Callback hell refers to heavily nested callbacks that make code hard to read and maintain.
 
 ### ⚙️ Solution Walkthrough
-A conceptual example of nested callbacks.
+Nested callbacks example.
 \`\`\`javascript
-getData(function (a) {
-    getMoreData(a, function (b) {
-        getEvenMoreData(b, function (c) {});
+getData(function(a) {
+    getMoreData(a, function(b) {
+        getEvenMoreData(b, function(c) {
+            // Nested callback hell
+        });
     });
 });
 \`\`\`
-1. **The Solution**: Modern JavaScript solves this with **Promises** and **\`async/await\`**, which allow you to chain asynchronous operations in a flat, readable way.
+1. **Pyramid of Doom**: Deeply nested callbacks.
+2. **Readability Issues**: Hard to read and maintain.
 
 ### 📚 Key Concepts
-- **Callback Hell**: An anti-pattern resulting from deeply nested asynchronous callbacks.
+- **Callback Hell**: Deeply nested asynchronous callbacks.
 `,
-  'this-binding-new': `
+
+  "this-binding-new": `
 ### 💡 Problem Breakdown
-When a function is called with the \`new\` keyword (as a constructor), \`this\` inside that function is automatically bound to the brand new object that is being created.
+When a function is called with new, this is bound to the newly created object.
 
 ### ⚙️ Solution Walkthrough
-A constructor function is called with \`new\`.
+Constructor function with new.
 \`\`\`javascript
 function Person(name) {
     this.name = name;
 }
-const p = new Person("Alice");
-// p is { name: "Alice" }
+const john = new Person("John");
 \`\`\`
-1. **\`new\` Keyword**: Triggers a special \`this\` binding rule. \`this\` becomes the new instance.
+1. **new Keyword**: Creates new object instance.
+2. **this Binding**: this refers to the new instance.
 
 ### 📚 Key Concepts
-- **Constructor Invocation**: The \`new\` keyword creates a new object and sets its \`this\` context.
+- **new Binding**: this bound to new instance.
 `,
-  'this-strict-mode': `
+
+  "this-strict-mode": `
 ### 💡 Problem Breakdown
-In strict mode, \`this\` is \`undefined\` in a regular function call, preventing accidental access to the global object.
+In strict mode, this is undefined in regular function calls instead of the global object.
 
 ### ⚙️ Solution Walkthrough
-A function is called in strict mode.
+this in strict mode.
 \`\`\`javascript
-'use strict';
-function showThis() {
-    console.log(this);
+"use strict";
+function test() {
+    console.log(this); // undefined
 }
-showThis(); // undefined
+test();
 \`\`\`
+1. **Strict Mode**: Changes this behavior.
+2. **Undefined this**: Instead of global object.
+
 ### 📚 Key Concepts
-- **Strict Mode**: A restricted variant of JavaScript that catches common coding mistakes.
+- **Strict Mode this**: undefined in regular function calls.
 `,
-'function-name-property': `
+
+  "function-name-property": `
 ### 💡 Problem Breakdown
-Every function has a `.name` property that holds the function's name as a string. For anonymous functions, the name is inferred from the variable it's assigned to.
+Functions have a name property that contains the function's name.
 
 ### ⚙️ Solution Walkthrough
-The `.name` property is accessed on both a named declaration and an anonymous expression.
+Accessing function name.
 \`\`\`javascript
-function namedFunction() {}
-const anonFunc = () => {};
-console.log(namedFunction.name); // "namedFunction"
-console.log(anonFunc.name);      // "anonFunc"
+function myFunction() {}
+console.log(myFunction.name); // "myFunction"
 \`\`\`
+1. **Function Name**: Available as property.
+2. **Anonymous Functions**: May have empty or inferred names.
+
 ### 📚 Key Concepts
-- **Function Introspection**: The ability to inspect properties of a function object itself, which is useful for debugging.
+- **Function Name**: Name of the function as string.
 `,
-'generator-function-basic': `
+
+  "generator-function-basic": `
 ### 💡 Problem Breakdown
-A generator function is a special function that can be paused and resumed. It simplifies creating iterators. It's defined with `function*` and uses the `yield` keyword to produce values.
+Generator functions can be paused and resumed using the yield keyword.
 
 ### ⚙️ Solution Walkthrough
-A generator yields two numbers.
+Basic generator function.
 \`\`\`javascript
-function* numberGenerator() {
+function* generator() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+\`\`\`
+1. **function***: Generator function syntax.
+2. **yield**: Pauses execution and returns value.
+
+### 📚 Key Concepts
+- **Generator Function**: Can pause and resume execution.
+`,
+
+  "generator-function-iterator": `
+### 💡 Problem Breakdown
+Generator functions return iterator objects that can be used to control execution.
+
+### ⚙️ Solution Walkthrough
+Using generator iterator.
+\`\`\`javascript
+function* generator() {
     yield 1;
     yield 2;
 }
-const gen = numberGenerator();
+const gen = generator();
 console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
 \`\`\`
+1. **Iterator Object**: Controls generator execution.
+2. **next() Method**: Resumes generator execution.
+
 ### 📚 Key Concepts
-- **Generator**: A function that can be exited and later re-entered, with its context saved across re-entrances.
-- **`yield`**: Pauses the generator and returns a value.
+- **Generator Iterator**: Controls generator execution.
 `,
-'generator-function-iterator': `
+
+  "lexical-environment-conceptual": `
 ### 💡 Problem Breakdown
-Calling a generator function does not execute its body. It returns a special "iterator" object. You must call the `.next()` method on this iterator to execute the generator until the next `yield`.
+A lexical environment is a specification structure that holds identifier-variable mappings.
 
 ### ⚙️ Solution Walkthrough
-The `.next()` method is called on the generator's iterator.
+Conceptual explanation.
 \`\`\`javascript
-function* myGenerator() { yield 'a'; }
-const iterator = myGenerator();
-const result = iterator.next();
-// result is { value: 'a', done: false }
+// Lexical environment conceptually:
+{
+    environmentRecord: {
+        // identifier: variable mappings
+    },
+    outer: null // reference to outer environment
+}
 \`\`\`
-### 📚 Key Concepts
-- **Iterator Protocol**: The structure of the object returned by `.next()`, with `value` and `done` properties, is part of JavaScript's iterator protocol.
-`,
-'lexical-environment-conceptual': `
-### 💡 Problem Breakdown
-This is a core conceptual topic. A lexical environment is an internal JavaScript data structure that holds identifier-variable mappings. It's how the engine keeps track of variables and their scopes. It has two components:
-1.  **Environment Record**: Stores the variable and function declarations within the local scope.
-2.  **Reference to the Outer Environment**: A link to the parent's lexical environment, which forms the scope chain.
-
-### ⚙️ Solution Walkthrough
-When a function is called, a new lexical environment is created for that call. When code inside the function references a variable, the engine first looks in the local Environment Record. If it's not found, it follows the reference to the outer environment to continue the search. This is the scope chain in action.
+1. **Environment Record**: Stores variables and functions.
+2. **Outer Reference**: Link to parent environment.
 
 ### 📚 Key Concepts
-- **Lexical Environment**: The specification mechanism for how scopes and closures work.
+- **Lexical Environment**: Spec structure for scoping.
 `,
-'this-with-settimeout': `
+
+  "this-with-settimeout": `
 ### 💡 Problem Breakdown
-This is a classic "gotcha". When you use a traditional `function` as a callback for `setTimeout` inside an object method, the `this` context is lost. The callback is invoked by the `setTimeout` mechanism, not by the object, so `this` defaults to the global object (`window`) or is `undefined` in strict mode.
+this inside setTimeout callbacks often doesn't work as expected due to execution context.
 
 ### ⚙️ Solution Walkthrough
-The solution is to use an arrow function, which inherits `this` lexically.
+this issue with setTimeout.
 \`\`\`javascript
 const obj = {
-    name: 'My Object',
-    logName() {
-        setTimeout(() => {
-            // Arrow function inherits 'this' from logName
-            console.log(this.name); // 'My Object'
+    value: 42,
+    test() {
+        setTimeout(function() {
+            console.log(this.value); // undefined
         }, 100);
     }
 };
 \`\`\`
+1. **Execution Context**: setTimeout runs function in global context.
+2. **this Binding**: Lost original this binding.
+
 ### 📚 Key Concepts
-- **Lexical `this`**: The primary reason arrow functions are so useful for callbacks.
+- **setTimeout this**: this binding issues with setTimeout.
 `,
-'function-composition': `
+
+  "function-composition": `
 ### 💡 Problem Breakdown
-Function composition is the process of applying one function to the result of another: `f(g(x))`. A higher-order `compose` function can be created to automate this.
+Function composition combines multiple functions to create a new function.
 
 ### ⚙️ Solution Walkthrough
-A `compose` function takes two functions, `f` and `g`, and returns a new function.
+Composing functions.
 \`\`\`javascript
 const compose = (f, g) => (x) => f(g(x));
 const double = (x) => x * 2;
-const addTen = (x) => x + 10;
-const composed = compose(addTen, double);
-composed(5); // 20 (double(5) -> 10, then addTen(10) -> 20)
+const increment = (x) => x + 1;
+const doubleThenIncrement = compose(increment, double);
 \`\`\`
+1. **Function Combination**: Creating new functions from existing ones.
+2. **Data Transformation**: Applying multiple transformations.
+
 ### 📚 Key Concepts
-- **Function Composition**: A core pattern in functional programming for building complex logic from simple, reusable pieces.
+- **Function Composition**: Combining functions to create new ones.
 `,
-'function-piping': `
+
+  "function-piping": `
 ### 💡 Problem Breakdown
-Piping is similar to composition but applies functions in left-to-right order. It chains functions together, passing the output of one as the input to the next.
+Function piping is similar to composition but applies functions in left-to-right order.
 
 ### ⚙️ Solution Walkthrough
-A `pipe` function uses `reduce` to chain the function calls.
+Piping functions.
 \`\`\`javascript
 const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
 const double = (x) => x * 2;
-const addTen = (x) => x + 10;
-const piped = pipe(double, addTen);
-piped(5); // 20 (double(5) -> 10, then addTen(10) -> 20)
+const increment = (x) => x + 1;
+const doubleThenIncrement = pipe(double, increment);
 \`\`\`
+1. **Left-to-Right**: Functions applied in sequence.
+2. **Data Flow**: Output of one function becomes input to next.
+
 ### 📚 Key Concepts
-- **Piping**: A readable way to chain data transformations.
+- **Function Piping**: Applying functions in sequence.
 `,
-'side-effects-conceptual': `
+
+  "side-effects-conceptual": `
 ### 💡 Problem Breakdown
-A "side effect" is any effect of a function, other than its return value, that is observable to the outside world. This includes modifying a global variable, changing the DOM, writing to the console, or making a network request. Pure functions have no side effects.
+Side effects are any changes a function makes outside its own scope or observable interactions.
 
 ### ⚙️ Solution Walkthrough
-An impure function is contrasted with a pure one.
+Function with side effects.
 \`\`\`javascript
-let total = 0;
-// Impure: modifies external state
-function addToTotal(n) { total += n; }
-
-// Pure: does not modify external state
-function add(a, b) { return a + b; }
+let counter = 0;
+function withSideEffect() {
+    counter++; // Side effect
+    console.log("Hello"); // Side effect
+}
 \`\`\`
+1. **External Changes**: Modifying variables outside function.
+2. **Observable Interactions**: Logging, DOM manipulation, etc.
+
 ### 📚 Key Concepts
-- **Side Effects**: A key concept in functional programming. Minimizing side effects makes code more predictable and easier to test.
+- **Side Effects**: Changes outside function scope.
 `,
-'memoization-closure': `
+
+  "memoization-closure": `
 ### 💡 Problem Breakdown
-Memoization is an optimization technique that caches the results of expensive, pure functions. A closure is the perfect way to store the cache privately.
+Memoization caches function results to avoid recomputation, often implemented with closures.
 
 ### ⚙️ Solution Walkthrough
-A higher-order `memoize` function wraps the target function.
+Memoization with closure.
 \`\`\`javascript
-const memoize = (fn) => {
+function memoize(fn) {
     const cache = {};
     return (...args) => {
         const key = JSON.stringify(args);
-        if (cache[key]) return cache[key];
-        return (cache[key] = fn(...args));
+        return cache[key] || (cache[key] = fn(...args));
     };
-};
+}
 \`\`\`
+1. **Result Caching**: Store results of expensive computations.
+2. **Closure**: Cache persists between function calls.
+
 ### 📚 Key Concepts
-- **Memoization**: A specific form of caching for function results.
-- **Closure**: Provides the private, persistent state for the cache.
+- **Memoization**: Caching function results.
 `,
-'block-scope-in-loop': `
+
+  "block-scope-in-loop": `
 ### 💡 Problem Breakdown
-This problem clarifies *why* closures in loops work correctly with `let`. The `let` declaration in a `for` loop's header creates a new lexical environment and a new variable binding for each iteration of the loop.
+Block scope in loops creates a new binding for each iteration when using let/const.
 
 ### ⚙️ Solution Walkthrough
-Each callback function created inside the loop forms a closure over a *different* `i` variable.
+Block scope in loop.
 \`\`\`javascript
 for (let i = 0; i < 3; i++) {
-    // Each iteration has its own 'i'.
-    // The closure captures the 'i' for that specific iteration.
-    setTimeout(() => console.log(i), 10);
+    setTimeout(() => console.log(i), 100); // 0,1,2
 }
-// Logs 0, 1, 2
 \`\`\`
+1. **Per-Iteration Binding**: New variable binding each iteration.
+2. **Closure Capture**: Each callback captures different variable.
+
 ### 📚 Key Concepts
-- **Lexical Environment**: A new one is created for each loop iteration when `let` is used.
+- **Loop Block Scope**: New binding per iteration.
 `,
-'arrow-function-no-prototype': `
+
+  "arrow-function-no-prototype": `
 ### 💡 Problem Breakdown
-Arrow functions cannot be used as constructors. This is because they do not have their own `this` binding and they do not have a `.prototype` property, which is necessary for the `new` keyword to work.
+Arrow functions don't have a prototype property and can't be used as constructors.
 
 ### ⚙️ Solution Walkthrough
-Attempting to use `new` with an arrow function throws a `TypeError`.
+Arrow function without prototype.
 \`\`\`javascript
-const MyArrow = () => {};
-// new MyArrow(); // TypeError: MyArrow is not a constructor
-console.log(MyArrow.prototype); // undefined
+const arrow = () => {};
+console.log(arrow.prototype); // undefined
 \`\`\`
+1. **No prototype**: Arrow functions lack prototype.
+2. **No Constructor**: Cannot be used with new.
+
 ### 📚 Key Concepts
-- **Constructors**: Functions designed to be called with `new`. Arrow functions are not designed for this.
+- **Arrow Function Limitations**: No prototype property.
 `,
-'this-in-nested-function': `
+
+  "this-in-nested-function": `
 ### 💡 Problem Breakdown
-This is a classic problem demonstrating how a traditional nested `function` inside a method gets its own `this` context, which is typically the global object (`window`) or `undefined` in strict mode, not the object the method belongs to.
+this in nested functions doesn't inherit the outer function's this binding.
 
 ### ⚙️ Solution Walkthrough
-The `nested` function's `this` is not the `obj`.
+this in nested function.
 \`\`\`javascript
 const obj = {
-    name: 'MyObj',
-    process() {
-        function nested() { return this.name; }
-        return nested(); // Throws error in strict mode
+    value: 42,
+    test() {
+        function nested() {
+            console.log(this); // Global object
+        }
+        nested();
     }
 };
-// Solutions:
-// 1. const self = this;
-// 2. nested.call(this);
-// 3. (Modern) Use an arrow function for 'nested'.
 \`\`\`
+1. **this Binding**: Nested functions don't inherit this.
+2. **Global Fallback**: Falls back to global object.
+
 ### 📚 Key Concepts
-- **`this` Binding Rules**: The value of `this` depends on how the function is called. A plain function call sets `this` to the global object or `undefined`.
+- **Nested Function this**: Doesn't inherit outer this.
 `,
-'default-param-evaluation': `
+
+  "default-param-evaluation": `
 ### 💡 Problem Breakdown
-Default parameter expressions are not evaluated when the function is defined, but rather at *call time*, when the function is invoked and an argument for that parameter is omitted.
+Default parameters are evaluated at call time, not function creation time.
 
 ### ⚙️ Solution Walkthrough
-A function's default parameter calls another function.
+Default parameter evaluation.
 \`\`\`javascript
 let x = 1;
-function getValue() { return x; }
-function test(a = getValue()) { return a; }
-test(); // 1
+function test(a = x) {
+    return a;
+}
 x = 2;
 test(); // 2
 \`\`\`
-Because `getValue()` is called each time `test()` is run without an argument, it gets the current value of `x`.
+1. **Call-Time Evaluation**: Default values evaluated when function is called.
+2. **Dynamic Defaults**: Can use expressions and variables.
 
 ### 📚 Key Concepts
-- **Lazy Evaluation**: Default parameter expressions are evaluated lazily, only when needed.
+- **Default Parameter Evaluation**: Evaluated at call time.
 `,
-'function-arity': `
+
+  "function-arity": `
 ### 💡 Problem Breakdown
-"Arity" refers to the number of arguments a function is declared to accept. In JavaScript, this can be inspected via the function's `.length` property.
+Function arity refers to the number of arguments a function expects.
 
 ### ⚙️ Solution Walkthrough
-The `.length` property is checked on various functions.
+Checking function arity.
 \`\`\`javascript
-function func(a, b) {}
-const arrow = (a, b, c) => {};
-console.log(func.length); // 2
-console.log(arrow.length); // 3
-// Note: It does not include rest parameters or parameters after the first default.
+function example(a, b, c) {}
+console.log(example.length); // 3
 \`\`\`
+1. **arity**: Number of formal parameters.
+2. **length Property**: Available on all functions.
+
 ### 📚 Key Concepts
-- **Function Arity**: The number of expected arguments.
+- **Function Arity**: Number of expected arguments.
 `,
-'iife-for-private-methods': `
+
+  "iife-for-private-methods": `
 ### 💡 Problem Breakdown
-The Module Pattern can be used to create objects that have private helper methods which are used by the public methods but are not themselves exposed.
+IIFEs can be used to create private methods and variables through closure.
 
 ### ⚙️ Solution Walkthrough
-An IIFE creates a private `add` function. The returned object has a public `calculate` method that can call `add` via its closure.
+IIFE with private methods.
 \`\`\`javascript
-const calculator = (function() {
-    function add(a, b) { return a + b; } // private
+const counter = (function() {
+    let count = 0;
     return {
-        calculate(a, b) { return add(a, b); } // public
+        increment() { count++; },
+        getCount() { return count; }
     };
 })();
-calculator.calculate(10, 5); // 15
-// calculator.add(10, 5); // TypeError
 \`\`\`
+1. **Private State**: Variables inaccessible from outside.
+2. **Public Interface**: Returned object provides access.
+
 ### 📚 Key Concepts
-- **Module Pattern**: A pattern for encapsulation.
+- **IIFE for Privacy**: Creating private scope with IIFE.
 `,
-'function-as-a-value': `
+
+  "function-as-a-value": `
 ### 💡 Problem Breakdown
-This problem demonstrates that functions are "first-class citizens" by storing them as values within an array.
+Functions are first-class values that can be assigned to variables, passed as arguments, etc.
 
 ### ⚙️ Solution Walkthrough
-An array of functions is created, and then one of the functions is retrieved from the array and invoked.
+Function as value.
 \`\`\`javascript
-const add = (a, b) => a + b;
-const sub = (a, b) => a - b;
-const ops = [add, sub];
-ops[1](10, 3); // 7
+const func = function() { return "Hello"; };
+const arr = [func];
+const obj = {method: func};
 \`\`\`
+1. **First-Class Citizen**: Treated like any other value.
+2. **Flexible Usage**: Can be assigned, passed, returned.
+
 ### 📚 Key Concepts
-- **First-Class Functions**: Functions can be treated like any other value (stored in variables, arrays, etc.).
+- **Function as Value**: Treated like any other value.
 `,
-'variadic-function': `
+
+  "variadic-function": `
 ### 💡 Problem Breakdown
-A "variadic" function is one that accepts a variable number of arguments. Rest parameters are the modern way to create variadic functions in JavaScript.
+Variadic functions accept a variable number of arguments, typically using rest parameters.
 
 ### ⚙️ Solution Walkthrough
-A `findMax` function uses rest parameters to accept any number of arguments and find the maximum.
+Variadic function with rest parameters.
 \`\`\`javascript
-const findMax = (...args) => Math.max(...args);
-findMax(1, 5, 2, 9, 3); // 9
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
 \`\`\`
-### 📚 Key Concepts
-- **Variadic Function**: A function of indefinite arity.
-- **Rest Parameters**: The syntax for creating variadic functions.
-`,
-'execution-context-conceptual': `
-### 💡 Problem Breakdown
-This is a core conceptual topic. The "Execution Context" is the environment in which JavaScript code is evaluated and executed. The engine creates a new one every time a function is called. It has two phases:
-1.  **Creation Phase**: The engine scans the code. It sets up the Variable Environment (memory for variables and functions, handling hoisting), defines the Scope Chain, and determines the value of `this`.
-2.  **Execution Phase**: The engine executes the code line by line.
+1. **Variable Arguments**: Accept any number of arguments.
+2. **Rest Parameters**: ... syntax collects arguments into array.
 
 ### 📚 Key Concepts
-- **Execution Context**: The fundamental concept that manages code execution, scope, and `this` binding in JavaScript.
+- **Variadic Function**: Accepts variable number of arguments.
 `,
-'this-in-callback': `
+
+  "execution-context-conceptual": `
 ### 💡 Problem Breakdown
-This shows another example of losing the `this` context. When you pass an object method directly as a callback to a function like `forEach`, it gets invoked as a regular function, not as a method of the object.
+Execution context is the environment in which JavaScript code is executed.
 
 ### ⚙️ Solution Walkthrough
-A traditional function callback to `forEach` loses its `this`.
+Conceptual explanation.
+\`\`\`javascript
+// Execution context conceptually:
+{
+    variableEnvironment: { /* variables */ },
+    lexicalEnvironment: { /* variables */ },
+    thisBinding: /* this value */
+}
+\`\`\`
+1. **Variable Environment**: Stores variables and functions.
+2. **this Binding**: The this value for the context.
+
+### 📚 Key Concepts
+- **Execution Context**: Environment for code execution.
+`,
+
+  "this-in-callback": `
+### 💡 Problem Breakdown
+this in callbacks often doesn't work as expected due to how the callback is invoked.
+
+### ⚙️ Solution Walkthrough
+this issue in callback.
 \`\`\`javascript
 const obj = {
-    name: 'X',
-    process(data) {
-        data.forEach(function(item) {
-            // 'this' is undefined in strict mode, not 'obj'
-            console.log(this.name); // Throws TypeError
-        });
+    value: 42,
+    process(data, callback) {
+        data.forEach(callback);
     }
 };
-// Solution: Use an arrow function: data.forEach(item => console.log(this.name));
+obj.process([1, 2, 3], function(item) {
+    console.log(this.value); // undefined
+});
 \`\`\`
+1. **Callback Invocation**: Called by forEach, not by obj.
+2. **this Binding**: Lost original context.
+
 ### 📚 Key Concepts
-- **Callback Invocation**: The function that calls the callback (e.g., `forEach`) determines its `this` context, unless an arrow function is used.
+- **Callback this**: this binding issues in callbacks.
 `,
-'function-hoisting-pitfall': `
+
+  "function-hoisting-pitfall": `
 ### 💡 Problem Breakdown
-While function declarations are hoisted, their behavior within blocks can be inconsistent across different JavaScript environments due to legacy compatibility. A function declared inside an `if` block might be hoisted in a non-strict browser environment but not in strict mode or other environments.
+Function hoisting can lead to unexpected behavior if not understood properly.
 
 ### ⚙️ Solution Walkthrough
-A function is declared inside a block.
+Hoisting pitfall.
 \`\`\`javascript
-// This behavior can be unreliable across engines
+console.log(typeof func); // "function"
 if (false) {
-    function myFunc() { console.log("Hoisted?"); }
+    function func() { return "First"; }
 }
-// In some non-strict browsers, myFunc might exist but be undefined.
-// In strict mode, it would be a ReferenceError.
+function func() { return "Second"; }
 \`\`\`
-Because of this inconsistency, it's a strong best practice to **never** declare functions inside blocks. Use function expressions instead.
+1. **Block Hoisting**: Functions in blocks are hoisted inconsistently.
+2. **Unexpected Behavior**: Can lead to confusing results.
 
 ### 📚 Key Concepts
-- **Block-level Function Declarations**: A feature with inconsistent behavior; should be avoided.
+- **Hoisting Pitfalls**: Unexpected behavior due to hoisting.
 `,
-'call-vs-apply-vs-bind': `
-### 💡 Problem Breakdown
-This is a summary of the three primary methods for controlling a function's `this` context.
-- **`.call(thisArg, arg1, arg2, ...)`**: **Invokes** the function immediately. Arguments are passed individually.
-- **`.apply(thisArg, [arg1, arg2])`**: **Invokes** the function immediately. Arguments are passed as an array.
-- **`.bind(thisArg, arg1, ...)`**: **Returns a new function**. It does not invoke the function. The new function has its `this` context and any initial arguments permanently bound.
 
-### 📚 Key Concepts
-- **Explicit `this` Binding**: The collective term for using these three methods.
-`,
-'currying-vs-partial-application': `
+  "call-vs-apply-vs-bind": `
 ### 💡 Problem Breakdown
-These are related but distinct functional programming concepts.
-- **Currying**: Transforms a function that takes multiple arguments into a sequence of functions that each take a single argument. E.g., `f(a, b, c)` becomes `f(a)(b)(c)`.
-- **Partial Application**: Provides *some* of a function's arguments upfront, creating a new function that is of smaller "arity" (fewer parameters). E.g., from `f(a, b, c)`, you could create `g(c)` by pre-filling `a` and `b`.
+call, apply, and bind are methods to control this binding, with slight differences.
 
 ### ⚙️ Solution Walkthrough
-Currying is a specific technique that makes partial application easy, but they are not the same thing. You can partially apply a function with `.bind()` without currying it.
-
-### 📚 Key Concepts
-- **Currying**: A transformation of a function's structure.
-- **Partial Application**: The result of fixing one or more arguments to a function.
-`,
-'function-overloading-conceptual': `
-### 💡 Problem Breakdown
-"Function overloading" is a feature in some languages where you can define multiple functions with the same name but different parameter types or counts. JavaScript does not support this. The last function defined with a given name will overwrite all previous ones.
-
-### ⚙️ Solution Walkthrough
-You can mimic overloading by having a single function that inspects its arguments.
+Comparison of call, apply, bind.
 \`\`\`javascript
-function doSomething(arg) {
-    if (typeof arg === 'string') {
-        // Handle string case
-    } else if (typeof arg === 'number') {
-        // Handle number case
+function test(a, b) { return this.value + a + b; }
+const obj = {value: 10};
+
+test.call(obj, 1, 2);     // 13
+test.apply(obj, [1, 2]);  // 13
+const bound = test.bind(obj, 1);
+bound(2);                 // 13
+\`\`\`
+1. **call**: Invokes function with this and individual arguments.
+2. **apply**: Invokes function with this and array of arguments.
+3. **bind**: Creates new function with bound this and arguments.
+
+### 📚 Key Concepts
+- **this Binding Methods**: call, apply, and bind.
+`,
+
+  "currying-vs-partial-application": `
+### 💡 Problem Breakdown
+Currying and partial application are related but distinct techniques for function manipulation.
+
+### ⚙️ Solution Walkthrough
+Currying vs partial application.
+\`\`\`javascript
+// Currying
+const curriedMultiply = (a) => (b) => (c) => a * b * c;
+
+// Partial application
+function multiply(a, b, c) { return a * b * c; }
+const partialMultiply = multiply.bind(null, 2);
+\`\`\`
+1. **Currying**: Transforming multi-argument function into nested single-argument functions.
+2. **Partial Application**: Fixing some arguments of a function.
+
+### 📚 Key Concepts
+- **Currying vs Partial Application**: Related but distinct concepts.
+`,
+
+  "function-overloading-conceptual": `
+### 💡 Problem Breakdown
+JavaScript doesn't support function overloading natively, but it can be simulated.
+
+### ⚙️ Solution Walkthrough
+Simulating function overloading.
+\`\`\`javascript
+function example() {
+    if (arguments.length === 1) {
+        return arguments[0] * 2;
+    } else if (arguments.length === 2) {
+        return arguments[0] + arguments[1];
     }
 }
 \`\`\`
+1. **No Native Overloading**: JavaScript doesn't support overloading.
+2. **Simulation**: Can be simulated by checking arguments.
+
 ### 📚 Key Concepts
-- **Dynamic Typing**: Because JavaScript is dynamically typed, a single function parameter can accept values of any type, which is why traditional overloading isn't necessary.
+- **Function Overloading**: Not natively supported in JavaScript.
 `,
-'self-referencing-function': `
+
+  "self-referencing-function": `
 ### 💡 Problem Breakdown
-A "named function expression" allows a function to refer to itself by its internal name. This is useful for recursion, as it makes the recursive call independent of the variable the function is assigned to.
+Functions can reference themselves, which is useful for recursion and self-modification.
 
 ### ⚙️ Solution Walkthrough
-A factorial function is defined as a named expression `fac`.
+Self-referencing function.
 \`\`\`javascript
-const factorial = function fac(n) {
-    if (n <= 1) return 1;
-    return n * fac(n - 1); // Can use 'fac' for recursion
+const factorial = function calc(n) {
+    return n <= 1 ? 1 : n * calc(n - 1);
 };
-
-const anotherVar = factorial;
-// factorial = null; // Even if the original var is changed...
-anotherVar(5); // ...this still works because it calls 'fac'.
 \`\`\`
-### 📚 Key Concepts
-- **Named Function Expression**: A function expression with an identifier that is local to the function's scope.
-`,
-'closure-scope-preservation': `
-### 💡 Problem Breakdown
-This problem demonstrates that a closure holds a live *reference* to the variables in its parent scope, not a frozen copy of their values at the time the closure was created.
-
-### ⚙️ Solution Walkthrough
-An outer function creates a closure, then modifies a variable *after* the closure is created but *before* it is called.
-\`\`\`javascript
-function outer() {
-    let x = 1;
-    const inner = () => x; // 'inner' closes over 'x'
-    x = 2; // Modify the closed-over variable
-    return inner;
-}
-const myFn = outer();
-myFn(); // 2
-\`\`\`
-When `myFn` is eventually called, it reads the *current* value of `x` from its closure, which is 2.
+1. **Self-Reference**: Function can reference itself.
+2. **Named Expression**: Helps with self-reference.
 
 ### 📚 Key Concepts
-- **Live Reference**: A closure maintains a live link to its lexical environment.
+- **Self-Reference**: Function referencing itself.
 `,
-'higher-order-function-wrapper': `
+
+  "closure-scope-preservation": `
 ### 💡 Problem Breakdown
-This is a practical example of a higher-order function. We want to create a "wrapper" function that takes another function and returns a new version of it with added functionality, like logging.
+Closures preserve the scope in which they were created, even after that scope has exited.
 
 ### ⚙️ Solution Walkthrough
-The `withLogging` function takes a function `fn` and returns a new function.
+Closure preserving scope.
 \`\`\`javascript
-const withLogging = (fn) => {
-    return (...args) => {
-        console.log(\`Calling \${fn.name}...\`);
-        const result = fn(...args);
-        console.log("...finished.");
-        return result;
+function createCounter() {
+    let count = 0;
+    return function() {
+        return ++count;
     };
-};
-const add = (a, b) => a + b;
-const loggedAdd = withLogging(add);
-loggedAdd(2, 3);
-\`\`\`
-### 📚 Key Concepts
-- **Decorator Pattern**: This is a simple form of the Decorator pattern, where behavior is added to an object (in this case, a function) dynamically.
-`,
-'new-function-scope': `
-### 💡 Problem Breakdown
-This demonstrates a major "gotcha" of the `Function` constructor. Functions created this way do **not** create a closure over their creation environment. They are always created in the global scope.
-
-### ⚙️ Solution Walkthrough
-An attempt is made to access a local variable from a function created with `new Function`.
-\`\`\`javascript
-function createFunc() {
-    let x = 1;
-    // This function is created in the global scope, it cannot see 'x'.
-    return new Function('return x;');
 }
-// createFunc()(); // Throws a ReferenceError: x is not defined
+const counter = createCounter();
 \`\`\`
+1. **Scope Preservation**: Closure remembers its creation environment.
+2. **Persistent State**: Variables persist between calls.
+
 ### 📚 Key Concepts
-- **Scope**: The `Function` constructor breaks the normal rules of lexical scoping, which is one reason it's rarely used.
+- **Closure**: Function that remembers its lexical scope.
 `,
-'generator-function-return': `
+
+  "higher-order-function-wrapper": `
 ### 💡 Problem Breakdown
-A generator function can have a `return` statement. When the generator executes this `return`, it finishes and produces one final object from its iterator where `done` is `true` and `value` is the returned value.
+Higher-order functions can wrap other functions to add functionality.
 
 ### ⚙️ Solution Walkthrough
-A generator yields once and then returns.
+Function wrapper.
 \`\`\`javascript
-function* gen() {
+function withLogging(fn) {
+    return function(...args) {
+        console.log("Calling function with", args);
+        return fn(...args);
+    };
+}
+\`\`\`
+1. **Function Wrapping**: Creating wrappers around functions.
+2. **Behavior Addition**: Adding functionality like logging.
+
+### 📚 Key Concepts
+- **Function Wrapper**: Higher-order function that wraps another.
+`,
+
+  "new-function-scope": `
+### 💡 Problem Breakdown
+Functions created with the Function constructor have unique scope characteristics.
+
+### ⚙️ Solution Walkthrough
+Function constructor scope.
+\`\`\`javascript
+const x = 10;
+const func = new Function('return x;');
+console.log(func()); // ReferenceError
+\`\`\`
+1. **Global Scope**: Created in global scope only.
+2. **No Closure Access**: Cannot access surrounding scope.
+
+### 📚 Key Concepts
+- **Function Constructor Scope**: Unique scope behavior.
+`,
+
+  "generator-function-return": `
+### 💡 Problem Breakdown
+Generator functions can return values using the return statement.
+
+### ⚙️ Solution Walkthrough
+Generator with return.
+\`\`\`javascript
+function* generator() {
     yield 1;
-    return "Finished";
+    return 2;
 }
-const it = gen();
-it.next(); // { value: 1, done: false }
-it.next(); // { value: "Finished", done: true }
+const gen = generator();
+console.log(gen.next()); // {value: 1, done: false}
+console.log(gen.next()); // {value: 2, done: true}
 \`\`\`
+1. **return in Generators**: Can return final value.
+2. **Done State**: return sets done to true.
+
 ### 📚 Key Concepts
-- **Generator Execution Flow**: Understanding the final state of a generator when it returns.
+- **Generator Return**: Returning values from generators.
 `,
-'generator-yield-delegation': `
+
+  "generator-yield-delegation": `
 ### 💡 Problem Breakdown
-The `yield*` expression delegates the iteration to another generator or iterable. It's like "inlining" the values from another iterable into the current generator.
+Generators can delegate to other generators using yield*.
 
 ### ⚙️ Solution Walkthrough
-`genB` uses `yield*` to first yield all values from `genA`.
+Yield delegation.
 \`\`\`javascript
-function* genA() { yield 1; yield 2; }
-function* genB() {
-    yield* genA();
+function* gen1() {
+    yield 1;
+    yield 2;
+}
+function* gen2() {
+    yield* gen1();
     yield 3;
 }
-[...genB()]; // [1, 2, 3]
 \`\`\`
+1. **yield***: Delegates to another generator.
+2. **Generator Composition**: Combining multiple generators.
+
 ### 📚 Key Concepts
-- **`yield*`**: A syntax for composing generators.
+- **Yield Delegation**: Delegating to other generators.
 `,
-'async-function-return': `
+
+  "async-function-return": `
 ### 💡 Problem Breakdown
-An `async` function *always* returns a Promise.
-- If the function explicitly returns a value, the promise it returns will *resolve* with that value.
-- If the function throws an error, the promise it returns will *reject* with that error.
+Async functions always return promises, even if they return non-promise values.
 
 ### ⚙️ Solution Walkthrough
-An async function returns a simple value.
+Async function return.
 \`\`\`javascript
-async function getData() {
-    return "Data!";
+async function test() {
+    return 42;
 }
-const p = getData(); // 'p' is a Promise
-p.then(val => console.log(val)); // "Data!"
+test().then(console.log); // 42
 \`\`\`
+1. **Promise Return**: Always returns a promise.
+2. **Value Wrapping**: Non-promise values are wrapped in promises.
+
 ### 📚 Key Concepts
-- **`async` Functions**: A core part of modern asynchronous JavaScript. They provide a cleaner syntax for functions that work with promises.
+- **Async Function Return**: Always returns a promise.
 `,
-'this-in-object-literal': `
+
+  "this-in-object-literal": `
 ### 💡 Problem Breakdown
-This clarifies the `this` context for methods defined in an object literal. When you use a traditional `function` or the method shorthand syntax, `this` inside that method refers to the object itself when called as a method.
+In object literal methods, this refers to the object itself.
 
 ### ⚙️ Solution Walkthrough
-A method `getName` uses `this.name` to refer to its own object's property.
+this in object literal.
 \`\`\`javascript
 const obj = {
-    name: "Test",
-    getName() { // Method shorthand
-        return this.name;
+    value: 42,
+    getValue() {
+        return this.value;
     }
 };
-obj.getName(); // "Test"
 \`\`\`
+1. **Method Invocation**: this refers to the object.
+2. **Object Context**: Methods have access to object properties.
+
 ### 📚 Key Concepts
-- **Method Invocation**: The call `obj.getName()` sets the `this` context to `obj`.
+- **Object Literal this**: Refers to the object itself.
 `,
-'function-as-property-value': `
+
+  "function-as-property-value": `
 ### 💡 Problem Breakdown
-This demonstrates the "first-class" nature of functions. A function can be assigned as the value of an object property, at which point it is called a "method."
+Functions can be values of object properties, making them methods.
 
 ### ⚙️ Solution Walkthrough
-An `operations` object stores two functions as properties.
+Function as property value.
 \`\`\`javascript
-const operations = {
-    add: (a, b) => a + b,
-    subtract: (a, b) => a - b
-};
-operations.add(10, 5); // 15
-\`\`\`
-### 📚 Key Concepts
-- **First-Class Functions**: Functions can be treated like any other data type.
-`,
-'call-stack-conceptual': `
-### 💡 Problem Breakdown
-This is a core concept of how JavaScript executes code. The "Call Stack" is a data structure that keeps track of the currently executing function. It operates on a Last-In, First-Out (LIFO) principle.
-- When a function is called, it's added (pushed) to the top of the stack.
-- When a function returns, it's removed (popped) from the top of the stack.
-
-### ⚙️ Solution Walkthrough
-A conceptual trace of nested function calls.
-\`\`\`javascript
-function C() { /* ... */ }
-function B() { C(); }
-function A() { B(); }
-A();
-// Call Stack becomes:
-// 1. [A]
-// 2. [A, B]
-// 3. [A, B, C]
-// 4. [A, B] (C returns)
-// 5. [A] (B returns)
-// 6. [] (A returns)
-\`\`\`
-### 📚 Key Concepts
-- **Call Stack**: The mechanism for tracking function execution in the JavaScript engine. A "stack overflow" error occurs when the stack grows too large (e.g., from infinite recursion).
-`,
-'function-binding-precedence': `
-### 💡 Problem Breakdown
-There are four rules for determining the value of `this` in a function call. This problem explains their order of precedence, from highest to lowest:
-1.  **`new` Binding**: If the function is called with `new`, `this` is the newly created object.
-2.  **Explicit Binding**: If the function is called with `.call()`, `.apply()`, or `.bind()`, `this` is the object explicitly provided.
-3.  **Method Invocation**: If the function is called as a method of an object (`obj.fn()`), `this` is that object.
-4.  **Default Binding**: If none of the above apply, `this` is the global object (`window`) in non-strict mode, or `undefined` in strict mode.
-
-### 📚 Key Concepts
-- **`this` Binding Rules**: A crucial set of rules for understanding function execution context.
-`,
-'polyfill-bind-method': `
-### 💡 Problem Breakdown
-A "polyfill" is a piece of code that provides functionality that you expect the browser to provide natively. This problem outlines the logic for creating a simple polyfill for `.bind()`.
-
-### ⚙️ Solution Walkthrough
-The polyfill uses a closure to "remember" the `this` context and any initial arguments. It returns a new function that uses `.apply()` to call the original function with the stored context.
-\`\`\`javascript
-Function.prototype.myBind = function(context, ...boundArgs) {
-  const originalFunc = this;
-  return function(...args) {
-    return originalFunc.apply(context, [...boundArgs, ...args]);
-  };
+const obj = {
+    method: function() {
+        return "I'm a method";
+    }
 };
 \`\`\`
+1. **Method Property**: Function as object property value.
+2. **this Binding**: Method has access to object via this.
+
 ### 📚 Key Concepts
-- **Polyfill**: A way to provide modern features in older environments.
-- **Closures**: The core mechanism that makes the polyfill work.
+- **Method**: Function that is an object property.
 `,
-'default-params-and-scope': `
+
+  "call-stack-conceptual": `
 ### 💡 Problem Breakdown
-This demonstrates a subtle scope rule. Default parameters have their own intermediate scope that sits between the outer scope and the function body's scope.
+The call stack is a data structure that tracks function calls and their execution contexts.
 
 ### ⚙️ Solution Walkthrough
-A function `test` has a default parameter `b` that is a function. This inner function `b` forms a closure over the outer scope, not the function body's scope.
+Conceptual explanation.
 \`\`\`javascript
-const x = 'global';
-function test(a = x, b = function() { return x; }) {
-    const x = 'inner'; // This shadows the global 'x'
-    return b(); // Returns 'global'
-}
+function a() { b(); }
+function b() { c(); }
+function c() { }
+a();
+// Call stack: a -> b -> c
 \`\`\`
-The closure for the default parameter `b` is created *before* the function body is executed, so it captures the global `x`, not the `x` declared inside the function.
+1. **LIFO Structure**: Last-In-First-Out stack.
+2. **Execution Tracking**: Tracks currently executing functions.
 
 ### 📚 Key Concepts
-- **Scope**: A deep dive into the specific scoping rules of function parameters.
+- **Call Stack**: Tracks function execution order.
 `,
-'arrow-function-and-this-in-object': `
+
+  "function-binding-precedence": `
 ### 💡 Problem Breakdown
-This is a common pitfall. If you use an arrow function as a method directly on an object literal, its `this` will be determined lexically from the scope where the object is defined, not the object itself.
+JavaScript has rules for determining this binding precedence in different situations.
 
 ### ⚙️ Solution Walkthrough
-An object method is defined with an arrow function.
+this binding precedence.
 \`\`\`javascript
-const myObject = {
-  name: "My Object",
-  getName: () => {
-    // Fails because 'this' is not 'myObject'
-    return this.name;
-  }
+// Precedence order:
+// 1. new binding
+// 2. explicit binding (call, apply, bind)
+// 3. implicit binding (method call)
+// 4. default binding (global or undefined)
+\`\`\`
+1. **Binding Rules**: Specific rules for this determination.
+2. **Precedence Order**: Certain bindings take precedence over others.
+
+### 📚 Key Concepts
+- **this Binding Precedence**: Rules for determining this.
+`,
+
+  "polyfill-bind-method": `
+### 💡 Problem Breakdown
+A polyfill for the bind method can be implemented to understand how it works.
+
+### ⚙️ Solution Walkthrough
+Simple bind polyfill.
+\`\`\`javascript
+Function.prototype.myBind = function(context, ...args) {
+    const fn = this;
+    return function(...innerArgs) {
+        return fn.apply(context, [...args, ...innerArgs]);
+    };
 };
 \`\`\`
-To get the correct `this` binding, you must use a traditional function or the method shorthand syntax for object methods.
+1. **Closure Implementation**: Uses closure to remember context and arguments.
+2. **Function Application**: Applies function with correct context.
 
 ### 📚 Key Concepts
-- **Lexical `this`**: The defining behavior of arrow functions, which is not suitable for standard object methods.
+- **bind Polyfill**: Custom implementation of bind.
 `,
-'function-purity-and-arrays': `
+
+  "default-params-and-scope": `
 ### 💡 Problem Breakdown
-This problem illustrates function purity in the context of arrays. An impure function might mutate the array passed to it (a side effect), while a pure function would return a new array, leaving the original unchanged.
+Default parameters have their own scope between the outer scope and function body.
 
 ### ⚙️ Solution Walkthrough
-Two sorting functions are compared.
+Default parameter scope.
 \`\`\`javascript
-const original = ['c', 'a', 'b'];
-// Impure: mutates the original array
-const impureSort = (arr) => arr.sort();
-// Pure: creates a copy first
-const pureSort = (arr) => [...arr].sort();
-
-pureSort(original); // Returns ['a', 'b', 'c']
-// 'original' is still ['c', 'a', 'b']
-
-impureSort(original); // Returns ['a', 'b', 'c']
-// 'original' is now ['a', 'b', 'c']
-\`\`\`
-### 📚 Key Concepts
-- **Purity**: A key concept in functional programming.
-- **Immutability**: The practice of not changing data in place, which leads to more predictable code.
-`,
-'iife-with-global-variable': `
-### 💡 Problem Breakdown
-This shows a common pattern used in older JavaScript libraries. An IIFE can take arguments, and it was common practice to pass in global objects like `window`. This makes the dependency on the global object explicit and can also be used to create a safe alias (e.g., mapping `jQuery` to `$` inside the IIFE).
-
-### ⚙️ Solution Walkthrough
-The `window` object is passed into an IIFE.
-\`\`\`javascript
-(function(global) {
-  // 'global' here is a reference to the window object
-  // This makes the code's dependency on the global scope clear.
-})(this); // In global browser scope, 'this' is window
-\`\`\`
-### 📚 Key Concepts
-- **Dependency Management**: An older pattern for making a module's dependencies explicit.
-`,
-'function-with-optional-params': `
-### 💡 Problem Breakdown
-Before default parameters, the common way to handle optional parameters was to check if they were `undefined` inside the function body and assign a default value if so.
-
-### ⚙️ Solution Walkthrough
-An `if` statement checks for an undefined parameter.
-\`\`\`javascript
-function greet(name, greeting) {
-  const finalGreeting = greeting === undefined ? "Hello" : greeting;
-  return \`\${finalGreeting}, \${name}!\`;
+const x = 1;
+function test(a = x, b = () => x) {
+    const x = 2;
+    return b(); // 1, not 2
 }
-greet("User"); // "Hello, User!"
 \`\`\`
-### 📚 Key Concepts
-- **Defensive Programming**: Checking for expected but potentially missing inputs.
-`,
-'rest-params-vs-arguments': `
-### 💡 Problem Breakdown
-This is a conceptual summary. Rest parameters (`...args`) are superior to the older `arguments` object for several reasons:
-1.  **True Array**: Rest parameters are a real array, so array methods like `.map()` and `.filter()` can be used directly. The `arguments` object is only "array-like" and must be converted first.
-2.  **Arrow Functions**: Rest parameters work in arrow functions; the `arguments` object does not.
-3.  **Clarity**: They are more explicit about which arguments are being collected.
+1. **Intermediate Scope**: Between outer and function scope.
+2. **Variable Resolution**: Uses scope at parameter position.
 
 ### 📚 Key Concepts
-- **Modern JavaScript**: Preferring modern syntax (`...args`) over older, clunkier alternatives (`arguments`).
+- **Default Parameter Scope**: Unique scope for default parameters.
 `,
-'named-args-with-destructuring': `
+
+  "arrow-function-and-this-in-object": `
 ### 💡 Problem Breakdown
-This is a very popular and powerful pattern in modern JavaScript. Instead of a function taking many parameters in a fixed order, it takes a single object. Destructuring is used in the parameter list to unpack the "named" arguments from that object.
+Using arrow functions as methods in objects leads to unexpected this behavior.
 
 ### ⚙️ Solution Walkthrough
-A function uses parameter destructuring to accept options.
+Arrow function as method.
 \`\`\`javascript
-function createUser({ name, age, role = 'guest' }) {
-  return \`Created \${name}, \${age}, as \${role}.\`;
+const obj = {
+    value: 42,
+    getValue: () => this.value // undefined
+};
+\`\`\`
+1. **Lexical this**: Inherits from surrounding scope, not object.
+2. **Method Pitfall**: Not suitable for object methods.
+
+### 📚 Key Concepts
+- **Arrow Function Method**: Unexpected this behavior.
+`,
+
+  "function-purity-and-arrays": `
+### 💡 Problem Breakdown
+Function purity is especially important when working with arrays to avoid unintended mutations.
+
+### ⚙️ Solution Walkthrough
+Pure vs impure array functions.
+\`\`\`javascript
+// Impure - mutates original array
+function impureSort(arr) { return arr.sort(); }
+
+// Pure - returns new array
+function pureSort(arr) { return [...arr].sort(); }
+\`\`\`
+1. **Array Mutation**: Arrays are reference types, easily mutated.
+2. **Pure Alternatives**: Create copies to avoid mutation.
+
+### 📚 Key Concepts
+- **Array Purity**: Avoiding mutation of input arrays.
+`,
+
+  "iife-with-global-variable": `
+### 💡 Problem Breakdown
+IIFEs can be used to avoid polluting the global scope with temporary variables.
+
+### ⚙️ Solution Walkthrough
+IIFE for avoiding globals.
+\`\`\`javascript
+(function() {
+    const temp = "temporary value";
+    // Use temp here
+})();
+// temp is not available here
+\`\`\`
+1. **Scope Isolation**: Variables confined to IIFE.
+2. **Global Protection**: Prevents global namespace pollution.
+
+### 📚 Key Concepts
+- **IIFE for Scope**: Isolating variables from global scope.
+`,
+
+  "function-with-optional-params": `
+### 💡 Problem Breakdown
+JavaScript functions can have optional parameters that may be omitted when calling.
+
+### ⚙️ Solution Walkthrough
+Optional parameters.
+\`\`\`javascript
+function greet(name, greeting = "Hello") {
+    return \`\${greeting}, \${name}\`;
 }
-// Callers can pass arguments in any order
-createUser({ age: 99, name: "Admin" });
+greet("John"); // "Hello, John"
 \`\`\`
+1. **Parameter Optionality**: Parameters can be omitted.
+2. **Default Values**: Can provide default values for optional parameters.
+
 ### 📚 Key Concepts
-- **Named Arguments**: A pattern that improves function call readability and flexibility.
+- **Optional Parameters**: Parameters that can be omitted.
 `,
-'function-to-string': `
+
+  "rest-params-vs-arguments": `
 ### 💡 Problem Breakdown
-Every function has a `.toString()` method that returns a string representation of the function's source code.
+Rest parameters and the arguments object both provide access to function arguments but with differences.
 
 ### ⚙️ Solution Walkthrough
-`.toString()` is called on a function.
+Rest parameters vs arguments.
 \`\`\`javascript
-function add(a, b) { return a + b; }
-add.toString(); // "function add(a, b) { return a + b; }"
-\`\`\`
-### 📚 Key Concepts
-- **Function Introspection**: Examining the properties of a function object.
-`,
-'function-scope-vs-global-scope': `
-### 💡 Problem Breakdown
-This reinforces the concept of the scope chain. A function has access to its own scope and all outer scopes, up to the global scope. However, an outer scope does not have access to the variables defined inside an inner scope.
-
-### ⚙️ Solution Walkthrough
-A conceptual example of scope access.
-\`\`\`javascript
-let globalVar = 1;
-function myFunc() {
-  let funcVar = 2;
-  console.log(globalVar); // Works (accessing outer scope)
+function withRest(...args) {
+    // args is a real array
 }
-myFunc();
-// console.log(funcVar); // ReferenceError (cannot access inner scope)
+
+function withArguments() {
+    // arguments is array-like
+}
 \`\`\`
+1. **Rest Parameters**: Real array, better syntax.
+2. **arguments Object**: Array-like, legacy feature.
+
 ### 📚 Key Concepts
-- **Scope Chain**: A one-way chain of visibility from inner to outer scopes.
+- **Rest vs Arguments**: Modern vs legacy approach to arguments.
 `,
-'block-scope-with-const': `
+
+  "named-args-with-destructuring": `
 ### 💡 Problem Breakdown
-`const` is just like `let` in that it is block-scoped. The key difference is that a variable declared with `const` cannot be reassigned after it is initialized.
+Named arguments can be simulated using object destructuring in function parameters.
 
 ### ⚙️ Solution Walkthrough
-A `const` is declared inside a block.
+Named arguments with destructuring.
+\`\`\`javascript
+function createUser({name, age, role = "user"}) {
+    return \`Name: \${name}, Age: \${age}, Role: \${role}\`;
+}
+\`\`\`
+1. **Object Parameter**: Accept options object.
+2. **Destructuring**: Extract properties directly in parameters.
+
+### 📚 Key Concepts
+- **Named Arguments**: Simulating named parameters with destructuring.
+`,
+
+  "function-to-string": `
+### 💡 Problem Breakdown
+The toString() method of functions returns a string representation of the function.
+
+### ⚙️ Solution Walkthrough
+Function toString.
+\`\`\`javascript
+function example(a, b) { return a + b; }
+console.log(example.toString());
+\`\`\`
+1. **String Representation**: Returns function source code as string.
+2. **Function Inspection**: Useful for debugging and reflection.
+
+### 📚 Key Concepts
+- **Function toString**: String representation of function.
+`,
+
+  "function-scope-vs-global-scope": `
+### 💡 Problem Breakdown
+Understanding the difference between function scope and global scope is fundamental.
+
+### ⚙️ Solution Walkthrough
+Scope comparison.
+\`\`\`javascript
+const globalVar = "global";
+
+function test() {
+    const localVar = "local";
+    return globalVar; // Accessible
+}
+// localVar not accessible here
+\`\`\`
+1. **Global Scope**: Accessible everywhere.
+2. **Function Scope**: Accessible only within function.
+
+### 📚 Key Concepts
+- **Scope Differences**: Global vs function scope.
+`,
+
+  "block-scope-with-const": `
+### 💡 Problem Breakdown
+const declarations are block-scoped like let but cannot be reassigned.
+
+### ⚙️ Solution Walkthrough
+const block scope.
 \`\`\`javascript
 if (true) {
-  const x = 1;
+    const x = 1;
 }
-// console.log(x); // ReferenceError: x is not defined
-
-const y = 2;
-// y = 3; // TypeError: Assignment to constant variable.
+// x not accessible here
 \`\`\`
+1. **Block Scope**: Confined to block.
+2. **No Reassignment**: Cannot be reassigned after declaration.
+
 ### 📚 Key Concepts
-- **`const`**: For declaring constants whose values (or references, for objects) will not change.
+- **const Block Scope**: Block-scoped and immutable binding.
 `,
-'higher-order-function-foreach': `
+
+  "higher-order-function-foreach": `
 ### 💡 Problem Breakdown
-This problem involves implementing your own version of the `forEach` array method to understand how higher-order functions and callbacks work.
+Implementing a forEach function demonstrates higher-order function concepts.
 
 ### ⚙️ Solution Walkthrough
-A function `myForEach` takes an array and a callback. It loops through the array and executes the callback for each element.
+Custom forEach implementation.
 \`\`\`javascript
-function myForEach(arr, callback) {
-  for (let i = 0; i < arr.length; i++) {
-    callback(arr[i], i, arr);
-  }
-}
-myForEach(['a', 'b'], (item) => console.log(item));
-\`\`\`
-### 📚 Key Concepts
-- **Higher-Order Function**: `myForEach` takes a function as an argument.
-`,
-'function-currying-practical': `
-### 💡 Problem Breakdown
-This shows a practical use case for currying: creating specialized functions from a more general one. We create a generic logger and use it to create specific loggers for different levels.
-
-### ⚙️ Solution Walkthrough
-A curried `log` function is used to create an `errorLogger`.
-\`\`\`javascript
-const log = (level) => (message) => \`[\${level.toUpperCase()}] - \${message}\`;
-const errorLogger = log('error');
-errorLogger("Request failed."); // "[ERROR] - Request failed."
-\`\`\`
-### 📚 Key Concepts
-- **Currying**: A useful pattern for creating configurable functions.
-`,
-'this-in-event-listener-arrow': `
-### 💡 Problem Breakdown
-This is a conceptual problem that shows the advantage of using arrow functions for event listeners within classes or objects. An arrow function will lexically capture the correct `this` from its surrounding method, avoiding the need to use `.bind(this)`.
-
-### ⚙️ Solution Walkthrough
-An arrow function is used as an event handler callback.
-\`\`\`javascript
-class MyComponent {
-  constructor() { this.name = "My Component"; }
-  attachHandler() {
-    button.addEventListener('click', () => {
-      // 'this' correctly refers to the MyComponent instance
-      console.log(this.name);
-    });
-  }
+function forEach(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i], i, array);
+    }
 }
 \`\`\`
+1. **Array Iteration**: Process each array element.
+2. **Callback Invocation**: Call callback for each element.
+
 ### 📚 Key Concepts
-- **Lexical `this`**: The key feature of arrow functions that simplifies `this` management in callbacks.
+- **forEach Implementation**: Custom array iteration.
 `,
-'function-hoisting-with-var': `
+
+  "function-currying-practical": `
 ### 💡 Problem Breakdown
-This is another look at the hoisting behavior of function expressions assigned to a `var`. The variable declaration (`var myFunc;`) is hoisted and initialized with `undefined`. The assignment (`= function(){...}`) happens where it is in the code.
+Currying has practical applications for creating specialized functions.
 
 ### ⚙️ Solution Walkthrough
-A call is made before the assignment.
+Practical currying example.
 \`\`\`javascript
-try {
-  myFunc();
-} catch (e) {
-  console.log(e.name); // 'TypeError'
-}
-var myFunc = () => { console.log("Hello"); };
+const log = (level) => (message) => \`[\${level}] \${message}\`;
+const logError = log("ERROR");
+logError("Something went wrong");
 \`\`\`
-The code fails because at the time of the call, `myFunc` is `undefined`, not a function.
+1. **Function Specialization**: Create specialized functions.
+2. **Parameter Partial Application**: Fix some parameters upfront.
 
 ### 📚 Key Concepts
-- **Hoisting**: The distinction between hoisting a declaration and an assignment.
+- **Practical Currying**: Real-world use of currying.
+`,
+
+  "this-in-event-listener-arrow": `
+### 💡 Problem Breakdown
+Using arrow functions for event listeners affects this binding behavior.
+
+### ⚙️ Solution Walkthrough
+Arrow function event listener.
+\`\`\`javascript
+button.addEventListener('click', () => {
+    console.log(this); // Inherits from surrounding scope
+});
+\`\`\`
+1. **Lexical this**: Inherits this from surrounding scope.
+2. **Event Listener Context**: Different from regular function.
+
+### 📚 Key Concepts
+- **Arrow Event Listener**: Different this binding in event listeners.
+`,
+
+  "function-hoisting-with-var": `
+### 💡 Problem Breakdown
+Function expressions assigned to var variables have specific hoisting behavior.
+
+### ⚙️ Solution Walkthrough
+Function expression with var hoisting.
+\`\`\`javascript
+console.log(typeof func); // "undefined"
+var func = function() {};
+\`\`\`
+1. **Variable Hoisting**: Declaration hoisted, assignment not.
+2. **undefined Value**: Variable exists but has undefined value.
+
+### 📚 Key Concepts
+- **Function Expression Hoisting**: Specific hoisting behavior.
 `,
 };

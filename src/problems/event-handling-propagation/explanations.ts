@@ -949,4 +949,3 @@ myButton.dispatchEvent(myClickEvent);
 -   **Synthetic Events**: Events created by code are considered "synthetic" and have their `isTrusted` property set to `false`.
 `,
 };
-```
