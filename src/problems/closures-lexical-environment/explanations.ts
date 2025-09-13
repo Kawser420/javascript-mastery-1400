@@ -1,5 +1,5 @@
 export const explanations: Record<string, string> = {
-  'closure-counter': `
+  "closure-counter": `
 ### 💡 Problem Breakdown
 The challenge is to create a counter that remembers its value between calls. If you call it once, it should return 1; call it again, it should return 2. The key is that the variable holding the count must be private, inaccessible from the global scope. This is the classic problem to demonstrate closures.
 
@@ -25,7 +25,8 @@ counter(); // "Counter is now: 2"
 -   **Lexical Environment**: The scope (variables, functions) that was physically present where a function was defined in the code.
 -   **IIFE (Immediately Invoked Function Expression)**: A common pattern to create a private scope.
 `,
-  'lexical-scope': `
+
+  "lexical-scope": `
 ### 💡 Problem Breakdown
 This problem demonstrates the fundamental concept of lexical (or static) scope in JavaScript. The goal is to show that a function's scope is determined by its physical placement in the code, not by where it is called. An inner function should be able to access variables from its containing outer function.
 
@@ -49,7 +50,8 @@ inner();
 -   **Lexical Scope**: The scope of a variable is determined by its location within the source code. Inner scopes have access to variables in their outer scopes.
 -   **Scope Chain**: The chain of nested scopes that the JavaScript engine traverses upwards to find a variable's value.
 `,
-  'private-data-closure': `
+
+  "private-data-closure": `
 ### 💡 Problem Breakdown
 The goal is to simulate private data, a key concept in Object-Oriented Programming, using closures. We need to create an object that holds a person's name, but the name itself should not be directly accessible or modifiable from outside the object. Instead, we should only be able to interact with the name through "public" methods like \`getName\` and \`setName\`.
 
@@ -80,7 +82,8 @@ person.getName(); // "John"
 -   **Encapsulation**: Bundling data with the methods that operate on it, and restricting direct access to some of the object's components.
 -   **Module Pattern**: This is a classic JavaScript design pattern that uses closures to create modules with public and private members.
 `,
-  'function-factory-multiplier': `
+
+  "function-factory-multiplier": `
 ### 💡 Problem Breakdown
 The task is to create a "function factory"—a function that creates and returns other functions. The factory will take a number (\`factor\`) and produce a new function. This new function will take its own number (\`num\`) and return the result of \`num * factor\`.
 
@@ -103,7 +106,8 @@ const result = multiplyBy5(10); // 50
 -   **Function Factory**: A function that creates and returns another function.
 -   **Closure**: The key mechanism that allows the inner function to "remember" the \`factor\` from its creation context.
 `,
-  'iife-private-scope': `
+
+  "iife-private-scope": `
 ### 💡 Problem Breakdown
 An Immediately Invoked Function Expression (IIFE) is a common JavaScript pattern for creating a private scope. The goal is to declare a variable that is not added to the global scope, preventing potential naming conflicts with other scripts.
 
@@ -118,14 +122,15 @@ A function is wrapped in parentheses and immediately called, creating a scope th
 // console.log(secret); // This would throw a ReferenceError
 \`\`\`
 1.  **\`(function() { ... })\`**: The wrapping parentheses make the function an expression.
-2.  **`()`**: The final parentheses at the end execute the function immediately.
+2.  **\`()\`**: The final parentheses at the end execute the function immediately.
 3.  **Private Scope**: Any variables declared with \`var\`, \`let\`, or \`const\` inside the IIFE are local to that function and are not visible in the global scope.
 
 ### 📚 Key Concepts
 -   **IIFE**: A pattern to execute a function immediately after it's defined.
 -   **Scope**: A fundamental concept that controls the visibility and lifetime of variables and functions. IIFEs create a new function scope.
 `,
-  'closure-with-loop-let': `
+
+  "closure-with-loop-let": `
 ### 💡 Problem Breakdown
 This is a classic JavaScript interview question that highlights a key difference between \`var\` and \`let\`. The goal is to create several functions inside a loop, where each function should remember the value of the loop counter *at the time of its creation*.
 
@@ -150,7 +155,8 @@ functions[2](); // 2
 -   **Block Scope**: \`let\` and \`const\` are block-scoped, meaning their scope is the block (\`{}\`) they are defined in.
 -   **Closures in Loops**: A common pattern where \`let\` is essential for capturing the correct value from each iteration.
 `,
-  'memoization-with-closures': `
+
+  "memoization-with-closures": `
 ### 💡 Problem Breakdown
 Memoization is an optimization technique where you cache the results of expensive function calls and return the cached result when the same inputs occur again. A closure is the perfect way to store this cache privately.
 
@@ -179,7 +185,8 @@ const memoize = (fn) => {
 -   **Higher-Order Function**: \`memoize\` is a higher-order function because it takes a function as an argument and returns a new function.
 -   **Closure**: The closure provides a private, persistent state (the \`cache\`) for the returned function.
 `,
-  'module-pattern': `
+
+  "module-pattern": `
 ### 💡 Problem Breakdown
 The Module Pattern is a design pattern used to create self-contained pieces of code with private and public members. It uses an IIFE and closures to achieve encapsulation.
 
@@ -210,7 +217,8 @@ myModule.publicMethod(); // Works
 -   **Module Pattern**: A way to emulate classes and private members in pre-ES6 JavaScript.
 -   **Encapsulation**: Hiding the internal state and implementation details of an object.
 `,
-  'closure-event-listener': `
+
+  "closure-event-listener": `
 ### 💡 Problem Breakdown
 This is a conceptual explanation of a very common use case for closures. When you add an event listener, the callback function you provide is an inner function. It can access variables from the outer scope where the event listener was defined.
 
@@ -234,7 +242,8 @@ button.addEventListener('click', () => {
 ### 📚 Key Concepts
 -   **Closures**: The fundamental mechanism that makes event listeners in JavaScript powerful and intuitive.
 `,
-  'partial-application-closure': `
+
+  "partial-application-closure": `
 ### 💡 Problem Breakdown
 Partial application is the process of creating a new function by "pre-filling" some of the arguments of an existing, more general function. Closures are the perfect way to achieve this.
 
@@ -260,7 +269,8 @@ errorLogger("Failed to load resource."); // [ERROR]: Failed to load resource.
 ### 📚 Key Concepts
 -   **Partial Application**: A functional programming technique for creating specialized functions from more general ones.
 `,
-  'closure-timeout-scope': `
+
+  "closure-timeout-scope": `
 ### 💡 Problem Breakdown
 The \`setTimeout\` function provides a great example of closures in action. When you set a timeout, the callback function you provide doesn't run immediately. It's executed later, after the parent function that defined it has already finished. A closure is what allows the callback to still access the parent's variables.
 
@@ -287,7 +297,8 @@ run(); // The 'run' function finishes immediately.
 -   **Asynchronous Callbacks**: Functions that are executed at a later point in time.
 -   **Closures and Memory**: Closures are the reason variables are not garbage collected if an inner function still needs them.
 `,
-  'retaining-state-closure': `
+
+  "retaining-state-closure": `
 ### 💡 Problem Breakdown
 This is another example of using a closure to maintain "state" between function calls, similar to the counter problem. Here, the function needs to remember the *previous* value it was called with.
 
@@ -313,7 +324,8 @@ statefulSum(3); // 10 + 3 = 13
 ### 📚 Key Concepts
 -   **State Management**: Using closures is a fundamental way to manage state without resorting to global variables or object properties.
 `,
-  'once-function': `
+
+  "once-function": `
 ### 💡 Problem Breakdown
 The task is to create a higher-order function named \`once\`. This function will take another function as input and return a new function that can only be executed a single time. All subsequent calls to the new function should not re-execute the original function but should return the result of the first execution.
 
@@ -345,7 +357,8 @@ runOnce(); // Does not log, just returns 42
 -   **Higher-Order Function**: \`once\` is a higher-order function that wraps and modifies the behavior of another function.
 -   **Stateful Closure**: The closure provides a private, persistent state for the wrapper function.
 `,
-  'closure-data-hiding': `
+
+  "closure-data-hiding": `
 ### 💡 Problem Breakdown
 This is a practical application of the module pattern for data encapsulation. The goal is to create a simple "store" object that allows adding items and getting a count of items, but it should be impossible to access or modify the underlying array of items directly from the outside.
 
@@ -372,7 +385,8 @@ store.getCount(); // 2
 ### 📚 Key Concepts
 -   **Encapsulation**: Hiding the internal implementation details of an object and exposing a controlled public interface.
 `,
-  'closure-scope-chain-deep': `
+
+  "closure-scope-chain-deep": `
 ### 💡 Problem Breakdown
 This exercise is designed to explicitly demonstrate the "scope chain" in action with multiple levels of nesting. The innermost function should be able to access variables from its immediate parent, its grandparent, and the global scope.
 
@@ -396,12 +410,13 @@ fn1(); // "one, two, three"
 ### 📚 Key Concepts
 -   **Scope Chain**: The ordered chain of lexical environments that the JavaScript engine traverses to find a variable.
 `,
-  'closure-with-async-await': `
+
+  "closure-with-async-await": `
 ### 💡 Problem Breakdown
 This demonstrates that closures work seamlessly with modern asynchronous code. A variable defined in an outer function should still be accessible inside an \`async\` function, even after an \`await\` expression has paused the function's execution.
 
 ### ⚙️ Solution Walkthrough
-The \`outerFunction\` defines a \`url\` variable. The inner \`async` function `fetchData` uses this \`url\` variable in its \`fetch\` call.
+The \`outerFunction\` defines a \`url\` variable. The inner \`async\` function \`fetchData\` uses this \`url\` variable in its \`fetch\` call.
 \`\`\`javascript
 function outerFunction() {
   const url = "https://api.example.com/data";
@@ -418,13 +433,14 @@ function outerFunction() {
 }
 \`\`\`
 1.  **Closure Creation**: When \`fetchData\` is defined, it forms a closure over the scope of \`outerFunction\`, capturing the \`url\` variable.
-2.  **`await` Pause**: When \`await\` is encountered, \`fetchData\` pauses, but its execution context and closure are preserved.
+2.  **\`await\` Pause**: When \`await\` is encountered, \`fetchData\` pauses, but its execution context and closure are preserved.
 3.  **Resumption**: When the promise resolves and the function resumes, it still has access to its original closure and all its variables.
 
 ### 📚 Key Concepts
 -   **Closures with Async Code**: Closures are fundamental to how asynchronous JavaScript works, preserving the context for callbacks, promises, and async functions.
 `,
-  'currying-add-function': `
+
+  "currying-add-function": `
 ### 💡 Problem Breakdown
 Currying is a functional programming technique of converting a function that takes multiple arguments into a sequence of functions that each take a single argument. This problem applies the concept to a function that adds three numbers.
 
@@ -440,14 +456,15 @@ add(10)(20)(30); // 60
 const add30 = add(10)(20);
 add30(30); // 60
 \`\`\`
-1.  **`add(a)`**: Returns a function that remembers \`a\`.
-2.  **`(b)`**: That returned function takes \`b\` and returns another function that remembers both \`a\` and \`b\`.
-3.  **`(c)`**: The final function takes \`c\` and, having access to \`a\` and \`b\` from its closure, performs the calculation.
+1.  **\`add(a)\`**: Returns a function that remembers \`a\`.
+2.  **\`(b)\`**: That returned function takes \`b\` and returns another function that remembers both \`a\` and \`b\`.
+3.  **\`(c)\`**: The final function takes \`c\` and, having access to \`a\` and \`b\` from its closure, performs the calculation.
 
 ### 📚 Key Concepts
 -   **Currying**: A functional programming pattern made possible by closures, allowing for easy partial application.
 `,
-  'closure-for-config': `
+
+  "closure-for-config": `
 ### 💡 Problem Breakdown
 This is a practical use of a function factory. The goal is to create a function that takes an initial configuration object. It then returns a new, specialized function that uses this configuration in its operations. The configuration is "baked in" to the returned function via a closure.
 
@@ -474,7 +491,8 @@ questioner("Why?"); // "Question: Why?"
 -   **Function Factory**: Creating specialized functions from a general template.
 -   **Configuration Management**: A clean pattern for creating pre-configured functions.
 `,
-  'closure-and-garbage-collection': `
+
+  "closure-and-garbage-collection": `
 ### 💡 Problem Breakdown
 This is a conceptual problem about memory management in JavaScript. When a function finishes executing, any variables that were created inside it are typically "garbage collected" (i.e., the memory they occupied is reclaimed) if they are no longer reachable. However, a closure can keep variables from being garbage collected.
 
@@ -501,7 +519,8 @@ const myFn = createFunction();
 -   **Garbage Collection**: The automatic memory management process in JavaScript.
 -   **Memory Leaks**: A potential downside of closures if they are not managed properly. If you unintentionally create long-lived functions that close over large amounts of data, it can lead to memory leaks if the closures are not eventually released.
 `,
-  'closure-in-react-hooks-conceptual': `
+
+  "closure-in-react-hooks-conceptual": `
 ### 💡 Problem Breakdown
 This is a common issue for React developers. A "stale closure" occurs when an effect or callback (like in \`useEffect\`, \`useCallback\`, or an event handler) captures a state variable from a previous render and doesn't get the updated value from a new render.
 
@@ -533,7 +552,8 @@ function MyComponent() {
 -   **Stale Closure**: A closure that captures outdated variables from a previous scope.
 -   **React Hooks**: Features like \`useEffect\` and \`useState\` rely heavily on closure principles.
 `,
-  'dynamic-function-creation': `
+
+  "dynamic-function-creation": `
 ### 💡 Problem Breakdown
 Because functions are first-class values, you can write a function that dynamically creates and returns other functions based on some input. This is a powerful metaprogramming concept and a variation of the factory pattern.
 
@@ -559,7 +579,8 @@ const result = addFunc(5, 10); // 15
 -   **Metaprogramming**: A programming technique in which programs have the ability to treat other programs (in this case, functions) as their data.
 -   **First-Class Functions**: The ability to return functions as values from other functions is a key feature of first-class functions.
 `,
-  'closure-shared-scope': `
+
+  "closure-shared-scope": `
 ### 💡 Problem Breakdown
 This demonstrates that multiple functions can share access to the *same* lexical environment. If two or more functions are defined in the same parent scope, they will all share a closure over that scope and can modify the same variables.
 
@@ -585,7 +606,8 @@ counter.dec(); // shared is now 1
 ### 📚 Key Concepts
 -   **Shared Scope**: Multiple closures can interact with the same set of closed-over variables.
 `,
-  'revealing-module-pattern': `
+
+  "revealing-module-pattern": `
 ### 💡 Problem Breakdown
 The Revealing Module Pattern is a slight variation on the standard Module Pattern. The key difference is that all functions and variables are kept private, and at the end, an anonymous object is returned that "reveals" pointers to the private members that you wish to make public. This can make the code cleaner and easier to modify.
 
@@ -611,7 +633,8 @@ const myRevealingModule = (function () {
 ### 📚 Key Concepts
 -   **Revealing Module Pattern**: An enhancement of the module pattern that promotes clearer separation between public and private code.
 `,
-  'closure-for-templating': `
+
+  "closure-for-templating": `
 ### 💡 Problem Breakdown
 This problem demonstrates a practical use of closures for creating a simple templating function. The idea is to create a function that takes a template string (e.g., "Hello, {{name}}") and returns a new function. This new function can then be called with a data object to fill in the template's placeholders.
 
@@ -628,7 +651,7 @@ const createTemplate = (templateStr) => {
 const welcomeTemplate = createTemplate("Hello, {{name}}!");
 const message = welcomeTemplate({ name: 'Alice' }); // "Hello, Alice!"
 \`\`\`
-1.  **`createTemplate`**: This factory "compiles" the template (conceptually).
+1.  **\`createTemplate\`**: This factory "compiles" the template (conceptually).
 2.  **Closure**: The returned function keeps a reference to the \`templateStr\`.
 3.  **Execution**: When the returned function is called with a data object, it uses the remembered template and the new data to produce the final string.
 
@@ -636,7 +659,8 @@ const message = welcomeTemplate({ name: 'Alice' }); // "Hello, Alice!"
 -   **Function Factory**: Creating reusable, pre-configured functions.
 -   **Regular Expressions**: Used here to find the placeholders (like \`{{name}}\`) in the template string.
 `,
-  'closure-as-iterator': `
+
+  "closure-as-iterator": `
 ### 💡 Problem Breakdown
 An iterator is an object that knows how to access items from a collection one at a time. A closure is a perfect way to implement a simple iterator, as it can maintain the current position (index) as private state between calls to the iterator's \`next\` function.
 
@@ -660,13 +684,14 @@ next(); // 'c'
 next(); // 'Done'
 \`\`\`
 1.  **Private Index**: The \`index\` is initialized to 0 and stored in the closure.
-2.  **`next()` Function**: Each time the returned function (\`next\`) is called, it returns the element at the current \`index\` and then increments the index for the next call.
+2.  **\`next()\` Function**: Each time the returned function (\`next\`) is called, it returns the element at the current \`index\` and then increments the index for the next call.
 
 ### 📚 Key Concepts
 -   **Iterator Pattern**: A design pattern for sequentially accessing the elements of a collection.
 -   **Stateful Function**: The returned function is stateful; its output changes with each call.
 `,
-  'closure-with-recursion': `
+
+  "closure-with-recursion": `
 ### 💡 Problem Breakdown
 This problem combines two powerful concepts. We will use recursion to calculate Fibonacci numbers, but we'll wrap it in a closure to implement memoization (caching) to fix the massive inefficiency of the naive recursive solution.
 
@@ -698,7 +723,8 @@ memoizedFib(40); // Calculates very quickly
 -   **Memoization**: An optimization technique that relies on caching.
 -   **Closures**: Provide the private, persistent state needed for the cache.
 `,
-  'closure-accessing-arguments': `
+
+  "closure-accessing-arguments": `
 ### 💡 Problem Breakdown
 The \`arguments\` object is a special, array-like object that belongs to traditional (non-arrow) functions. This problem demonstrates that a closure created inside a traditional function also includes a reference to the parent function's \`arguments\` object.
 
@@ -714,15 +740,16 @@ function outer() {
 const inner = outer('hello', 'world');
 inner(); // "hello"
 \`\`\`
-1.  **`outer('hello', 'world')`**: This is called, and its `arguments` object is \`['hello', 'world']\`.
+1.  **\`outer('hello', 'world')\`**: This is called, and its \`arguments\` object is \`['hello', 'world']\`.
 2.  **Closure**: The returned arrow function forms a closure over the scope of \`outer\`.
-3.  **Access**: When \`inner()\` is called, it resolves \`arguments\` by looking in its closure, finding the `arguments` object that belongs to \`outer\`.
+3.  **Access**: When \`inner()\` is called, it resolves \`arguments\` by looking in its closure, finding the \`arguments\` object that belongs to \`outer\`.
 
 ### 📚 Key Concepts
 -   **\`arguments\` object**: A feature of traditional functions.
 -   **Lexical Scoping**: The inner function's ability to access variables and objects from its containing scope.
 `,
-  'closure-redefining-variable': `
+
+  "closure-redefining-variable": `
 ### 💡 Problem Breakdown
 This exercise demonstrates "variable shadowing." When an inner scope declares a variable with the same name as a variable in an outer scope, the inner variable takes precedence *within the inner scope*. The outer variable is temporarily "shadowed" and inaccessible by that name.
 
@@ -744,7 +771,8 @@ myFunction(); // "The inner x is "inner""
 ### 📚 Key Concepts
 -   **Variable Shadowing**: When a variable in an inner scope "hides" a variable of the same name from an outer scope.
 `,
-  'closure-performance-conceptual': `
+
+  "closure-performance-conceptual": `
 ### 💡 Problem Breakdown
 This is a conceptual explanation of the memory implications of closures. While powerful, they can lead to performance issues if not used carefully.
 
@@ -771,7 +799,8 @@ for (let i = 0; i < 100; i++) {
 ### 📚 Key Concepts
 -   **Memory Management**: Understanding how closures interact with JavaScript's garbage collector.
 `,
-  'closure-with-proxy': `
+
+  "closure-with-proxy": `
 ### 💡 Problem Breakdown
 An ES6 \`Proxy\` is an object that wraps another object (the "target") and intercepts fundamental operations like getting or setting properties. A closure is a perfect way to store the private target object, ensuring that all interactions must go through the proxy.
 
@@ -804,7 +833,8 @@ user._secret; // "Access denied"
 -   **Proxy**: An object that lets you intercept and redefine fundamental operations for another object.
 -   **Encapsulation**: Using a closure to hide the target object provides strong encapsulation.
 `,
-  'closure-with-bind': `
+
+  "closure-with-bind": `
 ### 💡 Problem Breakdown
 This problem compares two ways of achieving partial application: using a closure and using the built-in \`.bind()\` method. Both techniques "remember" an argument for a future function call.
 
@@ -825,12 +855,13 @@ add5_closure(10); // 15
 add5_bind(10);    // 15
 \`\`\`
 1.  **Closure Approach**: This is the manual way, creating a new function that calls the original with the "remembered" argument.
-2.  **`.bind()` Approach**: This is a built-in method that achieves a similar result. It creates a new function with a pre-set \`this\` context and a sequence of initial arguments.
+2.  **\`.bind()\` Approach**: This is a built-in method that achieves a similar result. It creates a new function with a pre-set \`this\` context and a sequence of initial arguments.
 
 ### 📚 Key Concepts
 -   **Partial Application**: The process of fixing a number of arguments to a function, producing another function of smaller arity.
 `,
-  'closure-for-rate-limiting': `
+
+  "closure-for-rate-limiting": `
 ### 💡 Problem Breakdown
 Rate limiting is a technique to control the rate at which a user or client can access a resource. A closure is ideal for implementing a simple rate limiter because it can store private state, like the timestamp of the last successful call, between function invocations.
 
@@ -853,14 +884,15 @@ const limitedApiCall = rateLimit(() => "API call successful!", 2000);
 limitedApiCall(); // "API call successful!"
 limitedApiCall(); // "Rate limit exceeded..."
 \`\`\`
-1.  **`lastCallTime`**: This variable is stored in the closure and persists across calls to \`limitedApiCall\`.
+1.  **\`lastCallTime\`**: This variable is stored in the closure and persists across calls to \`limitedApiCall\`.
 2.  **Time Check**: Each time the function is called, it checks if enough time (\`delay\`) has passed since the last successful call before executing the original function again.
 
 ### 📚 Key Concepts
 -   **Higher-Order Function**: A function that wraps another to add new behavior.
 -   **Stateful Closure**: The closure maintains the state (\`lastCallTime\`) needed for the rate limiting logic.
 `,
-  'closure-for-toggling': `
+
+  "closure-for-toggling": `
 ### 💡 Problem Breakdown
 The goal is to create a function that cycles through a set of values each time it is called. For example, a simple toggle would switch between \`true\` and \`false\`. A closure is needed to remember the current state or index.
 
@@ -885,7 +917,8 @@ toggler(); // true
 ### 📚 Key Concepts
 -   **State Machine**: A simple state machine with two states. The closure holds the current state.
 `,
-  'namespacing-with-closures': `
+
+  "namespacing-with-closures": `
 ### 💡 Problem Breakdown
 "Namespacing" is the practice of creating a named object to group related functions and variables. This helps prevent "polluting" the global scope with many different variable names, which could lead to conflicts in large applications or when using multiple libraries. The Module Pattern, which uses a closure, is a perfect way to create a namespace.
 
@@ -911,7 +944,8 @@ var MyNamespace = (function() {
 -   **Namespacing**: A technique to avoid naming collisions in the global scope.
 -   **Module Pattern**: The design pattern used to implement namespacing.
 `,
-  'function-composition-closures': `
+
+  "function-composition-closures": `
 ### 💡 Problem Breakdown
 Function composition is the process of combining two or more functions to produce a new function. The output of one function becomes the input of the next. Closures are implicitly used when a composition function returns a new function that needs to remember the functions to be composed.
 
@@ -934,7 +968,8 @@ doubleThenAdd5(10); // g(x) -> double(10) is 20. f(20) -> add5(20) is 25.
 ### 📚 Key Concepts
 -   **Function Composition**: A core concept in functional programming for building complex logic from simple, reusable functions.
 `,
-  'closure-with-destructuring': `
+
+  "closure-with-destructuring": `
 ### 💡 Problem Breakdown
 This problem demonstrates how multiple functions returned from a factory can share the same closure, and how destructuring can be used to conveniently access these functions.
 
@@ -964,7 +999,8 @@ get(); // returns 2
 -   **Shared Scope**: Multiple closures interacting with the same closed-over variables.
 -   **Object Destructuring**: A modern syntax for unpacking properties from objects.
 `,
-  'lazy-initialization-closure': `
+
+  "lazy-initialization-closure": `
 ### 💡 Problem Breakdown
 Lazy initialization is a performance optimization pattern where you defer an expensive operation or object creation until the first time it is actually needed. A closure is a great way to manage the state for this, remembering whether the initialization has already occurred.
 
@@ -993,7 +1029,8 @@ getExpensiveResource(); // Does not log, returns the same resource.
 -   **Lazy Initialization**: A performance pattern to defer expensive work.
 -   **Singleton Pattern**: This is a form of the Singleton pattern, ensuring only one instance of the resource is ever created.
 `,
-  'closure-in-callbacks': `
+
+  "closure-in-callbacks": `
 ### 💡 Problem Breakdown
 This is a very common and practical application of closures. When you use an array method like \`.map()\`, the callback function you provide can access variables from the scope where \`.map()\` was called.
 
@@ -1014,7 +1051,8 @@ multiplyArray([1, 2, 3], 10); // [10, 20, 30]
 ### 📚 Key Concepts
 -   **Higher-Order Functions**: Array methods like \`.map()\`, \`.filter()\`, and \`.forEach()\` are higher-order functions that rely on closures to work.
 `,
-  'closure-for-abstraction': `
+
+  "closure-for-abstraction": `
 ### 💡 Problem Breakdown
 Closures are a powerful tool for abstraction. Abstraction means hiding complex implementation details behind a simple interface. We can create a simple-to-use function that hides more complex logic inside its closure.
 
@@ -1039,7 +1077,8 @@ const productsUrl = getApi("/products"); // "https://api.example.com/v1/products
 ### 📚 Key Concepts
 -   **Abstraction**: A core programming principle of simplifying complexity by hiding unnecessary details.
 `,
-  'closure-with-generators': `
+
+  "closure-with-generators": `
 ### 💡 Problem Breakdown
 This problem combines closures with ES6 generator functions. A closure can be used to maintain the state for a generator.
 
@@ -1067,7 +1106,8 @@ idGen.next().value; // 101
 -   **Generator Functions**: Functions that can be paused and resumed, producing a sequence of values.
 -   **Stateful Iterator**: Using a closure is a clean way to manage the internal state of a custom iterator.
 `,
-  'closure-with-promises': `
+
+  "closure-with-promises": `
 ### 💡 Problem Breakdown
 This demonstrates that closures work as expected with the asynchronous nature of Promises. Variables in the scope where a Promise is created are available within the \`.then()\` and \`.catch()\` callbacks.
 
@@ -1091,7 +1131,8 @@ function runAsyncTask() {
 -   **Promises**: Objects representing the eventual completion of an asynchronous operation.
 -   **Closures**: The mechanism that allows promise callbacks to access the scope where they were created.
 `,
-  'closure-for-stopwatch': `
+
+  "closure-for-stopwatch": `
 ### 💡 Problem Breakdown
 This is a practical example of the module pattern. We need to create a stopwatch with a public API (\`start\`, \`stop\`, \`getTime\`) but keep the internal state (\`startTime\`, \`running\`, \`elapsed\`) private and protected from outside interference. A closure is the perfect tool for this.
 
@@ -1132,7 +1173,8 @@ const stopwatch = (function() {
 -   **Module Pattern**: A powerful pattern for creating objects with private state and a public API.
 -   **Encapsulation**: Protecting an object's state from direct external modification.
 `,
-  'closure-for-logging-context': `
+
+  "closure-for-logging-context": `
 ### 💡 Problem Breakdown
 This is a practical example of a function factory. We want to create specialized logging functions that automatically include a context tag (like the name of the module they're used in).
 
@@ -1157,7 +1199,8 @@ uiLogger("Button clicked."); // [UI_COMPONENT] Button clicked.
 ### 📚 Key Concepts
 -   **Partial Application**: A form of partial application, where the first argument (\`context\`) is fixed.
 `,
-  'closure-capturing-this': `
+
+  "closure-capturing-this": `
 ### 💡 Problem Breakdown
 This demonstrates a classic JavaScript problem where the \`this\` keyword inside a traditional callback function loses its intended context. A closure (either by saving \`this\` to a variable like \`self\` or by using an arrow function) is the solution.
 
@@ -1190,7 +1233,8 @@ const myObject = {
 ### 📚 Key Concepts
 -   **Lexical \`this\`**: The key feature of arrow functions that solves many common \`this\`-related problems.
 `,
-  'closure-and-block-scope': `
+
+  "closure-and-block-scope": `
 ### 💡 Problem Breakdown
 This problem clarifies that closures capture variables based on their scope, whether that's a function scope or a block scope created by \`let\` or \`const\`.
 
@@ -1216,7 +1260,8 @@ inner(); // "I am in a block"
 -   **Block Scope**: The scope created by \`let\` and \`const\` within \`{}\`.
 -   **Closures**: Closures work with any type of lexical scope, not just function scope.
 `,
-  'closure-as-a-cache': `
+
+  "closure-as-a-cache": `
 ### 💡 Problem Breakdown
 This is another name for the memoization pattern. The core idea is to use a closure to hold a private cache object, allowing a function to avoid re-computing results for inputs it has seen before.
 
@@ -1242,7 +1287,8 @@ This pattern is extremely effective for optimizing "pure" functions (functions t
 -   **Memoization**: An optimization technique based on caching.
 -   **Pure Functions**: The ideal candidates for memoization.
 `,
-  'closure-for-debouncing': `
+
+  "closure-for-debouncing": `
 ### 💡 Problem Breakdown
 Debouncing is a technique to limit the rate at which a function gets called. It ensures that a function doesn't get called again until a certain amount of time has passed without it being called. This is very useful for handling events that can fire rapidly, like resizing a window or typing in a search bar. A closure is used to store the timer ID.
 
@@ -1260,13 +1306,14 @@ const debounce = (fn, delay) => {
   };
 };
 \`\`\`
-1.  **`timeoutId`**: This variable persists between calls to the returned function.
+1.  **\`timeoutId\`**: This variable persists between calls to the returned function.
 2.  **Logic**: Each time the debounced function is called, it clears the previously scheduled execution and sets a new one. The original function \`fn\` only runs when the user stops calling the debounced function for the specified \`delay\`.
 
 ### 📚 Key Concepts
 -   **Debouncing**: A rate-limiting technique for performance optimization.
 `,
-  'closure-for-throttling': `
+
+  "closure-for-throttling": `
 ### 💡 Problem Breakdown
 Throttling is another rate-limiting technique. It ensures that a function is called at most once in a specified time interval. This is useful for events that fire continuously, like scrolling or mouse movement, to prevent the event handler from running too often. A closure is used to store the state (e.g., a "cooling down" flag).
 
@@ -1286,13 +1333,14 @@ const throttle = (fn, delay) => {
   };
 };
 \`\`\`
-1.  **`canRun` flag**: This boolean persists in the closure.
+1.  **\`canRun\` flag**: This boolean persists in the closure.
 2.  **Logic**: The first call executes the function immediately and sets \`canRun\` to \`false\`. A timer is set. Any calls that happen during the "cool down" period are ignored. When the timer finishes, it resets the \`canRun\` flag to \`true\`, allowing the function to be executed again.
 
 ### 📚 Key Concepts
 -   **Throttling**: A rate-limiting technique that guarantees execution at a regular interval.
 `,
-  'closure-common-mistakes': `
+
+  "closure-common-mistakes": `
 ### 💡 Problem Breakdown
 This demonstrates the classic mistake of using \`var\` in a loop to create closures, where all closures capture the same final value of the loop variable.
 
@@ -1317,11 +1365,11 @@ for (let i = 0; i < 3; i++) {
 }
 // This will log 0, 1, 2 because each iteration creates a new 'i'
 \`\`\`
-1.  **Single Variable with `var`**: Using \`var\` creates a single, function-scoped \`i\` variable. All callbacks reference this one variable, which has the value 3 by the time the callbacks execute.
-2.  **Fix with `let`**: Using \`let\` creates a new block-scoped variable for each iteration, so each closure captures a different \`i\` with the correct value.
+1.  **Single Variable with \`var\`**: Using \`var\` creates a single, function-scoped \`i\` variable. All callbacks reference this one variable, which has the value 3 by the time the callbacks execute.
+2.  **Fix with \`let\`**: Using \`let\` creates a new block-scoped variable for each iteration, so each closure captures a different \`i\` with the correct value.
 
 ### 📚 Key Concepts
 -   **Block Scope vs. Function Scope**: The critical difference between \`let\` and \`var\` that causes this behavior.
--   **Closure Capture**: Closures capture variables by reference, not by value, which is why `var` causes issues in loops.
+-   **Closure Capture**: Closures capture variables by reference, not by value, which is why \`var\` causes issues in loops.
 `,
 };
