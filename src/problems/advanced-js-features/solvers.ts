@@ -56,9 +56,9 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
       return `Final value: ${second.value}, Is done: ${second.done}`;
     },
     "proxy-get-trap": () => {
-      const target = { a: 1 } as Record<string, any>;
+      const target = { a: 1 } as Record<string | symbol, any>;
       const handler = {
-        get: (obj: Record<string, any>, prop: string | symbol) => {
+        get: (obj: Record<string | symbol, any>, prop: string | symbol) => {
           return prop in obj ? obj[prop] : "Default Value";
         },
       };
@@ -273,7 +273,7 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
     "temporal-api-conceptual": () =>
       `(Conceptual) \`Temporal\` is a future API to replace \`Date\`. It provides immutable objects for specific use cases (like \`Temporal.PlainDate\`, \`Temporal.ZonedDateTime\`) which will fix many of the frustrations and bugs associated with the old \`Date\` object.`,
     "decorator-metadata-conceptual": () =>
-      `(Conceptual) Decorators are special functions that modify class declarations. They are often used with \`Reflect.metadata\` to attach design-time type information to a class, which can be read at runtime for dependency injection or serialization.`,
+      `(Conceptual) Decorators are special functions that modify class declarations, methods, or properties at design time.`,
     "proxy-has-trap": () => {
       const target = { a: 1, _b: 2 };
       const handler = {
@@ -368,7 +368,8 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
           return Array;
         }
       }
-      const a = new MyArray(1, 2);
+      const a = new MyArray();
+      a.push(1, 2);
       const mapped = a.map((x) => x);
       return `mapped instanceof MyArray: ${
         mapped instanceof MyArray
@@ -409,7 +410,7 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
     },
     "array-immutable-methods-es2023": () => {
       const arr = [3, 1, 2];
-      const sorted = arr.toSorted();
+      const sorted = (arr as any).toSorted();
       return `Original: [${arr.join(", ")}], New Sorted: [${sorted.join(
         ", "
       )}]`;
