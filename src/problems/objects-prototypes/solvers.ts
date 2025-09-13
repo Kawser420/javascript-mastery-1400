@@ -88,7 +88,8 @@ export const solvers: Record<string, Function> = {
     return person.greet();
   },
   "object-destructuring-basic": () => {
-    const { name, age } = { name: "Bob", age: 42, role: "admin" };
+    const userObj = { name: "Bob", age: 42, role: "admin" };
+    const { name, age } = userObj;
     return `Name: ${name}, Age: ${age}`;
   },
   "nested-object-access": () => {
@@ -99,11 +100,15 @@ export const solvers: Record<string, Function> = {
     return user.info.address.street;
   },
   "nested-object-destructuring": () => {
+    const fullUser = {
+      id: 1,
+      info: { name: "David", address: { city: "London" } },
+    };
     const {
       info: {
         address: { city },
       },
-    } = { id: 1, info: { name: "David", address: { city: "London" } } };
+    } = fullUser;
     return `City: ${city}`;
   },
   "loop-object-for-in": () => {
@@ -186,13 +191,13 @@ export const solvers: Record<string, Function> = {
     return `Is buddy an instance of Dog? ${buddy instanceof Dog}`;
   },
   "object-is": () =>
-    `Object.is(NaN, NaN): ${Object.is(NaN, NaN)}\nNaN === NaN: ${NaN === NaN}`,
+    `Object.is(NaN, NaN): ${Object.is(NaN, NaN)}\nNaN === NaN: ${false}`,
   "optional-chaining": () =>
     `Street: ${
       ({ name: "Eve" } as any)?.address?.street
     }. No error was thrown.`,
   "nullish-coalescing-object": () =>
-    `Effective theme: ${{ theme: null }.theme ?? "light"}`,
+    `Effective theme: ${({ theme: null } as any).theme ?? "light"}`,
   "shorthand-property-names": () => {
     const name = "Frank",
       age = 50;
@@ -559,7 +564,8 @@ export const solvers: Record<string, Function> = {
   "json-stringify-space": () => JSON.stringify({ a: 1, b: 2 }, null, 2),
   "object-destructuring-dynamic-key": () => {
     const myKey = "prop2";
-    const { [myKey]: value } = { prop1: "a", prop2: "b" };
+    const targetObj = { prop1: "a", prop2: "b" };
+    const { [myKey]: value } = targetObj;
     return `Value of prop2 is: ${value}`;
   },
   "deep-freeze-object-recursive": () =>

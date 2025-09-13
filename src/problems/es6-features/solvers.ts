@@ -95,7 +95,7 @@ export const solvers: Record<string, Function> = {
     return `Name: ${name}, Age: ${age}`;
   },
   "destructuring-with-defaults": () => {
-    const obj = { name: "John" };
+    const obj: { name: string; role?: string } = { name: "John" };
     const { name, role = "user" } = obj;
     return `Name: ${name}, Role: ${role}`;
   },
@@ -155,10 +155,13 @@ export const solvers: Record<string, Function> = {
     `Found at index: ${parseNumArray(arr).findIndex((n) => n > 10)}`,
   "number-isinteger-es6": ({ num }: { num: string }) =>
     `Is ${num} an integer? ${Number.isInteger(Number(num))}`,
-  "object-is-es6": () =>
-    `Object.is(NaN, NaN) is ${Object.is(NaN, NaN)}, but NaN === NaN is ${
-      NaN === NaN
-    }`,
+  "object-is-es6": () => {
+    const nanComparison = Number.NaN === Number.NaN;
+    return `Object.is(NaN, NaN) is ${Object.is(
+      Number.NaN,
+      Number.NaN
+    )}, but NaN === NaN is ${nanComparison}`;
+  },
   "optional-chaining-operator": () => {
     const user: { name: string; address?: { street: string } } = {
       name: "test",
@@ -448,18 +451,26 @@ export const solvers: Record<string, Function> = {
     `new Array(3).fill('a') results in ['a','a','a']. [1,2,3,4].fill(0, 2, 4) results in [1,2,0,0].`,
   "array-findlast": ({ arr }: { arr: string }) => {
     const nums = parseNumArray(arr);
-    const value = nums.findLast((n) => n > 25);
-    const index = nums.findLastIndex((n) => n > 25);
+    let value: number | undefined;
+    let index = -1;
+    for (let i = nums.length - 1; i >= 0; i--) {
+      if (nums[i] > 25) {
+        value = nums[i];
+        index = i;
+        break;
+      }
+    }
     return `Last value > 25: ${value}, at index: ${index}`;
   },
   "array-with": () => {
     const arr = [1, 2, 3];
-    const newArr = arr.with(1, 99);
+    const newArr = [...arr];
+    newArr[1] = 99;
     return `Original: [${arr.join(", ")}], New: [${newArr.join(", ")}]`;
   },
   "array-toreversed-tosorted-tospliced": () => {
     const arr = [3, 1, 2];
-    const reversed = arr.toReversed();
+    const reversed = [...arr].reverse();
     return `Original: [${arr.join(", ")}], New Reversed: [${reversed.join(
       ", "
     )}]`;
