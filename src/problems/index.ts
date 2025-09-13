@@ -31,7 +31,53 @@ import { problems as algorithmsProblems } from "./algorithms/problems";
 import { solvers as algorithmsSolvers } from "./algorithms/solvers";
 import { explanations as algorithmsExplanations } from "./algorithms/explanations";
 
-// Other categories are empty, so they are not included, but their files are made into valid modules.
+import { problems as advancedJsFeaturesProblems } from "./advanced-js-features/problems";
+import { solvers as advancedJsFeaturesSolvers } from "./advanced-js-features/solvers";
+import { explanations as advancedJsFeaturesExplanations } from "./advanced-js-features/explanations";
+
+import { problems as asynchronousJsProblems } from "./asynchronous-js/problems";
+import { solvers as asynchronousJsSolvers } from "./asynchronous-js/solvers";
+import { explanations as asynchronousJsExplanations } from "./asynchronous-js/explanations";
+
+import { problems as dataStructuresProblems } from "./data-structures/problems";
+import { solvers as dataStructuresSolvers } from "./data-structures/solvers";
+import { explanations as dataStructuresExplanations } from "./data-structures/explanations";
+
+import { problems as errorHandlingDebuggingProblems } from "./error-handling-debugging/problems";
+import { solvers as errorHandlingDebuggingSolvers } from "./error-handling-debugging/solvers";
+import { explanations as errorHandlingDebuggingExplanations } from "./error-handling-debugging/explanations";
+
+import { problems as es6FeaturesProblems } from "./es6-features/problems";
+import { solvers as es6FeaturesSolvers } from "./es6-features/solvers";
+import { explanations as es6FeaturesExplanations } from "./es6-features/explanations";
+
+import { problems as eventHandlingPropagationProblems } from "./event-handling-propagation/problems";
+import { solvers as eventHandlingPropagationSolvers } from "./event-handling-propagation/solvers";
+import { explanations as eventHandlingPropagationExplanations } from "./event-handling-propagation/explanations";
+
+import { problems as functionalProgrammingProblems } from "./functional-programming/problems";
+import { solvers as functionalProgrammingSolvers } from "./functional-programming/solvers";
+import { explanations as functionalProgrammingExplanations } from "./functional-programming/explanations";
+
+import { problems as miniProjectsProblems } from "./mini-projects/problems";
+import { solvers as miniProjectsSolvers } from "./mini-projects/solvers";
+import { explanations as miniProjectsExplanations } from "./mini-projects/explanations";
+
+import { problems as modulesImportsExportsProblems } from "./modules-imports-exports/problems";
+import { solvers as modulesImportsExportsSolvers } from "./modules-imports-exports/solvers";
+import { explanations as modulesImportsExportsExplanations } from "./modules-imports-exports/explanations";
+
+import { problems as nodejsBackendJsProblems } from "./nodejs-backend-js/problems";
+import { solvers as nodejsBackendJsSolvers } from "./nodejs-backend-js/solvers";
+import { explanations as nodejsBackendJsExplanations } from "./nodejs-backend-js/explanations";
+
+import { problems as testingPerformanceProblems } from "./testing-performance/problems";
+import { solvers as testingPerformanceSolvers } from "./testing-performance/solvers";
+import { explanations as testingPerformanceExplanations } from "./testing-performance/explanations";
+
+import { problems as webApisDomProblems } from "./web-apis-dom/problems";
+import { solvers as webApisDomSolvers } from "./web-apis-dom/solvers";
+import { explanations as webApisDomExplanations } from "./web-apis-dom/explanations";
 
 export const allProblems: Problem[] = [
   ...beginnerBasicsProblems,
@@ -42,6 +88,19 @@ export const allProblems: Problem[] = [
   ...closuresLexicalEnvironmentProblems,
   ...recursionProblems,
   ...algorithmsProblems,
+
+  ...advancedJsFeaturesProblems,
+  ...asynchronousJsProblems,
+  ...dataStructuresProblems,
+  ...errorHandlingDebuggingProblems,
+  ...es6FeaturesProblems,
+  ...eventHandlingPropagationProblems,
+  ...functionalProgrammingProblems,
+  ...miniProjectsProblems,
+  ...modulesImportsExportsProblems,
+  ...nodejsBackendJsProblems,
+  ...testingPerformanceProblems,
+  ...webApisDomProblems,
 ];
 
 export const allSolvers: Record<string, Function> = {
@@ -53,6 +112,19 @@ export const allSolvers: Record<string, Function> = {
   ...closuresLexicalEnvironmentSolvers,
   ...recursionSolvers,
   ...algorithmsSolvers,
+
+  ...advancedJsFeaturesSolvers,
+  ...asynchronousJsSolvers,
+  ...dataStructuresSolvers,
+  ...errorHandlingDebuggingSolvers,
+  ...es6FeaturesSolvers,
+  ...eventHandlingPropagationSolvers,
+  ...functionalProgrammingSolvers,
+  ...miniProjectsSolvers,
+  ...modulesImportsExportsSolvers,
+  ...nodejsBackendJsSolvers,
+  ...testingPerformanceSolvers,
+  ...webApisDomSolvers,
 };
 
 export const staticExplanations: Record<string, string> = {
@@ -64,4 +136,16 @@ export const staticExplanations: Record<string, string> = {
   ...closuresLexicalEnvironmentExplanations,
   ...recursionExplanations,
   ...algorithmsExplanations,
+  ...advancedJsFeaturesExplanations,
+  ...asynchronousJsExplanations,
+  ...dataStructuresExplanations,
+  ...errorHandlingDebuggingExplanations,
+  ...es6FeaturesExplanations,
+  ...eventHandlingPropagationExplanations,
+  ...functionalProgrammingExplanations,
+  ...miniProjectsExplanations,
+  ...modulesImportsExportsExplanations,
+  ...nodejsBackendJsExplanations,
+  ...testingPerformanceExplanations,
+  ...webApisDomExplanations,
 };

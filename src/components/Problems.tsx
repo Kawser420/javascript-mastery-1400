@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect } from "react";
-// FIX: Corrected import path to point to the index file within the problems directory.
 import { allProblems } from "../problems/index";
 import ProblemCard from "./ProblemCard";
 import { Category, Problem } from "@/types";
