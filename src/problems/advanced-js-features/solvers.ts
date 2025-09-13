@@ -1,4 +1,3 @@
-// advanced-js-features/solvers.ts
 export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
   {
     "generator-function-basic": () => {
@@ -153,12 +152,12 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
       const obj = { name: "test", [id]: 123 };
       return `Object.keys(): [${Object.keys(obj)}]. Symbol value: ${obj[id]}`;
     },
-    "symbol-for-and-keyfor": () => {
-      const s1 = Symbol.for("mySymbol");
-      const s2 = Symbol.for("mySymbol");
-      const key = Symbol.keyFor(s1);
-      return `s1 === s2: ${s1 === s2}. Key for s1: ${key}`;
-    },
+    // "symbol-for-and-keyfor": () => {
+    //   const s1 = Symbol.for("mySymbol");
+    //   const s2 = Symbol.for("mySymbol");
+    //   const key = Symbol.keyFor(s1);
+    //   return `s1 === s2: ${s1 === s2}. Key for s1: ${key}`;
+    // },
     "well-known-symbol-iterator": () => {
       const myIterable = {
         from: 1,
