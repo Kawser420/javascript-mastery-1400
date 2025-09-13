@@ -35,6 +35,11 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
 
+  const handleTitleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="navbar bg-base-100/80 backdrop-blur-sm shadow-md sticky top-0 z-50 transition-all duration-300">
       <div className="navbar-start">
@@ -58,7 +63,11 @@ const Header: React.FC<HeaderProps> = ({
             />
           </svg>
         </button>
-        <a href="#" className="btn btn-ghost text-xl normal-case">
+        <a
+          href="#"
+          className="btn btn-ghost text-xl normal-case"
+          onClick={handleTitleClick}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
