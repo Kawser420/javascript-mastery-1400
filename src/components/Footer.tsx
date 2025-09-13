@@ -9,25 +9,25 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-base-200 text-base-content pt-16">
+    <footer className="bg-base-200 text-base-content pt-16 w-full overflow-x-hidden">
       {/* Top grid */}
-      <div className="max-w-7xl mx-auto grid gap-10 px-6 md:grid-cols-4">
+      <div className="max-w-7xl mx-auto grid gap-10 px-6 md:grid-cols-4 w-full">
         {/* Brand / Newsletter */}
-        <div>
+        <div className="w-full max-w-full">
           <h2 className="text-2xl font-bold tracking-tight">JS Mastery Hub</h2>
           <p className="mt-2 text-sm opacity-80">
             Master modern JavaScript through 1400+ carefully crafted problems,
             detailed explanations, and interactive solutions.
           </p>
-          <form className="mt-5">
+          <form className="mt-5 w-full max-w-full">
             <label className="block text-sm mb-1 font-medium">
               Subscribe to our newsletter
             </label>
-            <div className="join w-full">
+            <div className="join w-full max-w-full">
               <input
                 type="email"
                 placeholder="you@example.com"
-                className="input input-bordered join-item flex-1"
+                className="input input-bordered join-item flex-1 w-full max-w-full"
               />
               <button className="btn btn-primary join-item">Subscribe</button>
             </div>
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Problem Categories */}
-        <nav aria-label="Problem Categories">
+        <nav aria-label="Problem Categories" className="w-full max-w-full">
           <h6 className="footer-title">Problem Categories</h6>
           <ul className="space-y-1">
             {[
@@ -44,7 +44,6 @@ const Footer: React.FC = () => {
               "Asynchronous JS",
               "Advanced Topics",
               "Ecosystem & Practices",
-              ,
             ].map((cat) => (
               <li key={cat}>
                 <a href="#problems" className="link link-hover">
@@ -56,7 +55,7 @@ const Footer: React.FC = () => {
         </nav>
 
         {/* Resources */}
-        <nav aria-label="Resources">
+        <nav aria-label="Resources" className="w-full max-w-full">
           <h6 className="footer-title">Resources</h6>
           <ul className="space-y-1">
             <li>
@@ -88,7 +87,7 @@ const Footer: React.FC = () => {
         </nav>
 
         {/* Company */}
-        <nav aria-label="Company">
+        <nav aria-label="Company" className="w-full max-w-full">
           <h6 className="footer-title">Company</h6>
           <ul className="space-y-1">
             <li>
@@ -121,10 +120,10 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-base-300 mt-10"></div>
+      <div className="border-t border-base-300 mt-10 w-full"></div>
 
       {/* Bottom bar */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 py-6 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 py-6 px-6 w-full">
         <p className="text-sm opacity-80">
           © {new Date().getFullYear()} JS Mastery Hub. All rights reserved.
         </p>

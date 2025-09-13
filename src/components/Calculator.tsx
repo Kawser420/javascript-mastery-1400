@@ -15,7 +15,6 @@ const now = () => Date.now();
 
 const formatResult = (v: unknown) => {
   try {
-    // mathjs's format has good defaults; fall back to String if unhappy
     return typeof v === "number" || typeof v === "bigint"
       ? format(v as any, { precision: 14 })
       : String(v);
@@ -78,7 +77,6 @@ const Calculator: React.FC = () => {
   /* Utility: append tokens intelligently (implicit multiplication where appropriate) */
   const append = (s: string) => {
     if (display === "Error") {
-      // Replace on any new numeric/function input
       if (/^[0-9.(πe]/.test(s)) {
         setExpr(s);
         setDisplay(s);
@@ -89,14 +87,12 @@ const Calculator: React.FC = () => {
       }
     }
 
-    // handle leading zero
     if ((display === "0" || expr === "") && s !== "." && /^[0-9πe(]/.test(s)) {
       setExpr(s);
       setDisplay(s);
       return;
     }
 
-    // implicit multiplication: number or constant or ) followed by ( or function or constant or number
     const last = expr.slice(-1);
     const needMult = /[0-9πe)]/.test(last) && /^[0-9πe(]/.test(s);
     const next = expr + (needMult ? "*" : "") + s;
@@ -122,35 +118,17 @@ const Calculator: React.FC = () => {
     setDisplay("0");
   };
 
-  /* Prepare expression for mathjs:
-     - replace π with pi, handle % -> (/100)
-     - if angleMode === 'deg', convert trig arguments
-  */
+  /* Prepare expression for mathjs */
   const prepareForEval = (raw: string) => {
     let s = raw;
-
-    // replace unicode π with pi (mathjs uses 'pi')
     s = s.replace(/π/g, "pi");
-
-    // replace percent like 50% -> (50/100)
     s = s.replace(/(\d+(\.\d+)?)%/g, "($1/100)");
-
-    // replace Unicode math symbols
     s = s.replace(/×/g, "*").replace(/÷/g, "/").replace(/–/g, "-");
 
-    // ensure factorial '!' is ok (mathjs supports it)
-
-    // if degrees: convert trig function calls x -> x*pi/180
     if (angleMode === "deg") {
-      // This replacement inserts multiplication by pi/180 directly after the opening paren for common trig functions.
-      // e.g. sin(30) -> sin((30)*pi/180)
-      // Note: This simplistic approach works for common nested expressions; mathjs will evaluate them.
       s = s.replace(/\b(sin|cos|tan|asin|acos|atan)\s*\(/g, (m) => {
-        // convert to fn(( (pi/180)* ...
         return `${m.slice(0, -1)}( (pi/180)*`;
       });
-      // We also need to close the extra paren when a closing ) appears — but the inserted ( will be balanced by original ) for simple cases.
-      // For more complex parsing you could implement an expression parser; this approach works for typical calculator inputs.
     }
 
     return s;
@@ -177,7 +155,6 @@ const Calculator: React.FC = () => {
     } catch (err) {
       console.error("Calc error:", err);
       setDisplay("Error");
-      // keep expr (so user can fix) — optionally setExpr("")
     }
   };
 
@@ -189,7 +166,6 @@ const Calculator: React.FC = () => {
         setExpr(String(memory));
         setDisplay(String(memory));
       } else {
-        // use current display OR evaluate expr if display is expression
         let value = 0;
         const candidate = display === "Error" ? expr : display;
         try {
@@ -219,18 +195,17 @@ const Calculator: React.FC = () => {
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(display);
-      // Could show a toast; we just console log for now
       console.log("Copied result:", display);
     } catch {
       // ignore
     }
   };
 
-  /* Keyboard support */
+  /* Keyboard support (local only; won't cause page scroll) */
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "c") return; // allow copy shortcut
-      // Accept numbers and dot
+      // allow copy with ctrl/cmd + c
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "c") return;
       if (/^[0-9]$/.test(e.key)) {
         e.preventDefault();
         append(e.key);
@@ -291,11 +266,16 @@ const Calculator: React.FC = () => {
 
   /* ---------- Render ---------- */
   return (
-    <section id="calculator" className="py-12 px-4 md:px-8 bg-base-100">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col md:flex-row gap-8">
+    // prevent any page-level horizontal overflow from this component
+    <section
+      id="calculator"
+      className="py-12 px-4 md:px-8 bg-base-100 w-full overflow-x-hidden"
+    >
+      <div className="container mx-auto max-w-6xl w-full">
+        {/* ensure flex children can shrink to avoid overflow */}
+        <div className="flex flex-col md:flex-row gap-8 w-full max-w-full">
           {/* MAIN CALCULATOR */}
-          <div className="flex-1">
+          <div className="flex-1 min-w-0 w-full max-w-full">
             <div className="text-center mb-6">
               <h1 className="text-4xl font-extrabold">
                 Pro Scientific Calculator
@@ -306,7 +286,7 @@ const Calculator: React.FC = () => {
               </p>
             </div>
 
-            <div className="card bg-base-200 shadow-lg p-4">
+            <div className="card bg-base-200 shadow-lg p-4 min-w-0 w-full max-w-full">
               {/* top controls */}
               <div className="flex items-center justify-between mb-3 gap-3">
                 <div className="flex items-center gap-2">
@@ -325,37 +305,20 @@ const Calculator: React.FC = () => {
                     title="Toggle angle mode (deg/rad)"
                     aria-label="Toggle angle mode"
                   >
-                    {angleMode === "rad" ? (
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        className="inline-block"
-                      >
-                        <path
-                          d="M12 2v20M2 12h20"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    ) : (
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        className="inline-block"
-                      >
-                        <path
-                          d="M12 2v20M2 12h20"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    )}
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      className="inline-block"
+                    >
+                      <path
+                        d="M12 2v20M2 12h20"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                     <span className="ml-2 text-sm">Angle</span>
                   </button>
 
@@ -393,10 +356,10 @@ const Calculator: React.FC = () => {
                 </div>
               </div>
 
-              {/* display */}
+              {/* display - allow internal horizontal scroll but not page overflow */}
               <div
                 ref={displayRef}
-                className="calculator-display bg-base-300 rounded-md p-4 mb-4 text-right text-4xl font-mono overflow-x-auto whitespace-nowrap"
+                className="calculator-display bg-base-300 rounded-md p-4 mb-4 text-right text-4xl font-mono overflow-x-auto whitespace-nowrap w-full max-w-full"
                 role="region"
                 aria-live="polite"
               >
@@ -404,8 +367,7 @@ const Calculator: React.FC = () => {
               </div>
 
               {/* keypad grid */}
-              <div className="grid grid-cols-5 gap-2">
-                {/* memory + controls */}
+              <div className="grid grid-cols-5 gap-2 w-full max-w-full">
                 <Btn onClick={() => memoryOp("MC")} className="btn-accent">
                   MC
                 </Btn>
@@ -422,7 +384,6 @@ const Calculator: React.FC = () => {
                   ⌫
                 </Btn>
 
-                {/* trig + logs */}
                 <Btn onClick={() => insertFn("sin")} className="btn-outline">
                   sin
                 </Btn>
@@ -439,7 +400,6 @@ const Calculator: React.FC = () => {
                   ln
                 </Btn>
 
-                {/* powers, factorial */}
                 <Btn onClick={() => append("^")} className="btn-outline">
                   xʸ
                 </Btn>
@@ -456,7 +416,6 @@ const Calculator: React.FC = () => {
                   AC
                 </Btn>
 
-                {/* parentheses, constants */}
                 <Btn onClick={() => append("(")} className="btn-ghost">
                   (
                 </Btn>
@@ -473,7 +432,6 @@ const Calculator: React.FC = () => {
                   %
                 </Btn>
 
-                {/* digits 7-9 */}
                 <Btn onClick={() => append("7")}>7</Btn>
                 <Btn onClick={() => append("8")}>8</Btn>
                 <Btn onClick={() => append("9")}>9</Btn>
@@ -481,7 +439,6 @@ const Calculator: React.FC = () => {
                   ÷
                 </Btn>
 
-                {/* digits 4-6 */}
                 <Btn onClick={() => append("4")}>4</Btn>
                 <Btn onClick={() => append("5")}>5</Btn>
                 <Btn onClick={() => append("6")}>6</Btn>
@@ -489,7 +446,6 @@ const Calculator: React.FC = () => {
                   ×
                 </Btn>
 
-                {/* digits 1-3 */}
                 <Btn onClick={() => append("1")}>1</Btn>
                 <Btn onClick={() => append("2")}>2</Btn>
                 <Btn onClick={() => append("3")}>3</Btn>
@@ -497,7 +453,6 @@ const Calculator: React.FC = () => {
                   −
                 </Btn>
 
-                {/* zero, dot, plus */}
                 <Btn onClick={() => append("0")} span={2}>
                   0
                 </Btn>
@@ -506,7 +461,6 @@ const Calculator: React.FC = () => {
                   +
                 </Btn>
 
-                {/* equals spanning full width */}
                 <Btn
                   onClick={() => evaluateExpr()}
                   className="btn-primary"
@@ -520,8 +474,8 @@ const Calculator: React.FC = () => {
           </div>
 
           {/* RIGHT: history & extra tools */}
-          <aside className="w-full md:w-96">
-            <div className="card bg-base-200 shadow p-3 h-full flex flex-col">
+          <aside className="w-full md:w-96 flex-shrink-0 min-w-0 max-w-full">
+            <div className="card bg-base-200 shadow p-3 h-full flex flex-col min-w-0 w-full max-w-full">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-semibold flex items-center gap-2">
                   <svg width="18" height="18" viewBox="0 0 24 24">
@@ -554,28 +508,30 @@ const Calculator: React.FC = () => {
                 </div>
               </div>
 
-              <div className="overflow-auto flex-1">
+              <div className="overflow-auto flex-1 min-w-0 w-full max-w-full">
                 {history.length === 0 ? (
                   <p className="text-sm text-base-content/60">
                     No history yet — try a calculation.
                   </p>
                 ) : (
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 w-full max-w-full">
                     {history.map((h) => (
                       <li
                         key={h.id}
-                        className="p-2 rounded-md hover:bg-base-300 cursor-pointer"
+                        className="p-2 rounded-md hover:bg-base-300 cursor-pointer w-full max-w-full"
                         onClick={() => useHistory(h)}
                         title="Click to reuse"
                       >
-                        <div className="flex justify-between">
+                        <div className="flex justify-between w-full max-w-full">
                           <div
                             className="text-sm truncate"
                             style={{ maxWidth: "60%" }}
                           >
                             {h.expr}
                           </div>
-                          <div className="text-sm font-medium">{h.result}</div>
+                          <div className="text-sm font-medium truncate">
+                            {h.result}
+                          </div>
                         </div>
                         <div className="text-xs text-base-content/60">
                           {new Date(h.ts).toLocaleString()}
@@ -586,11 +542,13 @@ const Calculator: React.FC = () => {
                 )}
               </div>
 
-              <div className="mt-3 border-t pt-3 flex flex-col gap-2">
-                <div className="flex items-center justify-between">
+              <div className="mt-3 border-t pt-3 flex flex-col gap-2 w-full max-w-full">
+                <div className="flex items-center justify-between w-full max-w-full">
                   <div>
                     <div className="text-xs text-base-content/60">Memory</div>
-                    <div className="font-medium">{formatResult(memory)}</div>
+                    <div className="font-medium truncate">
+                      {formatResult(memory)}
+                    </div>
                   </div>
                   <div className="flex gap-2">
                     <button
@@ -620,7 +578,7 @@ const Calculator: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center pt-2">
+                <div className="flex justify-between items-center pt-2 w-full max-w-full">
                   <div className="text-xs text-base-content/60">Utilities</div>
                   <div className="flex gap-2">
                     <button
@@ -646,7 +604,7 @@ const Calculator: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-3 text-xs text-center text-base-content/60">
+              <div className="mt-3 text-xs text-center text-base-content/60 w-full max-w-full">
                 Pro Scientific Calculator — mathjs powered • Degrees:{" "}
                 <strong>{angleMode}</strong>
               </div>
