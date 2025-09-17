@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -236,14 +235,14 @@ export const solvers: Record<string, Function> = {
     let n = parseNumber(num);
     let count = 0;
     while (n > 0) {
-      n &= n - 1; // This trick clears the least significant set bit
+      n &= n - 1;
       count++;
     }
     return count;
   },
   "single-number": ({ arr }: { arr: string }) => {
     const nums = parseNumArray(arr);
-    return nums.reduce((acc, num) => acc ^ num, 0); // XOR operation
+    return nums.reduce((acc, num) => acc ^ num, 0);
   },
   "pascals-triangle": ({ rows }: { rows: any }) => {
     const n = parseNumber(rows);
@@ -494,7 +493,7 @@ export const solvers: Record<string, Function> = {
         g[r][c] === "0"
       )
         return;
-      g[r][c] = "0"; // sink the island part
+      g[r][c] = "0";
       dfs(r + 1, c);
       dfs(r - 1, c);
       dfs(r, c + 1);
