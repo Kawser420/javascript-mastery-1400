@@ -266,7 +266,6 @@ const Calculator: React.FC = () => {
 
   /* ---------- Render ---------- */
   return (
-    // prevent any page-level horizontal overflow from this component
     <section
       id="calculator"
       className="py-12 px-4 md:px-8 bg-base-100 w-full overflow-x-hidden"
