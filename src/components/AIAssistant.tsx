@@ -1,4 +1,3 @@
-// src/components/AIAssistant.tsx
 import React, { useEffect, useRef, useState } from "react";
 import { ChatMessage } from "@/types";
 import { getAIResponseStream } from "../services/geminiService";
@@ -284,13 +283,11 @@ const AIAssistant: React.FC = () => {
     try {
       let stream: AsyncIterable<{ text?: string }>;
       try {
-        // try passing signal if supported by your implementation
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         stream = await (getAIResponseStream as any)(fullPrompt, {
           signal: controller.signal,
         });
       } catch {
-        // fallback to calling without options
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         stream = await (getAIResponseStream as any)(fullPrompt);
       }
@@ -553,7 +550,6 @@ const AIAssistant: React.FC = () => {
   }, [isLoading, input, messages]);
 
   return (
-    // avoid page-level horizontal overflow
     <section
       id="ai-assistant"
       className="py-24 px-4 md:px-8 bg-base-100 w-full overflow-x-hidden"
