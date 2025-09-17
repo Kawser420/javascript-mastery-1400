@@ -1,4 +1,3 @@
-// HELPER
 const delay = (ms: number, value?: any, shouldReject = false) =>
   new Promise((resolve, reject) =>
     setTimeout(() => (shouldReject ? reject(value) : resolve(value)), ms)
@@ -246,9 +245,7 @@ export const solvers: Record<string, Function> = {
         .then(() => {
           throw new Error("Failure in chain");
         })
-        .then(() => {
-          /* this is skipped */
-        });
+        .then(() => {});
     } catch (e: any) {
       return `Caught at the end: ${e.message}`;
     }
@@ -363,7 +360,6 @@ export const solvers: Record<string, Function> = {
         this.run();
       }
     }
-    // This is conceptual; a real run would need to manage state outside.
     return `(Conceptual) A queue processes tasks sequentially using an async loop and a 'running' flag.`;
   },
   "macrotask-rendering-conceptual": () =>
@@ -395,8 +391,8 @@ export const solvers: Record<string, Function> = {
       result += "C";
     });
     result += "B";
-    await delay(10); // wait for microtask to run
-    return `Final result: ${result}`; // ABC
+    await delay(10);
+    return `Final result: ${result}`;
   },
   "async-function-composition": () =>
     `(Conceptual) \`async function composed() { const res1 = await fn1(); const res2 = await fn2(res1); return res2; }\`. The flow is naturally sequential.`,
@@ -415,7 +411,7 @@ export const solvers: Record<string, Function> = {
   },
   "promise-chain-return-value": async () => {
     const p = Promise.reject("Initial Error").catch((err) => {
-      return "Default Value"; // Return a value from .catch
+      return "Default Value";
     });
     return await p;
   },
@@ -453,8 +449,8 @@ export const solvers: Record<string, Function> = {
     setTimeout(() => (order += "C"), 0);
     queueMicrotask(() => (order += "B"));
     order += "A";
-    await delay(10); // Wait for both tasks to run
-    return `Execution order: ${order}`; // ABC
+    await delay(10);
+    return `Execution order: ${order}`;
   },
   "promise-unwrapping-conceptual": () =>
     `(Conceptual) If a \`.then()\` handler returns a Promise (p2), the chain doesn't resolve with p2 itself. Instead, it waits for p2 to settle, and adopts its fulfillment value or rejection reason. This keeps chains flat.`,
