@@ -870,7 +870,7 @@ A randomized algorithm is one that employs a degree of randomness as part of its
 - A **randomized** version of Quick Sort mitigates this by choosing a *random* element as the pivot in each partitioning step.
 - This doesn't eliminate the worst-case, but it makes it extremely unlikely to occur in practice, leading to an expected time complexity of O(n log n).
 
-Other examples include Reservoir Sampling and the Miller-Rabin primality test.
+Other examples include Reservoir Sampling and the Miller-Rabin Primality test.
 
 ### 📚 Key Concepts
 - **Randomization**: Using randomness to improve an algorithm's average-case performance or to solve problems that are difficult to solve deterministically.
