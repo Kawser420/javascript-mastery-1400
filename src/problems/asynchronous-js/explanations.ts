@@ -683,7 +683,7 @@ myWorker.onmessage = function(e) {
   console.log('Result from worker:', e.data);
 };
 
-// --- worker.js ---
+// ---- worker.js ----
 // Listen for messages from the main thread
 self.onmessage = function(e) {
   // Perform the expensive task
