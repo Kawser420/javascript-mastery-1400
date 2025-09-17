@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -17,8 +16,6 @@ const parseStrArray = (input: string): string[] => {
 
 const parseJson = (input: string): any => {
   try {
-    // A slightly safer eval for object-like structures
-    // It's better than JSON.parse because the user might not use double quotes
     if (/^(\[.*\]|\{.*\})$/.test(input.trim())) {
       return new Function(`return ${input}`)();
     }
@@ -616,7 +613,7 @@ export const solvers: Record<string, Function> = {
       }
       count += nums[i] === candidate ? 1 : -1;
     }
-    return candidate; // Boyer-Moore Voting Algorithm
+    return candidate;
   },
   "string-is-unique": ({ str }: { str: string }) => {
     return new Set(str).size === str.length;
