@@ -20,7 +20,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       problemsSection.scrollIntoView({ behavior: "smooth" });
       const event = new CustomEvent("categoryChange", { detail: category });
       window.dispatchEvent(event);
-      setIsOpen(false); // Close sidebar on selection for mobile
+      setIsOpen(false);
     }
   };
 
