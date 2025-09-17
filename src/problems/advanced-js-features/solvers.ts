@@ -17,9 +17,9 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
         yield "b";
       }
       const iterator = generator();
-      const first = iterator.next(); // { value: 'a', done: false }
-      const second = iterator.next(); // { value: 'b', done: false }
-      const third = iterator.next(); // { value: undefined, done: true }
+      const first = iterator.next();
+      const second = iterator.next();
+      const third = iterator.next();
       return `First value: ${first.value}, Is third done? ${third.done}`;
     },
     "generator-yield-delegation": () => {
@@ -41,9 +41,9 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
         return `Confirmation: ${confirmation}`;
       }
       const it = twoWay();
-      it.next(); // Start generator
-      it.next("Alice"); // Pass 'Alice' back to the first yield
-      return it.next("Yes").value; // Pass 'Yes' to the second yield
+      it.next();
+      it.next("Alice");
+      return it.next("Yes").value;
     },
     "generator-return": () => {
       function* gen() {
@@ -51,8 +51,8 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
         return "Finished";
       }
       const it = gen();
-      const first = it.next(); // { value: 1, done: false }
-      const second = it.next(); // { value: "Finished", done: true }
+      const first = it.next();
+      const second = it.next();
       return `Final value: ${second.value}, Is done: ${second.done}`;
     },
     "proxy-get-trap": () => {
@@ -75,13 +75,13 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
             throw new TypeError("Age must be a number.");
           }
           Reflect.set(obj, prop, value);
-          return true; // Indicate success
+          return true;
         },
       };
       const proxy = new Proxy(target, handler);
       proxy.age = 30;
       try {
-        proxy.age = "thirty"; // This will throw to demonstrate validation
+        proxy.age = "thirty";
         return "This line should not be reached.";
       } catch (e: any) {
         return `Age validation error: ${e.message}`;
