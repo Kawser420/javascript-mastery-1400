@@ -1681,7 +1681,7 @@ This is typically solved with recursion and memoization (or dynamic programming)
 Memoization is crucial to store the results for \`(text_index, pattern_index)\` pairs to avoid re-computation.
 
 ### 📚 Key Concepts
-- **Dynamic Programming / Recursion with Memoization**: The standard approach for solving this type of string matching problem.
+- **Dynamic Programming // Recursion with Memoization**: The standard approach for solving this type of string matching problem.
 `,
   "best-time-to-buy-sell-stock": `
 ### 💡 Problem Breakdown
