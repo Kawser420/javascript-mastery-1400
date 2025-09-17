@@ -242,13 +242,11 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
         { name: "carrot", type: "vegetable" },
         { name: "banana", type: "fruit" },
       ];
-      // Not widely supported yet, so this is conceptual.
-      // const result = inventory.groupBy(item => item.type);
       return `(Conceptual) Would result in: { fruit: [...], vegetable: [...] }`;
     },
     "regexp-match-indices": () => {
       const str = "a=1, b=2";
-      const regex = /([a-z])=(\d)/dg; // 'd' flag is crucial
+      const regex = /([a-z])=(\d)/dg;
       const match = regex.exec(str);
       return `Indices for first group ('a'): [${match?.indices?.[1]?.join(
         ", "
@@ -414,7 +412,6 @@ export const solvers: Record<string, (inputs?: Record<string, any>) => string> =
     },
     "array-immutable-methods-es2023": () => {
       const arr = [3, 1, 2];
-      // Note: .toSorted() is ES2023; assuming modern runtime or polyfill
       const sorted = (arr as any).toSorted((a: number, b: number) => a - b);
       return `Original: [${arr.join(", ")}], New Sorted: [${sorted.join(
         ", "
