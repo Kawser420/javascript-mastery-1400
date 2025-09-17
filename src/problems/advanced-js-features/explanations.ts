@@ -1340,7 +1340,7 @@ console.log(proto === MyClass.prototype); // true
 It's often used in metaprogramming contexts where a functional approach is preferred over the static \`Object\` method.
 
 ### 📚 Key Concepts
-- \`Reflect\` API: Provides a set of methods for JavaScript operations.
+- \`Reflect\` API: Provides a set of methods for JavaScript Operations.
 `,
   "proxy-for-operator-overloading": `
 ### 💡 Problem Breakdown
