@@ -1,4 +1,3 @@
-// This needs to be defined at a higher scope to persist across clicks for the counter problem
 const counter_closure = (() => {
   let count = 0;
   return () => `Counter is now: ${++count}`;
@@ -199,7 +198,7 @@ export const solvers: Record<string, Function> = {
       };
     };
     const next = createIterator(["a", "b"]);
-    next(); // 'a'
+    next();
     return `Second call returns: ${next()}`;
   },
   "closure-with-recursion": ({ num }: { num: any }) => {
@@ -251,7 +250,7 @@ export const solvers: Record<string, Function> = {
         return state;
       };
     })();
-    toggler(); // true
+    toggler();
     return `Second call returns: ${toggler()}`; // false
   },
   "namespacing-with-closures": () =>
@@ -293,7 +292,7 @@ export const solvers: Record<string, Function> = {
   "closure-in-callbacks": () => {
     const multiplier = 10;
     const arr = [1, 2, 3];
-    const result = arr.map((n) => n * multiplier); // The callback accesses 'multiplier'
+    const result = arr.map((n) => n * multiplier);
     return `Result: [${result.join(", ")}]`;
   },
   "closure-for-abstraction": () => {
@@ -310,8 +309,8 @@ export const solvers: Record<string, Function> = {
       };
     };
     const idGen = createIdGenerator(100)();
-    idGen.next(); // 100
-    return `Next ID: ${idGen.next().value}`; // 101
+    idGen.next();
+    return `Next ID: ${idGen.next().value}`;
   },
   "closure-with-promises": () =>
     `(Conceptual) In \`let id = 1; new Promise(res => res(id)).then(val => console.log(val))\`, the \`.then()\` callback can access \`id\` from the outer scope due to closure.`,
@@ -329,7 +328,7 @@ export const solvers: Record<string, Function> = {
     function outer() {
       if (true) {
         const blockVar = "I am in a block";
-        return () => blockVar; // This closure captures the block-scoped variable
+        return () => blockVar;
       }
     }
     const inner = outer();
