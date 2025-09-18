@@ -90,7 +90,6 @@ export const solvers: Record<string, Function> = {
       getBalance() {
         return `Balance is secret. Current: $${this.#balance}`;
       }
-      // Attempting to access wallet.#balance outside would throw a SyntaxError.
     }
     const myWallet = new Wallet(100);
     return myWallet.getBalance();
@@ -105,7 +104,7 @@ export const solvers: Record<string, Function> = {
     class Dog extends Animal {
       name: string;
       constructor(name: string, age: number) {
-        super(age); // Must be called before 'this'
+        super(age);
         this.name = name;
       }
     }
@@ -257,7 +256,6 @@ export const solvers: Record<string, Function> = {
       }
     }
     const arr = MyArray.from([1, 2, 3]);
-    // FIX: Add type assertion to resolve TypeScript inference issue.
     return (arr as unknown as { first: () => number }).first();
   },
   "class-mixins-conceptual": () =>
@@ -409,7 +407,7 @@ export const solvers: Record<string, Function> = {
       }
     }
     const instance = new MyCustomClass();
-    return Object.prototype.toString.call(instance); // [object Custom]
+    return Object.prototype.toString.call(instance);
   },
   "class-protected-properties-conceptual": () =>
     `(Conceptual) A property like \`_internalValue\` signals to other developers that it's for internal use and shouldn't be modified directly from outside the class.`,
