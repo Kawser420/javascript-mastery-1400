@@ -452,6 +452,7 @@ export const solvers: Record<string, Function> = {
     `(Conceptual) To render thousands of trees in a game, a factory creates a single 'TreeModel' (the flyweight with intrinsic state like mesh/texture) and many 'Tree' objects that only store extrinsic state (position).`,
   "class-mediator-pattern": () =>
     `(Conceptual) A 'Chatroom' (Mediator) class handles messages between 'User' (Colleague) objects. Users send messages to the Chatroom, not directly to each other, reducing direct dependencies.`,
+  // problem solved--> 68
   "class-memento-pattern": () =>
     `(Conceptual) A text 'Editor' (Originator) can create a 'Snapshot' (Memento) of its current text. A 'History' (Caretaker) object stores these snapshots, and the Editor can restore its state from a snapshot.`,
   "class-visitor-pattern": () =>
