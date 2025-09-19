@@ -1,6 +1,6 @@
 import { Problem } from "@/types";
 
-export const beginnerBasicsProblems: Problem[] = [
+export const problems: Problem[] = [
   {
     id: "say-hello",
     title: "Say Hello",

@@ -3836,7 +3836,7 @@ function swapFirstLast(str) {
   if (str.length < 2) return str;
   return str[str.length - 1] + str.slice(1, -1) + str[0];
 }
-swapFirstLast("hello"); // "oellh"
+swapFirstLast("hello");
 \`\`\`
 
 ### 📚 Key Concepts
