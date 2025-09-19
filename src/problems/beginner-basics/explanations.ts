@@ -3702,6 +3702,7 @@ hasProperty({name: "Bob"}, "name"); // true
 - **hasOwnProperty**: Safe property existence check
 `,
 
+  // problem explanation--> 194
   "get-last-n-elements": `
 ### 💡 Problem Breakdown
 Get the last N elements from an array.
