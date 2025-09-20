@@ -104,8 +104,8 @@ const App: React.FC = () => {
     Fundamentals: [
       "Beginner Basics",
       "Variables & Constants Deep Dive",
-      "Operators & Expressions",
-      "Control Flow & Loops",
+      "Operators and Expressions",
+      "Control Flow and Loops",
       "Functions & Scope",
       "Arrays & Strings",
       "Objects & Prototypes",
