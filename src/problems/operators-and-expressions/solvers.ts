@@ -844,10 +844,13 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 155
   "type-coercion-in-loose-equality": () => {
-    const result = [] == ![];
-    return `JSON.stringify([]): ${JSON.stringify(
-      []
-    )}\n![]: ${![]}\nResult: ${result}`;
+    const emptyArray: any = [];
+    const notEmptyArray = !emptyArray; // false
+    const comparisonResult = emptyArray == notEmptyArray; // true
+
+    return `Empty array: ${JSON.stringify(emptyArray)}
+Negation of empty array (![]): ${notEmptyArray}  
+Comparison ([] == ![]): ${comparisonResult}`;
   },
   // problem solver--> 156
   "bitwise-or-for-rounding": () => {
@@ -913,8 +916,9 @@ export const solvers: Record<string, Function> = {
   "logical-operators-with-objects": (): string => {
     const a = { val: 1 };
     const b = { val: 2 };
+    const nullValue: any = null;
     const val1 = (a && b).val;
-    const val2 = (null || b).val;
+    const val2 = (nullValue || b).val;
     return "(a && b).val is " + val1 + ", (null || b).val is " + val2;
   },
   // problem solver--> 168
@@ -944,7 +948,10 @@ export const solvers: Record<string, Function> = {
     ]?.toString()}`;
   },
   // problem solver--> 173
-  "unary-plus-with-null": () => `+null is ${+null}`,
+  "unary-plus-with-null": () => {
+    const nullValue = null as any;
+    return `+null is ${+nullValue}`;
+  },
   // problem solver--> 174
   "assignment-in-loop-condition": () => {
     const arr = [3, 2, 1];
@@ -962,8 +969,12 @@ export const solvers: Record<string, Function> = {
     return `x is now ${x}, and its type is ${typeof x}`;
   },
   // problem solver--> 176
-  "instanceof-with-null-and-undefined": () =>
-    `null instanceof Object is ${null instanceof Object}`,
+  "instanceof-with-null-and-undefined": () => {
+    const nullValue = null as any;
+    const undefinedValue = undefined as any;
+    return `null instanceof Object is ${nullValue instanceof Object}
+undefined instanceof Object is ${undefinedValue instanceof Object}`;
+  },
   // problem solver--> 177
   "spread-in-function-call-vs-apply": () =>
     `(Conceptual) \`myFunc(...[1,2,3])\` is the modern, readable equivalent of \`myFunc.apply(null, [1,2,3])\`.`,

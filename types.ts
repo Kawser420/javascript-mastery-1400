@@ -44,7 +44,7 @@ export type Category =
   | "Functions & Scope"
   | "Variables & Constants Deep Dive"
   | "Operators and Expressions" // <-- changed here if you choose option 2
-  | "Control Flow & Loops"
+  | "Control Flow and Loops"
   | "Arrays & Strings"
   | "Objects & Prototypes"
   | "Math & Number Challenges"
