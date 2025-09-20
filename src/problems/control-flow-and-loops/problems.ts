@@ -1,6 +1,3 @@
-// problem--> 01
-// import { Problem } from "../../types";
-
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [

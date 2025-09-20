@@ -52,6 +52,19 @@ import { problems as modulesImportsExportsProblems } from "./modules-and-imports
 import { solvers as modulesImportsExportsSolvers } from "./modules-and-imports-exports/solvers";
 import { explanations as modulesImportsExportsExplanations } from "./modules-and-imports-exports/explanations";
 
+// ✅ NEW CATEGORIES
+import { problems as controlFlowDebuggingProblems } from "./control-flow-and-loops/problems";
+import { solvers as controlFlowDebuggingSolvers } from "./control-flow-and-loops/solvers";
+import { explanations as controlFlowDebuggingExplanations } from "./control-flow-and-loops/explanations";
+
+import { problems as operatorsExpressionsProblems } from "./operators-and-expressions/problems";
+import { solvers as operatorsExpressionsSolvers } from "./operators-and-expressions/solvers";
+import { explanations as operatorsExpressionsExplanations } from "./operators-and-expressions/explanations";
+
+import { problems as variablesConstantsDeepDiveProblems } from "./variables-and-constants-deep-dive/problems";
+import { solvers as variablesConstantsDeepDiveSolvers } from "./variables-and-constants-deep-dive/solvers";
+import { explanations as variablesConstantsDeepDiveExplanations } from "./variables-and-constants-deep-dive/explanations";
+
 export const allProblems: Problem[] = [
   ...beginnerBasicsProblems,
   ...functionsScopeProblems,
@@ -66,6 +79,9 @@ export const allProblems: Problem[] = [
   ...es6FeaturesProblems,
   ...miniProjectsProblems,
   ...modulesImportsExportsProblems,
+  ...controlFlowDebuggingProblems,
+  ...operatorsExpressionsProblems,
+  ...variablesConstantsDeepDiveProblems,
 ];
 
 export const allSolvers: Record<string, Function> = {
@@ -82,6 +98,9 @@ export const allSolvers: Record<string, Function> = {
   ...es6FeaturesSolvers,
   ...miniProjectsSolvers,
   ...modulesImportsExportsSolvers,
+  ...controlFlowDebuggingSolvers,
+  ...operatorsExpressionsSolvers,
+  ...variablesConstantsDeepDiveSolvers,
 };
 
 export const staticExplanations: Record<string, string> = {
@@ -98,4 +117,7 @@ export const staticExplanations: Record<string, string> = {
   ...es6FeaturesExplanations,
   ...miniProjectsExplanations,
   ...modulesImportsExportsExplanations,
+  ...controlFlowDebuggingExplanations,
+  ...operatorsExpressionsExplanations,
+  ...variablesConstantsDeepDiveExplanations,
 };
