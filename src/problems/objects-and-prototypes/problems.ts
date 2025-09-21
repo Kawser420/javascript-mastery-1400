@@ -1,914 +1,1997 @@
+// problem--> 01
+// import { Problem } from '../../types';
+
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
+  // problem--> 01
   {
-    id: "create-simple-object",
-    title: "Create a Simple Object",
+    id: "op-create-object-literal",
+    title: "Create an Object Literal",
     description:
-      "Create an object literal representing a user with `name` and `age` properties.",
+      "Create a simple object representing a person with properties for `name` and `age`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create Object",
+    buttonText: "Create Person Object",
   },
+  // problem--> 02
   {
-    id: "access-object-property-dot",
+    id: "op-access-property-dot",
     title: "Access Property with Dot Notation",
     description:
-      "Given an object, access its `title` property using dot notation.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "JSON Object",
-        type: "textarea",
-        defaultValue: '{"title": "My First Post", "likes": 10}',
-      },
-    ],
-    buttonText: "Get Title",
-  },
-  {
-    id: "access-object-property-bracket",
-    title: "Access Property with Bracket Notation",
-    description:
-      "Access a property of an object where the key is stored in a variable.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "key",
-        label: "Property to Access",
-        type: "text",
-        defaultValue: "city",
-      },
-    ],
-    buttonText: "Get Property",
-  },
-  {
-    id: "add-modify-object-property",
-    title: "Add/Modify an Object Property",
-    description:
-      "Add a `status` property to an object. If it already exists, change its value.",
+      "Create an object and access its `title` property using dot notation.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Update Status",
+    buttonText: "Get Title",
   },
+  // problem--> 03
   {
-    id: "delete-object-property",
-    title: "Delete an Object Property",
-    description: "Given an object, delete its `isDraft` property.",
+    id: "op-access-property-bracket",
+    title: "Access Property with Bracket Notation",
+    description:
+      "Create an object and access a property using bracket notation, which is useful for keys with special characters or variables.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get Property",
+  },
+  // problem--> 04
+  {
+    id: "op-modify-property",
+    title: "Modify a Property",
+    description:
+      "Create an object, then change the value of one of its properties.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Update Age",
+  },
+  // problem--> 05
+  {
+    id: "op-add-property",
+    title: "Add a New Property",
+    description:
+      "Create an object and add a new property to it after its creation.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Add City",
+  },
+  // problem--> 06
+  {
+    id: "op-delete-property",
+    title: "Delete a Property",
+    description:
+      "Use the `delete` operator to remove a property from an object.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Delete Property",
   },
+  // problem--> 07
   {
-    id: "check-property-existence",
-    title: "Check for Property Existence",
+    id: "op-object-keys",
+    title: "`Object.keys()`",
     description:
-      "Check if an object has a property named `email` using two different methods (`in` vs `hasOwnProperty`).",
+      "Use `Object.keys()` to get an array of an object's own property names.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Check for Email",
-  },
-  {
-    id: "get-object-keys",
-    title: "Get Object Keys",
-    description:
-      "Write a function that returns an array of a given object's own property names (keys).",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "JSON Object",
-        type: "textarea",
-        defaultValue: '{"id": 1, "user": "test", "active": true}',
-      },
-    ],
     buttonText: "Get Keys",
   },
+  // problem--> 08
   {
-    id: "get-object-values",
-    title: "Get Object Values",
+    id: "op-object-values",
+    title: "`Object.values()`",
     description:
-      "Write a function that returns an array of a given object's own property values.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "JSON Object",
-        type: "textarea",
-        defaultValue: '{"id": 1, "user": "test", "active": true}',
-      },
-    ],
-    buttonText: "Get Values",
-  },
-  {
-    id: "get-object-entries",
-    title: "Get Object Entries",
-    description:
-      "Use `Object.entries()` to return an array of a given object's own [key, value] pairs.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "JSON Object",
-        type: "textarea",
-        defaultValue: '{"a": 1, "b": 2, "c": 3}',
-      },
-    ],
-    buttonText: "Get Entries",
-  },
-  {
-    id: "merge-objects-spread",
-    title: "Merge Objects with Spread Syntax",
-    description:
-      "Merge two objects into one using the spread syntax (`...`). The second object's properties should overwrite the first's.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json1",
-        label: "First JSON Object",
-        type: "textarea",
-        defaultValue: '{"name": "User", "isAdmin": false}',
-      },
-      {
-        id: "json2",
-        label: "Second JSON Object",
-        type: "textarea",
-        defaultValue: '{"isAdmin": true, "theme": "dark"}',
-      },
-    ],
-    buttonText: "Merge",
-  },
-  {
-    id: "object-assign",
-    title: "Merge with `Object.assign`",
-    description:
-      "Use `Object.assign()` to copy the values of all enumerable own properties from one or more source objects to a target object.",
+      "Use `Object.values()` to get an array of an object's own property values.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Use Object.assign",
+    buttonText: "Get Values",
   },
+  // problem--> 09
   {
-    id: "this-in-method",
-    title: "`this` in an Object Method",
+    id: "op-object-entries",
+    title: "`Object.entries()`",
     description:
-      "Create an object with a method that uses `this` to access another property of the same object.",
+      "Use `Object.entries()` to get an array of an object's own `[key, value]` pairs.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get Entries",
+  },
+  // problem--> 10
+  {
+    id: "op-in-operator",
+    title: "The `in` Operator",
+    description:
+      "Use the `in` operator to check if a property exists in an object (including its prototype chain).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Check for Property",
+  },
+  // problem--> 11
+  {
+    id: "op-hasownproperty",
+    title: "`.hasOwnProperty()`",
+    description:
+      "Use `.hasOwnProperty()` to check if an object has a property directly on itself (not inherited).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Check Own Property",
+  },
+  // problem--> 12
+  {
+    id: "op-shorthand-properties",
+    title: "Shorthand Properties",
+    description:
+      "Create an object from variables that have the same name as the desired property keys using ES6 shorthand.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create with Shorthand",
+  },
+  // problem--> 13
+  {
+    id: "op-computed-property-names",
+    title: "Computed Property Names",
+    description:
+      "Create an object with a property key that is determined by a variable.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create with Computed Key",
+  },
+  // problem--> 14
+  {
+    id: "op-object-method",
+    title: "Object Method",
+    description:
+      "Create an object with a method (a function as a property) that returns a greeting.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Call Method",
   },
+  // problem--> 15
   {
-    id: "object-destructuring-basic",
+    id: "op-this-in-method",
+    title: "`this` in a Method",
+    description:
+      "Create an object with a method that uses the `this` keyword to access another property of the same object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `this`",
+  },
+  // problem--> 16
+  {
+    id: "op-nested-object",
+    title: "Nested Object",
+    description:
+      "Create an object that contains another object as one of its properties.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create Nested Object",
+  },
+  // problem--> 17
+  {
+    id: "op-access-nested-property",
+    title: "Access a Nested Property",
+    description:
+      "Access a property from a nested object using chained dot notation.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Access Nested Value",
+  },
+  // problem--> 18
+  {
+    id: "op-object-destructuring-basic",
     title: "Object Destructuring (Basic)",
     description:
-      "Use destructuring to extract the `name` and `age` properties from a user object into variables.",
+      "Use object destructuring to extract properties from an object into variables.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Destructure",
   },
+  // problem--> 19
   {
-    id: "nested-object-access",
-    title: "Nested Object Access",
+    id: "op-object-destructuring-alias",
+    title: "Object Destructuring with Aliases",
     description:
-      "Access a deeply nested property (e.g., `user.address.street`).",
+      "Use object destructuring to extract a property and assign it to a variable with a different name.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Get Street",
+    buttonText: "Destructure with Alias",
   },
+  // problem--> 20
   {
-    id: "nested-object-destructuring",
+    id: "op-object-destructuring-defaults",
+    title: "Object Destructuring with Defaults",
+    description:
+      "Use object destructuring to provide a default value for a property that may not exist.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Destructure with Default",
+  },
+  // problem--> 21
+  {
+    id: "op-object-destructuring-nested",
     title: "Nested Object Destructuring",
     description:
-      "Use nested destructuring to extract the `city` from a user object's `address` property.",
+      "Use nested destructuring to extract a property from a nested object.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Destructure City",
+    buttonText: "Destructure Nested",
   },
+  // problem--> 22
   {
-    id: "loop-object-for-in",
-    title: "Loop Through Object with `for...in`",
+    id: "op-object-destructuring-rest",
+    title: "Object Destructuring with Rest",
     description:
-      "Iterate over the properties of an object using a `for...in` loop and log each key-value pair.",
+      "Use the rest syntax in object destructuring to collect remaining properties into a new object.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Loop Object",
+    buttonText: "Destructure with Rest",
   },
+  // problem--> 23
   {
-    id: "object-freeze",
-    title: "Freeze an Object",
+    id: "op-loop-for-in",
+    title: "Loop with `for...in`",
+    description: "Use a `for...in` loop to iterate over the keys of an object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Loop Keys",
+  },
+  // problem--> 24
+  {
+    id: "op-loop-object-keys",
+    title: "Loop with `Object.keys`",
     description:
-      "Use `Object.freeze()` to prevent an object from being changed. Attempt to modify a frozen object.",
+      "Use `Object.keys()` and a `forEach` loop to iterate over an object's keys and values.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Freeze and Test",
+    buttonText: "Loop with `Object.keys`",
   },
+  // problem--> 25
   {
-    id: "object-seal",
-    title: "Seal an Object",
+    id: "op-loop-object-entries",
+    title: "Loop with `Object.entries`",
     description:
-      "Use `Object.seal()` to prevent adding/deleting properties, but allow existing properties to be modified.",
+      "Use `Object.entries()` and a `for...of` loop with destructuring to iterate over an object's key-value pairs.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Seal and Test",
+    buttonText: "Loop with `Object.entries`",
   },
+  // problem--> 26
   {
-    id: "constructor-function",
-    title: "Constructor Function",
+    id: "op-object-comparison-pitfall",
+    title: "Object Comparison Pitfall",
     description:
-      "Create a `Car` constructor function that creates car objects with `make` and `model` properties.",
+      "Demonstrate that two separate objects with the same properties are not equal because they are compared by reference.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create Car",
+    buttonText: "Compare Objects",
   },
+  // problem--> 27
   {
-    id: "prototype-property",
-    title: "The `prototype` Property",
+    id: "op-copy-by-reference",
+    title: "Copy by Reference",
     description:
-      "Add a `drive` method to the `Car` constructor's `prototype` so all car instances can share it.",
+      "Show that assigning an object to a new variable creates a reference, not a copy. Modifying the new variable affects the original.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Add Method to Prototype",
+    buttonText: "Test Reference",
   },
+  // problem--> 28
   {
-    id: "prototypal-inheritance",
-    title: "Prototypal Inheritance",
+    id: "op-shallow-copy-spread",
+    title: "Shallow Copy with Spread Syntax",
     description:
-      "Create an `ElectricCar` constructor that inherits from `Car` and adds a `battery` property.",
+      "Use the spread syntax (`...`) to create a shallow copy of an object.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create Electric Car",
+    buttonText: "Shallow Copy",
   },
+  // problem--> 29
   {
-    id: "object-create",
-    title: "Inheritance with `Object.create`",
+    id: "op-shallow-copy-assign",
+    title: "Shallow Copy with `Object.assign`",
+    description: "Use `Object.assign()` to create a shallow copy of an object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Shallow Copy with `assign`",
+  },
+  // problem--> 30
+  {
+    id: "op-merge-objects-spread",
+    title: "Merge Objects with Spread",
+    description:
+      "Use the spread syntax to merge two objects into a new one. Show how properties from later objects overwrite earlier ones.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Merge Objects",
+  },
+  // problem--> 31
+  {
+    id: "op-get-prototype",
+    title: "Get an Object's Prototype",
+    description:
+      "Use `Object.getPrototypeOf()` to inspect the prototype of an object literal.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get Prototype",
+  },
+  // problem--> 32
+  {
+    id: "op-prototype-chain",
+    title: "The Prototype Chain",
+    description:
+      "Demonstrate that accessing a property not on an object will cause JavaScript to look for it on the object's prototype.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `toString`",
+  },
+  // problem--> 33
+  {
+    id: "op-object-create",
+    title: "`Object.create()`",
     description:
       "Use `Object.create()` to create a new object with a specified prototype object.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Create with Prototype",
   },
+  // problem--> 34
   {
-    id: "proto-vs-prototype",
-    title: "`__proto__` vs `prototype` (Conceptual)",
+    id: "op-constructor-function",
+    title: "Constructor Function",
     description:
-      "Explain the difference between an object's `__proto__` (its actual prototype) and a constructor function's `prototype` property (the object that will become the prototype for new instances).",
+      "Create a `Person` constructor function that initializes `name` and `age` properties using `this`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Explain",
+    buttonText: "Define Constructor",
   },
+  // problem--> 35
   {
-    id: "instanceof-operator",
+    id: "op-new-keyword",
+    title: "The `new` Keyword",
+    description:
+      "Use the `new` keyword with your `Person` constructor to create a new instance.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create Instance",
+  },
+  // problem--> 36
+  {
+    id: "op-function-prototype-property",
+    title: "Function's `prototype` Property",
+    description:
+      "Demonstrate that every function has a `prototype` property, which is an object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Inspect Prototype",
+  },
+  // problem--> 37
+  {
+    id: "op-add-method-to-prototype",
+    title: "Add Method to Prototype",
+    description:
+      "Add a `greet` method to the `Person` constructor's prototype so all instances can share it.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Add Method",
+  },
+  // problem--> 38
+  {
+    id: "op-instanceof-operator",
     title: "`instanceof` Operator",
     description:
-      "Use the `instanceof` operator to check if an object is an instance of a particular constructor.",
+      "Use the `instanceof` operator to check if an object is an instance of a specific constructor.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Check Instance",
   },
+  // problem--> 39
   {
-    id: "object-is",
-    title: "Strict Equality with `Object.is`",
+    id: "op-inheritance-with-prototypes",
+    title: "Prototypal Inheritance",
     description:
-      "Use `Object.is()` to compare two values, noting its difference from `===` when comparing `NaN` and `+0/-0`.",
+      "Create an `Employee` constructor that inherits from a `Person` constructor.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Compare Values",
+    buttonText: "Implement Inheritance",
   },
+  // problem--> 40
   {
-    id: "optional-chaining",
-    title: "Optional Chaining `?.`",
+    id: "op-call-for-inheritance",
+    title: "`.call()` for Constructor Chaining",
     description:
-      "Safely access a nested property that might not exist using the optional chaining operator `?.`.",
+      "Use `Person.call(this, ...)` inside the `Employee` constructor to chain constructors.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Safely Access Property",
+    buttonText: "Chain Constructors",
   },
+  // problem--> 41
   {
-    id: "nullish-coalescing-object",
-    title: "Nullish Coalescing with Objects `??`",
+    id: "op-this-in-function",
+    title: "`this` in a Regular Function",
     description:
-      "Use the nullish coalescing operator `??` to provide a default value for a property that is `null` or `undefined`.",
+      "Show that `this` inside a regular function call (non-strict mode) refers to the global object (`window`).",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Provide Default",
+    buttonText: "Check `this`",
   },
+  // problem--> 42
   {
-    id: "shorthand-property-names",
-    title: "Shorthand Property Names",
+    id: "op-losing-this-context",
+    title: "Losing `this` Context",
     description:
-      "Create an object from variables using the shorthand property name syntax.",
+      "Demonstrate the common problem where `this` context is lost when a method is passed as a callback.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create with Shorthand",
+    buttonText: "Show Problem",
   },
+  // problem--> 43
   {
-    id: "computed-property-names",
-    title: "Computed Property Names",
+    id: "op-bind-method",
+    title: "`.bind()` Method",
     description:
-      "Create an object with a property key that is determined by a variable's value.",
+      "Use the `.bind()` method to create a new function with a permanently bound `this` context.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create with Computed Key",
+    buttonText: "Fix with `bind`",
   },
+  // problem--> 44
   {
-    id: "getter-syntax",
-    title: "Getter Syntax",
+    id: "op-call-method",
+    title: "`.call()` Method",
     description:
-      "Create a `fullName` getter on a person object that computes the full name from `firstName` and `lastName` properties.",
+      "Use the `.call()` method to invoke a function with a specified `this` context and individual arguments.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `call`",
+  },
+  // problem--> 45
+  {
+    id: "op-apply-method",
+    title: "`.apply()` Method",
+    description:
+      "Use the `.apply()` method to invoke a function with a specified `this` context and arguments provided as an array.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `apply`",
+  },
+  // problem--> 46
+  {
+    id: "op-class-syntax-basic",
+    title: "Basic `class` Syntax",
+    description:
+      "Rewrite the `Person` constructor function using the ES6 `class` syntax.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create Class",
+  },
+  // problem--> 47
+  {
+    id: "op-class-constructor",
+    title: "Class `constructor`",
+    description:
+      "Define a `constructor` method within a class to initialize instance properties.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use Constructor",
+  },
+  // problem--> 48
+  {
+    id: "op-class-instance-method",
+    title: "Class Instance Method",
+    description: "Define an instance method directly within the class body.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Define Method",
+  },
+  // problem--> 49
+  {
+    id: "op-class-extends",
+    title: "Class Inheritance with `extends`",
+    description:
+      "Create an `Employee` class that inherits from a `Person` class using the `extends` keyword.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `extends`",
+  },
+  // problem--> 50
+  {
+    id: "op-class-super",
+    title: "`super()` in Constructor",
+    description:
+      "Use `super()` in the `Employee` constructor to call the parent `Person` constructor.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `super()`",
+  },
+  // problem--> 51
+  {
+    id: "op-class-super-method",
+    title: "`super` in Methods",
+    description:
+      "Override a method in a child class and use `super.methodName()` to call the parent's version of the method.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Call Parent Method",
+  },
+  // problem--> 52
+  {
+    id: "op-class-static-method",
+    title: "`static` Method",
+    description:
+      "Define a `static` method on a class. Static methods are called on the class itself, not on instances.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Define Static Method",
+  },
+  // problem--> 53
+  {
+    id: "op-class-getters",
+    title: "Class `get` Syntax",
+    description:
+      "Use the `get` keyword to create a getter property that computes its value when accessed.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Use Getter",
   },
+  // problem--> 54
   {
-    id: "setter-syntax",
-    title: "Setter Syntax",
+    id: "op-class-setters",
+    title: "Class `set` Syntax",
     description:
-      "Create a `fullName` setter that takes a full name string and updates the `firstName` and `lastName` properties accordingly.",
+      "Use the `set` keyword to create a setter property that executes a function when a property is set.",
     category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "fullName",
-        label: "New Full Name",
-        type: "text",
-        defaultValue: "Jane Doe",
-      },
-    ],
+    inputs: [],
     buttonText: "Use Setter",
   },
+  // problem--> 55
   {
-    id: "object-from-entries",
-    title: "Create Object from Entries",
+    id: "op-class-private-fields",
+    title: "Private Class Fields (`#`)",
     description:
-      "Use `Object.fromEntries()` to convert an array of [key, value] pairs back into an object.",
+      "Use the `#` prefix to create a private field in a class that is not accessible from outside the class.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create from Entries",
+    buttonText: "Test Private Field",
   },
+  // problem--> 56
   {
-    id: "json-stringify",
-    title: "Serialize with `JSON.stringify`",
-    description: "Convert a JavaScript object into a JSON string.",
+    id: "op-this-in-arrow-function-method-pitfall",
+    title: "`this` in Arrow Function Method Pitfall",
+    description:
+      "Show the common pitfall of using an arrow function for a method, where `this` does not refer to the instance.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Stringify Object",
+    buttonText: "Show Pitfall",
   },
+  // problem--> 57
   {
-    id: "json-parse",
-    title: "Deserialize with `JSON.parse`",
-    description: "Convert a JSON string back into a JavaScript object.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "JSON String",
-        type: "textarea",
-        defaultValue: '{"id":1,"name":"A book","inStock":true}',
-      },
-    ],
-    buttonText: "Parse String",
-  },
-  {
-    id: "json-stringify-replacer",
-    title: "`JSON.stringify` with a Replacer",
+    id: "op-class-field-arrow-function",
+    title: "Arrow Function as Class Field",
     description:
-      "Use the `replacer` argument in `JSON.stringify` to select which properties to include in the output string.",
+      "Use a class field with an arrow function to create a method with a lexically bound `this`, solving callback issues.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Stringify with Filter",
+    buttonText: "Use Arrow Function Field",
   },
+  // problem--> 58
   {
-    id: "shallow-copy",
-    title: "Shallow Copy",
+    id: "op-object-freeze",
+    title: "`Object.freeze()`",
     description:
-      "Create a shallow copy of an object. Demonstrate that nested objects are still linked by reference.",
+      "Use `Object.freeze()` to make an object immutable. Its properties cannot be added, removed, or changed.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create Shallow Copy",
+    buttonText: "Freeze Object",
   },
+  // problem--> 59
   {
-    id: "deep-copy-json",
-    title: "Deep Copy with JSON",
+    id: "op-object-seal",
+    title: "`Object.seal()`",
     description:
-      "Create a deep copy of an object using the `JSON.stringify` and `JSON.parse` trick. Note its limitations.",
+      "Use `Object.seal()` to prevent adding/deleting properties, while still allowing existing properties to be modified.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create Deep Copy",
+    buttonText: "Seal Object",
   },
+  // problem--> 60
   {
-    id: "this-with-bind",
-    title: "`this` with `.bind()`",
+    id: "op-object-preventextensions",
+    title: "`Object.preventExtensions()`",
     description:
-      "Create a new function with a permanently bound `this` context using the `.bind()` method.",
+      "Use `Object.preventExtensions()` to prevent new properties from being added to an object.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Bind `this`",
+    buttonText: "Prevent Extensions",
   },
+  // problem--> 61
   {
-    id: "check-empty-object",
-    title: "Check if an Object is Empty",
+    id: "op-object-isfrozen",
+    title: "`Object.isFrozen()`",
     description:
-      "Write a function to check if an object has no own properties.",
+      "Use `Object.isFrozen()` to check if an object has been frozen.",
     category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "Object to Check (JSON)",
-        type: "textarea",
-        defaultValue: "{}",
-      },
-    ],
-    buttonText: "Check if Empty",
+    inputs: [],
+    buttonText: "Check Frozen Status",
   },
+  // problem--> 62
   {
-    id: "invert-key-value",
-    title: "Invert Key-Value Pairs",
-    description:
-      "Create a new object from a given object by swapping its keys and values.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "Object to Invert (JSON)",
-        type: "textarea",
-        defaultValue: '{"a": "1", "b": "2", "c": "3"}',
-      },
-    ],
-    buttonText: "Invert Object",
-  },
-  {
-    id: "property-descriptors",
+    id: "op-property-descriptor",
     title: "Property Descriptors",
     description:
-      "Use `Object.getOwnPropertyDescriptor()` to inspect the attributes of a property (value, writable, enumerable, configurable).",
+      "Use `Object.getOwnPropertyDescriptor()` to inspect the attributes of an object's property (value, writable, enumerable, configurable).",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Get Descriptor",
   },
+  // problem--> 63
   {
-    id: "object-define-property",
-    title: "Define Property with `Object.defineProperty`",
+    id: "op-object-defineproperty",
+    title: "`Object.defineProperty()`",
     description:
-      "Use `Object.defineProperty()` to create a new property with specific attributes, such as making it non-writable.",
+      "Use `Object.defineProperty()` to create or modify a property with precise control over its attributes.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Define and Test",
+    buttonText: "Define Property",
   },
+  // problem--> 64
   {
-    id: "enumerable-properties",
-    title: "Enumerable Properties",
+    id: "op-non-writable-property",
+    title: "Non-Writable Property",
     description:
-      "Define a non-enumerable property and show that it does not appear in `for...in` loops or `Object.keys()`.",
+      "Use `Object.defineProperty()` to create a property that cannot be changed.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Enumerability",
+    buttonText: "Test Writable",
   },
+  // problem--> 65
   {
-    id: "object-prevent-extensions",
-    title: "Prevent Extensions",
+    id: "op-non-enumerable-property",
+    title: "Non-Enumerable Property",
     description:
-      "Use `Object.preventExtensions()` to prevent new properties from ever being added to an object.",
+      "Use `Object.defineProperty()` to create a property that does not show up in `for...in` loops or `Object.keys()`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Prevent and Test",
+    buttonText: "Test Enumerable",
   },
+  // problem--> 66
   {
-    id: "compare-objects",
-    title: "Compare Two Objects",
+    id: "op-non-configurable-property",
+    title: "Non-Configurable Property",
     description:
-      "Write a function to determine if two objects have the same properties with the same values (shallow equality check).",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json1",
-        label: "First Object (JSON)",
-        type: "textarea",
-        defaultValue: '{"a": 1, "b": 2}',
-      },
-      {
-        id: "json2",
-        label: "Second Object (JSON)",
-        type: "textarea",
-        defaultValue: '{"b": 2, "a": 1}',
-      },
-    ],
-    buttonText: "Compare",
-  },
-  {
-    id: "map-vs-object",
-    title: "Map vs. Object (Conceptual)",
-    description:
-      "Explain the key differences between using a `Map` and a plain `Object` for key-value storage, especially regarding key types and iteration.",
+      "Use `Object.defineProperty()` to create a property that cannot be deleted or have its attributes changed.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Explain Differences",
+    buttonText: "Test Configurable",
   },
+  // problem--> 67
   {
-    id: "object-get-prototype-of",
-    title: "`Object.getPrototypeOf`",
+    id: "op-object-defineproperties",
+    title: "`Object.defineProperties()`",
     description:
-      "Use `Object.getPrototypeOf()` to get the prototype of an object instance.",
+      "Use `Object.defineProperties()` to define multiple properties on an object at once.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Get Prototype",
+    buttonText: "Define Multiple",
   },
+  // problem--> 68
   {
-    id: "object-set-prototype-of",
-    title: "`Object.setPrototypeOf`",
-    description:
-      "Use `Object.setPrototypeOf()` to change the prototype of an existing object. (Note: this is a slow operation).",
+    id: "op-getter-property",
+    title: "Getter Property",
+    description: "Use `Object.defineProperty()` to create a getter property.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Set Prototype",
+    buttonText: "Define Getter",
   },
+  // problem--> 69
   {
-    id: "factory-function",
+    id: "op-setter-property",
+    title: "Setter Property",
+    description: "Use `Object.defineProperty()` to create a setter property.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Define Setter",
+  },
+  // problem--> 70
+  {
+    id: "op-symbol-as-key",
+    title: "Symbol as a Property Key",
+    description:
+      "Use a `Symbol` to create a unique property key, which is not discoverable by `for...in` or `Object.keys()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use Symbol",
+  },
+  // problem--> 71
+  {
+    id: "op-well-known-symbol-iterator",
+    title: "`Symbol.iterator`",
+    description:
+      "Implement the `[Symbol.iterator]` method to make a custom object iterable so it can be used with a `for...of` loop.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Make Iterable",
+  },
+  // problem--> 72
+  {
+    id: "op-deep-clone-json",
+    title: "Deep Clone with JSON",
+    description:
+      "Use the `JSON.stringify` and `JSON.parse` trick to perform a deep clone of a simple object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Deep Clone",
+  },
+  // problem--> 73
+  {
+    id: "op-structured-clone",
+    title: "Deep Clone with `structuredClone`",
+    description:
+      "Use the modern `structuredClone()` global function to perform a robust deep clone.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `structuredClone`",
+  },
+  // problem--> 74
+  {
+    id: "op-factory-function",
     title: "Factory Function",
     description:
-      "Create a factory function that returns new user objects, encapsulating the creation logic.",
+      "Create a factory function that returns new person objects, as an alternative to constructors.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create User via Factory",
+    buttonText: "Use Factory",
   },
+  // problem--> 75
   {
-    id: "prototype-chain-conceptual",
-    title: "The Prototype Chain (Conceptual)",
+    id: "op-mixin-pattern",
+    title: "Mixin Pattern",
     description:
-      "Explain how JavaScript uses the prototype chain to look up properties that don't exist on an object itself.",
+      "Use a mixin object with `Object.assign()` to add new capabilities to a class's prototype.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Explain Chain",
+    buttonText: "Apply Mixin",
   },
+  // problem--> 76
   {
-    id: "this-lost-context",
-    title: "Lost `this` Context",
+    id: "op-proxy-get-trap",
+    title: "Proxy `get` Trap",
     description:
-      "Demonstrate the common problem of `this` context being lost when a method is passed as a callback, and how to solve it.",
+      "Create a `Proxy` that intercepts property access and returns a default value for non-existent properties.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Lost `this`",
+    buttonText: "Test `get` Trap",
   },
+  // problem--> 77
   {
-    id: "object-create-null",
-    title: "`Object.create(null)`",
+    id: "op-proxy-set-trap",
+    title: "Proxy `set` Trap",
     description:
-      "Create an object that has no prototype using `Object.create(null)`. Show how it differs from `{}`.",
+      "Create a `Proxy` that intercepts property assignments to perform validation.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `set` Trap",
+  },
+  // problem--> 78
+  {
+    id: "op-proxy-has-trap",
+    title: "Proxy `has` Trap",
+    description:
+      "Create a `Proxy` that customizes the behavior of the `in` operator.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `has` Trap",
+  },
+  // problem--> 79
+  {
+    id: "op-proxy-apply-trap",
+    title: "Proxy `apply` Trap",
+    description: "Create a `Proxy` around a function to intercept its call.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `apply` Trap",
+  },
+  // problem--> 80
+  {
+    id: "op-reflect-api",
+    title: "`Reflect` API",
+    description:
+      "Use `Reflect.get()` and `Reflect.set()` to access and modify properties, which is the recommended way within proxy traps.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `Reflect`",
+  },
+  // problem--> 81
+  {
+    id: "op-private-methods-with-sharp",
+    title: "Private Class Methods",
+    description: "Define a private method in a class using the `#` syntax.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Private Method",
+  },
+  // problem--> 82
+  {
+    id: "op-private-static-fields",
+    title: "Private Static Fields",
+    description: "Define a private static field in a class.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Access Static Private",
+  },
+  // problem--> 83
+  {
+    id: "op-static-block",
+    title: "Static Initialization Block",
+    description:
+      "Use a `static {}` block for complex initialization of a class's static properties.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Initialize with Static Block",
+  },
+  // problem--> 84
+  {
+    id: "op-error-cause-property",
+    title: "Error `cause` Property",
+    description:
+      "Create a new `Error` with a `cause` property to chain errors for better debugging.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Error Cause",
+  },
+  // problem--> 85
+  {
+    id: "op-object-hasown-static",
+    title: "`Object.hasOwn()`",
+    description:
+      "Use the static method `Object.hasOwn()` as a safer alternative to `.hasOwnProperty()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `Object.hasOwn`",
+  },
+  // problem--> 86
+  {
+    id: "op-prototype-pollution-conceptual",
+    title: "Prototype Pollution (Conceptual)",
+    description:
+      "Explain the concept of prototype pollution, a vulnerability where an attacker modifies `Object.prototype`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 87
+  {
+    id: "op-null-prototype-object",
+    title: "Null-Prototype Object",
+    description:
+      "Create an object with `Object.create(null)` that has no prototype, making it a pure, secure dictionary.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Create Null Prototype Object",
   },
+  // problem--> 88
   {
-    id: "method-shorthand",
-    title: "Method Shorthand Syntax",
+    id: "op-weakmap-for-private-data",
+    title: "`WeakMap` for Private Data",
     description:
-      "Define a method in an object literal using the concise ES6 method shorthand syntax.",
+      "Use a `WeakMap` to associate private data with an object instance, a classic pattern for privacy before `#` fields.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Use Method Shorthand",
+    buttonText: "Test `WeakMap` Privacy",
   },
+  // problem--> 89
   {
-    id: "destructuring-with-aliases-defaults",
-    title: "Destructuring with Aliases & Defaults",
+    id: "op-isprototypeof",
+    title: "`.isPrototypeOf()`",
     description:
-      "Combine aliases and default values in a single object destructuring assignment.",
+      "Use the `.isPrototypeOf()` method to check if an object exists in another object's prototype chain.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Destructure Advanced",
+    buttonText: "Check Prototype",
   },
+  // problem--> 90
   {
-    id: "json-tojson-method",
-    title: "`toJSON` Method",
+    id: "op-object-tostring-tag",
+    title: "`Symbol.toStringTag`",
     description:
-      "Define a `toJSON` method on an object to customize its JSON serialization behavior when passed to `JSON.stringify`.",
+      "Use the `[Symbol.toStringTag]` well-known symbol to customize the string returned by `Object.prototype.toString.call()`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Customize Serialization",
+    buttonText: "Customize Tag",
   },
+  // problem--> 91
   {
-    id: "object-isextensible",
+    id: "op-class-private-getter-setter",
+    title: "Private Getters and Setters",
+    description:
+      "Define private getter and setter methods in a class using the `#` syntax.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Private Accessors",
+  },
+  // problem--> 92
+  {
+    id: "op-factory-vs-constructor-conceptual",
+    title: "Factory vs. Constructor (Conceptual)",
+    description:
+      "Explain the pros and cons of using factory functions versus constructor functions/classes.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 93
+  {
+    id: "op-prototype-property-attributes",
+    title: "Prototype Property Attributes",
+    description:
+      "Show that methods added to a prototype are enumerable and configurable by default, unlike some built-in properties.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Inspect Prototype Method",
+  },
+  // problem--> 94
+  {
+    id: "op-shadowing-prototype-method",
+    title: "Shadowing a Prototype Method",
+    description:
+      "Add a method directly to an instance that has the same name as a method on its prototype, demonstrating that the instance method takes precedence.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Shadowing",
+  },
+  // problem--> 95
+  {
+    id: "op-object-seal-and-prototypes",
+    title: "`Object.seal` and Prototypes",
+    description:
+      "Demonstrate that sealing an object does not affect its prototype.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Seal with Prototype",
+  },
+  // problem--> 96
+  {
+    id: "op-object-getownpropertynames",
+    title: "`Object.getOwnPropertyNames`",
+    description:
+      "Use `Object.getOwnPropertyNames()` to get all own property keys (including non-enumerable ones, but not symbols).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get Own Property Names",
+  },
+  // problem--> 97
+  {
+    id: "op-object-getownpropertysymbols",
+    title: "`Object.getOwnPropertySymbols`",
+    description:
+      "Use `Object.getOwnPropertySymbols()` to get an array of all own symbol properties found on an object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get Symbol Properties",
+  },
+  // problem--> 98
+  {
+    id: "op-reflect-ownkeys",
+    title: "`Reflect.ownKeys`",
+    description:
+      "Use `Reflect.ownKeys()` to get all own property keys, including both string and symbol keys, enumerable or not.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get All Own Keys",
+  },
+  // problem--> 99
+  {
+    id: "op-proxy-deleteproperty-trap",
+    title: "Proxy `deleteProperty` Trap",
+    description:
+      "Create a `Proxy` that intercepts the `delete` operator to prevent a property from being deleted.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `deleteProperty` Trap",
+  },
+  // problem--> 100
+  {
+    id: "op-proxy-construct-trap",
+    title: "Proxy `construct` Trap",
+    description:
+      "Create a `Proxy` around a class to intercept the `new` operator.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `construct` Trap",
+  },
+  // problem--> 101
+  {
+    id: "op-json-replacer-function",
+    title: "JSON.stringify Replacer Function",
+    description:
+      "Use a replacer function with `JSON.stringify` to customize the serialization of an object, for example, to filter out certain properties.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Stringify with Replacer",
+  },
+  // problem--> 102
+  {
+    id: "op-json-reviver-function",
+    title: "JSON.parse Reviver Function",
+    description:
+      "Use a reviver function with `JSON.parse` to customize the deserialization process, for example, to convert date strings back into Date objects.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Parse with Reviver",
+  },
+  // problem--> 103
+  {
+    id: "op-object-fromEntries",
+    title: "`Object.fromEntries()`",
+    description:
+      "Use `Object.fromEntries()` to create an object from an array of key-value pairs (the inverse of `Object.entries()`).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create Object from Entries",
+  },
+  // problem--> 104
+  {
+    id: "op-well-known-symbol-species",
+    title: "`Symbol.species` (Conceptual)",
+    description:
+      "Explain how a class can use `[Symbol.species]` to control what constructor is used for new instances created by methods like `.map()` or `.slice()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain Symbol.species",
+  },
+  // problem--> 105
+  {
+    id: "op-private-static-methods",
+    title: "Private Static Methods",
+    description:
+      "Define and call a private static method within a class using the `#` syntax.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Private Static Method",
+  },
+  // problem--> 106
+  {
+    id: "op-ergonomic-brand-checks",
+    title: "Ergonomic Brand Checks for Private Fields",
+    description:
+      "Use the `in` operator to check if an object has a specific private field, a reliable way to check if an object is an instance of your class.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Brand Check",
+  },
+  // problem--> 107
+  {
+    id: "op-optional-chaining-with-methods",
+    title: "Optional Chaining with Method Calls",
+    description:
+      "Use optional chaining `?.()` to safely call a method that might not exist on an object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Safely Call Method",
+  },
+  // problem--> 108
+  {
+    id: "op-prototype-of-function",
+    title: "Prototype of a Function",
+    description:
+      "Use `Object.getPrototypeOf()` on a function to show that it inherits from `Function.prototype`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get Function Prototype",
+  },
+  // problem--> 109
+  {
+    id: "op-constructor-property",
+    title: "The `.constructor` Property",
+    description:
+      "Inspect the `.constructor` property on an instance to see that it points back to the constructor function that created it.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Inspect Constructor Property",
+  },
+  // problem--> 110
+  {
+    id: "op-set-prototype-of",
+    title: "`Object.setPrototypeOf()`",
+    description:
+      "Use `Object.setPrototypeOf()` to change the prototype of an existing object. (Note: this is a slow operation and should be avoided in performance-critical code).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Change Prototype",
+  },
+  // problem--> 111
+  {
+    id: "op-deep-clone-limitations-json",
+    title: "Limitations of JSON Deep Clone",
+    description:
+      "Demonstrate that the `JSON.parse(JSON.stringify(obj))` trick for deep cloning does not work for special types like `undefined`, `Date`, or functions.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Show Limitations",
+  },
+  // problem--> 112
+  {
+    id: "op-for-in-and-prototype-chain",
+    title: "`for...in` and the Prototype Chain",
+    description:
+      "Show that a `for...in` loop will iterate over enumerable properties from an object's prototype chain.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `for...in` Inheritance",
+  },
+  // problem--> 113
+  {
+    id: "op-class-fields-initialization-order",
+    title: "Class Fields Initialization Order",
+    description:
+      "Demonstrate that class fields are initialized before the constructor body runs.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Initialization Order",
+  },
+  // problem--> 114
+  {
+    id: "op-super-outside-class-error",
+    title: "`super` Outside of a Class (Error)",
+    description:
+      "Show that using `super` outside of a class method results in a `SyntaxError`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `super`",
+  },
+  // problem--> 115
+  {
+    id: "op-object-is-comparison",
+    title: "`Object.is()`",
+    description:
+      "Use `Object.is()` to compare values, showing its difference from `===` with `NaN` and `-0`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Compare with Object.is",
+  },
+  // problem--> 116
+  {
+    id: "op-proxy-get-prototype-of-trap",
+    title: "Proxy `getPrototypeOf` Trap",
+    description:
+      "Create a `Proxy` that intercepts calls to `Object.getPrototypeOf()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `getPrototypeOf` Trap",
+  },
+  // problem--> 117
+  {
+    id: "op-proxy-set-prototype-of-trap",
+    title: "Proxy `setPrototypeOf` Trap",
+    description:
+      "Create a `Proxy` that intercepts calls to `Object.setPrototypeOf()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `setPrototypeOf` Trap",
+  },
+  // problem--> 118
+  {
+    id: "op-proxy-is-extensible-trap",
+    title: "Proxy `isExtensible` Trap",
+    description:
+      "Create a `Proxy` that intercepts calls to `Object.isExtensible()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `isExtensible` Trap",
+  },
+  // problem--> 119
+  {
+    id: "op-proxy-prevent-extensions-trap",
+    title: "Proxy `preventExtensions` Trap",
+    description:
+      "Create a `Proxy` that intercepts calls to `Object.preventExtensions()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `preventExtensions` Trap",
+  },
+  // problem--> 120
+  {
+    id: "op-proxy-define-property-trap",
+    title: "Proxy `defineProperty` Trap",
+    description:
+      "Create a `Proxy` that intercepts calls to `Object.defineProperty()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `defineProperty` Trap",
+  },
+  // problem--> 121
+  {
+    id: "op-proxy-get-own-property-descriptor-trap",
+    title: "Proxy `getOwnPropertyDescriptor` Trap",
+    description:
+      "Create a `Proxy` that intercepts calls to `Object.getOwnPropertyDescriptor()`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `getOwnPropertyDescriptor` Trap",
+  },
+  // problem--> 122
+  {
+    id: "op-revocable-proxy",
+    title: "Revocable Proxy",
+    description:
+      "Use `Proxy.revocable()` to create a proxy that can be turned off, preventing further access to the target object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create and Revoke Proxy",
+  },
+  // problem--> 123
+  {
+    id: "op-this-in-static-method",
+    title: "`this` in a Static Method",
+    description:
+      "Demonstrate that `this` inside a static method refers to the class constructor itself, not an instance.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Static `this`",
+  },
+  // problem--> 124
+  {
+    id: "op-class-expression",
+    title: "Class Expression",
+    description:
+      "Create a class by assigning a class expression to a variable, similar to a function expression.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Create Class Expression",
+  },
+  // problem--> 125
+  {
+    id: "op-prototype-property-shadowing",
+    title: "Prototype Property Shadowing",
+    description:
+      "Demonstrate that assigning a value to a property on an instance creates an 'own' property that shadows the property of the same name on the prototype.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Shadowing",
+  },
+  // problem--> 126
+  {
+    id: "op-constructor-return-value-primitive",
+    title: "Constructor Return Value (Primitive)",
+    description:
+      "Show that if a constructor function returns a primitive value, it is ignored and the newly created instance is returned instead.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Primitive Return",
+  },
+  // problem--> 127
+  {
+    id: "op-constructor-return-value-object",
+    title: "Constructor Return Value (Object)",
+    description:
+      "Show that if a constructor function returns an object, that object is returned as the result of the `new` expression instead of the newly created instance.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Object Return",
+  },
+  // problem--> 128
+  {
+    id: "op-object-assign-multiple-sources",
+    title: "`Object.assign` with Multiple Sources",
+    description:
+      "Use `Object.assign()` to merge properties from multiple source objects into a target object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Merge Multiple",
+  },
+  // problem--> 129
+  {
+    id: "op-object-is-sealed",
+    title: "`Object.isSealed()`",
+    description:
+      "Use `Object.isSealed()` to check if an object has been sealed.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Check Sealed Status",
+  },
+  // problem--> 130
+  {
+    id: "op-object-is-extensible",
     title: "`Object.isExtensible()`",
     description:
       "Use `Object.isExtensible()` to check if new properties can be added to an object.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Check Extensibility",
+    buttonText: "Check Extensible Status",
   },
+  // problem--> 131
   {
-    id: "object-isfrozen",
-    title: "`Object.isFrozen()`",
+    id: "op-class-private-static-methods",
+    title: "Private Static Methods",
     description:
-      "Use `Object.isFrozen()` to check if an object is frozen (non-extensible, and all properties non-configurable and non-writable).",
+      "Define a private static method using the `#` syntax and call it from a public static method.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Check if Frozen",
+    buttonText: "Test Private Static Method",
   },
+  // problem--> 132
   {
-    id: "object-issealed",
-    title: "`Object.isSealed()`",
+    id: "op-private-field-in-operator-check",
+    title: "Private Field `in` Operator Check",
     description:
-      "Use `Object.isSealed()` to check if an object is sealed (non-extensible and all properties non-configurable).",
+      "Use the `in` operator to create a static method that checks if an object is a true instance of the class by checking for a private field.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Check if Sealed",
+    buttonText: "Test Instance Check",
   },
+  // problem--> 133
   {
-    id: "this-arrow-function-method-pitfall",
-    title: "Arrow Function as Method Pitfall",
+    id: "op-class-fields-vs-constructor-properties",
+    title: "Class Fields vs. Constructor Properties (Conceptual)",
     description:
-      "Demonstrate the common pitfall of using an arrow function as a method, where `this` does not refer to the object itself.",
+      "Explain the difference between defining properties as class fields versus defining them within the constructor.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Show Pitfall",
+    buttonText: "Explain",
   },
+  // problem--> 134
   {
-    id: "object-constructor",
-    title: "The `Object` Constructor",
-    description: "Create an object using the `new Object()` constructor.",
+    id: "op-class-with-no-constructor",
+    title: "Class without a Constructor",
+    description:
+      "Demonstrate that if a class does not have a constructor, a default empty one is provided.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Use Constructor",
+    buttonText: "Test Default Constructor",
   },
+  // problem--> 135
   {
-    id: "object-tostring",
-    title: "`Object.prototype.toString`",
+    id: "op-super-property-access",
+    title: "`super` for Property Access",
     description:
-      "Show the default string representation of an object by calling `.toString()` and how `Object.prototype.toString.call()` can be used for type checking.",
+      "Use `super.propertyName` to access a property or getter on the parent class's prototype.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test toString",
+    buttonText: "Access Parent Property",
   },
+  // problem--> 136
   {
-    id: "deep-copy-structuredclone",
-    title: "Deep Copy with `structuredClone`",
+    id: "op-well-known-symbol-tostringtag",
+    title: "`Symbol.toStringTag`",
     description:
-      "Use the modern `structuredClone()` global function to create a deep copy of an object, a more robust method than the JSON trick.",
+      "Implement the `[Symbol.toStringTag]` property to customize the output of `Object.prototype.toString.call()`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Use structuredClone",
+    buttonText: "Customize Tag",
   },
+  // problem--> 137
   {
-    id: "dynamic-property-access",
-    title: "Dynamic Property Access",
+    id: "op-functional-inheritance-pattern",
+    title: "Functional Inheritance Pattern (Conceptual)",
     description:
-      "Write a function that takes an object and a property name (string) and returns the value of that property.",
-    category: "Objects & Prototypes",
-    inputs: [
-      {
-        id: "json",
-        label: "Object (JSON)",
-        type: "textarea",
-        defaultValue: '{"user": "alpha", "score": 100}',
-      },
-      {
-        id: "prop",
-        label: "Property Name",
-        type: "text",
-        defaultValue: "score",
-      },
-    ],
-    buttonText: "Get Property Value",
-  },
-  {
-    id: "constructor-property",
-    title: "The `.constructor` Property",
-    description:
-      "Demonstrate that an object's `.constructor` property typically references the constructor function that created it.",
+      "Explain the functional inheritance pattern, which uses factory functions and closures to achieve encapsulation and inheritance without using `this` or prototypes.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Check Constructor",
+    buttonText: "Explain",
   },
+  // problem--> 138
   {
-    id: "factory-function-private-state",
-    title: "Factory Function with Private State",
+    id: "op-method-chaining",
+    title: "Method Chaining",
     description:
-      "Create a counter using a factory function that encapsulates the count variable, making it private.",
+      "Implement a simple class where methods return `this` to allow for method chaining.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Create Counter",
+    buttonText: "Test Chaining",
   },
+  // problem--> 139
   {
-    id: "prototype-pollution-conceptual",
-    title: "Prototype Pollution (Conceptual)",
+    id: "op-deep-clone-with-recursion",
+    title: "Deep Clone with Recursion",
     description:
-      "Explain the security vulnerability of prototype pollution, where an attacker modifies `Object.prototype` to affect all objects.",
+      "Implement a basic recursive function to perform a deep clone of a JSON-serializable object.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Explain Vulnerability",
+    buttonText: "Deep Clone",
   },
+  // problem--> 140
   {
-    id: "object-defineproperties",
-    title: "`Object.defineProperties()`",
+    id: "op-prototype-of-class",
+    title: "Prototype of a Class",
     description:
-      "Use `Object.defineProperties()` to define or modify multiple properties on an object at once with specific descriptors.",
+      "Use `Object.getPrototypeOf()` on a class to show that it inherits from `Function.prototype`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Define Multiple",
+    buttonText: "Get Class Prototype",
   },
+  // problem--> 141
   {
-    id: "mixin-pattern",
-    title: "Mixin Pattern",
+    id: "op-this-binding-precedence",
+    title: "`this` Binding Precedence (Conceptual)",
     description:
-      "Create a 'mixin' object and use `Object.assign()` to add its methods to another object.",
+      "Explain the order of precedence for `this` binding: `new` > explicit (`bind`, `call`) > method call > default (global).",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Apply Mixin",
+    buttonText: "Explain",
   },
+  // problem--> 142
   {
-    id: "inheritance-vs-composition",
-    title: "Inheritance vs. Composition (Conceptual)",
+    id: "op-prototype-of-class-prototype",
+    title: "Prototype of a Class's Prototype",
     description:
-      "Explain the software design principle of 'composition over inheritance' with a simple conceptual example.",
+      "Show that the prototype of a base class's `prototype` property is `Object.prototype`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Explain Principle",
+    buttonText: "Inspect Chain",
   },
+  // problem--> 143
   {
-    id: "object-reference-vs-value",
-    title: "Object Reference vs. Value",
+    id: "op-for-in-vs-object-keys",
+    title: "`for...in` vs. `Object.keys()`",
     description:
-      "Demonstrate that assigning an object to a new variable creates a reference, not a copy.",
+      "Compare `for...in` and `Object.keys()` to show that the former includes inherited enumerable properties while the latter does not.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Reference",
+    buttonText: "Compare",
   },
+  // problem--> 144
   {
-    id: "prototype-chain-length",
-    title: "Prototype Chain Length",
+    id: "op-well-known-symbol-hasinstance",
+    title: "`Symbol.hasInstance` (Conceptual)",
     description:
-      "Write a function to determine the length of an object's prototype chain.",
+      "Explain how a class can implement `[Symbol.hasInstance]` to customize the behavior of the `instanceof` operator.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Calculate Length",
+    buttonText: "Explain",
   },
+  // problem--> 145
   {
-    id: "es5-class-pattern",
-    title: "ES5 'Class' Pattern",
+    id: "op-reflect-construct",
+    title: "`Reflect.construct()`",
     description:
-      "Show how classes were simulated in ES5 using a constructor function and its prototype.",
+      "Use `Reflect.construct()` to call a constructor, similar to the `new` operator but as a function.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Show ES5 Pattern",
+    buttonText: "Construct with Reflect",
   },
+  // problem--> 146
   {
-    id: "object-key-ordering",
-    title: "Object Key Ordering",
+    id: "op-reflect-getprototypeof",
+    title: "`Reflect.getPrototypeOf()`",
     description:
-      "Demonstrate the modern key ordering guarantees for objects (integer keys first in order, then string keys in insertion order).",
+      "Use `Reflect.getPrototypeOf()` as the modern, reflective equivalent of `Object.getPrototypeOf()`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Show Key Order",
+    buttonText: "Get Prototype with Reflect",
   },
+  // problem--> 147
   {
-    id: "deep-object-access-optional-chaining",
-    title: "Deep Access with Optional Chaining",
+    id: "op-object-create-with-properties",
+    title: "`Object.create()` with Properties",
     description:
-      "Safely access a property three levels deep in an object that might not have the full structure.",
+      "Use the second argument of `Object.create()` to define own properties for the new object using a property descriptor map.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Deep Access",
+    buttonText: "Create with Properties",
   },
+  // problem--> 148
   {
-    id: "object-property-iteration-methods",
-    title: "Object Iteration Methods",
+    id: "op-class-with-dynamic-method-name",
+    title: "Class with Dynamic Method Name",
     description:
-      "Compare and contrast the different ways to iterate over object properties: `for...in`, `Object.keys`, `Object.values`, and `Object.entries`.",
+      "Use computed property syntax to define a method in a class with a name determined by a variable.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Compare Iteration",
+    buttonText: "Define Dynamic Method",
   },
+  // problem--> 149
   {
-    id: "shadowing-prototype-property",
-    title: "Shadowing a Prototype Property",
+    id: "op-proxy-for-validation",
+    title: "Proxy for Validation",
     description:
-      "Demonstrate that setting a property on an instance with the same name as a property on its prototype 'shadows' the prototype property.",
+      "Create a proxy with a `set` trap to validate data before it is assigned to an object's property.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Shadowing",
+    buttonText: "Test Validation Proxy",
   },
+  // problem--> 150
   {
-    id: "delete-from-prototype",
-    title: "Deleting from Prototype",
+    id: "op-proxy-for-default-values",
+    title: "Proxy for Default Values",
     description:
-      "Show that `delete` on an instance property does not affect the prototype, but deleting from the prototype affects all instances.",
+      "Use a proxy's `get` trap to return a default value for any property that does not exist on the target object.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Deletion",
+    buttonText: "Test Default Value Proxy",
   },
+  // problem--> 151
   {
-    id: "constructor-return-value",
-    title: "Constructor Return Value",
+    id: "op-weakset-for-object-tracking",
+    title: "`WeakSet` for Object Tracking",
     description:
-      "Demonstrate that if a constructor function explicitly returns an object, that object is returned instead of `this`.",
+      "Use a `WeakSet` to keep track of a collection of objects without preventing them from being garbage collected.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Return",
+    buttonText: "Test `WeakSet`",
   },
+  // problem--> 152
   {
-    id: "object-destructuring-rest",
-    title: "Object Destructuring with Rest",
+    id: "op-finalization-registry-conceptual",
+    title: "`FinalizationRegistry` (Conceptual)",
     description:
-      "Use object destructuring to pull some properties into variables and collect the rest into a new object.",
+      "Explain the `FinalizationRegistry` API, which lets you request a callback to be invoked when an object is garbage collected.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Destructure with Rest",
+    buttonText: "Explain",
   },
+  // problem--> 153
   {
-    id: "object-getownpropertysymbols",
-    title: "`Object.getOwnPropertySymbols`",
+    id: "op-this-in-getter-setter",
+    title: "`this` in Getters and Setters",
     description:
-      "Use `Object.getOwnPropertySymbols()` to retrieve an array of all symbol properties found directly upon a given object.",
+      "Demonstrate that `this` within a getter or setter on an object refers to the object instance.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Get Symbols",
+    buttonText: "Test `this` in Accessors",
   },
+  // problem--> 154
   {
-    id: "this-in-arrow-function-in-method",
-    title: "`this` in Arrow Function in Method",
+    id: "op-object-is-vs-triple-equals",
+    title: "`Object.is()` vs. `===`",
     description:
-      "Show how an arrow function inside a method correctly captures the method's `this` context.",
+      "Compare `Object.is()` with `===`, highlighting the differences with `NaN` and `-0`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Arrow `this`",
+    buttonText: "Compare",
   },
+  // problem--> 155
   {
-    id: "object-hasown-polyfill-conceptual",
-    title: "`Object.hasOwn` Polyfill (Conceptual)",
+    id: "op-parasitic-inheritance-conceptual",
+    title: "Parasitic Combination Inheritance (Conceptual)",
     description:
-      "Explain how to safely implement a polyfill for `Object.hasOwn` using `Object.prototype.hasOwnProperty.call`.",
+      "Explain the classic parasitic combination inheritance pattern, which was the most robust way to implement inheritance before ES6 classes.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Explain Polyfill",
+    buttonText: "Explain",
   },
+  // problem--> 156
   {
-    id: "object-property-with-spaces",
-    title: "Object Property with Spaces",
+    id: "op-class-private-brand-check-error",
+    title: "Private Field Brand Check (Error)",
     description:
-      "Create and access an object property that contains spaces in its name, requiring bracket notation.",
+      "Show that attempting to access a private field on an object that isn't an instance of the class throws a `TypeError`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Test Spaced Key",
+    buttonText: "Test Invalid Access",
   },
+  // problem--> 157
   {
-    id: "object-as-hash-map",
-    title: "Object as a Hash Map",
+    id: "op-well-known-symbol-isconcatspreadable",
+    title: "`Symbol.isConcatSpreadable` (Conceptual)",
     description:
-      "Use an object to implement a simple hash map for counting character frequencies in a string.",
-    category: "Objects & Prototypes",
-    inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "hello" },
-    ],
-    buttonText: "Count Frequencies",
-  },
-  {
-    id: "proxy-vs-es5-getters",
-    title: "Proxy vs. ES5 Getters (Conceptual)",
-    description:
-      "Explain the difference between using an ES6 Proxy vs. an ES5 getter for computed properties.",
+      "Explain how `[Symbol.isConcatSpreadable]` can be used to control whether an object is flattened by `Array.prototype.concat()`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Explain Difference",
+    buttonText: "Explain",
   },
+  // problem--> 158
   {
-    id: "prototype-chain-limit",
-    title: "End of the Prototype Chain",
+    id: "op-prototype-of-arrow-function",
+    title: "Prototype of an Arrow Function",
     description:
-      "Demonstrate that the prototype of `Object.prototype` is `null`, marking the end of the chain.",
-    category: "Objects & Prototypes",
-    inputs: [],
-    buttonText: "Find End of Chain",
-  },
-  {
-    id: "object-isprototypeof",
-    title: "`isPrototypeOf()` Method",
-    description:
-      "Use the `isPrototypeOf()` method to check if an object exists in another object's prototype chain.",
+      "Demonstrate that an arrow function does not have a `.prototype` property.",
     category: "Objects & Prototypes",
     inputs: [],
     buttonText: "Check Prototype",
   },
+  // problem--> 159
   {
-    id: "json-stringify-space",
-    title: "`JSON.stringify` with `space`",
+    id: "op-object-create-null-for-map",
+    title: "`Object.create(null)` for a Map",
     description:
-      "Use the third argument of `JSON.stringify` to control spacing and pretty-print the JSON output.",
+      "Create a null-prototype object to use as a secure map, preventing conflicts with properties like `toString`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Pretty-Print JSON",
+    buttonText: "Create Secure Map",
   },
+  // problem--> 160
   {
-    id: "object-destructuring-dynamic-key",
-    title: "Destructuring with Dynamic Key",
+    id: "op-object-tostring-for-type-checking",
+    title: "`Object.prototype.toString` for Type Checking",
     description:
-      "Use computed property names within an object destructuring assignment to extract a property using a variable.",
+      "Show the classic pattern of using `Object.prototype.toString.call(value)` to get a precise type string like `[object Array]`.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Dynamic Destructure",
+    buttonText: "Check Type",
   },
+  // problem--> 161
   {
-    id: "deep-freeze-object-recursive",
-    title: "Deep Freeze an Object",
+    id: "op-prototype-constructor-correction",
+    title: "Prototype Constructor Correction",
     description:
-      "Write a function that recursively freezes an object and all of its nested objects.",
+      "Show why it's important to manually reset the `.constructor` property when overwriting a prototype for inheritance.",
     category: "Objects & Prototypes",
     inputs: [],
-    buttonText: "Deep Freeze",
+    buttonText: "Correct Constructor",
+  },
+  // problem--> 162
+  {
+    id: "op-this-arrow-function-global",
+    title: "`this` in a Global Arrow Function",
+    description:
+      "Demonstrate that an arrow function defined in the global scope captures the global `this`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Global Arrow `this`",
+  },
+  // problem--> 163
+  {
+    id: "op-object-fromEntries-with-map",
+    title: "`Object.fromEntries` with `Map`",
+    description:
+      "Use `Object.fromEntries` to convert an ES6 `Map` object into a plain object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Convert Map to Object",
+  },
+  // problem--> 164
+  {
+    id: "op-class-static-private-getter",
+    title: "Private Static Getters",
+    description: "Define a private static getter in a class using `#`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Private Static Getter",
+  },
+  // problem--> 165
+  {
+    id: "op-reflect-has",
+    title: "`Reflect.has()`",
+    description:
+      "Use `Reflect.has()` as the functional equivalent of the `in` operator.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `Reflect.has`",
+  },
+  // problem--> 166
+  {
+    id: "op-reflect-deleteproperty",
+    title: "`Reflect.deleteProperty()`",
+    description:
+      "Use `Reflect.deleteProperty()` as the functional equivalent of the `delete` operator.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use `Reflect.deleteProperty`",
+  },
+  // problem--> 167
+  {
+    id: "op-proxy-for-logging",
+    title: "Proxy for Logging",
+    description:
+      "Create a proxy with `get` and `set` traps that logs all property accesses and modifications.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Logging Proxy",
+  },
+  // problem--> 168
+  {
+    id: "op-object-property-shorthand-and-methods",
+    title: "Method Shorthand in Object Literals",
+    description: "Use the ES6 method shorthand syntax in an object literal.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Use Method Shorthand",
+  },
+  // problem--> 169
+  {
+    id: "op-prototype-of-null",
+    title: "Prototype of `null` (Error)",
+    description:
+      "Show that attempting to get the prototype of `null` throws a `TypeError`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `Object.getPrototypeOf(null)`",
+  },
+  // problem--> 170
+  {
+    id: "op-this-in-event-listener-with-bind",
+    title: "`this` in Event Listener with `.bind`",
+    description:
+      "Show the classic pre-arrow-function pattern of using `.bind(this)` to correctly set the context for a method used as an event handler.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Show `.bind` Pattern",
+  },
+  // problem--> 171
+  {
+    id: "op-class-fields-with-this",
+    title: "Class Fields Referencing `this`",
+    description:
+      "Demonstrate that a class field initializer can reference `this` to access properties set in the constructor.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test `this` in Field",
+  },
+  // problem--> 172
+  {
+    id: "op-object-defineproperty-getter-setter",
+    title: "`defineProperty` with Getters and Setters",
+    description:
+      "Use `Object.defineProperty` to define a property with both a getter and a setter.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Define Accessor Property",
+  },
+  // problem--> 173
+  {
+    id: "op-prototype-chain-length",
+    title: "Measuring Prototype Chain Length",
+    description:
+      "Write a function to determine the length of an object's prototype chain.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Get Chain Length",
+  },
+  // problem--> 174
+  {
+    id: "op-immutable-update-pattern",
+    title: "Immutable Update Pattern",
+    description:
+      "Demonstrate the pattern of 'updating' a `const` object by creating a new object with spread syntax and the new value.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Show Immutable Update",
+  },
+  // problem--> 175
+  {
+    id: "op-deep-clone-and-prototypes",
+    title: "Deep Cloning and Prototypes (Conceptual)",
+    description:
+      "Explain that most deep cloning methods (like `structuredClone` or JSON methods) do not preserve an object's prototype.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 176
+  {
+    id: "op-sealed-object-modification",
+    title: "Modifying a Sealed Object",
+    description:
+      "Demonstrate that you can still change the value of existing properties on a sealed object.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Modify Sealed Object",
+  },
+  // problem--> 177
+  {
+    id: "op-constructor-without-new-error",
+    title: "Class Constructor without `new` (Error)",
+    description:
+      "Show that ES6 class constructors cannot be called as regular functions and will throw a `TypeError`.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Invalid Call",
+  },
+  // problem--> 178
+  {
+    id: "op-proxy-invariants-conceptual",
+    title: "Proxy Invariants (Conceptual)",
+    description:
+      "Explain the concept of proxy invariants – rules that proxy traps must obey to maintain the basic integrity of JavaScript objects (e.g., a trap cannot report a non-configurable property as non-existent).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 179
+  {
+    id: "op-well-known-symbol-unscopables",
+    title: "`Symbol.unscopables` (Conceptual)",
+    description:
+      "Explain the historical `[Symbol.unscopables]` property, which can be used to control which properties are exposed to the deprecated `with` statement.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 180
+  {
+    id: "op-object-destructuring-and-getters",
+    title: "Destructuring Triggers Getters",
+    description:
+      "Demonstrate that destructuring a property from an object will execute that property's getter method.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Getter",
+  },
+  // problem--> 181
+  {
+    id: "op-object-destructuring-assignment-with-setters",
+    title: "Destructuring Assignment with Setters",
+    description:
+      "Demonstrate that using a destructuring pattern on the left side of an assignment will trigger an object's setter methods.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Setter",
+  },
+  // problem--> 182
+  {
+    id: "op-this-in-a-module",
+    title: "`this` at the Top Level of a Module",
+    description:
+      "Show that `this` is `undefined` at the top level of an ES module.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Check Module `this`",
+  },
+  // problem--> 183
+  {
+    id: "op-prototype-of-class-instance",
+    title: "Prototype of a Class Instance",
+    description:
+      "Use `Object.getPrototypeOf` on an instance of a class to show it is the class's `.prototype` property.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Check Instance Prototype",
+  },
+  // problem--> 184
+  {
+    id: "op-class-private-getter-setter-validation",
+    title: "Private Setters for Validation",
+    description:
+      "Use a private setter in a class to validate a value before assigning it to a private field.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Validation",
+  },
+  // problem--> 185
+  {
+    id: "op-prevent-extensions-and-prototypes",
+    title: "`preventExtensions` and Prototypes",
+    description:
+      "Show that preventing extensions on an object does not prevent you from adding properties to its prototype.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Prototype Modification",
+  },
+  // problem--> 186
+  {
+    id: "op-well-known-symbol-toprimitive",
+    title: "`Symbol.toPrimitive` (Conceptual)",
+    description:
+      "Explain how to implement `[Symbol.toPrimitive]` on an object to customize its conversion to a primitive value.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 187
+  {
+    id: "op-subclassing-array",
+    title: "Subclassing `Array`",
+    description:
+      "Create a custom array class that extends `Array` and adds a new method.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Subclass",
+  },
+  // problem--> 188
+  {
+    id: "op-new-target-conceptual",
+    title: "`new.target` (Conceptual)",
+    description:
+      "Explain the `new.target` meta-property, which allows you to detect whether a function was called as a constructor.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain new.target",
+  },
+  // problem--> 189
+  {
+    id: "op-object-create-and-constructor",
+    title: "`Object.create` and the Constructor Property",
+    description:
+      "Show that an object created with `Object.create` will inherit the `.constructor` property from its prototype.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Check Constructor",
+  },
+  // problem--> 190
+  {
+    id: "op-proxy-for-caching",
+    title: "Proxy for Caching/Memoization",
+    description:
+      "Use a proxy's `get` trap to implement a cache for the results of an expensive function.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Caching Proxy",
+  },
+  // problem--> 191
+  {
+    id: "op-class-static-inheritance",
+    title: "Static Property Inheritance",
+    description:
+      "Demonstrate that static methods and properties are also inherited by subclasses.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Static Inheritance",
+  },
+  // problem--> 192
+  {
+    id: "op-multiple-inheritance-with-mixins",
+    title: "Multiple Inheritance with Mixins",
+    description:
+      "Show a pattern for simulating multiple inheritance by composing multiple mixin objects onto a class.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Multiple Mixins",
+  },
+  // problem--> 193
+  {
+    id: "op-object-seal-on-array",
+    title: "Sealing an Array",
+    description:
+      "Demonstrate the effect of `Object.seal()` on an array: existing elements can be changed, but no elements can be added or removed.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Seal Array",
+  },
+  // problem--> 194
+  {
+    id: "op-null-vs-undefined-in-properties",
+    title: "`null` vs `undefined` in Properties",
+    description:
+      "Explain the semantic difference between a property that is `undefined` (may not have been set) and `null` (intentionally has no value).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 195
+  {
+    id: "op-prototype-of-object-prototype",
+    title: "End of the Prototype Chain",
+    description:
+      "Use `Object.getPrototypeOf()` on `Object.prototype` to show that it is `null`, marking the end of the chain.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Check End of Chain",
+  },
+  // problem--> 196
+  {
+    id: "op-json-stringify-and-prototypes",
+    title: "`JSON.stringify` and Prototypes",
+    description:
+      "Demonstrate that `JSON.stringify` only serializes an object's own properties and ignores inherited properties.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Stringify",
+  },
+  // problem--> 197
+  {
+    id: "op-this-in-destructured-method",
+    title: "`this` in a Destructured Method",
+    description:
+      "Show that destructuring a method from an object and calling it as a standalone function causes `this` to be lost.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Destructured `this`",
+  },
+  // problem--> 198
+  {
+    id: "op-class-field-scoping",
+    title: "Class Field Scoping",
+    description:
+      "Demonstrate that class fields are not in scope within other field initializers that appear before them.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Test Field Scope",
+  },
+  // problem--> 199
+  {
+    id: "op-class-vs-object-literal",
+    title: "Class vs. Object Literal (Conceptual)",
+    description:
+      "Summarize when to use a class (for creating multiple instances with shared behavior) versus a simple object literal (for a single, unique object).",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 200
+  {
+    id: "op-final-review-conceptual",
+    title: "Final Review (Conceptual)",
+    description:
+      "Summarize the evolution from constructor functions to ES6 classes and explain why classes are now the standard for OOP in JavaScript.",
+    category: "Objects & Prototypes",
+    inputs: [],
+    buttonText: "Summarize OOP Evolution",
   },
 ];
