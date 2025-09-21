@@ -4457,7 +4457,43 @@ function isLetter(char: string): boolean {
 - **Character Validation**: Using regex to identify letters
 - **In-Place Modification**: Swapping characters without extra space
 `,
+
   // Problem explanation--> 184
+  "as-unique-email-addresses": `
+### 💡 Problem Breakdown
+The task is to count the number of unique email addresses that will actually receive mail, given a list of addresses and two special rules:
+1.  Dots (\`.\`) in the "local name" part (before the \`@\`) are ignored.
+2.  Anything after a plus sign (\`+\`) in the local name is ignored.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function numUniqueEmails(emails: string[]): number {
+  const uniqueEmails = new Set<string>();
+  for (const email of emails) {
+    const [local, domain] = email.split('@');
+    const normalizedLocal = local.split('+')[0].replace(/\\./g, '');
+    const normalizedEmail = \\\`\${normalizedLocal}@\${domain}\\\`;
+    uniqueEmails.add(normalizedEmail);
+  }
+  return uniqueEmails.size;
+}
+\`\`\`
+
+1.  **Initialize**: Create an empty \`Set\` called \`uniqueEmails\`.
+2.  **Loop**: Iterate through each \`email\` in the input list.
+3.  **Normalize**: For each \`email\`:
+    - Split it into \`local\` and \`domain\` parts at the \`@\`.
+    - Split the \`local\` part at the \`+\` and take the first piece.
+    - Remove all dots from this piece using a replace operation.
+    - Recombine the normalized local part with the domain part.
+4.  **Add to Set**: Add the normalized email address to the \`uniqueEmails\` set. The \`Set\` will automatically handle duplicates.
+5.  **Return Size**: The final answer is the \`.size\` of the set.
+
+### 📚 Key Concepts
+- **String Normalization**: The core of the problem is converting various email strings into a single, canonical format.
+- **\`Set\`**: The ideal data structure for counting unique items.
+`,
+  // Problem explanation--> 185
   "as-reverse-string-ii": `
 ### 💡 Problem Breakdown
 This is a string reversal problem. You need to iterate through the string in chunks of size \`2k\`. For each chunk, you reverse the first \`k\` characters.
@@ -4489,5 +4525,571 @@ function reverseStr(s: string, k: number): string {
 ### 📚 Key Concepts
 - **Chunking**: Processing an array or string in fixed-size blocks.
 - **In-place Subarray Reversal**: An efficient way to reverse a portion of an array.
+`,
+  // Problem explanation--> 186
+  "as-add-strings": `
+### 💡 Problem Breakdown
+The task is to add two large numbers that are represented as strings, without using built-in BigInt libraries.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function addStrings(num1: string, num2: string): string {
+  let i: number = num1.length - 1;
+  let j: number = num2.length - 1;
+  let carry: number = 0;
+  let result: string = '';
+  while (i >= 0 || j >= 0 || carry > 0) {
+    const digit1: number = i >= 0 ? parseInt(num1[i--]) : 0;
+    const digit2: number = j >= 0 ? parseInt(num2[j--]) : 0;
+    const sum: number = digit1 + digit2 + carry;
+    result = (sum % 10) + result;
+    carry = Math.floor(sum / 10);
+  }
+  return result;
+}
+\`\`\`
+1.  **Initialize**: Pointers \`i\` and \`j\` at the end of \`num1\` and \`num2\`, an empty \`result\` string, and a \`carry\` of 0.
+2.  **Loop**: While there are still digits in either number or there's a carry:
+    - Get the digit from \`num1\` (or 0 if \`i\` is out of bounds).
+    - Get the digit from \`num2\` (or 0 if \`j\` is out of bounds).
+    - Calculate the \`sum\` of these two digits plus the \`carry\`.
+    - The new digit to be added to the result is \`sum % 10\`. Prepend it to the \`result\` string.
+    - The new \`carry\` is \`Math.floor(sum / 10)\`.
+    - Decrement the pointers \`i\` and \`j\`.
+3.  Return the \`result\` string.
+
+### 📚 Key Concepts
+- **Manual Arithmetic Simulation**: The algorithm directly models the process of column-by-column addition taught in school.
+`,
+
+  // Problem explanation--> 187
+  "as-add-binary": `
+### 💡 Problem Breakdown
+This problem is very similar to "Add Strings," but the arithmetic is in base-2 (binary).
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function addBinary(a: string, b: string): string {
+  let i: number = a.length - 1;
+  let j: number = b.length - 1;
+  let carry: number = 0;
+  let result: string = '';
+  while (i >= 0 || j >= 0 || carry > 0) {
+    const bitA: number = i >= 0 ? parseInt(a[i--]) : 0;
+    const bitB: number = j >= 0 ? parseInt(b[j--]) : 0;
+    const sum: number = bitA + bitB + carry;
+    result = (sum % 2) + result;
+    carry = Math.floor(sum / 2);
+  }
+  return result;
+}
+\`\`\`
+1.  **Initialize**: Pointers \`i\` and \`j\` at the end of the binary strings, an empty \`result\` string, and a \`carry\` of 0.
+2.  **Loop**: While there are digits or a carry:
+    - Get the bit from \`a\` and \`b\` (as numbers 0 or 1).
+    - Calculate \`sum = bitA + bitB + carry\`.
+    - The new digit for the result is \`sum % 2\`. Prepend it.
+    - The new carry is \`Math.floor(sum / 2)\`.
+    - Decrement pointers.
+3.  Return the \`result\`.
+
+### 📚 Key Concepts
+- **Base-2 Arithmetic**: The core logic is adapted for binary.
+- **Manual Arithmetic Simulation**: The same right-to-left summation pattern applies.
+`,
+
+  // Problem explanation--> 188
+  "as-longest-common-substring": `
+### 💡 Problem Breakdown
+This is a classic dynamic programming problem. The goal is to find the longest substring that is common to two given strings. Unlike a subsequence, a substring must be contiguous.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function longestCommonSubstring(str1: string, str2: string): number {
+  const m = str1.length;
+  const n = str2.length;
+  const dp: number[][] = Array.from({length: m+1}, () => Array(n+1).fill(0));
+  let maxLength = 0;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (str1[i-1] === str2[j-1]) {
+        dp[i][j] = 1 + dp[i-1][j-1];
+        maxLength = Math.max(maxLength, dp[i][j]);
+      } else {
+        dp[i][j] = 0;
+      }
+    }
+  }
+  return maxLength;
+}
+\`\`\`
+1.  **DP State**: Create a table \`dp\` where \`dp[i][j]\` stores the length of the longest common substring that *ends* at \`str1[i-1]\` and \`str2[j-1]\`.
+2.  **Initialization**: Fill the table with zeros. Keep a separate \`maxLength\` variable.
+3.  **Fill DP Table**: Use nested loops to iterate through the strings.
+4.  **Transition**:
+    - If \`str1[i-1] === str2[j-1]\`: The common substring is extended by one. Set \`dp[i][j] = 1 + dp[i-1][j-1]\`. Update \`maxLength\` if this new length is greater.
+    - If the characters do not match, the common substring ending at this point is broken. Set \`dp[i][j] = 0\`.
+5.  The final answer is \`maxLength\`.
+
+### 📚 Key Concepts
+- **Dynamic Programming**: The solution builds upon the results of smaller subproblems.
+- **Substring vs. Subsequence**: The DP transition is different. For a substring, a mismatch resets the count to zero.
+`,
+
+  // Problem explanation--> 189
+  "as-kmp-string-search": `
+### 💡 Problem Breakdown
+The Knuth-Morris-Pratt (KMP) algorithm is a highly efficient string searching algorithm that achieves O(n+m) time complexity. It avoids redundant comparisons by preprocessing the "needle" (pattern) to understand its internal structure.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function computeLPS(pattern: string): number[] {
+  const lps: number[] = new Array(pattern.length).fill(0);
+  let len = 0;
+  let i = 1;
+  while (i < pattern.length) {
+    if (pattern[i] === pattern[len]) {
+      len++;
+      lps[i] = len;
+      i++;
+    } else {
+      if (len !== 0) {
+        len = lps[len - 1];
+      } else {
+        lps[i] = 0;
+        i++;
+      }
+    }
+  }
+  return lps;
+}
+
+function kmpSearch(text: string, pattern: string): number {
+  const lps = computeLPS(pattern);
+  let i = 0; // text pointer
+  let j = 0; // pattern pointer
+  while (i < text.length) {
+    if (pattern[j] === text[i]) {
+      j++;
+      i++;
+    }
+    if (j === pattern.length) {
+      return i - j; // Found at index i - j
+    } else if (i < text.length && pattern[j] !== text[i]) {
+      if (j !== 0) {
+        j = lps[j - 1];
+      } else {
+        i++;
+      }
+    }
+  }
+  return -1; // Not found
+}
+\`\`\`
+1.  **Preprocessing (LPS Array)**:
+    - Create a "Longest Proper Prefix which is also a Suffix" (LPS) array for the pattern.
+    - \`lps[i]\` stores the length of the longest proper prefix of \`pattern[0...i]\` which is also a suffix of \`pattern[0...i]\`.
+    - This array tells us how many characters to "skip" forward on a mismatch.
+2.  **Searching**:
+    - Use two pointers, \`i\` for the text and \`j\` for the pattern.
+    - If \`text[i] === pattern[j]\`, increment both.
+    - If \`j\` reaches the end of the pattern, a match is found.
+    - If a mismatch occurs after some characters have matched (\`j > 0\`), instead of resetting \`j\` to 0, we consult the LPS array: \`j = lps[j-1]\`. This moves the pattern pointer to the end of the prefix that we know already matches, avoiding re-checking those characters.
+
+### 📚 Key Concepts
+- **String Searching Algorithms**: KMP is a foundational algorithm in this area.
+- **Prefix/Suffix Analysis**: The preprocessing step is the core innovation of the algorithm.
+`,
+
+  // Problem explanation--> 190
+  "as-rabin-karp-algorithm": `
+### 💡 Problem Breakdown
+The Rabin-Karp algorithm is another string-searching algorithm. Its key idea is to use **hashing** to quickly compare substrings. Instead of comparing characters one by one, it compares the hash value of the pattern with the hash value of substrings in the text.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function rabinKarp(text: string, pattern: string): number {
+  if (pattern.length > text.length) return -1;
+  const base = 31; // A prime base
+  const mod = 1000000007; // A large prime modulus
+  let patternHash = 0;
+  let textHash = 0;
+  let power = 1;
+
+  // Calculate power for rolling hash
+  for (let i = 0; i < pattern.length - 1; i++) {
+    power = (power * base) % mod;
+  }
+
+  // Calculate initial hashes
+  for (let i = 0; i < pattern.length; i++) {
+    patternHash = (patternHash * base + pattern.charCodeAt(i)) % mod;
+    textHash = (textHash * base + text.charCodeAt(i)) % mod;
+  }
+
+  for (let i = 0; i <= text.length - pattern.length; i++) {
+    if (patternHash === textHash) {
+      // Check for collision
+      if (text.substring(i, i + pattern.length) === pattern) {
+        return i;
+      }
+    }
+    if (i < text.length - pattern.length) {
+      // Rolling hash update
+      textHash = (textHash - text.charCodeAt(i) * power) % mod;
+      textHash = (textHash * base + text.charCodeAt(i + pattern.length)) % mod;
+      if (textHash < 0) textHash += mod;
+    }
+  }
+  return -1;
+}
+\`\`\`
+1.  **Hashing**: Choose a suitable hash function. A "rolling hash" is used, which allows the hash of the next substring to be calculated efficiently in O(1) time from the hash of the previous substring.
+2.  **Calculate Pattern Hash**: Calculate the hash value for the \`pattern\`.
+3.  **Slide and Compare**:
+    - Calculate the hash for the first substring of the text.
+    - Slide a window through the text. In each step, efficiently update the rolling hash.
+    - If the hash of the current window matches the pattern's hash, it's a *potential* match.
+    - **Collision Check**: Because different strings can have the same hash (a "collision"), you must then do a character-by-character comparison to confirm the match is real.
+
+### 📚 Key Concepts
+- **Hashing**: The core technique used for fast comparison.
+- **Rolling Hash**: An efficient hash function that allows for O(1) updates as the window slides.
+`,
+
+  // Problem explanation--> 191
+  "as-manachers-algorithm": `
+### 💡 Problem Breakdown
+Manacher's algorithm is a highly advanced and clever algorithm that finds the longest palindromic substring in a string in O(n) linear time, which is an improvement over the O(n^2) "Expand from Center" approach.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function longestPalindrome(s: string): string {
+  const transformed = '^#' + s.split('').join('#') + '#$';
+  const P: number[] = new Array(transformed.length).fill(0);
+  let C = 0, R = 0;
+  for (let i = 1; i < transformed.length - 1; i++) {
+    const mirror = 2 * C - i;
+    if (i < R) P[i] = Math.min(R - i, P[mirror]);
+    while (transformed[i + (1 + P[i])] === transformed[i - (1 + P[i])]) {
+      P[i]++;
+    }
+    if (i + P[i] > R) {
+      C = i;
+      R = i + P[i];
+    }
+  }
+  let maxLen = 0;
+  let centerIndex = 0;
+  for (let i = 1; i < P.length - 1; i++) {
+    if (P[i] > maxLen) {
+      maxLen = P[i];
+      centerIndex = i;
+    }
+  }
+  const start = (centerIndex - maxLen) / 2;
+  return s.substring(start, start + maxLen);
+}
+\`\`\`
+1.  **Transform String**: The input string is transformed to handle even-length palindromes easily. This is done by inserting a special character (like '#') between every character (e.g., "aba" -> "#a#b#a#"). Now, every palindrome has a unique center.
+2.  **Palindrome Radii Array**: An array \`P\` is maintained, where \`P[i]\` stores the radius of the palindrome centered at \`i\` in the transformed string.
+3.  **Leverage Symmetry**: The key insight is to reuse previous calculations. It keeps track of the \`center\` and \`right\` boundary of the palindrome found so far that extends farthest to the right. For a new position \`i\`, it can use the symmetry of palindromes to intelligently initialize the palindrome radius \`P[i]\` based on its mirror image, avoiding many redundant character comparisons.
+
+### 📚 Key Concepts
+- **Palindrome Symmetry**: The algorithm's efficiency comes from exploiting the symmetrical nature of palindromes.
+`,
+
+  // Problem explanation--> 192
+  "as-z-algorithm": `
+### 💡 Problem Breakdown
+The Z-Algorithm is a linear time string processing algorithm. It preprocesses a string \`S\` to create a "Z-array". The Z-array is an array \`Z\` where \`Z[i]\` is the length of the longest substring starting from \`S[i]\` which is also a prefix of \`S\`.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function zAlgorithm(s: string): number[] {
+  const n = s.length;
+  const Z: number[] = new Array(n).fill(0);
+  let L = 0, R = 0;
+  for (let i = 1; i < n; i++) {
+    if (i < R) {
+      Z[i] = Math.min(R - i, Z[i - L]);
+    }
+    while (i + Z[i] < n && s[Z[i]] === s[i + Z[i]]) {
+      Z[i]++;
+    }
+    if (i + Z[i] > R) {
+      L = i;
+      R = i + Z[i];
+    }
+  }
+  return Z;
+}
+\`\`\`
+The Z-array can be constructed in O(n) time by maintaining a "Z-box" \`[L, R]\`, which is the interval that corresponds to the prefix-substring with the rightmost endpoint found so far.
+- When calculating \`Z[i]\`, if \`i\` is outside the current Z-box, a naive character-by-character comparison is done to find the new Z-box.
+- If \`i\` is *inside* the Z-box, we can use the previously computed Z-values of its mirror position to initialize \`Z[i]\`, potentially avoiding many comparisons.
+
+Once the Z-array is built for the string \`pattern + '#' + text\`, any position where the Z-value equals the length of the pattern indicates a match.
+
+### 📚 Key Concepts
+- **Z-array**: A data structure that encodes information about prefixes of a string.
+- **String Searching**: The Z-algorithm is a powerful tool for efficient pattern matching.
+`,
+
+  // Problem explanation--> 193
+  "as-suffix-array-conceptual": `
+### 💡 Problem Breakdown
+A **Suffix Array** is a sorted array of all suffixes of a string. It's a powerful data structure for various string problems, simpler to implement than a Suffix Tree but still very capable.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function createSuffixArray(s: string): number[] {
+  const n = s.length;
+  const suffixes: { index: number; suffix: string }[] = [];
+  for (let i = 0; i < n; i++) {
+    suffixes.push({ index: i, suffix: s.substring(i) });
+  }
+  suffixes.sort((a, b) => a.suffix.localeCompare(b.suffix));
+  return suffixes.map(suf => suf.index);
+}
+\`\`\`
+1.  **Generate Suffixes**: For a string "banana", the suffixes are: "banana", "anana", "nana", "ana", "na", "a".
+2.  **Sort Suffixes**: Sort these suffixes lexicographically.
+3.  **Store Indices**: The suffix array itself stores the starting indices of these sorted suffixes in the original string.
+4.  **LCP Array**: It's often used alongside an LCP (Longest Common Prefix) array. The LCP array stores the length of the longest common prefix between adjacent suffixes in the sorted suffix array. The LCP array can be constructed in linear time.
+
+These two arrays together can be used to solve problems like finding the longest repeated substring (the maximum value in the LCP array) or the longest common substring of two strings.
+
+### 📚 Key Concepts
+- **Suffix Array**: A data structure for advanced string processing.
+- **LCP Array**: A companion array that enhances the power of the suffix array.
+`,
+
+  // Problem explanation--> 194
+  "as-suffix-tree-conceptual": `
+### 💡 Problem Breakdown
+A **Suffix Tree** is a more complex data structure than a Suffix Array but is extremely powerful. It is a compressed trie that contains all the suffixes of a given string.
+
+### ⚙️ Solution Walkthrough
+Suffix Trees can be built in linear time using advanced algorithms like Ukkonen's algorithm. Once built, they can answer many complex string queries very quickly, such as finding the longest repeated substring, longest common substring, or longest palindromic substring, often in linear time relative to the query size.
+
+- Each path from the root to a leaf node represents one suffix of the string.
+- The edges are labeled with substrings, not single characters, to achieve compression.
+- A special character (like '$') is usually appended to the string to ensure every suffix ends at a leaf node.
+
+### 📚 Key Concepts
+- **Suffix Tree**: A compressed trie of all suffixes.
+- **Advanced String Algorithms**: Represents the pinnacle of string processing data structures.
+`,
+
+  // Problem explanation--> 195
+  "as-aho-corasick-algorithm": `
+### 💡 Problem Breakdown
+The Aho-Corasick algorithm is a string-searching algorithm that is exceptionally efficient at finding all occurrences of multiple patterns (a dictionary of keywords) within a text simultaneously.
+
+### ⚙️ Solution Walkthrough
+The algorithm works by building a sophisticated state machine, which is essentially a Trie with additional "failure links."
+1.  **Build Trie**: Insert all the keywords from the dictionary into a Trie.
+2.  **Build Failure Links**: This is the key step. For each node in the Trie, a failure link points to the longest proper suffix of the string represented by that node which is also a prefix of some keyword. These links are built using a Breadth-First Search on the Trie.
+3.  **Search**: Process the input text character by character through the state machine.
+    - If the character matches a child of the current node, transition to that child.
+    - If there's no match, follow the failure links until a match is found or you reach the root.
+    - At each node you visit, check if it marks the end of a keyword. If so, you've found a match.
+
+### 📚 Key Concepts
+- **Aho-Corasick**: A dictionary-matching algorithm.
+- **Trie**: The base data structure.
+- **Finite Automata**: The algorithm effectively builds a finite automaton to recognize all keywords at once.
+`,
+
+  // Problem explanation--> 196
+  "as-longest-palindromic-subsequence": `
+### 💡 Problem Breakdown
+This is a dynamic programming problem. A "subsequence" does not have to be contiguous. The task is to find the longest subsequence of a string that is also a palindrome. For "bbbab", the longest palindromic subsequence is "bbbb" (length 4).
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function longestPalindromeSubseq(s: string): number {
+  const n = s.length;
+  const dp: number[][] = Array.from({length: n}, () => Array(n).fill(0));
+  for (let i = 0; i < n; i++) {
+    dp[i][i] = 1;
+  }
+  for (let len = 2; len <= n; len++) {
+    for (let i = 0; i <= n - len; i++) {
+      const j = i + len - 1;
+      if (s[i] === s[j]) {
+        dp[i][j] = 2 + dp[i + 1][j - 1];
+      } else {
+        dp[i][j] = Math.max(dp[i + 1][j], dp[i][j - 1]);
+      }
+    }
+  }
+  return dp[0][n - 1];
+}
+\`\`\`
+The solution is a clever application of the "Longest Common Subsequence" (LCS) algorithm. The longest palindromic subsequence of a string \`s\` is the same as the longest common subsequence between \`s\` and its reverse, \`reverse(s)\`.
+1.  **Reverse**: Create a reversed version of the input string \`s\`.
+2.  **LCS**: Apply the standard LCS algorithm (using a 2D DP table) to the original string and the reversed string.
+3.  The result of the LCS algorithm is the answer.
+
+### 📚 Key Concepts
+- **Problem Reduction**: Transforming the problem into another, well-known problem (LCS).
+- **Dynamic Programming**: The underlying algorithm used to solve LCS.
+`,
+
+  // Problem explanation--> 197
+  "as-edit-distance": `
+### 💡 Problem Breakdown
+Edit distance (specifically, Levenshtein distance) is a measure of the difference between two strings. It's the minimum number of single-character edits (insertions, deletions, or substitutions) required to change one string into the other.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function minDistance(word1: string, word2: string): number {
+  const m = word1.length;
+  const n = word2.length;
+  const dp: number[][] = Array.from({length: m+1}, () => Array(n+1).fill(0));
+  for (let i = 0; i <= m; i++) {
+    dp[i][0] = i;
+  }
+  for (let j = 0; j <= n; j++) {
+    dp[0][j] = j;
+  }
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (word1[i-1] === word2[j-1]) {
+        dp[i][j] = dp[i-1][j-1];
+      } else {
+        dp[i][j] = 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+      }
+    }
+  }
+  return dp[m][n];
+}
+\`\`\`
+1.  **DP State**: Create a 2D DP table, \`dp\`, where \`dp[i][j]\` is the edit distance between the first \`i\` characters of \`word1\` and the first \`j\` characters of \`word2\`.
+2.  **Initialization**: Initialize the first row and column. The distance from an empty string to a string of length \`j\` is \`j\` insertions.
+3.  **Fill DP Table**: Use nested loops.
+4.  **Transition**:
+    - If \`word1[i-1] === word2[j-1]\`, no operation is needed for these characters. The cost is the same as the cost for the strings without them: \`dp[i][j] = dp[i-1][j-1]\`.
+    - If they are different, we must perform one operation. We take the minimum cost of the three possibilities:
+      - Deletion: \`dp[i-1][j]\`
+      - Insertion: \`dp[i][j-1]\`
+      - Substitution: \`dp[i-1][j-1]\`
+      And we add 1 for the cost of the operation.
+5.  The final answer is \`dp[word1.length][word2.length]\`.
+
+### 📚 Key Concepts
+- **Dynamic Programming**: The optimal solution is built from the optimal solutions of its subproblems.
+`,
+
+  // Problem explanation--> 198
+  "as-longest-common-subsequence": `
+### 💡 Problem Breakdown
+The Longest Common Subsequence (LCS) problem is to find the longest subsequence common to two sequences (e.g., two strings). A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function longestCommonSubsequence(text1: string, text2: string): number {
+  const m = text1.length;
+  const n = text2.length;
+  const dp: number[][] = Array.from({length: m+1}, () => Array(n+1).fill(0));
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (text1[i-1] === text2[j-1]) {
+        dp[i][j] = 1 + dp[i-1][j-1];
+      } else {
+        dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+      }
+    }
+  }
+  return dp[m][n];
+}
+\`\`\`
+1.  **DP State**: \`dp[i][j]\` will store the length of the LCS for \`text1\`'s prefix of length \`i\` and \`text2\`'s prefix of length \`j\`.
+2.  **Fill DP Table**: Use nested loops.
+3.  **Transition**:
+    - If \`text1[i-1] === text2[j-1]\`, the last characters match. They are part of the LCS. So, \`dp[i][j] = 1 + dp[i-1][j-1]\`.
+    - If they do not match, the LCS is the best we can do by either ignoring the last character of \`text1\` or ignoring the last character of \`text2\`. So, \`dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1])\`.
+4.  The final answer is the value in the bottom-right corner of the table.
+
+### 📚 Key Concepts
+- **Dynamic Programming**: A foundational DP problem with a clear recursive structure.
+`,
+
+  // Problem explanation--> 199
+  "as-minimum-ascii-delete-sum": `
+### 💡 Problem Breakdown
+Given two strings, the goal is to make them equal by deleting characters from either string. The cost of deleting a character is its ASCII value. The task is to find the minimum total cost of deletions to make the strings equal.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function minimumDeleteSum(s1: string, s2: string): number {
+  const m = s1.length;
+  const n = s2.length;
+  const dp: number[][] = Array.from({length: m+1}, () => Array(n+1).fill(0));
+  for (let i = 1; i <= m; i++) {
+    dp[i][0] = dp[i-1][0] + s1.charCodeAt(i-1);
+  }
+  for (let j = 1; j <= n; j++) {
+    dp[0][j] = dp[0][j-1] + s2.charCodeAt(j-1);
+  }
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (s1[i-1] === s2[j-1]) {
+        dp[i][j] = dp[i-1][j-1];
+      } else {
+        dp[i][j] = Math.min(
+          dp[i-1][j] + s1.charCodeAt(i-1),
+          dp[i][j-1] + s2.charCodeAt(j-1)
+        );
+      }
+    }
+  }
+  return dp[m][n];
+}
+\`\`\`
+This problem can be reframed. The characters that *remain* in both strings must form a common subsequence. To minimize the sum of deleted characters, we want to maximize the sum of the common subsequence that we *keep*.
+1.  **Find LCS with Max ASCII Sum**: This is a variation of the Longest Common Subsequence problem. The DP state \`dp[i][j]\` will store the maximum ASCII sum of a common subsequence between prefixes of the two strings.
+    - If characters match, \`dp[i][j] = s1.charCodeAt(i-1) + dp[i-1][j-1]\`.
+    - If they don't match, \`dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1])\`.
+2.  **Calculate Total Sum**: Calculate the sum of ASCII values of all characters in both original strings.
+3.  **Final Answer**: The minimum delete sum is \`(totalSum) - 2 * (maxAsciiSumOfLCS)\`. We multiply by 2 because each character in the common subsequence was counted once in each string's total sum.
+
+### 📚 Key Concepts
+- **Dynamic Programming**: An extension of the standard LCS problem.
+- **Problem Reframing**: The insight is to switch from minimizing deletions to maximizing what is kept.
+`,
+
+  // Problem explanation--> 200
+  "as-integer-break": `
+### 💡 Problem Breakdown
+Given an integer \`n\`, the task is to break it into a sum of at least two positive integers, and then maximize the product of those integers.
+
+### ⚙️ Solution Walkthrough
+\`\`\`typescript
+function integerBreak(n: number): number {
+  if (n <= 3) return n - 1;
+  const dp: number[] = new Array(n + 1).fill(0);
+  dp[2] = 2;
+  dp[3] = 3;
+  for (let i = 4; i <= n; i++) {
+    for (let j = 2; j <= i / 2; j++) {
+      dp[i] = Math.max(dp[i], dp[j] * dp[i - j]);
+    }
+  }
+  return dp[n];
+}
+\`\`\`
+This problem can be solved with dynamic programming, but it also has a mathematical insight that leads to a greedy O(n) solution.
+- The best numbers to break \`n\` into are 2s and 3s. Any number greater than 4 can be broken down into smaller parts that give a larger product (e.g., 6 is better as 3+3 (product 9) than 2+4 (product 8)). A 4 is equivalent to 2+2 (product 4).
+- It's always better to use 3s than 2s where possible (e.g., for 6, 3+3 gives product 9, while 2+2+2 gives product 8).
+- **Greedy Strategy**:
+  1. Handle small base cases for n=2 and n=3.
+  2. While \`n > 4\`, repeatedly subtract 3 and multiply the result by 3.
+  3. The remaining \`n\` will be 2, 3, or 4. Multiply the result by this remaining \`n\`.
+
+### 📚 Key Concepts
+- **Dynamic Programming / Mathematical Insight**: A problem that can be solved with a standard DP approach but also has a more efficient greedy solution based on mathematical properties.
 `,
 };
