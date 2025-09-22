@@ -14,7 +14,7 @@ import { explanations as arraysStringsExplanations } from "./arrays-and-strings/
 
 import { problems as objectsPrototypesProblems } from "./objects-and-prototypes/problems";
 import { solvers as objectsPrototypesSolvers } from "./objects-and-prototypes/solvers";
-import { explanations as objectsPrototypesExplanations } from "./objects-and-prototypes/explanations";
+// import { explanations as objectsPrototypesExplanations } from "./objects-and-prototypes/explanations";
 
 import { problems as classesOopProblems } from "./classes-and-oop/problems";
 import { solvers as classesOopSolvers } from "./classes-and-oop/solvers";
@@ -107,7 +107,7 @@ export const staticExplanations: Record<string, string> = {
   ...beginnerBasicsExplanations,
   ...functionsScopeExplanations,
   ...arraysStringsExplanations,
-  ...objectsPrototypesExplanations,
+  // ...objectsPrototypesExplanations,
   ...classesOopExplanations,
   ...closuresLexicalEnvironmentExplanations,
   ...recursionExplanations,
