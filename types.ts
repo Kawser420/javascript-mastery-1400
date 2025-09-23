@@ -47,7 +47,7 @@ export type Category =
   | "Control Flow and Loops"
   | "Arrays & Strings"
   | "Objects & Prototypes"
-  | "Math & Number Challenges"
+  | "Math and Number Challenges"
   | "Date & Time Handling"
   | "Type & Value Mastery"
   | "Error Handling & Debugging"
