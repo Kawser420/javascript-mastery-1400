@@ -1,49 +1,143 @@
-// problem--> 01
-// import { Problem } from "../types";
+// import { Problem } from "../../types";
 
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
-  // --- Fundamentals ---
   // problem--> 01
   {
-    id: "mn-add-two-numbers",
+    id: "mnc-add-two-numbers",
     title: "Add Two Numbers",
     description:
       "Write a function that takes two numbers and returns their sum.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "num1", label: "Number 1", type: "number", defaultValue: 10 },
-      { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
+      { id: "num1", label: "Number 1", type: "number", defaultValue: 5 },
+      { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
-    buttonText: "Sum",
+    buttonText: "Add",
   },
   // problem--> 02
   {
-    id: "mn-check-even-odd",
+    id: "mnc-check-even-or-odd",
     title: "Check Even or Odd",
     description:
-      "Write a function that takes an integer and returns 'Even' or 'Odd'.",
+      "Write a function that takes an integer and returns 'Even' if it's even and 'Odd' if it's odd.",
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 7 }],
     buttonText: "Check",
   },
   // problem--> 03
   {
-    id: "mn-area-of-rectangle",
-    title: "Area of a Rectangle",
+    id: "mnc-find-max-number",
+    title: "Find Maximum of Two Numbers",
     description:
-      "Write a function that calculates the area of a rectangle given its width and height.",
+      "Write a function that takes two numbers and returns the larger one without using `Math.max()`.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "width", label: "Width", type: "number", defaultValue: 10 },
-      { id: "height", label: "Height", type: "number", defaultValue: 4 },
+      { id: "num1", label: "Number 1", type: "number", defaultValue: 15 },
+      { id: "num2", label: "Number 2", type: "number", defaultValue: 8 },
     ],
-    buttonText: "Calculate Area",
+    buttonText: "Find Maximum",
   },
   // problem--> 04
   {
-    id: "mn-celsius-to-fahrenheit",
+    id: "mnc-factorial",
+    title: "Factorial of a Number",
+    description:
+      "Write a function to calculate the factorial of a non-negative integer (n!). The factorial is the product of all positive integers up to that number.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
+    buttonText: "Calculate Factorial",
+  },
+  // problem--> 05
+  {
+    id: "mnc-is-prime",
+    title: "Check if a Number is Prime",
+    description:
+      "Write a function that takes a number and returns true if it's a prime number, false otherwise. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 13 }],
+    buttonText: "Check Prime",
+  },
+  // problem--> 06
+  {
+    id: "mnc-fibonacci-sequence",
+    title: "Nth Fibonacci Number",
+    description:
+      "Write a function to find the Nth number in the Fibonacci sequence (0, 1, 1, 2, 3, 5, ...).",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "num",
+        label: "Nth Number (0-indexed)",
+        type: "number",
+        defaultValue: 10,
+      },
+    ],
+    buttonText: "Find Fibonacci",
+  },
+  // problem--> 07
+  {
+    id: "mnc-power-of-number",
+    title: "Power of a Number",
+    description:
+      "Write a function that calculates a base number raised to the power of an exponent without using `Math.pow()` or the `**` operator.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "base", label: "Base", type: "number", defaultValue: 3 },
+      { id: "exponent", label: "Exponent", type: "number", defaultValue: 4 },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 08
+  {
+    id: "mnc-sum-of-digits",
+    title: "Sum of Digits",
+    description:
+      "Write a function that takes an integer and returns the sum of its digits.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Number", type: "number", defaultValue: 12345 },
+    ],
+    buttonText: "Sum Digits",
+  },
+  // problem--> 09
+  {
+    id: "mnc-reverse-number",
+    title: "Reverse a Number",
+    description:
+      "Write a function that reverses the digits of an integer, preserving the sign.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Number", type: "number", defaultValue: -12345 },
+    ],
+    buttonText: "Reverse",
+  },
+  // problem--> 10
+  {
+    id: "mnc-palindrome-number",
+    title: "Palindrome Number Check",
+    description:
+      "Write a function that checks if a number is a palindrome (reads the same forwards and backwards) without converting it to a string.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 121 }],
+    buttonText: "Check Palindrome",
+  },
+  // problem--> 11
+  {
+    id: "mnc-area-of-circle",
+    title: "Area of a Circle",
+    description:
+      "Write a function to calculate the area of a circle (π * r^2) given its radius.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "radius", label: "Radius", type: "number", defaultValue: 10 },
+    ],
+    buttonText: "Calculate Area",
+  },
+  // problem--> 12
+  {
+    id: "mnc-celsius-to-fahrenheit",
     title: "Celsius to Fahrenheit",
     description:
       "Write a function to convert a temperature from Celsius to Fahrenheit. Formula: (C * 9/5) + 32.",
@@ -53,130 +147,52 @@ export const problems: Problem[] = [
     ],
     buttonText: "Convert",
   },
-  // problem--> 05
-  {
-    id: "mn-factorial-iterative",
-    title: "Factorial of a Number (Iterative)",
-    description:
-      "Write a function to calculate the factorial of a non-negative integer (n!) using a loop.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
-    buttonText: "Calculate Factorial",
-  },
-  // problem--> 06
-  {
-    id: "mn-is-prime",
-    title: "Check for Prime Number",
-    description:
-      "Write a function to determine if a given number is a prime number.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 13 }],
-    buttonText: "Check Prime",
-  },
-  // problem--> 07
-  {
-    id: "mn-fibonacci-iterative",
-    title: "Nth Fibonacci Number (Iterative)",
-    description:
-      "Write an efficient iterative function to find the Nth number in the Fibonacci sequence.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n", label: "Nth number", type: "number", defaultValue: 10 },
-    ],
-    buttonText: "Find Fibonacci",
-  },
-  // problem--> 08
-  {
-    id: "mn-find-max-number",
-    title: "Find Maximum of Three Numbers",
-    description:
-      "Write a function that returns the largest of three given numbers.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num1", label: "Number 1", type: "number", defaultValue: 10 },
-      { id: "num2", label: "Number 2", type: "number", defaultValue: 25 },
-      { id: "num3", label: "Number 3", type: "number", defaultValue: 15 },
-    ],
-    buttonText: "Find Max",
-  },
-  // problem--> 09
-  {
-    id: "mn-power-of-number",
-    title: "Power of a Number",
-    description:
-      "Write a function that calculates a base number raised to a power of an exponent, without using `**` or `Math.pow`.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "base", label: "Base", type: "number", defaultValue: 3 },
-      { id: "exponent", label: "Exponent", type: "number", defaultValue: 4 },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 10
-  {
-    id: "mn-find-square-root",
-    title: "Calculate Square Root",
-    description:
-      "Use a built-in method to find the square root of a non-negative number.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 81 }],
-    buttonText: "Get Square Root",
-  },
-  // problem--> 11
-  {
-    id: "mn-is-integer",
-    title: "Check if Number is an Integer",
-    description: "Write a function to check if a given value is an integer.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num", label: "Value", type: "text", defaultValue: "123.45" },
-    ],
-    buttonText: "Check Integer",
-  },
-  // problem--> 12
-  {
-    id: "mn-round-to-decimal-places",
-    title: "Round to N Decimal Places",
-    description:
-      "Write a function to round a number to a specified number of decimal places.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num", label: "Number", type: "number", defaultValue: 3.14159 },
-      {
-        id: "places",
-        label: "Decimal Places",
-        type: "number",
-        defaultValue: 2,
-      },
-    ],
-    buttonText: "Round",
-  },
   // problem--> 13
   {
-    id: "mn-sum-of-digits",
-    title: "Sum of Digits",
+    id: "mnc-fahrenheit-to-celsius",
+    title: "Fahrenheit to Celsius",
     description:
-      "Write a function that calculates the sum of the digits of a given number.",
+      "Write a function to convert a temperature from Fahrenheit to Celsius. Formula: (F - 32) * 5/9.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "num", label: "Number", type: "number", defaultValue: 12345 },
+      {
+        id: "fahrenheit",
+        label: "Fahrenheit",
+        type: "number",
+        defaultValue: 68,
+      },
     ],
-    buttonText: "Sum Digits",
+    buttonText: "Convert",
   },
   // problem--> 14
   {
-    id: "mn-is-perfect-square",
-    title: "Check for Perfect Square",
+    id: "mnc-is-integer",
+    title: "Check if Integer",
     description:
-      "Write a function to determine if a given number is a perfect square.",
+      "Write a function that checks if a given value is an integer without using `Number.isInteger()`.",
     category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 49 }],
+    inputs: [
+      { id: "value", label: "Value", type: "text", defaultValue: "10.5" },
+    ],
     buttonText: "Check",
   },
   // problem--> 15
   {
-    id: "mn-mean-of-array",
-    title: "Calculate Mean (Average)",
+    id: "mnc-random-number-in-range",
+    title: "Random Number in a Range",
+    description:
+      "Write a function to generate a random integer between a min and max value (inclusive).",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "min", label: "Minimum", type: "number", defaultValue: 1 },
+      { id: "max", label: "Maximum", type: "number", defaultValue: 10 },
+    ],
+    buttonText: "Generate",
+  },
+  // problem--> 16
+  {
+    id: "mnc-mean-of-array",
+    title: "Mean of an Array",
     description:
       "Write a function that calculates the mean (average) of numbers in an array.",
     category: "Math and Number Challenges",
@@ -185,34 +201,34 @@ export const problems: Problem[] = [
         id: "arr",
         label: "Array of numbers",
         type: "text",
-        defaultValue: "1,2,3,4,5",
+        defaultValue: "10,20,30,40,50",
       },
     ],
     buttonText: "Calculate Mean",
   },
-  // problem--> 16
+  // problem--> 17
   {
-    id: "mn-median-of-array",
-    title: "Calculate Median",
+    id: "mnc-median-of-array",
+    title: "Median of an Array",
     description:
-      "Write a function that calculates the median of numbers in an array.",
+      "Write a function that calculates the median of numbers in an array. The median is the middle value in a sorted list of numbers.",
     category: "Math and Number Challenges",
     inputs: [
       {
         id: "arr",
         label: "Array of numbers",
         type: "text",
-        defaultValue: "7,2,10,1,5",
+        defaultValue: "7,3,1,9,4",
       },
     ],
     buttonText: "Calculate Median",
   },
-  // problem--> 17
+  // problem--> 18
   {
-    id: "mn-mode-of-array",
-    title: "Calculate Mode",
+    id: "mnc-mode-of-array",
+    title: "Mode of an Array",
     description:
-      "Write a function that finds the mode (most frequent number) of an array.",
+      "Write a function that finds the mode (most frequent number or numbers) of an array.",
     category: "Math and Number Challenges",
     inputs: [
       {
@@ -224,79 +240,58 @@ export const problems: Problem[] = [
     ],
     buttonText: "Calculate Mode",
   },
-  // problem--> 18
+  // problem--> 19
   {
-    id: "mn-greatest-common-divisor",
+    id: "mnc-greatest-common-divisor",
     title: "Greatest Common Divisor (GCD)",
     description:
       "Write a function to find the greatest common divisor of two numbers using the Euclidean algorithm.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "a", label: "Number 1", type: "number", defaultValue: 48 },
-      { id: "b", label: "Number 2", type: "number", defaultValue: 18 },
+      { id: "num1", label: "Number 1", type: "number", defaultValue: 48 },
+      { id: "num2", label: "Number 2", type: "number", defaultValue: 18 },
     ],
     buttonText: "Find GCD",
   },
-  // problem--> 19
+  // problem--> 20
   {
-    id: "mn-least-common-multiple",
+    id: "mnc-least-common-multiple",
     title: "Least Common Multiple (LCM)",
     description:
       "Write a function to find the least common multiple of two numbers.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "a", label: "Number 1", type: "number", defaultValue: 12 },
-      { id: "b", label: "Number 2", type: "number", defaultValue: 18 },
+      { id: "num1", label: "Number 1", type: "number", defaultValue: 15 },
+      { id: "num2", label: "Number 2", type: "number", defaultValue: 20 },
     ],
     buttonText: "Find LCM",
   },
-  // problem--> 20
-  {
-    id: "mn-is-palindrome-number",
-    title: "Check for Palindrome Number",
-    description:
-      "Write a function that checks if a given number is a palindrome (reads the same forwards and backward).",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num", label: "Number", type: "number", defaultValue: 12321 },
-    ],
-    buttonText: "Check",
-  },
   // problem--> 21
   {
-    id: "mn-reverse-integer",
-    title: "Reverse an Integer",
+    id: "mnc-is-perfect-square",
+    title: "Perfect Square Check",
     description:
-      "Write a function that reverses the digits of a given 32-bit signed integer, handling negative signs and overflow.",
+      "Write a function that determines if a number is a perfect square.",
     category: "Math and Number Challenges",
-    inputs: [
-      { id: "num", label: "Number", type: "number", defaultValue: -123 },
-    ],
-    buttonText: "Reverse",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 25 }],
+    buttonText: "Check",
   },
   // problem--> 22
   {
-    id: "mn-range-of-array",
-    title: "Calculate Range",
+    id: "mnc-square-root",
+    title: "Calculate Square Root",
     description:
-      "Write a function that calculates the range (difference between max and min) of numbers in an array.",
+      "Write a function that calculates the square root of a number without using `Math.sqrt()` (e.g., using the Babylonian method).",
     category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "arr",
-        label: "Array of numbers",
-        type: "text",
-        defaultValue: "10,2,8,5",
-      },
-    ],
-    buttonText: "Calculate Range",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
+    buttonText: "Calculate",
   },
   // problem--> 23
   {
-    id: "mn-decimal-to-binary",
+    id: "mnc-decimal-to-binary",
     title: "Decimal to Binary",
     description:
-      "Write a function to convert a decimal number to its binary string representation.",
+      "Write a function to convert a decimal number to its binary representation.",
     category: "Math and Number Challenges",
     inputs: [
       { id: "num", label: "Decimal Number", type: "number", defaultValue: 13 },
@@ -305,51 +300,34 @@ export const problems: Problem[] = [
   },
   // problem--> 24
   {
-    id: "mn-binary-to-decimal",
+    id: "mnc-binary-to-decimal",
     title: "Binary to Decimal",
     description:
-      "Write a function to convert a binary string representation to its decimal number.",
+      "Write a function to convert a binary string to its decimal representation.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "bin", label: "Binary String", type: "text", defaultValue: "1101" },
+      {
+        id: "binary",
+        label: "Binary String",
+        type: "text",
+        defaultValue: "1101",
+      },
     ],
     buttonText: "Convert",
   },
   // problem--> 25
   {
-    id: "mn-is-armstrong-number",
-    title: "Check for Armstrong Number",
+    id: "mnc-is-leap-year",
+    title: "Leap Year Check",
     description:
-      "Write a function to check if a number is an Armstrong number (a number equal to the sum of its digits raised to the power of the number of digits).",
+      "Write a function to determine if a given year is a leap year. A leap year is divisible by 4, except for years divisible by 100 unless they are also divisible by 400.",
     category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 153 }],
-    buttonText: "Check Armstrong",
+    inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2024 }],
+    buttonText: "Check",
   },
   // problem--> 26
   {
-    id: "mn-is-power-of-two",
-    title: "Check for Power of Two",
-    description:
-      "Write an efficient function to determine if a given integer is a power of two.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
-    buttonText: "Check",
-  },
-  // problem--> 27
-  {
-    id: "mn-collatz-conjecture-steps",
-    title: "Collatz Conjecture Steps",
-    description:
-      "Write a function that finds the number of steps it takes for a number to reach 1 using the Collatz conjecture rules (n/2 if even, 3n+1 if odd).",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num", label: "Starting Number", type: "number", defaultValue: 6 },
-    ],
-    buttonText: "Count Steps",
-  },
-  // problem--> 28
-  {
-    id: "mn-sum-of-multiples",
+    id: "mnc-sum-of-multiples",
     title: "Sum of Multiples",
     description:
       "Write a function that finds the sum of all multiples of 3 or 5 below a given number.",
@@ -359,54 +337,51 @@ export const problems: Problem[] = [
     ],
     buttonText: "Calculate Sum",
   },
+  // problem--> 27
+  {
+    id: "mnc-is-armstrong-number",
+    title: "Armstrong Number Check",
+    description:
+      "Write a function to check if a number is an Armstrong number (a number that is the sum of its own digits each raised to the power of the number of digits).",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 153 }],
+    buttonText: "Check",
+  },
+  // problem--> 28
+  {
+    id: "mnc-is-perfect-number",
+    title: "Perfect Number Check",
+    description:
+      "Write a function to check if a number is a perfect number (a positive integer that is equal to the sum of its proper positive divisors).",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 28 }],
+    buttonText: "Check",
+  },
   // problem--> 29
   {
-    id: "mn-happy-number",
-    title: "Check for Happy Number",
+    id: "mnc-is-happy-number",
+    title: "Happy Number Check",
     description:
-      "Write a function to determine if a number is 'happy' by repeatedly summing the squares of its digits.",
+      "Write a function to check if a number is a happy number (a number which eventually reaches 1 when replaced by the sum of the square of each digit).",
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 19 }],
-    buttonText: "Check Happy",
+    buttonText: "Check",
   },
   // problem--> 30
   {
-    id: "mn-pythagorean-theorem",
-    title: "Pythagorean Theorem",
+    id: "mnc-collatz-conjecture",
+    title: "Collatz Conjecture Steps",
     description:
-      "Given the two shorter sides of a right-angled triangle (a, b), calculate the length of the hypotenuse (c).",
+      "Write a function to find the number of steps to reach 1 using the Collatz conjecture (if n is even, n = n/2; if n is odd, n = 3n + 1).",
     category: "Math and Number Challenges",
-    inputs: [
-      { id: "a", label: "Side A", type: "number", defaultValue: 3 },
-      { id: "b", label: "Side B", type: "number", defaultValue: 4 },
-    ],
-    buttonText: "Find Hypotenuse",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 6 }],
+    buttonText: "Count Steps",
   },
   // problem--> 31
   {
-    id: "mn-count-set-bits",
-    title: "Count Set Bits (Hamming Weight)",
-    description:
-      "Write a function that takes an unsigned integer and returns the number of '1' bits it has.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 13 }], // 1101
-    buttonText: "Count Bits",
-  },
-  // problem--> 32
-  {
-    id: "mn-is-perfect-number",
-    title: "Check for Perfect Number",
-    description:
-      "Write a function to check if a number is a perfect number (a number equal to the sum of its proper positive divisors).",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 28 }],
-    buttonText: "Check Perfect",
-  },
-  // problem--> 33
-  {
-    id: "mn-roman-to-integer",
+    id: "mnc-roman-to-integer",
     title: "Roman to Integer",
-    description: "Given a roman numeral string, convert it to an integer.",
+    description: "Convert a Roman numeral string to an integer.",
     category: "Math and Number Challenges",
     inputs: [
       {
@@ -418,259 +393,213 @@ export const problems: Problem[] = [
     ],
     buttonText: "Convert",
   },
-  // problem--> 34
+  // problem--> 32
   {
-    id: "mn-integer-to-roman",
+    id: "mnc-integer-to-roman",
     title: "Integer to Roman",
-    description: "Given an integer, convert it to a Roman numeral string.",
+    description: "Convert an integer to its Roman numeral representation.",
     category: "Math and Number Challenges",
     inputs: [
       { id: "num", label: "Integer", type: "number", defaultValue: 1994 },
     ],
     buttonText: "Convert",
   },
-  // problem--> 35
+  // problem--> 33
   {
-    id: "mn-simplify-fraction",
-    title: "Simplify a Fraction",
-    description:
-      "Write a function that takes a numerator and a denominator and returns the simplified fraction.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "numerator", label: "Numerator", type: "number", defaultValue: 12 },
-      {
-        id: "denominator",
-        label: "Denominator",
-        type: "number",
-        defaultValue: 18,
-      },
-    ],
-    buttonText: "Simplify",
-  },
-  // problem--> 36
-  {
-    id: "mn-add-fractions",
-    title: "Add Two Fractions",
-    description:
-      "Write a function to add two fractions and return the simplified result.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n1", label: "Numerator 1", type: "number", defaultValue: 1 },
-      { id: "d1", label: "Denominator 1", type: "number", defaultValue: 2 },
-      { id: "n2", label: "Numerator 2", type: "number", defaultValue: 1 },
-      { id: "d2", label: "Denominator 2", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Add",
-  },
-  // problem--> 37
-  {
-    id: "mn-is-ugly-number",
-    title: "Check for Ugly Number",
-    description:
-      "Write a function to check if a number is an ugly number (its prime factors are only 2, 3, or 5).",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 14 }],
-    buttonText: "Check Ugly",
-  },
-  // problem--> 38
-  {
-    id: "mn-random-integer-in-range",
-    title: "Random Integer in a Range",
-    description:
-      "Write a function to generate a random integer between a min and max value (inclusive).",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "min", label: "Minimum", type: "number", defaultValue: 1 },
-      { id: "max", label: "Maximum", type: "number", defaultValue: 10 },
-    ],
-    buttonText: "Generate",
-  },
-  // problem--> 39
-  {
-    id: "mn-pascals-triangle-row",
-    title: "Pascal's Triangle Row",
-    description:
-      "Given a non-negative integer rowIndex, return the rowIndex-th (0-indexed) row of Pascal's triangle.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "rowIndex", label: "Row Index", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Get Row",
-  },
-  // problem--> 40
-  {
-    id: "mn-distance-between-points",
-    title: "Distance Between Two Points",
-    description:
-      "Write a function to calculate the Euclidean distance between two points (x1, y1) and (x2, y2) in a 2D plane.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "x1", label: "x1", type: "number", defaultValue: 1 },
-      { id: "y1", label: "y1", type: "number", defaultValue: 2 },
-      { id: "x2", label: "x2", type: "number", defaultValue: 4 },
-      { id: "y2", label: "y2", type: "number", defaultValue: 6 },
-    ],
-    buttonText: "Calculate Distance",
-  },
-  // problem--> 41
-  {
-    id: "mn-prime-factorization",
-    title: "Prime Factorization",
-    description:
-      "Write a function that returns an array of the prime factors of a given number.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 84 }],
-    buttonText: "Get Factors",
-  },
-  // problem--> 42
-  {
-    id: "mn-sieve-of-eratosthenes",
+    id: "mnc-sieve-of-eratosthenes",
     title: "Sieve of Eratosthenes",
     description:
-      "Implement the Sieve of Eratosthenes algorithm to find all prime numbers up to a specified number.",
+      "Implement the Sieve of Eratosthenes to find all prime numbers up to a given limit.",
     category: "Math and Number Challenges",
     inputs: [
       { id: "limit", label: "Limit", type: "number", defaultValue: 100 },
     ],
     buttonText: "Find Primes",
   },
-  // problem--> 43
+  // problem--> 34
   {
-    id: "mn-add-binary-strings",
-    title: "Add Binary Strings",
-    description:
-      "Given two binary strings, return their sum (also a binary string).",
+    id: "mnc-pascals-triangle",
+    title: "Pascal's Triangle",
+    description: "Generate the first n rows of Pascal's Triangle.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "a", label: "Binary String 1", type: "text", defaultValue: "1010" },
-      { id: "b", label: "Binary String 2", type: "text", defaultValue: "1011" },
+      { id: "rows", label: "Number of Rows", type: "number", defaultValue: 5 },
     ],
-    buttonText: "Add Binary",
+    buttonText: "Generate",
   },
-  // problem--> 44
+  // problem--> 35
   {
-    id: "mn-multiply-large-strings",
-    title: "Multiply Large Numbers as Strings",
-    description:
-      "Given two non-negative integers represented as strings, return their product as a string.",
+    id: "mnc-matrix-addition",
+    title: "Matrix Addition",
+    description: "Write a function to add two matrices (2D arrays).",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "num1", label: "Number 1", type: "text", defaultValue: "123" },
-      { id: "num2", label: "Number 2", type: "text", defaultValue: "456" },
+      {
+        id: "matrix1",
+        label: "Matrix 1 (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,2],[3,4]]",
+      },
+      {
+        id: "matrix2",
+        label: "Matrix 2 (JSON)",
+        type: "textarea",
+        defaultValue: "[[5,6],[7,8]]",
+      },
     ],
-    buttonText: "Multiply",
+    buttonText: "Add Matrices",
   },
-  // problem--> 45
+  // problem--> 36
   {
-    id: "mn-digital-root",
-    title: "Find the Digital Root",
+    id: "mnc-matrix-multiplication",
+    title: "Matrix Multiplication",
+    description: "Write a function to multiply two matrices.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "matrix1",
+        label: "Matrix 1 (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,2,3],[4,5,6]]",
+      },
+      {
+        id: "matrix2",
+        label: "Matrix 2 (JSON)",
+        type: "textarea",
+        defaultValue: "[[7,8],[9,10],[11,12]]",
+      },
+    ],
+    buttonText: "Multiply Matrices",
+  },
+  // problem--> 37
+  {
+    id: "mnc-permutations",
+    title: "Permutations",
     description:
-      "Write a function to find the digital root of a number (the recursive sum of its digits until a single-digit number is achieved).",
+      "Write a function to generate all permutations of a given array of distinct numbers.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,2,3",
+      },
+    ],
+    buttonText: "Generate Permutations",
+  },
+  // problem--> 38
+  {
+    id: "mnc-combinations",
+    title: "Combinations",
+    description:
+      "Write a function to generate all combinations of a specific size from an array of distinct numbers.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,2,3,4",
+      },
+      {
+        id: "size",
+        label: "Combination Size",
+        type: "number",
+        defaultValue: 2,
+      },
+    ],
+    buttonText: "Generate Combinations",
+  },
+  // problem--> 39
+  {
+    id: "mnc-fast-exponentiation",
+    title: "Fast Exponentiation",
+    description:
+      "Implement the fast exponentiation (exponentiation by squaring) algorithm to calculate powers efficiently, especially for large exponents.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "base", label: "Base", type: "number", defaultValue: 3 },
+      { id: "exponent", label: "Exponent", type: "number", defaultValue: 13 },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 40
+  {
+    id: "mnc-digital-root",
+    title: "Digital Root",
+    description:
+      "Calculate the digital root of a number (the recursive sum of its digits until a single-digit number is achieved).",
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 942 }],
     buttonText: "Find Digital Root",
   },
-  // problem--> 46
+  // problem--> 41
   {
-    id: "mn-permutation-coefficient",
-    title: "Permutation Coefficient",
+    id: "mnc-base-conversion",
+    title: "Base Conversion",
     description:
-      "Calculate the permutation coefficient P(n, k), which is the number of ways to choose an ordered set of k elements from a set of n elements.",
+      "Write a function to convert a number from a given base to another base (bases 2-36).",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "n", label: "n (total items)", type: "number", defaultValue: 10 },
       {
-        id: "k",
-        label: "k (items to choose)",
-        type: "number",
-        defaultValue: 3,
+        id: "numberStr",
+        label: "Number (as string)",
+        type: "text",
+        defaultValue: "1A",
       },
+      { id: "fromBase", label: "From Base", type: "number", defaultValue: 16 },
+      { id: "toBase", label: "To Base", type: "number", defaultValue: 10 },
     ],
-    buttonText: "Calculate P(n,k)",
+    buttonText: "Convert Base",
   },
-  // problem--> 47
+  // problem--> 42
   {
-    id: "mn-combination-coefficient",
-    title: "Combination Coefficient (nCk)",
+    id: "mnc-is-power-of-two",
+    title: "Is Power of Two",
     description:
-      "Calculate the combination coefficient C(n, k), the number of ways to choose an unordered set of k elements from a set of n elements.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n", label: "n (total items)", type: "number", defaultValue: 10 },
-      {
-        id: "k",
-        label: "k (items to choose)",
-        type: "number",
-        defaultValue: 3,
-      },
-    ],
-    buttonText: "Calculate C(n,k)",
-  },
-  // problem--> 48
-  {
-    id: "mn-is-power-of-three",
-    title: "Check for Power of Three",
-    description:
-      "Write a function to determine if a given integer is a power of three.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 27 }],
-    buttonText: "Check",
-  },
-  // problem--> 49
-  {
-    id: "mn-is-power-of-four",
-    title: "Check for Power of Four",
-    description:
-      "Write a function to determine if a given integer is a power of four.",
+      "Write a function to determine if a given integer is a power of two.",
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
     buttonText: "Check",
   },
-  // problem--> 50
+  // problem--> 43
   {
-    id: "mn-angle-between-clock-hands",
-    title: "Angle Between Clock Hands",
+    id: "mnc-missing-number-in-sequence",
+    title: "Missing Number in Sequence",
     description:
-      "Given a time in hours and minutes, calculate the smaller angle between the two hands of an analog clock.",
+      "Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "hours", label: "Hours (1-12)", type: "number", defaultValue: 3 },
       {
-        id: "minutes",
-        label: "Minutes (0-59)",
-        type: "number",
-        defaultValue: 30,
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "3,0,1",
       },
     ],
-    buttonText: "Calculate Angle",
+    buttonText: "Find Missing",
   },
-  // problem--> 51
+  // problem--> 44
   {
-    id: "mn-catalan-numbers",
-    title: "Catalan Numbers",
+    id: "mnc-plus-one",
+    title: "Plus One",
     description:
-      "Write a function to compute the nth Catalan number. Catalan numbers appear in many counting problems.",
+      "Given a large integer represented as an integer array, increment the integer by one and return the resulting array of digits.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "n", label: "Nth Catalan Number", type: "number", defaultValue: 5 },
+      {
+        id: "digits",
+        label: "Array of digits",
+        type: "text",
+        defaultValue: "9,9,9",
+      },
     ],
-    buttonText: "Calculate",
+    buttonText: "Increment",
   },
-  // problem--> 52
+  // problem--> 45
   {
-    id: "mn-trailing-zeroes-in-factorial",
-    title: "Trailing Zeroes in Factorial",
-    description:
-      "Given an integer n, return the number of trailing zeroes in n!.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n", label: "Number (n)", type: "number", defaultValue: 25 },
-    ],
-    buttonText: "Count Zeroes",
-  },
-  // problem--> 53
-  {
-    id: "mn-excel-column-number",
+    id: "mnc-excel-column-number",
     title: "Excel Sheet Column Number",
     description:
       "Given a column title as it appears in an Excel sheet, return its corresponding column number.",
@@ -685,9 +614,9 @@ export const problems: Problem[] = [
     ],
     buttonText: "Get Number",
   },
-  // problem--> 54
+  // problem--> 46
   {
-    id: "mn-excel-column-title",
+    id: "mnc-excel-column-title",
     title: "Excel Sheet Column Title",
     description:
       "Given a positive integer, return its corresponding column title as it appears in an Excel sheet.",
@@ -702,307 +631,144 @@ export const problems: Problem[] = [
     ],
     buttonText: "Get Title",
   },
-  // problem--> 55
+  // problem--> 47
   {
-    id: "mn-gray-code",
-    title: "Gray Code Sequence",
+    id: "mnc-single-number",
+    title: "Single Number",
     description:
-      "The gray code is a binary numeral system where two successive values differ in only one bit. Given n, return any valid gray code sequence of length 2^n.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n", label: "n (number of bits)", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Generate Sequence",
-  },
-  // problem--> 56
-  {
-    id: "mn-plus-one",
-    title: "Plus One",
-    description:
-      "Given a large integer represented as an array of digits, increment it by one.",
+      "Given a non-empty array of integers where every element appears twice except for one, find that single one.",
     category: "Math and Number Challenges",
     inputs: [
       {
-        id: "digits",
-        label: "Digits Array",
+        id: "arr",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "9,9,9",
+        defaultValue: "4,1,2,1,2",
       },
     ],
-    buttonText: "Increment",
+    buttonText: "Find Single",
   },
-  // problem--> 57
+  // problem--> 48
   {
-    id: "mn-count-primes",
+    id: "mnc-add-binary",
+    title: "Add Binary",
+    description:
+      "Given two binary strings, return their sum (also a binary string).",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "bin1",
+        label: "Binary String 1",
+        type: "text",
+        defaultValue: "1010",
+      },
+      {
+        id: "bin2",
+        label: "Binary String 2",
+        type: "text",
+        defaultValue: "1011",
+      },
+    ],
+    buttonText: "Add",
+  },
+  // problem--> 49
+  {
+    id: "mnc-trailing-zeroes-in-factorial",
+    title: "Trailing Zeroes in Factorial",
+    description:
+      "Given an integer n, return the number of trailing zeroes in n!.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Number (n)", type: "number", defaultValue: 25 },
+    ],
+    buttonText: "Count Zeroes",
+  },
+  // problem--> 50
+  {
+    id: "mnc-ugly-number",
+    title: "Ugly Number Check",
+    description:
+      "An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5. Write a function to check if a number is ugly.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 6 }],
+    buttonText: "Check",
+  },
+  // problem--> 51
+  {
+    id: "mnc-count-primes",
     title: "Count Primes",
     description:
       "Count the number of prime numbers less than a non-negative number, n.",
     category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "n",
-        label: "Count primes less than n",
-        type: "number",
-        defaultValue: 10,
-      },
-    ],
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
     buttonText: "Count",
   },
-  // problem--> 58
+  // problem--> 52
   {
-    id: "mn-divide-two-integers",
-    title: "Divide Two Integers",
+    id: "mnc-add-digits",
+    title: "Add Digits",
     description:
-      "Divide two integers without using multiplication, division, and mod operator. Handle overflow.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "dividend", label: "Dividend", type: "number", defaultValue: 10 },
-      { id: "divisor", label: "Divisor", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Divide",
-  },
-  // problem--> 59
-  {
-    id: "mn-pow-x-n",
-    title: "Pow(x, n)",
-    description:
-      "Implement `pow(x, n)`, which calculates x raised to the power n. Aim for an efficient O(log n) solution.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "x", label: "Base (x)", type: "number", defaultValue: 2.0 },
-      { id: "n", label: "Exponent (n)", type: "number", defaultValue: 10 },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 60
-  {
-    id: "mn-sqrt-x",
-    title: "Sqrt(x)",
-    description:
-      "Compute and return the square root of a non-negative integer x, rounded down to the nearest integer, without using `Math.sqrt`.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "x", label: "Number (x)", type: "number", defaultValue: 8 }],
-    buttonText: "Calculate Square Root",
-  },
-  // problem--> 61
-  {
-    id: "mn-perfect-number-check",
-    title: "Check Perfect Number",
-    description:
-      "A perfect number is a positive integer that is equal to the sum of its proper positive divisors. Check if a number is perfect.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 28 }],
-    buttonText: "Check",
-  },
-  // problem--> 62
-  {
-    id: "mn-add-digits-digital-root",
-    title: "Add Digits (Digital Root)",
-    description:
-      "Given a non-negative integer, repeatedly add all its digits until the result has only one digit. Find the result without loops/recursion.",
+      "Given a non-negative integer, repeatedly add all its digits until the result has only one digit.",
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 38 }],
-    buttonText: "Find Root",
+    buttonText: "Find Digital Root",
   },
-  // problem--> 63
+  // problem--> 53
   {
-    id: "mn-missing-number-in-sequence",
-    title: "Missing Number in Sequence",
-    description:
-      "Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "3,0,1" },
-    ],
-    buttonText: "Find Missing",
-  },
-  // problem--> 64
-  {
-    id: "mn-single-number",
-    title: "Single Number",
-    description:
-      "Given a non-empty array of integers, every element appears twice except for one. Find that single one.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "4,1,2,1,2" },
-    ],
-    buttonText: "Find Single",
-  },
-  // problem--> 65
-  {
-    id: "mn-title-to-number",
-    title: "Excel Sheet Column Number",
-    description:
-      "Given a column title as it appears in an Excel sheet, return its corresponding column number.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "title", label: "Column Title", type: "text", defaultValue: "AB" },
-    ],
-    buttonText: "Convert",
-  },
-  // problem--> 66
-  {
-    id: "mn-number-to-title",
-    title: "Excel Sheet Column Title",
-    description:
-      "Given a positive integer, return its corresponding column title as it appears in an Excel sheet.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num", label: "Column Number", type: "number", defaultValue: 28 },
-    ],
-    buttonText: "Convert",
-  },
-  // problem--> 67
-  {
-    id: "mn-fraction-to-recurring-decimal",
-    title: "Fraction to Recurring Decimal",
-    description:
-      "Given two integers representing the numerator and denominator of a fraction, return the fraction in string format. If the fractional part is repeating, enclose the repeating part in parentheses.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "numerator", label: "Numerator", type: "number", defaultValue: 4 },
-      {
-        id: "denominator",
-        label: "Denominator",
-        type: "number",
-        defaultValue: 333,
-      },
-    ],
-    buttonText: "Convert",
-  },
-  // problem--> 68
-  {
-    id: "mn-string-to-integer-atoi",
-    title: "String to Integer (atoi)",
-    description:
-      "Implement the `atoi` function, which converts a string to an integer, handling all edge cases.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "str",
-        label: "String",
-        type: "text",
-        defaultValue: "  -42 with words",
-      },
-    ],
-    buttonText: "Convert",
-  },
-  // problem--> 69
-  {
-    id: "mn-largest-number",
-    title: "Largest Number",
-    description:
-      "Given a list of non-negative integers, arrange them such that they form the largest possible number.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "3,30,34,5,9" },
-    ],
-    buttonText: "Arrange",
-  },
-  // problem--> 70
-  {
-    id: "mn-product-of-array-except-self",
-    title: "Product of Array Except Self",
-    description:
-      "Given an integer array, return an array such that the output at index i is the product of all the elements of the original array except the one at i.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" },
-    ],
-    buttonText: "Calculate Products",
-  },
-  // problem--> 71
-  {
-    id: "mn-valid-perfect-square",
+    id: "mnc-valid-perfect-square",
     title: "Valid Perfect Square",
     description:
       "Given a positive integer num, write a function which returns True if num is a perfect square else False.",
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
-    buttonText: "Check",
+    buttonText: "Validate",
   },
-  // problem--> 72
+  // problem--> 54
   {
-    id: "mn-nth-digit",
-    title: "Nth Digit",
-    description:
-      "Given an integer n, find the nth digit of the infinite integer sequence [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...].",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 11 }],
-    buttonText: "Find Digit",
-  },
-  // problem--> 73
-  {
-    id: "mn-arranging-coins",
+    id: "mnc-arranging-coins",
     title: "Arranging Coins",
     description:
-      "You have n coins and you want to build a staircase with these coins. The staircase consists of k rows where the ith row has exactly i coins. Given n, return the number of complete rows of the staircase you will build.",
+      "You have n coins and you want to build a staircase with these coins. The staircase consists of k rows where the i-th row has exactly i coins. Given n, return the number of full staircase rows that can be formed.",
     category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n coins", type: "number", defaultValue: 5 }],
+    inputs: [
+      { id: "n", label: "Number of coins", type: "number", defaultValue: 8 },
+    ],
     buttonText: "Calculate Rows",
   },
-  // problem--> 74
+  // problem--> 55
   {
-    id: "mn-water-and-jug-problem",
-    title: "Water and Jug Problem",
+    id: "mnc-diophantine-equation",
+    title: "Linear Diophantine Equation",
     description:
-      "You are given two jugs with capacities jug1Capacity and jug2Capacity liters. You have an infinite water supply. Determine if it is possible to measure exactly targetCapacity liters.",
+      "Find a single integer solution (x, y) for the equation ax + by = c. Return 'No solution' if one does not exist.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "jug1", label: "Jug 1 Capacity", type: "number", defaultValue: 3 },
-      { id: "jug2", label: "Jug 2 Capacity", type: "number", defaultValue: 5 },
-      {
-        id: "target",
-        label: "Target Capacity",
-        type: "number",
-        defaultValue: 4,
-      },
+      { id: "a", label: "a", type: "number", defaultValue: 3 },
+      { id: "b", label: "b", type: "number", defaultValue: 5 },
+      { id: "c", label: "c", type: "number", defaultValue: 13 },
     ],
-    buttonText: "Check",
+    buttonText: "Find Solution",
   },
-  // problem--> 75
+  // problem--> 56
   {
-    id: "mn-valid-triangle-number",
-    title: "Valid Triangle Number",
+    id: "mnc-pythagorean-triplet",
+    title: "Pythagorean Triplet",
     description:
-      "Given an integer array, return the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.",
+      "Given an array of integers, write a function that returns true if there is a triplet (a, b, c) that satisfies a^2 + b^2 = c^2.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "2,2,3,4" },
-    ],
-    buttonText: "Count Triangles",
-  },
-  // problem--> 76
-  {
-    id: "mn-super-pow",
-    title: "Super Pow",
-    description:
-      "Calculate a^b mod 1337 where a is a positive integer and b is an extremely large positive integer given as an array.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "a", label: "Base a", type: "number", defaultValue: 2 },
       {
-        id: "b",
-        label: "Exponent b (array)",
+        id: "arr",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "1,0",
+        defaultValue: "3,4,5,8,10",
       },
     ],
-    buttonText: "Calculate",
+    buttonText: "Find Triplet",
   },
-  // problem--> 77
+  // problem--> 57
   {
-    id: "mn-sum-of-square-numbers",
-    title: "Sum of Square Numbers",
-    description:
-      "Given a non-negative integer c, decide whether there're two integers a and b such that a^2 + b^2 = c.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "c", label: "Number c", type: "number", defaultValue: 5 }],
-    buttonText: "Check",
-  },
-  // problem--> 78
-  {
-    id: "mn-complex-number-multiplication",
+    id: "mnc-complex-number-multiplication",
     title: "Complex Number Multiplication",
     description:
       "Given two strings representing two complex numbers, return a string representing their multiplication.",
@@ -1023,442 +789,155 @@ export const problems: Problem[] = [
     ],
     buttonText: "Multiply",
   },
-  // problem--> 79
+  // problem--> 58
   {
-    id: "mn-factorial-trailing-zeroes",
-    title: "Factorial Trailing Zeroes",
+    id: "mnc-fraction-to-recurring-decimal",
+    title: "Fraction to Recurring Decimal",
     description:
-      "Given an integer n, return the number of trailing zeroes in n!.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 25 }],
-    buttonText: "Count",
-  },
-  // problem--> 80
-  {
-    id: "mn-pascals-triangle",
-    title: "Pascal's Triangle",
-    description:
-      "Given an integer numRows, return the first numRows of Pascal's triangle.",
+      "Given two integers representing the numerator and denominator of a fraction, return the fraction in string format. If the fractional part is repeating, enclose the repeating part in parentheses.",
     category: "Math and Number Challenges",
     inputs: [
+      { id: "numerator", label: "Numerator", type: "number", defaultValue: 4 },
       {
-        id: "numRows",
-        label: "Number of Rows",
+        id: "denominator",
+        label: "Denominator",
         type: "number",
-        defaultValue: 5,
+        defaultValue: 333,
       },
     ],
-    buttonText: "Generate",
+    buttonText: "Convert",
   },
-  // problem--> 81
+  // problem--> 59
   {
-    id: "mn-smallest-good-base",
-    title: "Smallest Good Base",
+    id: "mnc-pow-x-n",
+    title: "Pow(x, n)",
     description:
-      "For an integer n, we call k>=2 a good base of n, if all digits of n in base k are 1. Given n, return the smallest good base of n in string format.",
+      "Implement pow(x, n), which calculates x raised to the power n. Handle positive and negative exponents.",
     category: "Math and Number Challenges",
     inputs: [
-      {
-        id: "n",
-        label: "Number (as string)",
-        type: "text",
-        defaultValue: "13",
-      },
-    ],
-    buttonText: "Find Base",
-  },
-  // problem--> 82
-  {
-    id: "mn-robot-bounded-in-circle",
-    title: "Robot Bounded In Circle",
-    description:
-      "On an infinite plane, a robot starts at (0, 0) and faces north. Given a string of instructions ('G', 'L', 'R'), determine if the robot's path is bounded in a circle.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "instructions",
-        label: "Instructions",
-        type: "text",
-        defaultValue: "GGLLGG",
-      },
-    ],
-    buttonText: "Check Bound",
-  },
-  // problem--> 83
-  {
-    id: "mn-reaching-points",
-    title: "Reaching Points",
-    description:
-      "A move consists of taking a point (x, y) and transforming it to either (x, x+y) or (x+y, y). Given a starting point (sx, sy) and a target point (tx, ty), return true if and only if a sequence of moves exists to transform the start to the target.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "sx", label: "Start X", type: "number", defaultValue: 1 },
-      { id: "sy", label: "Start Y", type: "number", defaultValue: 1 },
-      { id: "tx", label: "Target X", type: "number", defaultValue: 3 },
-      { id: "ty", label: "Target Y", type: "number", defaultValue: 5 },
-    ],
-    buttonText: "Check Reachable",
-  },
-  // problem--> 84
-  {
-    id: "mn-max-points-on-a-line",
-    title: "Max Points on a Line",
-    description:
-      "Given an array of points where points[i] = [xi, yi], return the maximum number of points that lie on the same straight line.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "points",
-        label: "Points (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,1],[2,2],[3,3]]",
-      },
+      { id: "x", label: "x", type: "number", defaultValue: 2.0 },
+      { id: "n", label: "n", type: "number", defaultValue: -2 },
     ],
     buttonText: "Calculate",
   },
-  // problem--> 85
+  // problem--> 60
   {
-    id: "mn-integer-break",
+    id: "mnc-multiply-strings",
+    title: "Multiply Strings",
+    description:
+      "Given two non-negative integers represented as strings, return the product of the two numbers, also as a string.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num1", label: "Number 1", type: "text", defaultValue: "123" },
+      { id: "num2", label: "Number 2", type: "text", defaultValue: "456" },
+    ],
+    buttonText: "Multiply",
+  },
+  // problem--> 61
+  {
+    id: "mnc-angle-between-hands-of-a-clock",
+    title: "Angle Between Hands of a Clock",
+    description:
+      "Given two numbers, hour and minutes, return the smaller angle (in degrees) formed between the hour and the minute hand.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "hour", label: "Hour", type: "number", defaultValue: 3 },
+      { id: "minutes", label: "Minutes", type: "number", defaultValue: 15 },
+    ],
+    buttonText: "Calculate Angle",
+  },
+  // problem--> 62
+  {
+    id: "mnc-bulb-switcher",
+    title: "Bulb Switcher",
+    description:
+      "There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb. For the i-th round, you toggle every i-th bulb. For the n-th round, you only toggle the last bulb. Find how many bulbs are on after n rounds.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n bulbs", type: "number", defaultValue: 7 }],
+    buttonText: "Calculate On Bulbs",
+  },
+  // problem--> 63
+  {
+    id: "mnc-nth-digit",
+    title: "Nth Digit",
+    description:
+      "Find the nth digit of the infinite integer sequence [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...].",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 11 }],
+    buttonText: "Find Digit",
+  },
+  // problem--> 64
+  {
+    id: "mnc-string-to-integer-atoi",
+    title: "String to Integer (atoi)",
+    description:
+      "Implement a function that converts a string to a 32-bit signed integer, handling whitespace, signs, and overflow.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "s",
+        label: "String",
+        type: "text",
+        defaultValue: "   -42 with words",
+      },
+    ],
+    buttonText: "Convert",
+  },
+  // problem--> 65
+  {
+    id: "mnc-integer-break",
     title: "Integer Break",
     description:
-      "Given a positive integer n, break it into the sum of at least two positive integers and maximize the product of those integers. Return the maximum product you can get.",
+      "Given an integer n, break it into the sum of k positive integers, where k >= 2, and maximize the product of those integers.",
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
     buttonText: "Maximize Product",
   },
-  // problem--> 86
+  // problem--> 66
   {
-    id: "mn-count-numbers-with-unique-digits",
-    title: "Count Numbers with Unique Digits",
+    id: "mnc-water-and-jug-problem",
+    title: "Water and Jug Problem",
     description:
-      "Given a non-negative integer n, count all numbers with unique digits, x, where 0 <= x < 10^n.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 2 }],
-    buttonText: "Count",
-  },
-  // problem--> 87
-  {
-    id: "mn-bulb-switcher",
-    title: "Bulb Switcher",
-    description:
-      "There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb. For the nth round, you only toggle the last bulb. Find how many bulbs are on after n rounds.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n bulbs", type: "number", defaultValue: 3 }],
-    buttonText: "Count On Bulbs",
-  },
-  // problem--> 88
-  {
-    id: "mn-ugly-number-ii",
-    title: "Ugly Number II",
-    description:
-      "Write a program to find the n-th ugly number. Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.",
+      "You have two jugs with capacities x and y litres. Determine whether it is possible to measure exactly z litres using these two jugs.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "n", label: "n-th ugly number", type: "number", defaultValue: 10 },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 89
-  {
-    id: "mn-super-ugly-number",
-    title: "Super Ugly Number",
-    description:
-      "Write a program to find the nth super ugly number. Super ugly numbers are positive numbers whose all prime factors are in the given prime list.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "n",
-        label: "n-th super ugly number",
-        type: "number",
-        defaultValue: 12,
-      },
-      {
-        id: "primes",
-        label: "Primes (comma-separated)",
-        type: "text",
-        defaultValue: "2,7,13,19",
-      },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 90
-  {
-    id: "mn-rectangle-area",
-    title: "Rectangle Area",
-    description:
-      "Given the coordinates of two rectilinear rectangles in a 2D plane, return the total area covered by the two rectangles.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "ax1", label: "Rect A x1", type: "number", defaultValue: -3 },
-      { id: "ay1", label: "Rect A y1", type: "number", defaultValue: 0 },
-      { id: "ax2", label: "Rect A x2", type: "number", defaultValue: 3 },
-      { id: "ay2", label: "Rect A y2", type: "number", defaultValue: 4 },
-      { id: "bx1", label: "Rect B x1", type: "number", defaultValue: 0 },
-      { id: "by1", label: "Rect B y1", type: "number", defaultValue: -1 },
-      { id: "bx2", label: "Rect B x2", type: "number", defaultValue: 9 },
-      { id: "by2", label: "Rect B y2", type: "number", defaultValue: 2 },
-    ],
-    buttonText: "Calculate Area",
-  },
-  // problem--> 91
-  {
-    id: "mn-line-reflection",
-    title: "Line Reflection",
-    description:
-      "Given n points on a 2D plane, find if there is such a line parallel to the y-axis that reflects the given points.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "points",
-        label: "Points (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,1],[-1,1]]",
-      },
+      { id: "x", label: "Jug 1 Capacity", type: "number", defaultValue: 3 },
+      { id: "y", label: "Jug 2 Capacity", type: "number", defaultValue: 5 },
+      { id: "z", label: "Target Capacity", type: "number", defaultValue: 4 },
     ],
     buttonText: "Check",
   },
-  // problem--> 92
+  // problem--> 67
   {
-    id: "mn-the-kth-factor-of-n",
-    title: "The kth Factor of n",
+    id: "mnc-nim-game",
+    title: "Nim Game",
     description:
-      "Given two positive integers n and k. A factor of an integer n is defined as an integer i where n % i == 0. Consider a list of all factors of n sorted in ascending order, return the kth factor in this list or -1 if n has less than k factors.",
+      "You are playing a game with your friend. There is a heap of stones on the table. You and your friend will alternate taking turns, and you go first. On each turn, the person whose turn it is will remove 1 to 3 stones from the heap. The one who removes the last stone is the winner. Given n, the number of stones in the heap, return true if you can win the game assuming both you and your friend play optimally, otherwise return false.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "n", label: "n", type: "number", defaultValue: 12 },
-      { id: "k", label: "k", type: "number", defaultValue: 3 },
+      { id: "n", label: "Number of stones", type: "number", defaultValue: 4 },
     ],
-    buttonText: "Find Factor",
+    buttonText: "Can I Win?",
   },
-  // problem--> 93
+  // problem--> 68
   {
-    id: "mn-mirror-reflection",
-    title: "Mirror Reflection",
+    id: "mnc-super-pow",
+    title: "Super Pow",
     description:
-      "There is a special square room with mirrors on each of the four walls. Except for the southwest corner, there are receptors on each of the remaining corners, numbered 0, 1, and 2. Given the dimensions of the room and the path of a laser beam, find which receptor the beam meets first.",
+      "Your task is to calculate a^b mod 1337 where a is a positive integer and b is an extremely large positive integer given in the form of an array.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "p", label: "p (width)", type: "number", defaultValue: 2 },
-      { id: "q", label: "q (height)", type: "number", defaultValue: 1 },
-    ],
-    buttonText: "Find Receptor",
-  },
-  // problem--> 94
-  {
-    id: "mn-erect-the-fence",
-    title: "Erect the Fence",
-    description:
-      "You are given an array trees where trees[i] = [xi, yi] represents the location of a tree in a garden. You are asked to fence the entire garden using the minimum length of rope. Return the coordinates of trees that are exactly located on the fence perimeter.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "trees",
-        label: "Tree coordinates (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,1],[2,2],[2,0],[2,4],[3,3],[4,2]]",
-      },
-    ],
-    buttonText: "Find Fence",
-  },
-  // problem--> 95
-  {
-    id: "mn-global-and-local-inversions",
-    title: "Global and Local Inversions",
-    description:
-      "We have some permutation A of [0, 1, ..., N-1], where N is the length of A. A global inversion is a pair of indices (i, j) with i < j and A[i] > A[j]. A local inversion is an index i with 0 <= i < N-1 and A[i] > A[i+1]. Determine if the number of global inversions is equal to the number of local inversions.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "A", label: "Permutation A", type: "text", defaultValue: "1,0,2" },
-    ],
-    buttonText: "Check",
-  },
-  // problem--> 96
-  {
-    id: "mn-max-chunks-to-make-sorted",
-    title: "Max Chunks To Make Sorted",
-    description:
-      "Given an array arr that is a permutation of [0, 1, ..., arr.length - 1], we split the array into some number of 'chunks' (partitions), and individually sort each chunk. After concatenating them, the result must be the sorted array. What is the most number of chunks we could have made?",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "4,3,2,1,0" },
+      { id: "a", label: "a", type: "number", defaultValue: 2 },
+      { id: "b", label: "b (as array)", type: "text", defaultValue: "1,0" },
     ],
     buttonText: "Calculate",
   },
-  // problem--> 97
+  // problem--> 69
   {
-    id: "mn-chalkboard-xor-game",
-    title: "Chalkboard XOR Game",
-    description:
-      "We are given non-negative integers in an array nums. Alice and Bob take turns playing a game. Alice starts. On each turn, a player chooses a number and removes it from the array. The player who chooses a number that makes the bitwise XOR of all remaining numbers equal to 0 wins. Determine if Alice can win.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Numbers", type: "text", defaultValue: "1,1,2" },
-    ],
-    buttonText: "Can Alice Win?",
-  },
-  // problem--> 98
-  {
-    id: "mn-reach-a-number",
-    title: "Reach a Number",
-    description:
-      "You are standing at position 0 on an infinite number line. There is a goal at position target. On each move, you can either go left or right. During the n-th move (starting from n = 1), you take n steps. Return the minimum number of steps required to reach the destination.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "target", label: "Target", type: "number", defaultValue: 2 },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 99
-  {
-    id: "mn-random-point-in-non-overlapping-rectangles",
-    title: "Random Point in Non-overlapping Rectangles",
-    description:
-      "Given a list of non-overlapping axis-aligned rectangles, write a function which randomly and uniformly picks an integer point in the space covered by the rectangles.",
-    category: "Math and Number Challenges",
-    inputs: [],
-    buttonText: "Show Concept",
-  },
-  // problem--> 100
-  {
-    id: "mn-random-pick-with-weight",
-    title: "Random Pick with Weight",
-    description:
-      "You are given an array of positive integers w where w[i] describes the weight of ith index (0-indexed). Write a function which will randomly pick an index in proportion to its weight.",
-    category: "Math and Number Challenges",
-    inputs: [],
-    buttonText: "Show Concept",
-  },
-  // problem--> 101
-  {
-    id: "mn-sum-of-two-integers-bitwise",
-    title: "Sum of Two Integers (Bitwise)",
-    description:
-      "Given two integers a and b, return the sum of the two integers without using the operators + and -.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "a", label: "Number a", type: "number", defaultValue: 1 },
-      { id: "b", label: "Number b", type: "number", defaultValue: 2 },
-    ],
-    buttonText: "Sum with Bitwise",
-  },
-  // problem--> 102
-  {
-    id: "mn-next-greater-element-iii",
-    title: "Next Greater Element III",
-    description:
-      "Given a positive integer n, find the smallest integer which has exactly the same digits existing in the integer n and is greater in value than n. If no such positive integer exists, return -1.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "Number n", type: "number", defaultValue: 12 }],
-    buttonText: "Find Next",
-  },
-  // problem--> 103
-  {
-    id: "mn-number-of-boomerangs",
-    title: "Number of Boomerangs",
-    description:
-      "You are given n points in the plane that are all distinct. A boomerang is a tuple of points (i, j, k) such that the distance between i and j equals the distance between i and k. Find the number of boomerangs.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "points",
-        label: "Points (JSON)",
-        type: "textarea",
-        defaultValue: "[[0,0],[1,0],[2,0]]",
-      },
-    ],
-    buttonText: "Count Boomerangs",
-  },
-  // problem--> 104
-  {
-    id: "mn-max-area-of-island",
-    title: "Max Area of Island",
-    description:
-      "Given a non-empty 2D array grid of 0's and 1's, an island is a group of 1's connected 4-directionally. Find the maximum area of an island in the given 2D array.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "grid",
-        label: "Grid (JSON)",
-        type: "textarea",
-        defaultValue: "[[0,0,1,0,0],[0,1,1,0,0],[0,0,0,1,1],[1,0,0,1,1]]",
-      },
-    ],
-    buttonText: "Find Max Area",
-  },
-  // problem--> 105
-  {
-    id: "mn-reverse-bits",
-    title: "Reverse Bits",
-    description: "Reverse bits of a given 32-bit unsigned integer.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n", label: "Number n", type: "number", defaultValue: 43261596 },
-    ],
-    buttonText: "Reverse",
-  },
-  // problem--> 106
-  {
-    id: "mn-rectangle-overlap",
-    title: "Rectangle Overlap",
-    description:
-      "An axis-aligned rectangle is represented by its bottom-left and top-right coordinates. Given two rectangles, return true if they overlap, and false otherwise.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "rec1",
-        label: "Rect 1 [x1,y1,x2,y2]",
-        type: "text",
-        defaultValue: "0,0,2,2",
-      },
-      {
-        id: "rec2",
-        label: "Rect 2 [x1,y1,x2,y2]",
-        type: "text",
-        defaultValue: "1,1,3,3",
-      },
-    ],
-    buttonText: "Check Overlap",
-  },
-  // problem--> 107
-  {
-    id: "mn-minimum-moves-to-equal-array-elements",
-    title: "Minimum Moves to Equal Array Elements",
-    description:
-      "Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, where a move is incrementing n - 1 elements by 1.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 108
-  {
-    id: "mn-minimum-moves-to-equal-array-elements-ii",
-    title: "Minimum Moves to Equal Array Elements II",
-    description:
-      "Given a non-empty integer array, find the minimum number of moves required to make all array elements equal, where a move is incrementing or decrementing a single element by 1.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 109
-  {
-    id: "mn-construct-the-rectangle",
-    title: "Construct the Rectangle",
-    description:
-      "For a web developer, you need to design a rectangular web page, whose area equals to the given integer area. The width W should not be larger than the length L. Your task is to find the dimensions [L, W] with the minimum possible difference between L and W.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "area", label: "Area", type: "number", defaultValue: 4 }],
-    buttonText: "Construct",
-  },
-  // problem--> 110
-  {
-    id: "mn-largest-triangle-area",
+    id: "mnc-largest-triangle-area",
     title: "Largest Triangle Area",
     description:
-      "You have a list of points in a 2D plane. Return the area of the largest triangle that can be formed by any 3 of the points.",
+      "Given a list of points, return the area of the largest triangle that can be formed by any 3 of the points.",
     category: "Math and Number Challenges",
     inputs: [
       {
@@ -1468,994 +947,120 @@ export const problems: Problem[] = [
         defaultValue: "[[0,0],[0,1],[1,0],[0,2],[2,0]]",
       },
     ],
-    buttonText: "Calculate Area",
+    buttonText: "Find Area",
   },
-  // problem--> 111
+  // problem--> 70
   {
-    id: "mn-powerful-integers",
-    title: "Powerful Integers",
+    id: "mnc-minimum-moves-to-equal-array-elements",
+    title: "Minimum Moves to Equal Array Elements",
     description:
-      "Given three integers x, y, and bound, return a list of all the powerful integers that have a value less than or equal to bound. An integer is powerful if it is equal to x^i + y^j for some integers i >= 0 and j >= 0.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "x", label: "x", type: "number", defaultValue: 2 },
-      { id: "y", label: "y", type: "number", defaultValue: 3 },
-      { id: "bound", label: "bound", type: "number", defaultValue: 10 },
-    ],
-    buttonText: "Find Powerful Integers",
-  },
-  // problem--> 112
-  {
-    id: "mn-di-string-match",
-    title: "DI String Match",
-    description:
-      "A permutation perm of [0, 1, ..., n] is called a DI sequence if for all i, if s[i] == 'I', then perm[i] < perm[i+1], and if s[i] == 'D', then perm[i] > perm[i+1]. Given a string s of 'I's and 'D's, return any permutation of [0, 1, ..., n] that matches s.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "s", label: "DI String", type: "text", defaultValue: "IDID" },
-    ],
-    buttonText: "Match",
-  },
-  // problem--> 113
-  {
-    id: "mn-self-dividing-numbers",
-    title: "Self Dividing Numbers",
-    description:
-      "A self-dividing number is a number that is divisible by every digit it contains. For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0. Given a lower and upper number bound, output a list of every possible self dividing number in that range.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "left", label: "Left Bound", type: "number", defaultValue: 1 },
-      { id: "right", label: "Right Bound", type: "number", defaultValue: 22 },
-    ],
-    buttonText: "Find Numbers",
-  },
-  // problem--> 114
-  {
-    id: "mn-prime-number-of-set-bits-in-binary-representation",
-    title: "Prime Number of Set Bits in Binary Representation",
-    description:
-      "Given two integers left and right, return the count of numbers in the inclusive range [left, right] that have a prime number of set bits in their binary representation.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "left", label: "Left Bound", type: "number", defaultValue: 6 },
-      { id: "right", label: "Right Bound", type: "number", defaultValue: 10 },
-    ],
-    buttonText: "Count",
-  },
-  // problem--> 115
-  {
-    id: "mn-rotate-digits",
-    title: "Rotate Digits",
-    description:
-      "An integer is a good number if each of its digits is rotated 180 degrees to form a valid and different number. Digits 0, 1, and 8 rotate to themselves; 2 and 5 rotate to each other; 6 and 9 rotate to each other. Digits 3, 4, and 7 are invalid. Given an integer n, return the number of good numbers in the range [1, n].",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
-    buttonText: "Count Good Numbers",
-  },
-  // problem--> 116
-  {
-    id: "mn-escape-the-ghosts",
-    title: "Escape The Ghosts",
-    description:
-      "You are playing a simplified Pac-Man game. You are represented by a character Pac-Man and there are ghosts on the grid. Return true if and only if you can escape (reach the target) before any ghost reaches the target.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "ghosts",
-        label: "Ghosts (JSON [[x,y],...])",
-        type: "textarea",
-        defaultValue: "[[1,0],[0,3]]",
-      },
-      {
-        id: "target",
-        label: "Target (JSON [x,y])",
-        type: "textarea",
-        defaultValue: "[0,1]",
-      },
-    ],
-    buttonText: "Can Escape?",
-  },
-  // problem--> 117
-  {
-    id: "mn-number-of-lines-to-write-string",
-    title: "Number of Lines To Write String",
-    description:
-      "You are given a string s of lowercase English letters and an array widths where widths[i] is the width of the ith letter. You want to write s on a number of lines, where each line is at most 100 pixels wide. Return an array of two integers, [number of lines, width of last line].",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "s",
-        label: "String",
-        type: "text",
-        defaultValue: "abcdefghijklmnopqrstuvwxyz",
-      },
-      {
-        id: "widths",
-        label: "Widths Array",
-        type: "text",
-        defaultValue:
-          "4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10",
-      },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 118
-  {
-    id: "mn-unique-morse-code-words",
-    title: "Unique Morse Code Words",
-    description:
-      "Given an array of words, each word can be written as a concatenation of the Morse code of each letter. Return the number of different transformations among all words in the given array.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "words",
-        label: "Words (comma-separated)",
-        type: "text",
-        defaultValue: "gin,zen,gig,msg",
-      },
-    ],
-    buttonText: "Count",
-  },
-  // problem--> 119
-  {
-    id: "mn-projection-area-of-3d-shapes",
-    title: "Projection Area of 3D Shapes",
-    description:
-      "You are given an n x n grid where we have placed some 1 x 1 x 1 cubes. The value v = grid[i][j] represents a tower of v cubes placed on top of grid cell (i, j). We view the projection of these cubes onto the xy, yz, and zx planes. Return the total area of all three projections.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "grid",
-        label: "Grid (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,2],[3,4]]",
-      },
-    ],
-    buttonText: "Calculate Area",
-  },
-  // problem--> 120
-  {
-    id: "mn-x-of-a-kind-in-a-deck-of-cards",
-    title: "X of a Kind in a Deck of Cards",
-    description:
-      "In a deck of cards, each card has an integer written on it. Return true if and only if you can choose X >= 2 such that it is possible to split the entire deck into 1 or more groups of cards, where each group has size X, and all cards in each group have the same integer.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "deck",
-        label: "Deck of cards (comma-separated)",
-        type: "text",
-        defaultValue: "1,2,3,4,4,3,2,1",
-      },
-    ],
-    buttonText: "Check",
-  },
-  // problem--> 121
-  {
-    id: "mn-geometry-circle-area",
-    title: "Area of a Circle",
-    description:
-      "Write a function to calculate the area of a circle given its radius. Formula: π * r^2.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "radius", label: "Radius", type: "number", defaultValue: 5 },
-    ],
-    buttonText: "Calculate Area",
-  },
-  // problem--> 122
-  {
-    id: "mn-geometry-circle-circumference",
-    title: "Circumference of a Circle",
-    description:
-      "Write a function to calculate the circumference of a circle given its radius. Formula: 2 * π * r.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "radius", label: "Radius", type: "number", defaultValue: 5 },
-    ],
-    buttonText: "Calculate Circumference",
-  },
-  // problem--> 123
-  {
-    id: "mn-number-of-1-bits",
-    title: "Number of 1 Bits",
-    description:
-      "Write a function that takes an integer and returns the number of '1' bits in its binary representation.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 11 }],
-    buttonText: "Count",
-  },
-  // problem--> 124
-  {
-    id: "mn-hamming-distance",
-    title: "Hamming Distance",
-    description:
-      "The Hamming distance between two integers is the number of positions at which the corresponding bits are different. Given two integers, calculate the Hamming distance.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "x", label: "x", type: "number", defaultValue: 1 },
-      { id: "y", label: "y", type: "number", defaultValue: 4 },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 125
-  {
-    id: "mn-total-hamming-distance",
-    title: "Total Hamming Distance",
-    description:
-      "The Hamming distance between two integers is the number of positions at which the corresponding bits are different. Given an integer array, return the sum of Hamming distances between all the pairs of the integers.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "4,14,2" },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 126
-  {
-    id: "mn-single-number-ii",
-    title: "Single Number II",
-    description:
-      "Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "2,2,3,2" },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 127
-  {
-    id: "mn-single-number-iii",
-    title: "Single Number III",
-    description:
-      "Given an integer array, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,1,3,2,5" },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 128
-  {
-    id: "mn-bitwise-complement",
-    title: "Complement of Base 10 Integer",
-    description:
-      "The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation. Given an integer n, return its complement.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 5 }],
-    buttonText: "Calculate",
-  },
-  // problem--> 129
-  {
-    id: "mn-number-complement",
-    title: "Number Complement",
-    description:
-      "Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
-    buttonText: "Find Complement",
-  },
-  // problem--> 130
-  {
-    id: "mn-convert-a-number-to-hexadecimal",
-    title: "Convert a Number to Hexadecimal",
-    description:
-      "Given an integer, write an algorithm to convert it to hexadecimal. For negative integers, two’s complement method is used.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 26 }],
-    buttonText: "Convert",
-  },
-  // problem--> 131
-  {
-    id: "mn-base-7",
-    title: "Base 7",
-    description: "Given an integer, return its base 7 string representation.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 100 }],
-    buttonText: "Convert",
-  },
-  // problem--> 132
-  {
-    id: "mn-add-to-array-form-of-integer",
-    title: "Add to Array-Form of Integer",
-    description:
-      "The array-form of an integer is an array representing its digits in left to right order. Given the array-form of an integer and an integer k, return the array-form of the integer num + k.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "arr", label: "Array-Form", type: "text", defaultValue: "1,2,0,0" },
-      { id: "k", label: "k", type: "number", defaultValue: 34 },
-    ],
-    buttonText: "Add",
-  },
-  // problem--> 133
-  {
-    id: "mn-convert-to-base-neg-2",
-    title: "Convert to Base -2",
-    description:
-      "Given an integer n, return a string that represents its base -2 representation.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 2 }],
-    buttonText: "Convert",
-  },
-  // problem--> 134
-  {
-    id: "mn-poor-pigs",
-    title: "Poor Pigs",
-    description:
-      "There are buckets, one of which contains poison and the rest are filled with water. You have minutesToTest minutes to find out which bucket is poisonous. You can feed a certain number of pigs with the water from these buckets, and if a pig drinks poison it will die within minutesToDie minutes. Find the minimum number of pigs you need to figure out which bucket is poisonous within the given time.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "buckets", label: "Buckets", type: "number", defaultValue: 1000 },
-      {
-        id: "minutesToDie",
-        label: "minutesToDie",
-        type: "number",
-        defaultValue: 15,
-      },
-      {
-        id: "minutesToTest",
-        label: "minutesToTest",
-        type: "number",
-        defaultValue: 60,
-      },
-    ],
-    buttonText: "Calculate Pigs",
-  },
-  // problem--> 135
-  {
-    id: "mn-sequential-digits",
-    title: "Sequential Digits",
-    description:
-      "An integer has sequential digits if and only if each digit in the number is one more than the previous digit. Return a sorted list of all the integers in the range [low, high] inclusive that have sequential digits.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "low", label: "Low", type: "number", defaultValue: 100 },
-      { id: "high", label: "High", type: "number", defaultValue: 300 },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 136
-  {
-    id: "mn-permutation-sequence",
-    title: "Permutation Sequence",
-    description:
-      "The set [1, 2, 3, ..., n] contains a total of n! unique permutations. By listing and labeling all of the permutations in order, find the kth permutation sequence.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n", label: "n", type: "number", defaultValue: 3 },
-      { id: "k", label: "k", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 137
-  {
-    id: "mn-broken-calculator",
-    title: "Broken Calculator",
-    description:
-      "On a broken calculator that has a number showing, you can perform two operations: Double or Decrement. Given a startValue and a target, return the minimum number of operations required to display the target number.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "startValue",
-        label: "Start Value",
-        type: "number",
-        defaultValue: 2,
-      },
-      { id: "target", label: "Target", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 138
-  {
-    id: "mn-valid-square",
-    title: "Valid Square",
-    description:
-      "Given the coordinates of four points in 2D space, return whether the four points could construct a square.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "p1", label: "Point 1 [x,y]", type: "text", defaultValue: "0,0" },
-      { id: "p2", label: "Point 2 [x,y]", type: "text", defaultValue: "1,1" },
-      { id: "p3", label: "Point 3 [x,y]", type: "text", defaultValue: "1,0" },
-      { id: "p4", label: "Point 4 [x,y]", type: "text", defaultValue: "0,1" },
-    ],
-    buttonText: "Check",
-  },
-  // problem--> 139
-  {
-    id: "mn-integer-to-english-words",
-    title: "Integer to English Words",
-    description:
-      "Convert a non-negative integer to its English words representation.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num", label: "Number", type: "number", defaultValue: 12345 },
-    ],
-    buttonText: "Convert",
-  },
-  // problem--> 140
-  {
-    id: "mn-basic-calculator",
-    title: "Basic Calculator",
-    description:
-      "Implement a basic calculator to evaluate a simple expression string containing `+`, `-`, `(`, `)`, and non-negative integers.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "s",
-        label: "Expression",
-        type: "text",
-        defaultValue: "(1+(4+5+2)-3)+(6+8)",
-      },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 141
-  {
-    id: "mn-number-of-digit-one",
-    title: "Number of Digit One",
-    description:
-      "Given an integer n, count the total number of times the digit 1 appears in all non-negative integers less than or equal to n.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 13 }],
-    buttonText: "Count",
-  },
-  // problem--> 142
-  {
-    id: "mn-max-value-of-equation",
-    title: "Max Value of Equation",
-    description:
-      "You are given an array points and an integer k. The equation is yi + yj + |xi - xj|. Find the maximum value of the equation for two distinct points (xi, yi) and (xj, yj) in the array, where |xi - xj| <= k.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "points",
-        label: "Points (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,3],[2,0],[5,10],[6,-10]]",
-      },
-      { id: "k", label: "k", type: "number", defaultValue: 1 },
-    ],
-    buttonText: "Calculate Max Value",
-  },
-  // problem--> 143
-  {
-    id: "mn-largest-perimeter-triangle",
-    title: "Largest Perimeter Triangle",
-    description:
-      "Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "nums",
-        label: "Side lengths",
-        type: "text",
-        defaultValue: "2,1,2",
-      },
-    ],
-    buttonText: "Find Perimeter",
-  },
-  // problem--> 144
-  {
-    id: "mn-consecutive-numbers-sum",
-    title: "Consecutive Numbers Sum",
-    description:
-      "Given an integer n, return the number of ways you can write n as a sum of consecutive positive integers.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 15 }],
-    buttonText: "Count Ways",
-  },
-  // problem--> 145
-  {
-    id: "mn-valid-boomberang",
-    title: "Valid Boomerang",
-    description:
-      "Given an array points where points[i] = [xi, yi] represents a point on the X-Y plane, return true if these points are a boomerang. A boomerang is a set of three points that are all distinct and not in a straight line.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "points",
-        label: "Points (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,1],[2,3],[3,2]]",
-      },
-    ],
-    buttonText: "Check",
-  },
-  // problem--> 146
-  {
-    id: "mn-day-of-the-year",
-    title: "Day of the Year",
-    description:
-      "Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "date",
-        label: "Date (YYYY-MM-DD)",
-        type: "text",
-        defaultValue: "2019-02-10",
-      },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 147
-  {
-    id: "mn-min-cost-climbing-stairs",
-    title: "Min Cost Climbing Stairs",
-    description:
-      "You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "cost",
-        label: "Cost Array",
-        type: "text",
-        defaultValue: "10,15,20",
-      },
-    ],
-    buttonText: "Calculate Min Cost",
-  },
-  // problem--> 148
-  {
-    id: "mn-largest-time-for-given-digits",
-    title: "Largest Time for Given Digits",
-    description:
-      "Given an array of 4 digits, return the largest 24 hour time that can be made. The smallest 24 hour time is 00:00, and the largest is 23:59. If no valid time can be made, return an empty string.",
+      "Given an integer array, you may perform an operation on the array where you increment n - 1 elements by 1. Return the minimum number of moves required to make all array elements equal.",
     category: "Math and Number Challenges",
     inputs: [
       {
         id: "arr",
-        label: "Digits Array",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "1,2,3,4",
+        defaultValue: "1,2,3",
       },
     ],
-    buttonText: "Find Time",
+    buttonText: "Calculate Moves",
   },
-  // problem--> 149
+  // problem--> 71
   {
-    id: "mn-robot-return-to-origin",
-    title: "Robot Return to Origin",
+    id: "mnc-matrix-transpose",
+    title: "Transpose Matrix",
     description:
-      "There is a robot starting at position (0, 0), the origin, on a 2D plane. Given a sequence of its moves, judge if this robot ends up at (0, 0) after it completes its moves.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "moves",
-        label: "Moves (U,D,L,R)",
-        type: "text",
-        defaultValue: "UD",
-      },
-    ],
-    buttonText: "Check",
-  },
-  // problem--> 150
-  {
-    id: "mn-number-of-good-pairs",
-    title: "Number of Good Pairs",
-    description:
-      "Given an array of integers nums, return the number of good pairs. A pair (i, j) is called good if nums[i] == nums[j] and i < j.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "1,2,3,1,1,3" },
-    ],
-    buttonText: "Count Pairs",
-  },
-  // problem--> 151
-  {
-    id: "mn-kids-with-greatest-candies",
-    title: "Kids With the Greatest Number of Candies",
-    description:
-      "Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has. For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "candies",
-        label: "Candies Array",
-        type: "text",
-        defaultValue: "2,3,5,1,3",
-      },
-      {
-        id: "extraCandies",
-        label: "Extra Candies",
-        type: "number",
-        defaultValue: 3,
-      },
-    ],
-    buttonText: "Check",
-  },
-  // problem--> 152
-  {
-    id: "mn-count-odd-numbers-in-interval",
-    title: "Count Odd Numbers in an Interval Range",
-    description:
-      "Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "low", label: "Low", type: "number", defaultValue: 3 },
-      { id: "high", label: "High", type: "number", defaultValue: 7 },
-    ],
-    buttonText: "Count",
-  },
-  // problem--> 153
-  {
-    id: "mn-matrix-diagonal-sum",
-    title: "Matrix Diagonal Sum",
-    description:
-      "Given a square matrix mat, return the sum of the matrix diagonals.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "mat",
-        label: "Matrix (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,2,3],[4,5,6],[7,8,9]]",
-      },
-    ],
-    buttonText: "Sum",
-  },
-  // problem--> 154
-  {
-    id: "mn-average-salary-excluding-min-max",
-    title: "Average Salary Excluding Min and Max",
-    description:
-      "Given an array of unique integers salary where salary[i] is the salary of the ith employee. Return the average salary of the employees excluding the minimum and maximum salary.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "salary",
-        label: "Salary Array",
-        type: "text",
-        defaultValue: "4000,3000,1000,2000",
-      },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 155
-  {
-    id: "mn-subtract-product-and-sum",
-    title: "Subtract the Product and Sum of Digits",
-    description:
-      "Given an integer number n, return the difference between the product of its digits and the sum of its digits.",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 234 }],
-    buttonText: "Calculate",
-  },
-  // problem--> 156
-  {
-    id: "mn-check-if-straight-line",
-    title: "Check If It Is a Straight Line",
-    description:
-      "You are given an array coordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point. Check if these points make a straight line in the XY plane.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "coordinates",
-        label: "Coordinates (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,2],[2,3],[3,4],[4,5]]",
-      },
-    ],
-    buttonText: "Check",
-  },
-  // problem--> 157
-  {
-    id: "mn-find-highest-altitude",
-    title: "Find the Highest Altitude",
-    description:
-      "There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i and i + 1. Return the highest altitude of a point.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "gain",
-        label: "Gain Array",
-        type: "text",
-        defaultValue: "-5,1,5,0,-7",
-      },
-    ],
-    buttonText: "Find Highest",
-  },
-  // problem--> 158
-  {
-    id: "mn-richest-customer-wealth",
-    title: "Richest Customer Wealth",
-    description:
-      "You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the ith customer has in the jth bank. Return the wealth that the richest customer has.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "accounts",
-        label: "Accounts (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,5],[7,3],[3,5]]",
-      },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 159
-  {
-    id: "mn-running-sum-of-1d-array",
-    title: "Running Sum of 1d Array",
-    description:
-      "Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "1,2,3,4" },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 160
-  {
-    id: "mn-shuffle-the-array",
-    title: "Shuffle the Array",
-    description:
-      "Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn]. Return the array in the form [x1,y1,x2,y2,...,xn,yn].",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "2,5,1,3,4,7" },
-    ],
-    buttonText: "Shuffle",
-  },
-  // problem--> 161
-  {
-    id: "mn-nim-game",
-    title: "Nim Game",
-    description:
-      "You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to move. Write a function to determine whether you can win the game given the number of stones in the heap.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "n", label: "Number of Stones", type: "number", defaultValue: 4 },
-    ],
-    buttonText: "Can Win?",
-  },
-  // problem--> 162
-  {
-    id: "mn-add-strings",
-    title: "Add Strings",
-    description:
-      "Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "num1", label: "Number 1", type: "text", defaultValue: "123" },
-      { id: "num2", label: "Number 2", type: "text", defaultValue: "456" },
-    ],
-    buttonText: "Add",
-  },
-  // problem--> 163
-  {
-    id: "mn-climbing-stairs",
-    title: "Climbing Stairs",
-    description:
-      "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
-    category: "Math and Number Challenges",
-    inputs: [{ id: "n", label: "n steps", type: "number", defaultValue: 3 }],
-    buttonText: "Count Ways",
-  },
-  // problem--> 164
-  {
-    id: "mn-maximum-product-subarray",
-    title: "Maximum Product Subarray",
-    description:
-      "Given an integer array, find the contiguous subarray within an array (containing at least one number) which has the largest product.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "2,3,-2,4" },
-    ],
-    buttonText: "Find Max Product",
-  },
-  // problem--> 165
-  {
-    id: "mn-find-minimum-in-rotated-sorted-array",
-    title: "Find Minimum in Rotated Sorted Array",
-    description:
-      "Suppose an array of length n sorted in ascending order is rotated between 1 and n times. Find the minimum element of this array.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "3,4,5,1,2" },
-    ],
-    buttonText: "Find Minimum",
-  },
-  // problem--> 166
-  {
-    id: "mn-container-with-most-water",
-    title: "Container With Most Water",
-    description:
-      "Given n non-negative integers where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "heights",
-        label: "Heights Array",
-        type: "text",
-        defaultValue: "1,8,6,2,5,4,8,3,7",
-      },
-    ],
-    buttonText: "Find Max Area",
-  },
-  // problem--> 167
-  {
-    id: "mn-find-peak-element",
-    title: "Find Peak Element",
-    description:
-      "A peak element is an element that is strictly greater than its neighbors. Given an integer array, find a peak element, and return its index. If the array contains multiple peaks, return the index to any of the peaks.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "nums",
-        label: "Array",
-        type: "text",
-        defaultValue: "1,2,1,3,5,6,4",
-      },
-    ],
-    buttonText: "Find Peak",
-  },
-  // problem--> 168
-  {
-    id: "mn-majority-element",
-    title: "Majority Element",
-    description:
-      "Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "nums",
-        label: "Array",
-        type: "text",
-        defaultValue: "2,2,1,1,1,2,2",
-      },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 169
-  {
-    id: "mn-kth-largest-element-in-array",
-    title: "Kth Largest Element in an Array",
-    description:
-      "Given an integer array and an integer k, return the kth largest element in the array.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "3,2,1,5,6,4" },
-      { id: "k", label: "k", type: "number", defaultValue: 2 },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 170
-  {
-    id: "mn-maximum-subarray",
-    title: "Maximum Subarray",
-    description:
-      "Given an integer array, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "nums",
-        label: "Array",
-        type: "text",
-        defaultValue: "-2,1,-3,4,-1,2,1,-5,4",
-      },
-    ],
-    buttonText: "Find Max Sum",
-  },
-  // problem--> 171
-  {
-    id: "mn-merge-sorted-array",
-    title: "Merge Sorted Array",
-    description:
-      "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. Merge them into a single array sorted in non-decreasing order.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "nums1",
-        label: "Nums1 [with space]",
-        type: "text",
-        defaultValue: "1,2,3,0,0,0",
-      },
-      { id: "m", label: "m", type: "number", defaultValue: 3 },
-      { id: "nums2", label: "Nums2", type: "text", defaultValue: "2,5,6" },
-      { id: "n", label: "n", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Merge",
-  },
-  // problem--> 172
-  {
-    id: "mn-remove-duplicates-from-sorted-array",
-    title: "Remove Duplicates from Sorted Array",
-    description:
-      "Given an integer array sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. Return the number of unique elements.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "nums",
-        label: "Sorted Array",
-        type: "text",
-        defaultValue: "0,0,1,1,1,2,2",
-      },
-    ],
-    buttonText: "Remove Duplicates",
-  },
-  // problem--> 173
-  {
-    id: "mn-remove-element",
-    title: "Remove Element",
-    description:
-      "Given an integer array and an integer val, remove all occurrences of val in nums in-place. Return the number of elements in nums which are not equal to val.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "3,2,2,3" },
-      { id: "val", label: "Value to Remove", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Remove",
-  },
-  // problem--> 174
-  {
-    id: "mn-search-insert-position",
-    title: "Search Insert Position",
-    description:
-      "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "nums",
-        label: "Sorted Array",
-        type: "text",
-        defaultValue: "1,3,5,6",
-      },
-      { id: "target", label: "Target", type: "number", defaultValue: 5 },
-    ],
-    buttonText: "Find",
-  },
-  // problem--> 175
-  {
-    id: "mn-best-time-to-buy-and-sell-stock",
-    title: "Best Time to Buy and Sell Stock",
-    description:
-      "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "prices",
-        label: "Prices Array",
-        type: "text",
-        defaultValue: "7,1,5,3,6,4",
-      },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 176
-  {
-    id: "mn-rotate-image",
-    title: "Rotate Image",
-    description:
-      "You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).",
+      "Write a function that takes a 2D array (matrix) and returns its transpose.",
     category: "Math and Number Challenges",
     inputs: [
       {
         id: "matrix",
         label: "Matrix (JSON)",
         type: "textarea",
-        defaultValue: "[[1,2,3],[4,5,6],[7,8,9]]",
+        defaultValue: "[[1,2,3],[4,5,6]]",
       },
     ],
-    buttonText: "Rotate",
+    buttonText: "Transpose",
   },
-  // problem--> 177
+  // problem--> 72
   {
-    id: "mn-set-matrix-zeroes",
-    title: "Set Matrix Zeroes",
+    id: "mnc-determinant-2x2",
+    title: "Determinant of a 2x2 Matrix",
     description:
-      "Given an m x n integer matrix, if an element is 0, set its entire row and column to 0's.",
+      "Calculate the determinant of a 2x2 matrix. The formula is ad - bc.",
     category: "Math and Number Challenges",
     inputs: [
       {
         id: "matrix",
-        label: "Matrix (JSON)",
+        label: "2x2 Matrix (JSON)",
         type: "textarea",
-        defaultValue: "[[1,1,1],[1,0,1],[1,1,1]]",
+        defaultValue: "[[1,2],[3,4]]",
       },
     ],
-    buttonText: "Set Zeroes",
+    buttonText: "Calculate Determinant",
   },
-  // problem--> 178
+  // problem--> 73
   {
-    id: "mn-spiral-matrix",
+    id: "mnc-dot-product",
+    title: "Dot Product of Two Vectors",
+    description:
+      "Calculate the dot product of two vectors (represented as arrays).",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "vec1",
+        label: "Vector 1 (comma-separated)",
+        type: "text",
+        defaultValue: "1,2,3",
+      },
+      {
+        id: "vec2",
+        label: "Vector 2 (comma-separated)",
+        type: "text",
+        defaultValue: "4,5,6",
+      },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 74
+  {
+    id: "mnc-amicable-numbers",
+    title: "Amicable Numbers Check",
+    description:
+      "Check if two numbers are amicable. Amicable numbers are two different numbers so related that the sum of the proper divisors of each is equal to the other number.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num1", label: "Number 1", type: "number", defaultValue: 220 },
+      { id: "num2", label: "Number 2", type: "number", defaultValue: 284 },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 75
+  {
+    id: "mnc-catalan-numbers",
+    title: "Nth Catalan Number",
+    description:
+      "Write a function to compute the nth Catalan number. Catalan numbers appear in many counting problems.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "n", label: "Nth Catalan Number", type: "number", defaultValue: 5 },
+    ],
+    buttonText: "Calculate Catalan",
+  },
+  // problem--> 76
+  {
+    id: "mnc-count-and-say",
+    title: "Count and Say",
+    description:
+      "The count-and-say sequence is the sequence of integers with the first five terms as following: 1, 11, 21, 1211, 111221. Given an integer n, generate the nth term of the count-and-say sequence.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 4 }],
+    buttonText: "Generate",
+  },
+  // problem--> 77
+  {
+    id: "mnc-spiral-matrix",
     title: "Spiral Matrix",
     description:
       "Given an m x n matrix, return all elements of the matrix in spiral order.",
@@ -2470,30 +1075,64 @@ export const problems: Problem[] = [
     ],
     buttonText: "Traverse",
   },
-  // problem--> 179
+  // problem--> 78
   {
-    id: "mn-search-2d-matrix",
-    title: "Search a 2D Matrix",
+    id: "mnc-rotate-image",
+    title: "Rotate Image",
     description:
-      "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: Integers in each row are sorted from left to right. The first integer of each row is greater than the last integer of the previous row.",
+      "You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise). You have to rotate the image in-place.",
     category: "Math and Number Challenges",
     inputs: [
       {
         id: "matrix",
         label: "Matrix (JSON)",
         type: "textarea",
-        defaultValue: "[[1,3,5,7],[10,11,16,20],[23,30,34,60]]",
+        defaultValue: "[[1,2,3],[4,5,6],[7,8,9]]",
       },
-      { id: "target", label: "Target", type: "number", defaultValue: 3 },
     ],
-    buttonText: "Search",
+    buttonText: "Rotate",
   },
-  // problem--> 180
+  // problem--> 79
   {
-    id: "mn-game-of-life",
+    id: "mnc-set-matrix-zeroes",
+    title: "Set Matrix Zeroes",
+    description:
+      "Given an m x n integer matrix, if an element is 0, set its entire row and column to 0's.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Matrix (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,1,1],[1,0,1],[1,1,1]]",
+      },
+    ],
+    buttonText: "Set Zeroes",
+  },
+  // problem--> 80
+  {
+    id: "mnc-valid-sudoku",
+    title: "Valid Sudoku",
+    description:
+      "Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the rules.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "board",
+        label: "Sudoku Board (JSON)",
+        type: "textarea",
+        defaultValue:
+          '[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]',
+      },
+    ],
+    buttonText: "Validate",
+  },
+  // problem--> 81
+  {
+    id: "mnc-game-of-life",
     title: "Game of Life",
     description:
-      "According to Wikipedia's article: 'The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.' Given a board with m by n cells, each cell has an initial state live (1) or dead (0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules. Compute the next state.",
+      "Given a board with m by n cells, each cell has an initial state: live (1) or dead (0). Compute the next state based on the four rules of Conway's Game of Life.",
     category: "Math and Number Challenges",
     inputs: [
       {
@@ -2505,12 +1144,153 @@ export const problems: Problem[] = [
     ],
     buttonText: "Next State",
   },
-  // problem--> 181
+  // problem--> 82
   {
-    id: "mn-coin-change",
+    id: "mnc-max-points-on-a-line",
+    title: "Max Points on a Line",
+    description:
+      "Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane, return the maximum number of points that lie on the same straight line.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "points",
+        label: "Points (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]",
+      },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 83
+  {
+    id: "mnc-basic-calculator-ii",
+    title: "Basic Calculator II",
+    description:
+      "Given a string which represents an expression, evaluate this expression and return its value. The expression string contains only non-negative integers, `+`, `-`, `*`, `/` operators and empty spaces.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "s", label: "Expression", type: "text", defaultValue: "3+2*2" },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 84
+  {
+    id: "mnc-reverse-bits",
+    title: "Reverse Bits",
+    description: "Reverse bits of a given 32-bit unsigned integer.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "n",
+        label: "Number (as binary string)",
+        type: "text",
+        defaultValue: "00000010100101000001111010011100",
+      },
+    ],
+    buttonText: "Reverse",
+  },
+  // problem--> 85
+  {
+    id: "mnc-number-of-1-bits",
+    title: "Number of 1 Bits",
+    description:
+      "Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "n",
+        label: "Number (as binary string)",
+        type: "text",
+        defaultValue: "00000000000000000000000000001011",
+      },
+    ],
+    buttonText: "Count",
+  },
+  // problem--> 86
+  {
+    id: "mnc-gray-code",
+    title: "Gray Code",
+    description:
+      "The gray code is a binary numeral system where two successive values differ in only one bit. Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 2 }],
+    buttonText: "Generate",
+  },
+  // problem--> 87
+  {
+    id: "mnc-majority-element",
+    title: "Majority Element",
+    description:
+      "Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "2,2,1,1,1,2,2",
+      },
+    ],
+    buttonText: "Find",
+  },
+  // problem--> 88
+  {
+    id: "mnc-kth-largest-element",
+    title: "Kth Largest Element in an Array",
+    description:
+      "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "3,2,1,5,6,4",
+      },
+      { id: "k", label: "k", type: "number", defaultValue: 2 },
+    ],
+    buttonText: "Find",
+  },
+  // problem--> 89
+  {
+    id: "mnc-product-of-array-except-self",
+    title: "Product of Array Except Self",
+    description:
+      "Given an integer array, return an array such that the output at index i is the product of all the elements of the original array except the one at i.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,2,3,4",
+      },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 90
+  {
+    id: "mnc-container-with-most-water",
+    title: "Container With Most Water",
+    description:
+      "Given n non-negative integers representing vertical lines, find two lines that form a container that contains the most water.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of heights",
+        type: "text",
+        defaultValue: "1,8,6,2,5,4,8,3,7",
+      },
+    ],
+    buttonText: "Find Max Area",
+  },
+  // problem--> 91
+  {
+    id: "mnc-coin-change",
     title: "Coin Change",
     description:
-      "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount.",
+      "You are given coins of different denominations and a total amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount cannot be made up by any combination of the coins, return -1.",
     category: "Math and Number Challenges",
     inputs: [
       {
@@ -2523,54 +1303,380 @@ export const problems: Problem[] = [
     ],
     buttonText: "Calculate",
   },
-  // problem--> 182
+  // problem--> 92
   {
-    id: "mn-longest-increasing-subsequence",
-    title: "Longest Increasing Subsequence",
+    id: "mnc-longest-consecutive-sequence",
+    title: "Longest Consecutive Sequence",
     description:
-      "Given an integer array, return the length of the longest strictly increasing subsequence.",
+      "Given an unsorted array of integers, find the length of the longest consecutive elements sequence.",
     category: "Math and Number Challenges",
     inputs: [
       {
-        id: "nums",
-        label: "Array",
+        id: "arr",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "10,9,2,5,3,7,101,18",
+        defaultValue: "100,4,200,1,3,2",
       },
     ],
     buttonText: "Find Length",
   },
-  // problem--> 183
+  // problem--> 93
   {
-    id: "mn-combination-sum-iv",
-    title: "Combination Sum IV",
+    id: "mnc-gas-station",
+    title: "Gas Station",
     description:
-      "Given an array of distinct integers and a target integer, return the number of possible combinations that add up to the target. Combinations are different if the order of the numbers is different.",
+      "There are n gas stations along a circular route. You are given two integer arrays gas and cost. Return the starting gas station's index if you can travel around the circuit once in the clockwise direction, otherwise return -1.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "nums", label: "Numbers", type: "text", defaultValue: "1,2,3" },
-      { id: "target", label: "Target", type: "number", defaultValue: 4 },
+      {
+        id: "gas",
+        label: "Gas amounts",
+        type: "text",
+        defaultValue: "1,2,3,4,5",
+      },
+      {
+        id: "cost",
+        label: "Cost to travel",
+        type: "text",
+        defaultValue: "3,4,5,1,2",
+      },
     ],
-    buttonText: "Count Combinations",
+    buttonText: "Find Start Station",
   },
-  // problem--> 184
+  // problem--> 94
   {
-    id: "mn-partition-equal-subset-sum",
-    title: "Partition Equal Subset Sum",
+    id: "mnc-candy",
+    title: "Candy Distribution",
     description:
-      "Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.",
+      "There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following requirements: Each child must have at least one candy. Children with a higher rating get more candies than their neighbors. What is the minimum candies you must give?",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "nums", label: "Array", type: "text", defaultValue: "1,5,11,5" },
+      {
+        id: "ratings",
+        label: "Ratings array",
+        type: "text",
+        defaultValue: "1,0,2",
+      },
     ],
-    buttonText: "Check Partition",
+    buttonText: "Calculate Candies",
   },
-  // problem--> 185
+  // problem--> 95
   {
-    id: "mn-unique-paths",
+    id: "mnc-jump-game-ii",
+    title: "Jump Game II",
+    description:
+      "Given an array of non-negative integers, you are initially positioned at the first index. Each element in the array represents your maximum jump length at that position. Your goal is to reach the last index in the minimum number of jumps.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of jumps",
+        type: "text",
+        defaultValue: "2,3,1,1,4",
+      },
+    ],
+    buttonText: "Find Minimum Jumps",
+  },
+  // problem--> 96
+  {
+    id: "mnc-first-missing-positive",
+    title: "First Missing Positive",
+    description:
+      "Given an unsorted integer array, find the smallest missing positive integer.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "3,4,-1,1",
+      },
+    ],
+    buttonText: "Find Missing Positive",
+  },
+  // problem--> 97
+  {
+    id: "mnc-next-permutation",
+    title: "Next Permutation",
+    description:
+      "Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "1,2,3",
+      },
+    ],
+    buttonText: "Find Next Permutation",
+  },
+  // problem--> 98
+  {
+    id: "mnc-trapping-rain-water",
+    title: "Trapping Rain Water",
+    description:
+      "Given n non-negative integers representing an elevation map, compute how much water it can trap after raining.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "heights",
+        label: "Elevation map",
+        type: "text",
+        defaultValue: "0,1,0,2,1,0,1,3,2,1,2,1",
+      },
+    ],
+    buttonText: "Calculate Water",
+  },
+  // problem--> 99
+  {
+    id: "mnc-largest-rectangle-in-histogram",
+    title: "Largest Rectangle in Histogram",
+    description:
+      "Given an array of integers representing the histogram's bar height, find the area of the largest rectangle in the histogram.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "heights",
+        label: "Histogram heights",
+        type: "text",
+        defaultValue: "2,1,5,6,2,3",
+      },
+    ],
+    buttonText: "Find Largest Area",
+  },
+  // problem--> 100
+  {
+    id: "mnc-maximal-rectangle",
+    title: "Maximal Rectangle",
+    description:
+      "Given a 2D binary matrix filled with 0s and 1s, find the largest rectangle containing only 1s and return its area.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Matrix (JSON)",
+        type: "textarea",
+        defaultValue:
+          '[["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]',
+      },
+    ],
+    buttonText: "Find Area",
+  },
+  // problem--> 101
+  {
+    id: "mnc-chinese-remainder-theorem",
+    title: "Chinese Remainder Theorem",
+    description:
+      "Solve a system of linear congruences. Given divisors (must be pairwise coprime) and remainders, find the smallest positive integer solution.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "divisors",
+        label: "Divisors (coprime)",
+        type: "text",
+        defaultValue: "3,5,7",
+      },
+      {
+        id: "remainders",
+        label: "Remainders",
+        type: "text",
+        defaultValue: "2,3,2",
+      },
+    ],
+    buttonText: "Solve",
+  },
+  // problem--> 102
+  {
+    id: "mnc-josephus-problem",
+    title: "Josephus Problem",
+    description:
+      "There are n people standing in a circle waiting to be executed. The counting begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people are skipped and the next person is executed. Find the position of the last person remaining.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of people (n)",
+        type: "number",
+        defaultValue: 7,
+      },
+      { id: "k", label: "Step size (k)", type: "number", defaultValue: 3 },
+    ],
+    buttonText: "Find Survivor",
+  },
+  // problem--> 103
+  {
+    id: "mnc-integer-partition",
+    title: "Integer Partition",
+    description:
+      "Find the number of ways a positive integer can be expressed as a sum of positive integers. For n=4, the partitions are 4, 3+1, 2+2, 2+1+1, 1+1+1+1.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 5 }],
+    buttonText: "Count Partitions",
+  },
+  // problem--> 104
+  {
+    id: "mnc-fft-conceptual",
+    title: "Fast Fourier Transform (Conceptual)",
+    description:
+      "Explain the Fast Fourier Transform (FFT) algorithm and its application in fast polynomial multiplication.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 105
+  {
+    id: "mnc-miller-rabin-primality-test",
+    title: "Miller-Rabin Primality Test",
+    description:
+      "Implement the Miller-Rabin probabilistic primality test, suitable for very large numbers.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "n", label: "Number to test", type: "text", defaultValue: "29" },
+    ],
+    buttonText: "Test Primality",
+  },
+  // problem--> 106
+  {
+    id: "mnc-karatsuba-multiplication",
+    title: "Karatsuba Multiplication",
+    description:
+      "Implement the Karatsuba algorithm for fast multiplication of large integers, which is more efficient than the grade-school algorithm.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "num1",
+        label: "Large Number 1",
+        type: "text",
+        defaultValue: "12345",
+      },
+      {
+        id: "num2",
+        label: "Large Number 2",
+        type: "text",
+        defaultValue: "67890",
+      },
+    ],
+    buttonText: "Multiply",
+  },
+  // problem--> 107
+  {
+    id: "mnc-gaussian-elimination-conceptual",
+    title: "Gaussian Elimination (Conceptual)",
+    description:
+      "Explain the process of Gaussian elimination for solving a system of linear equations represented by a matrix.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 108
+  {
+    id: "mnc-simplex-algorithm-conceptual",
+    title: "Simplex Algorithm (Conceptual)",
+    description:
+      "Explain the high-level steps of the Simplex algorithm for solving linear programming optimization problems.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 109
+  {
+    id: "mnc-monty-hall-problem",
+    title: "Monty Hall Problem",
+    description:
+      "Simulate the Monty Hall problem to demonstrate the counter-intuitive probabilities. A contestant chooses one of three doors. The host opens another door, revealing a goat, and offers the contestant a chance to switch. Does switching improve the odds?",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "simulations",
+        label: "Number of Simulations",
+        type: "number",
+        defaultValue: 10000,
+      },
+    ],
+    buttonText: "Simulate",
+  },
+  // problem--> 110
+  {
+    id: "mnc-birthday-paradox",
+    title: "Birthday Paradox",
+    description:
+      "Calculate the approximate probability that in a group of n people, at least two share a birthday. Find the smallest n for which the probability is > 50%.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of people (n)",
+        type: "number",
+        defaultValue: 23,
+      },
+    ],
+    buttonText: "Calculate Probability",
+  },
+  // problem--> 111
+  {
+    id: "mnc-reservoir-sampling",
+    title: "Reservoir Sampling",
+    description:
+      "Implement an algorithm to select k items from a stream of items of unknown length, such that each item has an equal probability of being selected.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "stream",
+        label: "Stream of numbers",
+        type: "text",
+        defaultValue: "1,2,3,4,5,6,7,8,9,10",
+      },
+      {
+        id: "k",
+        label: "Number of items to select (k)",
+        type: "number",
+        defaultValue: 3,
+      },
+    ],
+    buttonText: "Sample",
+  },
+  // problem--> 112
+  {
+    id: "mnc-fisher-yates-shuffle",
+    title: "Fisher-Yates Shuffle",
+    description:
+      "Implement the Fisher-Yates algorithm to shuffle an array randomly in-place.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array to shuffle",
+        type: "text",
+        defaultValue: "1,2,3,4,5",
+      },
+    ],
+    buttonText: "Shuffle",
+  },
+  // problem--> 113
+  {
+    id: "mnc-combination-sum",
+    title: "Combination Sum",
+    description:
+      "Given a set of candidate numbers and a target, find all unique combinations where the candidates sum to the target. The same number may be chosen multiple times.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "candidates",
+        label: "Candidates",
+        type: "text",
+        defaultValue: "2,3,6,7",
+      },
+      { id: "target", label: "Target", type: "number", defaultValue: 7 },
+    ],
+    buttonText: "Find Combinations",
+  },
+  // problem--> 114
+  {
+    id: "mnc-unique-paths",
     title: "Unique Paths",
     description:
-      "A robot is located at the top-left corner of an m x n grid. The robot can only move either down or right. How many possible unique paths are there to the bottom-right corner?",
+      "A robot on an m x n grid can only move down or right. How many unique paths are there from the top-left to the bottom-right corner?",
     category: "Math and Number Challenges",
     inputs: [
       { id: "m", label: "Rows (m)", type: "number", defaultValue: 3 },
@@ -2578,9 +1684,674 @@ export const problems: Problem[] = [
     ],
     buttonText: "Count Paths",
   },
-  // problem--> 186
+  // problem--> 115
   {
-    id: "mn-minimum-path-sum",
+    id: "mnc-climbing-stairs",
+    title: "Climbing Stairs",
+    description:
+      "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of steps (n)",
+        type: "number",
+        defaultValue: 5,
+      },
+    ],
+    buttonText: "Count Ways",
+  },
+  // problem--> 116
+  {
+    id: "mnc-gray-code-to-integer",
+    title: "Gray Code to Integer",
+    description:
+      "Convert a Gray code (represented as an integer) back to a standard binary integer.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "gray",
+        label: "Gray Code Integer",
+        type: "number",
+        defaultValue: 3,
+      },
+    ],
+    buttonText: "Convert",
+  },
+  // problem--> 117
+  {
+    id: "mnc-integer-to-gray-code",
+    title: "Integer to Gray Code",
+    description:
+      "Convert a standard binary integer to its Gray code equivalent.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Integer", type: "number", defaultValue: 2 }],
+    buttonText: "Convert",
+  },
+  // problem--> 118
+  {
+    id: "mnc-matrix-determinant",
+    title: "Matrix Determinant",
+    description:
+      "Implement a function to calculate the determinant of a square matrix of any size using Laplace expansion.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Matrix (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,2,3],[4,5,6],[7,8,9]]",
+      },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 119
+  {
+    id: "mnc-newtons-method-sqrt",
+    title: "Square Root via Newton's Method",
+    description:
+      "Implement Newton's method to find the square root of a number. This is an alternative to the Babylonian method.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 25 }],
+    buttonText: "Calculate",
+  },
+  // problem--> 120
+  {
+    id: "mnc-shunting-yard-algorithm",
+    title: "Shunting-Yard Algorithm",
+    description:
+      "Implement the Shunting-Yard algorithm to convert an infix mathematical expression to a postfix (Reverse Polish Notation) expression.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "infix",
+        label: "Infix Expression",
+        type: "text",
+        defaultValue: "3 + 4 * 2 / ( 1 - 5 )",
+      },
+    ],
+    buttonText: "Convert to RPN",
+  },
+  // problem--> 121
+  {
+    id: "mnc-evaluate-rpn",
+    title: "Evaluate Reverse Polish Notation",
+    description:
+      "Evaluate a mathematical expression given in Reverse Polish Notation (postfix).",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "rpn",
+        label: "RPN Expression (comma-separated tokens)",
+        type: "text",
+        defaultValue: "2,1,+,3,*",
+      },
+    ],
+    buttonText: "Evaluate",
+  },
+  // problem--> 122
+  {
+    id: "mnc-line-through-most-points",
+    title: "Line Through Most Points",
+    description:
+      "Given a set of 2D points, find the line that passes through the most number of points.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "points",
+        label: "Points (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,1],[2,2],[3,3],[1,2],[2,1]]",
+      },
+    ],
+    buttonText: "Find Line",
+  },
+  // problem--> 123
+  {
+    id: "mnc-perfect-number-generation",
+    title: "Perfect Number Generation",
+    description:
+      "Generate all perfect numbers up to a given limit using the Euclid-Euler theorem (based on Mersenne primes).",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "limit", label: "Limit", type: "number", defaultValue: 10000 },
+    ],
+    buttonText: "Generate",
+  },
+  // problem--> 124
+  {
+    id: "mnc-median-of-two-sorted-arrays",
+    title: "Median of Two Sorted Arrays",
+    description:
+      "There are two sorted arrays of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log(m+n)).",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "arr1", label: "Array 1", type: "text", defaultValue: "1,3" },
+      { id: "arr2", label: "Array 2", type: "text", defaultValue: "2,4" },
+    ],
+    buttonText: "Find Median",
+  },
+  // problem--> 125
+  {
+    id: "mnc-pi-leibniz-formula",
+    title: "Approximate Pi (Leibniz Formula)",
+    description:
+      "Approximate the value of Pi using the Leibniz formula for a given number of iterations.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "iterations",
+        label: "Iterations",
+        type: "number",
+        defaultValue: 10000,
+      },
+    ],
+    buttonText: "Approximate Pi",
+  },
+  // problem--> 126
+  {
+    id: "mnc-pi-monte-carlo",
+    title: "Approximate Pi (Monte Carlo)",
+    description:
+      "Approximate the value of Pi using a Monte Carlo simulation (random sampling).",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "points",
+        label: "Number of Points",
+        type: "number",
+        defaultValue: 100000,
+      },
+    ],
+    buttonText: "Approximate Pi",
+  },
+  // problem--> 127
+  {
+    id: "mnc-fast-inverse-sqrt",
+    title: "Fast Inverse Square Root (Conceptual)",
+    description:
+      "Explain the famous 'Fast Inverse Square Root' algorithm from Quake III Arena, including the 'magic number' 0x5f3759df.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 128
+  {
+    id: "mnc-modular-exponentiation",
+    title: "Modular Exponentiation",
+    description:
+      "Implement the modular exponentiation algorithm ( (base^exponent) % modulus ) efficiently without calculating the large intermediate power.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "base", label: "Base", type: "number", defaultValue: 3 },
+      { id: "exponent", label: "Exponent", type: "number", defaultValue: 200 },
+      { id: "modulus", label: "Modulus", type: "number", defaultValue: 7 },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 129
+  {
+    id: "mnc-modular-multiplicative-inverse",
+    title: "Modular Multiplicative Inverse",
+    description:
+      "Find the modular multiplicative inverse of a number 'a' under modulo 'm'.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "a", label: "a", type: "number", defaultValue: 3 },
+      { id: "m", label: "m", type: "number", defaultValue: 11 },
+    ],
+    buttonText: "Find Inverse",
+  },
+  // problem--> 130
+  {
+    id: "mnc-euler-totient-function",
+    title: "Euler's Totient Function",
+    description:
+      "Implement Euler's totient function φ(n), which counts the positive integers up to a given integer n that are relatively prime to n.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 9 }],
+    buttonText: "Calculate φ(n)",
+  },
+  // problem--> 131
+  {
+    id: "mnc-find-primes-in-range",
+    title: "Find Primes in a Range",
+    description: "Find all prime numbers between a given start and end value.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "start", label: "Start", type: "number", defaultValue: 10 },
+      { id: "end", label: "End", type: "number", defaultValue: 50 },
+    ],
+    buttonText: "Find Primes",
+  },
+  // problem--> 132
+  {
+    id: "mnc-sum-of-primes",
+    title: "Sum of Primes",
+    description: "Calculate the sum of all prime numbers up to a given limit.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "limit", label: "Limit", type: "number", defaultValue: 100 },
+    ],
+    buttonText: "Calculate Sum",
+  },
+  // problem--> 133
+  {
+    id: "mnc-mersenne-prime",
+    title: "Mersenne Prime Check",
+    description:
+      "A Mersenne number is a number of the form 2^p - 1. If it is prime, it is a Mersenne prime. Check if a number is a Mersenne prime.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "p", label: "Exponent p", type: "number", defaultValue: 7 }],
+    buttonText: "Check",
+  },
+  // problem--> 134
+  {
+    id: "mnc-friendly-numbers",
+    title: "Friendly Numbers Check",
+    description:
+      "Check if two numbers are friendly. Friendly numbers share the same abundancy index (sum of divisors / number).",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num1", label: "Number 1", type: "number", defaultValue: 6 },
+      { id: "num2", label: "Number 2", type: "number", defaultValue: 28 },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 135
+  {
+    id: "mnc-perfect-power",
+    title: "Perfect Power Check",
+    description:
+      "Determine if a given integer is a perfect power (i.e., can be expressed as a^b for integers a > 0, b > 1).",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 27 }],
+    buttonText: "Check",
+  },
+  // problem--> 136
+  {
+    id: "mnc-narcissistic-number",
+    title: "Narcissistic Number Check",
+    description:
+      "An n-digit number that is the sum of the nth powers of its digits is called a narcissistic number. This is a synonym for an Armstrong number.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Number", type: "number", defaultValue: 1634 },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 137
+  {
+    id: "mnc-kaprekar-number",
+    title: "Kaprekar Number Check",
+    description:
+      "A Kaprekar number for a given base is a non-negative integer, the representation of whose square in that base can be split into two parts that add up to the original number again.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 9 }],
+    buttonText: "Check",
+  },
+  // problem--> 138
+  {
+    id: "mnc-automorphic-number",
+    title: "Automorphic Number Check",
+    description:
+      'An automorphic number is a number whose square "ends" in the same digits as the number itself.',
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 76 }],
+    buttonText: "Check",
+  },
+  // problem--> 139
+  {
+    id: "mnc-luhn-algorithm",
+    title: "Luhn Algorithm Validation",
+    description:
+      "Implement the Luhn algorithm to validate identification numbers like credit card numbers.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "numStr",
+        label: "Number String",
+        type: "text",
+        defaultValue: "79927398713",
+      },
+    ],
+    buttonText: "Validate",
+  },
+  // problem--> 140
+  {
+    id: "mnc-taxicab-number",
+    title: "Taxicab Number",
+    description:
+      "Find the nth taxicab number, which is the smallest number that can be expressed as a sum of two positive cubes in n distinct ways.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 2 }],
+    buttonText: "Find",
+  },
+  // problem--> 141
+  {
+    id: "mnc-sqrt-decomposition",
+    title: "SQRT Decomposition for Range Sum (Conceptual)",
+    description:
+      "Explain SQRT Decomposition as a method to answer range sum queries in O(sqrt(n)) time after O(n) preprocessing.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 142
+  {
+    id: "mnc-fenwick-tree",
+    title: "Fenwick Tree for Range Sum (Conceptual)",
+    description:
+      "Explain the Fenwick Tree (Binary Indexed Tree) data structure for efficient O(log n) range sum queries and updates.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 143
+  {
+    id: "mnc-segment-tree",
+    title: "Segment Tree for Range Minimum (Conceptual)",
+    description:
+      "Explain the Segment Tree data structure for efficient O(log n) range minimum queries and updates.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 144
+  {
+    id: "mnc-prime-factorization",
+    title: "Prime Factorization",
+    description:
+      "Write a function to find all prime factors of a given integer.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 315 }],
+    buttonText: "Find Factors",
+  },
+  // problem--> 145
+  {
+    id: "mnc-number-of-divisors",
+    title: "Number of Divisors",
+    description:
+      "Write a function to count the total number of divisors of a given integer.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 100 }],
+    buttonText: "Count Divisors",
+  },
+  // problem--> 146
+  {
+    id: "mnc-sum-of-divisors",
+    title: "Sum of Divisors",
+    description:
+      "Write a function to find the sum of all divisors of a given integer.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 100 }],
+    buttonText: "Calculate Sum",
+  },
+  // problem--> 147
+  {
+    id: "mnc-random-point-in-circle",
+    title: "Random Point in a Circle",
+    description:
+      "Generate a uniformly distributed random point within a circle of a given radius centered at the origin.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "radius", label: "Radius", type: "number", defaultValue: 10 },
+    ],
+    buttonText: "Generate Point",
+  },
+  // problem--> 148
+  {
+    id: "mnc-vector-cross-product",
+    title: "Vector Cross Product (3D)",
+    description: "Calculate the cross product of two 3D vectors.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "vec1",
+        label: "Vector 1 (x,y,z)",
+        type: "text",
+        defaultValue: "1,2,3",
+      },
+      {
+        id: "vec2",
+        label: "Vector 2 (x,y,z)",
+        type: "text",
+        defaultValue: "4,5,6",
+      },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 149
+  {
+    id: "mnc-matrix-rotation",
+    title: "Rotate Matrix 90 Degrees",
+    description: "Rotate an N x N matrix by 90 degrees clockwise in-place.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Matrix (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,2,3],[4,5,6],[7,8,9]]",
+      },
+    ],
+    buttonText: "Rotate",
+  },
+  // problem--> 150
+  {
+    id: "mnc-spiral-matrix-ii",
+    title: "Spiral Matrix II",
+    description:
+      "Given a positive integer n, generate an n x n matrix filled with elements from 1 to n^2 in spiral order.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 3 }],
+    buttonText: "Generate",
+  },
+  // problem--> 151
+  {
+    id: "mnc-polygon-area",
+    title: "Area of a Polygon",
+    description:
+      "Calculate the area of a polygon given its vertices using the Shoelace formula.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "vertices",
+        label: "Vertices (JSON [[x,y],...])",
+        type: "textarea",
+        defaultValue: "[[0,0],[4,0],[4,3],[0,3]]",
+      },
+    ],
+    buttonText: "Calculate Area",
+  },
+  // problem--> 152
+  {
+    id: "mnc-karatsuba-multiplication-conceptual",
+    title: "Karatsuba Multiplication (Conceptual)",
+    description:
+      "Explain the Karatsuba algorithm for multiplying large numbers faster than the grade-school algorithm.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain",
+  },
+  // problem--> 153
+  {
+    id: "mnc-extended-euclidean-algorithm",
+    title: "Extended Euclidean Algorithm",
+    description:
+      "Implement the Extended Euclidean Algorithm to find integer coefficients x and y such that ax + by = gcd(a, b).",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "a", label: "a", type: "number", defaultValue: 240 },
+      { id: "b", label: "b", type: "number", defaultValue: 46 },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 154
+  {
+    id: "mnc-rsa-encryption-conceptual",
+    title: "RSA Encryption (Conceptual)",
+    description:
+      "Explain the high-level steps of the RSA asymmetric encryption algorithm.",
+    category: "Math and Number Challenges",
+    inputs: [],
+    buttonText: "Explain RSA",
+  },
+  // problem--> 155
+  {
+    id: "mnc-hailstone-sequence",
+    title: "Hailstone Sequence (Collatz)",
+    description:
+      "Generate the Hailstone sequence for a given number until it reaches 1.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Start Number", type: "number", defaultValue: 7 },
+    ],
+    buttonText: "Generate Sequence",
+  },
+  // problem--> 156
+  {
+    id: "mnc-goldbach-conjecture",
+    title: "Goldbach's Conjecture",
+    description:
+      "For a given even integer greater than 2, find two prime numbers that sum up to it (Goldbach's conjecture states such a pair always exists).",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Even Number", type: "number", defaultValue: 28 },
+    ],
+    buttonText: "Find Prime Pair",
+  },
+  // problem--> 157
+  {
+    id: "mnc-magic-square-check",
+    title: "Magic Square Check",
+    description:
+      "Determine if a given n x n matrix is a magic square (rows, columns, and diagonals sum to the same value).",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Matrix (JSON)",
+        type: "textarea",
+        defaultValue: "[[2,7,6],[9,5,1],[4,3,8]]",
+      },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 158
+  {
+    id: "mnc-happy-number-cycle-detection",
+    title: "Happy Number (Cycle Detection)",
+    description:
+      "Check if a number is a happy number using Floyd's Tortoise and Hare algorithm for cycle detection.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 2 }],
+    buttonText: "Check",
+  },
+  // problem--> 159
+  {
+    id: "mnc-number-to-words",
+    title: "Number to Words",
+    description:
+      "Convert a non-negative integer to its English words representation.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Number", type: "number", defaultValue: 12345 },
+    ],
+    buttonText: "Convert",
+  },
+  // problem--> 160
+  {
+    id: "mnc-basic-calculator",
+    title: "Basic Calculator",
+    description:
+      "Implement a basic calculator to evaluate a simple expression string containing `+`, `-`, `(`, `)`, and non-negative integers.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "s",
+        label: "Expression",
+        type: "text",
+        defaultValue: "(1+(4+5+2)-3)+(6+8)",
+      },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 161
+  {
+    id: "mnc-nth-ugly-number",
+    title: "Nth Ugly Number",
+    description:
+      "Write a program to find the n-th ugly number. Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
+    buttonText: "Find",
+  },
+  // problem--> 162
+  {
+    id: "mnc-super-ugly-number",
+    title: "Super Ugly Number",
+    description:
+      "Write a program to find the nth super ugly number. Super ugly numbers are positive numbers whose all prime factors are in the given prime list.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "n", label: "n", type: "number", defaultValue: 12 },
+      {
+        id: "primes",
+        label: "Primes",
+        type: "text",
+        defaultValue: "2,7,13,19",
+      },
+    ],
+    buttonText: "Find",
+  },
+  // problem--> 163
+  {
+    id: "mnc-largest-number",
+    title: "Largest Number",
+    description:
+      "Given a list of non-negative integers, arrange them such that they form the largest number.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "3,30,34,5,9",
+      },
+    ],
+    buttonText: "Arrange",
+  },
+  // problem--> 164
+  {
+    id: "mnc-fraction-addition-and-subtraction",
+    title: "Fraction Addition and Subtraction",
+    description:
+      "Given a string representing an expression of fraction addition and subtraction, return the result in string format.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "expression",
+        label: "Expression",
+        type: "text",
+        defaultValue: "-1/2+1/2+1/3",
+      },
+    ],
+    buttonText: "Calculate",
+  },
+  // problem--> 165
+  {
+    id: "mnc-factorial-trailing-zeroes",
+    title: "Factorial Trailing Zeroes",
+    description:
+      "Given an integer n, return the number of trailing zeroes in n!.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 30 }],
+    buttonText: "Count",
+  },
+  // problem--> 166
+  {
+    id: "mnc-minimum-path-sum",
     title: "Minimum Path Sum",
     description:
       "Given a grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path. You can only move either down or right.",
@@ -2593,143 +2364,79 @@ export const problems: Problem[] = [
         defaultValue: "[[1,3,1],[1,5,1],[4,2,1]]",
       },
     ],
-    buttonText: "Find Min Sum",
+    buttonText: "Find Minimum Sum",
   },
-  // problem--> 187
+  // problem--> 167
   {
-    id: "mn-number-of-islands",
-    title: "Number of Islands",
+    id: "mnc-largest-perimeter-triangle",
+    title: "Largest Perimeter Triangle",
     description:
-      "Given a 2D grid map of '1's (land) and '0's (water), count the number of islands.",
+      "Given an array of integers, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths.",
     category: "Math and Number Challenges",
     inputs: [
       {
-        id: "grid",
-        label: "Grid (JSON)",
-        type: "textarea",
-        defaultValue:
-          "[['1','1','0','0','0'],['1','1','0','0','0'],['0','0','1','0','0'],['0','0','0','1','1']]",
-      },
-    ],
-    buttonText: "Count Islands",
-  },
-  // problem--> 188
-  {
-    id: "mn-basic-calculator-ii",
-    title: "Basic Calculator II",
-    description:
-      "Implement a basic calculator to evaluate an expression string containing `+`, `-`, `*`, `/` and non-negative integers. Handle operator precedence.",
-    category: "Math and Number Challenges",
-    inputs: [
-      { id: "s", label: "Expression", type: "text", defaultValue: "3+2*2" },
-    ],
-    buttonText: "Calculate",
-  },
-  // problem--> 189
-  {
-    id: "mn-encode-decode-tinyurl",
-    title: "Encode and Decode TinyURL",
-    description:
-      "Design a service like TinyURL that can encode a long URL to a short one and decode it back.",
-    category: "Math and Number Challenges",
-    inputs: [
-      {
-        id: "url",
-        label: "Long URL",
+        id: "arr",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "https://example.com/problems/design-tinyurl",
+        defaultValue: "2,1,2,5,4",
       },
     ],
-    buttonText: "Encode & Decode",
+    buttonText: "Find Perimeter",
   },
-  // problem--> 190
+  // problem--> 168
   {
-    id: "mn-meeting-rooms-ii",
-    title: "Meeting Rooms II",
+    id: "mnc-add-to-array-form-of-integer",
+    title: "Add to Array-Form of Integer",
     description:
-      "Given an array of meeting time intervals, find the minimum number of conference rooms required.",
+      "The array-form of an integer is an array representing its digits in left to right order. Given the array-form of an integer and an integer k, return the array-form of the integer num + k.",
     category: "Math and Number Challenges",
     inputs: [
-      {
-        id: "intervals",
-        label: "Intervals (JSON)",
-        type: "textarea",
-        defaultValue: "[[0,30],[5,10],[15,20]]",
-      },
+      { id: "num", label: "Array-form", type: "text", defaultValue: "1,2,0,0" },
+      { id: "k", label: "k", type: "number", defaultValue: 34 },
     ],
-    buttonText: "Calculate Rooms",
+    buttonText: "Add",
   },
-  // problem--> 191
+  // problem--> 169
   {
-    id: "mn-serialize-deserialize-binary-tree",
-    title: "Serialize and Deserialize Binary Tree",
+    id: "mnc-divide-two-integers",
+    title: "Divide Two Integers",
     description:
-      "Design an algorithm to serialize a binary tree to a string and deserialize the string back to the tree.",
-    category: "Math and Number Challenges",
-    inputs: [],
-    buttonText: "Show Concept",
-  },
-  // problem--> 192
-  {
-    id: "mn-insert-delete-getrandom-o1",
-    title: "Insert Delete GetRandom O(1)",
-    description:
-      "Design a data structure that supports insert, remove, and getRandom in average O(1) time.",
-    category: "Math and Number Challenges",
-    inputs: [],
-    buttonText: "Show Concept",
-  },
-  // problem--> 193
-  {
-    id: "mn-regular-expression-matching",
-    title: "Regular Expression Matching",
-    description:
-      "Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.",
+      "Given two integers, divide two integers without using multiplication, division, and mod operator.",
     category: "Math and Number Challenges",
     inputs: [
-      { id: "s", label: "String", type: "text", defaultValue: "aab" },
-      { id: "p", label: "Pattern", type: "text", defaultValue: "c*a*b" },
+      { id: "dividend", label: "Dividend", type: "number", defaultValue: 10 },
+      { id: "divisor", label: "Divisor", type: "number", defaultValue: 3 },
     ],
-    buttonText: "Match",
+    buttonText: "Divide",
   },
-  // problem--> 194
+  // problem--> 170
   {
-    id: "mn-largest-rectangle-in-histogram",
-    title: "Largest Rectangle in Histogram",
+    id: "mnc-valid-number",
+    title: "Valid Number",
     description:
-      "Given an array of integers representing the histogram's bar height, find the area of the largest rectangle in the histogram.",
+      "Given a string, determine if it is a valid number (integer or decimal).",
     category: "Math and Number Challenges",
     inputs: [
-      {
-        id: "heights",
-        label: "Heights",
-        type: "text",
-        defaultValue: "2,1,5,6,2,3",
-      },
+      { id: "s", label: "String", type: "text", defaultValue: " -90e3   " },
     ],
-    buttonText: "Find Area",
+    buttonText: "Validate",
   },
-  // problem--> 195
+  // problem--> 171
   {
-    id: "mn-maximal-rectangle",
-    title: "Maximal Rectangle",
+    id: "mnc-permutation-sequence",
+    title: "Permutation Sequence",
     description:
-      "Given a 2D binary matrix filled with 0s and 1s, find the largest rectangle containing only 1s and return its area.",
+      "The set [1, 2, 3, ..., n] contains a total of n! unique permutations. Given n and k, return the kth permutation sequence.",
     category: "Math and Number Challenges",
     inputs: [
-      {
-        id: "matrix",
-        label: "Matrix (JSON)",
-        type: "textarea",
-        defaultValue:
-          "[['1','0','1','0','0'],['1','0','1','1','1'],['1','1','1','1','1'],['1','0','0','1','0']]",
-      },
+      { id: "n", label: "n", type: "number", defaultValue: 3 },
+      { id: "k", label: "k", type: "number", defaultValue: 3 },
     ],
-    buttonText: "Find Area",
+    buttonText: "Find Sequence",
   },
-  // problem--> 196
+  // problem--> 172
   {
-    id: "mn-basic-calculator-iii",
+    id: "mnc-basic-calculator-iii",
     title: "Basic Calculator III",
     description:
       "Implement a basic calculator to evaluate an expression string containing `+`, `-`, `*`, `/`, `(`, `)`, and non-negative integers.",
@@ -2744,65 +2451,396 @@ export const problems: Problem[] = [
     ],
     buttonText: "Calculate",
   },
+  // problem--> 173
+  {
+    id: "mnc-number-of-digit-one",
+    title: "Number of Digit One",
+    description:
+      "Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 13 }],
+    buttonText: "Count",
+  },
+  // problem--> 174
+  {
+    id: "mnc-max-sum-of-rectangle-no-larger-than-k",
+    title: "Max Sum of Rectangle No Larger Than K",
+    description:
+      "Given an m x n matrix and an integer k, find the max sum of a rectangle in the matrix such that its sum is no larger than k.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Matrix (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,0,1],[0,-2,3]]",
+      },
+      { id: "k", label: "k", type: "number", defaultValue: 2 },
+    ],
+    buttonText: "Find Max Sum",
+  },
+  // problem--> 175
+  {
+    id: "mnc-russian-peasant-multiplication",
+    title: "Russian Peasant Multiplication",
+    description:
+      "Implement the Russian Peasant algorithm for multiplication, which uses halving, doubling, and summing.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num1", label: "Number 1", type: "number", defaultValue: 47 },
+      { id: "num2", label: "Number 2", type: "number", defaultValue: 42 },
+    ],
+    buttonText: "Multiply",
+  },
+  // problem--> 176
+  {
+    id: "mnc-babylonian-sqrt",
+    title: "Babylonian Method for Square Root",
+    description:
+      "Implement the Babylonian method to find the square root of a number.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 50 }],
+    buttonText: "Calculate",
+  },
+  // problem--> 177
+  {
+    id: "mnc-sum-of-two-integers",
+    title: "Sum of Two Integers",
+    description:
+      "Given two integers a and b, return the sum of the two integers without using the operators + and -.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "a", label: "a", type: "number", defaultValue: 1 },
+      { id: "b", label: "b", type: "number", defaultValue: 2 },
+    ],
+    buttonText: "Sum",
+  },
+  // problem--> 178
+  {
+    id: "mnc-integer-to-english-words",
+    title: "Integer to English Words",
+    description:
+      "Convert a non-negative integer to its english words representation.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "num", label: "Number", type: "number", defaultValue: 1234567 },
+    ],
+    buttonText: "Convert",
+  },
+  // problem--> 179
+  {
+    id: "mnc-perfect-rectangle",
+    title: "Perfect Rectangle",
+    description:
+      "Given an array of rectangles, where each rectangle is represented as [x1, y1, x2, y2], determine if all the rectangles together form an exact cover of a rectangular region.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "rectangles",
+        label: "Rectangles (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,1,3,3],[3,1,4,2],[3,2,4,4],[1,3,2,4],[2,3,3,4]]",
+      },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 180
+  {
+    id: "mnc-robot-bounded-in-circle",
+    title: "Robot Bounded In Circle",
+    description:
+      "On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions: 'G', 'L', 'R'. Given a sequence of instructions, return true if the robot returns to the origin after some number of cycles, or is otherwise bounded.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "instructions",
+        label: "Instructions",
+        type: "text",
+        defaultValue: "GGLLGG",
+      },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 181
+  {
+    id: "mnc-random-pick-with-weight",
+    title: "Random Pick with Weight",
+    description:
+      "Given an array w of positive integers, where w[i] describes the weight of index i, write a function which randomly picks an index in proportion to its weight.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "w", label: "Weights", type: "text", defaultValue: "1,3" }],
+    buttonText: "Pick Index",
+  },
+  // problem--> 182
+  {
+    id: "mnc-random-point-in-non-overlapping-rectangles",
+    title: "Random Point in Non-overlapping Rectangles",
+    description:
+      "Given a list of non-overlapping axis-aligned rectangles, write a function that picks a random integer point inside the space covered by the rectangles.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "rects",
+        label: "Rectangles (JSON)",
+        type: "textarea",
+        defaultValue: "[[-2,-2,-1,-1],[1,0,3,0]]",
+      },
+    ],
+    buttonText: "Pick Point",
+  },
+  // problem--> 183
+  {
+    id: "mnc-check-if-it-is-a-straight-line",
+    title: "Check If It Is a Straight Line",
+    description:
+      "You are given an array coordinates, where coordinates[i] = [x, y], representing a point. Check if these points make a straight line in the XY plane.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "coordinates",
+        label: "Coordinates (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]",
+      },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 184
+  {
+    id: "mnc-reach-a-number",
+    title: "Reach a Number",
+    description:
+      "You are standing at position 0 on an infinite number line. There is a goal at `target`. On the ith move, you can take `i` steps in either the positive or negative direction. Return the minimum number of steps required to reach the destination.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "target", label: "Target", type: "number", defaultValue: 2 },
+    ],
+    buttonText: "Calculate Steps",
+  },
+  // problem--> 185
+  {
+    id: "mnc-reordered-power-of-2",
+    title: "Reordered Power of 2",
+    description:
+      "Starting with a positive integer N, we reorder the digits in any order (including the original order) such that the leading digit is not zero. Return true if and only if we can do this in a way such that the resulting number is a power of 2.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "N", label: "N", type: "number", defaultValue: 46 }],
+    buttonText: "Check",
+  },
+  // problem--> 186
+  {
+    id: "mnc-rectangle-overlap",
+    title: "Rectangle Overlap",
+    description:
+      "An axis-aligned rectangle is represented by its bottom-left and top-right coordinates. Given two rectangles, return true if they overlap, and false otherwise.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "rec1",
+        label: "Rectangle 1 (x1,y1,x2,y2)",
+        type: "text",
+        defaultValue: "0,0,2,2",
+      },
+      {
+        id: "rec2",
+        label: "Rectangle 2 (x1,y1,x2,y2)",
+        type: "text",
+        defaultValue: "1,1,3,3",
+      },
+    ],
+    buttonText: "Check Overlap",
+  },
+  // problem--> 187
+  {
+    id: "mnc-rectangle-area-ii",
+    title: "Rectangle Area II",
+    description:
+      "We are given a list of axis-aligned rectangles. Return the total area covered by all rectangles in the plane.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "rectangles",
+        label: "Rectangles (JSON)",
+        type: "textarea",
+        defaultValue: "[[0,0,2,2],[1,1,3,3],[2,0,4,1]]",
+      },
+    ],
+    buttonText: "Calculate Area",
+  },
+  // problem--> 188
+  {
+    id: "mnc-powerful-integers",
+    title: "Powerful Integers",
+    description:
+      "Given three integers x, y, and bound, return a list of all the powerful integers that have a value less than or equal to bound. An integer is powerful if it can be represented as x^i + y^j for some non-negative integers i and j.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "x", label: "x", type: "number", defaultValue: 2 },
+      { id: "y", label: "y", type: "number", defaultValue: 3 },
+      { id: "bound", label: "bound", type: "number", defaultValue: 10 },
+    ],
+    buttonText: "Find",
+  },
+  // problem--> 189
+  {
+    id: "mnc-smallest-integer-divisible-by-k",
+    title: "Smallest Integer Divisible by K",
+    description:
+      "Given a positive integer k, you need to find the length of the smallest positive integer n such that n is divisible by k, and n only contains the digit 1.",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "k", label: "k", type: "number", defaultValue: 3 }],
+    buttonText: "Find Length",
+  },
+  // problem--> 190
+  {
+    id: "mnc-numbers-with-same-consecutive-differences",
+    title: "Numbers With Same Consecutive Differences",
+    description:
+      "Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "n", label: "Length (n)", type: "number", defaultValue: 3 },
+      { id: "k", label: "Difference (k)", type: "number", defaultValue: 7 },
+    ],
+    buttonText: "Find Numbers",
+  },
+  // problem--> 191
+  {
+    id: "mnc-find-and-replace-pattern",
+    title: "Find and Replace Pattern",
+    description:
+      "Given a list of strings words and a string pattern, return a list of words[i] that match pattern. A word matches the pattern if there exists a permutation of letters p so that after replacing every letter x in the pattern with p(x), we get the desired word.",
+    category: "Math and Number Challenges",
+    inputs: [
+      {
+        id: "words",
+        label: "Words",
+        type: "text",
+        defaultValue: "abc,deq,mee,aqq,dkd,ccc",
+      },
+      { id: "pattern", label: "Pattern", type: "text", defaultValue: "abb" },
+    ],
+    buttonText: "Find",
+  },
+  // problem--> 192
+  {
+    id: "mnc-consecutive-numbers-sum",
+    title: "Consecutive Numbers Sum",
+    description:
+      "Given a positive integer n, how many ways can we write it as a sum of consecutive positive integers?",
+    category: "Math and Number Challenges",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 15 }],
+    buttonText: "Count Ways",
+  },
+  // problem--> 193
+  {
+    id: "mnc-mirror-reflection",
+    title: "Mirror Reflection",
+    description:
+      "There is a special square room with mirrors on each of the four walls. Except for the southwest corner, there are receptors on each of the remaining corners, numbered 0, 1, and 2. The square room has walls of length p and a laser ray from the southwest corner strikes the east wall at a distance q from the 0th receptor. Return the number of the receptor that the ray meets first.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "p", label: "p", type: "number", defaultValue: 2 },
+      { id: "q", label: "q", type: "number", defaultValue: 1 },
+    ],
+    buttonText: "Find Receptor",
+  },
+  // problem--> 194
+  {
+    id: "mnc-global-and-local-inversions",
+    title: "Global and Local Inversions",
+    description:
+      "An array A is a permutation of [0, 1, ..., N-1]. A global inversion is a pair (i, j) where 0 <= i < j < N and A[i] > A[j]. A local inversion is an index i where 0 <= i < N-1 and A[i] > A[i+1]. Determine if the number of global inversions is equal to the number of local inversions.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "A", label: "Array A", type: "text", defaultValue: "1,0,2" },
+    ],
+    buttonText: "Check",
+  },
+  // problem--> 195
+  {
+    id: "mnc-the-kth-factor-of-n",
+    title: "The kth Factor of n",
+    description:
+      "Given two positive integers n and k. A factor of an integer n is an integer i where n % i == 0. Consider a list of all factors of n sorted in ascending order, return the kth factor in this list or return -1 if n has less than k factors.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "n", label: "n", type: "number", defaultValue: 12 },
+      { id: "k", label: "k", type: "number", defaultValue: 3 },
+    ],
+    buttonText: "Find Factor",
+  },
+  // problem--> 196
+  {
+    id: "mnc-count-good-triplets",
+    title: "Count Good Triplets",
+    description:
+      "Given an array of integers arr, and three integers a, b and c. You need to find the number of good triplets. A triplet (arr[i], arr[j], arr[k]) is good if |arr[i] - arr[j]| <= a, |arr[j] - arr[k]| <= b, and |arr[i] - arr[k]| <= c.",
+    category: "Math and Number Challenges",
+    inputs: [
+      { id: "arr", label: "Array", type: "text", defaultValue: "3,0,1,1,9,7" },
+      { id: "a", label: "a", type: "number", defaultValue: 7 },
+      { id: "b", label: "b", type: "number", defaultValue: 2 },
+      { id: "c", label: "c", type: "number", defaultValue: 3 },
+    ],
+    buttonText: "Count Triplets",
+  },
   // problem--> 197
   {
-    id: "mn-sliding-window-median",
-    title: "Sliding Window Median",
+    id: "mnc-thousand-separator",
+    title: "Thousand Separator",
     description:
-      "The median is the middle value in an ordered integer list. Find the median of all windows of size k as the window slides from left to right.",
+      "Given an integer n, add a dot '.' as the thousands separator and return it in string format.",
     category: "Math and Number Challenges",
-    inputs: [],
-    buttonText: "Show Concept",
+    inputs: [{ id: "n", label: "n", type: "number", defaultValue: 1234567 }],
+    buttonText: "Format",
   },
   // problem--> 198
   {
-    id: "mn-best-time-to-buy-and-sell-stock-iii",
-    title: "Best Time to Buy and Sell Stock III",
+    id: "mnc-matrix-diagonal-sum",
+    title: "Matrix Diagonal Sum",
     description:
-      "You are given an array prices where prices[i] is the price of a given stock on the ith day. Find the maximum profit you can achieve. You may complete at most two transactions.",
+      "Given a square matrix, return the sum of the matrix diagonals. Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.",
     category: "Math and Number Challenges",
     inputs: [
       {
-        id: "prices",
-        label: "Prices Array",
-        type: "text",
-        defaultValue: "3,3,5,0,0,3,1,4",
+        id: "mat",
+        label: "Matrix (JSON)",
+        type: "textarea",
+        defaultValue: "[[1,2,3],[4,5,6],[7,8,9]]",
       },
     ],
-    buttonText: "Calculate Profit",
+    buttonText: "Sum Diagonals",
   },
   // problem--> 199
   {
-    id: "mn-candy",
-    title: "Candy",
+    id: "mnc-check-if-all-1s-are-at-least-length-k-places-away",
+    title: "Check If All 1's Are at Least Length K Places Away",
     description:
-      "There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings. You are giving candies to these children subjected to the following requirements: Each child must have at least one candy. Children with a higher rating get more candies than their neighbors. Return the minimum number of candies you need to have to distribute the candies to the children.",
+      "Given an array of 0s and 1s and an integer k, return true if all 1's are at least k places away from each other, otherwise return false.",
     category: "Math and Number Challenges",
     inputs: [
       {
-        id: "ratings",
-        label: "Ratings Array",
+        id: "nums",
+        label: "Array",
         type: "text",
-        defaultValue: "1,0,2",
+        defaultValue: "1,0,0,0,1,0,0,1",
       },
+      { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
-    buttonText: "Calculate",
+    buttonText: "Check",
   },
   // problem--> 200
   {
-    id: "mn-trapping-rain-water-ii",
-    title: "Trapping Rain Water II",
+    id: "mnc-count-odd-numbers-in-an-interval-range",
+    title: "Count Odd Numbers in an Interval Range",
     description:
-      "Given an m x n integer matrix heightMap representing the height of each unit cell in a 2D elevation map, return the volume of water it can trap after raining.",
+      "Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).",
     category: "Math and Number Challenges",
     inputs: [
-      {
-        id: "heightMap",
-        label: "Height Map (JSON)",
-        type: "textarea",
-        defaultValue: "[[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]",
-      },
+      { id: "low", label: "low", type: "number", defaultValue: 3 },
+      { id: "high", label: "high", type: "number", defaultValue: 7 },
     ],
-    buttonText: "Calculate",
+    buttonText: "Count Odds",
   },
 ];
