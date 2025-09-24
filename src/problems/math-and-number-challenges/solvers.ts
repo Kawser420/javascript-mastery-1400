@@ -1139,7 +1139,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 100
   "mnc-maximal-rectangle": () =>
     `(Conceptual) Reduce the problem to "Largest Rectangle in Histogram". For each row, create a histogram of consecutive '1's above it. Run the histogram algorithm for each row and find the maximum area.`,
-  // ... (and so on for all 200 solvers)
   // problem solver--> 101
   "mnc-chinese-remainder-theorem": () =>
     `(Conceptual) Very advanced. Requires implementation of the Extended Euclidean Algorithm to find modular multiplicative inverses. The solution is the sum of terms, where each term is (rem * N_i * inv_i) mod N.`,
