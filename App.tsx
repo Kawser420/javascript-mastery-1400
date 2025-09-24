@@ -110,7 +110,7 @@ const App: React.FC = () => {
       "Arrays & Strings",
       "Objects & Prototypes",
       "Math and Number Challenges",
-      "Date & Time Handling",
+      "Date and Time Handling",
       "Type & Value Mastery",
       "Error Handling & Debugging",
       "Input/Output & Console Utilities",
