@@ -49,7 +49,7 @@ export type Category =
   | "Objects & Prototypes"
   | "Math and Number Challenges"
   | "Date and Time Handling"
-  | "Type & Value Mastery"
+  | "Type and Value Mastery"
   | "Error Handling & Debugging"
   | "Input/Output & Console Utilities"
   | "ES6+ Features"

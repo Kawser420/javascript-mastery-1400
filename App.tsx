@@ -111,7 +111,7 @@ const App: React.FC = () => {
       "Objects & Prototypes",
       "Math and Number Challenges",
       "Date and Time Handling",
-      "Type & Value Mastery",
+      "Type and Value Mastery",
       "Error Handling & Debugging",
       "Input/Output & Console Utilities",
     ],
