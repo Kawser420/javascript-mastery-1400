@@ -1,7 +1,4 @@
-// problem solver--> 01
-// HELPER FUNCTIONS to make solvers robust against user input
 const parseDate = (input: any): Date => {
-  // Handle empty string case for "is today" problem
   if (input === "") return new Date();
   const d = new Date(input);
   if (isNaN(d.getTime())) throw new Error(`Invalid date input: "${input}"`);
@@ -209,7 +206,7 @@ export const solvers: Record<string, Function> = {
     const minutes = String(d.getMinutes()).padStart(2, "0");
     const ampm = hours >= 12 ? "PM" : "AM";
     hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
+    hours = hours ? hours : 12;
     return `${String(hours).padStart(2, "0")}:${minutes} ${ampm}`;
   },
   // problem solver--> 37
