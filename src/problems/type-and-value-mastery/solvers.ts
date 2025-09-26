@@ -1,28 +1,41 @@
 // problem solver--> 01
-// HELPER FUNCTIONS to make solvers robust against user input
+
+// Robust helper functions to handle various user inputs without TypeScript errors
 const parseNumber = (input: any): number => {
   const num = Number(input);
-  if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
+  if (String(input).trim() === '' || isNaN(num)) {
+    // Throw an error for invalid number formats to be caught by the UI
+    throw new Error(`Invalid number input: "${input}"`);
+  }
   return num;
 };
 
-const parseBoolean = (input: any): boolean => {
-  if (typeof input === 'boolean') return input;
-  if (typeof input === 'string') {
-    const lower = input.toLowerCase().trim();
-    if (lower === 'true') return true;
-    if (lower === 'false') return false;
-  }
-  throw new Error(`Invalid boolean input: "${input}"`);
+const parseAsValue = (input: string): any => {
+    const trimmed = input.trim().toLowerCase();
+    if (trimmed === 'null') return null;
+    if (trimmed === 'undefined') return undefined;
+    if (trimmed === 'true') return true;
+    if (trimmed === 'false') return false;
+    if (trimmed === '""' || trimmed === "''") return "";
+    if (trimmed === 'nan') return NaN;
+    
+    // Check if it's a number (including '0')
+    if (!isNaN(Number(trimmed)) && trimmed !== '') return Number(trimmed);
+
+    // Try to parse as JSON for objects/arrays
+    try {
+        if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+            // A safer eval-like function for object literals
+            return new Function(`return ${input}`)();
+        }
+    } catch (e) {
+        // Fallback to original string if JSON parsing fails
+        return input;
+    }
+
+    return input; // Return original string if no other type matches
 };
 
-const parseJson = (input: string): any => {
-  try {
-    return JSON.parse(input);
-  } catch (e) {
-    throw new Error('Invalid JSON/Array/Object format.');
-  }
-};
 
 export const solvers: Record<string, Function> = {
   // problem solver--> 01
@@ -87,7 +100,7 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 17
   'tv-explicit-coercion-to-boolean': ({ value }: { value: string }) => {
-    const val = value === '0' ? 0 : value === '""' ? '' : value === 'null' ? null : value === 'undefined' ? undefined : value;
+    const val = parseAsValue(value);
     return `Boolean("${value}") is ${Boolean(val)}`;
   },
   // problem solver--> 18
@@ -109,7 +122,7 @@ export const solvers: Record<string, Function> = {
   'tv-implicit-coercion-minus-string': () => `"10" - 5 is ${Number("10") - 5}`,
   // problem solver--> 23
   'tv-implicit-coercion-if-statement': ({ value }: { value: string }) => {
-    const val = value === '0' ? 0 : value === '""' ? '' : value;
+    const val = parseAsValue(value);
     if (val) {
       return `'${value}' is truthy.`;
     }
@@ -131,11 +144,12 @@ export const solvers: Record<string, Function> = {
   'tv-falsy-values': () => `Falsy: false is ${!false}, 0 is ${!0}, "" is ${!""}, null is ${!null}, undefined is ${!undefined}, NaN is ${!NaN}`,
   // problem solver--> 31
   'tv-double-not-to-boolean': ({ value }: { value: string }) => {
-     const val = value === '0' ? 0 : value === '""' ? '' : value === 'null' ? null : value === 'undefined' ? undefined : value;
+     const val = parseAsValue(value);
      return `!!'${value}' is ${!!val}`;
   },
   // problem solver--> 32
   'tv-short-circuit-or': () => `null || "default" is "${null || "default"}"`,
+
   // problem solver--> 33
   'tv-short-circuit-and': () => `1 && "hello" is "${1 && "hello"}"`,
   // problem solver--> 34
@@ -158,7 +172,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 41
   'tv-custom-valueof': () => {
     const obj = { value: 5, valueOf() { return this.value; } };
-    return `obj + 10 is ${obj as any + 10}`;
+    return `obj + 10 is ${(obj as any) + 10}`;
   },
   // problem solver--> 42
   'tv-custom-tostring': () => {
@@ -169,12 +183,12 @@ export const solvers: Record<string, Function> = {
   'tv-symbol-toprimitive': () => `(Conceptual) An object can define [Symbol.toPrimitive](hint) to control conversion to number, string, or default.`,
   // problem solver--> 44
   'tv-unary-plus-coercion': ({ value }: { value: string }) => {
-    const val = value === 'true' ? true : value === 'false' ? false : value;
+    const val = parseAsValue(value);
     return `+${value} is ${+val}`;
   },
   // problem solver--> 45
   'tv-number-constructor-coercion': ({ value }: { value: string }) => {
-    const val = value === 'true' ? true : value === 'false' ? false : value;
+    const val = parseAsValue(value);
     return `Number(${value}) is ${Number(val)}`;
   },
   // problem solver--> 46
@@ -194,11 +208,11 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 53
   'tv-division-by-zero': () => `1/0 is ${1/0}, -1/0 is ${-1/0}, 0/0 is ${0/0}`,
   // problem solver--> 54
-  'tv-number-isinteger': ({ num }: { num: any }) => `Number.isInteger(${num}) is ${Number.isInteger(Number(num))}`,
+  'tv-number-isinteger': ({ num }: { num: any }) => `Number.isInteger(${Number(num)}) is ${Number.isInteger(Number(num))}`,
   // problem solver--> 55
   'tv-number-isfinite': ({ value }: { value: string }) => `Number.isFinite("${value}") is ${Number.isFinite(value as any)}. Global isFinite("${value}") is ${isFinite(value as any)}`,
   // problem solver--> 56
-  'tv-number-issafeinteger': ({ num }: { num: any }) => `Number.isSafeInteger(${num}) is ${Number.isSafeInteger(parseNumber(num))}`,
+  'tv-number-issafeinteger': ({ num }: { num: any }) => `Number.isSafeInteger(${parseNumber(num)}) is ${Number.isSafeInteger(parseNumber(num))}`,
   // problem solver--> 57
   'tv-max-safe-integer': () => `MAX_SAFE_INTEGER is ${Number.MAX_SAFE_INTEGER}. Add 2 gives ${Number.MAX_SAFE_INTEGER + 2}, which is incorrect.`,
   // problem solver--> 58
@@ -402,9 +416,9 @@ export const solvers: Record<string, Function> = {
   'tv-instanceof-and-symbol-hasinstance': () => `(Conceptual) A class can implement a static method [Symbol.hasInstance] to override the instanceof behavior.`,
   // problem solver--> 126
   'tv-property-access-on-primitives': () => {
-    let s = 'a';
-    (s as any).prop = true;
-    return `(s as any).prop is ${(s as any).prop}`;
+    let s: any = 'a';
+    s.prop = true;
+    return `s.prop is ${s.prop}`;
   },
   // problem solver--> 127
   'tv-new-target-conceptual': () => `(Conceptual) In a constructor, \`if (!new.target) throw 'Must be called with new';\` ensures it's not called as a regular function.`,
@@ -475,7 +489,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 145
   'tv-object-keys-vs-for-in': () => {
     const proto = { inherited: true };
-    const obj = Object.create(proto);
+    const obj: {own?: boolean} = Object.create(proto);
     obj.own = true;
     let forInKeys: string[] = [];
     for(const key in obj) forInKeys.push(key);
@@ -547,13 +561,18 @@ export const solvers: Record<string, Function> = {
     const name = 'JS';
     return highlight`Hello, ${name}!`;
   },
+
+
+
+
+  
   // problem solver--> 166
   'tv-raw-string-from-tag-function': () => {
     const myTag = (strings: TemplateStringsArray) => strings.raw[0];
     return myTag`C:\Development\profile\`;
   },
   // problem solver--> 167
-  'tv-tolocalestring': ({ num }: { num: any }) =>{  parseNumber(num).toLocaleString('de-DE')}
+  'tv-tolocalestring': ({ num }: { num: any }) => parseNumber(num).toLocaleString('de-DE'),
   // problem solver--> 168
   'tv-intl-numberformat': () => {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(1234.56);
@@ -597,7 +616,7 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 180
   'tv-coercion-with-logical-not': ({ val }: { val: string }) => {
-    const value = val === '1' ? 1 : val === '0' ? 0 : val;
+    const value = parseAsValue(val);
     return `!${val} is ${!value}`;
   },
   // problem solver--> 181
@@ -661,7 +680,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 199
   'tv-object-hasown': () => {
     const proto = { inherited: true };
-    const obj = Object.create(proto);
+    const obj: {own?: boolean} = Object.create(proto);
     obj.own = true;
     return `Object.hasOwn(obj, 'own'): ${Object.hasOwn(obj, 'own')}. Object.hasOwn(obj, 'inherited'): ${Object.hasOwn(obj, 'inherited')}.`;
   },

@@ -1,3 +1,6 @@
+// problem--> 01
+// import { Problem } from "../../types";
+
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
@@ -1526,7 +1529,7 @@ export const problems: Problem[] = [
     id: "tv-coercion-order-of-operations",
     title: "Coercion Order of Operations",
     description:
-      'Evaluate `1 + "2" + 3` vs `"1" + 2 + 3` to demonstrate the left-to-right evaluation order.',
+      'Evaluate `1 + 2 + "3"` vs `"1" + 2 + 3` to demonstrate the left-to-right evaluation order.',
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
