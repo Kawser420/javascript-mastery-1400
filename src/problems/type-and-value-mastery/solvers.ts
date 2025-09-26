@@ -7,860 +7,664 @@ const parseNumber = (input: any): number => {
 };
 
 const parseBoolean = (input: any): boolean => {
-  if (typeof input === "boolean") return input;
-  if (typeof input === "string") {
+  if (typeof input === 'boolean') return input;
+  if (typeof input === 'string') {
     const lower = input.toLowerCase().trim();
-    if (lower === "true") return true;
-    if (lower === "false") return false;
+    if (lower === 'true') return true;
+    if (lower === 'false') return false;
   }
   throw new Error(`Invalid boolean input: "${input}"`);
 };
 
+const parseJson = (input: string): any => {
+  try {
+    return JSON.parse(input);
+  } catch (e) {
+    throw new Error('Invalid JSON/Array/Object format.');
+  }
+};
+
 export const solvers: Record<string, Function> = {
   // problem solver--> 01
-  "tvm-typeof-string": () => typeof "hello",
+  'tv-typeof-string': () => `typeof 'hello' is "${typeof 'hello'}"`,
   // problem solver--> 02
-  "tvm-typeof-number": () => typeof 123,
+  'tv-typeof-number': () => `typeof 42 is "${typeof 42}"`,
   // problem solver--> 03
-  "tvm-typeof-boolean": () => typeof true,
+  'tv-typeof-boolean': () => `typeof true is "${typeof true}"`,
   // problem solver--> 04
-  "tvm-typeof-undefined": () => {
+  'tv-typeof-undefined': () => {
     let x;
-    return typeof x;
+    return `typeof x is "${typeof x}"`;
   },
   // problem solver--> 05
-  "tvm-typeof-object": () => typeof {},
+  'tv-typeof-null': () => `typeof null is "${typeof null}"`,
   // problem solver--> 06
-  "tvm-typeof-function": () => typeof function () {},
+  'tv-typeof-object': () => `typeof {} is "${typeof {}}"`,
   // problem solver--> 07
-  "tvm-typeof-null-bug": () => typeof null,
+  'tv-typeof-array': () => `typeof [] is "${typeof []}". Correct check: Array.isArray([]) is ${Array.isArray([])}`,
   // problem solver--> 08
-  "tvm-typeof-array-bug": () => {
-    const arr = [];
-    return `typeof is '${typeof arr}'. Correct check: Array.isArray() is ${Array.isArray(
-      arr
-    )}.`;
-  },
+  'tv-typeof-function': () => { const fn = () => {}; return `typeof fn is "${typeof fn}"`; },
   // problem solver--> 09
-  "tvm-check-for-null": () => {
-    const val = null;
-    return `val === null is ${val === null}`;
-  },
+  'tv-typeof-symbol': () => `typeof Symbol('id') is "${typeof Symbol('id')}"`,
   // problem solver--> 10
-  "tvm-check-for-undefined": () => {
-    let val;
-    return `val === undefined is ${val === undefined}`;
-  },
+  'tv-typeof-bigint': () => `typeof 10n is "${typeof 10n}"`,
   // problem solver--> 11
-  "tvm-check-is-array": () => Array.isArray([]),
+  'tv-primitive-vs-object-string': () => {
+    const primitive = 'hello';
+    const object = new String('hello');
+    return `typeof primitive: ${typeof primitive}, typeof object: ${typeof object}. primitive === object: ${primitive === (object as any)}. primitive == object: ${primitive == (object as any)}`;
+  },
   // problem solver--> 12
-  "tvm-strict-equality-same-type": () => `5 === 5 is ${5 === 5}`,
+  'tv-pass-by-value': () => {
+    let a = 10;
+    function modify(val: number) { val = 20; }
+    modify(a);
+    return `Original 'a' is still ${a}.`;
+  },
   // problem solver--> 13
-  "tvm-strict-equality-diff-type": () => `5 === "5" is ${5 === ("5" as any)}`,
+  'tv-pass-by-reference': () => {
+    let obj = { x: 10 };
+    function modify(o: { x: number }) { o.x = 20; }
+    modify(obj);
+    return `Original 'obj.x' is now ${obj.x}.`;
+  },
   // problem solver--> 14
-  "tvm-loose-equality-coercion": () => `5 == "5" is ${5 == ("5" as any)}`,
+  'tv-reassigning-object-param': () => {
+    let myObj = { val: 10 };
+    function reassign(obj: { val: number }) { obj = { val: 20 }; }
+    reassign(myObj);
+    return `The original object is unchanged: ${JSON.stringify(myObj)}`;
+  },
   // problem solver--> 15
-  "tvm-loose-equality-null-undefined": () =>
-    `null == undefined is ${null == undefined}`,
+  'tv-explicit-coercion-string-to-number': ({ str }: { str: string }) => {
+    const num = Number(str);
+    return `Value: ${num}, Type: ${typeof num}`;
+  },
   // problem solver--> 16
-  "tvm-strict-inequality": () => `5 !== "5" is ${5 !== ("5" as any)}`,
+  'tv-explicit-coercion-number-to-string': ({ num }: { num: any }) => {
+    const str = String(parseNumber(num));
+    return `Value: "${str}", Type: ${typeof str}`;
+  },
   // problem solver--> 17
-  "tvm-loose-inequality": () => `5 != "5" is ${5 != ("5" as any)}`,
+  'tv-explicit-coercion-to-boolean': ({ value }: { value: string }) => {
+    const val = value === '0' ? 0 : value === '""' ? '' : value === 'null' ? null : value === 'undefined' ? undefined : value;
+    return `Boolean("${value}") is ${Boolean(val)}`;
+  },
   // problem solver--> 18
-  "tvm-nan-equality-pitfall": () => `NaN === NaN is ${NaN === NaN}`,
+  'tv-parseint': ({ str }: { str: string }) => {
+    return `parseInt("${str}") is ${parseInt(str, 10)}. parseInt("11", 2) is ${parseInt("11", 2)}.`;
+  },
   // problem solver--> 19
-  "tvm-check-is-nan": () => {
-    const val = 0 / 0;
-    return `Number.isNaN(0/0) is ${Number.isNaN(val)}`;
+  'tv-parsefloat': ({ str }: { str: string }) => {
+    return `parseFloat("${str}") is ${parseFloat(str)}`;
   },
   // problem solver--> 20
-  "tvm-object-is-comparison": () => {
-    const nanCheck = `Object.is(NaN, NaN) is ${Object.is(NaN, NaN)}.`;
-    const zeroCheck = `Object.is(0, -0) is ${Object.is(0, -0)}.`;
-    return `${nanCheck} | ${zeroCheck}`;
+  'tv-tostring-method': ({ num }: { num: any }) => {
+    const n = parseNumber(num);
+    return `(${n}).toString() is "${n.toString()}". (${n}).toString(16) is "${n.toString(16)}".`;
   },
   // problem solver--> 21
-  "tvm-truthy-string": () => `Is 'hello' truthy? ${Boolean("hello")}`,
+  'tv-implicit-coercion-plus-string': () => `5 + "5" is "${5 + "5"}"`,
   // problem solver--> 22
-  "tvm-truthy-number": () => `Is -1 truthy? ${Boolean(-1)}`,
+  'tv-implicit-coercion-minus-string': () => `"10" - 5 is ${Number("10") - 5}`,
   // problem solver--> 23
-  "tvm-truthy-object": () => `Is {} truthy? ${Boolean({})}`,
+  'tv-implicit-coercion-if-statement': ({ value }: { value: string }) => {
+    const val = value === '0' ? 0 : value === '""' ? '' : value;
+    if (val) {
+      return `'${value}' is truthy.`;
+    }
+    return `'${value}' is falsy.`;
+  },
   // problem solver--> 24
-  "tvm-truthy-array": () => `Is [] truthy? ${Boolean([])}`,
+  'tv-strict-equality': () => `5 === "5" is ${5 === ("5" as any)}`,
   // problem solver--> 25
-  "tvm-falsy-empty-string": () => `Is '' falsy? ${!Boolean("")}`,
+  'tv-loose-equality': () => `5 == "5" is ${5 == ("5" as any)}`,
   // problem solver--> 26
-  "tvm-falsy-zero": () => `Is 0 falsy? ${!Boolean(0)}`,
+  'tv-loose-equality-null-undefined': () => `null == undefined is ${null == undefined}`,
   // problem solver--> 27
-  "tvm-falsy-null": () => `Is null falsy? ${!Boolean(null)}`,
+  'tv-loose-equality-boolean-number': () => `true == 1 is ${true == (1 as any)}`,
   // problem solver--> 28
-  "tvm-falsy-undefined": () => `Is undefined falsy? ${!Boolean(undefined)}`,
+  'tv-loose-equality-object-primitive': () => `[10] == 10 is ${[10] == (10 as any)}`,
   // problem solver--> 29
-  "tvm-falsy-nan": () => `Is NaN falsy? ${!Boolean(NaN)}`,
+  'tv-truthy-values': () => `Truthy: 'a' is ${!!'a'}, 1 is ${!!1}, {} is ${!!{}}, [] is ${!![]}`,
   // problem solver--> 30
-  "tvm-falsy-false": () => `Is false falsy? ${!Boolean(false)}`,
+  'tv-falsy-values': () => `Falsy: false is ${!false}, 0 is ${!0}, "" is ${!""}, null is ${!null}, undefined is ${!undefined}, NaN is ${!NaN}`,
   // problem solver--> 31
-  "tvm-double-not-truthy": () => `!!'hello' is ${!!"hello"}`,
+  'tv-double-not-to-boolean': ({ value }: { value: string }) => {
+     const val = value === '0' ? 0 : value === '""' ? '' : value === 'null' ? null : value === 'undefined' ? undefined : value;
+     return `!!'${value}' is ${!!val}`;
+  },
   // problem solver--> 32
-  "tvm-double-not-falsy": () => `!!0 is ${!!0}`,
+  'tv-short-circuit-or': () => `null || "default" is "${null || "default"}"`,
   // problem solver--> 33
-  "tvm-explicit-conversion-string": () => {
-    const s = String(123);
-    return `Value: ${s}, Type: ${typeof s}`;
-  },
+  'tv-short-circuit-and': () => `1 && "hello" is "${1 && "hello"}"`,
   // problem solver--> 34
-  "tvm-explicit-conversion-number": () => {
-    const n = Number("123");
-    return `Value: ${n}, Type: ${typeof n}`;
-  },
+  'tv-nullish-coalescing': () => `0 || "default" is "${0 || "default"}". 0 ?? "default" is "${0 ?? "default"}"`,
   // problem solver--> 35
-  "tvm-explicit-conversion-boolean": () => {
-    const b = Boolean(1);
-    return `Value: ${b}, Type: ${typeof b}`;
-  },
+  'tv-object-is': () => `Object.is(NaN, NaN) is ${Object.is(NaN, NaN)}`,
   // problem solver--> 36
-  "tvm-implicit-coercion-add": () => `Result of 5 + "5" is "${5 + "5"}"`,
+  'tv-comparing-nan': () => `NaN === NaN is ${NaN === NaN}`,
   // problem solver--> 37
-  "tvm-implicit-coercion-subtract": () =>
-    `Result of "5" - 5 is ${Number("5") - 5}`,
+  'tv-comparing-negative-zero': () => `-0 === 0 is ${-0 === 0}. Object.is(-0, 0) is ${Object.is(-0, 0)}`,
   // problem solver--> 38
-  "tvm-implicit-coercion-if": () => {
-    if (1) {
-      return "The number 1 was coerced to true.";
-    }
-    return "This should not be reached.";
-  },
+  'tv-object-comparison': () => `{a:1} === {a:1} is ${{ a: 1 } === { a: 1 }}`,
   // problem solver--> 39
-  "tvm-parseint-basic": () => parseInt("100px", 10),
+  'tv-autoboxing': () => `(Conceptual) "hello".toUpperCase() works because "hello" is temporarily wrapped in a String object.`,
   // problem solver--> 40
-  "tvm-parseint-radix": () => parseInt("101", 2),
+  'tv-valueof-method': () => {
+    const numObj = new Number(42);
+    return `new Number(42).valueOf() is ${numObj.valueOf()}`;
+  },
   // problem solver--> 41
-  "tvm-parsefloat-basic": () => parseFloat("3.14"),
+  'tv-custom-valueof': () => {
+    const obj = { value: 5, valueOf() { return this.value; } };
+    return `obj + 10 is ${obj as any + 10}`;
+  },
   // problem solver--> 42
-  "tvm-number-tostring": () => (10).toString(),
+  'tv-custom-tostring': () => {
+    const obj = { value: 'Item', toString() { return this.value; } };
+    return `"Message: " + obj is "Message: ${obj}"`;
+  },
   // problem solver--> 43
-  "tvm-number-tostring-radix": () => (255).toString(16),
+  'tv-symbol-toprimitive': () => `(Conceptual) An object can define [Symbol.toPrimitive](hint) to control conversion to number, string, or default.`,
   // problem solver--> 44
-  "tvm-object-comparison": () => `({} === {}) is ${{} === {}}`,
+  'tv-unary-plus-coercion': ({ value }: { value: string }) => {
+    const val = value === 'true' ? true : value === 'false' ? false : value;
+    return `+${value} is ${+val}`;
+  },
   // problem solver--> 45
-  "tvm-array-comparison": () => `([] === []) is ${[] === []}`,
+  'tv-number-constructor-coercion': ({ value }: { value: string }) => {
+    const val = value === 'true' ? true : value === 'false' ? false : value;
+    return `Number(${value}) is ${Number(val)}`;
+  },
   // problem solver--> 46
-  "tvm-object-reference-assignment": () => {
-    const obj1 = { a: 1 };
-    const obj2 = obj1;
-    obj2.a = 2;
-    return `Original obj1.a is now ${obj1.a}`;
-  },
+  'tv-abstract-equality-algorithm': () => `(Conceptual) The == algorithm has complex rules, e.g., if types are different, it tries to convert to number (except for null/undefined).`,
   // problem solver--> 47
-  "tvm-primitive-assignment": () => {
-    let prim1 = 10;
-    let prim2 = prim1;
-    prim2 = 20;
-    return `Original prim1 is still ${prim1}`;
-  },
+  'tv-abstract-relational-comparison': () => `(Conceptual) For <, >, etc., if operands are objects, they are converted to primitives (valueOf then toString) before comparison.`,
   // problem solver--> 48
-  "tvm-pass-primitive-to-function": () => {
-    let myVar = 10;
-    function modify(val: number) {
-      val = 20;
-    }
-    modify(myVar);
-    return `Original myVar is still ${myVar}`;
-  },
+  'tv-isarray-check': () => `Array.isArray([]) is ${Array.isArray([])}`,
   // problem solver--> 49
-  "tvm-pass-object-to-function": () => {
-    const myObj = { a: 1 };
-    function modify(obj: { a: number }) {
-      obj.a = 2;
-    }
-    modify(myObj);
-    return `Original myObj.a is now ${myObj.a}`;
-  },
+  'tv-isnan-check': () => `Number.isNaN(NaN) is ${Number.isNaN(NaN)}. Number.isNaN("a") is ${Number.isNaN("a" as any)}`,
   // problem solver--> 50
-  "tvm-reassign-object-param": () => {
-    const myObj = { a: 1 };
-    function modify(obj: { a: number }) {
-      obj = { a: 99 };
-    }
-    modify(myObj);
-    return `Original myObj is unchanged: ${JSON.stringify(myObj)}`;
-  },
+  'tv-global-isnan-coercion': () => `isNaN("a") is ${isNaN("a" as any)}. The global isNaN coerces its argument first.`,
   // problem solver--> 51
-  "tvm-infinity-type": () => typeof Infinity,
+  'tv-infinity-type': () => `typeof Infinity is "${typeof Infinity}"`,
   // problem solver--> 52
-  "tvm-infinity-comparison": () =>
-    `Infinity > Number.MAX_VALUE is ${Infinity > Number.MAX_VALUE}`,
+  'tv-infinity-comparisons': () => `100 < Infinity is ${100 < Infinity}. Infinity === Infinity is ${Infinity === Infinity}`,
   // problem solver--> 53
-  "tvm-division-by-zero": () => 10 / 0,
+  'tv-division-by-zero': () => `1/0 is ${1/0}, -1/0 is ${-1/0}, 0/0 is ${0/0}`,
   // problem solver--> 54
-  "tvm-zero-divided-by-zero": () => 0 / 0,
+  'tv-number-isinteger': ({ num }: { num: any }) => `Number.isInteger(${num}) is ${Number.isInteger(Number(num))}`,
   // problem solver--> 55
-  "tvm-infinity-minus-infinity": () => Infinity - Infinity,
+  'tv-number-isfinite': ({ value }: { value: string }) => `Number.isFinite("${value}") is ${Number.isFinite(value as any)}. Global isFinite("${value}") is ${isFinite(value as any)}`,
   // problem solver--> 56
-  "tvm-negative-infinity": () => -10 / 0,
+  'tv-number-issafeinteger': ({ num }: { num: any }) => `Number.isSafeInteger(${num}) is ${Number.isSafeInteger(parseNumber(num))}`,
   // problem solver--> 57
-  "tvm-isfinite": () => `isFinite(Infinity) is ${isFinite(Infinity)}`,
+  'tv-max-safe-integer': () => `MAX_SAFE_INTEGER is ${Number.MAX_SAFE_INTEGER}. Add 2 gives ${Number.MAX_SAFE_INTEGER + 2}, which is incorrect.`,
   // problem solver--> 58
-  "tvm-tofixed": () => (3.14159).toFixed(2),
+  'tv-bigint-precision': () => {
+    const big = BigInt(Number.MAX_SAFE_INTEGER);
+    return `BigInt + 2n is ${big + 2n}`;
+  },
   // problem solver--> 59
-  "tvm-toprecision": () => (123.456).toPrecision(4),
+  'tv-bigint-vs-number-equality': () => `10n === 10 is ${10n === (10 as any)}. 10n == 10 is ${10n == (10 as any)}`,
   // problem solver--> 60
-  "tvm-toexponential": () => (1000).toExponential(),
+  'tv-bigint-mixing-error': () => `(Conceptual) Code like \`1n + 2\` throws a TypeError. You must explicitly convert: \`1n + BigInt(2)\` or \`Number(1n) + 2\`.`,
   // problem solver--> 61
-  "tvm-unary-plus-coercion": () => {
-    const val = +"100";
-    return `Value: ${val}, Type: ${typeof val}`;
-  },
+  'tv-string-coercion-object': () => `"Result: " + {} is "Result: ${({} as any)}"`,
   // problem solver--> 62
-  "tvm-string-wrapper-object": () => {
-    const prim = "hi";
-    const obj = new String("hi");
-    return `typeof prim: ${typeof prim}, typeof obj: ${typeof obj}, prim == obj: ${
-      prim == obj
-    }, prim === obj: ${prim === obj}`;
-  },
+  'tv-string-coercion-array': () => `"Result: " + [1,2] is "Result: ${[1,2]}"`,
   // problem solver--> 63
-  "tvm-number-wrapper-object": () => {
-    const obj = new Number(10);
-    return `typeof obj: ${typeof obj}`;
-  },
+  'tv-number-coercion-object': () => `Number({}) is ${Number({} as any)}`,
   // problem solver--> 64
-  "tvm-boolean-wrapper-object": () => {
-    const wrapper = new Boolean(false);
-    return `if (new Boolean(false)) evaluates to ${Boolean(wrapper)}`;
-  },
+  'tv-number-coercion-array': () => `Number([]) is ${Number([] as any)}, Number([5]) is ${Number([5] as any)}, Number([1,2]) is ${Number([1,2] as any)}`,
   // problem solver--> 65
-  "tvm-autoboxing": () =>
-    `(Conceptual) When you call 'hello'.toUpperCase(), JS temporarily creates a String object wrapper to access the method.`,
+  'tv-tofixed-method': ({ num }: { num: any }) => `${parseNumber(num)}.toFixed(2) is "${parseNumber(num).toFixed(2)}"`,
   // problem solver--> 66
-  "tvm-symbol-basic": () => `typeof Symbol('id') is "${typeof Symbol("id")}"`,
+  'tv-toexponential-method': ({ num }: { num: any }) => `${parseNumber(num)}.toExponential(2) is "${parseNumber(num).toExponential(2)}"`,
   // problem solver--> 67
-  "tvm-symbol-uniqueness": () =>
-    `Symbol('id') === Symbol('id') is ${Symbol("id") === Symbol("id")}`,
+  'tv-toprecision-method': ({ num }: { num: any }) => `${parseNumber(num)}.toPrecision(4) is "${parseNumber(num).toPrecision(4)}"`,
   // problem solver--> 68
-  "tvm-symbol-as-key": () => {
-    const id = Symbol("id");
-    const obj = { [id]: 123 };
-    return `Value is ${obj[id]}. Not in JSON: ${JSON.stringify(obj)}`;
-  },
+  'tv-coercion-with-bitwise-not': ({ value }: { value: string }) => `~"${value}" is ${~(Number(value))}`,
   // problem solver--> 69
-  "tvm-symbol-for": () =>
-    `Symbol.for('key') === Symbol.for('key') is ${
-      Symbol.for("key") === Symbol.for("key")
-    }`,
+  'tv-tricky-loose-equality-1': () => `[] == ![] is ${[] == ![]}`,
   // problem solver--> 70
-  "tvm-symbol-keyfor": () => {
-    const sym = Symbol.for("sharedKey");
-    return `Symbol.keyFor(sym) is "${Symbol.keyFor(sym)}"`;
-  },
+  'tv-tricky-loose-equality-2': () => `0 == " \\t\\r\\n " is ${0 == " \t\r\n "}`,
   // problem solver--> 71
-  "tvm-bigint-basic": () => `typeof 123n is "${typeof 123n}"`,
+  'tv-tricky-loose-equality-3': () => `[null] == 0 is ${[null] == (0 as any)}`,
   // problem solver--> 72
-  "tvm-bigint-and-number-type-error": () => {
-    try {
-      const result = 1n + 2;
-      return `This should not be reached. Result was ${result}`;
-    } catch (e: any) {
-      return `Caught expected error: ${e.message}`;
-    }
-  },
+  'tv-tricky-addition-1': () => `[] + {} is "${[] + ({} as any)}"`,
   // problem solver--> 73
-  "tvm-bigint-comparison": () =>
-    `10n > 9 is ${10n > 9}. 10n == 10 is ${10n == 10}`,
+  'tv-tricky-addition-2': () => `{} + [] is ${({} as any) + []}. (In a script, {} is an empty block, so the expression is just +[], which is 0).`,
   // problem solver--> 74
-  "tvm-bigint-strict-equality": () => `10n === 10 is ${10n === 10}`,
+  'tv-instanceof-primitive': () => `"hello" instanceof String is ${"hello" instanceof String}`,
   // problem solver--> 75
-  "tvm-bigint-math-functions": () => {
-    try {
-      const result = Math.max(1n, 2n);
-      return `This should not be reached. Result was ${result}`;
-    } catch (e: any) {
-      return `Caught expected error: ${e.message}`;
-    }
-  },
+  'tv-instanceof-object': () => `new String("hello") instanceof String is ${new String("hello") instanceof String}`,
   // problem solver--> 76
-  "tvm-object-prototype-tostring": () => Object.prototype.toString.call([]),
+  'tv-constructor-property': () => `(true).constructor is ${true.constructor.name}, ({}).constructor is ${{}.constructor.name}`,
   // problem solver--> 77
-  "tvm-constructor-property": () => {
-    function Person() {}
-    const p = new (Person as any)();
-    return `p.constructor.name is "${p.constructor.name}"`;
+  'tv-object-prototype-tostring': ({ value }: { value: any }) => {
+    let val;
+    try {
+      val = eval(value);
+    } catch(e) {
+      val = value;
+    }
+    return Object.prototype.toString.call(val);
   },
   // problem solver--> 78
-  "tvm-primitive-methods-autoboxing": () => "hello".toUpperCase(),
+  'tv-symbol-uniqueness': () => `Symbol('a') === Symbol('a') is ${Symbol('a') === Symbol('a')}`,
   // problem solver--> 79
-  "tvm-valueof-method": () => {
-    const obj = new Number(42);
-    return obj.valueOf();
-  },
+  'tv-global-symbol-for': () => `Symbol.for('a') === Symbol.for('a') is ${Symbol.for('a') === Symbol.for('a')}`,
   // problem solver--> 80
-  "tvm-to-primitive-conceptual": () =>
-    `(Conceptual) An object with [Symbol.toPrimitive] can control its conversion to a string, number, or default primitive.`,
+  'tv-symbol-keyfor': () => `Symbol.keyFor(Symbol.for('a')) is "${Symbol.keyFor(Symbol.for('a'))}"`,
   // problem solver--> 81
-  "tvm-loose-equality-array-string": () =>
-    `[42] == '42' is ${
-      [42] == "42"
-    }. The array is converted to the string '42'.`,
+  'tv-well-known-symbol-iterator': () => {
+    const obj = { data: [1, 2], [Symbol.iterator]: function*() { yield* this.data; } };
+    return `Spread result: ${[...obj]}`;
+  },
   // problem solver--> 82
-  "tvm-loose-equality-object-string": () => {
-    const obj = { valueOf: () => 10 };
-    return `({ valueOf: () => 10 }) == '10' is ${obj == "10"}`;
-  },
+  'tv-empty-array-truthiness': () => `if ([]) is truthy: ${!![]}`,
   // problem solver--> 83
-  "tvm-plus-operator-object": () => `10 + {} results in "${10 + {}}"`,
+  'tv-empty-object-truthiness': () => `if ({}) is truthy: ${!!{}}`,
   // problem solver--> 84
-  "tvm-json-stringify-types": () => {
-    const obj = { u: undefined, s: Symbol("s"), f: function () {} };
-    return `Result: ${JSON.stringify(obj)}. All were omitted.`;
-  },
+  'tv-string-object-equality': () => `new String("a") == "a" is ${new String("a") == "a"}, new String("a") === "a" is ${new String("a") === "a"}`,
   // problem solver--> 85
-  "tvm-prototype-of-primitives": () =>
-    `Object.getPrototypeOf('') === String.prototype is ${
-      Object.getPrototypeOf("") === String.prototype
-    }`,
+  'tv-coercion-array-array': () => `[] + [] is "${[] + []}"`,
   // problem solver--> 86
-  "tvm-constructor-of-primitives": () =>
-    `(123).constructor === Number is ${(123).constructor === Number}`,
+  'tv-coercion-array-object': () => `[] + {} is "${[] + ({} as any)}"`,
   // problem solver--> 87
-  "tvm-instanceof-primitive-wrappers": () =>
-    `'hi' instanceof String is ${
-      "hi" instanceof String
-    }. new String('hi') instanceof String is ${
-      new String("hi") instanceof String
-    }.`,
+  'tv-coercion-object-array-script': () => `In a script, {} is an empty code block, so the expression becomes +[], which evaluates to 0.`,
   // problem solver--> 88
-  "tvm-loose-equality-array-boolean": () =>
-    `[] == false is ${
-      [] == false
-    }. [] coerces to '', then to 0. false coerces to 0.`,
+  'tv-true-plus-true-coercion': () => `true + true is ${Number(true) + Number(true)}`,
   // problem solver--> 89
-  "tvm-relational-operator-coercion": () =>
-    `null > 0 is ${null > 0} (false), null >= 0 is ${
-      null >= 0
-    } (true), but undefined > 0 is ${undefined > 0} (false).`,
+  'tv-relational-comparison-arrays': () => `[2] > [1] is ${[2] > [1]}. It compares strings "2" and "1".`,
   // problem solver--> 90
-  "tvm-object-keys-vs-for-in": () => {
-    const proto = { inherited: 1 };
-    const obj = Object.create(proto);
-    obj.own = 2;
-    let forInKeys = [];
-    for (const key in obj) forInKeys.push(key);
-    let objectKeys = Object.keys(obj);
-    return `for...in: [${forInKeys.join(
-      ", "
-    )}]. Object.keys: [${objectKeys.join(", ")}]`;
-  },
+  'tv-abstract-equality-with-null-array': () => `[null] == "" is ${[null] == ("" as any)}`,
   // problem solver--> 91
-  "tvm-property-descriptor-defaults": () => {
-    const obj = {};
-    Object.defineProperty(obj, "a", { value: 1 });
-    const descriptor = Object.getOwnPropertyDescriptor(obj, "a");
-    return `writable is ${descriptor.writable}, enumerable is ${descriptor.enumerable}, configurable is ${descriptor.configurable}.`;
-  },
+  'tv-strict-equality-zeros': () => `-0 === 0 is ${-0 === 0}`,
   // problem solver--> 92
-  "tvm-is-frozen": () => {
-    const obj = {};
-    Object.freeze(obj);
-    return `Is frozen: ${Object.isFrozen(obj)}`;
-  },
+  'tv-number-epsilon': () => `0.1 + 0.2 === 0.3 is ${0.1 + 0.2 === 0.3}. Safe check: Math.abs((0.1 + 0.2) - 0.3) < Number.EPSILON is ${Math.abs((0.1 + 0.2) - 0.3) < Number.EPSILON}`,
   // problem solver--> 93
-  "tvm-is-sealed": () => {
-    const obj = {};
-    Object.seal(obj);
-    return `Is sealed: ${Object.isSealed(obj)}`;
-  },
+  'tv-isfinite-vs-number-isfinite': ({ value }: { value: string }) => `Number.isFinite("${value}") is ${Number.isFinite(value as any)}. Global isFinite("${value}") is ${isFinite(value as any)}.`,
   // problem solver--> 94
-  "tvm-is-extensible": () => {
-    const obj = {};
-    Object.preventExtensions(obj);
-    return `Is extensible: ${Object.isExtensible(obj)}`;
+  'tv-instanceof-and-prototype-chain': () => {
+    class A {}
+    class B extends A {}
+    const b = new B();
+    return `b instanceof B is ${b instanceof B}, b instanceof A is ${b instanceof A}`;
   },
   // problem solver--> 95
-  "tvm-globalthis": () =>
-    `globalThis is available and refers to the global object.`,
+  'tv-null-prototype-type-check': () => {
+    const obj = Object.create(null);
+    return `obj instanceof Object is ${obj instanceof Object}`;
+  },
   // problem solver--> 96
-  "tvm-well-known-symbol-tostringtag": () => {
-    class MyType {
-      get [Symbol.toStringTag]() {
-        return "MyType";
-      }
-    }
-    return Object.prototype.toString.call(new MyType());
-  },
+  'tv-implicit-coercion-document-all': () => `(Conceptual - Browser only) In legacy browsers, \`document.all == null\` is true.`,
   // problem solver--> 97
-  "tvm-well-known-symbol-hasinstance": () =>
-    `(Conceptual) class C { static [Symbol.hasInstance](inst) { return typeof inst === 'string'; } }. Now, \`'hello' instanceof C\` would be true.`,
+  'tv-tofixed-rounding-behavior': ({ num }: { num: any }) => {
+    const n = parseNumber(num);
+    return `(${n}).toFixed(2) is "${n.toFixed(2)}"`;
+  },
   // problem solver--> 98
-  "tvm-well-known-symbol-isconcatspreadable": () => {
-    const arr = [3, 4];
-    (arr as any)[Symbol.isConcatSpreadable] = false;
-    return `Result of [1,2].concat(arr) is [${JSON.stringify(
-      [1, 2].concat(arr as any)
-    )}]`;
-  },
+  'tv-void-operator': () => `void(0) returns ${void 0}`,
   // problem solver--> 99
-  "tvm-bigint-division": () => `10n / 3n is ${10n / 3n}`,
+  'tv-constructor-of-primitives': () => `'hello'.constructor is ${'hello'.constructor.name}`,
   // problem solver--> 100
-  "tvm-negative-zero": () => {
-    const negZero = -0;
-    return `negZero === 0 is ${negZero === 0}. 1 / negZero is ${1 / negZero}.`;
-  },
+  'tv-tricky-subtraction': () => `[] - 1 is ${Number([]) - 1}`,
   // problem solver--> 101
-  "tvm-abstract-equality-algorithm": () =>
-    `(Conceptual) '==' follows complex rules. E.g., if comparing String and Number, it converts the String to a Number.`,
+  'tv-json-stringify-undefined': () => {
+    const obj = { a: 1, b: undefined };
+    const arr = [1, undefined, 3];
+    return `Object: ${JSON.stringify(obj)}. Array: ${JSON.stringify(arr)}`;
+  },
   // problem solver--> 102
-  "tvm-tostring-vs-valueof": () =>
-    `(Conceptual) When coercing an object, JS first tries .valueOf(). If it doesn't return a primitive, it tries .toString().`,
+  'tv-json-stringify-functions-symbols': () => {
+    const obj = { a: () => {}, b: Symbol('s') };
+    return `Stringified: ${JSON.stringify(obj)}`;
+  },
   // problem solver--> 103
-  "tvm-coercion-edge-case-array-plus-array": () =>
-    `[1] + [2] is "${
-      [1] + [2]
-    }". Both arrays are converted to strings ('1' and '2') and concatenated.`,
+  'tv-json-stringify-circular': () => {
+    const obj: any = { name: 'a' };
+    obj.self = obj;
+    try {
+      JSON.stringify(obj);
+    } catch(e: any) {
+      return `Caught expected error: ${e.message}`;
+    }
+    return 'Test failed.';
+  },
   // problem solver--> 104
-  "tvm-coercion-edge-case-object-plus-array": () =>
-    `{} + [] in a console often evaluates to 0. It's parsed as an empty code block {} followed by the expression +[], which coerces [] to 0.`,
+  'tv-isinteger-vs-modulo': ({ val }: { val: any }) => {
+    const num = Number(val);
+    return `Number.isInteger(${val}): ${Number.isInteger(num)}. ${val} % 1 === 0: ${num % 1 === 0}`;
+  },
   // problem solver--> 105
-  "tvm-boolean-constructor-pitfall": () =>
-    `if (new Boolean(false)) is true, because the *object* is truthy.`,
+  'tv-bigint-division': () => `10n / 3n is ${10n / 3n}`,
   // problem solver--> 106
-  "tvm-object-create-null-safety": () => {
-    const map = Object.create(null);
-    map.toString = "value";
-    return `map.toString is the string "${map.toString}", not a function.`;
+  'tv-symbol-tostring': () => {
+    const s = Symbol('desc');
+    return `String(s) is "${String(s)}". s.toString() is "${s.toString()}"`;
   },
   // problem solver--> 107
-  "tvm-number-max-safe-integer": () =>
-    `Max safe integer: ${Number.MAX_SAFE_INTEGER}. Next integer: ${
-      Number.MAX_SAFE_INTEGER + 2
-    }. Notice the precision loss.`,
+  'tv-well-known-symbol-species': () => `(Conceptual) Class MyArray extends Array { static get [Symbol.species]() { return Array; } }. myArr.map(...) would return a standard Array, not MyArray.`,
   // problem solver--> 108
-  "tvm-number-epsilon": () => {
-    const sum = 0.1 + 0.2;
-    const isEqual = Math.abs(sum - 0.3) < Number.EPSILON;
-    return `0.1 + 0.2 === 0.3 is ${
-      sum === 0.3
-    }. Safe comparison with EPSILON: ${isEqual}.`;
-  },
+  'tv-well-known-symbol-hasinstance': () => `(Conceptual) class C { static [Symbol.hasInstance](inst) { return typeof inst === 'string'; } }. Now, \`'hello' instanceof C\` would be true.`,
   // problem solver--> 109
-  "tvm-well-known-symbol-species": () =>
-    `(Conceptual) Allows a subclass to specify that methods like .map() should return base class instances (e.g., Array) instead of subclass instances.`,
+  'tv-well-known-symbol-tostringtag': () => {
+    class MyType { get [Symbol.toStringTag]() { return "MyType"; } }
+    return Object.prototype.toString.call(new MyType());
+  },
   // problem solver--> 110
-  "tvm-well-known-symbol-match": () =>
-    `(Conceptual) An object with [Symbol.match] can define custom logic for String.prototype.match(obj).`,
-  // problem solver--> 111
-  "tvm-well-known-symbol-replace": () =>
-    `(Conceptual) An object with [Symbol.replace] can define custom logic for String.prototype.replace(obj, ...).`,
-  // problem solver--> 112
-  "tvm-well-known-symbol-search": () =>
-    `(Conceptual) An object with [Symbol.search] can define custom logic for String.prototype.search(obj).`,
-  // problem solver--> 113
-  "tvm-well-known-symbol-split": () =>
-    `(Conceptual) An object with [Symbol.split] can define custom logic for String.prototype.split(obj).`,
-  // problem solver--> 114
-  "tvm-well-known-symbol-unscopables": () =>
-    `(Conceptual) A legacy feature to hide properties from the deprecated 'with' statement.`,
-  // problem solver--> 115
-  "tvm-proxy-get-trap-type": () =>
-    `(Conceptual) A proxy 'get' trap can check if a property exists. If not, it can return a type-appropriate default (e.g., 0 for numbers, '' for strings).`,
-  // problem solver--> 116
-  "tvm-proxy-set-trap-type": () =>
-    `(Conceptual) A proxy 'set' trap can check 'typeof value' against a schema before allowing the assignment, throwing an error if the type is incorrect.`,
-  // problem solver--> 117
-  "tvm-reflect-getprototypeof": () =>
-    `Reflect.getPrototypeOf({}) === Object.prototype is ${
-      Reflect.getPrototypeOf({}) === Object.prototype
-    }`,
-  // problem solver--> 118
-  "tvm-structuredclone-types": () =>
-    `(Conceptual) const original = { d: new Date() }; const copy = structuredClone(original); copy.d !== original.d, and copy.d is a Date object.`,
-  // problem solver--> 119
-  "tvm-structuredclone-error": () =>
-    `(Conceptual) structuredClone(function(){}) throws a "DataCloneError" because functions cannot be cloned.`,
-  // problem solver--> 120
-  "tvm-weakmap-value-types": () =>
-    `(Conceptual) A WeakMap's values can be anything: let key = {}; let map = new WeakMap(); map.set(key, 'primitive value'); is valid.`,
-  // problem solver--> 121
-  "tvm-weakset-value-types": () => {
+  'tv-constructor-of-null-error': () => {
     try {
-      new WeakSet([1, 2, 3] as any);
+      (null as any).constructor;
     } catch (e: any) {
       return `Caught expected error: ${e.message}`;
     }
-    return "This should not be reached.";
+    return 'Test failed.';
   },
+  // problem solver--> 111
+  'tv-array-plus-number-coercion': () => `[1] + 2 is "${[1] + 2}"`,
+  // problem solver--> 112
+  'tv-array-minus-number-coercion': () => `[5] - 2 is ${Number([5]) - 2}`,
+  // problem solver--> 113
+  'tv-string-coercion-order': () => `1 + 2 + "3" is "${1 + 2 + "3"}". "1" + 2 + 3 is "${"1" + 2 + 3}"`,
+  // problem solver--> 114
+  'tv-parseint-with-null': () => `parseInt(null) is ${parseInt(null as any, 10)}`,
+  // problem solver--> 115
+  'tv-parseint-radix-pitfall': ({ str }: { str: string }) => {
+    return `Without radix, parseInt("${str}") is ${parseInt(str)}. With radix 10, it's ${parseInt(str, 10)}.`;
+  },
+  // problem solver--> 116
+  'tv-coercion-of-date-objects': () => {
+    const d1 = new Date();
+    const d2 = new Date(d1.getTime() + 1000);
+    return `d2 - d1 is ${d2.getTime() - d1.getTime()}`;
+  },
+  // problem solver--> 117
+  'tv-isfinite-vs-number-isfinite-2': ({ value }: { value: string }) => `Number.isFinite("${value}") is ${Number.isFinite(value as any)}. Global isFinite("${value}") is ${isFinite(value as any)}.`,
+  // problem solver--> 118
+  'tv-primitive-wrapper-truthiness': () => `if (new Boolean(false)) is truthy: ${!!new Boolean(false)}`,
+  // problem solver--> 119
+  'tv-to-primitive-conceptual': () => `(Conceptual) To convert an object to a primitive, JS first tries Symbol.toPrimitive, then valueOf, then toString.`,
+  // problem solver--> 120
+  'tv-loose-equality-pitfall-array-string': () => `[1,2] == "1,2" is ${[1, 2] == ("1,2" as any)}`,
+  // problem solver--> 121
+  'tv-minus-infinity': () => `-Infinity is a number: ${typeof -Infinity === 'number'}. 1 / -0 is ${1 / -0}`,
   // problem solver--> 122
-  "tvm-coercion-relational-null": () =>
-    `null >= 0 is ${null >= 0} (true), but null > 0 is ${null > 0} (false).`,
+  'tv-number-max-value': () => `Number.MAX_VALUE is ${Number.MAX_VALUE}. Adding to it gives ${Number.MAX_VALUE + 1e300}`,
   // problem solver--> 123
-  "tvm-coercion-relational-undefined": () =>
-    `undefined > 0 is ${undefined > 0} (false), and undefined < 0 is ${
-      undefined < 0
-    } (false).`,
+  'tv-number-min-value': () => `Number.MIN_VALUE is ${Number.MIN_VALUE}, the smallest positive number.`,
   // problem solver--> 124
-  "tvm-boxing-unboxing-conceptual": () =>
-    `(Conceptual) Boxing: primitive -> wrapper object. Unboxing: wrapper object -> primitive. Happens implicitly, e.g., when calling methods on primitives.`,
+  'tv-bitwise-and-for-truncation': ({ num }: { num: any }) => `${parseNumber(num)} | 0 is ${parseNumber(num) | 0}`,
   // problem solver--> 125
-  "tvm-temporal-api-conceptual": () =>
-    `(Conceptual) A future API to replace Date. Provides immutable objects like Temporal.PlainDate and Temporal.ZonedDateTime for unambiguous date/time math.`,
+  'tv-instanceof-and-symbol-hasinstance': () => `(Conceptual) A class can implement a static method [Symbol.hasInstance] to override the instanceof behavior.`,
   // problem solver--> 126
-  "tvm-primitive-property-assignment": () => {
-    "use strict";
-    try {
-      let s: any = "hello";
-      s.prop = "test"; // Fails silently in non-strict, throws in strict
-      return `Property assignment failed as expected. s.prop is ${s.prop}.`;
-    } catch (e) {
-      return `Caught expected TypeError in strict mode.`;
-    }
+  'tv-property-access-on-primitives': () => {
+    let s = 'a';
+    (s as any).prop = true;
+    return `(s as any).prop is ${(s as any).prop}`;
   },
   // problem solver--> 127
-  "tvm-object-is-gotcha-objects": () =>
-    `Object.is({}, {}) is ${Object.is({}, {})}, same as '===' for objects.`,
+  'tv-new-target-conceptual': () => `(Conceptual) In a constructor, \`if (!new.target) throw 'Must be called with new';\` ensures it's not called as a regular function.`,
   // problem solver--> 128
-  "tvm-abstract-relational-comparison": () =>
-    `(Conceptual) The < operator calls ToPrimitive on operands. For arrays, this means .toString(). So ['2'] < ['10'] is false because "2" > "10".`,
+  'tv-to-string-tag-customization': () => {
+    class C { get [Symbol.toStringTag]() { return 'Custom'; } }
+    return Object.prototype.toString.call(new C());
+  },
   // problem solver--> 129
-  "tvm-prototype-pollution-conceptual": () =>
-    `(Conceptual) A vulnerability where unsafe object merges can modify Object.prototype, affecting all objects.`,
+  'tv-regexp-object-type': () => `typeof /a/g is "${typeof /a/g}"`,
   // problem solver--> 130
-  "tvm-private-brand-check": () => {
-    class C {
-      #brand;
-      static isC(obj: any) {
-        return #brand in obj;
-      }
-    }
-    return `Is instance? ${C.isC(new C())}. Is object? ${C.isC({})}.`;
-  },
+  'tv-date-object-type': () => `typeof new Date() is "${typeof new Date()}"`,
   // problem solver--> 131
-  "tvm-instanceof-and-primitives": () =>
-    `true instanceof Boolean is ${
-      true instanceof Boolean
-    }. new Boolean(true) instanceof Boolean is ${
-      new Boolean(true) instanceof Boolean
-    }.`,
+  'tv-plus-date-coercion': () => `+new Date() is ${+new Date()}, which is the timestamp.`,
   // problem solver--> 132
-  "tvm-void-operator": () =>
-    `void 0 is ${void 0}. It evaluates the expression and returns undefined.`,
+  'tv-symbol-to-number-error': () => {
+    try {
+      Number(Symbol('a'));
+    } catch(e: any) {
+      return `Caught expected error: ${e.message}`;
+    }
+    return 'Test failed.';
+  },
   // problem solver--> 133
-  "tvm-comma-operator-return": () =>
-    `The expression (1, 2, 3) evaluates to ${eval("(1, 2, 3)")}`,
+  'tv-loose-equality-corner-case-1': () => `"" == [null] is ${"" == ([null] as any)}`,
   // problem solver--> 134
-  "tvm-instanceof-and-prototypes": () =>
-    `(Conceptual) 'obj instanceof Ctor' checks if 'Ctor.prototype' is in 'obj's prototype chain.`,
+  'tv-loose-equality-corner-case-2': () => `false == "0" is ${false == ("0" as any)}`,
   // problem solver--> 135
-  "tvm-nullish-coalescing-operator": () =>
-    `0 ?? 'default' is ${0 ?? "default"}. null ?? 'default' is ${
-      null ?? "default"
-    }.`,
+  'tv-loose-equality-corner-case-3': () => `0 == [] is ${0 == ([] as any)}`,
   // problem solver--> 136
-  "tvm-optional-chaining-operator": () => `null?.prop is ${null?.prop}`,
+  'tv-loose-equality-corner-case-4': () => `" \\t\\r\\n" == 0 is ${" \t\r\n" == (0 as any)}`,
   // problem solver--> 137
-  "tvm-logical-nullish-assignment": () => {
-    let x = null;
-    x ??= 10;
-    return `x is now ${x}`;
-  },
+  'tv-relational-comparison-null': () => `null > 0 is ${null > 0}, null < 0 is ${null < 0}, null >= 0 is ${null >= 0}`,
   // problem solver--> 138
-  "tvm-logical-and-assignment": () => {
-    let x: any = { val: 1 };
-    x &&= { val: 2 };
-    return `x is now ${JSON.stringify(x)}`;
-  },
+  'tv-globalthis': () => `(Conceptual) \`globalThis\` provides a standard way to get the global object, e.g., \`window\` in browsers.`,
   // problem solver--> 139
-  "tvm-logical-or-assignment": () => {
-    let x = 0;
-    x ||= 10;
-    return `x is now ${x}`;
+  'tv-string-iterator': () => {
+    const iterator = 'abc'[Symbol.iterator]();
+    return `First value: ${iterator.next().value}`;
   },
   // problem solver--> 140
-  "tvm-numeric-separators": () =>
-    `1_000_000 === 1000000 is ${1_000_000 === 1000000}`,
-  // problem solver--> 141
-  "tvm-coercion-corner-case-1": () => `[] + {} is "${[] + {}}"`,
-  // problem solver--> 142
-  "tvm-coercion-corner-case-2": () =>
-    `In a console, {} + [] is often 0, as {} is treated as a code block. In this context, it's ${eval(
-      "{} + []"
-    )}`,
-  // problem solver--> 143
-  "tvm-coercion-corner-case-3": () =>
-    `true + true is ${Number(true) + Number(true)}`,
-  // problem solver--> 144
-  "tvm-coercion-corner-case-4": () => `[1,2] + [3,4] is "${[1, 2] + [3, 4]}"`,
-  // problem solver--> 145
-  "tvm-coercion-corner-case-5": () =>
-    `!+[]+[]+![] is "${!+[] + [] + ![]}" which is "truefalse"`,
-  // problem solver--> 146
-  "tvm-object-is-vs-equals-summary": () =>
-    `(Conceptual) '==' coerces type. '===' compares type and value. 'Object.is' is like '===' but treats NaN as equal to itself and +0/-0 as different.`,
-  // problem solver--> 147
-  "tvm-check-for-object-not-null": () => {
-    const isObject = (val: any) =>
-      val !== null && typeof val === "object" && !Array.isArray(val);
-    return `isObject({}): ${isObject({})}, isObject([]): ${isObject(
-      []
-    )}, isObject(null): ${isObject(null)}`;
-  },
-  // problem solver--> 148
-  "tvm-getownpropertydescriptors": () => {
-    const obj = { a: 1 };
-    return JSON.stringify(Object.getOwnPropertyDescriptors(obj), null, 2);
-  },
-  // problem solver--> 149
-  "tvm-is-arraylike": () => {
-    const isArrayLike = (val: any) =>
-      val != null && typeof val[Symbol.iterator] === "function";
-    return `isArrayLike([]): ${isArrayLike(
-      []
-    )}, isArrayLike('abc'): ${isArrayLike(
-      "abc"
-    )}, isArrayLike({}): ${isArrayLike({})}`;
-  },
-  // problem solver--> 150
-  "tvm-string-is-well-formed": () => {
-    const valid = "abc";
-    const invalid = "\uD800"; // Lone surrogate
-    return `'abc'.isWellFormed(): ${valid.isWellFormed()}. '\\uD800'.isWellFormed(): ${invalid.isWellFormed()}`;
-  },
-  // problem solver--> 151
-  "tvm-finalization-registry": () =>
-    `(Conceptual) An API to register callbacks that are triggered after an object has been garbage collected. Used for resource cleanup.`,
-  // problem solver--> 152
-  "tvm-error-cause": () => {
+  'tv-bigint-and-json': () => {
     try {
-      throw new Error("Outer", { cause: new Error("Inner") });
-    } catch (e: any) {
-      return `Caught error with cause: ${e.cause.message}`;
+      JSON.stringify({ val: 10n });
+    } catch(e: any) {
+      return `Caught expected error: ${e.message}`;
     }
+    return 'Test failed.';
   },
-  // problem solver--> 153
-  "tvm-object-hasown": () => {
-    const obj = Object.create({ inherited: true });
+  // problem solver--> 141
+  'tv-coercion-order-of-operations': () => `1 + 2 + "3" is "${1 + 2 + "3"}". "1" + 2 + 3 is "${"1" + 2 + 3}"`,
+  // problem solver--> 142
+  'tv-tostring-on-null-error': () => {
+    try {
+      (null as any).toString();
+    } catch(e: any) {
+      return `Caught expected error: ${e.message}`;
+    }
+    return 'Test failed.';
+  },
+  // problem solver--> 143
+  'tv-number-constructor-with-new': () => {
+    const numObj = new Number(5);
+    return `typeof numObj is '${typeof numObj}'. numObj.valueOf() is ${numObj.valueOf()}`;
+  },
+  // problem solver--> 144
+  'tv-boolean-constructor-with-new': () => `if (new Boolean(false)) is truthy: ${!!new Boolean(false)}`,
+  // problem solver--> 145
+  'tv-object-keys-vs-for-in': () => {
+    const proto = { inherited: true };
+    const obj = Object.create(proto);
     obj.own = true;
-    return `Object.hasOwn(obj, 'own'): ${Object.hasOwn(
-      obj,
-      "own"
-    )}. Object.hasOwn(obj, 'inherited'): ${Object.hasOwn(obj, "inherited")}`;
+    let forInKeys: string[] = [];
+    for(const key in obj) forInKeys.push(key);
+    return `Object.keys: [${Object.keys(obj)}]. for...in: [${forInKeys.join(', ')}]`;
   },
+  // problem solver--> 146
+  'tv-infinity-minus-infinity': () => `Infinity - Infinity is ${Infinity - Infinity}`,
+  // problem solver--> 147
+  'tv-abstract-equality-table': () => `(Conceptual) Rule: If Type(x) is Number and Type(y) is String, return x == ToNumber(y). Many such rules exist.`,
+  // problem solver--> 148
+  'tv-string-concat-method': () => `'a'.concat('b', 'c') is "${'a'.concat('b', 'c')}"`,
+  // problem solver--> 149
+  'tv-string-to-number-bitwise': ({ str }: { str: string }) => `"${str}" | 0 is ${Number(str) | 0}`,
+  // problem solver--> 150
+  'tv-well-known-symbol-match': () => `(Conceptual) An object can define [Symbol.match] to act like a RegExp for 'string'.match(obj).`,
+  // problem solver--> 151
+  'tv-well-known-symbol-replace': () => `(Conceptual) An object can define [Symbol.replace] to be a custom replacer for 'string'.replace(obj, ...).`,
+  // problem solver--> 152
+  'tv-well-known-symbol-search': () => `(Conceptual) An object can define [Symbol.search] to be a custom search implementation for 'string'.search(obj).`,
+  // problem solver--> 153
+  'tv-well-known-symbol-split': () => `(Conceptual) An object can define [Symbol.split] to be a custom splitter for 'string'.split(obj).`,
   // problem solver--> 154
-  "tvm-coercion-with-custom-valueof": () => {
-    const obj = { valueOf: () => 42 };
-    return `1 + obj is ${1 + (obj as any)}`;
-  },
+  'tv-well-known-symbol-isconcatspreadable': () => `(Conceptual) An array-like object with \`obj[Symbol.isConcatSpreadable] = false\` will not be flattened when used with \`[].concat(obj)\`.`,
   // problem solver--> 155
-  "tvm-coercion-with-custom-tostring": () => {
-    const obj = { toString: () => "hello" };
-    return `'world ' + obj is "${"world " + obj}"`;
-  },
+  'tv-well-known-symbol-unscopables': () => `(Conceptual) A legacy feature to hide properties from the deprecated \`with\` statement. \`Array.prototype[Symbol.unscopables]\` hides methods like 'keys' and 'values'.`,
   // problem solver--> 156
-  "tvm-array-plus-number": () => `[1, 2] + 3 is "${[1, 2] + 3}"`,
+  'tv-tostring-on-object-create-null': () => {
+    const obj = Object.create(null);
+    try {
+      (obj as any).toString();
+    } catch(e: any) {
+      return `Caught expected error: ${e.message}`;
+    }
+    return 'Test failed.';
+  },
   // problem solver--> 157
-  "tvm-empty-string-to-number": () => `Number('') is ${Number("")}`,
+  'tv-coercion-with-empty-string': () => `Number("") is ${Number("")}`,
   // problem solver--> 158
-  "tvm-whitespace-string-to-number": () => `Number('   ') is ${Number("   ")}`,
+  'tv-coercion-with-whitespace-string': () => `Number(" \\t\\n ") is ${Number(" \t\n ")}`,
   // problem solver--> 159
-  "tvm-true-to-number": () => `Number(true) is ${Number(true)}`,
+  'tv-coercion-of-hex-string': ({ hex }: { hex: string }) => `Number("${hex}") is ${Number(hex)}`,
   // problem solver--> 160
-  "tvm-false-to-number": () => `Number(false) is ${Number(false)}`,
+  'tv-negative-zero-identity': () => `5 + (-0) is ${5 + (-0)}`,
   // problem solver--> 161
-  "tvm-undefined-to-number": () => `Number(undefined) is ${Number(undefined)}`,
+  'tv-negative-zero-string': () => `String(-0) is "${String(-0)}"`,
   // problem solver--> 162
-  "tvm-null-to-number": () => `Number(null) is ${Number(null)}`,
+  'tv-number-tostring-vs-string-constructor': () => `(Conceptual) \`String(null)\` is "null", but \`null.toString()\` throws an error. \`String()\` is safer.`,
   // problem solver--> 163
-  "tvm-object-to-number": () => `Number({}) is ${Number({})}`,
+  'tv-json-parse-reviver': () => {
+    const json = '{"date":"2024-01-01T00:00:00.000Z"}';
+    const obj = JSON.parse(json, (key, value) => key === 'date' ? new Date(value) : value);
+    return `obj.date is a Date object: ${obj.date instanceof Date}`;
+  },
   // problem solver--> 164
-  "tvm-array-to-number": () =>
-    `Number([]) is ${Number([])}. Number([5]) is ${Number([
-      5,
-    ])}. Number([1,2]) is ${Number([1, 2])}.`,
+  'tv-json-stringify-replacer': () => {
+    const obj = { a: 1, _b: 2 };
+    const replacer = (key: string, value: any) => key.startsWith('_') ? undefined : value;
+    return JSON.stringify(obj, replacer);
+  },
   // problem solver--> 165
-  "tvm-isinteger": () =>
-    `Number.isInteger(10) is ${Number.isInteger(
-      10
-    )}. Number.isInteger(10.5) is ${Number.isInteger(10.5)}.`,
+  'tv-tag-function-for-template-literal': () => {
+    const highlight = (strings: TemplateStringsArray, ...values: any[]) => {
+      let str = '';
+      strings.forEach((string, i) => {
+        str += string + (values[i] ? `<strong>${values[i]}</strong>` : '');
+      });
+      return str;
+    };
+    const name = 'JS';
+    return highlight`Hello, ${name}!`;
+  },
   // problem solver--> 166
-  "tvm-issafeinteger": () =>
-    `Number.isSafeInteger(2**53 - 1) is ${Number.isSafeInteger(
-      2 ** 53 - 1
-    )}. Number.isSafeInteger(2**53) is ${Number.isSafeInteger(2 ** 53)}.`,
+  'tv-raw-string-from-tag-function': () => {
+    const myTag = (strings: TemplateStringsArray) => strings.raw[0];
+    return myTag`C:\Development\profile\`;
+  },
   // problem solver--> 167
-  "tvm-equality-empty-arrays": () =>
-    `[] == [] is ${[] == []}. [] == ![] is ${[] == ![]}.`,
+  'tv-tolocalestring': ({ num }: { num: any }) =>{  parseNumber(num).toLocaleString('de-DE')}
   // problem solver--> 168
-  "tvm-equality-string-vs-wrapper": () => {
-    const prim = "a";
-    const obj = new String("a");
-    return `== is ${prim == obj}, === is ${prim === obj}`;
+  'tv-intl-numberformat': () => {
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(1234.56);
   },
   // problem solver--> 169
-  "tvm-coercion-to-primitive-hint-number": () => {
-    const obj = {
-      [Symbol.toPrimitive]: (hint: string) =>
-        hint === "number" ? 42 : "hello",
-    };
-    return `obj * 2 is ${(obj as any) * 2}`;
-  },
+  'tv-internal-class-property': () => `(Conceptual) The internal [[Class]] property specified the type for Object.prototype.toString. It's now replaced by Symbol.toStringTag.`,
   // problem solver--> 170
-  "tvm-coercion-to-primitive-hint-string": () => {
-    const obj = {
-      [Symbol.toPrimitive]: (hint: string) =>
-        hint === "number" ? 42 : "hello",
-    };
-    return `String(obj) is "${String(obj)}"`;
-  },
+  'tv-coercion-with-boolean-object': () => `\`if (new Boolean(false))\` is true, because the object wrapper is truthy.`,
   // problem solver--> 171
-  "tvm-coercion-in-relational-operators": () => `[2] > 1 is ${[2] > 1}`,
+  'tv-infinity-divided-by-infinity': () => `Infinity / Infinity is ${Infinity / Infinity}`,
   // problem solver--> 172
-  "tvm-proxy-has-trap": () => {
-    const proxy = new Proxy({}, { has: () => false });
-    return `'a' in proxy is ${"a" in proxy}`;
-  },
+  'tv-number-plus-undefined': () => `5 + undefined is ${5 + (undefined as any)}`,
   // problem solver--> 173
-  "tvm-proxy-delete-trap": () => {
-    "use strict";
-    try {
-      const proxy = new Proxy({ a: 1 }, { deleteProperty: () => false });
-      delete (proxy as any).a;
-    } catch (e: any) {
-      return `Caught expected error: ${e.message}`;
-    }
-    return "This should not be reached.";
-  },
+  'tv-number-plus-null': () => `5 + null is ${5 + (null as any)}`,
   // problem solver--> 174
-  "tvm-reflect-has": () =>
-    `Reflect.has({a:1}, 'a') is ${Reflect.has({ a: 1 }, "a")}`,
+  'tv-parseint-infinity': () => `parseInt(Infinity) is ${parseInt(Infinity as any, 10)}`,
   // problem solver--> 175
-  "tvm-reflect-delete": () => {
-    const obj = { a: 1 };
-    Reflect.deleteProperty(obj, "a");
-    return `obj.a is now ${obj.a}`;
-  },
+  'tv-number-max-value-plus-one': () => `Number.MAX_VALUE * 2 is ${Number.MAX_VALUE * 2}`,
   // problem solver--> 176
-  "tvm-property-enumerable": () => {
-    const obj = { a: 1 };
-    Object.defineProperty(obj, "b", { value: 2, enumerable: false });
-    return `Object.keys(obj) is [${Object.keys(obj)}]`;
-  },
+  'tv-boxing-and-unboxing': () => `(Conceptual) "Boxing" is wrapping a primitive (e.g. \`new String('a')\`). "Unboxing" is getting the primitive value back (e.g. via \`.valueOf()\`).`,
   // problem solver--> 177
-  "tvm-property-writable": () => {
-    "use strict";
-    try {
-      const obj = {};
-      Object.defineProperty(obj, "a", { value: 1, writable: false });
-      (obj as any).a = 2;
-    } catch (e: any) {
-      return `Caught expected error: ${e.message}`;
-    }
-    return "This should not be reached.";
+  'tv-symbol-as-object-property': () => {
+    const sym = Symbol('id');
+    const obj = { [sym]: 123 };
+    return `obj[sym] is ${obj[sym]}`;
   },
   // problem solver--> 178
-  "tvm-property-configurable": () => {
-    "use strict";
-    try {
-      const obj = {};
-      Object.defineProperty(obj, "a", { value: 1, configurable: false });
-      delete (obj as any).a;
-    } catch (e: any) {
-      return `Caught expected error: ${e.message}`;
-    }
-    return "This should not be reached.";
+  'tv-symbol-property-enumeration': () => {
+    const sym = Symbol('id');
+    const obj = { [sym]: 123, a: 1 };
+    return `Object.keys(obj) is [${Object.keys(obj)}]`;
   },
   // problem solver--> 179
-  "tvm-accessor-descriptor": () => {
-    const obj = {
-      _val: 0,
-      get val() {
-        return this._val;
-      },
-      set val(v) {
-        this._val = v + 1;
-      },
-    };
-    obj.val = 10;
-    return `Getter returns: ${obj.val}`;
+  'tv-bigint-and-math-object': () => {
+    try {
+      Math.max(10n, 20n);
+    } catch(e: any) {
+      return `Caught expected error: ${e.message}`;
+    }
+    return 'Test failed.';
   },
   // problem solver--> 180
-  "tvm-data-descriptor": () =>
-    `(Conceptual) A standard property descriptor with 'value' and 'writable' keys.`,
+  'tv-coercion-with-logical-not': ({ val }: { val: string }) => {
+    const value = val === '1' ? 1 : val === '0' ? 0 : val;
+    return `!${val} is ${!value}`;
+  },
   // problem solver--> 181
-  "tvm-getownpropertynames": () => {
-    const obj = { a: 1 };
-    Object.defineProperty(obj, "b", { value: 2, enumerable: false });
-    return `Names: ${Object.getOwnPropertyNames(obj).join(", ")}`;
+  'tv-tricky-plus-plus-coercion': () => {
+    let arr: any = [];
+    arr++;
+    return `++[] results in ${arr}`;
   },
   // problem solver--> 182
-  "tvm-getownpropertysymbols": () => {
-    const sym = Symbol("s");
-    const obj = { [sym]: 1 };
-    return `Symbols: ${Object.getOwnPropertySymbols(obj)[0].toString()}`;
-  },
+  'tv-instanceof-and-realm-conceptual': () => `(Conceptual) An array from an iframe will fail \`myArray instanceof Array\` in the main window because it comes from a different global scope (realm) with a different Array constructor.`,
   // problem solver--> 183
-  "tvm-reflect-ownkeys": () => {
-    const sym = Symbol("s");
-    const obj = { a: 1, [sym]: 2 };
-    return `Keys: ${Reflect.ownKeys(obj)
-      .map((k) => k.toString())
-      .join(", ")}`;
+  'tv-to-locale-string-options': ({ num }: { num: any }) => {
+    return parseNumber(num).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
   },
   // problem solver--> 184
-  "tvm-isprototypeof": () => {
-    function C() {}
-    const c = new (C as any)();
-    return `C.prototype.isPrototypeOf(c): ${C.prototype.isPrototypeOf(c)}`;
+  'tv-number-constructor-vs-literal': () => {
+    const literal = 5;
+    const object = new Number(5);
+    return `typeof literal: ${typeof literal}, typeof object: ${typeof object}`;
   },
   // problem solver--> 185
-  "tvm-object-fromEntries": () =>
-    JSON.stringify(
-      Object.fromEntries([
-        ["a", 1],
-        ["b", 2],
-      ])
-    ),
+  'tv-loose-equality-with-document-all': () => `(Conceptual) \`document.all\` is a special "exotic" object. To be web-compatible, it's the only object that is falsy. \`document.all == null\` is true.`,
   // problem solver--> 186
-  "tvm-coercion-with-equality-null": () => `null == 0 is ${null == 0}`,
-  // problem solver--> 187
-  "tvm-coercion-with-equality-empty-string": () => `'' == 0 is ${"" == 0}`,
-  // problem solver--> 188
-  "tvm-coercion-with-equality-false": () => `'' == false is ${"" == false}`,
-  // problem solver--> 189
-  "tvm-json-reviver": () =>
-    `(Conceptual) JSON.parse(json, (key, val) => isDateStr(val) ? new Date(val) : val)`,
-  // problem solver--> 190
-  "tvm-json-replacer": () =>
-    `(Conceptual) JSON.stringify(obj, (key, val) => key === 'secret' ? undefined : val)`,
-  // problem solver--> 191
-  "tvm-error-cause-property": () => {
-    try {
-      throw new Error("Outer", { cause: new Error("Inner") });
-    } catch (e: any) {
-      return `Caught error with cause: ${e.cause.message}`;
-    }
+  'tv-relational-comparison-and-valueof': () => {
+    const obj = { value: 10, valueOf() { return this.value; } };
+    return `obj > 5 is ${obj > 5}`;
   },
+  // problem solver--> 187
+  'tv-coercion-with-bitwise-or': ({ val }: { val: string }) => `"${val}" | 0 is ${Number(val) | 0}`,
+  // problem solver--> 188
+  'tv-getownpropertysymbols': () => {
+    const sym = Symbol('s');
+    const obj = { [sym]: 1 };
+    return `Object.getOwnPropertySymbols(obj)[0] is ${Object.getOwnPropertySymbols(obj)[0].toString()}`;
+  },
+  // problem solver--> 189
+  'tv-json-reviver-and-types': () => `(Conceptual) A reviver can check for a special property like \`__type: 'MyClass'\` on an object and use it to instantiate the correct class.`,
+  // problem solver--> 190
+  'tv-tagged-template-security': () => `(Conceptual) A tag function can inspect the string and value parts, escape any potentially malicious characters in the values, and then safely combine them.`,
+  // problem solver--> 191
+  'tv-bigint-and-relational-operators': () => `10n > 5 is ${10n > 5}. 5n < 10 is ${5n < 10}.`,
   // problem solver--> 192
-  "tvm-finalization-registry-conceptual": () =>
-    `(Conceptual) A way to schedule a callback to run after an object has been garbage collected, for cleaning up external resources.`,
+  'tv-string-raw': () => String.raw`C:\Path\To\File`,
   // problem solver--> 193
-  "tvm-weakref-conceptual": () =>
-    `(Conceptual) A WeakRef creates a weak reference to an object, allowing it to be garbage collected. You must call .deref() to access the object.`,
+  'tv-coercion-corner-case-1': () => `[1] - - [1] is ${[1] as any - -[1]}`,
   // problem solver--> 194
-  "tvm-at-method-array": () =>
-    `['a','b','c'].at(-1) is "${["a", "b", "c"].at(-1)}"`,
+  'tv-coercion-corner-case-2': () => `!+[]+[]+![] is ${!+[]+[]+![]}`,
   // problem solver--> 195
-  "tvm-at-method-string": () => `'abc'.at(-1) is "${"abc".at(-1)}"`,
+  'tv-coercion-corner-case-3': () => `[1,2,3] + [4,5,6] is "${[1,2,3] + [4,5,6]}"`,
   // problem solver--> 196
-  "tvm-string-is-well-formed": () =>
-    `'abc'.isWellFormed() is ${"abc".isWellFormed()}. '\\uD800'.isWellFormed() is ${"\uD800".isWellFormed()}.`,
+  'tv-coercion-corner-case-4': () => `(+"1") evaluates to the number ${+"1"}`,
   // problem solver--> 197
-  "tvm-string-to-well-formed": () =>
-    `'\\uD800'.toWellFormed() is "${"\uD800".toWellFormed()}"`,
+  'tv-structured-clone': () => {
+    const original = { date: new Date(), data: { value: 1 } };
+    const copy = structuredClone(original);
+    copy.data.value = 99;
+    return `Original and copy are different objects: ${original !== copy}. Original value: ${original.data.value}.`;
+  },
   // problem solver--> 198
-  "tvm-shadowrealm-api-conceptual": () =>
-    `(Conceptual) A new API for creating isolated JavaScript environments to securely run code.`,
+  'tv-structured-clone-limitations': () => `(Conceptual) structuredClone cannot clone functions, Error objects, or DOM nodes. It also doesn't preserve an object's prototype chain.`,
   // problem solver--> 199
-  "tvm-memory-model-conceptual": () =>
-    `(Conceptual) Primitives and references go on the Stack (fast, static memory). Objects and functions go on the Heap (slower, dynamic memory).`,
+  'tv-object-hasown': () => {
+    const proto = { inherited: true };
+    const obj = Object.create(proto);
+    obj.own = true;
+    return `Object.hasOwn(obj, 'own'): ${Object.hasOwn(obj, 'own')}. Object.hasOwn(obj, 'inherited'): ${Object.hasOwn(obj, 'inherited')}.`;
+  },
   // problem solver--> 200
-  "tvm-final-summary": () =>
-    `(Conceptual) Master JS types by preferring '===' over '==', understanding implicit coercion rules for operators like '+' and '==', and knowing the critical difference between pass-by-value (primitives) and pass-by-reference (objects).`,
+  'tv-final-summary': () => `(Conceptual) Always prefer strict equality (===) to avoid unpredictable type coercion. Use explicit conversions (e.g., Number(), String()) to make your code's intent clear.`,
 };
