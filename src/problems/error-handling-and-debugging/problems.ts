@@ -1,8 +1,6 @@
-// import { Problem } from "../../types";
-
 import { Problem } from "@/types";
 
-export const errorHandlingDebuggingProblems: Problem[] = [
+export const problems: Problem[] = [
   // problem--> 01
   {
     id: "ehd-try-catch-basic",
