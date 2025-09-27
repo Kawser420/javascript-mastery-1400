@@ -112,7 +112,7 @@ const App: React.FC = () => {
       "Math and Number Challenges",
       "Date and Time Handling",
       "Type and Value Mastery",
-      "Error Handling & Debugging",
+      "Error Handling and Debugging",
       "Input/Output & Console Utilities",
     ],
     "Core Concepts": [

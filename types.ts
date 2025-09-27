@@ -50,7 +50,7 @@ export type Category =
   | "Math and Number Challenges"
   | "Date and Time Handling"
   | "Type and Value Mastery"
-  | "Error Handling & Debugging"
+  | "Error Handling and Debugging"
   | "Input/Output & Console Utilities"
   | "ES6+ Features"
   | "Closures & Lexical Environment"
