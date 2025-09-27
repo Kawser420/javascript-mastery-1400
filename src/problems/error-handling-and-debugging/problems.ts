@@ -1058,6 +1058,7 @@ export const errorHandlingDebuggingProblems: Problem[] = [
     inputs: [],
     buttonText: "Explain",
   },
+
   // problem--> 105
   {
     id: "ehd-xhr-breakpoint-conceptual",
