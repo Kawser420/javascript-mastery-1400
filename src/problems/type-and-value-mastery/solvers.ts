@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS
 const parseAsValue = (input: any): any => {
   if (input === null || input === undefined) return input;
   const trimmed = String(input).trim().toLowerCase();
@@ -12,7 +11,6 @@ const parseAsValue = (input: any): any => {
   return input;
 };
 
-// State for some problems
 let stateCounter = 0;
 
 export const solvers: Record<string, Function> = {

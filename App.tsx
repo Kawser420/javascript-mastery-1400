@@ -113,7 +113,7 @@ const App: React.FC = () => {
       "Date and Time Handling",
       "Type and Value Mastery",
       "Error Handling and Debugging",
-      "Input/Output & Console Utilities",
+      "Input/Output and Console Utilities",
     ],
     "Core Concepts": [
       "ES6+ Features",
