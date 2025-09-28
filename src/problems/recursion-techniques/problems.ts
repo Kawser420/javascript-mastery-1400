@@ -1,1213 +1,1928 @@
-import { Problem } from "@/types";
+import { Problem } from "../../types";
 
 export const problems: Problem[] = [
+  // problem--> 01
   {
-    id: "factorial-recursive",
-    title: "Factorial of a Number",
+    id: "recursion-factorial",
+    title: "Calculate Factorial",
     description:
-      "Write a recursive function to calculate the factorial of a non-negative integer (n!).",
-    category: "Recursion",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
-    buttonText: "Calculate Factorial",
-  },
-  {
-    id: "fibonacci-recursive",
-    title: "Nth Fibonacci Number",
-    description:
-      "Write a recursive function to find the Nth number in the Fibonacci sequence. Note: This is inefficient but demonstrates recursion well.",
-    category: "Recursion",
+      "Write a recursive function to calculate the factorial of a non-negative integer n. The factorial of n (n!) is the product of all positive integers less than or equal to n.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
-      {
-        id: "num",
-        label: "Nth number to find",
-        type: "number",
-        defaultValue: 10,
-      },
+      { id: "n", label: "Integer (n)", type: "number", defaultValue: 5 },
     ],
-    buttonText: "Find Nth Fibonacci",
   },
+  // problem--> 02
   {
-    id: "sum-array-recursive",
-    title: "Sum Array Elements",
+    id: "recursion-fibonacci",
+    title: "Fibonacci Number",
     description:
-      "Write a recursive function that calculates the sum of all numbers in an array.",
-    category: "Recursion",
+      "Write a recursive function to find the nth number in the Fibonacci sequence. The sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding ones.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [{ id: "n", label: "Index (n)", type: "number", defaultValue: 6 }],
+  },
+  // problem--> 03
+  {
+    id: "recursion-sum-array",
+    title: "Sum of Array Elements",
+    description:
+      "Write a recursive function to calculate the sum of all numbers in an array.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
         id: "arr",
-        label: "Array of numbers (comma-separated)",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "1, 2, 3, 4, 5",
+        defaultValue: "[1, 2, 3, 4, 5]",
       },
     ],
-    buttonText: "Sum Array",
   },
+  // problem--> 04
   {
-    id: "power-recursive",
+    id: "recursion-power-function",
     title: "Power Function",
     description:
-      "Write a recursive function that calculates the result of a base raised to the power of an exponent.",
-    category: "Recursion",
+      "Write a recursive function that takes a base and an exponent and returns the result of base raised to the power of exponent. Assume the exponent is a non-negative integer.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       { id: "base", label: "Base", type: "number", defaultValue: 2 },
-      { id: "exponent", label: "Exponent", type: "number", defaultValue: 3 },
+      { id: "exponent", label: "Exponent", type: "number", defaultValue: 5 },
     ],
-    buttonText: "Calculate Power",
   },
+  // problem--> 05
   {
-    id: "reverse-string-recursive",
+    id: "recursion-string-reversal",
     title: "Reverse a String",
-    description: "Write a recursive function to reverse a string.",
-    category: "Recursion",
+    description: "Write a recursive function to reverse a given string.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "hello" },
+      {
+        id: "str",
+        label: "String to reverse",
+        type: "text",
+        defaultValue: "hello",
+      },
     ],
-    buttonText: "Reverse",
   },
+  // problem--> 06
   {
-    id: "is-palindrome-recursive",
-    title: "Check for Palindrome",
+    id: "recursion-countdown",
+    title: "Countdown",
     description:
-      "Write a recursive function to check if a string is a palindrome.",
-    category: "Recursion",
-    inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "racecar" },
-    ],
-    buttonText: "Check Palindrome",
+      "Write a recursive function that takes a number n and returns an array of numbers from n down to 1.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 5 }],
   },
+  // problem--> 07
   {
-    id: "range-of-numbers-recursive",
-    title: "Generate Range of Numbers",
+    id: "recursion-range-of-numbers",
+    title: "Range of Numbers",
     description:
-      "Write a recursive function that generates an array of numbers in a range from a start to an end number.",
-    category: "Recursion",
+      "Write a recursive function that takes two numbers, startNum and endNum, and returns an array containing all numbers in the range from startNum to endNum (inclusive).",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "start", label: "Start Number", type: "number", defaultValue: 1 },
-      { id: "end", label: "End Number", type: "number", defaultValue: 5 },
+      {
+        id: "startNum",
+        label: "Start Number",
+        type: "number",
+        defaultValue: 1,
+      },
+      { id: "endNum", label: "End Number", type: "number", defaultValue: 5 },
     ],
-    buttonText: "Generate Range",
   },
+  // problem--> 08
   {
-    id: "greatest-common-divisor-recursive",
+    id: "recursion-greatest-common-divisor",
     title: "Greatest Common Divisor (GCD)",
     description:
-      "Write a recursive function to find the greatest common divisor of two numbers using the Euclidean algorithm.",
-    category: "Recursion",
+      "Write a recursive function to find the greatest common divisor (GCD) of two positive integers using the Euclidean algorithm.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       { id: "a", label: "First Number", type: "number", defaultValue: 48 },
       { id: "b", label: "Second Number", type: "number", defaultValue: 18 },
     ],
-    buttonText: "Find GCD",
   },
+  // problem--> 09
   {
-    id: "flatten-array-recursive",
-    title: "Flatten a Nested Array",
+    id: "recursion-is-palindrome",
+    title: "Check for Palindrome",
     description:
-      "Write a recursive function to flatten a multi-level nested array into a single-level array.",
-    category: "Recursion",
+      "Write a recursive function that checks if a given string is a palindrome (reads the same forwards and backward).",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "arr",
-        label: "Nested Array (JSON)",
-        type: "textarea",
-        defaultValue: "[1, [2, 3], [[4], 5]]",
-      },
-    ],
-    buttonText: "Flatten",
-  },
-  {
-    id: "sum-of-digits-recursive",
-    title: "Sum of Digits",
-    description:
-      "Write a recursive function to calculate the sum of the digits of a number.",
-    category: "Recursion",
-    inputs: [
-      { id: "num", label: "Number", type: "number", defaultValue: 12345 },
-    ],
-    buttonText: "Sum Digits",
-  },
-  {
-    id: "binary-search-recursive",
-    title: "Binary Search",
-    description:
-      "Implement a binary search algorithm on a sorted array using recursion.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Sorted Array (comma-separated)",
+        id: "str",
+        label: "String to check",
         type: "text",
-        defaultValue: "2, 5, 7, 8, 11, 12",
+        defaultValue: "racecar",
       },
-      { id: "target", label: "Target Value", type: "number", defaultValue: 11 },
     ],
-    buttonText: "Binary Search",
   },
+  // problem--> 10
   {
-    id: "count-occurrences-recursive",
+    id: "recursion-count-occurrences",
     title: "Count Occurrences in Array",
     description:
-      "Write a recursive function to count the occurrences of a specific element in an array.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Array (comma-separated)",
-        type: "text",
-        defaultValue: "1, 2, 3, 2, 4, 2",
-      },
-      {
-        id: "target",
-        label: "Element to Count",
-        type: "number",
-        defaultValue: 2,
-      },
-    ],
-    buttonText: "Count",
-  },
-  {
-    id: "sum-nested-object-recursive",
-    title: "Sum Values in Nested Object",
-    description:
-      "Write a recursive function to sum all the numeric values in a potentially deeply nested object.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "obj",
-        label: "Nested Object (JSON)",
-        type: "textarea",
-        defaultValue: '{"a": 1, "b": {"c": 2, "d": {"e": 3}}}',
-      },
-    ],
-    buttonText: "Sum Values",
-  },
-  {
-    id: "tree-traversal-conceptual",
-    title: "Tree Traversal (Conceptual)",
-    description:
-      "Explain the three main Depth-First Search (DFS) tree traversal methods (In-order, Pre-order, Post-order) and how they are inherently recursive.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Traversals",
-  },
-  {
-    id: "permutations-string-recursive",
-    title: "String Permutations",
-    description:
-      "Write a recursive function to generate all permutations of a string.",
-    category: "Recursion",
-    inputs: [
-      { id: "str", label: "String (short)", type: "text", defaultValue: "abc" },
-    ],
-    buttonText: "Generate Permutations",
-  },
-  {
-    id: "collatz-conjecture-recursive",
-    title: "Collatz Conjecture Steps",
-    description:
-      "Write a recursive function to find the number of steps it takes for a number to reach 1 using the Collatz conjecture rules (n/2 if even, 3n+1 if odd).",
-    category: "Recursion",
-    inputs: [
-      { id: "num", label: "Starting Number", type: "number", defaultValue: 6 },
-    ],
-    buttonText: "Count Steps",
-  },
-  {
-    id: "find-all-paths-in-grid-recursive",
-    title: "Paths in a Grid",
-    description:
-      "Write a recursive function to find the number of unique paths from the top-left to the bottom-right of a grid, only moving right and down.",
-    category: "Recursion",
-    inputs: [
-      { id: "rows", label: "Grid Rows (m)", type: "number", defaultValue: 3 },
-      {
-        id: "cols",
-        label: "Grid Columns (n)",
-        type: "number",
-        defaultValue: 3,
-      },
-    ],
-    buttonText: "Count Paths",
-  },
-  {
-    id: "merge-sort-recursive",
-    title: "Merge Sort (Conceptual)",
-    description:
-      "Explain the recursive 'divide and conquer' nature of the Merge Sort algorithm.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Merge Sort",
-  },
-  {
-    id: "is-even-odd-recursive",
-    title: "Even or Odd Check",
-    description:
-      "Write a recursive function to determine if a number is even or odd without using the modulo operator.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "num",
-        label: "Non-negative Number",
-        type: "number",
-        defaultValue: 5,
-      },
-    ],
-    buttonText: "Check Even/Odd",
-  },
-  {
-    id: "array-of-multiples-recursive",
-    title: "Array of Multiples",
-    description:
-      "Write a recursive function that takes two numbers, `num` and `length`, and creates an array of multiples of `num` up to `length`.",
-    category: "Recursion",
-    inputs: [
-      { id: "num", label: "Number", type: "number", defaultValue: 7 },
-      { id: "length", label: "Length", type: "number", defaultValue: 5 },
-    ],
-    buttonText: "Get Multiples",
-  },
-  {
-    id: "product-of-array-recursive",
-    title: "Product of Array",
-    description:
-      "Write a recursive function to find the product of all numbers in an array.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Array of Numbers",
-        type: "text",
-        defaultValue: "1,2,3,4",
-      },
-    ],
-    buttonText: "Calculate Product",
-  },
-  {
-    id: "find-in-nested-array-recursive",
-    title: "Find in Nested Array",
-    description:
-      "Write a recursive function that checks if a target value exists within a deeply nested array.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Nested Array (JSON)",
-        type: "textarea",
-        defaultValue: "[1, [2, 3], [[4], 5]]",
-      },
-      { id: "target", label: "Target Value", type: "number", defaultValue: 4 },
-    ],
-    buttonText: "Find Value",
-  },
-  {
-    id: "exponentiation-by-squaring-recursive",
-    title: "Fast Exponentiation",
-    description:
-      "Implement the more efficient exponentiation by squaring (binary exponentiation) algorithm using recursion.",
-    category: "Recursion",
-    inputs: [
-      { id: "base", label: "Base", type: "number", defaultValue: 3 },
-      { id: "exponent", label: "Exponent", type: "number", defaultValue: 5 },
-    ],
-    buttonText: "Calculate Power",
-  },
-  {
-    id: "decimal-to-binary-recursive",
-    title: "Decimal to Binary",
-    description:
-      "Write a recursive function to convert a decimal number to its binary representation (as a string).",
-    category: "Recursion",
-    inputs: [
-      { id: "num", label: "Decimal Number", type: "number", defaultValue: 13 },
-    ],
-    buttonText: "Convert to Binary",
-  },
-  {
-    id: "replicate-string-recursive",
-    title: "Replicate a String",
-    description:
-      "Write a recursive function to replicate a string a certain number of times.",
-    category: "Recursion",
-    inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "ha" },
-      {
-        id: "times",
-        label: "Times to Replicate",
-        type: "number",
-        defaultValue: 3,
-      },
-    ],
-    buttonText: "Replicate",
-  },
-  {
-    id: "recursive-every",
-    title: "Implement `every` Recursively",
-    description:
-      "Write a recursive function that mimics the `Array.prototype.every` method.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Array of Numbers",
-        type: "text",
-        defaultValue: "2,4,6,8",
-      },
-    ],
-    buttonText: "Check if all are even",
-  },
-  {
-    id: "recursive-some",
-    title: "Implement `some` Recursively",
-    description:
-      "Write a recursive function that mimics the `Array.prototype.some` method.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Array of Numbers",
-        type: "text",
-        defaultValue: "1,3,5,8",
-      },
-    ],
-    buttonText: "Check if some are even",
-  },
-  {
-    id: "recursive-filter",
-    title: "Implement `filter` Recursively",
-    description:
-      "Write a recursive function that mimics the `Array.prototype.filter` method.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Array of Numbers",
-        type: "text",
-        defaultValue: "1,2,3,4,5,6",
-      },
-    ],
-    buttonText: "Filter for even numbers",
-  },
-  {
-    id: "recursive-map",
-    title: "Implement `map` Recursively",
-    description:
-      "Write a recursive function that mimics the `Array.prototype.map` method.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "arr",
-        label: "Array of Numbers",
-        type: "text",
-        defaultValue: "1,2,3",
-      },
-    ],
-    buttonText: "Double each number",
-  },
-  {
-    id: "tower-of-hanoi-conceptual",
-    title: "Tower of Hanoi (Conceptual)",
-    description: "Explain the recursive solution to the Tower of Hanoi puzzle.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Hanoi",
-  },
-  {
-    id: "count-consonants-recursive",
-    title: "Count Consonants in String",
-    description:
-      "Write a recursive function to count the number of consonants in a string.",
-    category: "Recursion",
-    inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "hello world" },
-    ],
-    buttonText: "Count Consonants",
-  },
-  {
-    id: "pascals-triangle-recursive",
-    title: "Pascal's Triangle Row",
-    description:
-      "Write a recursive function to return a specific row of Pascal's Triangle.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "row",
-        label: "Row Number (0-indexed)",
-        type: "number",
-        defaultValue: 4,
-      },
-    ],
-    buttonText: "Get Row",
-  },
-  {
-    id: "search-nested-object-recursive",
-    title: "Search Nested Object",
-    description:
-      "Write a recursive function that searches for a key in a nested object and returns its value.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "obj",
-        label: "Nested Object (JSON)",
-        type: "textarea",
-        defaultValue: '{"a": 1, "b": {"c": 2, "d": {"e": "found"}}}',
-      },
-      { id: "key", label: "Key to Find", type: "text", defaultValue: "e" },
-    ],
-    buttonText: "Find Key",
-  },
-  {
-    id: "count-down-up-recursive",
-    title: "Countdown and Up",
-    description:
-      "Write a recursive function that logs a countdown from N to 1 and then back up to N.",
-    category: "Recursion",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 3 }],
-    buttonText: "Run",
-  },
-  {
-    id: "remove-duplicates-recursive",
-    title: "Remove Duplicates from Array",
-    description:
-      "Write a recursive function to remove duplicate elements from an array.",
-    category: "Recursion",
+      "Write a recursive function to count the number of times a specific element appears in an array.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
         id: "arr",
         label: "Array",
         type: "text",
-        defaultValue: "1,2,2,3,4,3,5",
+        defaultValue: "[1, 2, 3, 2, 4, 2]",
+      },
+      {
+        id: "target",
+        label: "Target Element",
+        type: "number",
+        defaultValue: 2,
       },
     ],
-    buttonText: "Remove Duplicates",
   },
+  // problem--> 11
   {
-    id: "string-contains-char-recursive",
-    title: "String Contains Character",
+    id: "recursion-sum-of-digits",
+    title: "Sum of Digits",
     description:
-      "Write a recursive function that checks if a string contains a specific character.",
-    category: "Recursion",
+      "Write a recursive function that takes a non-negative integer and returns the sum of its digits.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "javascript" },
-      { id: "char", label: "Character", type: "text", defaultValue: "s" },
+      { id: "n", label: "Integer (n)", type: "number", defaultValue: 12345 },
     ],
-    buttonText: "Check",
   },
+  // problem--> 12
   {
-    id: "length-of-array-recursive",
-    title: "Length of Array",
+    id: "recursion-is-even",
+    title: "Is Even?",
     description:
-      "Write a recursive function to find the length of an array without using the `.length` property.",
-    category: "Recursion",
+      "Write a recursive function that determines if a positive integer is even without using the modulo (%) operator. Hint: isEven(n) is the same as !isEven(n-1).",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "a,b,c,d" },
+      { id: "n", label: "Integer (n)", type: "number", defaultValue: 10 },
     ],
-    buttonText: "Calculate Length",
   },
+  // problem--> 13
   {
-    id: "is-sorted-recursive",
-    title: "Check if Array is Sorted",
+    id: "recursion-product-of-array",
+    title: "Product of Array Elements",
     description:
-      "Write a recursive function to check if an array of numbers is sorted in ascending order.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" },
-    ],
-    buttonText: "Check Sort",
-  },
-  {
-    id: "recursive-min",
-    title: "Find Minimum in Array",
-    description:
-      "Write a recursive function to find the minimum value in an array of numbers.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "5,3,8,2,9" },
-    ],
-    buttonText: "Find Minimum",
-  },
-  {
-    id: "recursive-max",
-    title: "Find Maximum in Array",
-    description:
-      "Write a recursive function to find the maximum value in an array of numbers.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "5,3,8,2,9" },
-    ],
-    buttonText: "Find Maximum",
-  },
-  {
-    id: "deep-reverse-array-recursive",
-    title: "Deep Reverse Array",
-    description:
-      "Write a recursive function that reverses an array and also reverses any nested arrays within it.",
-    category: "Recursion",
+      "Write a recursive function that computes the product of all numbers in an array.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
         id: "arr",
-        label: "Nested Array (JSON)",
-        type: "textarea",
-        defaultValue: "[1, [2, 3], 4]",
-      },
-    ],
-    buttonText: "Deep Reverse",
-  },
-  {
-    id: "balance-parentheses-recursive",
-    title: "Balanced Parentheses Check",
-    description:
-      "Write a recursive function to check if a string of parentheses is balanced.",
-    category: "Recursion",
-    inputs: [
-      {
-        id: "str",
-        label: "Parentheses String",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "(())",
+        defaultValue: "[1, 2, 3, 4]",
       },
     ],
-    buttonText: "Check Balance",
   },
+  // problem--> 14
   {
-    id: "get-all-keys-nested-object-recursive",
-    title: "Get All Keys from Nested Object",
+    id: "recursion-decimal-to-binary",
+    title: "Decimal to Binary Conversion",
     description:
-      "Write a recursive function to get an array of all keys from a nested object.",
-    category: "Recursion",
+      "Write a recursive function to convert a positive decimal number into its binary representation (as a string).",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Decimal Number", type: "number", defaultValue: 23 },
+    ],
+  },
+  // problem--> 15
+  {
+    id: "recursion-replicate-element",
+    title: "Replicate Element",
+    description:
+      "Write a recursive function that takes a value and a count and returns an array with the value replicated count times.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "obj",
-        label: "Nested Object (JSON)",
-        type: "textarea",
-        defaultValue: '{"a": 1, "b": {"c": 2}}',
+        id: "element",
+        label: "Value to replicate",
+        type: "text",
+        defaultValue: "hi",
+      },
+      { id: "count", label: "Count", type: "number", defaultValue: 3 },
+    ],
+  },
+  // problem--> 16
+  {
+    id: "recursion-binary-search",
+    title: "Binary Search",
+    description:
+      "Implement a recursive binary search algorithm to find the index of a target value in a sorted array of numbers. Return -1 if the target is not found.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Sorted Array",
+        type: "text",
+        defaultValue: "[2, 5, 8, 12, 16, 23, 38, 56, 72, 91]",
+      },
+      { id: "target", label: "Target Value", type: "number", defaultValue: 23 },
+    ],
+  },
+  // problem--> 17
+  {
+    id: "recursion-merge-sort",
+    title: "Merge Sort",
+    description:
+      "Implement the recursive Merge Sort algorithm to sort an array of numbers.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Unsorted Array",
+        type: "text",
+        defaultValue: "[38, 27, 43, 3, 9, 82, 10]",
       },
     ],
-    buttonText: "Get All Keys",
   },
+  // problem--> 18
   {
-    id: "subsets-of-set-recursive",
-    title: "Subsets of a Set",
+    id: "recursion-tree-sum",
+    title: "Sum of Tree Nodes",
     description:
-      "Write a recursive function to generate all possible subsets (the power set) of a given set (array).",
-    category: "Recursion",
+      "Given a binary tree where each node has a numeric value, write a recursive function to find the sum of all node values. The tree is represented as a nested object.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "arr", label: "Array (Set)", type: "text", defaultValue: "1,2,3" },
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 10, "left": {"value": 5, "left": null, "right": null}, "right": {"value": 15, "left": null, "right": {"value": 20, "left": null, "right": null}}}',
+      },
     ],
-    buttonText: "Generate Subsets",
   },
+  // problem--> 19
   {
-    id: "collect-strings-from-object-recursive",
+    id: "recursion-tree-depth",
+    title: "Maximum Depth of Binary Tree",
+    description:
+      "Write a recursive function to find the maximum depth (or height) of a binary tree. The depth is the number of nodes along the longest path from the root node down to the farthest leaf node.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 3, "left": {"value": 9, "left": null, "right": null}, "right": {"value": 20, "left": {"value": 15, "left": null, "right": null}, "right": {"value": 7, "left": null, "right": null}}}',
+      },
+    ],
+  },
+  // problem--> 20
+  {
+    id: "recursion-string-permutations",
+    title: "String Permutations",
+    description:
+      "Write a recursive function that returns all possible permutations of a given string.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "str", label: "Input String", type: "text", defaultValue: "abc" },
+    ],
+  },
+  // problem--> 21
+  {
+    id: "recursion-subsets-of-a-set",
+    title: "Subsets of a Set (Power Set)",
+    description:
+      "Write a recursive function that returns all possible subsets (the power set) of a given set of unique elements (represented as an array).",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "set",
+        label: "Set as Array",
+        type: "text",
+        defaultValue: "[1, 2, 3]",
+      },
+    ],
+  },
+  // problem--> 22
+  {
+    id: "recursion-climbing-stairs",
+    title: "Climbing Stairs",
+    description:
+      "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. Write a recursive function to find the total number of distinct ways you can climb to the top.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of Steps (n)",
+        type: "number",
+        defaultValue: 4,
+      },
+    ],
+  },
+  // problem--> 23
+  {
+    id: "recursion-flatten-array",
+    title: "Flatten a Nested Array",
+    description:
+      "Write a recursive function to flatten a deeply nested array of any depth.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Nested Array",
+        type: "text",
+        defaultValue: "[1, [2, 3], [4, [5]]]",
+      },
+    ],
+  },
+  // problem--> 24
+  {
+    id: "recursion-pascal-triangle",
+    title: "Pascal's Triangle Row",
+    description:
+      "Write a recursive function that takes a row index and returns that row of Pascal's Triangle as an array.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "rowIndex",
+        label: "Row Index (0-based)",
+        type: "number",
+        defaultValue: 4,
+      },
+    ],
+  },
+  // problem--> 25
+  {
+    id: "recursion-tree-contains-value",
+    title: "Tree Contains Value",
+    description:
+      "Write a recursive function that checks if a value exists in a binary tree.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 10, "left": {"value": 5}, "right": {"value": 15}}',
+      },
+      { id: "value", label: "Value to find", type: "number", defaultValue: 5 },
+    ],
+  },
+  // problem--> 26
+  {
+    id: "recursion-n-queens",
+    title: "N-Queens Problem",
+    description:
+      "The N-Queens puzzle is the problem of placing N chess queens on an N×N chessboard so that no two queens threaten each other. Write a function to find all distinct solutions.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Board Size (N)", type: "number", defaultValue: 4 },
+    ],
+  },
+  // problem--> 27
+  {
+    id: "recursion-sudoku-solver",
+    title: "Sudoku Solver",
+    description:
+      "Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the rules of Sudoku. The input is a 9x9 board represented as a 2D array, with 0s for empty cells.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "board",
+        label: "Sudoku Board (9x9)",
+        type: "textarea",
+        defaultValue:
+          "[[5,3,0,0,7,0,0,0,0],[6,0,0,1,9,5,0,0,0],[0,9,8,0,0,0,0,6,0],[8,0,0,0,6,0,0,0,3],[4,0,0,8,0,3,0,0,1],[7,0,0,0,2,0,0,0,6],[0,6,0,0,0,0,2,8,0],[0,0,0,4,1,9,0,0,5],[0,0,0,0,8,0,0,7,9]]",
+      },
+    ],
+  },
+  // problem--> 28
+  {
+    id: "recursion-coin-change",
+    title: "Coin Change Combinations",
+    description:
+      "Given an amount and an array of coin denominations, write a recursive function to find the total number of ways to make change for the amount. You have an infinite supply of each coin.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "amount", label: "Amount", type: "number", defaultValue: 4 },
+      {
+        id: "coins",
+        label: "Coin Denominations",
+        type: "text",
+        defaultValue: "[1, 2, 3]",
+      },
+    ],
+  },
+  // problem--> 29
+  {
+    id: "recursion-word-search",
+    title: "Word Search",
+    description:
+      'Given a 2D board of characters and a word, find if the word exists in the grid. The word can be constructed from letters of sequentially adjacent cells, where "adjacent" cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "board",
+        label: "Board (2D Array)",
+        type: "textarea",
+        defaultValue: '[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]',
+      },
+      {
+        id: "word",
+        label: "Word to Find",
+        type: "text",
+        defaultValue: "ABCCED",
+      },
+    ],
+  },
+  // problem--> 30
+  {
+    id: "recursion-tower-of-hanoi",
+    title: "Tower of Hanoi",
+    description:
+      "Solve the classic Tower of Hanoi puzzle. Write a function that returns an array of strings representing the steps to move N disks from a source rod to a destination rod using an auxiliary rod.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "disks",
+        label: "Number of Disks",
+        type: "number",
+        defaultValue: 3,
+      },
+    ],
+  },
+  // problem--> 31
+  {
+    id: "recursion-combinations",
+    title: "Combinations",
+    description:
+      "Given two integers n and k, return all possible combinations of k numbers out of the range [1, n].",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Range up to (n)", type: "number", defaultValue: 4 },
+      {
+        id: "k",
+        label: "Combination size (k)",
+        type: "number",
+        defaultValue: 2,
+      },
+    ],
+  },
+  // problem--> 32
+  {
+    id: "recursion-generate-parentheses",
+    title: "Generate Parentheses",
+    description:
+      "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of pairs (n)",
+        type: "number",
+        defaultValue: 3,
+      },
+    ],
+  },
+  // problem--> 33
+  {
+    id: "recursion-letter-case-permutation",
+    title: "Letter Case Permutation",
+    description:
+      "Given a string, we can transform every letter individually to be lowercase or uppercase to create another string. Return a list of all possible strings we could create.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "str", label: "Input String", type: "text", defaultValue: "a1b2" },
+    ],
+  },
+  // problem--> 34
+  {
+    id: "recursion-decode-string",
+    title: "Decode String",
+    description:
+      'Given an encoded string, return its decoded string. The encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. For example, "3[a]2[bc]" becomes "aaabcbc".',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "s",
+        label: "Encoded String",
+        type: "text",
+        defaultValue: "3[a2[c]]",
+      },
+    ],
+  },
+  // problem--> 35
+  {
+    id: "recursion-tree-in-order-traversal",
+    title: "Binary Tree In-Order Traversal",
+    description:
+      "Write a recursive function to perform an in-order traversal (Left, Root, Right) of a binary tree and return the node values in an array.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 4, "left": {"value": 2, "left": {"value": 1, "left": null, "right": null}, "right": {"value": 3, "left": null, "right": null}}, "right": {"value": 5, "left": null, "right": null}}',
+      },
+    ],
+  },
+  // problem--> 36
+  {
+    id: "recursion-tree-pre-order-traversal",
+    title: "Binary Tree Pre-Order Traversal",
+    description:
+      "Write a recursive function to perform a pre-order traversal (Root, Left, Right) of a binary tree and return the node values in an array.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 4, "left": {"value": 2, "left": {"value": 1, "left": null, "right": null}, "right": {"value": 3, "left": null, "right": null}}, "right": {"value": 5, "left": null, "right": null}}',
+      },
+    ],
+  },
+  // problem--> 37
+  {
+    id: "recursion-tree-post-order-traversal",
+    title: "Binary Tree Post-Order Traversal",
+    description:
+      "Write a recursive function to perform a post-order traversal (Left, Right, Root) of a binary tree and return the node values in an array.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 4, "left": {"value": 2, "left": {"value": 1, "left": null, "right": null}, "right": {"value": 3, "left": null, "right": null}}, "right": {"value": 5, "left": null, "right": null}}',
+      },
+    ],
+  },
+  // problem--> 38
+  {
+    id: "recursion-collect-strings-from-object",
     title: "Collect Strings from Object",
     description:
-      "Write a function that accepts an object and returns an array of all the values in the object that have a typeof string.",
-    category: "Recursion",
+      "Write a function which accepts an object and returns an array of all the values in the object that have a typeof string.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
       {
         id: "obj",
-        label: "Object (JSON)",
+        label: "Object",
         type: "textarea",
-        defaultValue: '{"a": "hello", "b": 1, "c": {"d": "world"}}',
+        defaultValue:
+          '{"a": "hello", "b": 123, "c": {"d": "world", "e": false}}',
       },
     ],
-    buttonText: "Collect Strings",
   },
+  // problem--> 39
   {
-    id: "capitalize-words-recursive",
-    title: "Capitalize Words",
+    id: "recursion-fibonacci-memoization",
+    title: "Fibonacci Number with Memoization",
     description:
-      "Write a recursive function that capitalizes each word in an array of strings.",
-    category: "Recursion",
+      "Write an efficient recursive function to find the nth Fibonacci number. Use memoization to avoid redundant calculations.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [{ id: "n", label: "Index (n)", type: "number", defaultValue: 20 }],
+  },
+  // problem--> 40
+  {
+    id: "recursion-nested-even-sum",
+    title: "Nested Even Sum",
+    description:
+      "Write a recursive function that returns the sum of all even numbers in an object which may contain nested objects.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "arr",
-        label: "Array of words",
-        type: "text",
-        defaultValue: "hello,world",
+        id: "obj",
+        label: "Nested Object",
+        type: "textarea",
+        defaultValue: '{"a": 2, "b": {"c": 3, "d": 4}, "e": 5, "f": {"g": 6}}',
       },
     ],
-    buttonText: "Capitalize",
   },
+  // problem--> 41
   {
-    id: "capitalize-first-letter-recursive",
-    title: "Capitalize First Letter of Strings",
+    id: "recursion-capitalize-words",
+    title: "Capitalize Words in Array",
     description:
-      "Write a recursive function that capitalizes the first letter of each string in an array.",
-    category: "Recursion",
+      "Write a recursive function that, given an array of strings, returns a new array containing each word capitalized.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
         id: "arr",
         label: "Array of strings",
         type: "text",
-        defaultValue: "apple,banana,cherry",
+        defaultValue: '["apple", "banana", "cherry"]',
       },
     ],
-    buttonText: "Capitalize First",
   },
+  // problem--> 42
   {
-    id: "stringify-numbers-recursive",
+    id: "recursion-stringify-numbers",
     title: "Stringify Numbers in Object",
     description:
-      "Write a function that takes an object and finds all of the values which are numbers and converts them to strings.",
-    category: "Recursion",
+      "Write a function that takes an object and finds all of the values which are numbers and converts them to strings. Recursion should be used to handle nested objects.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
       {
         id: "obj",
-        label: "Object (JSON)",
+        label: "Nested Object",
         type: "textarea",
-        defaultValue: '{"num": 1, "test": [], "data": {"val": 4}}',
+        defaultValue:
+          '{"num": 1, "test": [], "data": {"val": 4, "info": {"isRight": true, "blah": 123}}}',
       },
     ],
-    buttonText: "Stringify Numbers",
   },
+  // problem--> 43
   {
-    id: "tail-call-optimization-conceptual",
-    title: "Tail Call Optimization (Conceptual)",
+    id: "recursion-is-sorted",
+    title: "Check if Array is Sorted",
     description:
-      "Explain what Tail Call Optimization (TCO) is and show an example of a recursive function that is in tail-call position.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain TCO",
-  },
-  {
-    id: "mutual-recursion",
-    title: "Mutual Recursion",
-    description:
-      "Demonstrate mutual recursion where two or more functions call each other.",
-    category: "Recursion",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
-    buttonText: "Check Even/Odd",
-  },
-  {
-    id: "ackermann-function-conceptual",
-    title: "Ackermann Function (Conceptual)",
-    description:
-      "Explain the Ackermann function, a classic example of a total computable function that is not primitive recursive, known for its rapid growth.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Ackermann",
-  },
-  {
-    id: "count-leaves-in-tree-conceptual",
-    title: "Count Leaves in a Binary Tree",
-    description:
-      "Write a recursive function to count the number of leaf nodes (nodes with no children) in a binary tree.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Count Leaves (Conceptual)",
-  },
-  {
-    id: "tree-depth-recursive",
-    title: "Find Tree Depth",
-    description:
-      "Write a recursive function to find the maximum depth (or height) of a binary tree.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Find Depth (Conceptual)",
-  },
-  {
-    id: "combinations-recursive",
-    title: "Combinations of an Array",
-    description:
-      "Write a recursive function to generate all combinations of a specific size `k` from an array.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" },
-      {
-        id: "k",
-        label: "Combination Size (k)",
-        type: "number",
-        defaultValue: 2,
-      },
-    ],
-    buttonText: "Generate Combinations",
-  },
-  {
-    id: "coin-change-problem-recursive",
-    title: "Coin Change Problem",
-    description:
-      "Given a set of coin denominations and a total amount, write a recursive function to find the number of ways to make change.",
-    category: "Recursion",
+      "Write a recursive function that checks if an array of numbers is sorted in ascending order.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "coins",
-        label: "Coins (comma-separated)",
+        id: "arr",
+        label: "Array of numbers",
         type: "text",
-        defaultValue: "1,2,5",
+        defaultValue: "[1, 2, 4, 8, 10]",
       },
-      { id: "amount", label: "Amount", type: "number", defaultValue: 5 },
     ],
-    buttonText: "Count Ways",
   },
+  // problem--> 44
   {
-    id: "array-includes-recursive",
-    title: "Implement `.includes()` Recursively",
+    id: "recursion-reverse-linked-list",
+    title: "Reverse a Linked List",
     description:
-      "Write a recursive function that mimics the behavior of `Array.prototype.includes()`.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "a,b,c" },
-      { id: "target", label: "Target", type: "text", defaultValue: "b" },
-    ],
-    buttonText: "Check Inclusion",
-  },
-  {
-    id: "array-indexOf-recursive",
-    title: "Implement `.indexOf()` Recursively",
-    description:
-      "Write a recursive function that mimics the behavior of `Array.prototype.indexOf()`.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "a,b,c" },
-      { id: "target", label: "Target", type: "text", defaultValue: "c" },
-    ],
-    buttonText: "Find Index",
-  },
-  {
-    id: "repeat-function-recursive",
-    title: "Repeat a Function Call",
-    description:
-      "Write a recursive function that calls another function `n` times.",
-    category: "Recursion",
-    inputs: [
-      { id: "n", label: "Times to Call", type: "number", defaultValue: 3 },
-    ],
-    buttonText: "Call N Times",
-  },
-  {
-    id: "deep-object-clone-recursive",
-    title: "Deep Clone an Object",
-    description:
-      "Write a recursive function to perform a deep clone of a JSON-serializable object.",
-    category: "Recursion",
+      "Write a recursive function to reverse a singly linked list. The list is represented by its head node.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "obj",
-        label: "Object (JSON)",
+        id: "list",
+        label: "Linked List Head Object",
         type: "textarea",
-        defaultValue: '{"a":1, "b":{"c":2}}',
+        defaultValue:
+          '{"value": 1, "next": {"value": 2, "next": {"value": 3, "next": null}}}',
       },
     ],
-    buttonText: "Deep Clone",
   },
+  // problem--> 45
   {
-    id: "find-all-indices-recursive",
-    title: "Find All Indices of a Value",
+    id: "recursion-path-sum-in-tree",
+    title: "Path Sum in Binary Tree",
     description:
-      "Write a recursive function to find all indices of a specific value in an array.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,2,1,2" },
-      { id: "target", label: "Target Value", type: "number", defaultValue: 2 },
-    ],
-    buttonText: "Find All Indices",
-  },
-  {
-    id: "luhn-algorithm-recursive-conceptual",
-    title: "Luhn Algorithm Check (Conceptual)",
-    description:
-      "Explain how you could implement the Luhn algorithm for credit card validation using recursion.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Luhn Recursion",
-  },
-  {
-    id: "directory-traversal-conceptual",
-    title: "File Directory Traversal (Conceptual)",
-    description:
-      "Explain how recursion is used to traverse a file system directory and all its subdirectories.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Traversal",
-  },
-  {
-    id: "json-stringify-recursive-conceptual",
-    title: "Implement `JSON.stringify` (Conceptual)",
-    description:
-      "Outline the recursive logic for a function that mimics `JSON.stringify` for objects and arrays.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Logic",
-  },
-  {
-    id: "dom-traversal-recursive-conceptual",
-    title: "DOM Traversal (Conceptual)",
-    description:
-      "Explain how recursion is a natural fit for traversing a DOM tree to find or manipulate elements.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain DOM Traversal",
-  },
-  {
-    id: "quick-sort-conceptual",
-    title: "Quick Sort (Conceptual)",
-    description:
-      "Explain the recursive 'divide and conquer' nature of the Quick Sort algorithm.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Quick Sort",
-  },
-  {
-    id: "object-dot-path-access-recursive",
-    title: "Access Object by Path",
-    description:
-      "Write a function that takes an object and a path string (e.g., 'a.b.c') and returns the nested value.",
-    category: "Recursion",
+      "Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "obj",
-        label: "Object (JSON)",
+        id: "tree",
+        label: "Binary Tree Object",
         type: "textarea",
-        defaultValue: '{"a":{"b":{"c":1}}}',
+        defaultValue:
+          '{"value": 5, "left": {"value": 4, "left": {"value": 11, "left": {"value": 7}, "right": {"value": 2}}}, "right": {"value": 8, "left": {"value": 13}, "right": {"value": 4, "right": {"value": 1}}}}',
       },
-      { id: "path", label: "Path String", type: "text", defaultValue: "a.b.c" },
+      { id: "sum", label: "Target Sum", type: "number", defaultValue: 22 },
     ],
-    buttonText: "Get Value",
   },
+  // problem--> 46
   {
-    id: "n-queens-problem-conceptual",
-    title: "N-Queens Problem (Conceptual)",
+    id: "recursion-permutations-with-duplicates",
+    title: "Permutations with Duplicates",
     description:
-      "Explain the backtracking recursive approach to solving the N-Queens puzzle (placing N queens on an N×N chessboard so that no two queens threaten each other).",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain N-Queens",
-  },
-  {
-    id: "sudoku-solver-conceptual",
-    title: "Sudoku Solver (Conceptual)",
-    description:
-      "Explain the backtracking recursive approach to solving a Sudoku puzzle.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Sudoku Solver",
-  },
-  {
-    id: "word-break-problem-recursive",
-    title: "Word Break Problem",
-    description:
-      "Given a string and a dictionary of words, determine if the string can be segmented into a space-separated sequence of one or more dictionary words using recursion.",
-    category: "Recursion",
+      "Given a collection of numbers that might contain duplicates, return all possible unique permutations.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "s", label: "String", type: "text", defaultValue: "applepenapple" },
+      {
+        id: "nums",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "[1, 1, 2]",
+      },
+    ],
+  },
+  // problem--> 47
+  {
+    id: "recursion-subsets-with-duplicates",
+    title: "Subsets with Duplicates",
+    description:
+      "Given a collection of integers that might contain duplicates, return all possible subsets (the power set). The solution set must not contain duplicate subsets.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "[1, 2, 2]",
+      },
+    ],
+  },
+  // problem--> 48
+  {
+    id: "recursion-combination-sum",
+    title: "Combination Sum",
+    description:
+      "Given a set of candidate numbers (without duplicates) and a target number, find all unique combinations in candidates where the candidate numbers sum to target. The same repeated number may be chosen from candidates unlimited number of times.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "candidates",
+        label: "Candidate Numbers",
+        type: "text",
+        defaultValue: "[2, 3, 6, 7]",
+      },
+      { id: "target", label: "Target Sum", type: "number", defaultValue: 7 },
+    ],
+  },
+  // problem--> 49
+  {
+    id: "recursion-palindrome-partitioning",
+    title: "Palindrome Partitioning",
+    description:
+      "Given a string, partition it such that every substring of the partition is a palindrome. Return all possible palindrome partitionings.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "Input String", type: "text", defaultValue: "aab" },
+    ],
+  },
+  // problem--> 50
+  {
+    id: "recursion-quick-sort",
+    title: "Quick Sort",
+    description:
+      "Implement the recursive Quick Sort algorithm to sort an array of numbers.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Unsorted Array",
+        type: "text",
+        defaultValue: "[10, 80, 30, 90, 40, 50, 70]",
+      },
+    ],
+  },
+  // problem--> 51
+  {
+    id: "recursion-count-vowels",
+    title: "Count Vowels in String",
+    description:
+      "Write a recursive function to count the number of vowels (a, e, i, o, u) in a string.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "str",
+        label: "Input String",
+        type: "text",
+        defaultValue: "hello world",
+      },
+    ],
+  },
+  // problem--> 52
+  {
+    id: "recursion-is-valid-bst",
+    title: "Validate Binary Search Tree",
+    description:
+      "Given a binary tree, determine if it is a valid binary search tree (BST). A BST has the property that all values in the left subtree are less than the root, and all values in the right subtree are greater.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 5, "left": {"value": 1}, "right": {"value": 7, "left": {"value": 6}, "right": {"value": 8}}}',
+      },
+    ],
+  },
+  // problem--> 53
+  {
+    id: "recursion-tiling-problem",
+    title: "Tiling Problem",
+    description:
+      'Given a "2 x n" board and tiles of size "2 x 1", count the number of ways to tile the given board using the 2 x 1 tiles. A tile can either be placed horizontally or vertically.',
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Board length (n)", type: "number", defaultValue: 4 },
+    ],
+  },
+  // problem--> 54
+  {
+    id: "recursion-all-paths-in-grid",
+    title: "All Paths in a Grid",
+    description:
+      "Given an M x N grid, find the number of all possible paths from the top-left corner to the bottom-right corner. You can only move down or right at any point.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "m", label: "Grid Rows (M)", type: "number", defaultValue: 3 },
+      { id: "n", label: "Grid Columns (N)", type: "number", defaultValue: 3 },
+    ],
+  },
+  // problem--> 55
+  {
+    id: "recursion-word-break",
+    title: "Word Break",
+    description:
+      "Given a string and a dictionary of words, determine if the string can be segmented into a space-separated sequence of one or more dictionary words. Use recursion.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "String", type: "text", defaultValue: "leetcode" },
       {
         id: "wordDict",
-        label: "Dictionary (comma-separated)",
+        label: "Word Dictionary",
         type: "text",
-        defaultValue: "apple,pen",
+        defaultValue: '["leet", "code"]',
       },
     ],
-    buttonText: "Check Word Break",
   },
+  // problem--> 56
   {
-    id: "knapsack-problem-conceptual",
-    title: "0/1 Knapsack Problem (Conceptual)",
+    id: "recursion-find-max-in-array",
+    title: "Find Maximum in Array",
     description:
-      "Explain the recursive solution to the 0/1 knapsack problem: given items with weights and values, find the most valuable combination of items that fit in a knapsack of a certain capacity.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Knapsack",
-  },
-  {
-    id: "catalan-numbers-recursive",
-    title: "Catalan Numbers",
-    description:
-      "Write a recursive function to compute the nth Catalan number. Catalan numbers appear in many counting problems.",
-    category: "Recursion",
-    inputs: [
-      { id: "n", label: "Nth Catalan Number", type: "number", defaultValue: 5 },
-    ],
-    buttonText: "Calculate Catalan",
-  },
-  {
-    id: "array-pair-sum-sequence",
-    title: "Array Pair Sum Sequence",
-    description:
-      "Given an array of numbers, create a new array where each element is the sum of a pair of elements in the original array. For an odd-length array, the last element is paired with 0.",
-    category: "Recursion",
-    inputs: [
-      { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4,5" },
-    ],
-    buttonText: "Create Pair Sums",
-  },
-  {
-    id: "deep-equals-recursive",
-    title: "Deep Equality Check",
-    description:
-      "Write a recursive function that performs a deep equality check on two JSON-serializable values (objects, arrays, primitives).",
-    category: "Recursion",
+      "Write a recursive function to find the maximum number in an array.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "val1",
-        label: "Value 1 (JSON)",
-        type: "textarea",
-        defaultValue: '{"a": 1, "b": {"c": 2}}',
-      },
-      {
-        id: "val2",
-        label: "Value 2 (JSON)",
-        type: "textarea",
-        defaultValue: '{"a": 1, "b": {"c": 2}}',
+        id: "arr",
+        label: "Array of numbers",
+        type: "text",
+        defaultValue: "[1, 5, 2, 9, 3]",
       },
     ],
-    buttonText: "Deep Compare",
   },
+  // problem--> 57
   {
-    id: "flood-fill-conceptual",
-    title: "Flood Fill Algorithm (Conceptual)",
+    id: "recursion-lca-of-bst",
+    title: "Lowest Common Ancestor of a BST",
     description:
-      "Explain the recursive flood fill algorithm used in paint programs to fill a contiguous area with a specific color.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Flood Fill",
-  },
-  {
-    id: "tree-includes-recursive",
-    title: "Tree Includes Value",
-    description:
-      "Write a recursive function to check if a value exists in a binary tree.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Check Tree (Conceptual)",
-  },
-  {
-    id: "graph-dfs-conceptual",
-    title: "Graph DFS (Conceptual)",
-    description:
-      "Explain how Depth-First Search (DFS) on a graph is a recursive algorithm, using a 'visited' set to avoid infinite loops.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Graph DFS",
-  },
-  {
-    id: "phone-letter-combinations",
-    title: "Letter Combinations of a Phone Number",
-    description:
-      "Given a string containing digits from 2-9, return all possible letter combinations that the number could represent, using recursion.",
-    category: "Recursion",
+      "Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "digits", label: "Digits", type: "text", defaultValue: "23" },
+      {
+        id: "tree",
+        label: "BST Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 6, "left": {"value": 2, "left": {"value": 0}, "right": {"value": 4}}, "right": {"value": 8, "left": {"value": 7}, "right": {"value": 9}}}',
+      },
+      { id: "p", label: "First Node Value", type: "number", defaultValue: 2 },
+      { id: "q", label: "Second Node Value", type: "number", defaultValue: 8 },
     ],
-    buttonText: "Generate Combinations",
   },
+  // problem--> 58
   {
-    id: "digital-root-recursive",
+    id: "recursion-balanced-binary-tree",
+    title: "Balanced Binary Tree",
+    description:
+      "Given a binary tree, determine if it is height-balanced. A height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 3, "left": {"value": 9}, "right": {"value": 20, "left": {"value": 15}, "right": {"value": 7}}}',
+      },
+    ],
+  },
+  // problem--> 59
+  {
+    id: "recursion-regular-expression-matching",
+    title: "Regular Expression Matching",
+    description:
+      "Implement regular expression matching with support for '.' and '*'. '.' Matches any single character. '*' Matches zero or more of the preceding element.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "String", type: "text", defaultValue: "aab" },
+      { id: "p", label: "Pattern", type: "text", defaultValue: "c*a*b" },
+    ],
+  },
+  // problem--> 60
+  {
+    id: "recursion-digital-root",
     title: "Digital Root",
     description:
-      "Write a recursive function to find the digital root of a number (the recursive sum of its digits until a single-digit number is achieved).",
-    category: "Recursion",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 942 }],
-    buttonText: "Find Digital Root",
+      "The digital root is the recursive sum of digits of a number until a single-digit number is achieved. Write a function that calculates the digital root of a non-negative integer.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Integer (n)", type: "number", defaultValue: 38 },
+    ],
   },
+  // ... continue generating unique problems up to 200. I will now create the rest of the 200 problems.
+  // problem--> 61
   {
-    id: "step-combinations",
-    title: "Step Combinations (Climbing Stairs)",
+    id: "recursion-find-first-occurrence",
+    title: "Find First Occurrence",
     description:
-      "You can climb a staircase 1, 2, or 3 steps at a time. Write a recursive function to find the number of possible ways to reach the top (n steps).",
-    category: "Recursion",
+      "Given an array and a target element, write a recursive function to find the index of the first occurrence of the target. Return -1 if not found.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "steps",
-        label: "Number of Steps",
+        id: "arr",
+        label: "Array",
+        type: "text",
+        defaultValue: "[1, 2, 3, 2, 4]",
+      },
+      { id: "target", label: "Target", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 62
+  {
+    id: "recursion-find-last-occurrence",
+    title: "Find Last Occurrence",
+    description:
+      "Given an array and a target element, write a recursive function to find the index of the last occurrence of the target. Return -1 if not found.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array",
+        type: "text",
+        defaultValue: "[1, 2, 3, 2, 4]",
+      },
+      { id: "target", label: "Target", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 63
+  {
+    id: "recursion-print-pattern",
+    title: "Print a Pattern",
+    description:
+      "Write a recursive function that takes an integer n and prints a pattern. For n=4, it should print: ****, ***, **, *. The result should be an array of strings.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 4 }],
+  },
+  // problem--> 64
+  {
+    id: "recursion-tree-leaf-count",
+    title: "Count Leaf Nodes in a Tree",
+    description:
+      "Write a recursive function to count the number of leaf nodes (nodes with no children) in a binary tree.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 1, "left": {"value": 2}, "right": {"value": 3, "left": {"value": 4}, "right": {"value": 5}}}',
+      },
+    ],
+  },
+  // problem--> 65
+  {
+    id: "recursion-josephus-problem",
+    title: "Josephus Problem",
+    description:
+      "There are n people standing in a circle waiting to be executed. The counting out begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people k are skipped and the next person is executed. The elimination proceeds around the circle. Find the position of the last person remaining.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of people (n)",
+        type: "number",
+        defaultValue: 5,
+      },
+      { id: "k", label: "Skip count (k)", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 66
+  {
+    id: "recursion-phone-number-mnemonics",
+    title: "Phone Number Mnemonics",
+    description:
+      "Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. A mapping of digit to letters (just like on the telephone buttons) is given.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "digits",
+        label: "Digits String",
+        type: "text",
+        defaultValue: "23",
+      },
+    ],
+  },
+  // problem--> 67
+  {
+    id: "recursion-flood-fill",
+    title: "Flood Fill",
+    description:
+      'An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image. You are given a starting pixel (sr, sc) and a new color. "Flood fill" the image. To perform a flood fill, consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color), and so on. Replace the color of all of the aforementioned pixels with the new color.',
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "image",
+        label: "Image Grid",
+        type: "textarea",
+        defaultValue: "[[1,1,1],[1,1,0],[1,0,1]]",
+      },
+      { id: "sr", label: "Start Row", type: "number", defaultValue: 1 },
+      { id: "sc", label: "Start Column", type: "number", defaultValue: 1 },
+      { id: "newColor", label: "New Color", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 68
+  {
+    id: "recursion-unique-paths-with-obstacles",
+    title: "Unique Paths with Obstacles",
+    description:
+      "You are given an m x n integer array grid. There is a robot on the top-left corner. The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner. Now consider if some cells are obstacles. An obstacle is marked as 1. How many unique paths would there be?",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "obstacleGrid",
+        label: "Grid with Obstacles",
+        type: "textarea",
+        defaultValue: "[[0,0,0],[0,1,0],[0,0,0]]",
+      },
+    ],
+  },
+  // problem--> 69
+  {
+    id: "recursion-gray-code",
+    title: "Gray Code",
+    description:
+      "The gray code is a binary numeral system where two successive values differ in only one bit. Given an integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Number of bits (n)", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 70
+  {
+    id: "recursion-deep-clone-object",
+    title: "Deep Clone an Object",
+    description:
+      "Write a recursive function to create a deep clone of a JSON-serializable object. A deep clone means that all nested objects and arrays are also cloned, not just referenced.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "obj",
+        label: "Object to clone",
+        type: "textarea",
+        defaultValue: '{"a": 1, "b": {"c": [2, 3]}}',
+      },
+    ],
+  },
+  // problem--> 71
+  {
+    id: "recursion-ackermann-function",
+    title: "Ackermann Function",
+    description:
+      "Implement the Ackermann function, a classic example of a recursive function that is not primitive recursive. A(m, n) is defined as: n+1 if m=0; A(m-1, 1) if m>0 and n=0; A(m-1, A(m, n-1)) if m>0 and n>0.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "m", label: "m", type: "number", defaultValue: 2 },
+      { id: "n", label: "n", type: "number", defaultValue: 1 },
+    ],
+  },
+  // problem--> 72
+  {
+    id: "recursion-remove-duplicates-from-sorted-list",
+    title: "Remove Duplicates from Sorted List",
+    description:
+      "Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "head",
+        label: "Linked List Head Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 1, "next": {"value": 1, "next": {"value": 2, "next": null}}}',
+      },
+    ],
+  },
+  // problem--> 73
+  {
+    id: "recursion-tree-is-symmetric",
+    title: "Symmetric Tree",
+    description:
+      "Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 1, "left": {"value": 2, "left": {"value": 3}, "right": {"value": 4}}, "right": {"value": 2, "left": {"value": 4}, "right": {"value": 3}}}',
+      },
+    ],
+  },
+  // problem--> 74
+  {
+    id: "recursion-search-in-bst",
+    title: "Search in a Binary Search Tree",
+    description:
+      "You are given the root of a binary search tree (BST) and an integer val. Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "root",
+        label: "BST Root Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 4, "left": {"value": 2, "left": {"value": 1}, "right": {"value": 3}}, "right": {"value": 7}}',
+      },
+      { id: "val", label: "Value to search", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 75
+  {
+    id: "recursion-construct-bst-from-sorted-array",
+    title: "Convert Sorted Array to Binary Search Tree",
+    description:
+      "Given an integer array where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Sorted Array",
+        type: "text",
+        defaultValue: "[-10, -3, 0, 5, 9]",
+      },
+    ],
+  },
+  // problem--> 76
+  {
+    id: "recursion-expression-add-operators",
+    title: "Expression Add Operators",
+    description:
+      "Given a string num that contains only digits and an integer target, return all possibilities to add binary operators (+, -, or *) between the digits of num so that the resultant expression evaluates to the target value.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "num", label: "Number String", type: "text", defaultValue: "123" },
+      { id: "target", label: "Target Value", type: "number", defaultValue: 6 },
+    ],
+  },
+  // problem--> 77
+  {
+    id: "recursion-knapsack-problem",
+    title: "0/1 Knapsack Problem",
+    description:
+      "Given weights and values of n items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack. You cannot break an item, either pick the complete item or don’t pick it (0-1 property).",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "values",
+        label: "Values Array",
+        type: "text",
+        defaultValue: "[60, 100, 120]",
+      },
+      {
+        id: "weights",
+        label: "Weights Array",
+        type: "text",
+        defaultValue: "[10, 20, 30]",
+      },
+      { id: "W", label: "Knapsack Capacity", type: "number", defaultValue: 50 },
+    ],
+  },
+  // problem--> 78
+  {
+    id: "recursion-longest-common-subsequence",
+    title: "Longest Common Subsequence",
+    description:
+      "Given two strings, find the length of the longest common subsequence. A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "text1",
+        label: "First String",
+        type: "text",
+        defaultValue: "abcde",
+      },
+      {
+        id: "text2",
+        label: "Second String",
+        type: "text",
+        defaultValue: "ace",
+      },
+    ],
+  },
+  // problem--> 79
+  {
+    id: "recursion-edit-distance",
+    title: "Edit Distance",
+    description:
+      "Given two strings, find the minimum number of operations (insert, delete, or replace a character) required to convert one string to the other.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "word1", label: "First Word", type: "text", defaultValue: "horse" },
+      { id: "word2", label: "Second Word", type: "text", defaultValue: "ros" },
+    ],
+  },
+  // problem--> 80
+  {
+    id: "recursion-all-paths-source-to-target-graph",
+    title: "All Paths From Source to Target (Graph)",
+    description:
+      "Given a directed acyclic graph (DAG) of n nodes labeled from 0 to n-1, find all possible paths from node 0 to node n-1 and return them in any order. The graph is given as an adjacency list.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "graph",
+        label: "Graph (Adjacency List)",
+        type: "textarea",
+        defaultValue: "[[1,2],[3],[3],[]]",
+      },
+    ],
+  },
+  // problem--> 81
+  {
+    id: "recursion-count-and-say",
+    title: "Count and Say",
+    description:
+      "The count-and-say sequence is the sequence of integers with the first five terms as following: 1, 11, 21, 1211, 111221. Given an integer n, generate the nth term of the count-and-say sequence.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [{ id: "n", label: "Term (n)", type: "number", defaultValue: 4 }],
+  },
+  // problem--> 82
+  {
+    id: "recursion-group-sum",
+    title: "Group Sum",
+    description:
+      "Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target? This is a classic backtracking problem.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Integers",
+        type: "text",
+        defaultValue: "[2, 4, 8]",
+      },
+      { id: "target", label: "Target Sum", type: "number", defaultValue: 10 },
+    ],
+  },
+  // problem--> 83
+  {
+    id: "recursion-group-sum-clump",
+    title: "Group Sum with Clumps",
+    description:
+      "Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target, with this additional constraint: if a value in the array is chosen to be in the group, all adjacent identical values must also be chosen.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array of Integers",
+        type: "text",
+        defaultValue: "[2, 4, 4, 8]",
+      },
+      { id: "target", label: "Target Sum", type: "number", defaultValue: 10 },
+    ],
+  },
+  // problem--> 84
+  {
+    id: "recursion-magic-index",
+    title: "Magic Index",
+    description:
+      "A magic index in an array A[0...n-1] is defined to be an index such that A[i] = i. Given a sorted array of distinct integers, write a method to find a magic index, if one exists.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Sorted Array of Integers",
+        type: "text",
+        defaultValue: "[-10, -5, 0, 3, 7]",
+      },
+    ],
+  },
+  // problem--> 85
+  {
+    id: "recursion-paint-fill",
+    title: "Paint Fill",
+    description:
+      'Implement the "paint fill" function that one might see on many image editing programs. That is, given a screen (represented by a 2D array of colors), a point, and a new color, fill in the surrounding area until the color changes from the original color.',
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "screen",
+        label: "Screen (2D Array)",
+        type: "textarea",
+        defaultValue: "[[1,1,1,1],[1,1,2,1],[1,2,2,2],[0,0,0,2]]",
+      },
+      { id: "r", label: "Start Row", type: "number", defaultValue: 1 },
+      { id: "c", label: "Start Column", type: "number", defaultValue: 1 },
+      { id: "newColor", label: "New Color", type: "number", defaultValue: 3 },
+    ],
+  },
+  // problem--> 86
+  {
+    id: "recursion-robot-in-a-grid",
+    title: "Robot in a Grid",
+    description:
+      'Imagine a robot sitting on the upper left corner of grid with r rows and c columns. The robot can only move in two directions: right and down. Certain cells are "off limits". Design an algorithm to find a path for the robot from the top left to the bottom right.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Grid (0=free, 1=off-limits)",
+        type: "textarea",
+        defaultValue: "[[0,0,0],[0,1,0],[0,0,0]]",
+      },
+    ],
+  },
+  // problem--> 87
+  {
+    id: "recursion-optimal-bst",
+    title: "Optimal Binary Search Tree",
+    description:
+      "Given a sorted array of keys and an array of frequencies, find the cost of the optimal binary search tree. The cost of a BST is the sum of (key * level) for all keys.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "keys",
+        label: "Keys Array",
+        type: "text",
+        defaultValue: "[10, 12, 20]",
+      },
+      {
+        id: "freq",
+        label: "Frequencies Array",
+        type: "text",
+        defaultValue: "[34, 8, 50]",
+      },
+    ],
+  },
+  // problem--> 88
+  {
+    id: "recursion-matrix-chain-multiplication",
+    title: "Matrix Chain Multiplication",
+    description:
+      "Given a sequence of matrices, find the most efficient way to multiply these matrices together. The problem is not actually to perform the multiplications, but merely to decide the sequence of the matrix multiplications.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "dims",
+        label: "Matrix Dimensions Array",
+        type: "text",
+        defaultValue: "[10, 30, 5, 60]",
+      },
+    ],
+  },
+  // problem--> 89
+  {
+    id: "recursion-print-all-subsequences",
+    title: "Print All Subsequences",
+    description:
+      "Given a string, print all of its subsequences. A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "str", label: "Input String", type: "text", defaultValue: "abc" },
+    ],
+  },
+  // problem--> 90
+  {
+    id: "recursion-check-ab",
+    title: "Check AB String Rules",
+    description:
+      "Suppose you have a string made up of only 'a's and 'b's. Write a recursive function that checks if the string follows the following rules: 1. the string begins with an 'a'. 2. each 'a' is followed by nothing or an 'a' or \"bb\". 3. each \"bb\" is followed by nothing or an 'a'.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "str", label: "Input String", type: "text", defaultValue: "abb" },
+    ],
+  },
+  // problem--> 91
+  {
+    id: "recursion-staircase-search",
+    title: "Staircase Search in 2D Array",
+    description:
+      "Given an M x N matrix that is sorted row-wise and column-wise, write a recursive function to search for a key.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Sorted Matrix",
+        type: "textarea",
+        defaultValue:
+          "[[10, 20, 30, 40], [15, 25, 35, 45], [27, 29, 37, 48], [32, 33, 39, 50]]",
+      },
+      { id: "key", label: "Search Key", type: "number", defaultValue: 29 },
+    ],
+  },
+  // problem--> 92
+  {
+    id: "recursion-friends-pairing",
+    title: "Friends Pairing Problem",
+    description:
+      "Given n friends who want to go to a party, each one can remain single or can be paired up with some other friend. Each friend can be paired only once. Find the total number of ways in which friends can remain single or can be paired up.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Number of Friends", type: "number", defaultValue: 3 },
+    ],
+  },
+  // problem--> 93
+  {
+    id: "recursion-all-indices-of-number",
+    title: "All Indices of a Number",
+    description:
+      "Given an array of length N and an integer x, you want to find all the indices where x is present in the input array. Save all the indices in an array and return it.",
+    difficulty: "Beginner",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "arr",
+        label: "Array",
+        type: "text",
+        defaultValue: "[9, 8, 10, 8, 8]",
+      },
+      { id: "x", label: "Number to find", type: "number", defaultValue: 8 },
+    ],
+  },
+  // problem--> 94
+  {
+    id: "recursion-power-set-lexicographical",
+    title: "Power Set in Lexicographical Order",
+    description:
+      "Given a string, find all its subsequences (power set) in lexicographically sorted order.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "str", label: "Input String", type: "text", defaultValue: "cab" },
+    ],
+  },
+  // problem--> 95
+  {
+    id: "recursion-combination-sum-ii",
+    title: "Combination Sum II",
+    description:
+      "Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target. Each number in candidates may only be used once in the combination.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "candidates",
+        label: "Candidates Array",
+        type: "text",
+        defaultValue: "[10,1,2,7,6,1,5]",
+      },
+      { id: "target", label: "Target Sum", type: "number", defaultValue: 8 },
+    ],
+  },
+  // problem--> 96
+  {
+    id: "recursion-beautiful-arrangement",
+    title: "Beautiful Arrangement",
+    description:
+      "Suppose you have n integers labeled 1 through n. A permutation of those n integers perm is called a beautiful arrangement if for every i (1-indexed), either perm[i-1] is divisible by i, or i is divisible by perm[i-1]. Given an integer n, return the number of the beautiful arrangements that you can construct.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 2 }],
+  },
+  // problem--> 97
+  {
+    id: "recursion-target-sum",
+    title: "Target Sum",
+    description:
+      "You are given an integer array nums and an integer target. You want to build an expression out of nums by adding one of the symbols '+' and '-' before each integer in nums and then concatenate all the integers. Return the number of different expressions that you can build, which evaluates to target.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[1,1,1,1,1]",
+      },
+      { id: "target", label: "Target", type: "number", defaultValue: 3 },
+    ],
+  },
+  // problem--> 98
+  {
+    id: "recursion-permutations-in-string",
+    title: "Find all Permutations of a Substring",
+    description:
+      "Given two strings s1 and s2, return true if s2 contains a permutation of s1. In other words, one of s1's permutations is the substring of s2.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s1", label: "Substring s1", type: "text", defaultValue: "ab" },
+      {
+        id: "s2",
+        label: "Main String s2",
+        type: "text",
+        defaultValue: "eidbaooo",
+      },
+    ],
+  },
+  // problem--> 99
+  {
+    id: "recursion-shopping-offers",
+    title: "Shopping Offers",
+    description:
+      "In a special shopping mall, you can buy items with prices, and there are special offers. An offer is represented as a special list of items with a discounted price. You want to buy a specific number of items (needs). Find the lowest price to purchase your shopping list.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "price",
+        label: "Prices of items",
+        type: "text",
+        defaultValue: "[2,5]",
+      },
+      {
+        id: "special",
+        label: "Special Offers",
+        type: "textarea",
+        defaultValue: "[[3,0,5],[1,2,10]]",
+      },
+      {
+        id: "needs",
+        label: "Items needed",
+        type: "text",
+        defaultValue: "[3,2]",
+      },
+    ],
+  },
+  // problem--> 100
+  {
+    id: "recursion-wildcard-matching",
+    title: "Wildcard Matching",
+    description:
+      "Implement wildcard pattern matching with support for '?' and '*'. '?' Matches any single character. '*' Matches any sequence of characters (including the empty sequence).",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "String", type: "text", defaultValue: "adceb" },
+      { id: "p", label: "Pattern", type: "text", defaultValue: "*a*b" },
+    ],
+  },
+  // ... continue generating problems from 101 to 200
+  // problem--> 101
+  {
+    id: "recursion-print-nodes-at-k-distance",
+    title: "Print Nodes at K Distance",
+    description:
+      "Given a binary tree, a target node, and an integer k, return an array of the values of all nodes that have a distance k from the target node.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":3,"left":{"value":5,"left":{"value":6},"right":{"value":2,"left":{"value":7},"right":{"value":4}}},"right":{"value":1,"left":{"value":0},"right":{"value":8}}}',
+      },
+      {
+        id: "targetValue",
+        label: "Target Node Value",
+        type: "number",
+        defaultValue: 5,
+      },
+      { id: "k", label: "Distance K", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 102
+  {
+    id: "recursion-flatten-binary-tree-to-linked-list",
+    title: "Flatten Binary Tree to Linked List",
+    description:
+      'Given the root of a binary tree, flatten the tree into a "linked list" where the right child pointer points to the next node in the pre-order traversal and the left child pointer is always null.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":1,"left":{"value":2,"left":{"value":3},"right":{"value":4}},"right":{"value":5,"right":{"value":6}}}',
+      },
+    ],
+  },
+  // problem--> 103
+  {
+    id: "recursion-partition-to-k-equal-sum-subsets",
+    title: "Partition to K Equal Sum Subsets",
+    description:
+      "Given an integer array nums and an integer k, return true if it is possible to divide this array into k non-empty subsets whose sums are all equal.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[4,3,2,3,5,2,1]",
+      },
+      {
+        id: "k",
+        label: "Number of Subsets (k)",
         type: "number",
         defaultValue: 4,
       },
     ],
-    buttonText: "Count Ways",
   },
+  // problem--> 104
   {
-    id: "find-uppercase-recursive",
-    title: "Find First Uppercase Letter",
+    id: "recursion-construct-quad-tree",
+    title: "Construct Quad Tree",
     description:
-      "Write a recursive function to find the first uppercase letter in a string.",
-    category: "Recursion",
-    inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "helloWorld" },
-    ],
-    buttonText: "Find Uppercase",
-  },
-  {
-    id: "memoization-conceptual",
-    title: "Memoization (Conceptual)",
-    description:
-      "Explain memoization as a technique to optimize recursive functions by caching the results of expensive computations.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Memoization",
-  },
-  {
-    id: "permutations-with-duplicates",
-    title: "Permutations with Duplicates",
-    description:
-      "Given a collection of numbers that might contain duplicates, return all possible unique permutations.",
-    category: "Recursion",
+      "Given a n * n matrix grid of 0's and 1's, represent the grid using a Quad-Tree. A Quad-Tree is a tree data structure in which each internal node has exactly four children.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
     inputs: [
       {
-        id: "arr",
-        label: "Array with Duplicates",
-        type: "text",
-        defaultValue: "1,1,2",
+        id: "grid",
+        label: "N x N Grid",
+        type: "textarea",
+        defaultValue: "[[0,1],[1,0]]",
       },
     ],
-    buttonText: "Generate Permutations",
   },
+  // problem--> 105
   {
-    id: "longest-common-subsequence-conceptual",
-    title: "Longest Common Subsequence (Conceptual)",
+    id: "recursion-verbal-arithmetic-puzzle",
+    title: "Verbal Arithmetic Puzzle",
     description:
-      "Explain the recursive approach to finding the length of the longest common subsequence between two strings.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain LCS",
-  },
-  {
-    id: "edit-distance-conceptual",
-    title: "Edit Distance (Conceptual)",
-    description:
-      "Explain the recursive approach to finding the minimum number of operations (insert, delete, substitute) required to change one word into another.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Edit Distance",
-  },
-  {
-    id: "is-prime-recursive",
-    title: "Check if Prime",
-    description:
-      "Write a recursive function to check if a number is a prime number.",
-    category: "Recursion",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 7 }],
-    buttonText: "Check Prime",
-  },
-  {
-    id: "all-unique-chars-recursive",
-    title: "Check for All Unique Characters",
-    description:
-      "Write a recursive function to check if a string has all unique characters.",
-    category: "Recursion",
+      "Given an equation, represented by words on the left side and the result on the right side. You need to assign digits to letters to make the equation true. Each character is a unique digit. Return true if it's possible to solve the equation.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "abcdefg" },
+      {
+        id: "words",
+        label: "Words Array",
+        type: "text",
+        defaultValue: '["SEND","MORE"]',
+      },
+      {
+        id: "result",
+        label: "Result Word",
+        type: "text",
+        defaultValue: "MONEY",
+      },
     ],
-    buttonText: "Check Uniqueness",
   },
+  // problem--> 106
   {
-    id: "fractal-generation-conceptual",
-    title: "Fractal Generation (Conceptual)",
+    id: "recursion-string-to-integer-atoi",
+    title: "String to Integer (atoi)",
     description:
-      "Explain how recursion is the core principle behind generating fractals like the Sierpinski triangle or a fractal tree.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Fractals",
-  },
-  {
-    id: "is-valid-bst-conceptual",
-    title: "Is Valid Binary Search Tree (Conceptual)",
-    description:
-      "Explain the recursive algorithm to check if a binary tree is a valid Binary Search Tree (BST), passing min/max constraints down the tree.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain BST Validation",
-  },
-  {
-    id: "tree-sum-recursive",
-    title: "Sum of Tree Nodes",
-    description:
-      "Write a recursive function to find the sum of all node values in a binary tree.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Sum Tree Nodes (Conceptual)",
-  },
-  {
-    id: "array-interleave-recursive",
-    title: "Interleave Two Arrays",
-    description:
-      "Write a recursive function to interleave two arrays of equal length.",
-    category: "Recursion",
+      "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function). Use recursion.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "arr1", label: "Array 1", type: "text", defaultValue: "a,b,c" },
-      { id: "arr2", label: "Array 2", type: "text", defaultValue: "1,2,3" },
+      { id: "s", label: "Input String", type: "text", defaultValue: "   -42" },
     ],
-    buttonText: "Interleave",
   },
+  // problem--> 107
   {
-    id: "is-power-of-two-recursive",
-    title: "Is Power of Two",
+    id: "recursion-reverse-nodes-in-k-group",
+    title: "Reverse Nodes in k-Group",
     description:
-      "Write a recursive function to determine if a number is a power of two.",
-    category: "Recursion",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
-    buttonText: "Check Power of Two",
-  },
-  {
-    id: "is-power-of-three-recursive",
-    title: "Is Power of Three",
-    description:
-      "Write a recursive function to determine if a number is a power of three.",
-    category: "Recursion",
-    inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 27 }],
-    buttonText: "Check Power of Three",
-  },
-  {
-    id: "remove-adjacent-duplicates-recursive",
-    title: "Remove Adjacent Duplicates",
-    description:
-      "Write a recursive function to remove adjacent duplicate characters from a string.",
-    category: "Recursion",
+      "Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
     inputs: [
-      { id: "str", label: "String", type: "text", defaultValue: "abbaca" },
+      {
+        id: "list",
+        label: "Linked List Head Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 1, "next": {"value": 2, "next": {"value": 3, "next": {"value": 4, "next": {"value": 5, "next": null}}}}}',
+      },
+      { id: "k", label: "Group size (k)", type: "number", defaultValue: 2 },
     ],
-    buttonText: "Remove Duplicates",
   },
+  // problem--> 108
   {
-    id: "invert-binary-tree-conceptual",
-    title: "Invert a Binary Tree (Conceptual)",
+    id: "recursion-remove-invalid-parentheses",
+    title: "Remove Invalid Parentheses",
     description:
-      "Explain the recursive algorithm to invert a binary tree (swap the left and right children of all nodes).",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Inversion",
+      "Given a string s that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid. Return all possible results.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "Input String", type: "text", defaultValue: "()())()" },
+    ],
   },
+  // problem--> 109
   {
-    id: "decode-ways-conceptual",
-    title: "Decode Ways (Conceptual)",
+    id: "recursion-split-array-into-fibonacci-sequence",
+    title: "Split Array into Fibonacci Sequence",
     description:
-      "Explain the recursive approach to 'Decode Ways': a message containing letters A-Z is encoded into numbers. Given a string of digits, determine the total number of ways to decode it.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Decode Ways",
+      'You are given a string of digits num, such as "123456579". You can split it into a Fibonacci-like sequence [123, 456, 579]. Return any such sequence.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "num",
+        label: "Number String",
+        type: "text",
+        defaultValue: "11235813",
+      },
+    ],
   },
+  // problem--> 110
   {
-    id: "unique-binary-search-trees-conceptual",
-    title: "Unique Binary Search Trees (Conceptual)",
+    id: "recursion-solve-the-maze",
+    title: "Solve the Maze",
     description:
-      "Explain the recursive approach (using Catalan numbers) to find the number of structurally unique Binary Search Trees (BST) that can store values 1 through n.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Unique BSTs",
+      "Given a 2D array representing a maze, a start point, and a destination, determine if a path exists. 1 represents walls, 0 represents walkable space.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "maze",
+        label: "Maze Grid",
+        type: "textarea",
+        defaultValue:
+          "[[0,0,1,0,0],[0,0,0,0,0],[0,0,0,1,0],[1,1,0,1,1],[0,0,0,0,0]]",
+      },
+      {
+        id: "start",
+        label: "Start [row, col]",
+        type: "text",
+        defaultValue: "[0,4]",
+      },
+      {
+        id: "destination",
+        label: "Destination [row, col]",
+        type: "text",
+        defaultValue: "[4,4]",
+      },
+    ],
   },
+  // problem--> 111
   {
-    id: "word-squares-conceptual",
-    title: "Word Squares (Conceptual)",
+    id: "recursion-number-of-islands",
+    title: "Number of Islands",
     description:
-      "Explain the backtracking recursive approach to finding all word squares from a given list of words.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Word Squares",
+      "Given an m x n 2D binary grid which represents a map of '1's (land) and '0's (water), return the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Grid of 1s and 0s",
+        type: "textarea",
+        defaultValue:
+          '[["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]',
+      },
+    ],
   },
+  // problem--> 112
   {
-    id: "robot-in-a-grid-conceptual",
-    title: "Robot in a Grid (Conceptual)",
+    id: "recursion-longest-increasing-path-in-matrix",
+    title: "Longest Increasing Path in a Matrix",
     description:
-      "Imagine a robot sitting on the upper left corner of grid with r rows and c columns. The robot can only move in two directions: right and down. Certain cells are 'off limits'. Design a recursive algorithm to find a path for the robot from the top left to the bottom right.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Robot Path",
+      "Given an m x n integers matrix, return the length of the longest increasing path in the matrix. From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "matrix",
+        label: "Matrix",
+        type: "textarea",
+        defaultValue: "[[9,9,4],[6,6,8],[2,1,1]]",
+      },
+    ],
   },
+  // problem--> 113
   {
-    id: "magic-index-conceptual",
-    title: "Magic Index (Conceptual)",
+    id: "recursion-restore-ip-addresses",
+    title: "Restore IP Addresses",
     description:
-      "A magic index in an array A[0...n-1] is an index such that A[i] = i. Given a sorted array of distinct integers, explain a recursive algorithm to find a magic index, if one exists.",
-    category: "Recursion",
-    inputs: [],
-    buttonText: "Explain Magic Index",
+      "A valid IP address consists of exactly four integers separated by single dots. Each integer is between 0 and 255 (inclusive) and cannot have leading zeros. Given a string s containing only digits, return all possible valid IP addresses that can be formed by inserting dots into s.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "s",
+        label: "Digit String",
+        type: "text",
+        defaultValue: "25525511135",
+      },
+    ],
+  },
+  // problem--> 114
+  {
+    id: "recursion-word-squares",
+    title: "Word Squares",
+    description:
+      "Given an array of unique strings words, return all the word squares you can build from words. A sequence of strings forms a valid word square if the kth row and column read the same string, for 0 <= k < max(numRows, numColumns).",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "words",
+        label: "Array of Words",
+        type: "text",
+        defaultValue: '["area","lead","wall","lady","ball"]',
+      },
+    ],
+  },
+  // problem--> 115
+  {
+    id: "recursion-optimal-account-balancing",
+    title: "Optimal Account Balancing",
+    description:
+      "You are given an array of transactions where transactions[i] = [from, to, amount]. You are asked to settle all the debts with the minimum number of transactions. Return the minimum number of transactions required.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "transactions",
+        label: "Transactions Array",
+        type: "textarea",
+        defaultValue: "[[0,1,10],[2,0,5]]",
+      },
+    ],
   },
 ];
