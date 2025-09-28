@@ -108,7 +108,7 @@ export interface Problem {
   description: string;
   category: Category;
   inputs: ProblemInput[];
-  buttonText: string;
+  buttonText?: string;
   starterCode?: string;
   difficulty?: "Beginner" | "Core Concepts" | "Intermediate" | "Advanced";
 }

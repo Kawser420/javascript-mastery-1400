@@ -1,4 +1,4 @@
-import { Problem } from "../../types";
+import { Problem } from "@/types";
 
 export const problems: Problem[] = [
   // problem--> 01
@@ -970,7 +970,6 @@ export const problems: Problem[] = [
       { id: "n", label: "Integer (n)", type: "number", defaultValue: 38 },
     ],
   },
-  // ... continue generating unique problems up to 200. I will now create the rest of the 200 problems.
   // problem--> 61
   {
     id: "recursion-find-first-occurrence",
@@ -1642,7 +1641,6 @@ export const problems: Problem[] = [
       { id: "p", label: "Pattern", type: "text", defaultValue: "*a*b" },
     ],
   },
-  // ... continue generating problems from 101 to 200
   // problem--> 101
   {
     id: "recursion-print-nodes-at-k-distance",
@@ -1922,6 +1920,1545 @@ export const problems: Problem[] = [
         label: "Transactions Array",
         type: "textarea",
         defaultValue: "[[0,1,10],[2,0,5]]",
+      },
+    ],
+  },
+  // problem--> 116
+  {
+    id: "recursion-file-system-traversal",
+    title: "File System Traversal",
+    description:
+      "Given a nested object representing a file system, write a recursive function that returns an array of all file paths. A file is a string, and a directory is an object.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "fs",
+        label: "File System Object",
+        type: "textarea",
+        defaultValue:
+          '{"root": {"home": {"user": {"file1.txt": "content", "projects": {"project1": {"index.js": "..."}}}}, "etc": {"hosts": "127.0.0.1"}}}',
+      },
+    ],
+  },
+  // problem--> 117
+  {
+    id: "recursion-lca-of-binary-tree",
+    title: "Lowest Common Ancestor of a Binary Tree",
+    description:
+      "Given a binary tree (not a BST), find the lowest common ancestor (LCA) of two given nodes in the tree. The LCA is the lowest node that has both nodes as descendants.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 3, "left": {"value": 5, "left": {"value": 6}, "right": {"value": 2}}, "right": {"value": 1, "left": {"value": 0}, "right": {"value": 8}}}',
+      },
+      { id: "p", label: "First Node Value", type: "number", defaultValue: 5 },
+      { id: "q", label: "Second Node Value", type: "number", defaultValue: 1 },
+    ],
+  },
+  // problem--> 118
+  {
+    id: "recursion-word-break-ii",
+    title: "Word Break II",
+    description:
+      "Given a string s and a dictionary of strings wordDict, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "String", type: "text", defaultValue: "catsanddog" },
+      {
+        id: "wordDict",
+        label: "Word Dictionary",
+        type: "text",
+        defaultValue: '["cat", "cats", "and", "sand", "dog"]',
+      },
+    ],
+  },
+  // problem--> 119
+  {
+    id: "recursion-parse-lisp-expression",
+    title: "Parse Lisp Expression",
+    description:
+      "You are given a string expression representing a Lisp-like expression to return the integer value of. Expressions can be integers, let-expressions, add-expressions, or mult-expressions.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "expression",
+        label: "Lisp Expression",
+        type: "text",
+        defaultValue: "(add 1 2)",
+      },
+    ],
+  },
+  // problem--> 120
+  {
+    id: "recursion-tree-diameter",
+    title: "Diameter of Binary Tree",
+    description:
+      "Given the root of a binary tree, return the length of the diameter of the tree. The diameter is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 1, "left": {"value": 2, "left": {"value": 4}, "right": {"value": 5}}, "right": {"value": 3}}',
+      },
+    ],
+  },
+  // problem--> 121
+  {
+    id: "recursion-number-of-atoms",
+    title: "Number of Atoms",
+    description:
+      "Given a chemical formula (given as a string), return the count of each atom. An atomic element always starts with an uppercase letter, then zero or more lowercase letters, representing the name. e.g., H2O and K4(ON(SO3)2)2 are possible formulas.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "formula",
+        label: "Chemical Formula",
+        type: "text",
+        defaultValue: "Mg(OH)2",
+      },
+    ],
+  },
+  // problem--> 122
+  {
+    id: "recursion-longest-univalue-path",
+    title: "Longest Univalue Path",
+    description:
+      "Given the root of a binary tree, return the length of the longest path where each node in the path has the same value. This path may or may not pass through the root.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value": 5, "left": {"value": 4, "left": {"value": 1}, "right": {"value": 1}}, "right": {"value": 5, "right": {"value": 5}}}',
+      },
+    ],
+  },
+  // problem--> 123
+  {
+    id: "recursion-24-game",
+    title: "24 Game",
+    description:
+      "You are given an integer array cards of length 4. You have four cards, each containing a number from 1 to 9. You need to judge whether they could operate through *, /, +, -, (, ) to get the value of 24.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "cards",
+        label: "Cards Array",
+        type: "text",
+        defaultValue: "[4, 1, 8, 7]",
+      },
+    ],
+  },
+  // problem--> 124
+  {
+    id: "recursion-cracking-the-safe",
+    title: "Cracking the Safe",
+    description:
+      "There is a safe protected by a password. The password is a sequence of n digits where each digit can be in the range [0, k-1]. You can type one digit at a time. The safe opens if the last n digits typed match the password. Find the shortest string that contains all possible passwords as substrings.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Password Length (n)",
+        type: "number",
+        defaultValue: 2,
+      },
+      {
+        id: "k",
+        label: "Number of Digits (k)",
+        type: "number",
+        defaultValue: 2,
+      },
+    ],
+  },
+  // problem--> 125
+  {
+    id: "recursion-making-a-large-island",
+    title: "Making A Large Island",
+    description:
+      "You are given an n x n binary matrix grid. You are allowed to change at most one 0 to be 1. Return the size of the largest island in grid after applying this operation.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Grid of 1s and 0s",
+        type: "textarea",
+        defaultValue: "[[1,0],[0,1]]",
+      },
+    ],
+  },
+  // problem--> 126
+  {
+    id: "recursion-basic-calculator",
+    title: "Basic Calculator",
+    description:
+      "Given a string s representing a valid expression, implement a basic calculator to evaluate it and return the result of the evaluation. The expression can contain parentheses, +, -, and non-negative integers.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "s",
+        label: "Expression String",
+        type: "text",
+        defaultValue: "(1+(4+5+2)-3)+(6+8)",
+      },
+    ],
+  },
+  // problem--> 127
+  {
+    id: "recursion-dom-tree-traversal",
+    title: "DOM Tree Traversal",
+    description:
+      "Given a nested object representing a simplified DOM tree, write a recursive function to find the text content of the first element with a specific tag name.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "dom",
+        label: "DOM Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"tag": "html", "children": [{"tag": "body", "children": [{"tag": "p", "text": "Hello"}, {"tag": "div", "children": [{"tag": "span", "text": "World"}]}]}]}',
+      },
+      {
+        id: "tagName",
+        label: "Tag to Find",
+        type: "text",
+        defaultValue: "span",
+      },
+    ],
+  },
+  // problem--> 128
+  {
+    id: "recursion-rod-cutting",
+    title: "Rod Cutting Problem",
+    description:
+      "Given a rod of length n inches and an array of prices that contains prices of all pieces of size smaller than n. Determine the maximum value obtainable by cutting up the rod and selling the pieces.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "prices",
+        label: "Prices Array (1-indexed)",
+        type: "text",
+        defaultValue: "[1, 5, 8, 9, 10, 17, 17, 20]",
+      },
+      { id: "n", label: "Rod Length", type: "number", defaultValue: 8 },
+    ],
+  },
+  // problem--> 129
+  {
+    id: "recursion-longest-palindromic-subsequence",
+    title: "Longest Palindromic Subsequence",
+    description:
+      "Given a string s, find the longest palindromic subsequence's length in s. A subsequence is a sequence that can be derived from another sequence by deleting some or no characters without changing the order of the remaining elements.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "Input String", type: "text", defaultValue: "bbbab" },
+    ],
+  },
+  // problem--> 130
+  {
+    id: "recursion-unique-binary-search-trees-ii",
+    title: "Unique Binary Search Trees II",
+    description:
+      "Given an integer n, return all the structurally unique binary search trees (BSTs) which has exactly n nodes of unique values from 1 to n.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of Nodes (n)",
+        type: "number",
+        defaultValue: 3,
+      },
+    ],
+  },
+  // problem--> 131
+  {
+    id: "recursion-minimum-path-sum",
+    title: "Minimum Path Sum in Grid",
+    description:
+      "Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path. You can only move either down or right.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Grid of Numbers",
+        type: "textarea",
+        defaultValue: "[[1,3,1],[1,5,1],[4,2,1]]",
+      },
+    ],
+  },
+  // problem--> 132
+  {
+    id: "recursion-knight-probability-on-chessboard",
+    title: "Knight Probability on Chessboard",
+    description:
+      "On an n x n chessboard, a knight starts at the cell (row, column) and attempts to make exactly k moves. The knight has an equal probability of moving to any of its 8 possible directions. Return the probability that the knight remains on the board after it has stopped moving.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Board Size (n)", type: "number", defaultValue: 3 },
+      { id: "k", label: "Moves (k)", type: "number", defaultValue: 2 },
+      { id: "row", label: "Start Row", type: "number", defaultValue: 0 },
+      { id: "column", label: "Start Column", type: "number", defaultValue: 0 },
+    ],
+  },
+  // problem--> 133
+  {
+    id: "recursion-android-unlock-patterns",
+    title: "Android Unlock Patterns",
+    description:
+      "Given an integer m and an integer n, return the number of unique unlock patterns of the Android lock screen, which consist of strokes connecting an ordered sequence of dots, where the number of dots connected is between m and n inclusive.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "m", label: "Min Length (m)", type: "number", defaultValue: 1 },
+      { id: "n", label: "Max Length (n)", type: "number", defaultValue: 1 },
+    ],
+  },
+  // problem--> 134
+  {
+    id: "recursion-trie-prefix-search",
+    title: "Trie Prefix Search",
+    description:
+      "Implement a Trie (prefix tree) and a recursive method to find all words in the trie that start with a given prefix.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "words",
+        label: "Words to insert",
+        type: "text",
+        defaultValue: '["apple", "apply", "apt", "apricot", "banana"]',
+      },
+      {
+        id: "prefix",
+        label: "Prefix to search",
+        type: "text",
+        defaultValue: "ap",
+      },
+    ],
+  },
+  // problem--> 135
+  {
+    id: "recursion-interleaving-string",
+    title: "Interleaving String",
+    description:
+      "Given strings s1, s2, and s3, find whether s3 is formed by an interleaving of s1 and s2. An interleaving is formed by merging the characters of s1 and s2 while maintaining their relative order.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s1", label: "String s1", type: "text", defaultValue: "aabcc" },
+      { id: "s2", label: "String s2", type: "text", defaultValue: "dbbca" },
+      {
+        id: "s3",
+        label: "String s3",
+        type: "text",
+        defaultValue: "aadbbcbcac",
+      },
+    ],
+  },
+  // problem--> 136
+  {
+    id: "recursion-max-area-of-island",
+    title: "Max Area of Island",
+    description:
+      "You are given an m x n binary matrix grid. An island is a group of 1's connected 4-directionally. The area of an island is the number of cells with a value 1 in the island. Return the maximum area of an island in grid. If there is no island, return 0.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Grid of 1s and 0s",
+        type: "textarea",
+        defaultValue: "[[0,0,1,0,0],[0,1,1,0,0],[0,0,0,0,0],[1,1,0,1,1]]",
+      },
+    ],
+  },
+  // problem--> 137
+  {
+    id: "recursion-different-ways-to-add-parentheses",
+    title: "Different Ways to Add Parentheses",
+    description:
+      "Given a string expression of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "expression",
+        label: "Expression String",
+        type: "text",
+        defaultValue: "2*3-4*5",
+      },
+    ],
+  },
+  // problem--> 138
+  {
+    id: "recursion-subset-sum-problem",
+    title: "Subset Sum Problem",
+    description:
+      "Given a set of non-negative integers and a value sum, determine if there is a subset of the given set with a sum equal to the given sum.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "set",
+        label: "Set of Numbers",
+        type: "text",
+        defaultValue: "[3, 34, 4, 12, 5, 2]",
+      },
+      { id: "sum", label: "Target Sum", type: "number", defaultValue: 9 },
+    ],
+  },
+  // problem--> 139
+  {
+    id: "recursion-unique-paths-iii",
+    title: "Unique Paths III",
+    description:
+      "You are given an m x n integer array grid where grid[i][j] could be 1 (starting square), 2 (ending square), 0 (empty square), -1 (obstacle). Return the number of 4-directional walks from the starting square to the ending square, that walk over every non-obstacle square exactly once.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Grid",
+        type: "textarea",
+        defaultValue: "[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]",
+      },
+    ],
+  },
+  // problem--> 140
+  {
+    id: "recursion-boggle-solver",
+    title: "Boggle Solver",
+    description:
+      'Given a dictionary of words and a Boggle board (a grid of characters), find all the words that can be formed on the board. A word can be formed from letters of sequentially adjacent cells, where "adjacent" cells are those horizontally, vertically, or diagonally neighboring.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "board",
+        label: "Boggle Board",
+        type: "textarea",
+        defaultValue:
+          '[["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]]',
+      },
+      {
+        id: "dictionary",
+        label: "Dictionary",
+        type: "text",
+        defaultValue: '["oath","pea","eat","rain"]',
+      },
+    ],
+  },
+  // problem--> 141
+  {
+    id: "recursion-construct-tree-from-preorder-inorder",
+    title: "Construct Tree from Preorder and Inorder Traversal",
+    description:
+      "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "preorder",
+        label: "Preorder Traversal",
+        type: "text",
+        defaultValue: "[3,9,20,15,7]",
+      },
+      {
+        id: "inorder",
+        label: "Inorder Traversal",
+        type: "text",
+        defaultValue: "[9,3,15,20,7]",
+      },
+    ],
+  },
+  // problem--> 142
+  {
+    id: "recursion-construct-tree-from-inorder-postorder",
+    title: "Construct Tree from Inorder and Postorder Traversal",
+    description:
+      "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "inorder",
+        label: "Inorder Traversal",
+        type: "text",
+        defaultValue: "[9,3,15,20,7]",
+      },
+      {
+        id: "postorder",
+        label: "Postorder Traversal",
+        type: "text",
+        defaultValue: "[9,15,7,20,3]",
+      },
+    ],
+  },
+  // problem--> 143
+  {
+    id: "recursion-serialize-deserialize-binary-tree",
+    title: "Serialize and Deserialize Binary Tree",
+    description:
+      "Design an algorithm to serialize a binary tree to a string and deserialize the string back to the original tree structure. Your functions should be recursive.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree to process",
+        type: "textarea",
+        defaultValue:
+          '{"value":1,"left":{"value":2},"right":{"value":3,"left":{"value":4},"right":{"value":5}}}',
+      },
+    ],
+  },
+  // problem--> 144
+  {
+    id: "recursion-find-kth-smallest-element-in-bst",
+    title: "Kth Smallest Element in a BST",
+    description:
+      "Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "root",
+        label: "BST Root",
+        type: "textarea",
+        defaultValue:
+          '{"value":3,"left":{"value":1,"right":{"value":2}},"right":{"value":4}}',
+      },
+      { id: "k", label: "K", type: "number", defaultValue: 1 },
+    ],
+  },
+  // problem--> 145
+  {
+    id: "recursion-partition-equal-subset-sum",
+    title: "Partition Equal Subset Sum",
+    description:
+      "Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[1,5,11,5]",
+      },
+    ],
+  },
+  // problem--> 146
+  {
+    id: "recursion-find-minimum-in-rotated-sorted-array",
+    title: "Find Minimum in Rotated Sorted Array",
+    description:
+      "Suppose an array of length n sorted in ascending order is rotated between 1 and n times. Given the sorted rotated array, find its minimum element. You must write an algorithm that runs in O(log n) time, which suggests a recursive, binary search-like approach.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Rotated Sorted Array",
+        type: "text",
+        defaultValue: "[3,4,5,1,2]",
+      },
+    ],
+  },
+  // problem--> 147
+  {
+    id: "recursion-search-in-rotated-sorted-array",
+    title: "Search in Rotated Sorted Array",
+    description:
+      "There is an integer array nums sorted in ascending order (with distinct values), which has been rotated. Given the array nums after the rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums. Implement a recursive solution.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Rotated Sorted Array",
+        type: "text",
+        defaultValue: "[4,5,6,7,0,1,2]",
+      },
+      { id: "target", label: "Target Value", type: "number", defaultValue: 0 },
+    ],
+  },
+  // problem--> 148
+  {
+    id: "recursion-populating-next-right-pointers",
+    title: "Populating Next Right Pointers in Each Node",
+    description:
+      "You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Perfect Binary Tree",
+        type: "textarea",
+        defaultValue:
+          '{"value":1,"left":{"value":2,"left":{"value":4},"right":{"value":5}},"right":{"value":3,"left":{"value":6},"right":{"value":7}}}',
+      },
+    ],
+  },
+  // problem--> 149
+  {
+    id: "recursion-beautiful-array",
+    title: "Beautiful Array",
+    description:
+      "An array nums is beautiful if for every i < j, there is no k with i < k < j such that nums[k] * 2 = nums[i] + nums[j]. Given an integer n, return any beautiful array nums of length n. It is guaranteed that such an array exists.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Array Length (n)", type: "number", defaultValue: 4 },
+    ],
+  },
+  // problem--> 150
+  {
+    id: "recursion-cheapest-flights-within-k-stops",
+    title: "Cheapest Flights Within K Stops",
+    description:
+      "There are n cities connected by some number of flights. You are given an array flights where flights[i] = [from, to, price]. You are also given three integers src, dst, and k. Return the cheapest price from src to dst with at most k stops.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Number of cities", type: "number", defaultValue: 3 },
+      {
+        id: "flights",
+        label: "Flights Array",
+        type: "textarea",
+        defaultValue: "[[0,1,100],[1,2,100],[0,2,500]]",
+      },
+      { id: "src", label: "Source City", type: "number", defaultValue: 0 },
+      { id: "dst", label: "Destination City", type: "number", defaultValue: 2 },
+      { id: "k", label: "Max Stops (k)", type: "number", defaultValue: 1 },
+    ],
+  },
+  // problem--> 151
+  {
+    id: "recursion-zuma-game",
+    title: "Zuma Game",
+    description:
+      'You have a row of balls on a table, represented by a string "board". You also have a handful of balls, represented by a string "hand". Find the minimum number of balls you need to insert from your hand into the board to remove all the balls on the table. When 3 or more balls of the same color are adjacent, they are removed. This removal can trigger others recursively.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "board",
+        label: "Board String",
+        type: "text",
+        defaultValue: '"WWRRBBWW"',
+      },
+      {
+        id: "hand",
+        label: "Hand String",
+        type: "text",
+        defaultValue: '"WRBRW"',
+      },
+    ],
+  },
+  // problem--> 152
+  {
+    id: "recursion-concatenated-words",
+    title: "Concatenated Words",
+    description:
+      "Given an array of strings words (without duplicates), return all the concatenated words in the given list of words. A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "words",
+        label: "Array of Words",
+        type: "text",
+        defaultValue:
+          '["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"]',
+      },
+    ],
+  },
+  // problem--> 153
+  {
+    id: "recursion-k-th-symbol-in-grammar",
+    title: "K-th Symbol in Grammar",
+    description:
+      "We build a table of n rows (1-indexed). We start with 0 in the 1st row. Now in every subsequent row, we look at the previous row and replace each occurrence of 0 with 01, and each occurrence of 1 with 10. Given n and k, return the k-th (1-indexed) symbol in the n-th row.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Row (n)", type: "number", defaultValue: 4 },
+      { id: "k", label: "Index (k)", type: "number", defaultValue: 5 },
+    ],
+  },
+  // problem--> 154
+  {
+    id: "recursion-number-of-squareful-arrays",
+    title: "Number of Squareful Arrays",
+    description:
+      "An array is squareful if the sum of every pair of adjacent elements is a perfect square. Given an integer array, return the number of permutations of the array that are squareful.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[1, 17, 8]",
+      },
+    ],
+  },
+  // problem--> 155
+  {
+    id: "recursion-escape-a-large-maze",
+    title: "Escape a Large Maze",
+    description:
+      "In a 10^6 x 10^6 grid, a list of blocked cells is given. We are given a source and a target cell. Determine whether a path from source to target exists. The path can only move 4-directionally.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "blocked",
+        label: "Blocked Cells",
+        type: "textarea",
+        defaultValue: "[[0,1],[1,0]]",
+      },
+      {
+        id: "source",
+        label: "Source [row, col]",
+        type: "text",
+        defaultValue: "[0,0]",
+      },
+      {
+        id: "target",
+        label: "Target [row, col]",
+        type: "text",
+        defaultValue: "[0,2]",
+      },
+    ],
+  },
+  // problem--> 156
+  {
+    id: "recursion-tiling-a-rectangle-with-fewest-squares",
+    title: "Tiling a Rectangle with the Fewest Squares",
+    description:
+      "Given a rectangle of size n x m, return the minimum number of integer-sided squares that tile the rectangle.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Height (n)", type: "number", defaultValue: 2 },
+      { id: "m", label: "Width (m)", type: "number", defaultValue: 3 },
+    ],
+  },
+  // problem--> 157
+  {
+    id: "recursion-path-with-maximum-gold",
+    title: "Path with Maximum Gold",
+    description:
+      "In a gold mine grid of size m x n, each cell in this mine has an integer representing the amount of gold in that cell, 0 if it is empty. Return the maximum amount of gold you can collect under the conditions: 1. You can start and stop collecting gold from any position. 2. You can move one step to the left, right, up, or down. 3. You can't visit the same cell more than once.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Gold Mine Grid",
+        type: "textarea",
+        defaultValue: "[[0,6,0],[5,8,7],[0,9,0]]",
+      },
+    ],
+  },
+  // problem--> 158
+  {
+    id: "recursion-ambiguous-coordinates",
+    title: "Ambiguous Coordinates",
+    description:
+      'We are given a string s representing a list of numbers. Return all the possible ways to restore it as a list of coordinates "(x, y)". A valid number is one that doesn\'t have extraneous zeros. E.g., "00", "0.0", "0.00" are invalid.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "s",
+        label: 'Coordinate String (e.g., "(123)")',
+        type: "text",
+        defaultValue: "(123)",
+      },
+    ],
+  },
+  // problem--> 159
+  {
+    id: "recursion-k-th-permutation",
+    title: "K-th Permutation Sequence",
+    description:
+      "The set [1, 2, 3, ..., n] contains a total of n! unique permutations. By listing and labeling all of the permutations in order, we get the permutation sequence. Given n and k, return the k-th permutation sequence.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of elements (n)",
+        type: "number",
+        defaultValue: 3,
+      },
+      { id: "k", label: "K", type: "number", defaultValue: 3 },
+    ],
+  },
+  // problem--> 160
+  {
+    id: "recursion-matchsticks-to-square",
+    title: "Matchsticks to Square",
+    description:
+      "You are given an integer array matchsticks where matchsticks[i] is the length of the ith matchstick. You want to use all the matchsticks to form one square. You cannot break any stick. Return true if you can make this square and false otherwise.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "matchsticks",
+        label: "Matchstick Lengths",
+        type: "text",
+        defaultValue: "[1,1,2,2,2]",
+      },
+    ],
+  },
+  // problem--> 161
+  {
+    id: "recursion-can-i-win",
+    title: "Can I Win",
+    description:
+      'In the "100 game," two players take turns adding, from a common pool of integers from 1 to maxChoosableInteger, to a running total. The player who first causes the running total to reach or exceed desiredTotal wins. Given integers maxChoosableInteger and desiredTotal, return true if the first player to move can force a win, assuming both players play optimally.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "maxChoosableInteger",
+        label: "Max Choosable Integer",
+        type: "number",
+        defaultValue: 10,
+      },
+      {
+        id: "desiredTotal",
+        label: "Desired Total",
+        type: "number",
+        defaultValue: 11,
+      },
+    ],
+  },
+  // problem--> 162
+  {
+    id: "recursion-the-skyline-problem",
+    title: "The Skyline Problem",
+    description:
+      "A city's skyline is the outer contour of the silhouette formed by all the buildings in that city. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively. This is a classic divide and conquer problem.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "buildings",
+        label: "Buildings [[left, right, height], ...]",
+        type: "textarea",
+        defaultValue: "[[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]",
+      },
+    ],
+  },
+  // problem--> 163
+  {
+    id: "recursion-count-of-smaller-numbers-after-self",
+    title: "Count of Smaller Numbers After Self",
+    description:
+      "Given an integer array nums, you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i]. A recursive merge-sort approach is well-suited for this.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[5,2,6,1]",
+      },
+    ],
+  },
+  // problem--> 164
+  {
+    id: "recursion-frog-jump",
+    title: "Frog Jump",
+    description:
+      "A frog is crossing a river. The river is divided into some number of units, and at each unit, there may or may not exist a stone. The frog can jump on a stone, but it must not jump into the water. Given a list of stones' positions (in units) in sorted ascending order, determine if the frog can cross the river by landing on the last stone.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "stones",
+        label: "Stone Positions",
+        type: "text",
+        defaultValue: "[0,1,3,5,6,8,12,17]",
+      },
+    ],
+  },
+  // problem--> 165
+  {
+    id: "recursion-burst-balloons",
+    title: "Burst Balloons",
+    description:
+      "You are given n balloons, indexed from 0 to n - 1. Each balloon has a number painted on it representing the coins you get if you burst it. You are asked to burst all the balloons to maximize your coins. If you burst the ith balloon, you get nums[i-1] * nums[i] * nums[i+1] coins. Find the maximum coins you can collect.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Balloons Array",
+        type: "text",
+        defaultValue: "[3,1,5,8]",
+      },
+    ],
+  },
+  // problem--> 166
+  {
+    id: "recursion-remove-boxes",
+    title: "Remove Boxes",
+    description:
+      "You are given several boxes with different colors represented by different positive numbers. You may remove any number of boxes of the same color that are contiguous. The score you get is k * k for removing k boxes. Find the maximum score you can get.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "boxes",
+        label: "Boxes Array",
+        type: "text",
+        defaultValue: "[1,3,2,2,2,3,4,3,1]",
+      },
+    ],
+  },
+  // problem--> 167
+  {
+    id: "recursion-student-attendance-record-ii",
+    title: "Student Attendance Record II",
+    description:
+      "An attendance record for a student can be represented as a string where each character is 'A' (absent), 'L' (late), or 'P' (present). A student is eligible for an attendance award if they meet BOTH of the following criteria: The student was absent ('A') for strictly fewer than 2 days total. The student was never late ('L') for 3 or more consecutive days. Given an integer n, return the number of possible attendance records of length n that are awardable.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Record Length (n)", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 168
+  {
+    id: "recursion-find-the-shortest-superstring",
+    title: "Find the Shortest Superstring",
+    description:
+      "Given an array of strings words, return the shortest string that contains each string in words as a substring. If there are multiple valid strings, return any of them. This can be modeled as a variation of the Traveling Salesperson Problem.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "words",
+        label: "Words Array",
+        type: "text",
+        defaultValue: '["alex","loves","leetcode"]',
+      },
+    ],
+  },
+  // problem--> 169
+  {
+    id: "recursion-critical-connections-in-a-network",
+    title: "Critical Connections in a Network",
+    description:
+      "There are n servers numbered from 0 to n - 1 connected by undirected server-to-server connections forming a network. A critical connection is a connection that, if removed, will make some servers unable to reach some other server. Return all critical connections. (Tarjan's bridge-finding algorithm is a recursive DFS approach).",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Number of Servers", type: "number", defaultValue: 4 },
+      {
+        id: "connections",
+        label: "Connections Array",
+        type: "textarea",
+        defaultValue: "[[0,1],[1,2],[2,0],[1,3]]",
+      },
+    ],
+  },
+  // problem--> 170
+  {
+    id: "recursion-palindrome-partitioning-ii",
+    title: "Palindrome Partitioning II",
+    description:
+      "Given a string s, partition s such that every substring of the partition is a palindrome. Return the minimum cuts needed for a palindrome partitioning of s.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "s", label: "Input String", type: "text", defaultValue: "aab" },
+    ],
+  },
+  // problem--> 171
+  {
+    id: "recursion-max-value-of-equation",
+    title: "Max Value of Equation",
+    description:
+      "You are given an array points of coordinates and an integer k. Find the maximum value of yi + yj + |xi - xj| where |xi - xj| <= k and i < j. A recursive solution for this would be too slow, but it demonstrates the brute-force thought process.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "points",
+        label: "Points Array",
+        type: "textarea",
+        defaultValue: "[[1,3],[2,0],[5,10],[6,-10]]",
+      },
+      { id: "k", label: "K", type: "number", defaultValue: 1 },
+    ],
+  },
+  // problem--> 172
+  {
+    id: "recursion-basic-calculator-ii",
+    title: "Basic Calculator II",
+    description:
+      "Given a string s which represents an expression, evaluate this expression and return its value. The expression string contains only non-negative integers, +, -, *, / operators and empty spaces. The integer division should truncate toward zero. A recursive descent parser is a natural fit.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "s",
+        label: "Expression String",
+        type: "text",
+        defaultValue: '"3+2*2"',
+      },
+    ],
+  },
+  // problem--> 173
+  {
+    id: "recursion-strange-printer",
+    title: "Strange Printer",
+    description:
+      "There is a strange printer with the following two special properties: 1. The printer can only print a sequence of the same character each time. 2. At each turn, the printer can print new characters starting from and ending at any place and will cover the original existing characters. Given a string s, return the minimum number of turns the printer needed to print it.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "s",
+        label: "String to Print",
+        type: "text",
+        defaultValue: '"aaabbb"',
+      },
+    ],
+  },
+  // problem--> 174
+  {
+    id: "recursion-number-of-ways-to-reorder-array-to-get-same-bst",
+    title: "Number of Ways to Reorder Array to Get Same BST",
+    description:
+      "Given an array nums that represents a permutation of integers from 1 to n. We are going to construct a binary search tree by inserting the elements of nums in order into an initially empty BST. Find the number of different ways to reorder nums so that the constructed BST is identical to the one formed from the original array.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[2,1,3]",
+      },
+    ],
+  },
+  // problem--> 175
+  {
+    id: "recursion-cherry-pickup-ii",
+    title: "Cherry Pickup II",
+    description:
+      "You are given a rows x cols matrix grid representing a field of cherries where grid[i][j] is the number of cherries that you can collect from the (i, j) cell. You have two robots that can collect cherries for you. Both robots start at the top-left corner (0, 0) and (0, cols-1) respectively. Return the maximum number of cherries collection using both robots by moving down one row and to the left, straight, or right.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "grid",
+        label: "Cherry Grid",
+        type: "textarea",
+        defaultValue: "[[3,1,1],[2,5,1],[1,5,5],[2,1,1]]",
+      },
+    ],
+  },
+  // problem--> 176
+  {
+    id: "recursion-largest-rectangle-in-histogram",
+    title: "Largest Rectangle in Histogram",
+    description:
+      "Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram. This can be solved with a recursive divide and conquer approach.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "heights",
+        label: "Heights Array",
+        type: "text",
+        defaultValue: "[2,1,5,6,2,3]",
+      },
+    ],
+  },
+  // problem--> 177
+  {
+    id: "recursion-reverse-pairs",
+    title: "Reverse Pairs",
+    description:
+      "Given an integer array nums, return the number of reverse pairs in the array. A reverse pair is a pair (i, j) where 0 <= i < j < nums.length and nums[i] > 2 * nums[j]. A solution using a modified merge sort is very efficient.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[1,3,2,3,1]",
+      },
+    ],
+  },
+  // problem--> 178
+  {
+    id: "recursion-minimum-cost-to-merge-stones",
+    title: "Minimum Cost to Merge Stones",
+    description:
+      "There are n piles of stones arranged in a row. The ith pile has stones[i] stones. A move consists of merging exactly k consecutive piles into one pile, and the cost of this move is equal to the total number of stones in these k piles. Return the minimum cost to merge all piles of stones into one pile. If it is impossible, return -1.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "stones",
+        label: "Stones Array",
+        type: "text",
+        defaultValue: "[3,2,4,1]",
+      },
+      { id: "k", label: "Merge Count (k)", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 179
+  {
+    id: "recursion-sum-of-distances-in-tree",
+    title: "Sum of Distances in Tree",
+    description:
+      "You are given an undirected connected tree with n nodes labeled from 0 to n - 1 and n - 1 edges. Return an array answer of length n where answer[i] is the sum of the distances between the ith node in the tree and all other nodes.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Number of Nodes", type: "number", defaultValue: 6 },
+      {
+        id: "edges",
+        label: "Edges Array",
+        type: "textarea",
+        defaultValue: "[[0,1],[0,2],[2,3],[2,4],[2,5]]",
+      },
+    ],
+  },
+  // problem--> 180
+  {
+    id: "recursion-number-of-ways-to-stay-in-the-same-place-after-some-steps",
+    title: "Ways to Stay in Same Place After Steps",
+    description:
+      "You have a pointer at index 0 in an array of size arrLen. At each step, you can move 1 position to the left, 1 position to the right in the array, or stay in the same place. Given two integers steps and arrLen, return the number of ways such that your pointer is still at index 0 after exactly steps steps.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "steps",
+        label: "Number of Steps",
+        type: "number",
+        defaultValue: 3,
+      },
+      { id: "arrLen", label: "Array Length", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 181
+  {
+    id: "recursion-string-transformation",
+    title: "String Transformation",
+    description:
+      "Given two strings, start and end, and a dictionary, find the minimum number of transformations to convert start to end, where each transformation consists of changing a single letter, and each intermediate word must exist in the dictionary.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "start", label: "Start Word", type: "text", defaultValue: '"hit"' },
+      { id: "end", label: "End Word", type: "text", defaultValue: '"cog"' },
+      {
+        id: "dict",
+        label: "Dictionary",
+        type: "text",
+        defaultValue: '["hot","dot","dog","lot","log","cog"]',
+      },
+    ],
+  },
+  // problem--> 182
+  {
+    id: "recursion-find-all-anagrams-in-a-string",
+    title: "Find All Anagrams in a String",
+    description:
+      "Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order. This can be approached with a recursive sliding window concept.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "s",
+        label: "Main String (s)",
+        type: "text",
+        defaultValue: '"cbaebabacd"',
+      },
+      {
+        id: "p",
+        label: "Pattern String (p)",
+        type: "text",
+        defaultValue: '"abc"',
+      },
+    ],
+  },
+  // problem--> 183
+  {
+    id: "recursion-count-good-nodes-in-binary-tree",
+    title: "Count Good Nodes in Binary Tree",
+    description:
+      "Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X. Return the number of good nodes in the binary tree.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":3,"left":{"value":1,"left":{"value":3}},"right":{"value":4,"left":{"value":1},"right":{"value":5}}}',
+      },
+    ],
+  },
+  // problem--> 184
+  {
+    id: "recursion-sum-root-to-leaf-numbers",
+    title: "Sum Root to Leaf Numbers",
+    description:
+      "You are given the root of a binary tree containing digits from 0 to 9 only. Each root-to-leaf path in the tree represents a number. For example, the root-to-leaf path 1 -> 2 -> 3 represents the number 123. Return the total sum of all root-to-leaf numbers.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":4,"left":{"value":9,"left":{"value":5},"right":{"value":1}},"right":{"value":0}}',
+      },
+    ],
+  },
+  // problem--> 185
+  {
+    id: "recursion-binary-tree-maximum-path-sum",
+    title: "Binary Tree Maximum Path Sum",
+    description:
+      "A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. A path's sum is the sum of the node's values in the path. Given the root of a binary tree, return the maximum path sum of any non-empty path.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":-10,"left":{"value":9},"right":{"value":20,"left":{"value":15},"right":{"value":7}}}',
+      },
+    ],
+  },
+  // problem--> 186
+  {
+    id: "recursion-all-nodes-distance-k-in-binary-tree",
+    title: "All Nodes Distance K in Binary Tree",
+    description:
+      "Given the root of a binary tree, the value of a target node target, and an integer k, return an array of the values of all nodes that have a distance k from the target node.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":3,"left":{"value":5,"left":{"value":6},"right":{"value":2,"left":{"value":7},"right":{"value":4}}},"right":{"value":1,"left":{"value":0},"right":{"value":8}}}',
+      },
+      {
+        id: "target",
+        label: "Target Node Value",
+        type: "number",
+        defaultValue: 5,
+      },
+      { id: "k", label: "Distance K", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 187
+  {
+    id: "recursion-unique-binary-search-trees",
+    title: "Unique Binary Search Trees",
+    description:
+      "Given an integer n, return the number of structurally unique BST's (binary search trees) which has exactly n nodes of unique values from 1 to n.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of nodes (n)",
+        type: "number",
+        defaultValue: 3,
+      },
+    ],
+  },
+  // problem--> 188
+  {
+    id: "recursion-step-by-step-directions-from-a-binary-tree-node-to-another",
+    title: "Directions From a Binary Tree Node to Another",
+    description:
+      "You are given the root of a binary tree with n nodes. Each node is uniquely assigned a value from 1 to n. You are also given an integer startValue and an integer destValue. Find the shortest path starting from the node with startValue and ending at the node with destValue. The path should be represented as a string of 'L', 'R', and 'U'.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":5,"left":{"value":1,"left":{"value":3}},"right":{"value":2,"left":{"value":6},"right":{"value":4}}}',
+      },
+      {
+        id: "startValue",
+        label: "Start Node Value",
+        type: "number",
+        defaultValue: 3,
+      },
+      {
+        id: "destValue",
+        label: "Destination Node Value",
+        type: "number",
+        defaultValue: 6,
+      },
+    ],
+  },
+  // problem--> 189
+  {
+    id: "recursion-minimum-difficulty-of-a-job-schedule",
+    title: "Minimum Difficulty of a Job Schedule",
+    description:
+      "You want to schedule a list of jobs in d days. Jobs are dependent, i.e., you have to finish job i before job j if i < j. You have to finish at least one task every day. The difficulty of a day is the maximum difficulty of a job done on that day. The difficulty of a job schedule is the sum of difficulties of each day. Given an array of job difficulties and an integer d, return the minimum difficulty of a job schedule. If you cannot schedule all the jobs in d days, return -1.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "jobDifficulty",
+        label: "Job Difficulty Array",
+        type: "text",
+        defaultValue: "[6,5,4,3,2,1]",
+      },
+      { id: "d", label: "Number of Days (d)", type: "number", defaultValue: 2 },
+    ],
+  },
+  // problem--> 190
+  {
+    id: "recursion-path-sum-iii",
+    title: "Path Sum III",
+    description:
+      "Given the root of a binary tree and an integer targetSum, return the number of paths where the sum of the values along the path equals targetSum. The path does not need to start or end at the root or a leaf, but it must go downwards.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":10,"left":{"value":5,"left":{"value":3,"left":{"value":3},"right":{"value":-2}},"right":{"value":2,"right":{"value":1}}},"right":{"value":-3,"right":{"value":11}}}',
+      },
+      { id: "targetSum", label: "Target Sum", type: "number", defaultValue: 8 },
+    ],
+  },
+  // problem--> 191
+  {
+    id: "recursion-count-univalue-subtrees",
+    title: "Count Univalue Subtrees",
+    description:
+      "Given the root of a binary tree, return the number of univalue subtrees. A univalue subtree means all nodes of the subtree have the same value.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tree",
+        label: "Binary Tree Object",
+        type: "textarea",
+        defaultValue:
+          '{"value":5,"left":{"value":1,"left":{"value":5},"right":{"value":5}},"right":{"value":5,"right":{"value":5}}}',
+      },
+    ],
+  },
+  // problem--> 192
+  {
+    id: "recursion-all-possible-full-binary-trees",
+    title: "All Possible Full Binary Trees",
+    description:
+      "Given an integer n, return a list of all possible full binary trees with n nodes. A full binary tree is a binary tree where each node has exactly 0 or 2 children.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of nodes (n)",
+        type: "number",
+        defaultValue: 7,
+      },
+    ],
+  },
+  // problem--> 193
+  {
+    id: "recursion-longest-string-chain",
+    title: "Longest String Chain",
+    description:
+      "You are given an array of words where each word consists of lowercase English letters. A word chain is a sequence of words [word1, word2, ..., wordk] with k >= 1, where word1 is a predecessor of word2, word2 is a predecessor of word3, and so on. A word is a predecessor of another if we can add exactly one letter anywhere in the first word to make it equal to the second. Find the longest possible length of a word chain.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "words",
+        label: "Array of Words",
+        type: "text",
+        defaultValue: '["a","b","ba","bca","bda","bdca"]',
+      },
+    ],
+  },
+  // problem--> 194
+  {
+    id: "recursion-alien-dictionary",
+    title: "Alien Dictionary",
+    description:
+      "There is a new alien language that uses the English alphabet. However, the order among the letters is unknown. You are given a list of strings words from the alien language's dictionary, where the strings in words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language. This can be solved by building a graph and using recursive topological sort (DFS).",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "words",
+        label: "Sorted Words Array",
+        type: "text",
+        defaultValue: '["wrt","wrf","er","ett","rftt"]',
+      },
+    ],
+  },
+  // problem--> 195
+  {
+    id: "recursion-reconstruct-itinerary",
+    title: "Reconstruct Itinerary",
+    description:
+      'You are given a list of airline tickets where tickets[i] = [from, to]. Reconstruct the itinerary in order and return it. All of the tickets belong to a man who departs from "JFK". Thus, the itinerary must begin with "JFK". If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.',
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "tickets",
+        label: "Tickets Array",
+        type: "textarea",
+        defaultValue:
+          '[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]',
+      },
+    ],
+  },
+  // problem--> 196
+  {
+    id: "recursion-maximum-number-of-achievable-transfer-requests",
+    title: "Maximum Number of Achievable Transfer Requests",
+    description:
+      "We have n buildings and a number of transfer requests. We must find the maximum number of achievable requests. A request is achievable if it is granted and the net change in employees in any building is 0. This is a backtracking problem where we try every subset of requests.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of Buildings (n)",
+        type: "number",
+        defaultValue: 5,
+      },
+      {
+        id: "requests",
+        label: "Requests Array",
+        type: "textarea",
+        defaultValue: "[[0,1],[1,0],[0,1],[1,2],[2,0],[3,4]]",
+      },
+    ],
+  },
+  // problem--> 197
+  {
+    id: "recursion-numbers-with-same-consecutive-differences",
+    title: "Numbers With Same Consecutive Differences",
+    description:
+      "Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k.",
+    difficulty: "Intermediate",
+    category: "Recursion Techniques",
+    inputs: [
+      { id: "n", label: "Length (n)", type: "number", defaultValue: 3 },
+      { id: "k", label: "Difference (k)", type: "number", defaultValue: 7 },
+    ],
+  },
+  // problem--> 198
+  {
+    id: "recursion-largest-component-size-by-common-factor",
+    title: "Largest Component Size by Common Factor",
+    description:
+      "You are given an integer array nums of unique positive integers. Consider the following graph: there is an edge between nums[i] and nums[j] if gcd(nums[i], nums[j]) > 1. Return the size of the largest connected component in the graph.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[4,6,15,35]",
+      },
+    ],
+  },
+  // problem--> 199
+  {
+    id: "recursion-the-number-of-good-subsets",
+    title: "The Number of Good Subsets",
+    description:
+      "You are given an integer array nums. A subset of nums is good if its product can be represented as a product of one or more distinct prime numbers. Return the number of different good subsets under modulo 10^9 + 7.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "nums",
+        label: "Numbers Array",
+        type: "text",
+        defaultValue: "[1,2,3,4]",
+      },
+    ],
+  },
+  // problem--> 200
+  {
+    id: "recursion-stone-game-iv",
+    title: "Stone Game IV",
+    description:
+      "Alice and Bob take turns playing a game, with Alice starting first. Initially, there are n stones in a pile. On each player's turn, that player makes a move consisting of removing any non-zero square number of stones in the pile. If a player cannot make a move, they lose the game. Given a positive integer n, return true if and only if Alice wins the game assuming both players play optimally.",
+    difficulty: "Advanced",
+    category: "Recursion Techniques",
+    inputs: [
+      {
+        id: "n",
+        label: "Number of Stones (n)",
+        type: "number",
+        defaultValue: 4,
       },
     ],
   },
