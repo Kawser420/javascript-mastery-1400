@@ -58,9 +58,9 @@ import { problems as closuresLexicalEnvironmentProblems } from "./closures-and-l
 import { solvers as closuresLexicalEnvironmentSolvers } from "./closures-and-lexical-environment/solvers";
 import { explanations as closuresLexicalEnvironmentExplanations } from "./closures-and-lexical-environment/explanations";
 
-import { problems as recursionProblems } from "./recursion-techniques/problems";
-import { solvers as recursionSolvers } from "./recursion-techniques/solvers";
-import { explanations as recursionExplanations } from "./recursion-techniques/explanations";
+import { problems as recursionTechniquesProblems } from "./recursion-techniques/problems";
+import { solvers as recursionTechniquesSolvers } from "./recursion-techniques/solvers";
+import { explanations as recursionTechniquesExplanations } from "./recursion-techniques/explanations";
 
 import { problems as classesOopProblems } from "./classes-and-oop/problems";
 import { solvers as classesOopSolvers } from "./classes-and-oop/solvers";
@@ -99,7 +99,7 @@ export const allProblems: Problem[] = [
   // export allProblems--> Core Concepts(12)
   ...es6FeaturesProblems,
   ...closuresLexicalEnvironmentProblems,
-  ...recursionProblems,
+  ...recursionTechniquesProblems,
   ...classesOopProblems,
   ...advancedJsFeaturesProblems,
   ...asynchronousJsProblems,
@@ -123,7 +123,7 @@ export const allSolvers: Record<string, Function> = {
   // export allSolvers--> Core Concepts(12)
   ...es6FeaturesSolvers,
   ...closuresLexicalEnvironmentSolvers,
-  ...recursionSolvers,
+  ...recursionTechniquesSolvers,
   ...classesOopSolvers,
   ...advancedJsFeaturesSolvers,
   ...asynchronousJsSolvers,
@@ -148,7 +148,7 @@ export const staticExplanations: Record<string, string> = {
   // export allExplanations--> Core Concepts(12)
   ...es6FeaturesExplanations,
   ...closuresLexicalEnvironmentExplanations,
-  ...recursionExplanations,
+  ...recursionTechniquesExplanations,
   ...classesOopExplanations,
   ...advancedJsFeaturesExplanations,
   ...asynchronousJsExplanations,
