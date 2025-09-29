@@ -106,11 +106,11 @@ export interface Problem {
   id: string;
   title: string;
   description: string;
-  category?: string;
+  category?: Category;
+  difficulty?: "Beginner" | "Core Concepts" | "Intermediate" | "Advanced";
   inputs?: ProblemInput[];
   buttonText?: string;
   starterCode?: string;
-  difficulty?: "Beginner" | "Core Concepts" | "Intermediate" | "Advanced";
 }
 
 export interface ChatMessage {

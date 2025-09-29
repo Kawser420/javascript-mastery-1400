@@ -12,6 +12,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Integer (n)", type: "number", defaultValue: 5 },
     ],
+    buttonText: "Calculate Factorial",
   },
   // problem--> 02
   {
@@ -22,6 +23,7 @@ export const problems: Problem[] = [
     difficulty: "Beginner",
     category: "Recursion Techniques",
     inputs: [{ id: "n", label: "Index (n)", type: "number", defaultValue: 6 }],
+    buttonText: "Calculate Fibonacci",
   },
   // problem--> 03
   {
@@ -39,6 +41,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 2, 3, 4, 5]",
       },
     ],
+    buttonText: "Sum Array",
   },
   // problem--> 04
   {
@@ -52,6 +55,7 @@ export const problems: Problem[] = [
       { id: "base", label: "Base", type: "number", defaultValue: 2 },
       { id: "exponent", label: "Exponent", type: "number", defaultValue: 5 },
     ],
+    buttonText: "Calculate Power",
   },
   // problem--> 05
   {
@@ -68,6 +72,7 @@ export const problems: Problem[] = [
         defaultValue: "hello",
       },
     ],
+    buttonText: "Reverse String",
   },
   // problem--> 06
   {
@@ -78,6 +83,7 @@ export const problems: Problem[] = [
     difficulty: "Beginner",
     category: "Recursion Techniques",
     inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 5 }],
+    buttonText: "Start Countdown",
   },
   // problem--> 07
   {
@@ -96,6 +102,7 @@ export const problems: Problem[] = [
       },
       { id: "endNum", label: "End Number", type: "number", defaultValue: 5 },
     ],
+    buttonText: "Generate Range",
   },
   // problem--> 08
   {
@@ -109,6 +116,7 @@ export const problems: Problem[] = [
       { id: "a", label: "First Number", type: "number", defaultValue: 48 },
       { id: "b", label: "Second Number", type: "number", defaultValue: 18 },
     ],
+    buttonText: "Find GCD",
   },
   // problem--> 09
   {
@@ -126,6 +134,7 @@ export const problems: Problem[] = [
         defaultValue: "racecar",
       },
     ],
+    buttonText: "Check Palindrome",
   },
   // problem--> 10
   {
@@ -149,6 +158,7 @@ export const problems: Problem[] = [
         defaultValue: 2,
       },
     ],
+    buttonText: "Count Occurrences",
   },
   // problem--> 11
   {
@@ -161,6 +171,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Integer (n)", type: "number", defaultValue: 12345 },
     ],
+    buttonText: "Sum Digits",
   },
   // problem--> 12
   {
@@ -173,6 +184,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Integer (n)", type: "number", defaultValue: 10 },
     ],
+    buttonText: "Check if Even",
   },
   // problem--> 13
   {
@@ -190,6 +202,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 2, 3, 4]",
       },
     ],
+    buttonText: "Calculate Product",
   },
   // problem--> 14
   {
@@ -202,6 +215,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Decimal Number", type: "number", defaultValue: 23 },
     ],
+    buttonText: "Convert to Binary",
   },
   // problem--> 15
   {
@@ -220,6 +234,7 @@ export const problems: Problem[] = [
       },
       { id: "count", label: "Count", type: "number", defaultValue: 3 },
     ],
+    buttonText: "Replicate Element",
   },
   // problem--> 16
   {
@@ -238,6 +253,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target Value", type: "number", defaultValue: 23 },
     ],
+    buttonText: "Run Binary Search",
   },
   // problem--> 17
   {
@@ -255,6 +271,7 @@ export const problems: Problem[] = [
         defaultValue: "[38, 27, 43, 3, 9, 82, 10]",
       },
     ],
+    buttonText: "Run Merge Sort",
   },
   // problem--> 18
   {
@@ -273,6 +290,7 @@ export const problems: Problem[] = [
           '{"value": 10, "left": {"value": 5, "left": null, "right": null}, "right": {"value": 15, "left": null, "right": {"value": 20, "left": null, "right": null}}}',
       },
     ],
+    buttonText: "Sum Tree Nodes",
   },
   // problem--> 19
   {
@@ -291,6 +309,7 @@ export const problems: Problem[] = [
           '{"value": 3, "left": {"value": 9, "left": null, "right": null}, "right": {"value": 20, "left": {"value": 15, "left": null, "right": null}, "right": {"value": 7, "left": null, "right": null}}}',
       },
     ],
+    buttonText: "Find Tree Depth",
   },
   // problem--> 20
   {
@@ -303,6 +322,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "str", label: "Input String", type: "text", defaultValue: "abc" },
     ],
+    buttonText: "Generate Permutations",
   },
   // problem--> 21
   {
@@ -320,6 +340,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 2, 3]",
       },
     ],
+    buttonText: "Generate Power Set",
   },
   // problem--> 22
   {
@@ -337,6 +358,7 @@ export const problems: Problem[] = [
         defaultValue: 4,
       },
     ],
+    buttonText: "Count Ways",
   },
   // problem--> 23
   {
@@ -354,6 +376,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, [2, 3], [4, [5]]]",
       },
     ],
+    buttonText: "Flatten Array",
   },
   // problem--> 24
   {
@@ -371,6 +394,7 @@ export const problems: Problem[] = [
         defaultValue: 4,
       },
     ],
+    buttonText: "Get Triangle Row",
   },
   // problem--> 25
   {
@@ -390,6 +414,7 @@ export const problems: Problem[] = [
       },
       { id: "value", label: "Value to find", type: "number", defaultValue: 5 },
     ],
+    buttonText: "Search in Tree",
   },
   // problem--> 26
   {
@@ -402,6 +427,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Board Size (N)", type: "number", defaultValue: 4 },
     ],
+    buttonText: "Solve N-Queens",
   },
   // problem--> 27
   {
@@ -420,6 +446,7 @@ export const problems: Problem[] = [
           "[[5,3,0,0,7,0,0,0,0],[6,0,0,1,9,5,0,0,0],[0,9,8,0,0,0,0,6,0],[8,0,0,0,6,0,0,0,3],[4,0,0,8,0,3,0,0,1],[7,0,0,0,2,0,0,0,6],[0,6,0,0,0,0,2,8,0],[0,0,0,4,1,9,0,0,5],[0,0,0,0,8,0,0,7,9]]",
       },
     ],
+    buttonText: "Solve Sudoku",
   },
   // problem--> 28
   {
@@ -438,6 +465,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 2, 3]",
       },
     ],
+    buttonText: "Find Combinations",
   },
   // problem--> 29
   {
@@ -461,6 +489,7 @@ export const problems: Problem[] = [
         defaultValue: "ABCCED",
       },
     ],
+    buttonText: "Search for Word",
   },
   // problem--> 30
   {
@@ -478,6 +507,7 @@ export const problems: Problem[] = [
         defaultValue: 3,
       },
     ],
+    buttonText: "Solve Hanoi",
   },
   // problem--> 31
   {
@@ -496,6 +526,7 @@ export const problems: Problem[] = [
         defaultValue: 2,
       },
     ],
+    buttonText: "Find Combinations",
   },
   // problem--> 32
   {
@@ -513,6 +544,7 @@ export const problems: Problem[] = [
         defaultValue: 3,
       },
     ],
+    buttonText: "Generate Parentheses",
   },
   // problem--> 33
   {
@@ -525,6 +557,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "str", label: "Input String", type: "text", defaultValue: "a1b2" },
     ],
+    buttonText: "Generate Permutations",
   },
   // problem--> 34
   {
@@ -542,6 +575,7 @@ export const problems: Problem[] = [
         defaultValue: "3[a2[c]]",
       },
     ],
+    buttonText: "Decode String",
   },
   // problem--> 35
   {
@@ -560,6 +594,7 @@ export const problems: Problem[] = [
           '{"value": 4, "left": {"value": 2, "left": {"value": 1, "left": null, "right": null}, "right": {"value": 3, "left": null, "right": null}}, "right": {"value": 5, "left": null, "right": null}}',
       },
     ],
+    buttonText: "Traverse Tree",
   },
   // problem--> 36
   {
@@ -578,6 +613,7 @@ export const problems: Problem[] = [
           '{"value": 4, "left": {"value": 2, "left": {"value": 1, "left": null, "right": null}, "right": {"value": 3, "left": null, "right": null}}, "right": {"value": 5, "left": null, "right": null}}',
       },
     ],
+    buttonText: "Traverse Tree",
   },
   // problem--> 37
   {
@@ -596,6 +632,7 @@ export const problems: Problem[] = [
           '{"value": 4, "left": {"value": 2, "left": {"value": 1, "left": null, "right": null}, "right": {"value": 3, "left": null, "right": null}}, "right": {"value": 5, "left": null, "right": null}}',
       },
     ],
+    buttonText: "Traverse Tree",
   },
   // problem--> 38
   {
@@ -614,6 +651,7 @@ export const problems: Problem[] = [
           '{"a": "hello", "b": 123, "c": {"d": "world", "e": false}}',
       },
     ],
+    buttonText: "Collect Strings",
   },
   // problem--> 39
   {
@@ -624,6 +662,7 @@ export const problems: Problem[] = [
     difficulty: "Intermediate",
     category: "Recursion Techniques",
     inputs: [{ id: "n", label: "Index (n)", type: "number", defaultValue: 20 }],
+    buttonText: "Calculate Efficiently",
   },
   // problem--> 40
   {
@@ -641,6 +680,7 @@ export const problems: Problem[] = [
         defaultValue: '{"a": 2, "b": {"c": 3, "d": 4}, "e": 5, "f": {"g": 6}}',
       },
     ],
+    buttonText: "Calculate Sum",
   },
   // problem--> 41
   {
@@ -658,6 +698,7 @@ export const problems: Problem[] = [
         defaultValue: '["apple", "banana", "cherry"]',
       },
     ],
+    buttonText: "Capitalize Words",
   },
   // problem--> 42
   {
@@ -676,6 +717,7 @@ export const problems: Problem[] = [
           '{"num": 1, "test": [], "data": {"val": 4, "info": {"isRight": true, "blah": 123}}}',
       },
     ],
+    buttonText: "Stringify Numbers",
   },
   // problem--> 43
   {
@@ -693,6 +735,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 2, 4, 8, 10]",
       },
     ],
+    buttonText: "Check If Sorted",
   },
   // problem--> 44
   {
@@ -711,6 +754,7 @@ export const problems: Problem[] = [
           '{"value": 1, "next": {"value": 2, "next": {"value": 3, "next": null}}}',
       },
     ],
+    buttonText: "Reverse List",
   },
   // problem--> 45
   {
@@ -730,6 +774,7 @@ export const problems: Problem[] = [
       },
       { id: "sum", label: "Target Sum", type: "number", defaultValue: 22 },
     ],
+    buttonText: "Find Path Sum",
   },
   // problem--> 46
   {
@@ -747,6 +792,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 1, 2]",
       },
     ],
+    buttonText: "Generate Permutations",
   },
   // problem--> 47
   {
@@ -764,6 +810,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 2, 2]",
       },
     ],
+    buttonText: "Generate Subsets",
   },
   // problem--> 48
   {
@@ -782,6 +829,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target Sum", type: "number", defaultValue: 7 },
     ],
+    buttonText: "Find Combinations",
   },
   // problem--> 49
   {
@@ -794,6 +842,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "s", label: "Input String", type: "text", defaultValue: "aab" },
     ],
+    buttonText: "Partition String",
   },
   // problem--> 50
   {
@@ -811,6 +860,7 @@ export const problems: Problem[] = [
         defaultValue: "[10, 80, 30, 90, 40, 50, 70]",
       },
     ],
+    buttonText: "Run Quick Sort",
   },
   // problem--> 51
   {
@@ -828,6 +878,7 @@ export const problems: Problem[] = [
         defaultValue: "hello world",
       },
     ],
+    buttonText: "Count Vowels",
   },
   // problem--> 52
   {
@@ -846,6 +897,7 @@ export const problems: Problem[] = [
           '{"value": 5, "left": {"value": 1}, "right": {"value": 7, "left": {"value": 6}, "right": {"value": 8}}}',
       },
     ],
+    buttonText: "Validate BST",
   },
   // problem--> 53
   {
@@ -858,6 +910,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Board length (n)", type: "number", defaultValue: 4 },
     ],
+    buttonText: "Count Tiling Ways",
   },
   // problem--> 54
   {
@@ -871,6 +924,7 @@ export const problems: Problem[] = [
       { id: "m", label: "Grid Rows (M)", type: "number", defaultValue: 3 },
       { id: "n", label: "Grid Columns (N)", type: "number", defaultValue: 3 },
     ],
+    buttonText: "Count Paths",
   },
   // problem--> 55
   {
@@ -889,6 +943,7 @@ export const problems: Problem[] = [
         defaultValue: '["leet", "code"]',
       },
     ],
+    buttonText: "Check Word Break",
   },
   // problem--> 56
   {
@@ -906,6 +961,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 5, 2, 9, 3]",
       },
     ],
+    buttonText: "Find Maximum",
   },
   // problem--> 57
   {
@@ -926,6 +982,7 @@ export const problems: Problem[] = [
       { id: "p", label: "First Node Value", type: "number", defaultValue: 2 },
       { id: "q", label: "Second Node Value", type: "number", defaultValue: 8 },
     ],
+    buttonText: "Find LCA",
   },
   // problem--> 58
   {
@@ -944,6 +1001,7 @@ export const problems: Problem[] = [
           '{"value": 3, "left": {"value": 9}, "right": {"value": 20, "left": {"value": 15}, "right": {"value": 7}}}',
       },
     ],
+    buttonText: "Check Balance",
   },
   // problem--> 59
   {
@@ -957,6 +1015,7 @@ export const problems: Problem[] = [
       { id: "s", label: "String", type: "text", defaultValue: "aab" },
       { id: "p", label: "Pattern", type: "text", defaultValue: "c*a*b" },
     ],
+    buttonText: "Match Pattern",
   },
   // problem--> 60
   {
@@ -969,6 +1028,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Integer (n)", type: "number", defaultValue: 38 },
     ],
+    buttonText: "Calculate Digital Root",
   },
   // problem--> 61
   {
@@ -987,6 +1047,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Find First Index",
   },
   // problem--> 62
   {
@@ -1005,6 +1066,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Find Last Index",
   },
   // problem--> 63
   {
@@ -1015,6 +1077,7 @@ export const problems: Problem[] = [
     difficulty: "Beginner",
     category: "Recursion Techniques",
     inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 4 }],
+    buttonText: "Print Pattern",
   },
   // problem--> 64
   {
@@ -1033,6 +1096,7 @@ export const problems: Problem[] = [
           '{"value": 1, "left": {"value": 2}, "right": {"value": 3, "left": {"value": 4}, "right": {"value": 5}}}',
       },
     ],
+    buttonText: "Count Leaf Nodes",
   },
   // problem--> 65
   {
@@ -1051,6 +1115,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "Skip count (k)", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Solve Josephus Problem",
   },
   // problem--> 66
   {
@@ -1068,6 +1133,7 @@ export const problems: Problem[] = [
         defaultValue: "23",
       },
     ],
+    buttonText: "Find Combinations",
   },
   // problem--> 67
   {
@@ -1088,6 +1154,7 @@ export const problems: Problem[] = [
       { id: "sc", label: "Start Column", type: "number", defaultValue: 1 },
       { id: "newColor", label: "New Color", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Fill Image",
   },
   // problem--> 68
   {
@@ -1105,6 +1172,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,0,0],[0,1,0],[0,0,0]]",
       },
     ],
+    buttonText: "Count Paths",
   },
   // problem--> 69
   {
@@ -1117,6 +1185,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Number of bits (n)", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Generate Gray Code",
   },
   // problem--> 70
   {
@@ -1134,6 +1203,7 @@ export const problems: Problem[] = [
         defaultValue: '{"a": 1, "b": {"c": [2, 3]}}',
       },
     ],
+    buttonText: "Deep Clone Object",
   },
   // problem--> 71
   {
@@ -1147,6 +1217,7 @@ export const problems: Problem[] = [
       { id: "m", label: "m", type: "number", defaultValue: 2 },
       { id: "n", label: "n", type: "number", defaultValue: 1 },
     ],
+    buttonText: "Calculate Ackermann",
   },
   // problem--> 72
   {
@@ -1165,6 +1236,7 @@ export const problems: Problem[] = [
           '{"value": 1, "next": {"value": 1, "next": {"value": 2, "next": null}}}',
       },
     ],
+    buttonText: "Remove Duplicates",
   },
   // problem--> 73
   {
@@ -1183,6 +1255,7 @@ export const problems: Problem[] = [
           '{"value": 1, "left": {"value": 2, "left": {"value": 3}, "right": {"value": 4}}, "right": {"value": 2, "left": {"value": 4}, "right": {"value": 3}}}',
       },
     ],
+    buttonText: "Check Symmetry",
   },
   // problem--> 74
   {
@@ -1202,6 +1275,7 @@ export const problems: Problem[] = [
       },
       { id: "val", label: "Value to search", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Search in BST",
   },
   // problem--> 75
   {
@@ -1219,6 +1293,7 @@ export const problems: Problem[] = [
         defaultValue: "[-10, -3, 0, 5, 9]",
       },
     ],
+    buttonText: "Convert to BST",
   },
   // problem--> 76
   {
@@ -1232,6 +1307,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number String", type: "text", defaultValue: "123" },
       { id: "target", label: "Target Value", type: "number", defaultValue: 6 },
     ],
+    buttonText: "Find Expressions",
   },
   // problem--> 77
   {
@@ -1256,6 +1332,7 @@ export const problems: Problem[] = [
       },
       { id: "W", label: "Knapsack Capacity", type: "number", defaultValue: 50 },
     ],
+    buttonText: "Solve Knapsack",
   },
   // problem--> 78
   {
@@ -1279,6 +1356,7 @@ export const problems: Problem[] = [
         defaultValue: "ace",
       },
     ],
+    buttonText: "Find LCS Length",
   },
   // problem--> 79
   {
@@ -1292,6 +1370,7 @@ export const problems: Problem[] = [
       { id: "word1", label: "First Word", type: "text", defaultValue: "horse" },
       { id: "word2", label: "Second Word", type: "text", defaultValue: "ros" },
     ],
+    buttonText: "Calculate Distance",
   },
   // problem--> 80
   {
@@ -1309,6 +1388,7 @@ export const problems: Problem[] = [
         defaultValue: "[[1,2],[3],[3],[]]",
       },
     ],
+    buttonText: "Find All Paths",
   },
   // problem--> 81
   {
@@ -1319,6 +1399,7 @@ export const problems: Problem[] = [
     difficulty: "Intermediate",
     category: "Recursion Techniques",
     inputs: [{ id: "n", label: "Term (n)", type: "number", defaultValue: 4 }],
+    buttonText: "Generate Term",
   },
   // problem--> 82
   {
@@ -1337,6 +1418,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target Sum", type: "number", defaultValue: 10 },
     ],
+    buttonText: "Check for Group Sum",
   },
   // problem--> 83
   {
@@ -1355,6 +1437,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target Sum", type: "number", defaultValue: 10 },
     ],
+    buttonText: "Check for Group Sum",
   },
   // problem--> 84
   {
@@ -1372,6 +1455,7 @@ export const problems: Problem[] = [
         defaultValue: "[-10, -5, 0, 3, 7]",
       },
     ],
+    buttonText: "Find Magic Index",
   },
   // problem--> 85
   {
@@ -1392,6 +1476,7 @@ export const problems: Problem[] = [
       { id: "c", label: "Start Column", type: "number", defaultValue: 1 },
       { id: "newColor", label: "New Color", type: "number", defaultValue: 3 },
     ],
+    buttonText: "Fill with Paint",
   },
   // problem--> 86
   {
@@ -1409,6 +1494,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,0,0],[0,1,0],[0,0,0]]",
       },
     ],
+    buttonText: "Find Robot Path",
   },
   // problem--> 87
   {
@@ -1432,6 +1518,7 @@ export const problems: Problem[] = [
         defaultValue: "[34, 8, 50]",
       },
     ],
+    buttonText: "Find Optimal Cost",
   },
   // problem--> 88
   {
@@ -1449,6 +1536,7 @@ export const problems: Problem[] = [
         defaultValue: "[10, 30, 5, 60]",
       },
     ],
+    buttonText: "Find Optimal Order",
   },
   // problem--> 89
   {
@@ -1461,6 +1549,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "str", label: "Input String", type: "text", defaultValue: "abc" },
     ],
+    buttonText: "Generate Subsequences",
   },
   // problem--> 90
   {
@@ -1473,6 +1562,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "str", label: "Input String", type: "text", defaultValue: "abb" },
     ],
+    buttonText: "Check String Rules",
   },
   // problem--> 91
   {
@@ -1492,6 +1582,7 @@ export const problems: Problem[] = [
       },
       { id: "key", label: "Search Key", type: "number", defaultValue: 29 },
     ],
+    buttonText: "Search Matrix",
   },
   // problem--> 92
   {
@@ -1504,6 +1595,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Number of Friends", type: "number", defaultValue: 3 },
     ],
+    buttonText: "Count Pairings",
   },
   // problem--> 93
   {
@@ -1522,6 +1614,7 @@ export const problems: Problem[] = [
       },
       { id: "x", label: "Number to find", type: "number", defaultValue: 8 },
     ],
+    buttonText: "Find All Indices",
   },
   // problem--> 94
   {
@@ -1534,6 +1627,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "str", label: "Input String", type: "text", defaultValue: "cab" },
     ],
+    buttonText: "Generate Power Set",
   },
   // problem--> 95
   {
@@ -1552,6 +1646,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target Sum", type: "number", defaultValue: 8 },
     ],
+    buttonText: "Find Combinations",
   },
   // problem--> 96
   {
@@ -1562,6 +1657,7 @@ export const problems: Problem[] = [
     difficulty: "Advanced",
     category: "Recursion Techniques",
     inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 2 }],
+    buttonText: "Count Arrangements",
   },
   // problem--> 97
   {
@@ -1580,6 +1676,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target", type: "number", defaultValue: 3 },
     ],
+    buttonText: "Find Expressions",
   },
   // problem--> 98
   {
@@ -1598,6 +1695,7 @@ export const problems: Problem[] = [
         defaultValue: "eidbaooo",
       },
     ],
+    buttonText: "Check for Permutation",
   },
   // problem--> 99
   {
@@ -1627,6 +1725,7 @@ export const problems: Problem[] = [
         defaultValue: "[3,2]",
       },
     ],
+    buttonText: "Find Lowest Price",
   },
   // problem--> 100
   {
@@ -1640,6 +1739,7 @@ export const problems: Problem[] = [
       { id: "s", label: "String", type: "text", defaultValue: "adceb" },
       { id: "p", label: "Pattern", type: "text", defaultValue: "*a*b" },
     ],
+    buttonText: "Match Pattern",
   },
   // problem--> 101
   {
@@ -1665,6 +1765,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "Distance K", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Find Nodes",
   },
   // problem--> 102
   {
@@ -1683,6 +1784,7 @@ export const problems: Problem[] = [
           '{"value":1,"left":{"value":2,"left":{"value":3},"right":{"value":4}},"right":{"value":5,"right":{"value":6}}}',
       },
     ],
+    buttonText: "Flatten Tree",
   },
   // problem--> 103
   {
@@ -1706,6 +1808,7 @@ export const problems: Problem[] = [
         defaultValue: 4,
       },
     ],
+    buttonText: "Check Partition",
   },
   // problem--> 104
   {
@@ -1723,6 +1826,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,1],[1,0]]",
       },
     ],
+    buttonText: "Construct Tree",
   },
   // problem--> 105
   {
@@ -1746,6 +1850,7 @@ export const problems: Problem[] = [
         defaultValue: "MONEY",
       },
     ],
+    buttonText: "Solve Puzzle",
   },
   // problem--> 106
   {
@@ -1758,6 +1863,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "s", label: "Input String", type: "text", defaultValue: "   -42" },
     ],
+    buttonText: "Convert to Integer",
   },
   // problem--> 107
   {
@@ -1777,6 +1883,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "Group size (k)", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Reverse List Groups",
   },
   // problem--> 108
   {
@@ -1789,6 +1896,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "s", label: "Input String", type: "text", defaultValue: "()())()" },
     ],
+    buttonText: "Remove Invalid",
   },
   // problem--> 109
   {
@@ -1806,6 +1914,7 @@ export const problems: Problem[] = [
         defaultValue: "11235813",
       },
     ],
+    buttonText: "Split into Sequence",
   },
   // problem--> 110
   {
@@ -1836,6 +1945,7 @@ export const problems: Problem[] = [
         defaultValue: "[4,4]",
       },
     ],
+    buttonText: "Solve Maze",
   },
   // problem--> 111
   {
@@ -1854,6 +1964,7 @@ export const problems: Problem[] = [
           '[["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]',
       },
     ],
+    buttonText: "Count Islands",
   },
   // problem--> 112
   {
@@ -1871,6 +1982,7 @@ export const problems: Problem[] = [
         defaultValue: "[[9,9,4],[6,6,8],[2,1,1]]",
       },
     ],
+    buttonText: "Find Longest Path",
   },
   // problem--> 113
   {
@@ -1888,6 +2000,7 @@ export const problems: Problem[] = [
         defaultValue: "25525511135",
       },
     ],
+    buttonText: "Restore IPs",
   },
   // problem--> 114
   {
@@ -1905,6 +2018,7 @@ export const problems: Problem[] = [
         defaultValue: '["area","lead","wall","lady","ball"]',
       },
     ],
+    buttonText: "Build Word Squares",
   },
   // problem--> 115
   {
@@ -1922,6 +2036,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,1,10],[2,0,5]]",
       },
     ],
+    buttonText: "Settle Debts",
   },
   // problem--> 116
   {
@@ -1940,6 +2055,7 @@ export const problems: Problem[] = [
           '{"root": {"home": {"user": {"file1.txt": "content", "projects": {"project1": {"index.js": "..."}}}}, "etc": {"hosts": "127.0.0.1"}}}',
       },
     ],
+    buttonText: "Traverse File System",
   },
   // problem--> 117
   {
@@ -1960,6 +2076,7 @@ export const problems: Problem[] = [
       { id: "p", label: "First Node Value", type: "number", defaultValue: 5 },
       { id: "q", label: "Second Node Value", type: "number", defaultValue: 1 },
     ],
+    buttonText: "Find LCA",
   },
   // problem--> 118
   {
@@ -1978,6 +2095,7 @@ export const problems: Problem[] = [
         defaultValue: '["cat", "cats", "and", "sand", "dog"]',
       },
     ],
+    buttonText: "Find Sentences",
   },
   // problem--> 119
   {
@@ -1995,6 +2113,7 @@ export const problems: Problem[] = [
         defaultValue: "(add 1 2)",
       },
     ],
+    buttonText: "Evaluate Expression",
   },
   // problem--> 120
   {
@@ -2013,6 +2132,7 @@ export const problems: Problem[] = [
           '{"value": 1, "left": {"value": 2, "left": {"value": 4}, "right": {"value": 5}}, "right": {"value": 3}}',
       },
     ],
+    buttonText: "Find Diameter",
   },
   // problem--> 121
   {
@@ -2030,6 +2150,7 @@ export const problems: Problem[] = [
         defaultValue: "Mg(OH)2",
       },
     ],
+    buttonText: "Count Atoms",
   },
   // problem--> 122
   {
@@ -2048,6 +2169,7 @@ export const problems: Problem[] = [
           '{"value": 5, "left": {"value": 4, "left": {"value": 1}, "right": {"value": 1}}, "right": {"value": 5, "right": {"value": 5}}}',
       },
     ],
+    buttonText: "Find Longest Path",
   },
   // problem--> 123
   {
@@ -2065,6 +2187,7 @@ export const problems: Problem[] = [
         defaultValue: "[4, 1, 8, 7]",
       },
     ],
+    buttonText: "Solve 24 Game",
   },
   // problem--> 124
   {
@@ -2088,6 +2211,7 @@ export const problems: Problem[] = [
         defaultValue: 2,
       },
     ],
+    buttonText: "Crack the Safe",
   },
   // problem--> 125
   {
@@ -2105,6 +2229,7 @@ export const problems: Problem[] = [
         defaultValue: "[[1,0],[0,1]]",
       },
     ],
+    buttonText: "Find Largest Island",
   },
   // problem--> 126
   {
@@ -2122,6 +2247,7 @@ export const problems: Problem[] = [
         defaultValue: "(1+(4+5+2)-3)+(6+8)",
       },
     ],
+    buttonText: "Evaluate Expression",
   },
   // problem--> 127
   {
@@ -2146,6 +2272,7 @@ export const problems: Problem[] = [
         defaultValue: "span",
       },
     ],
+    buttonText: "Traverse DOM",
   },
   // problem--> 128
   {
@@ -2164,6 +2291,7 @@ export const problems: Problem[] = [
       },
       { id: "n", label: "Rod Length", type: "number", defaultValue: 8 },
     ],
+    buttonText: "Maximize Value",
   },
   // problem--> 129
   {
@@ -2176,6 +2304,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "s", label: "Input String", type: "text", defaultValue: "bbbab" },
     ],
+    buttonText: "Find Longest Subsequence",
   },
   // problem--> 130
   {
@@ -2193,6 +2322,7 @@ export const problems: Problem[] = [
         defaultValue: 3,
       },
     ],
+    buttonText: "Generate Unique BSTs",
   },
   // problem--> 131
   {
@@ -2210,6 +2340,7 @@ export const problems: Problem[] = [
         defaultValue: "[[1,3,1],[1,5,1],[4,2,1]]",
       },
     ],
+    buttonText: "Find Minimum Path",
   },
   // problem--> 132
   {
@@ -2225,6 +2356,7 @@ export const problems: Problem[] = [
       { id: "row", label: "Start Row", type: "number", defaultValue: 0 },
       { id: "column", label: "Start Column", type: "number", defaultValue: 0 },
     ],
+    buttonText: "Calculate Probability",
   },
   // problem--> 133
   {
@@ -2238,6 +2370,7 @@ export const problems: Problem[] = [
       { id: "m", label: "Min Length (m)", type: "number", defaultValue: 1 },
       { id: "n", label: "Max Length (n)", type: "number", defaultValue: 1 },
     ],
+    buttonText: "Count Patterns",
   },
   // problem--> 134
   {
@@ -2261,6 +2394,7 @@ export const problems: Problem[] = [
         defaultValue: "ap",
       },
     ],
+    buttonText: "Search with Prefix",
   },
   // problem--> 135
   {
@@ -2280,6 +2414,7 @@ export const problems: Problem[] = [
         defaultValue: "aadbbcbcac",
       },
     ],
+    buttonText: "Check Interleaving",
   },
   // problem--> 136
   {
@@ -2297,6 +2432,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,0,1,0,0],[0,1,1,0,0],[0,0,0,0,0],[1,1,0,1,1]]",
       },
     ],
+    buttonText: "Find Max Area",
   },
   // problem--> 137
   {
@@ -2314,6 +2450,7 @@ export const problems: Problem[] = [
         defaultValue: "2*3-4*5",
       },
     ],
+    buttonText: "Compute All Results",
   },
   // problem--> 138
   {
@@ -2332,6 +2469,7 @@ export const problems: Problem[] = [
       },
       { id: "sum", label: "Target Sum", type: "number", defaultValue: 9 },
     ],
+    buttonText: "Check for Subset Sum",
   },
   // problem--> 139
   {
@@ -2349,6 +2487,7 @@ export const problems: Problem[] = [
         defaultValue: "[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]",
       },
     ],
+    buttonText: "Count Unique Paths",
   },
   // problem--> 140
   {
@@ -2373,6 +2512,7 @@ export const problems: Problem[] = [
         defaultValue: '["oath","pea","eat","rain"]',
       },
     ],
+    buttonText: "Solve Boggle",
   },
   // problem--> 141
   {
@@ -2396,6 +2536,7 @@ export const problems: Problem[] = [
         defaultValue: "[9,3,15,20,7]",
       },
     ],
+    buttonText: "Construct Tree",
   },
   // problem--> 142
   {
@@ -2419,6 +2560,7 @@ export const problems: Problem[] = [
         defaultValue: "[9,15,7,20,3]",
       },
     ],
+    buttonText: "Construct Tree",
   },
   // problem--> 143
   {
@@ -2437,6 +2579,7 @@ export const problems: Problem[] = [
           '{"value":1,"left":{"value":2},"right":{"value":3,"left":{"value":4},"right":{"value":5}}}',
       },
     ],
+    buttonText: "Process Tree",
   },
   // problem--> 144
   {
@@ -2456,6 +2599,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "K", type: "number", defaultValue: 1 },
     ],
+    buttonText: "Find Kth Smallest",
   },
   // problem--> 145
   {
@@ -2473,6 +2617,7 @@ export const problems: Problem[] = [
         defaultValue: "[1,5,11,5]",
       },
     ],
+    buttonText: "Check Partition",
   },
   // problem--> 146
   {
@@ -2490,6 +2635,7 @@ export const problems: Problem[] = [
         defaultValue: "[3,4,5,1,2]",
       },
     ],
+    buttonText: "Find Minimum",
   },
   // problem--> 147
   {
@@ -2508,6 +2654,7 @@ export const problems: Problem[] = [
       },
       { id: "target", label: "Target Value", type: "number", defaultValue: 0 },
     ],
+    buttonText: "Search Array",
   },
   // problem--> 148
   {
@@ -2526,6 +2673,7 @@ export const problems: Problem[] = [
           '{"value":1,"left":{"value":2,"left":{"value":4},"right":{"value":5}},"right":{"value":3,"left":{"value":6},"right":{"value":7}}}',
       },
     ],
+    buttonText: "Connect Nodes",
   },
   // problem--> 149
   {
@@ -2538,6 +2686,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Array Length (n)", type: "number", defaultValue: 4 },
     ],
+    buttonText: "Generate Array",
   },
   // problem--> 150
   {
@@ -2559,6 +2708,7 @@ export const problems: Problem[] = [
       { id: "dst", label: "Destination City", type: "number", defaultValue: 2 },
       { id: "k", label: "Max Stops (k)", type: "number", defaultValue: 1 },
     ],
+    buttonText: "Find Cheapest Price",
   },
   // problem--> 151
   {
@@ -2582,6 +2732,7 @@ export const problems: Problem[] = [
         defaultValue: '"WRBRW"',
       },
     ],
+    buttonText: "Solve Zuma",
   },
   // problem--> 152
   {
@@ -2600,6 +2751,7 @@ export const problems: Problem[] = [
           '["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"]',
       },
     ],
+    buttonText: "Find Words",
   },
   // problem--> 153
   {
@@ -2613,6 +2765,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Row (n)", type: "number", defaultValue: 4 },
       { id: "k", label: "Index (k)", type: "number", defaultValue: 5 },
     ],
+    buttonText: "Find Symbol",
   },
   // problem--> 154
   {
@@ -2630,6 +2783,7 @@ export const problems: Problem[] = [
         defaultValue: "[1, 17, 8]",
       },
     ],
+    buttonText: "Count Permutations",
   },
   // problem--> 155
   {
@@ -2659,6 +2813,7 @@ export const problems: Problem[] = [
         defaultValue: "[0,2]",
       },
     ],
+    buttonText: "Check Path",
   },
   // problem--> 156
   {
@@ -2672,6 +2827,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Height (n)", type: "number", defaultValue: 2 },
       { id: "m", label: "Width (m)", type: "number", defaultValue: 3 },
     ],
+    buttonText: "Find Fewest Squares",
   },
   // problem--> 157
   {
@@ -2689,6 +2845,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,6,0],[5,8,7],[0,9,0]]",
       },
     ],
+    buttonText: "Collect Max Gold",
   },
   // problem--> 158
   {
@@ -2706,6 +2863,7 @@ export const problems: Problem[] = [
         defaultValue: "(123)",
       },
     ],
+    buttonText: "Restore Coordinates",
   },
   // problem--> 159
   {
@@ -2724,6 +2882,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "K", type: "number", defaultValue: 3 },
     ],
+    buttonText: "Find Kth Permutation",
   },
   // problem--> 160
   {
@@ -2741,6 +2900,7 @@ export const problems: Problem[] = [
         defaultValue: "[1,1,2,2,2]",
       },
     ],
+    buttonText: "Check for Square",
   },
   // problem--> 161
   {
@@ -2764,6 +2924,7 @@ export const problems: Problem[] = [
         defaultValue: 11,
       },
     ],
+    buttonText: "Check If I Can Win",
   },
   // problem--> 162
   {
@@ -2781,6 +2942,7 @@ export const problems: Problem[] = [
         defaultValue: "[[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]",
       },
     ],
+    buttonText: "Generate Skyline",
   },
   // problem--> 163
   {
@@ -2798,6 +2960,7 @@ export const problems: Problem[] = [
         defaultValue: "[5,2,6,1]",
       },
     ],
+    buttonText: "Count Smaller Numbers",
   },
   // problem--> 164
   {
@@ -2815,6 +2978,7 @@ export const problems: Problem[] = [
         defaultValue: "[0,1,3,5,6,8,12,17]",
       },
     ],
+    buttonText: "Check if Frog Can Cross",
   },
   // problem--> 165
   {
@@ -2832,6 +2996,7 @@ export const problems: Problem[] = [
         defaultValue: "[3,1,5,8]",
       },
     ],
+    buttonText: "Maximize Coins",
   },
   // problem--> 166
   {
@@ -2849,6 +3014,7 @@ export const problems: Problem[] = [
         defaultValue: "[1,3,2,2,2,3,4,3,1]",
       },
     ],
+    buttonText: "Maximize Score",
   },
   // problem--> 167
   {
@@ -2861,6 +3027,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "n", label: "Record Length (n)", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Count Awardable Records",
   },
   // problem--> 168
   {
@@ -2878,6 +3045,7 @@ export const problems: Problem[] = [
         defaultValue: '["alex","loves","leetcode"]',
       },
     ],
+    buttonText: "Find Superstring",
   },
   // problem--> 169
   {
@@ -2896,6 +3064,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,1],[1,2],[2,0],[1,3]]",
       },
     ],
+    buttonText: "Find Critical Connections",
   },
   // problem--> 170
   {
@@ -2908,6 +3077,7 @@ export const problems: Problem[] = [
     inputs: [
       { id: "s", label: "Input String", type: "text", defaultValue: "aab" },
     ],
+    buttonText: "Find Minimum Cuts",
   },
   // problem--> 171
   {
@@ -2926,6 +3096,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "K", type: "number", defaultValue: 1 },
     ],
+    buttonText: "Find Max Value",
   },
   // problem--> 172
   {
@@ -2943,6 +3114,7 @@ export const problems: Problem[] = [
         defaultValue: '"3+2*2"',
       },
     ],
+    buttonText: "Evaluate Expression",
   },
   // problem--> 173
   {
@@ -2960,6 +3132,7 @@ export const problems: Problem[] = [
         defaultValue: '"aaabbb"',
       },
     ],
+    buttonText: "Find Minimum Turns",
   },
   // problem--> 174
   {
@@ -2977,6 +3150,7 @@ export const problems: Problem[] = [
         defaultValue: "[2,1,3]",
       },
     ],
+    buttonText: "Count Reorderings",
   },
   // problem--> 175
   {
@@ -2994,6 +3168,7 @@ export const problems: Problem[] = [
         defaultValue: "[[3,1,1],[2,5,1],[1,5,5],[2,1,1]]",
       },
     ],
+    buttonText: "Collect Cherries",
   },
   // problem--> 176
   {
@@ -3011,6 +3186,7 @@ export const problems: Problem[] = [
         defaultValue: "[2,1,5,6,2,3]",
       },
     ],
+    buttonText: "Find Largest Area",
   },
   // problem--> 177
   {
@@ -3028,6 +3204,7 @@ export const problems: Problem[] = [
         defaultValue: "[1,3,2,3,1]",
       },
     ],
+    buttonText: "Count Reverse Pairs",
   },
   // problem--> 178
   {
@@ -3046,6 +3223,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "Merge Count (k)", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Find Minimum Cost",
   },
   // problem--> 179
   {
@@ -3064,6 +3242,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,1],[0,2],[2,3],[2,4],[2,5]]",
       },
     ],
+    buttonText: "Calculate Distances",
   },
   // problem--> 180
   {
@@ -3082,6 +3261,7 @@ export const problems: Problem[] = [
       },
       { id: "arrLen", label: "Array Length", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Count Ways",
   },
   // problem--> 181
   {
@@ -3101,6 +3281,7 @@ export const problems: Problem[] = [
         defaultValue: '["hot","dot","dog","lot","log","cog"]',
       },
     ],
+    buttonText: "Find Transformations",
   },
   // problem--> 182
   {
@@ -3124,6 +3305,7 @@ export const problems: Problem[] = [
         defaultValue: '"abc"',
       },
     ],
+    buttonText: "Find Anagrams",
   },
   // problem--> 183
   {
@@ -3142,6 +3324,7 @@ export const problems: Problem[] = [
           '{"value":3,"left":{"value":1,"left":{"value":3}},"right":{"value":4,"left":{"value":1},"right":{"value":5}}}',
       },
     ],
+    buttonText: "Count Good Nodes",
   },
   // problem--> 184
   {
@@ -3160,6 +3343,7 @@ export const problems: Problem[] = [
           '{"value":4,"left":{"value":9,"left":{"value":5},"right":{"value":1}},"right":{"value":0}}',
       },
     ],
+    buttonText: "Calculate Sum",
   },
   // problem--> 185
   {
@@ -3178,6 +3362,7 @@ export const problems: Problem[] = [
           '{"value":-10,"left":{"value":9},"right":{"value":20,"left":{"value":15},"right":{"value":7}}}',
       },
     ],
+    buttonText: "Find Maximum Path Sum",
   },
   // problem--> 186
   {
@@ -3203,6 +3388,7 @@ export const problems: Problem[] = [
       },
       { id: "k", label: "Distance K", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Find Nodes",
   },
   // problem--> 187
   {
@@ -3220,6 +3406,7 @@ export const problems: Problem[] = [
         defaultValue: 3,
       },
     ],
+    buttonText: "Count Unique BSTs",
   },
   // problem--> 188
   {
@@ -3250,6 +3437,7 @@ export const problems: Problem[] = [
         defaultValue: 6,
       },
     ],
+    buttonText: "Find Directions",
   },
   // problem--> 189
   {
@@ -3268,6 +3456,7 @@ export const problems: Problem[] = [
       },
       { id: "d", label: "Number of Days (d)", type: "number", defaultValue: 2 },
     ],
+    buttonText: "Find Min Difficulty",
   },
   // problem--> 190
   {
@@ -3287,6 +3476,7 @@ export const problems: Problem[] = [
       },
       { id: "targetSum", label: "Target Sum", type: "number", defaultValue: 8 },
     ],
+    buttonText: "Count Paths",
   },
   // problem--> 191
   {
@@ -3305,6 +3495,7 @@ export const problems: Problem[] = [
           '{"value":5,"left":{"value":1,"left":{"value":5},"right":{"value":5}},"right":{"value":5,"right":{"value":5}}}',
       },
     ],
+    buttonText: "Count Subtrees",
   },
   // problem--> 192
   {
@@ -3322,6 +3513,7 @@ export const problems: Problem[] = [
         defaultValue: 7,
       },
     ],
+    buttonText: "Generate Trees",
   },
   // problem--> 193
   {
@@ -3339,6 +3531,7 @@ export const problems: Problem[] = [
         defaultValue: '["a","b","ba","bca","bda","bdca"]',
       },
     ],
+    buttonText: "Find Longest Chain",
   },
   // problem--> 194
   {
@@ -3356,6 +3549,7 @@ export const problems: Problem[] = [
         defaultValue: '["wrt","wrf","er","ett","rftt"]',
       },
     ],
+    buttonText: "Derive Alien Order",
   },
   // problem--> 195
   {
@@ -3374,6 +3568,7 @@ export const problems: Problem[] = [
           '[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]',
       },
     ],
+    buttonText: "Reconstruct Itinerary",
   },
   // problem--> 196
   {
@@ -3397,6 +3592,7 @@ export const problems: Problem[] = [
         defaultValue: "[[0,1],[1,0],[0,1],[1,2],[2,0],[3,4]]",
       },
     ],
+    buttonText: "Find Max Requests",
   },
   // problem--> 197
   {
@@ -3410,6 +3606,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Length (n)", type: "number", defaultValue: 3 },
       { id: "k", label: "Difference (k)", type: "number", defaultValue: 7 },
     ],
+    buttonText: "Find Numbers",
   },
   // problem--> 198
   {
@@ -3427,6 +3624,7 @@ export const problems: Problem[] = [
         defaultValue: "[4,6,15,35]",
       },
     ],
+    buttonText: "Find Largest Component",
   },
   // problem--> 199
   {
@@ -3444,6 +3642,7 @@ export const problems: Problem[] = [
         defaultValue: "[1,2,3,4]",
       },
     ],
+    buttonText: "Count Good Subsets",
   },
   // problem--> 200
   {
@@ -3461,5 +3660,6 @@ export const problems: Problem[] = [
         defaultValue: 4,
       },
     ],
+    buttonText: "Solve Stone Game",
   },
 ];
