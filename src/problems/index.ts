@@ -62,17 +62,17 @@ import { problems as recursionTechniquesProblems } from "./recursion-techniques/
 import { solvers as recursionTechniquesSolvers } from "./recursion-techniques/solvers";
 import { explanations as recursionTechniquesExplanations } from "./recursion-techniques/explanations";
 
-import { problems as classesOopProblems } from "./classes-and-oop/problems";
-import { solvers as classesOopSolvers } from "./classes-and-oop/solvers";
-import { explanations as classesOopExplanations } from "./classes-and-oop/explanations";
+// import { problems as classesOopProblems } from "./classes-and-oop/problems";
+// import { solvers as classesOopSolvers } from "./classes-and-oop/solvers";
+// import { explanations as classesOopExplanations } from "./classes-and-oop/explanations";
 
-import { problems as advancedJsFeaturesProblems } from "./advanced-js-features/problems";
-import { solvers as advancedJsFeaturesSolvers } from "./advanced-js-features/solvers";
-import { explanations as advancedJsFeaturesExplanations } from "./advanced-js-features/explanations";
+// import { problems as advancedJsFeaturesProblems } from "./advanced-js-features/problems";
+// import { solvers as advancedJsFeaturesSolvers } from "./advanced-js-features/solvers";
+// import { explanations as advancedJsFeaturesExplanations } from "./advanced-js-features/explanations";
 
-import { problems as asynchronousJsProblems } from "./asynchronous-js/problems";
-import { solvers as asynchronousJsSolvers } from "./asynchronous-js/solvers";
-import { explanations as asynchronousJsExplanations } from "./asynchronous-js/explanations";
+// import { problems as asynchronousJsProblems } from "./asynchronous-js/problems";
+// import { solvers as asynchronousJsSolvers } from "./asynchronous-js/solvers";
+// import { explanations as asynchronousJsExplanations } from "./asynchronous-js/explanations";
 
 import { problems as miniProjectsProblems } from "./mini-projects/problems";
 import { solvers as miniProjectsSolvers } from "./mini-projects/solvers";
@@ -100,9 +100,9 @@ export const allProblems: Problem[] = [
   ...es6FeaturesProblems,
   ...closuresLexicalEnvironmentProblems,
   ...recursionTechniquesProblems,
-  ...classesOopProblems,
-  ...advancedJsFeaturesProblems,
-  ...asynchronousJsProblems,
+  // ...classesOopProblems,
+  // ...advancedJsFeaturesProblems,
+  // ...asynchronousJsProblems,
   ...miniProjectsProblems,
   ...modulesImportsExportsProblems,
 ];
@@ -124,9 +124,9 @@ export const allSolvers: Record<string, Function> = {
   ...es6FeaturesSolvers,
   ...closuresLexicalEnvironmentSolvers,
   ...recursionTechniquesSolvers,
-  ...classesOopSolvers,
-  ...advancedJsFeaturesSolvers,
-  ...asynchronousJsSolvers,
+  // ...classesOopSolvers,
+  // ...advancedJsFeaturesSolvers,
+  // ...asynchronousJsSolvers,
   ...miniProjectsSolvers,
   ...modulesImportsExportsSolvers,
   ...controlFlowLoopsSolvers,
@@ -149,9 +149,9 @@ export const staticExplanations: Record<string, string> = {
   ...es6FeaturesExplanations,
   ...closuresLexicalEnvironmentExplanations,
   ...recursionTechniquesExplanations,
-  ...classesOopExplanations,
-  ...advancedJsFeaturesExplanations,
-  ...asynchronousJsExplanations,
+  // ...classesOopExplanations,
+  // ...advancedJsFeaturesExplanations,
+  // ...asynchronousJsExplanations,
   ...miniProjectsExplanations,
   ...modulesImportsExportsExplanations,
   ...controlFlowLoopsExplanations,
