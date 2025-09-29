@@ -2831,26 +2831,28 @@ const createArrayWrapper = (arr) => {
 - **Encapsulation**: Hiding the internal state and requiring interaction through a public API.
 - **Wrapper Pattern**: An object that encapsulates and enhances another object or data type.
 `,
-
   // problem explanation--> 103
   "closures-binary-function-adapter": `
-### 💡 Problem Breakdown
-A "binary" function is one that accepts exactly two arguments. The task is to create a higher-order function that takes any function and returns a new version of it that will only ever accept and pass on its first two arguments, ignoring any others.
+<h3>💡 Problem Breakdown</h3>
+<p>A "binary" function is one that accepts exactly two arguments. The task is to create a higher-order function (HOF) that takes any function and returns a new version of it that will only ever accept and pass on its first two arguments, ignoring any others. This is a form of function "adapter".</p>
+<p>A classic use case is with <code>Array.prototype.map</code> and <code>parseInt</code>. <code>map</code> calls its callback with three arguments (value, index, array), but <code>parseInt</code> can interpret its second argument as a radix, leading to unexpected results. This adapter solves that problem.</p>
 
-### ⚙️ Solution Walkthrough
-The \`binary(fn)\` function returns a new anonymous function. This new function is a closure that "remembers" the original function \`fn\`. When the new function is called, it takes its first two arguments, \`arg1\` and \`arg2\`, and calls the original \`fn\` with only those two.
+<h3>⚙️ Solution Walkthrough</h3>
+<p>The <code>binary(fn)</code> function returns a new anonymous function. This new function is a closure that "remembers" the original function <code>fn</code>. When the new function is called, it's defined to accept <code>(arg1, arg2)</code>. It then calls <code>fn</code> with only <code>arg1</code> and <code>arg2</code>. This effectively "adapts" the original function's signature, ensuring no extra arguments are passed through.</p>
+<pre><code class="language-javascript">
+const binary = (fn) => (arg1, arg2) => fn(arg1, arg2);
 
-\`\`\`javascript
-const binary = (fn) => {
-  return (arg1, arg2) => fn(arg1, arg2);
-};
-\`\`\`
-This is useful for adapting functions to be used as callbacks in methods like \`Array.prototype.map\`, which pass extra arguments (\`index\`, \`array\`) that can sometimes cause issues with functions like \`parseInt\`.
+// Example usage that is now safe:
+// parseInt is only ever called with the first argument.
+['10', '20', '30'].map(binary(parseInt));
+</code></pre>
 
-### 📚 Key Concepts
-- **Higher-Order Function (HOF)**: A function that takes another function as an argument or returns a function.
-- **Function Adapter**: A function that wraps another function to change its interface or behavior.
-- **Arity**: The number of arguments a function accepts.
+<h3>📚 Key Concepts</h3>
+<ul>
+    <li><strong>Higher-Order Function (HOF)</strong>: A function that takes another function as an argument or returns a function.</li>
+    <li><strong>Function Adapter</strong>: A function that wraps another function to change its interface or behavior.</li>
+    <li><strong>Arity</strong>: The number of arguments a function accepts. The adapter changes the function's effective arity to two.</li>
+</ul>
 `,
 
   // problem explanation--> 104
@@ -3998,19 +4000,41 @@ The \`promisify(fn)\` HOF returns a new function. This new function is a closure
 `,
   // problem explanation--> 173
   "closures-chainable-api-with-async": `
-### 💡 Problem Breakdown
-This is an advanced problem that combines the fluent (chainable) API pattern with asynchronous operations. The key is that each method call must return the main object to allow chaining, but it must also correctly sequence the asynchronous operations.
+<h3>💡 Problem Breakdown</h3>
+<p>This is an advanced problem combining the fluent (chainable) API pattern with asynchronous operations. The key challenge is that each method call must return the main object to allow chaining (e.g., <code>obj.wait(100).log('done')</code>), but it must also correctly sequence the asynchronous operations. Simply returning the promise from each method would break the chain.</p>
 
-### ⚙️ Solution Walkthrough
-The factory's closure maintains a single \`promiseChain\` variable. Each method (\`wait\`, \`log\`) does two things:
-1. It appends a new \`.then()\` to the current \`promiseChain\`, scheduling its own async operation to run after the previous ones.
-2. It reassigns the result of this \`.then()\` call back to the \`promiseChain\` variable.
-3. It returns \`methods\` (the main object) to allow the next call to be chained.
-The closure is essential for managing the single, evolving promise chain.
+<h3>⚙️ Solution Walkthrough</h3>
+<p>The solution uses a closure to manage a single <code>promiseChain</code> variable, which is initialized to a resolved promise (<code>Promise.resolve()</code>). Each chainable method (like <code>wait</code> or <code>log</code>) does three things:</p>
+<ol>
+    <li>It schedules its own asynchronous work by appending a new <code>.then()</code> to the <em>current</em> <code>promiseChain</code>.</li>
+    <li>It reassigns the result of this <code>.then()</code> call back to the <code>promiseChain</code> variable, extending the chain.</li>
+    <li>Crucially, it returns <code>methods</code> (the main object containing all chainable methods), <strong>not</strong> the promise. This is what allows the next method in the sequence to be called.</li>
+</ol>
+<p>The closure is essential for managing the single, evolving promise chain across all method calls.</p>
+<pre><code class="language-javascript">
+const createChain = () => {
+  let promiseChain = Promise.resolve(); // private state
+  const methods = {
+    wait(ms) {
+      // Extend the chain, then return the main object
+      promiseChain = promiseChain.then(() => delay(ms));
+      return methods;
+    },
+    log(msg) {
+      promiseChain = promiseChain.then(() => console.log(msg));
+      return methods;
+    }
+  };
+  return methods;
+};
+</code></pre>
 
-### 📚 Key Concepts
-- **Fluent API**: A design pattern for creating highly readable, chainable interfaces.
-- **Promise Chaining**: The core mechanism for sequencing async operations.
+<h3>📚 Key Concepts</h3>
+<ul>
+    <li><strong>Fluent API</strong>: A design pattern for creating highly readable, chainable interfaces.</li>
+    <li><strong>Promise Chaining</strong>: The core mechanism for sequencing asynchronous operations in order.</li>
+    <li><strong>Closures for State Management</strong>: The closure holds the current state of the promise chain.</li>
+</ul>
 `,
   // problem explanation--> 174
   "closures-memoize-with-custom-resolver": `
@@ -4297,20 +4321,25 @@ This is an advanced problem to solidify the difference between \`this\` and lexi
 `,
   // problem explanation--> 195
   "closures-transactional-state-updates": `
-### 💡 Problem Breakdown
-This pattern is common in systems that require data integrity, like databases. A "transaction" allows you to batch several changes. You can then either "commit" all the changes at once, or "rollback" to discard them all, leaving the original state untouched.
+<h3>💡 Problem Breakdown</h3>
+<p>This pattern is common in systems requiring data integrity, like databases. A "transaction" allows you to batch several changes. You can then either apply all the changes at once ("commit") or discard them all ("rollback"), leaving the original state untouched. This ensures that state updates are "atomic" – they either happen completely or not at all.</p>
 
-### ⚙️ Solution Walkthrough
-The closure manages two state variables: the main \`state\` and a \`pendingState\`.
-- \`begin()\` starts a transaction by copying the current \`state\` into \`pendingState\`.
-- \`update()\` only modifies the \`pendingState\` object. The main \`state\` is not touched.
-- \`commit()\` copies the \`pendingState\` over to the main \`state\` and clears the pending state.
-- \`rollback()\` simply clears the \`pendingState\`, discarding all the changes.
-The closure is essential for managing these different states privately.
+<h3>⚙️ Solution Walkthrough</h3>
+<p>The <code>createStore</code> factory uses a closure to maintain two private state variables: the main <code>state</code> and a <code>pendingState</code> (which is <code>null</code> when no transaction is active).</p>
+<ul>
+    <li><strong><code>begin()</code></strong>: Starts a transaction by making a shallow copy of the current <code>state</code> into <code>pendingState</code>.</li>
+    <li><strong><code>update()</code></strong>: If a transaction is active, it modifies the <code>pendingState</code> object. The main <code>state</code> is not touched.</li>
+    <li><strong><code>commit()</code></strong>: Replaces the main <code>state</code> with the <code>pendingState</code> and resets <code>pendingState</code> back to <code>null</code>, making the changes permanent.</li>
+    <li><strong><code>rollback()</code></strong>: Simply resets <code>pendingState</code> to <code>null</code>, discarding all the temporary changes.</li>
+</ul>
+<p>The closure is essential for managing these different states privately and ensuring the main state is only modified in a controlled, transactional way.</p>
 
-### 📚 Key Concepts
-- **Transactions**: A pattern for ensuring atomic state updates.
-- **State Management**: Advanced techniques for maintaining data integrity.
+<h3>📚 Key Concepts</h3>
+<ul>
+    <li><strong>Transactions</strong>: A pattern for ensuring atomic state updates.</li>
+    <li><strong>State Management</strong>: An advanced technique for maintaining data integrity.</li>
+    <li><strong>Encapsulation</strong>: The store's internal state (<code>state</code> and <code>pendingState</code>) is completely private.</li>
+</ul>
 `,
   // problem explanation--> 196
   "closures-custom-promise-implementation": `
