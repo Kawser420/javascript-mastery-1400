@@ -14,7 +14,6 @@ const parseAsValue = (input: any): any => {
 let stateCounter = 0;
 
 export const solvers: Record<string, Function> = {
-  // --- Primitives & typeof ---
   // problem solver--> 01
   "tvm-typeof-string": () => `typeof 'hello' is: "${typeof "hello"}"`,
   // problem solver--> 02
@@ -780,9 +779,8 @@ export const solvers: Record<string, Function> = {
   "tvm-epsilon-constant": () => `Number.EPSILON is ${Number.EPSILON}`,
   "tvm-coercion-in-equality-null": () => {
     const nullEqZero = null == 0;
-    const nullGtZero = (null as any) > 0; // Using type assertion instead of !
-    const nullGteZero = (null as any) >= 0; // Using type assertion instead of !
-
+    const nullGtZero = (null as any) > 0;
+    const nullGteZero = (null as any) >= 0;
     return `null == 0 is ${nullEqZero}. null > 0 is ${nullGtZero}. null >= 0 is ${nullGteZero}. Coercion rules are inconsistent.`;
   },
   // problem solver--> 171
@@ -863,39 +861,30 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 196
   "tvm-array-findlast": () => {
     const arr = [1, 2, 3, 4];
-    // Using type assertion to handle findLast which might not be in TypeScript's lib yet
     const result = (arr as any).findLast((n: number) => n % 2 === 0);
     return `[1,2,3,4].findLast(n => n % 2 === 0) is ${result}`;
   },
-
   // problem solver--> 197
   "tvm-array-findlastindex": () => {
     const arr = [1, 2, 3, 4];
-    // Using type assertion to handle findLastIndex which might not be in TypeScript's lib yet
     const result = (arr as any).findLastIndex((n: number) => n % 2 === 0);
     return `[1,2,3,4].findLastIndex(n => n % 2 === 0) is ${result}`;
   },
-
   // problem solver--> 198
   "tvm-array-with": () => {
     const original = [1, 2, 3];
-    // Using type assertion to handle with() method
     const updated = (original as any).with(1, 99);
     return `Original: [${original.join(",")}]. Updated: [${updated.join(",")}]`;
   },
-
   // problem solver--> 199
   "tvm-array-tosorted": () => {
     const original = [3, 1, 2];
-    // Using type assertion to handle toSorted() method
     const sorted = (original as any).toSorted();
     return `Original: [${original.join(",")}]. Sorted: [${sorted.join(",")}]`;
   },
-
   // problem solver--> 200
   "tvm-array-toreversed": () => {
     const original = [1, 2, 3];
-    // Using type assertion to handle toReversed() method
     const reversed = (original as any).toReversed();
     return `Original: [${original.join(",")}]. Reversed: [${reversed.join(
       ","

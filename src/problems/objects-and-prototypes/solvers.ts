@@ -1,5 +1,3 @@
-// problem solver--> 01
-// HELPER: This object will store state for problems that need it (like constructors/classes)
 const problemState: Record<string, any> = {};
 
 export const solvers: Record<string, Function> = {
@@ -1197,7 +1195,6 @@ export const solvers: Record<string, Function> = {
       }
 
       publicMethod() {
-        // This would fail if called on wrong object, but we can't directly test it
         return this.#privateMethod();
       }
     }

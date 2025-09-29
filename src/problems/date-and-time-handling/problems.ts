@@ -10,6 +10,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Date",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -20,6 +21,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Timestamp",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -37,6 +39,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Year",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -54,6 +57,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Month",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -71,6 +75,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Day",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -88,6 +93,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Day of Week",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -105,6 +111,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Create Date",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -119,6 +126,7 @@ export const problems: Problem[] = [
       { id: "day", label: "Day", type: "number", defaultValue: 1 },
     ],
     buttonText: "Create Date",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -129,6 +137,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format Date",
+    difficulty: "Beginner",
   },
   // problem--> 10
   {
@@ -139,6 +148,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format Date Locally",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -149,6 +159,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format to ISO",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -166,6 +177,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Hours",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -183,6 +195,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Minutes",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -200,6 +213,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Seconds",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -210,6 +224,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Milliseconds",
+    difficulty: "Beginner",
   },
   // problem--> 16
   {
@@ -227,6 +242,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Timestamp",
+    difficulty: "Beginner",
   },
   // problem--> 17
   {
@@ -244,6 +260,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Create Date",
+    difficulty: "Beginner",
   },
   // problem--> 18
   {
@@ -267,6 +284,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -277,6 +295,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get UTC Year",
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -287,6 +306,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get UTC Month",
+    difficulty: "Beginner",
   },
   // problem--> 21
   {
@@ -298,6 +318,7 @@ export const problems: Problem[] = [
       { id: "year", label: "New Year", type: "number", defaultValue: 2030 },
     ],
     buttonText: "Set Year",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -314,6 +335,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Set Month",
+    difficulty: "Beginner",
   },
   // problem--> 23
   {
@@ -324,6 +346,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "day", label: "New Day", type: "number", defaultValue: 15 }],
     buttonText: "Set Day",
+    difficulty: "Beginner",
   },
   // problem--> 24
   {
@@ -342,6 +365,7 @@ export const problems: Problem[] = [
       { id: "days", label: "Days to Add", type: "number", defaultValue: 3 },
     ],
     buttonText: "Add Days",
+    difficulty: "Intermediate",
   },
   // problem--> 25
   {
@@ -365,6 +389,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Subtract Days",
+    difficulty: "Intermediate",
   },
   // problem--> 26
   {
@@ -388,6 +413,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Difference",
+    difficulty: "Intermediate",
   },
   // problem--> 27
   {
@@ -398,6 +424,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Name",
+    difficulty: "Beginner",
   },
   // problem--> 28
   {
@@ -408,6 +435,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Name",
+    difficulty: "Beginner",
   },
   // problem--> 29
   {
@@ -425,6 +453,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Validate Date",
+    difficulty: "Intermediate",
   },
   // problem--> 30
   {
@@ -435,6 +464,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 31
   {
@@ -445,6 +475,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Start",
+    difficulty: "Intermediate",
   },
   // problem--> 32
   {
@@ -455,6 +486,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get End",
+    difficulty: "Intermediate",
   },
   // problem--> 33
   {
@@ -472,6 +504,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Weekend",
+    difficulty: "Beginner",
   },
   // problem--> 34
   {
@@ -489,6 +522,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Days",
+    difficulty: "Intermediate",
   },
   // problem--> 35
   {
@@ -499,6 +533,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Offset",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -516,6 +551,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format Time",
+    difficulty: "Intermediate",
   },
   // problem--> 37
   {
@@ -528,6 +564,7 @@ export const problems: Problem[] = [
       { id: "dateStr", label: "Date String", type: "text", defaultValue: "" },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 38
   {
@@ -545,6 +582,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Quarter",
+    difficulty: "Beginner",
   },
   // problem--> 39
   {
@@ -555,6 +593,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Start of Month",
+    difficulty: "Intermediate",
   },
   // problem--> 40
   {
@@ -565,6 +604,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get End of Month",
+    difficulty: "Intermediate",
   },
   // problem--> 41
   {
@@ -588,6 +628,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Hours",
+    difficulty: "Intermediate",
   },
   // problem--> 42
   {
@@ -617,6 +658,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Range",
+    difficulty: "Intermediate",
   },
   // problem--> 43
   {
@@ -635,6 +677,7 @@ export const problems: Problem[] = [
       { id: "months", label: "Months to Add", type: "number", defaultValue: 5 },
     ],
     buttonText: "Add Months",
+    difficulty: "Intermediate",
   },
   // problem--> 44
   {
@@ -652,6 +695,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Week",
+    difficulty: "Advanced",
   },
   // problem--> 45
   {
@@ -669,6 +713,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse Date",
+    difficulty: "Intermediate",
   },
   // problem--> 46
   {
@@ -686,6 +731,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Relative Time",
+    difficulty: "Advanced",
   },
   // problem--> 47
   {
@@ -703,6 +749,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 48
   {
@@ -713,6 +760,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format with Options",
+    difficulty: "Intermediate",
   },
   // problem--> 49
   {
@@ -723,6 +771,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Start of Year",
+    difficulty: "Intermediate",
   },
   // problem--> 50
   {
@@ -733,6 +782,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get End of Year",
+    difficulty: "Intermediate",
   },
   // problem--> 51
   {
@@ -743,6 +793,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Check DST",
+    difficulty: "Advanced",
   },
   // problem--> 52
   {
@@ -753,6 +804,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Find Date",
+    difficulty: "Advanced",
   },
   // problem--> 53
   {
@@ -763,6 +815,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -785,6 +838,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Months",
+    difficulty: "Advanced",
   },
   // problem--> 55
   {
@@ -802,6 +856,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Age",
+    difficulty: "Intermediate",
   },
   // problem--> 56
   {
@@ -819,6 +874,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format Relative",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -829,6 +885,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2000 }],
     buttonText: "Check Leap Year",
+    difficulty: "Intermediate",
   },
   // problem--> 58
   {
@@ -852,6 +909,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Add Business Days",
+    difficulty: "Advanced",
   },
   // problem--> 59
   {
@@ -869,6 +927,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Start of Week",
+    difficulty: "Intermediate",
   },
   // problem--> 60
   {
@@ -886,6 +945,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get End of Week",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -909,6 +969,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 62
   {
@@ -932,6 +993,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Same Day",
+    difficulty: "Intermediate",
   },
   // problem--> 63
   {
@@ -949,6 +1011,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 64
   {
@@ -966,6 +1029,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse and Verify",
+    difficulty: "Intermediate",
   },
   // problem--> 65
   {
@@ -983,6 +1047,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Sign",
+    difficulty: "Advanced",
   },
   // problem--> 66
   {
@@ -1000,6 +1065,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format Duration",
+    difficulty: "Intermediate",
   },
   // problem--> 67
   {
@@ -1017,6 +1083,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Season",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -1034,6 +1101,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Fiscal Year",
+    difficulty: "Intermediate",
   },
   // problem--> 69
   {
@@ -1051,6 +1119,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Past",
+    difficulty: "Beginner",
   },
   // problem--> 70
   {
@@ -1068,6 +1137,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Future",
+    difficulty: "Beginner",
   },
   // problem--> 71
   {
@@ -1085,6 +1155,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Next Monday",
+    difficulty: "Intermediate",
   },
   // problem--> 72
   {
@@ -1102,6 +1173,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort Dates",
+    difficulty: "Beginner",
   },
   // problem--> 73
   {
@@ -1119,6 +1191,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Day Number",
+    difficulty: "Intermediate",
   },
   // problem--> 74
   {
@@ -1129,6 +1202,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Date",
+    difficulty: "Intermediate",
   },
   // problem--> 75
   {
@@ -1142,6 +1216,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (0-11)", type: "number", defaultValue: 6 },
     ],
     buttonText: "List Sundays",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -1152,6 +1227,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 77
   {
@@ -1162,6 +1238,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 78
   {
@@ -1172,6 +1249,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get UTC Day",
+    difficulty: "Beginner",
   },
   // problem--> 79
   {
@@ -1184,6 +1262,7 @@ export const problems: Problem[] = [
       { id: "year", label: "New UTC Year", type: "number", defaultValue: 2042 },
     ],
     buttonText: "Set UTC Year",
+    difficulty: "Beginner",
   },
   // problem--> 80
   {
@@ -1194,6 +1273,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain and Format",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -1204,6 +1284,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format Time",
+    difficulty: "Beginner",
   },
   // problem--> 82
   {
@@ -1214,6 +1295,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format Time Locally",
+    difficulty: "Beginner",
   },
   // problem--> 83
   {
@@ -1237,6 +1319,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Weeks",
+    difficulty: "Intermediate",
   },
   // problem--> 84
   {
@@ -1260,6 +1343,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Same Month",
+    difficulty: "Intermediate",
   },
   // problem--> 85
   {
@@ -1283,6 +1367,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Same Year",
+    difficulty: "Beginner",
   },
   // problem--> 86
   {
@@ -1293,6 +1378,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Test Day Rollover",
+    difficulty: "Intermediate",
   },
   // problem--> 87
   {
@@ -1303,6 +1389,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Test Month Rollover",
+    difficulty: "Intermediate",
   },
   // problem--> 88
   {
@@ -1320,6 +1407,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format Duration",
+    difficulty: "Advanced",
   },
   // problem--> 89
   {
@@ -1330,6 +1418,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Unix Timestamp",
+    difficulty: "Beginner",
   },
   // problem--> 90
   {
@@ -1346,6 +1435,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check AM/PM",
+    difficulty: "Beginner",
   },
   // problem--> 91
   {
@@ -1364,6 +1454,7 @@ export const problems: Problem[] = [
       { id: "hours", label: "Hours to Add", type: "number", defaultValue: 3 },
     ],
     buttonText: "Add Hours",
+    difficulty: "Intermediate",
   },
   // problem--> 92
   {
@@ -1387,6 +1478,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Add Minutes",
+    difficulty: "Intermediate",
   },
   // problem--> 93
   {
@@ -1397,6 +1489,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Create UTC Date",
+    difficulty: "Intermediate",
   },
   // problem--> 94
   {
@@ -1414,6 +1507,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Next Month's Date",
+    difficulty: "Intermediate",
   },
   // problem--> 95
   {
@@ -1431,6 +1525,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Previous Month's Date",
+    difficulty: "Intermediate",
   },
   // problem--> 96
   {
@@ -1448,6 +1543,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 97
   {
@@ -1465,6 +1561,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format Day",
+    difficulty: "Intermediate",
   },
   // problem--> 98
   {
@@ -1475,6 +1572,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Calculate Progress",
+    difficulty: "Intermediate",
   },
   // problem--> 99
   {
@@ -1485,6 +1583,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Calculate Progress",
+    difficulty: "Intermediate",
   },
   // problem--> 100
   {
@@ -1502,6 +1601,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Earliest",
+    difficulty: "Beginner",
   },
   // problem--> 101
   {
@@ -1519,6 +1619,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Latest",
+    difficulty: "Beginner",
   },
   // problem--> 102
   {
@@ -1542,6 +1643,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "List Dates",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1560,6 +1662,7 @@ export const problems: Problem[] = [
       { id: "years", label: "Years to Add", type: "number", defaultValue: 1 },
     ],
     buttonText: "Add Years",
+    difficulty: "Intermediate",
   },
   // problem--> 104
   {
@@ -1582,6 +1685,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Years",
+    difficulty: "Advanced",
   },
   // problem--> 105
   {
@@ -1592,6 +1696,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain Temporal",
+    difficulty: "Advanced",
   },
   // problem--> 106
   {
@@ -1602,6 +1707,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2024 }],
     buttonText: "Find DST Dates",
+    difficulty: "Advanced",
   },
   // problem--> 107
   {
@@ -1612,6 +1718,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format to Parts",
+    difficulty: "Advanced",
   },
   // problem--> 108
   {
@@ -1629,6 +1736,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Validate",
+    difficulty: "Intermediate",
   },
   // problem--> 109
   {
@@ -1646,6 +1754,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Round Time",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1666,6 +1775,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Nth Occurrence", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Date",
+    difficulty: "Advanced",
   },
   // problem--> 111
   {
@@ -1676,6 +1786,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Clone Date",
+    difficulty: "Beginner",
   },
   // problem--> 112
   {
@@ -1686,6 +1797,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2025 }],
     buttonText: "Get Day",
+    difficulty: "Intermediate",
   },
   // problem--> 113
   {
@@ -1696,6 +1808,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2024 }],
     buttonText: "Get Day",
+    difficulty: "Intermediate",
   },
   // problem--> 114
   {
@@ -1706,6 +1819,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Set to Noon",
+    difficulty: "Beginner",
   },
   // problem--> 115
   {
@@ -1718,6 +1832,7 @@ export const problems: Problem[] = [
       { id: "hour", label: "Hour (0-23)", type: "number", defaultValue: 14 },
     ],
     buttonText: "Get Period",
+    difficulty: "Beginner",
   },
   // problem--> 116
   {
@@ -1736,6 +1851,7 @@ export const problems: Problem[] = [
       { id: "weeks", label: "Weeks to Add", type: "number", defaultValue: 4 },
     ],
     buttonText: "Add Weeks",
+    difficulty: "Intermediate",
   },
   // problem--> 117
   {
@@ -1759,6 +1875,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Minutes",
+    difficulty: "Intermediate",
   },
   // problem--> 118
   {
@@ -1769,6 +1886,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get GMT String",
+    difficulty: "Intermediate",
   },
   // problem--> 119
   {
@@ -1786,6 +1904,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 120
   {
@@ -1796,6 +1915,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 1995 }],
     buttonText: "Get Decade",
+    difficulty: "Beginner",
   },
   // problem--> 121
   {
@@ -1806,6 +1926,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2024 }],
     buttonText: "Get Century",
+    difficulty: "Beginner",
   },
   // problem--> 122
   {
@@ -1829,6 +1950,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Seconds",
+    difficulty: "Intermediate",
   },
   // problem--> 123
   {
@@ -1839,6 +1961,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 124
   {
@@ -1851,6 +1974,7 @@ export const problems: Problem[] = [
       { id: "year", label: "Start Year", type: "number", defaultValue: 2024 },
     ],
     buttonText: "Get Years",
+    difficulty: "Intermediate",
   },
   // problem--> 125
   {
@@ -1870,6 +1994,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Last Friday",
+    difficulty: "Advanced",
   },
   // problem--> 126
   {
@@ -1887,6 +2012,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Days",
+    difficulty: "Intermediate",
   },
   // problem--> 127
   {
@@ -1904,6 +2030,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Days",
+    difficulty: "Intermediate",
   },
   // problem--> 128
   {
@@ -1921,6 +2048,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 129
   {
@@ -1938,6 +2066,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 130
   {
@@ -1961,6 +2090,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 131
   {
@@ -1984,6 +2114,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 132
   {
@@ -2007,6 +2138,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Closest",
+    difficulty: "Intermediate",
   },
   // problem--> 133
   {
@@ -2024,6 +2156,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Advanced",
   },
   // problem--> 134
   {
@@ -2041,6 +2174,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Advanced",
   },
   // problem--> 135
   {
@@ -2058,6 +2192,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Days",
+    difficulty: "Intermediate",
   },
   // problem--> 136
   {
@@ -2073,8 +2208,9 @@ export const problems: Problem[] = [
         type: "text",
         defaultValue: "2024-07-26",
       },
-    ], // A Friday
+    ],
     buttonText: "Get Next Business Day",
+    difficulty: "Intermediate",
   },
   // problem--> 137
   {
@@ -2092,6 +2228,7 @@ export const problems: Problem[] = [
       },
     ], // A Monday
     buttonText: "Get Previous Business Day",
+    difficulty: "Intermediate",
   },
   // problem--> 138
   {
@@ -2109,6 +2246,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 139
   {
@@ -2122,6 +2260,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (0-11)", type: "number", defaultValue: 7 },
     ],
     buttonText: "Get Day",
+    difficulty: "Intermediate",
   },
   // problem--> 140
   {
@@ -2135,6 +2274,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (0-11)", type: "number", defaultValue: 7 },
     ],
     buttonText: "Get Day",
+    difficulty: "Intermediate",
   },
   // problem--> 141
   {
@@ -2152,6 +2292,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check DST",
+    difficulty: "Advanced",
   },
   // problem--> 142
   {
@@ -2162,6 +2303,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Format with Timezone",
+    difficulty: "Intermediate",
   },
   // problem--> 143
   {
@@ -2179,6 +2321,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse",
+    difficulty: "Intermediate",
   },
   // problem--> 144
   {
@@ -2189,6 +2332,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Strip Time",
+    difficulty: "Intermediate",
   },
   // problem--> 145
   {
@@ -2199,6 +2343,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Show Range",
+    difficulty: "Intermediate",
   },
   // problem--> 146
   {
@@ -2216,6 +2361,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 147
   {
@@ -2239,6 +2385,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Equality",
+    difficulty: "Beginner",
   },
   // problem--> 148
   {
@@ -2256,6 +2403,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Time",
+    difficulty: "Intermediate",
   },
   // problem--> 149
   {
@@ -2273,6 +2421,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Week",
+    difficulty: "Advanced",
   },
   // problem--> 150
   {
@@ -2296,6 +2445,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Hours",
+    difficulty: "Advanced",
   },
   // problem--> 151
   {
@@ -2313,6 +2463,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse",
+    difficulty: "Intermediate",
   },
   // problem--> 152
   {
@@ -2323,6 +2474,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Set UTC Time",
+    difficulty: "Intermediate",
   },
   // problem--> 153
   {
@@ -2333,6 +2485,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Find Date",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -2343,6 +2496,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Convert Year",
+    difficulty: "Advanced",
   },
   // problem--> 155
   {
@@ -2372,6 +2526,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Range",
+    difficulty: "Intermediate",
   },
   // problem--> 156
   {
@@ -2382,6 +2537,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Find Year",
+    difficulty: "Intermediate",
   },
   // problem--> 157
   {
@@ -2392,6 +2548,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Find Year",
+    difficulty: "Intermediate",
   },
   // problem--> 158
   {
@@ -2402,6 +2559,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Calculate Time",
+    difficulty: "Intermediate",
   },
   // problem--> 159
   {
@@ -2419,6 +2577,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Day",
+    difficulty: "Advanced",
   },
   // problem--> 160
   {
@@ -2432,6 +2591,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (0-11)", type: "number", defaultValue: 8 }, // September
     ],
     buttonText: "Find Date",
+    difficulty: "Intermediate",
   },
   // problem--> 161
   {
@@ -2445,6 +2605,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (0-11)", type: "number", defaultValue: 10 }, // November
     ],
     buttonText: "Find Date",
+    difficulty: "Intermediate",
   },
   // problem--> 162
   {
@@ -2455,6 +2616,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Week",
+    difficulty: "Intermediate",
   },
   // problem--> 163
   {
@@ -2472,6 +2634,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format",
+    difficulty: "Advanced",
   },
   // problem--> 164
   {
@@ -2485,6 +2648,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (0-11)", type: "number", defaultValue: 7 },
     ],
     buttonText: "Count Weekends",
+    difficulty: "Intermediate",
   },
   // problem--> 165
   {
@@ -2495,6 +2659,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2025 }],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 166
   {
@@ -2505,6 +2670,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Test .toJSON()",
+    difficulty: "Intermediate",
   },
   // problem--> 167
   {
@@ -2515,6 +2681,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 168
   {
@@ -2525,6 +2692,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 1990 }],
     buttonText: "Get Animal",
+    difficulty: "Intermediate",
   },
   // problem--> 169
   {
@@ -2535,6 +2703,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 170
   {
@@ -2545,6 +2714,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 171
   {
@@ -2555,6 +2725,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Run Benchmark",
+    difficulty: "Advanced",
   },
   // problem--> 172
   {
@@ -2567,6 +2738,7 @@ export const problems: Problem[] = [
       { id: "days", label: "Days Ago", type: "number", defaultValue: 90 },
     ],
     buttonText: "Get Date",
+    difficulty: "Intermediate",
   },
   // problem--> 173
   {
@@ -2579,6 +2751,7 @@ export const problems: Problem[] = [
       { id: "days", label: "Days from Now", type: "number", defaultValue: 100 },
     ],
     buttonText: "Get Date",
+    difficulty: "Intermediate",
   },
   // problem--> 174
   {
@@ -2592,6 +2765,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (0-11)", type: "number", defaultValue: 7 }, // August
     ],
     buttonText: "Generate Grid",
+    difficulty: "Advanced",
   },
   // problem--> 175
   {
@@ -2602,6 +2776,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Get Quarter",
+    difficulty: "Beginner",
   },
   // problem--> 176
   {
@@ -2625,6 +2800,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Time",
+    difficulty: "Intermediate",
   },
   // problem--> 177
   {
@@ -2635,6 +2811,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 178
   {
@@ -2652,6 +2829,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Start",
+    difficulty: "Intermediate",
   },
   // problem--> 179
   {
@@ -2669,6 +2847,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get End",
+    difficulty: "Intermediate",
   },
   // problem--> 180
   {
@@ -2692,6 +2871,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Humanize",
+    difficulty: "Advanced",
   },
   // problem--> 181
   {
@@ -2702,6 +2882,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Iterate Months",
+    difficulty: "Intermediate",
   },
   // problem--> 182
   {
@@ -2719,6 +2900,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Age",
+    difficulty: "Advanced",
   },
   // problem--> 183
   {
@@ -2736,6 +2918,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse Date",
+    difficulty: "Intermediate",
   },
   // problem--> 184
   {
@@ -2753,6 +2936,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Next",
+    difficulty: "Intermediate",
   },
   // problem--> 185
   {
@@ -2763,6 +2947,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Serialize & Deserialize",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -2773,6 +2958,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 187
   {
@@ -2783,6 +2969,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 188
   {
@@ -2793,6 +2980,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 189
   {
@@ -2803,6 +2991,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 190
   {
@@ -2813,6 +3002,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 191
   {
@@ -2823,6 +3013,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 192
   {
@@ -2833,6 +3024,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 193
   {
@@ -2843,6 +3035,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 194
   {
@@ -2853,6 +3046,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 195
   {
@@ -2863,6 +3057,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 196
   {
@@ -2873,6 +3068,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Show World Clock",
+    difficulty: "Advanced",
   },
   // problem--> 197
   {
@@ -2883,6 +3079,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Calculate JD",
+    difficulty: "Advanced",
   },
   // problem--> 198
   {
@@ -2893,6 +3090,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Calculate MJD",
+    difficulty: "Advanced",
   },
   // problem--> 199
   {
@@ -2903,6 +3101,7 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 200
   {
@@ -2913,5 +3112,6 @@ export const problems: Problem[] = [
     category: "Date and Time Handling",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
 ];

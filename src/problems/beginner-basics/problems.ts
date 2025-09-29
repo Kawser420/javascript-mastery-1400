@@ -11,6 +11,7 @@ export const problems: Problem[] = [
       { id: "name", label: "Name", type: "text", defaultValue: "World" },
     ],
     buttonText: "Greet",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -24,6 +25,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
     buttonText: "Add",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -34,6 +36,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   {
     id: "declare-constant-const",
@@ -43,6 +46,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
 
   // problem--> 05
@@ -57,6 +61,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 8 },
     ],
     buttonText: "Subtract",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -70,6 +75,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 6 },
     ],
     buttonText: "Multiply",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -83,6 +89,7 @@ export const problems: Problem[] = [
       { id: "divisor", label: "Divisor", type: "number", defaultValue: 10 },
     ],
     buttonText: "Divide",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -96,6 +103,7 @@ export const problems: Problem[] = [
       { id: "divisor", label: "Divisor", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Remainder",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -109,6 +117,7 @@ export const problems: Problem[] = [
       { id: "exponent", label: "Exponent", type: "number", defaultValue: 3 },
     ],
     buttonText: "Calculate Power",
+    difficulty: "Beginner",
   },
   // problem--> 10
   {
@@ -119,6 +128,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
     buttonText: "Increment",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -129,6 +139,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
     buttonText: "Decrement",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -141,6 +152,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "JavaScript" },
     ],
     buttonText: "Get Length",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -153,6 +165,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "Hello" },
     ],
     buttonText: "Get First Char",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -165,6 +178,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "World" },
     ],
     buttonText: "Get Last Char",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -187,6 +201,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Concatenate",
+    difficulty: "Beginner",
   },
   // problem--> 16
   {
@@ -199,6 +214,7 @@ export const problems: Problem[] = [
       { id: "name", label: "Name", type: "text", defaultValue: "Alice" },
     ],
     buttonText: "Create Greeting",
+    difficulty: "Beginner",
   },
   // problem--> 17
   {
@@ -209,6 +225,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 18
   {
@@ -219,6 +236,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -229,6 +247,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -239,6 +258,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 123 }],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 21
   {
@@ -251,6 +271,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String Number", type: "text", defaultValue: "45.5" },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -263,6 +284,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String Number", type: "text", defaultValue: "99.9" },
     ],
     buttonText: "Parse Integer",
+    difficulty: "Beginner",
   },
   // problem--> 23
   {
@@ -280,6 +302,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse Float",
+    difficulty: "Beginner",
   },
   /// problem--> 24
   {
@@ -290,6 +313,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 25
   {
@@ -300,6 +324,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 26
   {
@@ -313,6 +338,7 @@ export const problems: Problem[] = [
       { id: "val2", label: "Value 2", type: "text", defaultValue: 5 },
     ],
     buttonText: "Compare with ===",
+    difficulty: "Beginner",
   },
   // problem--> 27
   {
@@ -326,6 +352,7 @@ export const problems: Problem[] = [
       { id: "val2", label: "Value 2", type: "text", defaultValue: 5 },
     ],
     buttonText: "Compare with ==",
+    difficulty: "Beginner",
   },
   // problem--> 28
   {
@@ -339,6 +366,7 @@ export const problems: Problem[] = [
       { id: "val2", label: "Value 2", type: "text", defaultValue: 5 },
     ],
     buttonText: "Compare with !==",
+    difficulty: "Beginner",
   },
   // problem--> 29
   {
@@ -351,6 +379,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
     ],
     buttonText: "Compare with >",
+    difficulty: "Beginner",
   },
   // problem--> 30
   {
@@ -363,6 +392,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
     ],
     buttonText: "Compare with <",
+    difficulty: "Beginner",
   },
   // problem--> 31
   {
@@ -375,6 +405,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
     buttonText: "Compare with >=",
+    difficulty: "Beginner",
   },
   // problem--> 32
   {
@@ -387,6 +418,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
     buttonText: "Compare with <=",
+    difficulty: "Beginner",
   },
   // problem--> 33
   {
@@ -405,6 +437,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Conditions with &&",
+    difficulty: "Beginner",
   },
   // problem--> 34
   {
@@ -417,6 +450,7 @@ export const problems: Problem[] = [
       { id: "role", label: "User Role", type: "text", defaultValue: "admin" },
     ],
     buttonText: "Check Conditions with ||",
+    difficulty: "Beginner",
   },
   // problem--> 35
   {
@@ -434,6 +468,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Invert with !",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -451,6 +486,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Password",
+    difficulty: "Beginner",
   },
   // problem--> 37
   {
@@ -461,6 +497,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "age", label: "Age", type: "number", defaultValue: 21 }],
     buttonText: "Check Age",
+    difficulty: "Beginner",
   },
   // problem--> 38
   {
@@ -471,6 +508,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 8 }],
     buttonText: "Check Evenness",
+    difficulty: "Beginner",
   },
   // problem--> 39
   {
@@ -481,6 +519,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: -5 }],
     buttonText: "Check Number",
+    difficulty: "Beginner",
   },
   // problem--> 40
   {
@@ -498,6 +537,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Message",
+    difficulty: "Beginner",
   },
   // problem--> 41
   {
@@ -515,6 +555,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Subscription Message",
+    difficulty: "Beginner",
   },
   // problem--> 42
   {
@@ -525,6 +566,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 43
   {
@@ -537,6 +579,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Sum up to", type: "number", defaultValue: 10 },
     ],
     buttonText: "Calculate Sum",
+    difficulty: "Beginner",
   },
   // problem--> 44
   {
@@ -549,6 +592,7 @@ export const problems: Problem[] = [
       { id: "start", label: "Start from", type: "number", defaultValue: 5 },
     ],
     buttonText: "Start Countdown",
+    difficulty: "Beginner",
   },
   // problem--> 45
   {
@@ -559,6 +603,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 46
   {
@@ -569,6 +614,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 47
   {
@@ -579,6 +625,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 8 }],
     buttonText: "Square",
+    difficulty: "Beginner",
   },
   // problem--> 48
   {
@@ -592,6 +639,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
     ],
     buttonText: "Multiply",
+    difficulty: "Beginner",
   },
   // problem--> 49
   {
@@ -602,6 +650,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 9 }],
     buttonText: "Double with Arrow",
+    difficulty: "Beginner",
   },
   // problem--> 50
   {
@@ -612,6 +661,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "age", label: "Age", type: "number", defaultValue: 25 }],
     buttonText: "Check if Adult",
+    difficulty: "Beginner",
   },
   // problem--> 51
   {
@@ -622,6 +672,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 52
   {
@@ -632,6 +683,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 53
   {
@@ -649,6 +701,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Length",
+    difficulty: "Beginner",
   },
   // problem--> 54
   {
@@ -665,6 +718,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get First",
+    difficulty: "Beginner",
   },
   // problem--> 55
   {
@@ -681,6 +735,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Last",
+    difficulty: "Beginner",
   },
   // problem--> 56
   {
@@ -698,6 +753,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Modify",
+    difficulty: "Beginner",
   },
   // problem--> 57
   {
@@ -721,6 +777,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Push",
+    difficulty: "Beginner",
   },
   // problem--> 58
   {
@@ -738,6 +795,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Pop",
+    difficulty: "Beginner",
   },
   // problem--> 59
   {
@@ -748,6 +806,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 60
   {
@@ -758,6 +817,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 61
   {
@@ -768,6 +828,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 62
   {
@@ -778,6 +839,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 63
   {
@@ -788,6 +850,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 64
   {
@@ -800,6 +863,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "hello world" },
     ],
     buttonText: "To Uppercase",
+    difficulty: "Beginner",
   },
   // problem--> 65
   {
@@ -812,6 +876,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "HELLO WORLD" },
     ],
     buttonText: "To Lowercase",
+    difficulty: "Beginner",
   },
   // problem--> 66
   {
@@ -835,6 +900,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 67
   {
@@ -848,6 +914,7 @@ export const problems: Problem[] = [
       { id: "end", label: "End Index", type: "number", defaultValue: 4 },
     ],
     buttonText: "Slice",
+    difficulty: "Beginner",
   },
   // problem--> 68
   {
@@ -860,6 +927,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "   Hello   " },
     ],
     buttonText: "Trim",
+    difficulty: "Beginner",
   },
   // problem--> 69
   {
@@ -877,6 +945,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Iterate",
+    difficulty: "Beginner",
   },
   // problem--> 70
   {
@@ -890,6 +959,7 @@ export const problems: Problem[] = [
       { id: "height", label: "Height", type: "number", defaultValue: 5 },
     ],
     buttonText: "Calculate Area",
+    difficulty: "Beginner",
   },
   // problem--> 71
   {
@@ -902,6 +972,7 @@ export const problems: Problem[] = [
       { id: "celsius", label: "Celsius", type: "number", defaultValue: 20 },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 72
   {
@@ -912,6 +983,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 73
   {
@@ -922,6 +994,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 74
   {
@@ -935,6 +1008,7 @@ export const problems: Problem[] = [
       { id: "count", label: "Repeat Count", type: "number", defaultValue: 3 },
     ],
     buttonText: "Repeat",
+    difficulty: "Beginner",
   },
   // problem--> 75
   {
@@ -958,6 +1032,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Join",
+    difficulty: "Beginner",
   },
   // problem--> 76
   {
@@ -975,6 +1050,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Average",
+    difficulty: "Beginner",
   },
   // problem--> 77
   {
@@ -985,6 +1061,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: -10 }],
     buttonText: "Get Absolute Value",
+    difficulty: "Beginner",
   },
   // problem--> 78
   {
@@ -995,6 +1072,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 4.2 }],
     buttonText: "Round Up",
+    difficulty: "Beginner",
   },
   // problem--> 79
   {
@@ -1005,6 +1083,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 4.8 }],
     buttonText: "Round Down",
+    difficulty: "Beginner",
   },
   // problem--> 80
   {
@@ -1014,6 +1093,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 4.5 }],
     buttonText: "Round",
+    difficulty: "Beginner",
   },
   // problem--> 81
   {
@@ -1024,6 +1104,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 82
   {
@@ -1037,6 +1118,7 @@ export const problems: Problem[] = [
       { id: "max", label: "Maximum", type: "number", defaultValue: 10 },
     ],
     buttonText: "Generate",
+    difficulty: "Beginner",
   },
   // problem--> 83
   {
@@ -1060,6 +1142,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 84
   {
@@ -1083,6 +1166,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 85
   {
@@ -1107,6 +1191,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Replace",
+    difficulty: "Beginner",
   },
   // problem--> 86
   {
@@ -1124,6 +1209,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Split",
+    difficulty: "Beginner",
   },
   // problem--> 87
   {
@@ -1141,6 +1227,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Shift",
+    difficulty: "Beginner",
   },
   // problem--> 88
   {
@@ -1164,6 +1251,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Unshift",
+    difficulty: "Beginner",
   },
   // problem--> 89
   {
@@ -1187,6 +1275,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 90
   {
@@ -1205,6 +1294,7 @@ export const problems: Problem[] = [
       { id: "value", label: "Value to find", type: "text", defaultValue: "b" },
     ],
     buttonText: "Find Index",
+    difficulty: "Beginner",
   },
   // problem--> 91
   {
@@ -1224,6 +1314,7 @@ export const problems: Problem[] = [
       { id: "end", label: "End Index", type: "number", defaultValue: 3 },
     ],
     buttonText: "Slice",
+    difficulty: "Beginner",
   },
   // problem--> 92
   {
@@ -1241,6 +1332,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Iterate",
+    difficulty: "Beginner",
   },
   // problem--> 93
   {
@@ -1258,6 +1350,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check `NaN`",
+    difficulty: "Beginner",
   },
   // problem--> 94
   {
@@ -1275,6 +1368,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Truthy",
+    difficulty: "Beginner",
   },
   // problem--> 95
   {
@@ -1287,6 +1381,7 @@ export const problems: Problem[] = [
       { id: "value", label: "Value to check", type: "text", defaultValue: "0" },
     ],
     buttonText: "Check Falsy",
+    difficulty: "Beginner",
   },
   // problem--> 96
   {
@@ -1297,6 +1392,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
     buttonText: "Get Square Root",
+    difficulty: "Beginner",
   },
   // problem--> 97
   {
@@ -1306,6 +1402,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 98
   {
@@ -1319,6 +1416,7 @@ export const problems: Problem[] = [
       { id: "b", label: "Number B", type: "number", defaultValue: 10 },
     ],
     buttonText: "Create String",
+    difficulty: "Beginner",
   },
   // problem--> 99
   {
@@ -1332,6 +1430,7 @@ export const problems: Problem[] = [
       { id: "index", label: "Index", type: "number", defaultValue: 4 },
     ],
     buttonText: "Get Char",
+    difficulty: "Beginner",
   },
   // problem--> 100
   {
@@ -1342,6 +1441,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 101
   {
@@ -1352,6 +1452,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 102
   {
@@ -1362,6 +1463,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 10 }],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 103
   {
@@ -1379,6 +1481,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check if Weekend",
+    difficulty: "Beginner",
   },
   // problem--> 104
   {
@@ -1396,6 +1499,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find > 5",
+    difficulty: "Beginner",
   },
   // problem--> 105
   {
@@ -1413,6 +1517,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum Positive Numbers",
+    difficulty: "Beginner",
   },
   // problem--> 106
   {
@@ -1426,6 +1531,7 @@ export const problems: Problem[] = [
       { id: "arr2", label: "Array 2", type: "text", defaultValue: "c,d" },
     ],
     buttonText: "Concatenate",
+    difficulty: "Beginner",
   },
   // problem--> 107
   {
@@ -1444,6 +1550,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Last Index",
+    difficulty: "Beginner",
   },
   // problem--> 108
   {
@@ -1462,6 +1569,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Format",
+    difficulty: "Beginner",
   },
   // problem--> 109
   {
@@ -1472,6 +1580,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 110
   {
@@ -1489,6 +1598,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Reverse",
+    difficulty: "Beginner",
   },
   // problem--> 111
   {
@@ -1499,6 +1609,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 112
   {
@@ -1509,6 +1620,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 113
   {
@@ -1519,6 +1631,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 114
   {
@@ -1529,6 +1642,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 115
   {
@@ -1539,6 +1653,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 116
   {
@@ -1549,6 +1664,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 117
   {
@@ -1561,6 +1677,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "hello" },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 118
   {
@@ -1578,6 +1695,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find > 10",
+    difficulty: "Beginner",
   },
   // problem--> 119
   {
@@ -1595,6 +1713,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Index of > 10",
+    difficulty: "Beginner",
   },
   // problem--> 120
   {
@@ -1612,6 +1731,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check all positive",
+    difficulty: "Beginner",
   },
   // problem--> 121
   {
@@ -1629,6 +1749,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check for any negative",
+    difficulty: "Beginner",
   },
   // problem--> 122
   {
@@ -1653,6 +1774,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Replace All",
+    difficulty: "Beginner",
   },
   // problem--> 123
   {
@@ -1663,6 +1785,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 124
   {
@@ -1680,6 +1803,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 125
   {
@@ -1692,6 +1816,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 25 },
     ],
     buttonText: "Get Maximum",
+    difficulty: "Beginner",
   },
   // problem--> 126
   {
@@ -1704,6 +1829,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 25 },
     ],
     buttonText: "Get Minimum",
+    difficulty: "Beginner",
   },
   // problem--> 127
   {
@@ -1714,6 +1840,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 128
   {
@@ -1731,6 +1858,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort",
+    difficulty: "Beginner",
   },
   // problem--> 129
   {
@@ -1748,6 +1876,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort",
+    difficulty: "Beginner",
   },
   // problem--> 130
   {
@@ -1764,6 +1893,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Max",
+    difficulty: "Beginner",
   },
   // problem--> 131
   {
@@ -1780,6 +1910,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Min",
+    difficulty: "Beginner",
   },
   // problem--> 132
   {
@@ -1797,6 +1928,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Trim Start",
+    difficulty: "Beginner",
   },
   // problem--> 133
   {
@@ -1814,6 +1946,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Trim End",
+    difficulty: "Beginner",
   },
   // problem--> 134
   {
@@ -1831,6 +1964,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Iterate",
+    difficulty: "Beginner",
   },
   // problem--> 135
   {
@@ -1841,6 +1975,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 136
   {
@@ -1851,6 +1986,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 137
   {
@@ -1861,6 +1997,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 138
   {
@@ -1871,6 +2008,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 139
   {
@@ -1883,6 +2021,7 @@ export const problems: Problem[] = [
       { id: "name", label: "Name (optional)", type: "text", defaultValue: "" },
     ],
     buttonText: "Greet",
+    difficulty: "Beginner",
   },
   // problem--> 140
   {
@@ -1893,6 +2032,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 15 }],
     buttonText: "Run FizzBuzz",
+    difficulty: "Beginner",
   },
   // problem--> 141
   {
@@ -1911,6 +2051,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Count",
+    difficulty: "Beginner",
   },
   // problem--> 142
   {
@@ -1928,6 +2069,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Type",
+    difficulty: "Beginner",
   },
   // problem--> 143
   {
@@ -1945,6 +2087,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Shift",
+    difficulty: "Beginner",
   },
   // problem--> 144
   {
@@ -1968,6 +2111,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Unshift",
+    difficulty: "Beginner",
   },
   // problem--> 145
   {
@@ -1978,6 +2122,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 146
   {
@@ -1988,6 +2133,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 147
   {
@@ -1998,6 +2144,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     buttonText: "Run",
     inputs: [],
+    difficulty: "Beginner",
   },
   // problem--> 148
   {
@@ -2011,6 +2158,7 @@ export const problems: Problem[] = [
       { id: "exponent", label: "Exponent", type: "number", defaultValue: 4 },
     ],
     buttonText: "Calculate",
+    difficulty: "Beginner",
   },
   // problem--> 149
   {
@@ -2021,6 +2169,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "age", label: "Age", type: "number", defaultValue: 21 }],
     buttonText: "Check Age",
+    difficulty: "Beginner",
   },
   // problem--> 150
   {
@@ -2033,6 +2182,7 @@ export const problems: Problem[] = [
       { id: "obj", label: "Object (JSON)", type: "text", defaultValue: "{}" },
     ],
     buttonText: "Check Empty",
+    difficulty: "Beginner",
   },
   // problem--> 151
   {
@@ -2050,6 +2200,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Longest",
+    difficulty: "Beginner",
   },
   // problem--> 152
   {
@@ -2067,6 +2218,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Remove Duplicates",
+    difficulty: "Beginner",
   },
   // problem--> 153
   {
@@ -2079,6 +2231,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "Racecar" },
     ],
     buttonText: "Check Palindrome",
+    difficulty: "Beginner",
   },
   // problem--> 154
   {
@@ -2096,6 +2249,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Title Case",
+    difficulty: "Beginner",
   },
   // problem--> 155
   {
@@ -2119,6 +2273,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Intersection",
+    difficulty: "Beginner",
   },
   // problem--> 156
   {
@@ -2136,6 +2291,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Remove Falsy",
+    difficulty: "Beginner",
   },
   // problem--> 157
   {
@@ -2159,6 +2315,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Rotate Array",
+    difficulty: "Beginner",
   },
   // problem--> 158
   {
@@ -2182,6 +2339,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Anagrams",
+    difficulty: "Beginner",
   },
   // problem--> 159
   {
@@ -2199,6 +2357,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum Range",
+    difficulty: "Beginner",
   },
   // problem--> 160
   {
@@ -2216,6 +2375,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Decode",
+    difficulty: "Beginner",
   },
   // problem--> 161
   {
@@ -2228,6 +2388,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "abcccccccd" },
     ],
     buttonText: "Find Max Char",
+    difficulty: "Beginner",
   },
   // problem--> 162
   {
@@ -2240,6 +2401,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "Hi There!" },
     ],
     buttonText: "Count Vowels",
+    difficulty: "Beginner",
   },
   // problem--> 163
   {
@@ -2252,6 +2414,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 12345 },
     ],
     buttonText: "Convert to Array",
+    difficulty: "Beginner",
   },
   // problem--> 164
   {
@@ -2269,6 +2432,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Count Words",
+    difficulty: "Beginner",
   },
   // problem--> 165
   {
@@ -2287,6 +2451,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Max Length", type: "number", defaultValue: 8 },
     ],
     buttonText: "Truncate",
+    difficulty: "Beginner",
   },
   // problem--> 166
   {
@@ -2299,6 +2464,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "leetcode" },
     ],
     buttonText: "Find First Unique",
+    difficulty: "Beginner",
   },
   // problem--> 167
   {
@@ -2322,6 +2488,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Merge",
+    difficulty: "Beginner",
   },
   // problem--> 168
   {
@@ -2339,6 +2506,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Move Zeroes",
+    difficulty: "Beginner",
   },
   // problem--> 169
   {
@@ -2355,6 +2523,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 170
   {
@@ -2372,6 +2541,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Prefix",
+    difficulty: "Beginner",
   },
   // problem--> 171
   {
@@ -2390,6 +2560,7 @@ export const problems: Problem[] = [
       { id: "needle", label: "Needle", type: "text", defaultValue: "ll" },
     ],
     buttonText: "Find Index",
+    difficulty: "Beginner",
   },
   // problem--> 172
   {
@@ -2407,6 +2578,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Majority",
+    difficulty: "Beginner",
   },
   // problem--> 173
   {
@@ -2419,6 +2591,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "abcdefg" },
     ],
     buttonText: "Check Uniqueness",
+    difficulty: "Beginner",
   },
   // problem--> 174
   {
@@ -2435,6 +2608,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "URLify",
+    difficulty: "Beginner",
   },
   // problem--> 175
   {
@@ -2451,6 +2625,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Reverse Words",
+    difficulty: "Beginner",
   },
   // problem--> 176
   {
@@ -2468,6 +2643,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Max Profit",
+    difficulty: "Beginner",
   },
   // problem--> 177
   {
@@ -2482,6 +2658,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
     ],
     buttonText: "Calculate",
+    difficulty: "Beginner",
   },
   // problem--> 178
   {
@@ -2494,6 +2671,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "hello world" },
     ],
     buttonText: "Remove Vowels",
+    difficulty: "Beginner",
   },
   // problem--> 179
   {
@@ -2507,11 +2685,12 @@ export const problems: Problem[] = [
         id: "arr",
         label: "Array (comma-separated)",
         type: "text",
-        defaultValue: "a,b,a,c,a,d",
+        defaultValue: "a1,b,a,c,a,d",
       },
       { id: "value", label: "Value to Find", type: "text", defaultValue: "a" },
     ],
     buttonText: "Find Indexes",
+    difficulty: "Beginner",
   },
   // problem--> 180
   {
@@ -2529,6 +2708,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Sum of Squares",
+    difficulty: "Beginner",
   },
   // problem--> 181
   {
@@ -2552,6 +2732,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Create Object",
+    difficulty: "Beginner",
   },
   // problem--> 182
   {
@@ -2571,6 +2752,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Pad Start",
+    difficulty: "Beginner",
   },
   // problem--> 183
   {
@@ -2590,6 +2772,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Pad End",
+    difficulty: "Beginner",
   },
   // problem--> 184
   {
@@ -2600,6 +2783,7 @@ export const problems: Problem[] = [
     category: "Beginner Basics",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2024 }],
     buttonText: "Check Year",
+    difficulty: "Beginner",
   },
   // problem--> 185
   {
@@ -2617,6 +2801,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Day",
+    difficulty: "Beginner",
   },
   // problem--> 186
   {
@@ -2635,6 +2820,7 @@ export const problems: Problem[] = [
       { id: "length", label: "Array Length", type: "number", defaultValue: 5 },
     ],
     buttonText: "Fill Array",
+    difficulty: "Beginner",
   },
   // problem--> 187
   {
@@ -2647,6 +2833,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "a1b2c3d4e5" },
     ],
     buttonText: "Filter String",
+    difficulty: "Beginner",
   },
   // problem--> 188
   {
@@ -2664,6 +2851,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Access Property",
+    difficulty: "Beginner",
   },
   // problem--> 189
   {
@@ -2681,6 +2869,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Double",
+    difficulty: "Beginner",
   },
   // problem--> 190
   {
@@ -2698,6 +2887,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Filter Evens",
+    difficulty: "Beginner",
   },
   // problem--> 191
   {
@@ -2715,6 +2905,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum",
+    difficulty: "Beginner",
   },
   // problem--> 192
   {
@@ -2727,6 +2918,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "HELLO" },
     ],
     buttonText: "Check Case",
+    difficulty: "Beginner",
   },
   // problem--> 193
   {
@@ -2744,6 +2936,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Property",
+    difficulty: "Beginner",
   },
   // problem--> 194
   {
@@ -2762,6 +2955,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Number of Elements", type: "number", defaultValue: 3 },
     ],
     buttonText: "Get Elements",
+    difficulty: "Beginner",
   },
   // problem--> 195
   {
@@ -2779,6 +2973,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "To Camel Case",
+    difficulty: "Beginner",
   },
   // problem--> 196
   {
@@ -2796,6 +2991,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Remove Spaces",
+    difficulty: "Beginner",
   },
   // problem--> 197
   {
@@ -2808,6 +3004,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "hello world" },
     ],
     buttonText: "Find Unique",
+    difficulty: "Beginner",
   },
   // problem--> 198
   {
@@ -2820,6 +3017,7 @@ export const problems: Problem[] = [
       { id: "obj", label: "Object (JSON)", type: "text", defaultValue: "{}" },
     ],
     buttonText: "Check Empty",
+    difficulty: "Beginner",
   },
   // problem--> 199
   {
@@ -2837,6 +3035,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Extension",
+    difficulty: "Beginner",
   },
   // problem--> 200
   {
@@ -2849,5 +3048,6 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "hello" },
     ],
     buttonText: "Swap",
+    difficulty: "Beginner",
   },
 ];

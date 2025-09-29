@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS to make solvers robust against user input
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -37,7 +36,6 @@ const parseJson = (input: string): any => {
   }
 };
 
-// SOLVER IMPLEMENTATIONS
 export const solvers: Record<string, Function> = {
   // problem solver--> 01
   "say-hello": ({ name }: { name: string }) => `Hello, ${name}!`,

@@ -13,6 +13,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
     buttonText: "Add",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -23,6 +24,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 7 }],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -36,6 +38,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 8 },
     ],
     buttonText: "Find Maximum",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -46,6 +49,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
     buttonText: "Calculate Factorial",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -56,6 +60,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 13 }],
     buttonText: "Check Prime",
+    difficulty: "Intermediate",
   },
   // problem--> 06
   {
@@ -73,6 +78,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Fibonacci",
+    difficulty: "Intermediate",
   },
   // problem--> 07
   {
@@ -86,6 +92,7 @@ export const problems: Problem[] = [
       { id: "exponent", label: "Exponent", type: "number", defaultValue: 4 },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 08
   {
@@ -98,6 +105,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 12345 },
     ],
     buttonText: "Sum Digits",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -110,6 +118,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: -12345 },
     ],
     buttonText: "Reverse",
+    difficulty: "Beginner",
   },
   // problem--> 10
   {
@@ -120,6 +129,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 121 }],
     buttonText: "Check Palindrome",
+    difficulty: "Intermediate",
   },
   // problem--> 11
   {
@@ -132,6 +142,7 @@ export const problems: Problem[] = [
       { id: "radius", label: "Radius", type: "number", defaultValue: 10 },
     ],
     buttonText: "Calculate Area",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -144,6 +155,7 @@ export const problems: Problem[] = [
       { id: "celsius", label: "Celsius", type: "number", defaultValue: 20 },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -161,6 +173,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -173,6 +186,7 @@ export const problems: Problem[] = [
       { id: "value", label: "Value", type: "text", defaultValue: "10.5" },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -186,6 +200,7 @@ export const problems: Problem[] = [
       { id: "max", label: "Maximum", type: "number", defaultValue: 10 },
     ],
     buttonText: "Generate",
+    difficulty: "Beginner",
   },
   // problem--> 16
   {
@@ -203,6 +218,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Mean",
+    difficulty: "Beginner",
   },
   // problem--> 17
   {
@@ -220,6 +236,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Median",
+    difficulty: "Intermediate",
   },
   // problem--> 18
   {
@@ -237,6 +254,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Mode",
+    difficulty: "Intermediate",
   },
   // problem--> 19
   {
@@ -250,6 +268,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 18 },
     ],
     buttonText: "Find GCD",
+    difficulty: "Intermediate",
   },
   // problem--> 20
   {
@@ -263,6 +282,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 20 },
     ],
     buttonText: "Find LCM",
+    difficulty: "Intermediate",
   },
   // problem--> 21
   {
@@ -273,6 +293,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 25 }],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -283,6 +304,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 23
   {
@@ -295,6 +317,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Decimal Number", type: "number", defaultValue: 13 },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 24
   {
@@ -312,6 +335,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 25
   {
@@ -322,6 +346,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2024 }],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 26
   {
@@ -334,6 +359,7 @@ export const problems: Problem[] = [
       { id: "limit", label: "Limit", type: "number", defaultValue: 1000 },
     ],
     buttonText: "Calculate Sum",
+    difficulty: "Beginner",
   },
   // problem--> 27
   {
@@ -344,6 +370,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 153 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 28
   {
@@ -354,6 +381,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 28 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 29
   {
@@ -364,6 +392,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 19 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 30
   {
@@ -374,6 +403,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 6 }],
     buttonText: "Count Steps",
+    difficulty: "Beginner",
   },
   // problem--> 31
   {
@@ -390,6 +420,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 32
   {
@@ -401,6 +432,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Integer", type: "number", defaultValue: 1994 },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 33
   {
@@ -413,6 +445,7 @@ export const problems: Problem[] = [
       { id: "limit", label: "Limit", type: "number", defaultValue: 100 },
     ],
     buttonText: "Find Primes",
+    difficulty: "Intermediate",
   },
   // problem--> 34
   {
@@ -424,6 +457,7 @@ export const problems: Problem[] = [
       { id: "rows", label: "Number of Rows", type: "number", defaultValue: 5 },
     ],
     buttonText: "Generate",
+    difficulty: "Intermediate",
   },
   // problem--> 35
   {
@@ -446,6 +480,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Add Matrices",
+    difficulty: "Intermediate",
   },
   // problem--> 36
   {
@@ -468,6 +503,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Multiply Matrices",
+    difficulty: "Advanced",
   },
   // problem--> 37
   {
@@ -485,6 +521,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Generate Permutations",
+    difficulty: "Advanced",
   },
   // problem--> 38
   {
@@ -508,6 +545,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Generate Combinations",
+    difficulty: "Advanced",
   },
   // problem--> 39
   {
@@ -521,6 +559,7 @@ export const problems: Problem[] = [
       { id: "exponent", label: "Exponent", type: "number", defaultValue: 13 },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 40
   {
@@ -531,6 +570,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 942 }],
     buttonText: "Find Digital Root",
+    difficulty: "Beginner",
   },
   // problem--> 41
   {
@@ -550,6 +590,7 @@ export const problems: Problem[] = [
       { id: "toBase", label: "To Base", type: "number", defaultValue: 10 },
     ],
     buttonText: "Convert Base",
+    difficulty: "Advanced",
   },
   // problem--> 42
   {
@@ -560,6 +601,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 43
   {
@@ -577,6 +619,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Missing",
+    difficulty: "Intermediate",
   },
   // problem--> 44
   {
@@ -594,6 +637,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Increment",
+    difficulty: "Beginner",
   },
   // problem--> 45
   {
@@ -611,6 +655,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Number",
+    difficulty: "Intermediate",
   },
   // problem--> 46
   {
@@ -628,6 +673,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Title",
+    difficulty: "Intermediate",
   },
   // problem--> 47
   {
@@ -645,6 +691,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Single",
+    difficulty: "Intermediate",
   },
   // problem--> 48
   {
@@ -668,6 +715,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Add",
+    difficulty: "Intermediate",
   },
   // problem--> 49
   {
@@ -680,6 +728,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number (n)", type: "number", defaultValue: 25 },
     ],
     buttonText: "Count Zeroes",
+    difficulty: "Intermediate",
   },
   // problem--> 50
   {
@@ -690,6 +739,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 6 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 51
   {
@@ -700,6 +750,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
     buttonText: "Count",
+    difficulty: "Intermediate",
   },
   // problem--> 52
   {
@@ -710,6 +761,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 38 }],
     buttonText: "Find Digital Root",
+    difficulty: "Beginner",
   },
   // problem--> 53
   {
@@ -720,6 +772,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 16 }],
     buttonText: "Validate",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -732,6 +785,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Number of coins", type: "number", defaultValue: 8 },
     ],
     buttonText: "Calculate Rows",
+    difficulty: "Beginner",
   },
   // problem--> 55
   {
@@ -746,6 +800,7 @@ export const problems: Problem[] = [
       { id: "c", label: "c", type: "number", defaultValue: 13 },
     ],
     buttonText: "Find Solution",
+    difficulty: "Advanced",
   },
   // problem--> 56
   {
@@ -763,6 +818,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Triplet",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -786,6 +842,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Multiply",
+    difficulty: "Intermediate",
   },
   // problem--> 58
   {
@@ -804,6 +861,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Advanced",
   },
   // problem--> 59
   {
@@ -817,6 +875,7 @@ export const problems: Problem[] = [
       { id: "n", label: "n", type: "number", defaultValue: -2 },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 60
   {
@@ -830,6 +889,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "text", defaultValue: "456" },
     ],
     buttonText: "Multiply",
+    difficulty: "Advanced",
   },
   // problem--> 61
   {
@@ -843,6 +903,7 @@ export const problems: Problem[] = [
       { id: "minutes", label: "Minutes", type: "number", defaultValue: 15 },
     ],
     buttonText: "Calculate Angle",
+    difficulty: "Intermediate",
   },
   // problem--> 62
   {
@@ -853,6 +914,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n bulbs", type: "number", defaultValue: 7 }],
     buttonText: "Calculate On Bulbs",
+    difficulty: "Advanced",
   },
   // problem--> 63
   {
@@ -863,6 +925,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 11 }],
     buttonText: "Find Digit",
+    difficulty: "Advanced",
   },
   // problem--> 64
   {
@@ -880,6 +943,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 65
   {
@@ -890,6 +954,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
     buttonText: "Maximize Product",
+    difficulty: "Advanced",
   },
   // problem--> 66
   {
@@ -904,6 +969,7 @@ export const problems: Problem[] = [
       { id: "z", label: "Target Capacity", type: "number", defaultValue: 4 },
     ],
     buttonText: "Check",
+    difficulty: "Advanced",
   },
   // problem--> 67
   {
@@ -916,6 +982,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Number of stones", type: "number", defaultValue: 4 },
     ],
     buttonText: "Can I Win?",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -929,6 +996,7 @@ export const problems: Problem[] = [
       { id: "b", label: "b (as array)", type: "text", defaultValue: "1,0" },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 69
   {
@@ -946,6 +1014,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Area",
+    difficulty: "Intermediate",
   },
   // problem--> 70
   {
@@ -963,6 +1032,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Moves",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -980,6 +1050,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Transpose",
+    difficulty: "Beginner",
   },
   // problem--> 72
   {
@@ -997,6 +1068,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Determinant",
+    difficulty: "Beginner",
   },
   // problem--> 73
   {
@@ -1020,6 +1092,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Beginner",
   },
   // problem--> 74
   {
@@ -1033,6 +1106,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 284 },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 75
   {
@@ -1045,6 +1119,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Nth Catalan Number", type: "number", defaultValue: 5 },
     ],
     buttonText: "Calculate Catalan",
+    difficulty: "Advanced",
   },
   // problem--> 76
   {
@@ -1055,6 +1130,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 4 }],
     buttonText: "Generate",
+    difficulty: "Intermediate",
   },
   // problem--> 77
   {
@@ -1072,6 +1148,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Traverse",
+    difficulty: "Intermediate",
   },
   // problem--> 78
   {
@@ -1089,6 +1166,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Rotate",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -1106,6 +1184,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Set Zeroes",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -1124,6 +1203,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Validate",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -1141,6 +1221,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Next State",
+    difficulty: "Advanced",
   },
   // problem--> 82
   {
@@ -1158,6 +1239,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 83
   {
@@ -1170,6 +1252,7 @@ export const problems: Problem[] = [
       { id: "s", label: "Expression", type: "text", defaultValue: "3+2*2" },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 84
   {
@@ -1186,6 +1269,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Reverse",
+    difficulty: "Intermediate",
   },
   // problem--> 85
   {
@@ -1203,6 +1287,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Count",
+    difficulty: "Beginner",
   },
   // problem--> 86
   {
@@ -1213,6 +1298,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 2 }],
     buttonText: "Generate",
+    difficulty: "Advanced",
   },
   // problem--> 87
   {
@@ -1230,6 +1316,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 88
   {
@@ -1248,6 +1335,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 89
   {
@@ -1265,6 +1353,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 90
   {
@@ -1282,6 +1371,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Max Area",
+    difficulty: "Intermediate",
   },
   // problem--> 91
   {
@@ -1300,6 +1390,7 @@ export const problems: Problem[] = [
       { id: "amount", label: "Amount", type: "number", defaultValue: 11 },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 92
   {
@@ -1317,6 +1408,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Length",
+    difficulty: "Intermediate",
   },
   // problem--> 93
   {
@@ -1340,6 +1432,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Start Station",
+    difficulty: "Intermediate",
   },
   // problem--> 94
   {
@@ -1357,6 +1450,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Candies",
+    difficulty: "Advanced",
   },
   // problem--> 95
   {
@@ -1374,6 +1468,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Minimum Jumps",
+    difficulty: "Intermediate",
   },
   // problem--> 96
   {
@@ -1391,6 +1486,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Missing Positive",
+    difficulty: "Advanced",
   },
   // problem--> 97
   {
@@ -1408,6 +1504,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Next Permutation",
+    difficulty: "Advanced",
   },
   // problem--> 98
   {
@@ -1425,6 +1522,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Water",
+    difficulty: "Advanced",
   },
   // problem--> 99
   {
@@ -1442,6 +1540,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Largest Area",
+    difficulty: "Advanced",
   },
   // problem--> 100
   {
@@ -1460,6 +1559,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Area",
+    difficulty: "Advanced",
   },
   // problem--> 101
   {
@@ -1483,6 +1583,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Solve",
+    difficulty: "Advanced",
   },
   // problem--> 102
   {
@@ -1501,6 +1602,7 @@ export const problems: Problem[] = [
       { id: "k", label: "Step size (k)", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Survivor",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1511,6 +1613,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "Number (n)", type: "number", defaultValue: 5 }],
     buttonText: "Count Partitions",
+    difficulty: "Advanced",
   },
   // problem--> 104
   {
@@ -1521,6 +1624,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 105
   {
@@ -1533,6 +1637,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Number to test", type: "text", defaultValue: "29" },
     ],
     buttonText: "Test Primality",
+    difficulty: "Advanced",
   },
   // problem--> 106
   {
@@ -1556,6 +1661,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Multiply",
+    difficulty: "Advanced",
   },
   // problem--> 107
   {
@@ -1566,6 +1672,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 108
   {
@@ -1576,6 +1683,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 109
   {
@@ -1593,6 +1701,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Simulate",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1610,6 +1719,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Probability",
+    difficulty: "Intermediate",
   },
   // problem--> 111
   {
@@ -1633,6 +1743,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sample",
+    difficulty: "Advanced",
   },
   // problem--> 112
   {
@@ -1650,6 +1761,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Shuffle",
+    difficulty: "Intermediate",
   },
   // problem--> 113
   {
@@ -1668,6 +1780,7 @@ export const problems: Problem[] = [
       { id: "target", label: "Target", type: "number", defaultValue: 7 },
     ],
     buttonText: "Find Combinations",
+    difficulty: "Intermediate",
   },
   // problem--> 114
   {
@@ -1681,6 +1794,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Columns (n)", type: "number", defaultValue: 7 },
     ],
     buttonText: "Count Paths",
+    difficulty: "Intermediate",
   },
   // problem--> 115
   {
@@ -1698,6 +1812,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Count Ways",
+    difficulty: "Beginner",
   },
   // problem--> 116
   {
@@ -1715,6 +1830,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 117
   {
@@ -1725,6 +1841,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Integer", type: "number", defaultValue: 2 }],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 118
   {
@@ -1742,6 +1859,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 119
   {
@@ -1752,6 +1870,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 25 }],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 120
   {
@@ -1769,6 +1888,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert to RPN",
+    difficulty: "Advanced",
   },
   // problem--> 121
   {
@@ -1786,6 +1906,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Evaluate",
+    difficulty: "Intermediate",
   },
   // problem--> 122
   {
@@ -1803,6 +1924,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Line",
+    difficulty: "Advanced",
   },
   // problem--> 123
   {
@@ -1815,6 +1937,7 @@ export const problems: Problem[] = [
       { id: "limit", label: "Limit", type: "number", defaultValue: 10000 },
     ],
     buttonText: "Generate",
+    difficulty: "Advanced",
   },
   // problem--> 124
   {
@@ -1828,6 +1951,7 @@ export const problems: Problem[] = [
       { id: "arr2", label: "Array 2", type: "text", defaultValue: "2,4" },
     ],
     buttonText: "Find Median",
+    difficulty: "Advanced",
   },
   // problem--> 125
   {
@@ -1845,6 +1969,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Approximate Pi",
+    difficulty: "Beginner",
   },
   // problem--> 126
   {
@@ -1862,6 +1987,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Approximate Pi",
+    difficulty: "Intermediate",
   },
   // problem--> 127
   {
@@ -1872,6 +1998,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 128
   {
@@ -1886,6 +2013,7 @@ export const problems: Problem[] = [
       { id: "modulus", label: "Modulus", type: "number", defaultValue: 7 },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 129
   {
@@ -1899,6 +2027,7 @@ export const problems: Problem[] = [
       { id: "m", label: "m", type: "number", defaultValue: 11 },
     ],
     buttonText: "Find Inverse",
+    difficulty: "Advanced",
   },
   // problem--> 130
   {
@@ -1909,6 +2038,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 9 }],
     buttonText: "Calculate φ(n)",
+    difficulty: "Advanced",
   },
   // problem--> 131
   {
@@ -1921,6 +2051,7 @@ export const problems: Problem[] = [
       { id: "end", label: "End", type: "number", defaultValue: 50 },
     ],
     buttonText: "Find Primes",
+    difficulty: "Intermediate",
   },
   // problem--> 132
   {
@@ -1932,6 +2063,7 @@ export const problems: Problem[] = [
       { id: "limit", label: "Limit", type: "number", defaultValue: 100 },
     ],
     buttonText: "Calculate Sum",
+    difficulty: "Intermediate",
   },
   // problem--> 133
   {
@@ -1942,6 +2074,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "p", label: "Exponent p", type: "number", defaultValue: 7 }],
     buttonText: "Check",
+    difficulty: "Advanced",
   },
   // problem--> 134
   {
@@ -1955,6 +2088,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 28 },
     ],
     buttonText: "Check",
+    difficulty: "Advanced",
   },
   // problem--> 135
   {
@@ -1965,6 +2099,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 27 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 136
   {
@@ -1977,6 +2112,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 1634 },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 137
   {
@@ -1987,6 +2123,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 9 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 138
   {
@@ -1997,6 +2134,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 76 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 139
   {
@@ -2014,6 +2152,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Validate",
+    difficulty: "Intermediate",
   },
   // problem--> 140
   {
@@ -2024,6 +2163,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 2 }],
     buttonText: "Find",
+    difficulty: "Advanced",
   },
   // problem--> 141
   {
@@ -2034,6 +2174,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 142
   {
@@ -2044,6 +2185,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 143
   {
@@ -2054,6 +2196,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 144
   {
@@ -2064,6 +2207,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 315 }],
     buttonText: "Find Factors",
+    difficulty: "Intermediate",
   },
   // problem--> 145
   {
@@ -2074,6 +2218,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 100 }],
     buttonText: "Count Divisors",
+    difficulty: "Intermediate",
   },
   // problem--> 146
   {
@@ -2084,6 +2229,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 100 }],
     buttonText: "Calculate Sum",
+    difficulty: "Intermediate",
   },
   // problem--> 147
   {
@@ -2096,6 +2242,7 @@ export const problems: Problem[] = [
       { id: "radius", label: "Radius", type: "number", defaultValue: 10 },
     ],
     buttonText: "Generate Point",
+    difficulty: "Intermediate",
   },
   // problem--> 148
   {
@@ -2118,6 +2265,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 149
   {
@@ -2134,6 +2282,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Rotate",
+    difficulty: "Intermediate",
   },
   // problem--> 150
   {
@@ -2144,6 +2293,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 3 }],
     buttonText: "Generate",
+    difficulty: "Intermediate",
   },
   // problem--> 151
   {
@@ -2161,6 +2311,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Area",
+    difficulty: "Intermediate",
   },
   // problem--> 152
   {
@@ -2171,6 +2322,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 153
   {
@@ -2184,6 +2336,7 @@ export const problems: Problem[] = [
       { id: "b", label: "b", type: "number", defaultValue: 46 },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -2194,6 +2347,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [],
     buttonText: "Explain RSA",
+    difficulty: "Advanced",
   },
   // problem--> 155
   {
@@ -2206,6 +2360,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Start Number", type: "number", defaultValue: 7 },
     ],
     buttonText: "Generate Sequence",
+    difficulty: "Beginner",
   },
   // problem--> 156
   {
@@ -2218,6 +2373,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Even Number", type: "number", defaultValue: 28 },
     ],
     buttonText: "Find Prime Pair",
+    difficulty: "Intermediate",
   },
   // problem--> 157
   {
@@ -2235,6 +2391,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 158
   {
@@ -2245,6 +2402,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 2 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 159
   {
@@ -2257,6 +2415,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 12345 },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 160
   {
@@ -2274,6 +2433,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 161
   {
@@ -2284,6 +2444,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 162
   {
@@ -2302,6 +2463,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find",
+    difficulty: "Advanced",
   },
   // problem--> 163
   {
@@ -2319,6 +2481,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Arrange",
+    difficulty: "Intermediate",
   },
   // problem--> 164
   {
@@ -2336,6 +2499,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 165
   {
@@ -2346,6 +2510,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 30 }],
     buttonText: "Count",
+    difficulty: "Intermediate",
   },
   // problem--> 166
   {
@@ -2363,6 +2528,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Minimum Sum",
+    difficulty: "Intermediate",
   },
   // problem--> 167
   {
@@ -2380,6 +2546,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Perimeter",
+    difficulty: "Beginner",
   },
   // problem--> 168
   {
@@ -2393,6 +2560,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 34 },
     ],
     buttonText: "Add",
+    difficulty: "Beginner",
   },
   // problem--> 169
   {
@@ -2406,6 +2574,7 @@ export const problems: Problem[] = [
       { id: "divisor", label: "Divisor", type: "number", defaultValue: 3 },
     ],
     buttonText: "Divide",
+    difficulty: "Intermediate",
   },
   // problem--> 170
   {
@@ -2418,6 +2587,7 @@ export const problems: Problem[] = [
       { id: "s", label: "String", type: "text", defaultValue: " -90e3   " },
     ],
     buttonText: "Validate",
+    difficulty: "Advanced",
   },
   // problem--> 171
   {
@@ -2431,6 +2601,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Sequence",
+    difficulty: "Advanced",
   },
   // problem--> 172
   {
@@ -2448,6 +2619,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 173
   {
@@ -2458,6 +2630,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 13 }],
     buttonText: "Count",
+    difficulty: "Advanced",
   },
   // problem--> 174
   {
@@ -2476,6 +2649,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Find Max Sum",
+    difficulty: "Advanced",
   },
   // problem--> 175
   {
@@ -2489,6 +2663,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 42 },
     ],
     buttonText: "Multiply",
+    difficulty: "Intermediate",
   },
   // problem--> 176
   {
@@ -2499,6 +2674,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 50 }],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 177
   {
@@ -2512,6 +2688,7 @@ export const problems: Problem[] = [
       { id: "b", label: "b", type: "number", defaultValue: 2 },
     ],
     buttonText: "Sum",
+    difficulty: "Intermediate",
   },
   // problem--> 178
   {
@@ -2524,6 +2701,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 1234567 },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 179
   {
@@ -2541,6 +2719,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Advanced",
   },
   // problem--> 180
   {
@@ -2558,6 +2737,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 181
   {
@@ -2568,6 +2748,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "w", label: "Weights", type: "text", defaultValue: "1,3" }],
     buttonText: "Pick Index",
+    difficulty: "Intermediate",
   },
   // problem--> 182
   {
@@ -2585,6 +2766,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Pick Point",
+    difficulty: "Advanced",
   },
   // problem--> 183
   {
@@ -2602,6 +2784,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 184
   {
@@ -2614,6 +2797,7 @@ export const problems: Problem[] = [
       { id: "target", label: "Target", type: "number", defaultValue: 2 },
     ],
     buttonText: "Calculate Steps",
+    difficulty: "Intermediate",
   },
   // problem--> 185
   {
@@ -2624,6 +2808,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "N", label: "N", type: "number", defaultValue: 46 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -2647,6 +2832,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Overlap",
+    difficulty: "Beginner",
   },
   // problem--> 187
   {
@@ -2664,6 +2850,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Area",
+    difficulty: "Advanced",
   },
   // problem--> 188
   {
@@ -2678,6 +2865,7 @@ export const problems: Problem[] = [
       { id: "bound", label: "bound", type: "number", defaultValue: 10 },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 189
   {
@@ -2688,6 +2876,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "k", label: "k", type: "number", defaultValue: 3 }],
     buttonText: "Find Length",
+    difficulty: "Advanced",
   },
   // problem--> 190
   {
@@ -2701,6 +2890,7 @@ export const problems: Problem[] = [
       { id: "k", label: "Difference (k)", type: "number", defaultValue: 7 },
     ],
     buttonText: "Find Numbers",
+    difficulty: "Intermediate",
   },
   // problem--> 191
   {
@@ -2719,6 +2909,7 @@ export const problems: Problem[] = [
       { id: "pattern", label: "Pattern", type: "text", defaultValue: "abb" },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 192
   {
@@ -2729,6 +2920,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 15 }],
     buttonText: "Count Ways",
+    difficulty: "Intermediate",
   },
   // problem--> 193
   {
@@ -2742,6 +2934,7 @@ export const problems: Problem[] = [
       { id: "q", label: "q", type: "number", defaultValue: 1 },
     ],
     buttonText: "Find Receptor",
+    difficulty: "Advanced",
   },
   // problem--> 194
   {
@@ -2754,6 +2947,7 @@ export const problems: Problem[] = [
       { id: "A", label: "Array A", type: "text", defaultValue: "1,0,2" },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 195
   {
@@ -2767,6 +2961,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Factor",
+    difficulty: "Beginner",
   },
   // problem--> 196
   {
@@ -2782,6 +2977,7 @@ export const problems: Problem[] = [
       { id: "c", label: "c", type: "number", defaultValue: 3 },
     ],
     buttonText: "Count Triplets",
+    difficulty: "Beginner",
   },
   // problem--> 197
   {
@@ -2792,6 +2988,7 @@ export const problems: Problem[] = [
     category: "Math and Number Challenges",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 1234567 }],
     buttonText: "Format",
+    difficulty: "Beginner",
   },
   // problem--> 198
   {
@@ -2809,6 +3006,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum Diagonals",
+    difficulty: "Beginner",
   },
   // problem--> 199
   {
@@ -2827,6 +3025,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 200
   {
@@ -2840,5 +3039,6 @@ export const problems: Problem[] = [
       { id: "high", label: "high", type: "number", defaultValue: 7 },
     ],
     buttonText: "Count Odds",
+    difficulty: "Beginner",
   },
 ];

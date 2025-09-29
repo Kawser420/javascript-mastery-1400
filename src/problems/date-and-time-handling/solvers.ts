@@ -268,7 +268,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 45
   "dt-parse-date-mmddyyyy": ({ dateStr }: { dateStr: string }) => {
     const parts = dateStr.split("/");
-    // Note: month is 0-indexed, so subtract 1
     const d = new Date(
       Number(parts[2]),
       Number(parts[0]) - 1,
@@ -334,7 +333,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 52
   "dt-find-next-friday-13": () => {
     const d = new Date();
-    d.setDate(13); // Start checking from the 13th of this month
+    d.setDate(13);
     while (true) {
       if (d.getDay() === 5) {
         return d.toDateString();
@@ -343,12 +342,12 @@ export const solvers: Record<string, Function> = {
     }
   },
   // problem solver--> 53
-  "dt-format-rfc2822": () => new Date().toUTCString(), // A close approximation
+  "dt-format-rfc2822": () => new Date().toUTCString(),
   // problem solver--> 54
   "dt-diff-in-months": ({ date1, date2 }: { date1: string; date2: string }) => {
     let d1 = parseDate(date1);
     let d2 = parseDate(date2);
-    if (d1 > d2) [d1, d2] = [d2, d1]; // Ensure d1 is earlier
+    if (d1 > d2) [d1, d2] = [d2, d1];
     let months = (d2.getFullYear() - d1.getFullYear()) * 12;
     months -= d1.getMonth();
     months += d2.getMonth();
@@ -589,13 +588,13 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 86
   "dt-date-rollover-day": () => {
-    const d = new Date(2024, 0, 32); // Jan 32
-    return d.toDateString(); // "Thu Feb 01 2024"
+    const d = new Date(2024, 0, 32);
+    return d.toDateString();
   },
   // problem solver--> 87
   "dt-date-rollover-month": () => {
-    const d = new Date(2024, 12, 1); // Month 12 (13th month)
-    return d.toDateString(); // "Wed Jan 01 2025"
+    const d = new Date(2024, 12, 1);
+    return d.toDateString();
   },
   // problem solver--> 88
   "dt-human-readable-duration": ({ ms }: { ms: any }) => {
@@ -1113,8 +1112,8 @@ export const solvers: Record<string, Function> = {
     month: any;
   }) => {
     const d = new Date(parseNumber(year), parseNumber(month), 1);
-    if (d.getDay() === 6) d.setDate(3); // Saturday -> Monday
-    else if (d.getDay() === 0) d.setDate(2); // Sunday -> Monday
+    if (d.getDay() === 6) d.setDate(3);
+    else if (d.getDay() === 0) d.setDate(2);
     return d.toDateString();
   },
   // problem solver--> 161
@@ -1126,8 +1125,8 @@ export const solvers: Record<string, Function> = {
     month: any;
   }) => {
     const d = new Date(parseNumber(year), parseNumber(month) + 1, 0);
-    if (d.getDay() === 0) d.setDate(d.getDate() - 2); // Sunday -> Friday
-    else if (d.getDay() === 6) d.setDate(d.getDate() - 1); // Saturday -> Friday
+    if (d.getDay() === 0) d.setDate(d.getDate() - 2);
+    else if (d.getDay() === 6) d.setDate(d.getDate() - 1);
     return d.toDateString();
   },
   // problem solver--> 162

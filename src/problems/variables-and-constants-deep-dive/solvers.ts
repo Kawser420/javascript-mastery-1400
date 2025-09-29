@@ -1,13 +1,10 @@
-// HELPER FUNCTIONS
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
   return num;
 };
 
-// State for asynchronous loop demos
 let asyncLoopResult: string[] = [];
-// State for practical state demo
 let counterState = 0;
 
 export const solvers: Record<string, Function> = {
@@ -36,7 +33,6 @@ export const solvers: Record<string, Function> = {
   "const-reassignment-primitive": () => {
     try {
       const myConst = 10;
-      // This line would throw an error
       // myConst = 20;
       throw new TypeError("Assignment to constant variable.");
     } catch (e: any) {
@@ -55,7 +51,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 08
   "variable-naming-rules": () => {
     const _valid$Name1 = "Valid";
-    // const 1invalid = 'Invalid';
     return `Valid names: _valid$Name1. Invalid names cannot start with a number.`;
   },
   // problem solver--> 09
@@ -104,7 +99,7 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 15
   "null-vs-undefined": () => {
-    let uninitialized; // undefined
+    let uninitialized;
     let hasNoValue = null; // null
     return `Uninitialized: ${typeof uninitialized}, Explicitly Null: ${typeof hasNoValue} (Note: typeof null is 'object', a legacy bug).`;
   },
@@ -268,13 +263,11 @@ export const solvers: Record<string, Function> = {
   "var-in-for-loop-pitfall": async () => {
     asyncLoopResult = [];
     for (var i = 0; i < 3; i++) {
-      // Intentionally using a non-async function to demonstrate the timing issue more clearly
       setTimeout(() => {
-        // By the time this runs, the loop is finished and 'i' is 3 for all callbacks.
         asyncLoopResult.push(`var: ${i}`);
       }, 10 * i);
     }
-    await new Promise((res) => setTimeout(res, 50)); // Wait for timeouts to finish
+    await new Promise((res) => setTimeout(res, 50));
     return asyncLoopResult.join(", ");
   },
   // problem solver--> 43
@@ -299,7 +292,7 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 48
   "hoisting-var-declaration": () => {
-    const val = myVar; // undefined
+    const val = myVar;
     var myVar = 5;
     return `Before assignment, myVar was: ${val}.`;
   },
@@ -314,8 +307,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 50
   "hoisting-function-expression": () => {
     try {
-      // expressionFunc is undefined here, not a function
-      // expressionFunc();
       throw new TypeError("expressionFunc is not a function");
     } catch (e: any) {
       var expressionFunc = () => {};
@@ -332,7 +323,7 @@ export const solvers: Record<string, Function> = {
   "var-redeclared-in-function": () => {
     var x = "global";
     function test() {
-      const val = x; // undefined
+      const val = x;
       var x = "local";
       return `Inside function, initial value of x was ${val}.`;
     }
@@ -359,11 +350,10 @@ export const solvers: Record<string, Function> = {
     `(Conceptual) \`const person = {}; person = { name: 'new' };\` throws a TypeError: Assignment to constant variable.`,
   // problem solver--> 58
   "object-freeze": () => {
-    "use strict"; // Required to see the error on mutation
+    "use strict";
     const frozenObj = { a: 1 };
     Object.freeze(frozenObj);
     try {
-      // frozenObj.a = 2;
       throw new TypeError(
         "Cannot assign to read only property 'a' of object '#<Object>'"
       );
@@ -461,7 +451,6 @@ export const solvers: Record<string, Function> = {
   "destructure-null-error": () => {
     try {
       const source = null;
-      // const { a } = source;
       throw new TypeError(
         "Cannot destructure property 'a' of 'null' as it is null."
       );
@@ -520,7 +509,7 @@ export const solvers: Record<string, Function> = {
     try {
       throw "inner";
     } catch (e) {
-      let err = e; // This is a new 'err' scoped to the catch block
+      let err = e;
       return `Inside catch, the new 'err' is "${err}".`;
     }
   },
@@ -539,8 +528,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 85
   "hoisting-order-var-and-function": () => {
     let output = "";
-
-    // Function declaration is hoisted
     function myFunc() {
       return "I am the function";
     }
@@ -561,19 +548,16 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 88
   "object-seal": () => {
-    "use strict"; // Required to see the error on mutation
+    "use strict";
     const sealedObj = { a: 1 };
     Object.seal(sealedObj);
-    sealedObj.a = 2; // This is allowed
-    // delete sealedObj.a; // This would fail silently
-    // sealedObj.b = 3; // This would fail silently
+    sealedObj.a = 2;
     return `Modified existing property: a=${sealedObj.a}. Adding/deleting properties is prevented.`;
   },
   // problem solver--> 89
   "object-preventextensions": () => {
     const obj = { a: 1 };
     Object.preventExtensions(obj);
-    // obj.b = 2; // This would fail silently
     return `Adding new properties is prevented. Existing properties can still be modified or deleted.`;
   },
   // problem solver--> 90
@@ -664,7 +648,7 @@ export const solvers: Record<string, Function> = {
       if (false) {
         var x = 5;
       }
-      return `The value of x is: ${x}`; // undefined
+      return `The value of x is: ${x}`;
     }
     return test();
   },
@@ -705,7 +689,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 114
   "practical-const-function-expression": () => {
     const greet = () => "Hello!";
-    // greet = () => "Goodbye!"; // This would throw a TypeError.
     return `The function assigned to 'greet' cannot be reassigned. Result: "${greet()}"`;
   },
   // problem solver--> 115
@@ -730,11 +713,11 @@ export const solvers: Record<string, Function> = {
   "primitive-vs-reference-assignment": () => {
     let a = 10;
     let b = a;
-    b = 20; // Does not affect a
+    b = 20;
 
     let obj1 = { val: 10 };
     let obj2 = obj1;
-    obj2.val = 20; // Affects obj1
+    obj2.val = 20;
     return `Primitive: a=${a}. Object: obj1.val=${obj1.val}`;
   },
   // problem solver--> 118
@@ -751,7 +734,6 @@ export const solvers: Record<string, Function> = {
     `(Conceptual) \`const\` has no effect on garbage collection. An object is collected when it is no longer reachable. A \`const\` variable going out of scope makes its object eligible for GC just like a \`let\` variable.`,
   // problem solver--> 121
   "var-in-eval-scope": () => {
-    // Use a closure to show leakage
     function demo(): string {
       eval("var hidden = 'I escaped!';");
       // @ts-expect-error - hidden is created dynamically
@@ -763,7 +745,6 @@ export const solvers: Record<string, Function> = {
   "let-in-eval-scope": () => {
     function test() {
       eval("let x = 1;");
-      // return x; // This would throw a ReferenceError
     }
     return `\`let\` in eval is scoped only to the eval string and does not leak.`;
   },
@@ -819,8 +800,8 @@ export const solvers: Record<string, Function> = {
       cachedData = "expensive data";
       return `(calculated) ${cachedData}`;
     }
-    getData(); // Calculates
-    return getData(); // Returns from cache
+    getData();
+    return getData();
   },
   // problem solver--> 130
   "temporal-dead-zone-in-classes": () =>
@@ -869,7 +850,6 @@ export const solvers: Record<string, Function> = {
       let helper = 10;
       result = temp + helper;
     }
-    // temp and helper are not accessible here
     return `The result is ${result}. Helper variables were garbage collected.`;
   },
   // problem solver--> 138
@@ -910,7 +890,7 @@ export const solvers: Record<string, Function> = {
   "reassigning-object-param": () => {
     let myObj = { val: 10 };
     function reassign(obj: { val: number }) {
-      obj = { val: 20 }; // Reassigns the local parameter, not the original variable
+      obj = { val: 20 };
     }
     reassign(myObj);
     return `The original object is unchanged: ${JSON.stringify(myObj)}`;
@@ -1000,7 +980,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 156
   "immutable-object-delete": () => {
     const original = { a: 1, b: 2, c: 3 };
-    const { b, ...rest } = original; // Destructure 'b' out, keep the rest
+    const { b, ...rest } = original;
     return `New object is missing 'b': ${JSON.stringify(rest)}`;
   },
   // problem solver--> 157
@@ -1061,7 +1041,6 @@ export const solvers: Record<string, Function> = {
     function scopeTest() {
       for (var i = 0; i < 1; i++) {}
       for (let j = 0; j < 1; j++) {}
-      // return `i is ${i}, but j is not defined`; // Would throw ReferenceError for j
     }
     return `(Conceptual) Inside scopeTest, 'i' would be accessible after its loop, but 'j' would not.`;
   },

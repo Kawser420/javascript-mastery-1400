@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS to make solvers robust against user input
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -190,7 +189,6 @@ export const solvers: Record<string, Function> = {
     if (n === 0) return 0;
     let x = n / 2;
     for (let i = 0; i < 20; i++) {
-      // 20 iterations is enough for good precision
       x = 0.5 * (x + n / x);
     }
     return x;
@@ -1151,7 +1149,7 @@ export const solvers: Record<string, Function> = {
       if (n === 1) return 0;
       return (josephus(n - 1, k) + k) % n;
     };
-    return josephus(numPeople, step) + 1; // Convert 0-indexed to 1-indexed
+    return josephus(numPeople, step) + 1;
   },
   // problem solver--> 103
   "mnc-integer-partition": () =>
@@ -1566,7 +1564,6 @@ export const solvers: Record<string, Function> = {
     const mat = parseJson(matrix);
     const n = mat.length;
     const targetSum = mat[0].reduce((a: number, b: number) => a + b, 0);
-    // ... complete logic for rows, cols, diagonals
     return `(Conceptual) Check if sum of all rows, columns, and diagonals equal the target sum.`;
   },
   // problem solver--> 158

@@ -10,6 +10,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -20,6 +21,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -30,6 +32,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -40,6 +43,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -50,6 +54,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -60,6 +65,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -70,6 +76,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -80,6 +87,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -90,6 +98,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Intermediate",
   },
   // problem--> 10
   {
@@ -100,6 +109,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Intermediate",
   },
   // problem--> 11
   {
@@ -110,6 +120,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare Types",
+    difficulty: "Intermediate",
   },
   // problem--> 12
   {
@@ -119,6 +130,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Value",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -128,6 +140,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Value",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -138,6 +151,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -148,6 +162,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Pass by Value",
+    difficulty: "Intermediate",
   },
   // problem--> 16
   {
@@ -158,6 +173,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Pass by Reference",
+    difficulty: "Intermediate",
   },
   // problem--> 17
   {
@@ -168,6 +184,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Immutability",
+    difficulty: "Intermediate",
   },
   // problem--> 18
   {
@@ -178,6 +195,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Mutability",
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -188,6 +206,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Mutability",
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -198,8 +217,8 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
-  // --- Coercion & Equality ---
   // problem--> 21
   {
     id: "tvm-strict-equality",
@@ -209,6 +228,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare `5` and `'5'`",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -219,6 +239,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare `5` and `'5'`",
+    difficulty: "Beginner",
   },
   // problem--> 23
   {
@@ -228,6 +249,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 24
   {
@@ -238,6 +260,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 25
   {
@@ -248,6 +271,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare `true` and `1`",
+    difficulty: "Intermediate",
   },
   // problem--> 26
   {
@@ -258,6 +282,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare `[5]` and `5`",
+    difficulty: "Advanced",
   },
   // problem--> 27
   {
@@ -268,6 +293,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: `Evaluate \`'5' + 3\``,
+    difficulty: "Beginner",
   },
   // problem--> 28
   {
@@ -278,6 +304,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: `Evaluate \`'5' - 3\``,
+    difficulty: "Beginner",
   },
   // problem--> 29
   {
@@ -288,6 +315,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 123 }],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 30
   {
@@ -298,6 +326,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [{ id: "str", label: "String", type: "text", defaultValue: "456" }],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 31
   {
@@ -310,6 +339,7 @@ export const problems: Problem[] = [
       { id: "val", label: "Value", type: "text", defaultValue: "hello" },
     ],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 32
   {
@@ -320,6 +350,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [{ id: "str", label: "String", type: "text", defaultValue: "789" }],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 33
   {
@@ -330,6 +361,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [{ id: "val", label: "Value", type: "text", defaultValue: "0" }],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 34
   {
@@ -340,6 +372,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check Truthiness",
+    difficulty: "Beginner",
   },
   // problem--> 35
   {
@@ -350,6 +383,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check Falsiness",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -360,6 +394,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "List Falsy Values",
+    difficulty: "Beginner",
   },
   // problem--> 37
   {
@@ -369,6 +404,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 38
   {
@@ -378,6 +414,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 39
   {
@@ -395,6 +432,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse",
+    difficulty: "Intermediate",
   },
   // problem--> 40
   {
@@ -407,6 +445,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "3.14 is pi" },
     ],
     buttonText: "Parse",
+    difficulty: "Intermediate",
   },
   // problem--> 41
   {
@@ -417,6 +456,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Convert",
+    difficulty: "Beginner",
   },
   // problem--> 42
   {
@@ -430,6 +470,7 @@ export const problems: Problem[] = [
       { id: "base", label: "Base", type: "number", defaultValue: 16 },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 43
   {
@@ -440,6 +481,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Pitfall",
+    difficulty: "Beginner",
   },
   // problem--> 44
   {
@@ -450,6 +492,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: `Evaluate \`'10' > 5\``,
+    difficulty: "Intermediate",
   },
   // problem--> 45
   {
@@ -460,6 +503,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: `Evaluate \`'2' > '10'\``,
+    difficulty: "Intermediate",
   },
   // problem--> 46
   {
@@ -470,6 +514,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 47
   {
@@ -480,6 +525,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Coercion",
+    difficulty: "Advanced",
   },
   // problem--> 48
   {
@@ -490,6 +536,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Coercion",
+    difficulty: "Advanced",
   },
   // problem--> 49
   {
@@ -500,6 +547,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Advanced",
   },
   // problem--> 50
   {
@@ -510,6 +558,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Coerce Date",
+    difficulty: "Intermediate",
   },
   // problem--> 51
   {
@@ -520,6 +569,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Join",
+    difficulty: "Intermediate",
   },
   // problem--> 52
   {
@@ -530,6 +580,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 53
   {
@@ -540,6 +591,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Key Coercion",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -550,6 +602,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Advanced",
   },
   // problem--> 55
   {
@@ -560,6 +613,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Advanced",
   },
   // problem--> 56
   {
@@ -570,6 +624,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -580,6 +635,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Beginner",
   },
   // problem--> 58
   {
@@ -590,6 +646,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -600,6 +657,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 60
   {
@@ -609,6 +667,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Create",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -619,6 +678,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Create",
+    difficulty: "Intermediate",
   },
   // problem--> 62
   {
@@ -629,6 +689,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 63
   {
@@ -639,6 +700,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 64
   {
@@ -649,6 +711,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 65
   {
@@ -658,6 +721,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 66
   {
@@ -668,6 +732,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 67
   {
@@ -678,6 +743,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -688,6 +754,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 69
   {
@@ -698,6 +765,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 70
   {
@@ -708,6 +776,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -718,6 +787,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 72
   {
@@ -728,6 +798,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 73
   {
@@ -738,6 +809,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 74
   {
@@ -747,6 +819,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 75
   {
@@ -757,6 +830,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -766,6 +840,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 77
   {
@@ -776,6 +851,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 78
   {
@@ -786,6 +862,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -796,6 +873,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -809,6 +887,7 @@ export const problems: Problem[] = [
       { id: "digits", label: "Digits", type: "number", defaultValue: 2 },
     ],
     buttonText: "Format",
+    difficulty: "Beginner",
   },
   // problem--> 81
   {
@@ -822,6 +901,7 @@ export const problems: Problem[] = [
       { id: "precision", label: "Precision", type: "number", defaultValue: 4 },
     ],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 82
   {
@@ -834,6 +914,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 12345 },
     ],
     buttonText: "Format",
+    difficulty: "Intermediate",
   },
   // problem--> 83
   {
@@ -844,6 +925,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 84
   {
@@ -854,6 +936,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 85
   {
@@ -864,6 +947,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Advanced",
   },
   // problem--> 86
   {
@@ -874,6 +958,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Advanced",
   },
   // problem--> 87
   {
@@ -884,6 +969,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Descriptor",
+    difficulty: "Intermediate",
   },
   // problem--> 88
   {
@@ -894,6 +980,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Define Property",
+    difficulty: "Intermediate",
   },
   // problem--> 89
   {
@@ -904,6 +991,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 90
   {
@@ -914,6 +1002,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 91
   {
@@ -924,6 +1013,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 92
   {
@@ -933,6 +1023,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Define Getter",
+    difficulty: "Intermediate",
   },
   // problem--> 93
   {
@@ -942,6 +1033,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Define Setter",
+    difficulty: "Intermediate",
   },
   // problem--> 94
   {
@@ -952,6 +1044,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 95
   {
@@ -962,6 +1055,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Chain",
+    difficulty: "Intermediate",
   },
   // problem--> 96
   {
@@ -972,6 +1066,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Create",
+    difficulty: "Intermediate",
   },
   // problem--> 97
   {
@@ -982,6 +1077,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Inspect",
+    difficulty: "Intermediate",
   },
   // problem--> 98
   {
@@ -992,6 +1088,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Create",
+    difficulty: "Intermediate",
   },
   // problem--> 99
   {
@@ -1002,6 +1099,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 100
   {
@@ -1012,6 +1110,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 101
   {
@@ -1022,6 +1121,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Demonstrate",
+    difficulty: "Beginner",
   },
   // problem--> 102
   {
@@ -1032,6 +1132,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Inspect Constructor",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1042,6 +1143,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 104
   {
@@ -1051,6 +1153,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 105
   {
@@ -1061,6 +1164,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare Zeroes",
+    difficulty: "Intermediate",
   },
   // problem--> 106
   {
@@ -1071,6 +1175,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `isFinite`",
+    difficulty: "Intermediate",
   },
   // problem--> 107
   {
@@ -1081,6 +1186,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check Safety",
+    difficulty: "Intermediate",
   },
   // problem--> 108
   {
@@ -1091,6 +1197,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Constant",
+    difficulty: "Intermediate",
   },
   // problem--> 109
   {
@@ -1101,6 +1208,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1111,6 +1219,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `5.5 & 3.3`",
+    difficulty: "Advanced",
   },
   // problem--> 111
   {
@@ -1121,6 +1230,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 112
   {
@@ -1131,6 +1241,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check Type",
+    difficulty: "Intermediate",
   },
   // problem--> 113
   {
@@ -1141,6 +1252,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 114
   {
@@ -1151,6 +1263,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 115
   {
@@ -1161,6 +1274,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Evaluate `10n / 3n`",
+    difficulty: "Intermediate",
   },
   // problem--> 116
   {
@@ -1171,6 +1285,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 117
   {
@@ -1181,6 +1296,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 118
   {
@@ -1191,6 +1307,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 119
   {
@@ -1201,6 +1318,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `alert([1,2,3])`",
+    difficulty: "Intermediate",
   },
   // problem--> 120
   {
@@ -1211,6 +1329,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 121
   {
@@ -1221,6 +1340,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Order",
+    difficulty: "Advanced",
   },
   // problem--> 122
   {
@@ -1231,6 +1351,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare `0.1 + 0.2` and `0.3`",
+    difficulty: "Advanced",
   },
   // problem--> 123
   {
@@ -1241,6 +1362,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 124
   {
@@ -1251,6 +1373,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Proxy",
+    difficulty: "Advanced",
   },
   // problem--> 125
   {
@@ -1261,6 +1384,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show `globalThis`",
+    difficulty: "Intermediate",
   },
   // problem--> 126
   {
@@ -1271,6 +1395,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Constant",
+    difficulty: "Intermediate",
   },
   // problem--> 127
   {
@@ -1281,6 +1406,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Constant",
+    difficulty: "Intermediate",
   },
   // problem--> 128
   {
@@ -1291,6 +1417,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Arithmetic",
+    difficulty: "Intermediate",
   },
   // problem--> 129
   {
@@ -1301,6 +1428,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Custom `toString`",
+    difficulty: "Advanced",
   },
   // problem--> 130
   {
@@ -1311,6 +1439,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `~'5'`",
+    difficulty: "Advanced",
   },
   // problem--> 131
   {
@@ -1321,6 +1450,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check Prototype",
+    difficulty: "Intermediate",
   },
   // problem--> 132
   {
@@ -1331,6 +1461,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 133
   {
@@ -1341,6 +1472,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 134
   {
@@ -1351,6 +1483,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 135
   {
@@ -1361,6 +1494,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Deep Clone",
+    difficulty: "Intermediate",
   },
   // problem--> 136
   {
@@ -1371,6 +1505,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Limitations",
+    difficulty: "Intermediate",
   },
   // problem--> 137
   {
@@ -1381,6 +1516,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 138
   {
@@ -1391,6 +1527,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 139
   {
@@ -1401,6 +1538,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 140
   {
@@ -1411,6 +1549,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 141
   {
@@ -1421,6 +1560,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Get All Own Keys",
+    difficulty: "Advanced",
   },
   // problem--> 142
   {
@@ -1431,6 +1571,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `getOwnPropertyDescriptor` Trap",
+    difficulty: "Advanced",
   },
   // problem--> 143
   {
@@ -1441,6 +1582,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Create and Revoke Proxy",
+    difficulty: "Advanced",
   },
   // problem--> 144
   {
@@ -1451,6 +1593,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Create Object from Entries",
+    difficulty: "Intermediate",
   },
   // problem--> 145
   {
@@ -1461,6 +1604,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Stringify with Replacer",
+    difficulty: "Intermediate",
   },
   // problem--> 146
   {
@@ -1471,6 +1615,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Parse with Reviver",
+    difficulty: "Intermediate",
   },
   // problem--> 147
   {
@@ -1481,6 +1626,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Beginner",
   },
   // problem--> 148
   {
@@ -1491,6 +1637,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `10.9 | 0`",
+    difficulty: "Advanced",
   },
   // problem--> 149
   {
@@ -1501,6 +1648,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 150
   {
@@ -1511,6 +1659,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 151
   {
@@ -1521,6 +1670,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `construct` Trap",
+    difficulty: "Advanced",
   },
   // problem--> 152
   {
@@ -1531,6 +1681,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `delete` Trap",
+    difficulty: "Advanced",
   },
   // problem--> 153
   {
@@ -1540,6 +1691,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Trap",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -1549,6 +1701,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Trap",
+    difficulty: "Advanced",
   },
   // problem--> 155
   {
@@ -1558,6 +1711,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Trap",
+    difficulty: "Advanced",
   },
   // problem--> 156
   {
@@ -1568,6 +1722,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Trap",
+    difficulty: "Advanced",
   },
   // problem--> 157
   {
@@ -1578,6 +1733,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 158
   {
@@ -1588,6 +1744,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 159
   {
@@ -1598,6 +1755,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Reflect",
+    difficulty: "Advanced",
   },
   // problem--> 160
   {
@@ -1608,6 +1766,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `construct`",
+    difficulty: "Advanced",
   },
   // problem--> 161
   {
@@ -1618,6 +1777,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `apply`",
+    difficulty: "Advanced",
   },
   // problem--> 162
   {
@@ -1628,6 +1788,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `has`",
+    difficulty: "Advanced",
   },
   // problem--> 163
   {
@@ -1638,6 +1799,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 164
   {
@@ -1648,6 +1810,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 165
   {
@@ -1658,6 +1821,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 166
   {
@@ -1668,6 +1832,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 167
   {
@@ -1678,6 +1843,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 168
   {
@@ -1687,6 +1853,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Constant",
+    difficulty: "Intermediate",
   },
   // problem--> 169
   {
@@ -1697,6 +1864,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Constant",
+    difficulty: "Intermediate",
   },
   // problem--> 170
   {
@@ -1707,6 +1875,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `null == 0`",
+    difficulty: "Intermediate",
   },
   // problem--> 171
   {
@@ -1717,6 +1886,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Coercion",
+    difficulty: "Intermediate",
   },
   // problem--> 172
   {
@@ -1727,6 +1897,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Coercion",
+    difficulty: "Intermediate",
   },
   // problem--> 173
   {
@@ -1737,6 +1908,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 174
   {
@@ -1747,6 +1919,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `Symbol.species`",
+    difficulty: "Advanced",
   },
   // problem--> 175
   {
@@ -1757,6 +1930,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `this`",
+    difficulty: "Advanced",
   },
   // problem--> 176
   {
@@ -1767,6 +1941,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Beginner",
   },
   // problem--> 177
   {
@@ -1777,6 +1952,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Beginner",
   },
   // problem--> 178
   {
@@ -1787,6 +1963,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 179
   {
@@ -1797,6 +1974,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 180
   {
@@ -1807,6 +1985,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 181
   {
@@ -1817,6 +1996,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Show Separator",
+    difficulty: "Beginner",
   },
   // problem--> 182
   {
@@ -1827,6 +2007,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Private Field",
+    difficulty: "Intermediate",
   },
   // problem--> 183
   {
@@ -1836,6 +2017,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Private Method",
+    difficulty: "Intermediate",
   },
   // problem--> 184
   {
@@ -1846,6 +2028,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Static Field",
+    difficulty: "Intermediate",
   },
   // problem--> 185
   {
@@ -1855,6 +2038,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -1865,6 +2049,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Static Method",
+    difficulty: "Intermediate",
   },
   // problem--> 187
   {
@@ -1875,6 +2060,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 188
   {
@@ -1885,6 +2071,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Error Cause",
+    difficulty: "Intermediate",
   },
   // problem--> 189
   {
@@ -1895,6 +2082,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `/d` flag",
+    difficulty: "Intermediate",
   },
   // problem--> 190
   {
@@ -1905,6 +2093,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `.at()`",
+    difficulty: "Beginner",
   },
   // problem--> 191
   {
@@ -1915,6 +2104,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `.at()`",
+    difficulty: "Beginner",
   },
   // problem--> 192
   {
@@ -1925,6 +2115,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Instance Check",
+    difficulty: "Advanced",
   },
   // problem--> 193
   {
@@ -1935,6 +2126,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test Initialization Order",
+    difficulty: "Intermediate",
   },
   // problem--> 194
   {
@@ -1945,6 +2137,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 195
   {
@@ -1955,6 +2148,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 196
   {
@@ -1965,6 +2159,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `.findLast()`",
+    difficulty: "Intermediate",
   },
   // problem--> 197
   {
@@ -1975,6 +2170,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `.findLastIndex()`",
+    difficulty: "Intermediate",
   },
   // problem--> 198
   {
@@ -1985,6 +2181,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `.with()`",
+    difficulty: "Intermediate",
   },
   // problem--> 199
   {
@@ -1995,6 +2192,7 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `.toSorted()`",
+    difficulty: "Intermediate",
   },
   // problem--> 200
   {
@@ -2005,5 +2203,6 @@ export const problems: Problem[] = [
     category: "Type and Value Mastery",
     inputs: [],
     buttonText: "Test `.toReversed()`",
+    difficulty: "Intermediate",
   },
 ];

@@ -10,6 +10,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Example",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -20,6 +21,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Create Closure",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -30,6 +32,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Factory",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -40,6 +43,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Counter",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -50,6 +54,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Scope Chain",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -60,6 +65,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Compare Scopes",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -70,6 +76,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run `var` Loop",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -80,6 +87,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run `let` Loop",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -90,6 +98,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run IIFE Fix",
+    difficulty: "Beginner",
   },
   // problem--> 10
   {
@@ -100,6 +109,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Toggle",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -110,6 +120,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Module",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -120,6 +131,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test `once` Function",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -130,6 +142,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Memoization",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -140,6 +153,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Counters",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -150,6 +164,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Protection",
+    difficulty: "Beginner",
   },
   // problem--> 16
   {
@@ -160,6 +175,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Example",
+    difficulty: "Beginner",
   },
   // problem--> 17
   {
@@ -170,6 +186,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Beginner",
   },
   // problem--> 18
   {
@@ -180,6 +197,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Currying",
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -190,6 +208,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Partial Application",
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -200,6 +219,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Hoisting",
+    difficulty: "Beginner",
   },
   // problem--> 21
   {
@@ -210,6 +230,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -220,6 +241,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Beginner",
   },
   // problem--> 23
   {
@@ -230,6 +252,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Redefinition",
+    difficulty: "Beginner",
   },
   // problem--> 24
   {
@@ -240,6 +263,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Shared Scope",
+    difficulty: "Beginner",
   },
   // problem--> 25
   {
@@ -250,6 +274,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Async Example",
+    difficulty: "Beginner",
   },
   // problem--> 26
   {
@@ -260,6 +285,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Shadowing",
+    difficulty: "Beginner",
   },
   // problem--> 27
   {
@@ -270,6 +296,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run IIFE",
+    difficulty: "Beginner",
   },
   // problem--> 28
   {
@@ -280,6 +307,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Manager",
+    difficulty: "Beginner",
   },
   // problem--> 29
   {
@@ -290,6 +318,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Logger",
+    difficulty: "Beginner",
   },
   // problem--> 30
   {
@@ -300,6 +329,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Difference",
+    difficulty: "Beginner",
   },
   // problem--> 31
   {
@@ -310,6 +340,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Lexical `this`",
+    difficulty: "Beginner",
   },
   // problem--> 32
   {
@@ -320,6 +351,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Map State",
+    difficulty: "Beginner",
   },
   // problem--> 33
   {
@@ -330,6 +362,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain & Test",
+    difficulty: "Beginner",
   },
   // problem--> 34
   {
@@ -340,6 +373,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Rate Limiter",
+    difficulty: "Beginner",
   },
   // problem--> 35
   {
@@ -350,6 +384,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Composition",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -360,6 +395,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Comparison",
+    difficulty: "Beginner",
   },
   // problem--> 37
   {
@@ -370,6 +406,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Beginner",
   },
   // problem--> 38
   {
@@ -380,6 +417,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Undo",
+    difficulty: "Beginner",
   },
   // problem--> 39
   {
@@ -390,6 +428,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Example",
+    difficulty: "Beginner",
   },
   // problem--> 40
   {
@@ -400,6 +439,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Example",
+    difficulty: "Beginner",
   },
   // problem--> 41
   {
@@ -410,6 +450,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Constant",
+    difficulty: "Beginner",
   },
   // problem--> 42
   {
@@ -420,6 +461,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Test",
+    difficulty: "Beginner",
   },
   // problem--> 43
   {
@@ -430,6 +472,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Beginner",
   },
   // problem--> 44
   {
@@ -440,6 +483,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Configuration",
+    difficulty: "Beginner",
   },
   // problem--> 45
   {
@@ -450,6 +494,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Expiration",
+    difficulty: "Beginner",
   },
   // problem--> 46
   {
@@ -460,6 +505,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Show Before & After",
+    difficulty: "Beginner",
   },
   // problem--> 47
   {
@@ -470,6 +516,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Compare Methods",
+    difficulty: "Beginner",
   },
   // problem--> 48
   {
@@ -480,6 +527,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Promise Chain",
+    difficulty: "Beginner",
   },
   // problem--> 49
   {
@@ -490,6 +538,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain & Test",
+    difficulty: "Beginner",
   },
   // problem--> 50
   {
@@ -500,6 +549,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain & Test",
+    difficulty: "Beginner",
   },
   // problem--> 51
   {
@@ -510,6 +560,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test ID Generator",
+    difficulty: "Intermediate",
   },
   // problem--> 52
   {
@@ -520,6 +571,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Flipper",
+    difficulty: "Intermediate",
   },
   // problem--> 53
   {
@@ -530,6 +582,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Sequence",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -540,6 +593,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Tracker",
+    difficulty: "Intermediate",
   },
   // problem--> 55
   {
@@ -550,6 +604,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Example",
+    difficulty: "Intermediate",
   },
   // problem--> 56
   {
@@ -560,6 +615,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Singleton",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -570,6 +626,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Operations",
+    difficulty: "Intermediate",
   },
   // problem--> 58
   {
@@ -580,6 +637,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -590,6 +648,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Async/Await Example",
+    difficulty: "Intermediate",
   },
   // problem--> 60
   {
@@ -600,6 +659,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Pub/Sub",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -610,6 +670,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Lazy Eval",
+    difficulty: "Intermediate",
   },
   // problem--> 62
   {
@@ -620,6 +681,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run `forEach` Fix",
+    difficulty: "Intermediate",
   },
   // problem--> 63
   {
@@ -630,6 +692,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Account",
+    difficulty: "Intermediate",
   },
   // problem--> 64
   {
@@ -640,6 +703,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Conditional",
+    difficulty: "Intermediate",
   },
   // problem--> 65
   {
@@ -650,6 +714,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Chaining",
+    difficulty: "Intermediate",
   },
   // problem--> 66
   {
@@ -660,6 +725,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 67
   {
@@ -670,6 +736,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Iterator",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -680,6 +747,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Logger Proxy",
+    difficulty: "Intermediate",
   },
   // problem--> 69
   {
@@ -690,6 +758,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Comparison",
+    difficulty: "Intermediate",
   },
   // problem--> 70
   {
@@ -700,6 +769,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Retry",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -710,6 +780,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Timer",
+    difficulty: "Intermediate",
   },
   // problem--> 72
   {
@@ -720,6 +791,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test History",
+    difficulty: "Intermediate",
   },
   // problem--> 73
   {
@@ -730,6 +802,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Advanced Curry",
+    difficulty: "Intermediate",
   },
   // problem--> 74
   {
@@ -740,6 +813,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Lazy Map",
+    difficulty: "Intermediate",
   },
   // problem--> 75
   {
@@ -750,6 +824,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -760,6 +835,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Alphabet Gen",
+    difficulty: "Intermediate",
   },
   // problem--> 77
   {
@@ -770,6 +846,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Negate",
+    difficulty: "Intermediate",
   },
   // problem--> 78
   {
@@ -780,6 +857,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Recursive Cache",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -790,6 +868,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Multi-Arg Memo",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -800,6 +879,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Proxy Closure",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -810,6 +890,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Invalidation",
+    difficulty: "Intermediate",
   },
   // problem--> 82
   {
@@ -820,6 +901,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test FSM",
+    difficulty: "Intermediate",
   },
   // problem--> 83
   {
@@ -830,6 +912,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Module Cache",
+    difficulty: "Intermediate",
   },
   // problem--> 84
   {
@@ -840,6 +923,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 85
   {
@@ -850,6 +934,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 86
   {
@@ -860,6 +945,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Tap",
+    difficulty: "Intermediate",
   },
   // problem--> 87
   {
@@ -870,6 +956,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Accumulator",
+    difficulty: "Intermediate",
   },
   // problem--> 88
   {
@@ -880,6 +967,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 89
   {
@@ -890,6 +978,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Lifecycle",
+    difficulty: "Intermediate",
   },
   // problem--> 90
   {
@@ -900,6 +989,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Spread",
+    difficulty: "Intermediate",
   },
   // problem--> 91
   {
@@ -910,6 +1000,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 92
   {
@@ -920,6 +1011,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Flags",
+    difficulty: "Intermediate",
   },
   // problem--> 93
   {
@@ -930,6 +1022,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Polyfill",
+    difficulty: "Intermediate",
   },
   // problem--> 94
   {
@@ -940,6 +1033,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Loader",
+    difficulty: "Intermediate",
   },
   // problem--> 95
   {
@@ -950,6 +1044,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 96
   {
@@ -960,6 +1055,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Pipeline",
+    difficulty: "Intermediate",
   },
   // problem--> 97
   {
@@ -970,6 +1066,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Difference",
+    difficulty: "Intermediate",
   },
   // problem--> 98
   {
@@ -980,6 +1077,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Injection",
+    difficulty: "Intermediate",
   },
   // problem--> 99
   {
@@ -990,6 +1088,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Module Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 100
   {
@@ -1000,6 +1099,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Countdown",
+    difficulty: "Intermediate",
   },
   // problem--> 101
   {
@@ -1010,6 +1110,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 102
   {
@@ -1020,6 +1121,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Custom Array",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1030,6 +1132,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Binary Adapter",
+    difficulty: "Intermediate",
   },
   // problem--> 104
   {
@@ -1040,6 +1143,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Delay",
+    difficulty: "Intermediate",
   },
   // problem--> 105
   {
@@ -1050,6 +1154,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Character",
+    difficulty: "Intermediate",
   },
   // problem--> 106
   {
@@ -1060,6 +1165,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Symbol Privacy",
+    difficulty: "Intermediate",
   },
   // problem--> 107
   {
@@ -1070,6 +1176,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Gen Closure",
+    difficulty: "Intermediate",
   },
   // problem--> 108
   {
@@ -1080,6 +1187,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Immutable State",
+    difficulty: "Intermediate",
   },
   // problem--> 109
   {
@@ -1090,6 +1198,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Compare `this`",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1100,6 +1209,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Lock",
+    difficulty: "Intermediate",
   },
   // problem--> 111
   {
@@ -1110,6 +1220,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Polling",
+    difficulty: "Intermediate",
   },
   // problem--> 112
   {
@@ -1120,6 +1231,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Catch Closure",
+    difficulty: "Intermediate",
   },
   // problem--> 113
   {
@@ -1130,6 +1242,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Timed Once",
+    difficulty: "Intermediate",
   },
   // problem--> 114
   {
@@ -1140,6 +1253,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 115
   {
@@ -1150,6 +1264,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 116
   {
@@ -1160,6 +1275,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Settings",
+    difficulty: "Intermediate",
   },
   // problem--> 117
   {
@@ -1170,6 +1286,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Unary Adapter",
+    difficulty: "Intermediate",
   },
   // problem--> 118
   {
@@ -1180,6 +1297,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Intermediate",
   },
   // problem--> 119
   {
@@ -1190,6 +1308,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Spy",
+    difficulty: "Intermediate",
   },
   // problem--> 120
   {
@@ -1200,6 +1319,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Deep Chain",
+    difficulty: "Intermediate",
   },
   // problem--> 121
   {
@@ -1210,6 +1330,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Instance Count",
+    difficulty: "Advanced",
   },
   // problem--> 122
   {
@@ -1220,6 +1341,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Command",
+    difficulty: "Advanced",
   },
   // problem--> 123
   {
@@ -1230,6 +1352,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Cart",
+    difficulty: "Advanced",
   },
   // problem--> 124
   {
@@ -1240,6 +1363,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Compare Hoisting",
+    difficulty: "Advanced",
   },
   // problem--> 125
   {
@@ -1250,6 +1374,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain GC",
+    difficulty: "Advanced",
   },
   // problem--> 126
   {
@@ -1260,6 +1385,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Semaphore",
+    difficulty: "Advanced",
   },
   // problem--> 127
   {
@@ -1270,6 +1396,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Rest Params",
+    difficulty: "Advanced",
   },
   // problem--> 128
   {
@@ -1280,6 +1407,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Tagged Template",
+    difficulty: "Advanced",
   },
   // problem--> 129
   {
@@ -1290,6 +1418,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Interval",
+    difficulty: "Advanced",
   },
   // problem--> 130
   {
@@ -1300,6 +1429,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Revealing Module",
+    difficulty: "Advanced",
   },
   // problem--> 131
   {
@@ -1310,6 +1440,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Block Scope Closure",
+    difficulty: "Advanced",
   },
   // problem--> 132
   {
@@ -1320,6 +1451,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test TTL Cache",
+    difficulty: "Advanced",
   },
   // problem--> 133
   {
@@ -1330,6 +1462,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Decorator",
+    difficulty: "Advanced",
   },
   // problem--> 134
   {
@@ -1340,6 +1473,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 135
   {
@@ -1350,6 +1484,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Async Memo",
+    difficulty: "Advanced",
   },
   // problem--> 136
   {
@@ -1360,6 +1495,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Compare Patterns",
+    difficulty: "Advanced",
   },
   // problem--> 137
   {
@@ -1370,6 +1506,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Lazy Init",
+    difficulty: "Advanced",
   },
   // problem--> 138
   {
@@ -1380,6 +1517,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Conditional Logger",
+    difficulty: "Advanced",
   },
   // problem--> 139
   {
@@ -1390,6 +1528,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Object Pool",
+    difficulty: "Advanced",
   },
   // problem--> 140
   {
@@ -1400,6 +1539,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 141
   {
@@ -1410,6 +1550,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Callable Check",
+    difficulty: "Advanced",
   },
   // problem--> 142
   {
@@ -1420,6 +1561,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Chain",
+    difficulty: "Advanced",
   },
   // problem--> 143
   {
@@ -1430,6 +1572,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Router",
+    difficulty: "Advanced",
   },
   // problem--> 144
   {
@@ -1440,6 +1583,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Getters/Setters",
+    difficulty: "Advanced",
   },
   // problem--> 145
   {
@@ -1450,6 +1594,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Translator",
+    difficulty: "Advanced",
   },
   // problem--> 146
   {
@@ -1460,6 +1605,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Once Per Arg",
+    difficulty: "Advanced",
   },
   // problem--> 147
   {
@@ -1470,6 +1616,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Global Shadowing",
+    difficulty: "Advanced",
   },
   // problem--> 148
   {
@@ -1480,6 +1627,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Limiter with Reset",
+    difficulty: "Advanced",
   },
   // problem--> 149
   {
@@ -1490,6 +1638,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Profiling",
+    difficulty: "Advanced",
   },
   // problem--> 150
   {
@@ -1500,6 +1649,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Stream",
+    difficulty: "Advanced",
   },
   // problem--> 151
   {
@@ -1510,6 +1660,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Alternator",
+    difficulty: "Advanced",
   },
   // problem--> 152
   {
@@ -1520,6 +1671,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Circuit Breaker",
+    difficulty: "Advanced",
   },
   // problem--> 153
   {
@@ -1530,6 +1682,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test WeakMap Privacy",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -1540,6 +1693,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Creation Test",
+    difficulty: "Advanced",
   },
   // problem--> 155
   {
@@ -1550,6 +1704,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Batcher",
+    difficulty: "Advanced",
   },
   // problem--> 156
   {
@@ -1560,6 +1715,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Auto-Increment",
+    difficulty: "Advanced",
   },
   // problem--> 157
   {
@@ -1570,6 +1726,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Demonstrate `new Function`",
+    difficulty: "Advanced",
   },
   // problem--> 158
   {
@@ -1580,6 +1737,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Cancellation",
+    difficulty: "Advanced",
   },
   // problem--> 159
   {
@@ -1590,6 +1748,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test API Versioning",
+    difficulty: "Advanced",
   },
   // problem--> 160
   {
@@ -1600,6 +1759,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Undo/Redo",
+    difficulty: "Advanced",
   },
   // problem--> 161
   {
@@ -1610,6 +1770,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Timed Batcher",
+    difficulty: "Advanced",
   },
   // problem--> 162
   {
@@ -1620,6 +1781,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Fibonacci",
+    difficulty: "Advanced",
   },
   // problem--> 163
   {
@@ -1630,6 +1792,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 164
   {
@@ -1640,6 +1803,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Mutex",
+    difficulty: "Advanced",
   },
   // problem--> 165
   {
@@ -1650,6 +1814,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 166
   {
@@ -1660,6 +1825,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Lazy Getter",
+    difficulty: "Advanced",
   },
   // problem--> 167
   {
@@ -1670,6 +1836,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Example",
+    difficulty: "Advanced",
   },
   // problem--> 168
   {
@@ -1680,6 +1847,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Pattern",
+    difficulty: "Advanced",
   },
   // problem--> 169
   {
@@ -1690,6 +1858,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Reducer",
+    difficulty: "Advanced",
   },
   // problem--> 170
   {
@@ -1700,6 +1869,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Comparison",
+    difficulty: "Advanced",
   },
   // problem--> 171
   {
@@ -1710,6 +1880,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 172
   {
@@ -1720,6 +1891,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Promisify",
+    difficulty: "Advanced",
   },
   // problem--> 173
   {
@@ -1730,6 +1902,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Async Chaining",
+    difficulty: "Advanced",
   },
   // problem--> 174
   {
@@ -1740,6 +1913,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Custom Memo",
+    difficulty: "Advanced",
   },
   // problem--> 175
   {
@@ -1750,6 +1924,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 176
   {
@@ -1760,6 +1935,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Backoff",
+    difficulty: "Advanced",
   },
   // problem--> 177
   {
@@ -1770,6 +1946,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Env Provider",
+    difficulty: "Advanced",
   },
   // problem--> 178
   {
@@ -1780,6 +1957,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Overloading",
+    difficulty: "Advanced",
   },
   // problem--> 179
   {
@@ -1790,6 +1968,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Scope Injection",
+    difficulty: "Advanced",
   },
   // problem--> 180
   {
@@ -1800,6 +1979,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 181
   {
@@ -1810,6 +1990,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Wizard",
+    difficulty: "Advanced",
   },
   // problem--> 182
   {
@@ -1820,6 +2001,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Task Queue",
+    difficulty: "Advanced",
   },
   // problem--> 183
   {
@@ -1830,6 +2012,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Trap Closure",
+    difficulty: "Advanced",
   },
   // problem--> 184
   {
@@ -1840,6 +2023,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Conditional Memo",
+    difficulty: "Advanced",
   },
   // problem--> 185
   {
@@ -1850,6 +2034,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Plugin System",
+    difficulty: "Advanced",
   },
   // problem--> 186
   {
@@ -1860,6 +2045,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 187
   {
@@ -1870,6 +2056,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Contextual Logger",
+    difficulty: "Advanced",
   },
   // problem--> 188
   {
@@ -1880,6 +2067,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Compare Solutions",
+    difficulty: "Advanced",
   },
   // problem--> 189
   {
@@ -1890,6 +2078,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Handshake",
+    difficulty: "Advanced",
   },
   // problem--> 190
   {
@@ -1900,6 +2089,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Stream Processor",
+    difficulty: "Advanced",
   },
   // problem--> 191
   {
@@ -1910,6 +2100,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 192
   {
@@ -1920,6 +2111,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Rolling Average",
+    difficulty: "Advanced",
   },
   // problem--> 193
   {
@@ -1930,6 +2122,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 194
   {
@@ -1940,6 +2133,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Run Deep Test",
+    difficulty: "Advanced",
   },
   // problem--> 195
   {
@@ -1950,6 +2144,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Transaction",
+    difficulty: "Advanced",
   },
   // problem--> 196
   {
@@ -1960,6 +2155,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Implementation",
+    difficulty: "Advanced",
   },
   // problem--> 197
   {
@@ -1970,6 +2166,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Static Simulation",
+    difficulty: "Advanced",
   },
   // problem--> 198
   {
@@ -1980,6 +2177,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Discuss Performance",
+    difficulty: "Advanced",
   },
   // problem--> 199
   {
@@ -1990,6 +2188,7 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Explain Pattern",
+    difficulty: "Advanced",
   },
   // problem--> 200
   {
@@ -2000,5 +2199,6 @@ export const problems: Problem[] = [
     category: "Closures and Lexical Environment",
     inputs: [],
     buttonText: "Test Mini Redux",
+    difficulty: "Advanced",
   },
 ];

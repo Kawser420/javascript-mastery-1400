@@ -327,7 +327,7 @@ export const solvers: Record<string, Function> = {
         removeItem: (item: string) => {
           items = items.filter((i) => i !== item);
         },
-        listItems: () => items.slice(), // Return a copy
+        listItems: () => items.slice(),
       };
     };
     const manager = createManager();
@@ -463,7 +463,6 @@ export const solvers: Record<string, Function> = {
         getMaxUsers: () => MAX_USERS,
       };
     })();
-    // settingsModule.MAX_USERS = 200; // This would fail
     return `The private constant is: ${settingsModule.getMaxUsers()}`;
   },
   // problem solver--> 42
@@ -524,7 +523,6 @@ export const solvers: Record<string, Function> = {
     const obj = {
       name: "My Object",
       createCallback: function () {
-        // Arrow function closure lexically captures 'this'
         return () => `Arrow function this.name: ${this.name}`;
       },
       createBoundCallback: function () {
@@ -646,8 +644,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 57
   "closures-dynamic-function-creation": () => {
     const createOperation = (operator: string) => {
-      // Note: Using new Function() is generally discouraged due to security and performance implications.
-      // It does not create a closure over its creation scope.
       return new Function("a", "b", `return a ${operator} b;`);
     };
     const add = createOperation("+");
@@ -1063,7 +1059,6 @@ export const solvers: Record<string, Function> = {
     const createHandler = (logger: { log: (msg: string) => void }) => {
       return (data: string) => {
         logger.log(`Processing: ${data}`);
-        // ... process data
       };
     };
     let loggedMessage = "";
@@ -1181,7 +1176,6 @@ export const solvers: Record<string, Function> = {
       while (true) {
         const newContext = yield;
         if (newContext) context = newContext;
-        // The closure here can access the 'context' variable from the generator's scope
         console.log(`[${context}] Log event`);
       }
     }
@@ -1197,7 +1191,7 @@ export const solvers: Record<string, Function> = {
       return {
         getState: () => state,
         updateState: (updates: object) => {
-          state = { ...state, ...updates }; // Create new object
+          state = { ...state, ...updates };
           return state;
         },
       };
@@ -1214,7 +1208,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 110
   "closures-lock-and-key": () => {
     const createLock = () => {
-      const key = {}; // A unique, private object reference
+      const key = {};
       return {
         lock: (fn: Function) => (providedKey: object) => {
           if (providedKey === key) return fn();
@@ -1290,7 +1284,7 @@ export const solvers: Record<string, Function> = {
       return {
         get: (key: string) => settings[key],
         set: (key: string, value: any) => (settings[key] = value),
-        getAll: () => ({ ...settings }), // Return a copy
+        getAll: () => ({ ...settings }),
       };
     };
     const s = createSettings({ theme: "dark" });
@@ -1301,8 +1295,8 @@ export const solvers: Record<string, Function> = {
   "closures-unary-function-adapter": () => {
     const unary = (fn: Function) => (arg: any) => fn(arg);
     const arr = ["10", "10", "10"];
-    const r1 = arr.map(parseInt); // [10, NaN, 2] - because parseInt gets (val, index, arr)
-    const r2 = arr.map(unary(parseInt)); // [10, 10, 10] - unary ensures only one arg is passed
+    const r1 = arr.map(parseInt);
+    const r2 = arr.map(unary(parseInt));
     return `Without unary: [${r1.join(", ")}]. With unary: [${r2.join(", ")}]`;
   },
   // problem solver--> 118
@@ -1377,7 +1371,6 @@ export const solvers: Record<string, Function> = {
       receiver: { execute: (val: string) => void },
       value: string
     ) => {
-      // The closure binds the receiver and the value
       return {
         execute: () => receiver.execute(value),
       };
@@ -1397,7 +1390,7 @@ export const solvers: Record<string, Function> = {
       return {
         addItem: (item: { name: string; price: number }) => items.push(item),
         getTotal: () => items.reduce((total, item) => total + item.price, 0),
-        getCart: () => [...items], // Return copy
+        getCart: () => [...items],
       };
     };
     const cart = createCart();
@@ -1460,7 +1453,6 @@ export const solvers: Record<string, Function> = {
       function privateFn() {
         return privateVar;
       }
-      // Reveal a pointer to the private function
       return {
         publicFn: privateFn,
       };
@@ -1596,8 +1588,8 @@ export const solvers: Record<string, Function> = {
       return () => `Hello, ${person.name}`;
     };
     const greeter = createGreeter(obj);
-    obj.name = "Bob"; // Change the name
-    return greeter(); // The closure calls the getter and gets the new name
+    obj.name = "Bob";
+    return greeter();
   },
   // problem solver--> 145
   "closures-internationalization-i18n": () => {
@@ -1711,13 +1703,11 @@ export const solvers: Record<string, Function> = {
   "closures-lexical-environment-on-creation": () => {
     let myVar = "Outer";
     function createClosure() {
-      // The closure is CREATED here, capturing 'Outer'
       return () => myVar;
     }
     const myClosure = createClosure();
     function runInNewScope() {
       let myVar = "Inner";
-      // The closure is CALLED here, but its environment is already set
       return myClosure();
     }
     return `Closure returned: ${runInNewScope()}`;
@@ -1768,7 +1758,6 @@ export const solvers: Record<string, Function> = {
     var myVar = "global";
     function create() {
       var myVar = "local";
-      // `new Function` only sees the global scope.
       return new Function("return myVar;");
     }
     const fn = create();
@@ -1816,7 +1805,7 @@ export const solvers: Record<string, Function> = {
       let pointer = 0;
       return {
         setState: (state: object) => {
-          history = history.slice(0, pointer + 1); // Truncate redo history
+          history = history.slice(0, pointer + 1);
           history.push(state);
           pointer++;
         },
@@ -1918,10 +1907,10 @@ export const solvers: Record<string, Function> = {
       name: "Test Object",
       run: function () {
         const regularFn = function () {
-          return this.name; // `this` is dynamic (will be undefined)
+          return this.name;
         };
         const arrowFn = () => {
-          return this.name; // `this` is lexical (will be 'Test Object')
+          return this.name;
         };
         try {
           regularFn();
@@ -2008,7 +1997,7 @@ export const solvers: Record<string, Function> = {
           return await fn();
         } catch (e) {
           if (i === retries - 1) throw e;
-          await delay(20 * Math.pow(2, i)); // Exponential backoff
+          await delay(20 * Math.pow(2, i));
         }
       }
     };
@@ -2223,7 +2212,6 @@ export const solvers: Record<string, Function> = {
         return {
           name: "L2",
           method2: () => {
-            // Arrow function captures 'this' from method1 (obj)
             return this.name;
           },
         };
@@ -2290,7 +2278,7 @@ export const solvers: Record<string, Function> = {
         state = reducer(state, action);
         listeners.forEach((l) => l());
       };
-      dispatch({}); // Initialize state
+      dispatch({});
       return { getState, dispatch, subscribe };
     };
     const reducer = (state = 0, action: { type: string }) =>

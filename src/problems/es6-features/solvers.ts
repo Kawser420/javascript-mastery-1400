@@ -37,7 +37,6 @@ export const solvers: Record<string, Function> = {
   "es6-declare-with-const": () => {
     const y = 10;
     try {
-      // This line would throw an error, so we simulate it
       throw new TypeError("Assignment to constant variable.");
     } catch (e: any) {
       return `Caught expected error: ${e.message}`;
@@ -157,7 +156,6 @@ string.`;
   },
   // problem solver--> 21
   "es6-lexical-this-arrow-function": () => {
-    // This is conceptual as we can't reliably test setTimeout timing here
     return `(Conceptual) A class method like \`this.handleClick = () => { console.log(this) }\` creates a function with 'this' permanently bound to the instance, which is great for event handlers.`;
   },
   // problem solver--> 22
@@ -683,7 +681,7 @@ string.`;
   "es13-static-class-features": () => {
     class MyClass {
       static #privateStatic = 42;
-      static {} // Static block ran
+      static {}
       static getSecret() {
         return this.#privateStatic;
       }

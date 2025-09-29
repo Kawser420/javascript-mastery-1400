@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -15,9 +14,7 @@ const parseStrArray = (input: string): string[] => {
 
 // State for impure function
 let externalCounter = 0;
-// State for practical state demo
 let counterState = 0;
-// State for async loop demos
 let asyncLoopResult: string[] = [];
 
 export const solvers: Record<string, Function> = {
@@ -363,8 +360,8 @@ export const solvers: Record<string, Function> = {
       yield "c";
     }
     const gen = numberGenerator();
-    const first = gen.next(); // { value: 'a', done: false }
-    const second = gen.next(); // { value: 'b', done: false }
+    const first = gen.next();
+    const second = gen.next();
     return `First value: ${first.value}, Second done: ${second.done}`;
   },
   // problem solver--> 53
@@ -379,7 +376,7 @@ export const solvers: Record<string, Function> = {
     const addTen = (x: number) => x + 10;
     const compose = (f: Function, g: Function) => (x: any) => f(g(x));
     const composedFunc = compose(addTen, double);
-    return composedFunc(parseNumber(num)); // double(5) -> 10, then addTen(10) -> 20
+    return composedFunc(parseNumber(num));
   },
   // problem solver--> 56
   "function-piping": ({ num }: { num: any }) => {
@@ -390,7 +387,7 @@ export const solvers: Record<string, Function> = {
       (x: any) =>
         fns.reduce((v, f) => f(v), x);
     const pipedFunc = pipe(double, addTen);
-    return pipedFunc(parseNumber(num)); // double(5) -> 10, then addTen(10) -> 20
+    return pipedFunc(parseNumber(num));
   },
   // problem solver--> 57
   "side-effects-conceptual": () =>
@@ -411,8 +408,8 @@ export const solvers: Record<string, Function> = {
     };
     const slowAdd = (a: number, b: number) => a + b;
     const memoizedAdd = memoize(slowAdd);
-    memoizedAdd(2, 3); // Calculated
-    return `Second call: ${memoizedAdd(2, 3)}`; // From cache
+    memoizedAdd(2, 3);
+    return `Second call: ${memoizedAdd(2, 3)}`;
   },
   // problem solver--> 59
   "block-scope-in-loop": () =>
@@ -437,7 +434,7 @@ export const solvers: Record<string, Function> = {
         function nested() {
           return (this as any)?.name;
         }
-        return `Nested 'this' is: ${nested()}`; // undefined in strict mode
+        return `Nested 'this' is: ${nested()}`;
       },
     };
     return obj.process();
@@ -505,7 +502,7 @@ export const solvers: Record<string, Function> = {
   "self-referencing-function": ({ num }: { num: any }) => {
     const factorial = function fac(n: number): number {
       if (n <= 1) return 1;
-      return n * fac(n - 1); // refers to 'fac', not 'factorial'
+      return n * fac(n - 1);
     };
     return factorial(parseNumber(num));
   },
@@ -514,7 +511,7 @@ export const solvers: Record<string, Function> = {
     function outer() {
       let x = 1;
       const inner = () => x;
-      x = 2; // Modify after closure is created
+      x = 2;
       return inner;
     }
     return `Closure returns the current value: ${outer()()}`;
@@ -546,8 +543,8 @@ export const solvers: Record<string, Function> = {
       return 2;
     }
     const g = gen();
-    const first = g.next(); // { value: 1, done: false }
-    const second = g.next(); // { value: 2, done: true }
+    const first = g.next();
+    const second = g.next();
     return `Final yielded value: ${second.value}, Is done: ${second.done}`;
   },
   // problem solver--> 78
@@ -617,10 +614,10 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 87
   "function-purity-and-arrays": ({ arr }: { arr: string }) => {
     const original = parseStrArray(arr);
-    const impureSort = (a: string[]) => a.sort(); // Mutates
-    const pureSort = (a: string[]) => [...a].sort(); // Creates a copy
+    const impureSort = (a: string[]) => a.sort();
+    const pureSort = (a: string[]) => [...a].sort();
     const pureResult = pureSort(original);
-    impureSort(original); // Original is now changed
+    impureSort(original);
     return `Pure result: [${pureResult.join(
       ", "
     )}]. Original after impure sort: [${original.join(", ")}]`;
@@ -1050,7 +1047,7 @@ export const solvers: Record<string, Function> = {
       if (false) {
         var x = 5;
       }
-      return `The value of x is: ${x}`; // undefined
+      return `The value of x is: ${x}`;
     }
     return test();
   },
@@ -1204,8 +1201,8 @@ export const solvers: Record<string, Function> = {
       cachedData = "expensive data";
       return `(calculated) ${cachedData}`;
     }
-    getData(); // Calculates
-    return getData(); // Returns from cache
+    getData();
+    return getData();
   },
   // problem solver--> 180
   "tdz-in-class-bodies": () =>

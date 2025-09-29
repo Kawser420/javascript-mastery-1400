@@ -16,6 +16,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Log Message",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -27,6 +28,7 @@ export const problems: Problem[] = [
       { id: "value", label: "Number to log", type: "number", defaultValue: 42 },
     ],
     buttonText: "Log Number",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -37,6 +39,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Multiple",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -47,6 +50,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Object",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -57,6 +61,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Array",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -74,6 +79,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Log Error",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -91,6 +97,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Log Warning",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -103,6 +110,7 @@ export const problems: Problem[] = [
       { id: "name", label: "Name", type: "text", defaultValue: "Alice" },
     ],
     buttonText: "Log Greeting",
+    difficulty: "Intermediate",
   },
   // problem--> 09
   {
@@ -113,6 +121,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [{ id: "age", label: "Age", type: "number", defaultValue: 30 }],
     buttonText: "Log Age",
+    difficulty: "Intermediate",
   },
   // problem--> 10
   {
@@ -125,6 +134,7 @@ export const problems: Problem[] = [
       { id: "price", label: "Price", type: "number", defaultValue: 19.99 },
     ],
     buttonText: "Log Price",
+    difficulty: "Intermediate",
   },
   // problem--> 11
   {
@@ -135,6 +145,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log User Object",
+    difficulty: "Intermediate",
   },
   // problem--> 12
   {
@@ -145,6 +156,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Table",
+    difficulty: "Intermediate",
   },
   // problem--> 13
   {
@@ -155,6 +167,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Table",
+    difficulty: "Intermediate",
   },
   // problem--> 14
   {
@@ -165,6 +178,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Table",
+    difficulty: "Intermediate",
   },
   // problem--> 15
   {
@@ -175,6 +189,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log with `dir`",
+    difficulty: "Intermediate",
   },
   // problem--> 16
   {
@@ -185,6 +200,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log DOM with `dirxml`",
+    difficulty: "Intermediate",
   },
   // problem--> 17
   {
@@ -195,6 +211,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Grouped Messages",
+    difficulty: "Intermediate",
   },
   // problem--> 18
   {
@@ -205,6 +222,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Collapsed Group",
+    difficulty: "Intermediate",
   },
   // problem--> 19
   {
@@ -215,6 +233,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Nested Groups",
+    difficulty: "Intermediate",
   },
   // problem--> 20
   {
@@ -225,6 +244,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Measure Duration",
+    difficulty: "Intermediate",
   },
   // problem--> 21
   {
@@ -235,6 +255,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Run Labeled Timers",
+    difficulty: "Intermediate",
   },
   // problem--> 22
   {
@@ -245,6 +266,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log with Timestamps",
+    difficulty: "Intermediate",
   },
   // problem--> 23
   {
@@ -255,6 +277,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Run Assertion",
+    difficulty: "Intermediate",
   },
   // problem--> 24
   {
@@ -265,6 +288,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Run Counter",
+    difficulty: "Intermediate",
   },
   // problem--> 25
   {
@@ -275,6 +299,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Run Labeled Counters",
+    difficulty: "Intermediate",
   },
   // problem--> 26
   {
@@ -285,6 +310,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Run and Reset Counter",
+    difficulty: "Intermediate",
   },
   // problem--> 27
   {
@@ -295,6 +321,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Trace Function Call",
+    difficulty: "Intermediate",
   },
   // problem--> 28
   {
@@ -304,6 +331,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Clear Console",
+    difficulty: "Beginner",
   },
   // problem--> 29
   {
@@ -314,6 +342,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Info",
+    difficulty: "Beginner",
   },
   // problem--> 30
   {
@@ -324,6 +353,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Debug Message",
+    difficulty: "Beginner",
   },
   // problem--> 31
   {
@@ -334,6 +364,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Pretty-Print",
+    difficulty: "Intermediate",
   },
   // problem--> 32
   {
@@ -344,6 +375,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Compare `log` and `dir`",
+    difficulty: "Intermediate",
   },
   // problem--> 33
   {
@@ -354,6 +386,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Timestamp",
+    difficulty: "Advanced",
   },
   // problem--> 34
   {
@@ -364,6 +397,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Alert",
+    difficulty: "Beginner",
   },
   // problem--> 35
   {
@@ -374,6 +408,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Prompt",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -384,6 +419,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Confirm",
+    difficulty: "Beginner",
   },
   // problem--> 37
   {
@@ -394,6 +430,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Prompt",
+    difficulty: "Intermediate",
   },
   // problem--> 38
   {
@@ -404,6 +441,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Alert an Object",
+    difficulty: "Intermediate",
   },
   // problem--> 39
   {
@@ -414,6 +452,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 40
   {
@@ -424,6 +463,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 41
   {
@@ -434,6 +474,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 42
   {
@@ -444,6 +485,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 43
   {
@@ -454,6 +496,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Code",
+    difficulty: "Intermediate",
   },
   // problem--> 44
   {
@@ -464,6 +507,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Code",
+    difficulty: "Intermediate",
   },
   // problem--> 45
   {
@@ -474,6 +518,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Code",
+    difficulty: "Advanced",
   },
   // problem--> 46
   {
@@ -484,6 +529,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Events",
+    difficulty: "Intermediate",
   },
   // problem--> 47
   {
@@ -494,6 +540,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Show Code",
+    difficulty: "Advanced",
   },
   // problem--> 48
   {
@@ -504,6 +551,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 49
   {
@@ -514,6 +562,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 50
   {
@@ -524,6 +573,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 51
   {
@@ -534,6 +584,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 52
   {
@@ -544,6 +595,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 53
   {
@@ -554,6 +606,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -564,6 +617,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 55
   {
@@ -574,6 +628,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 56
   {
@@ -584,6 +639,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 57
   {
@@ -594,6 +650,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 58
   {
@@ -604,6 +661,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -614,6 +672,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 60
   {
@@ -624,6 +683,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -634,6 +694,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Styled Message",
+    difficulty: "Advanced",
   },
   // problem--> 62
   {
@@ -644,6 +705,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Log Multi-Styled Message",
+    difficulty: "Advanced",
   },
   // problem--> 63
   {
@@ -654,6 +716,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 64
   {
@@ -664,6 +727,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 65
   {
@@ -674,6 +738,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 66
   {
@@ -684,6 +749,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 67
   {
@@ -694,6 +760,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -704,6 +771,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 69
   {
@@ -714,6 +782,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 70
   {
@@ -723,6 +792,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -733,6 +803,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 72
   {
@@ -743,6 +814,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 73
   {
@@ -753,6 +825,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 74
   {
@@ -763,6 +836,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 75
   {
@@ -773,6 +847,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -783,6 +858,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 77
   {
@@ -793,6 +869,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 78
   {
@@ -803,6 +880,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -813,6 +891,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -823,6 +902,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -833,6 +913,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Profile",
+    difficulty: "Advanced",
   },
   // problem--> 82
   {
@@ -843,6 +924,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Performance API",
+    difficulty: "Advanced",
   },
   // problem--> 83
   {
@@ -853,6 +935,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain IndexedDB",
+    difficulty: "Advanced",
   },
   // problem--> 84
   {
@@ -863,6 +946,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain localStorage",
+    difficulty: "Intermediate",
   },
   // problem--> 85
   {
@@ -873,6 +957,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain sessionStorage",
+    difficulty: "Intermediate",
   },
   // problem--> 86
   {
@@ -883,6 +968,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain WebSockets",
+    difficulty: "Advanced",
   },
   // problem--> 87
   {
@@ -893,6 +979,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain SSE",
+    difficulty: "Advanced",
   },
   // problem--> 88
   {
@@ -903,6 +990,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain WebRTC",
+    difficulty: "Advanced",
   },
   // problem--> 89
   {
@@ -913,6 +1001,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain getUserMedia",
+    difficulty: "Advanced",
   },
   // problem--> 90
   {
@@ -923,6 +1012,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Web Audio",
+    difficulty: "Advanced",
   },
   // problem--> 91
   {
@@ -933,6 +1023,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Child Process",
+    difficulty: "Advanced",
   },
   // problem--> 92
   {
@@ -943,6 +1034,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Cluster",
+    difficulty: "Advanced",
   },
   // problem--> 93
   {
@@ -953,6 +1045,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain BroadcastChannel",
+    difficulty: "Advanced",
   },
   // problem--> 94
   {
@@ -963,6 +1056,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain MessageChannel",
+    difficulty: "Advanced",
   },
   // problem--> 95
   {
@@ -973,6 +1067,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Web Serial",
+    difficulty: "Advanced",
   },
   // problem--> 96
   {
@@ -983,6 +1078,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain WebHID",
+    difficulty: "Advanced",
   },
   // problem--> 97
   {
@@ -993,6 +1089,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Web NFC",
+    difficulty: "Advanced",
   },
   // problem--> 98
   {
@@ -1003,6 +1100,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain FSA API",
+    difficulty: "Advanced",
   },
   // problem--> 99
   {
@@ -1013,6 +1111,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 100
   {
@@ -1023,6 +1122,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 101
   {
@@ -1033,6 +1133,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 102
   {
@@ -1043,6 +1144,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 103
   {
@@ -1053,6 +1155,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 104
   {
@@ -1063,6 +1166,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 105
   {
@@ -1073,6 +1177,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 106
   {
@@ -1083,6 +1188,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 107
   {
@@ -1093,6 +1199,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 108
   {
@@ -1103,6 +1210,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 109
   {
@@ -1113,6 +1221,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 110
   {
@@ -1123,6 +1232,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 111
   {
@@ -1133,6 +1243,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 112
   {
@@ -1143,6 +1254,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 113
   {
@@ -1153,6 +1265,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 114
   {
@@ -1163,6 +1276,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 115
   {
@@ -1173,6 +1287,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 116
   {
@@ -1183,6 +1298,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 117
   {
@@ -1193,6 +1309,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 118
   {
@@ -1203,6 +1320,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 119
   {
@@ -1213,6 +1331,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 120
   {
@@ -1223,6 +1342,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 121
   {
@@ -1233,6 +1353,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 122
   {
@@ -1243,6 +1364,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 123
   {
@@ -1253,6 +1375,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 124
   {
@@ -1263,6 +1386,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 125
   {
@@ -1273,6 +1397,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 126
   {
@@ -1283,6 +1408,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 127
   {
@@ -1293,6 +1419,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 128
   {
@@ -1303,6 +1430,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 129
   {
@@ -1313,6 +1441,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 130
   {
@@ -1323,6 +1452,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 131
   {
@@ -1333,6 +1463,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 132
   {
@@ -1343,6 +1474,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 133
   {
@@ -1353,6 +1485,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 134
   {
@@ -1363,6 +1496,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 135
   {
@@ -1373,6 +1507,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 136
   {
@@ -1383,6 +1518,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 137
   {
@@ -1393,6 +1529,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 138
   {
@@ -1403,6 +1540,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 139
   {
@@ -1413,6 +1551,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 140
   {
@@ -1423,6 +1562,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 141
   {
@@ -1433,6 +1573,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 142
   {
@@ -1443,6 +1584,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 143
   {
@@ -1453,6 +1595,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 144
   {
@@ -1463,6 +1606,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 145
   {
@@ -1473,6 +1617,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 146
   {
@@ -1483,6 +1628,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 147
   {
@@ -1493,6 +1639,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 148
   {
@@ -1503,6 +1650,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 149
   {
@@ -1513,6 +1661,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 150
   {
@@ -1523,6 +1672,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 151
   {
@@ -1533,6 +1683,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 152
   {
@@ -1543,6 +1694,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 153
   {
@@ -1553,6 +1705,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -1563,6 +1716,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 155
   {
@@ -1573,6 +1727,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 156
   {
@@ -1583,6 +1738,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 157
   {
@@ -1593,6 +1749,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 158
   {
@@ -1603,6 +1760,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 159
   {
@@ -1613,6 +1771,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 160
   {
@@ -1623,6 +1782,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 161
   {
@@ -1633,6 +1793,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 162
   {
@@ -1643,6 +1804,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 163
   {
@@ -1653,6 +1815,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 164
   {
@@ -1663,6 +1826,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 165
   {
@@ -1673,6 +1837,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 166
   {
@@ -1683,6 +1848,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 167
   {
@@ -1693,6 +1859,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 168
   {
@@ -1703,6 +1870,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 169
   {
@@ -1713,6 +1881,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 170
   {
@@ -1723,6 +1892,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 171
   {
@@ -1733,6 +1903,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 172
   {
@@ -1743,6 +1914,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 173
   {
@@ -1753,6 +1925,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 174
   {
@@ -1763,6 +1936,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 175
   {
@@ -1773,6 +1947,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 176
   {
@@ -1783,6 +1958,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 177
   {
@@ -1793,6 +1969,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 178
   {
@@ -1803,6 +1980,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 179
   {
@@ -1813,6 +1991,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 180
   {
@@ -1823,6 +2002,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 181
   {
@@ -1833,6 +2013,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 182
   {
@@ -1843,6 +2024,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 183
   {
@@ -1853,6 +2035,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 184
   {
@@ -1863,6 +2046,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 185
   {
@@ -1873,6 +2057,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 186
   {
@@ -1883,6 +2068,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 187
   {
@@ -1893,6 +2079,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 188
   {
@@ -1903,6 +2090,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 189
   {
@@ -1913,6 +2101,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 190
   {
@@ -1923,6 +2112,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 191
   {
@@ -1933,6 +2123,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 192
   {
@@ -1943,6 +2134,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 193
   {
@@ -1953,6 +2145,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 194
   {
@@ -1963,6 +2156,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 195
   {
@@ -1973,6 +2167,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 196
   {
@@ -1983,6 +2178,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 197
   {
@@ -1993,6 +2189,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 198
   {
@@ -2003,6 +2200,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 199
   {
@@ -2013,6 +2211,7 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
   // problem--> 200
   {
@@ -2023,5 +2222,6 @@ export const problems: Problem[] = [
     category: "Input/Output and Console Utilities",
     inputs: [],
     buttonText: "Explain Concept",
+    difficulty: "Advanced",
   },
 ];

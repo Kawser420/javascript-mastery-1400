@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS to make solvers robust against user input
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);

@@ -1,6 +1,5 @@
 // problem explanation--> 01
 export const explanations: Record<string, string> = {
-  // --- Arithmetic Operators ---
   "addition-operator": `
 ### 💡 Problem Breakdown
 This is the most fundamental arithmetic operation. The goal is to use the addition operator (\`+\`) to find the sum of two numbers.

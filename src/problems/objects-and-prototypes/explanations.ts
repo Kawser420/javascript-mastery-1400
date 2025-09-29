@@ -1,4 +1,3 @@
-// problem explanation--> 01
 export const explanations: Record<string, string> = {
   // problem explanation--> 01
   "op-create-object-literal": `

@@ -7,7 +7,7 @@ export const problems: Problem[] = [
     title: "Declare with `var`",
     description:
       "Declare a variable named `myVar` using the `var` keyword and assign it a value.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [
       {
         id: "value",
@@ -17,6 +17,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Declare and Show",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -24,7 +25,7 @@ export const problems: Problem[] = [
     title: "Declare with `let`",
     description:
       "Declare a variable named `myLet` using the `let` keyword and assign it a value.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [
       {
         id: "value",
@@ -34,6 +35,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Declare and Show",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -41,7 +43,7 @@ export const problems: Problem[] = [
     title: "Declare with `const`",
     description:
       "Declare a constant named `myConst` using the `const` keyword and assign it a value.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [
       {
         id: "value",
@@ -51,6 +53,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Declare and Show",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -58,9 +61,10 @@ export const problems: Problem[] = [
     title: "Reassign a `let` Variable",
     description:
       "Declare a variable with `let`, assign it an initial value, and then reassign it to a new value.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Reassign `let`",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -68,9 +72,10 @@ export const problems: Problem[] = [
     title: "Reassigning a `const` Primitive",
     description:
       "Declare a constant with a primitive value (e.g., a number) and then attempt to reassign it. Observe the error.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Reassignment",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -78,9 +83,10 @@ export const problems: Problem[] = [
     title: "Uninitialized Variable",
     description:
       "Declare a variable using `let` without assigning it a value, and check its initial value.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Check Value",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -88,9 +94,10 @@ export const problems: Problem[] = [
     title: "`const` Must Be Initialized",
     description:
       "Attempt to declare a constant using `const` without an initial value to see the resulting `SyntaxError`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Declaration",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -98,9 +105,10 @@ export const problems: Problem[] = [
     title: "Variable Naming Rules",
     description:
       "Demonstrate valid variable names (starting with letters, $, or _) and an invalid one (starting with a number).",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Naming Rules",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -108,9 +116,10 @@ export const problems: Problem[] = [
     title: "Case Sensitivity",
     description:
       "Declare two variables with the same name but different casing (e.g., `myVariable` and `myvariable`) to show they are distinct.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Case Sensitivity",
+    difficulty: "Beginner",
   },
   // problem--> 10
   {
@@ -118,9 +127,10 @@ export const problems: Problem[] = [
     title: "Using `typeof`",
     description:
       "Declare variables of different primitive types (string, number, boolean) and use the `typeof` operator to check their type.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Check Types",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -128,9 +138,10 @@ export const problems: Problem[] = [
     title: "Dynamic Typing",
     description:
       "Declare a variable with `let`, assign it a number, check its type, then reassign it to a string and check its type again.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Dynamic Typing",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -138,9 +149,10 @@ export const problems: Problem[] = [
     title: "Declare Multiple Variables",
     description:
       "Show how to declare multiple variables in a single `let` statement.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Declare Multiple",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -148,12 +160,13 @@ export const problems: Problem[] = [
     title: "Variable String Concatenation",
     description:
       "Declare two string variables and concatenate them to form a new string.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [
       { id: "str1", label: "First Name", type: "text", defaultValue: "John" },
       { id: "str2", label: "Last Name", type: "text", defaultValue: "Doe" },
     ],
     buttonText: "Concatenate",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -161,12 +174,13 @@ export const problems: Problem[] = [
     title: "Template Literals with Variables",
     description:
       "Use template literals (backticks ``) to embed variables directly into a string.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [
       { id: "name", label: "Name", type: "text", defaultValue: "Alice" },
       { id: "age", label: "Age", type: "number", defaultValue: 30 },
     ],
     buttonText: "Create String",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -174,9 +188,10 @@ export const problems: Problem[] = [
     title: "`null` vs. `undefined`",
     description:
       "Show the difference between a variable that is uninitialized (`undefined`) and a variable explicitly assigned `null`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 16
   {
@@ -184,9 +199,10 @@ export const problems: Problem[] = [
     title: "Shorthand Property Names",
     description:
       "Show how to create an object literal from variables with the same name using the ES6 shorthand syntax.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Shorthand",
+    difficulty: "Intermediate",
   },
   // problem--> 17
   {
@@ -194,9 +210,10 @@ export const problems: Problem[] = [
     title: "The Peculiarity of `NaN`",
     description:
       "Demonstrate that `NaN` (Not a Number) is the only value in JavaScript that is not equal to itself, and show the correct way to check for it.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `NaN`",
+    difficulty: "Intermediate",
   },
   // problem--> 18
   {
@@ -204,9 +221,10 @@ export const problems: Problem[] = [
     title: "Swap Variables with Destructuring",
     description:
       "Show the elegant ES6 syntax for swapping two variables in a single line using array destructuring.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Swap Variables",
+    difficulty: "Intermediate",
   },
   // problem--> 19
   {
@@ -214,9 +232,10 @@ export const problems: Problem[] = [
     title: "Array Destructuring",
     description:
       "Use array destructuring to unpack values from an array into distinct variables.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Array",
+    difficulty: "Intermediate",
   },
   // problem--> 20
   {
@@ -224,9 +243,10 @@ export const problems: Problem[] = [
     title: "Object Destructuring",
     description:
       "Use object destructuring to unpack properties from an object into variables.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Object",
+    difficulty: "Intermediate",
   },
   // problem--> 21
   {
@@ -234,9 +254,10 @@ export const problems: Problem[] = [
     title: "When to Use `let` vs. `const` (Conceptual)",
     description:
       "Explain the best practice: default to `const` and only use `let` when you know a variable needs to be reassigned.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Best Practice",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -244,9 +265,10 @@ export const problems: Problem[] = [
     title: "Destructuring a Function's Return (Array)",
     description:
       "Destructure the array returned by a function directly into variables.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Return",
+    difficulty: "Intermediate",
   },
   // problem--> 23
   {
@@ -254,9 +276,10 @@ export const problems: Problem[] = [
     title: "Destructuring a Function's Return (Object)",
     description:
       "Destructure the object returned by a function directly into variables.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Return",
+    difficulty: "Intermediate",
   },
   // problem--> 24
   {
@@ -264,9 +287,10 @@ export const problems: Problem[] = [
     title: "Redeclaring `var`",
     description:
       "Show that a variable declared with `var` can be redeclared in the same scope without an error.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Redeclare `var`",
+    difficulty: "Intermediate",
   },
   // problem--> 25
   {
@@ -274,9 +298,10 @@ export const problems: Problem[] = [
     title: "Redeclaring `let` (Error)",
     description:
       "Attempt to redeclare a variable with `let` in the same scope to see the `SyntaxError`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Redeclare `let`",
+    difficulty: "Intermediate",
   },
   // problem--> 26
   {
@@ -284,9 +309,10 @@ export const problems: Problem[] = [
     title: "Global Scope with `var`",
     description:
       "Declare a global variable with `var` and access it from within a function.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Access Global `var`",
+    difficulty: "Beginner",
   },
   // problem--> 27
   {
@@ -294,9 +320,10 @@ export const problems: Problem[] = [
     title: "Function Scope with `var`",
     description:
       "Show that a variable declared with `var` inside a function is not accessible from outside that function.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Function Scope",
+    difficulty: "Beginner",
   },
   // problem--> 28
   {
@@ -304,18 +331,20 @@ export const problems: Problem[] = [
     title: "Block Scope with `let`",
     description:
       "Demonstrate that a variable declared with `let` inside a block (e.g., an if-statement) is not accessible outside that block.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Block Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 29
   {
     id: "block-scope-const",
     title: "Block Scope with `const`",
     description: "Show that `const` is also block-scoped, just like `let`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `const` Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 30
   {
@@ -323,9 +352,10 @@ export const problems: Problem[] = [
     title: "`var` Ignores Block Scope",
     description:
       "Show that `var` is function-scoped and does not respect block scope, which can lead to bugs.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `var` in Block",
+    difficulty: "Intermediate",
   },
   // problem--> 31
   {
@@ -333,9 +363,10 @@ export const problems: Problem[] = [
     title: "Global Scope with `let`",
     description:
       "Declare a global variable with `let` and access it from a function.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Access Global `let`",
+    difficulty: "Beginner",
   },
   // problem--> 32
   {
@@ -343,9 +374,10 @@ export const problems: Problem[] = [
     title: "Shadowing a Global Variable",
     description:
       "Declare a global variable and a local variable with the same name inside a function to show how the local one takes precedence.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Global Shadowing",
+    difficulty: "Intermediate",
   },
   // problem--> 33
   {
@@ -353,9 +385,10 @@ export const problems: Problem[] = [
     title: "Reassigning a `const` Array (Error)",
     description:
       "Attempt to reassign a `const` array to a new array to observe the `TypeError`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Reassignment",
+    difficulty: "Beginner",
   },
   // problem--> 34
   {
@@ -363,9 +396,10 @@ export const problems: Problem[] = [
     title: "Skipping Items in Array Destructuring",
     description:
       "Use a comma to skip over an element when destructuring an array.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Skip Items",
+    difficulty: "Intermediate",
   },
   // problem--> 35
   {
@@ -373,9 +407,10 @@ export const problems: Problem[] = [
     title: "Practical `let`: State Variable",
     description:
       "Use `let` to manage a state variable, such as a counter that gets updated by a function.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Increment Counter",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -383,9 +418,10 @@ export const problems: Problem[] = [
     title: "Practical `const`: Config Object",
     description:
       "Use `const` to store a configuration object, like an API endpoint URL, which should not be changed during runtime.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Config",
+    difficulty: "Beginner",
   },
   // problem--> 37
   {
@@ -393,9 +429,10 @@ export const problems: Problem[] = [
     title: "Variable Shadowing",
     description:
       "Demonstrate variable shadowing, where a variable in an inner scope has the same name as a variable in an outer scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Shadowing",
+    difficulty: "Intermediate",
   },
   // problem--> 38
   {
@@ -403,9 +440,10 @@ export const problems: Problem[] = [
     title: "Lexical Scoping",
     description:
       "Demonstrate lexical (static) scoping by showing that a nested function can access variables from its containing function.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Lexical Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 39
   {
@@ -413,9 +451,10 @@ export const problems: Problem[] = [
     title: "Scope Chain",
     description:
       "Demonstrate the scope chain by having a deeply nested function access a variable from its grandparent scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Scope Chain",
+    difficulty: "Intermediate",
   },
   // problem--> 40
   {
@@ -423,9 +462,10 @@ export const problems: Problem[] = [
     title: "IIFE for Scope",
     description:
       "Use an Immediately Invoked Function Expression (IIFE) to create a private scope and avoid polluting the global scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Run IIFE",
+    difficulty: "Intermediate",
   },
   // problem--> 41
   {
@@ -433,9 +473,10 @@ export const problems: Problem[] = [
     title: "`let` in a `for` Loop",
     description:
       "Demonstrate how `let` creates a new binding for each iteration of a `for` loop, solving a common closure problem.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `let` in Loop",
+    difficulty: "Advanced",
   },
   // problem--> 42
   {
@@ -443,9 +484,10 @@ export const problems: Problem[] = [
     title: "`var` in a `for` Loop Pitfall",
     description:
       "Show the classic problem of using `var` in a `for` loop with an asynchronous callback.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `var` Pitfall",
+    difficulty: "Advanced",
   },
   // problem--> 43
   {
@@ -453,9 +495,10 @@ export const problems: Problem[] = [
     title: "`var` and the `window` Object",
     description:
       "Show that in a browser, global variables declared with `var` become properties of the `window` object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Check `window`",
+    difficulty: "Intermediate",
   },
   // problem--> 44
   {
@@ -463,9 +506,10 @@ export const problems: Problem[] = [
     title: "`let` and the `window` Object",
     description:
       "Show that global variables declared with `let` or `const` do not become properties of the `window` object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Check `window`",
+    difficulty: "Intermediate",
   },
   // problem--> 45
   {
@@ -473,9 +517,10 @@ export const problems: Problem[] = [
     title: "Undeclared Variable (Global Leak)",
     description:
       "Show how assigning to an undeclared variable in non-strict mode accidentally creates a global variable.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Global Leak",
+    difficulty: "Intermediate",
   },
   // problem--> 46
   {
@@ -483,9 +528,10 @@ export const problems: Problem[] = [
     title: "Undeclared Variable in Strict Mode",
     description:
       "Demonstrate that strict mode prevents accidental global variables by throwing a `ReferenceError` on assignment to an undeclared variable.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Strict Mode",
+    difficulty: "Intermediate",
   },
   // problem--> 47
   {
@@ -493,9 +539,10 @@ export const problems: Problem[] = [
     title: "Scope of `catch` Block",
     description:
       "Show that the error variable in a `try...catch` block is block-scoped to the `catch` block.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `catch` Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 48
   {
@@ -503,9 +550,10 @@ export const problems: Problem[] = [
     title: "Hoisting: `var` Declaration",
     description:
       "Demonstrate that `var` declarations are hoisted, but their assignments are not, resulting in `undefined` when accessed before assignment.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `var` Hoisting",
+    difficulty: "Intermediate",
   },
   // problem--> 49
   {
@@ -513,9 +561,10 @@ export const problems: Problem[] = [
     title: "Hoisting: Function Declaration",
     description:
       "Show that an entire function declaration is hoisted, allowing it to be called before it is defined in the code.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Function Hoisting",
+    difficulty: "Intermediate",
   },
   // problem--> 50
   {
@@ -523,9 +572,10 @@ export const problems: Problem[] = [
     title: "Hoisting: Function Expression",
     description:
       "Demonstrate that a function expression assigned to a `var` is not fully hoisted, leading to a `TypeError` if called before assignment.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Expression Hoisting",
+    difficulty: "Intermediate",
   },
   // problem--> 51
   {
@@ -533,9 +583,10 @@ export const problems: Problem[] = [
     title: "Temporal Dead Zone (`let`)",
     description:
       "Show that accessing a `let` variable before its declaration results in a `ReferenceError` due to the Temporal Dead Zone (TDZ).",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test TDZ",
+    difficulty: "Advanced",
   },
   // problem--> 52
   {
@@ -543,9 +594,10 @@ export const problems: Problem[] = [
     title: "Temporal Dead Zone (`const`)",
     description:
       "Demonstrate that `const` variables are also subject to the Temporal Dead Zone.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test TDZ for `const`",
+    difficulty: "Advanced",
   },
   // problem--> 53
   {
@@ -553,9 +605,10 @@ export const problems: Problem[] = [
     title: "`var` Hoisting within Function",
     description:
       "Demonstrate how a `var` with the same name as a global variable, when declared inside a function, is hoisted to the top of that function.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Function Hoisting",
+    difficulty: "Advanced",
   },
   // problem--> 54
   {
@@ -563,9 +616,10 @@ export const problems: Problem[] = [
     title: "Hoisting in Strict Mode",
     description:
       "Explain that hoisting behavior for `var` and functions is largely the same in strict mode, but other behaviors (like undeclared variables) change.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Strict Hoisting",
+    difficulty: "Intermediate",
   },
   // problem--> 55
   {
@@ -573,9 +627,10 @@ export const problems: Problem[] = [
     title: "Mutating a `const` Object",
     description:
       "Show that while a `const` variable cannot be reassigned, the properties of the object it refers to can be mutated.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Mutate Object",
+    difficulty: "Intermediate",
   },
   // problem--> 56
   {
@@ -583,9 +638,10 @@ export const problems: Problem[] = [
     title: "Mutating a `const` Array",
     description:
       "Demonstrate that you can add, remove, or change elements in an array declared with `const`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Mutate Array",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -593,9 +649,10 @@ export const problems: Problem[] = [
     title: "Reassigning a `const` Object (Error)",
     description:
       "Attempt to reassign a constant variable that holds an object to a new object, observing the `TypeError`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Reassignment",
+    difficulty: "Beginner",
   },
   // problem--> 58
   {
@@ -603,9 +660,10 @@ export const problems: Problem[] = [
     title: "`Object.freeze()`",
     description:
       "Use `Object.freeze()` to make an object truly immutable, preventing its properties from being changed.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Freeze Object",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -613,9 +671,10 @@ export const problems: Problem[] = [
     title: "`const` in a `for...of` Loop",
     description:
       "Demonstrate that you can use `const` to declare the loop variable in a `for...of` loop, as a new binding is created for each iteration.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `const` in Loop",
+    difficulty: "Intermediate",
   },
   // problem--> 60
   {
@@ -623,9 +682,10 @@ export const problems: Problem[] = [
     title: "`const` in a classic `for` Loop (Error)",
     description:
       "Show that using `const` in the initializer of a classic `for` loop will cause an error because the loop tries to reassign it.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `const` in `for`",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -633,9 +693,10 @@ export const problems: Problem[] = [
     title: "Array Destructuring with Rest",
     description:
       "Use the rest pattern (`...`) in array destructuring to collect the remaining elements into a new array.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Use Rest Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 62
   {
@@ -643,9 +704,10 @@ export const problems: Problem[] = [
     title: "Object Destructuring with Rest",
     description:
       "Use the rest pattern (`...`) in object destructuring to collect the remaining properties into a new object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Use Rest Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 63
   {
@@ -653,9 +715,10 @@ export const problems: Problem[] = [
     title: "Object Destructuring with Aliases",
     description:
       "Assign object properties to new variable names using alias syntax (e.g., `{ name: newName }`).",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Use Aliases",
+    difficulty: "Intermediate",
   },
   // problem--> 64
   {
@@ -663,9 +726,10 @@ export const problems: Problem[] = [
     title: "Array Destructuring with Defaults",
     description:
       "Provide default values for variables in array destructuring for cases where the array is shorter than expected.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Use Defaults",
+    difficulty: "Intermediate",
   },
   // problem--> 65
   {
@@ -673,9 +737,10 @@ export const problems: Problem[] = [
     title: "Object Destructuring with Defaults",
     description:
       "Provide default values for variables in object destructuring for cases where a property does not exist.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Use Defaults",
+    difficulty: "Intermediate",
   },
   // problem--> 66
   {
@@ -683,9 +748,10 @@ export const problems: Problem[] = [
     title: "Nested Object Destructuring",
     description:
       "Use nested destructuring to extract values from a nested object in a single statement.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Nested",
+    difficulty: "Advanced",
   },
   // problem--> 67
   {
@@ -693,9 +759,10 @@ export const problems: Problem[] = [
     title: "Destructuring in Function Parameters (Object)",
     description:
       "Use object destructuring directly in a function's parameter list to handle an options object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Function",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -703,9 +770,10 @@ export const problems: Problem[] = [
     title: "Destructuring in Function Parameters (Array)",
     description:
       "Use array destructuring directly in a function's parameter list.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Function",
+    difficulty: "Intermediate",
   },
   // problem--> 69
   {
@@ -713,9 +781,10 @@ export const problems: Problem[] = [
     title: "Destructuring in a `for...of` Loop",
     description:
       "Use array destructuring in a `for...of` loop to easily access elements of a nested array.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Loop",
+    difficulty: "Intermediate",
   },
   // problem--> 70
   {
@@ -723,9 +792,10 @@ export const problems: Problem[] = [
     title: "Destructuring a String",
     description:
       "Show that strings can be destructured like arrays to get individual characters.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure String",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -733,9 +803,10 @@ export const problems: Problem[] = [
     title: "Destructuring with Defaults and Aliases",
     description:
       "Combine default values and aliasing in a single object destructuring statement.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Combine Features",
+    difficulty: "Advanced",
   },
   // problem--> 72
   {
@@ -743,9 +814,10 @@ export const problems: Problem[] = [
     title: "Destructuring `null` or `undefined`",
     description:
       "Show that attempting to destructure `null` or `undefined` will result in a `TypeError`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Null Destructuring",
+    difficulty: "Advanced",
   },
   // problem--> 73
   {
@@ -753,9 +825,10 @@ export const problems: Problem[] = [
     title: "Destructuring Return with Defaults",
     description:
       "Destructure an object returned by a function, providing a default value for a potentially missing property.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Return with Defaults",
+    difficulty: "Advanced",
   },
   // problem--> 74
   {
@@ -763,9 +836,10 @@ export const problems: Problem[] = [
     title: "Scope of Standalone Blocks",
     description:
       "Demonstrate that a pair of curly braces not attached to any statement (like `if` or `for`) still creates a new block scope for `let` and `const`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Standalone Block",
+    difficulty: "Intermediate",
   },
   // problem--> 75
   {
@@ -773,9 +847,10 @@ export const problems: Problem[] = [
     title: "Dynamic Property Creation",
     description:
       "Use a variable to define a property name when creating an object literal (computed property names).",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Computed Property",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -783,9 +858,10 @@ export const problems: Problem[] = [
     title: "Primitive Wrapper Objects (Conceptual)",
     description:
       'Explain how JavaScript temporarily converts primitives to objects so you can call methods on them (e.g., `"hello".toUpperCase()`).',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Wrappers",
+    difficulty: "Advanced",
   },
   // problem--> 77
   {
@@ -793,9 +869,10 @@ export const problems: Problem[] = [
     title: "The `Symbol` Primitive Type",
     description:
       "Create a `Symbol` and show that it is a unique, immutable primitive value, often used as an object property key.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Create a Symbol",
+    difficulty: "Advanced",
   },
   // problem--> 78
   {
@@ -803,9 +880,10 @@ export const problems: Problem[] = [
     title: "The `BigInt` Primitive Type",
     description:
       "Create a `BigInt` to work with integers larger than the maximum safe integer in JavaScript.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Create a BigInt",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -813,9 +891,10 @@ export const problems: Problem[] = [
     title: "Function Scope vs. Loop Body",
     description:
       "Show that a `var` declared in a loop is actually scoped to the entire function, not just the loop.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Demonstrate Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -823,9 +902,10 @@ export const problems: Problem[] = [
     title: "`let` Behavior in `catch`",
     description:
       "Demonstrate that if a `catch` block uses a `let` with the same name as an outer variable, it properly shadows it without conflict.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `catch` Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -833,9 +913,10 @@ export const problems: Problem[] = [
     title: "Hoisting of `var` at Global Scope",
     description:
       "Explain how `var` declarations are conceptually moved to the top of the script before execution begins.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Global Hoisting",
+    difficulty: "Intermediate",
   },
   // problem--> 82
   {
@@ -843,9 +924,10 @@ export const problems: Problem[] = [
     title: "`const`: Value vs. Reference",
     description:
       "Deep dive into why `const` only protects the variable binding (the reference), not the value of the object itself.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain `const` Behavior",
+    difficulty: "Intermediate",
   },
   // problem--> 83
   {
@@ -853,9 +935,10 @@ export const problems: Problem[] = [
     title: "The Global Object (Conceptual)",
     description:
       "Explain the role of the global object (`window` in browsers, `global` in Node.js) and the introduction of `globalThis`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Global Object",
+    difficulty: "Intermediate",
   },
   // problem--> 84
   {
@@ -863,9 +946,10 @@ export const problems: Problem[] = [
     title: "`typeof` in the TDZ",
     description:
       "Show that even the `typeof` operator will throw a `ReferenceError` when used on a `let` or `const` variable in its TDZ.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `typeof`",
+    difficulty: "Advanced",
   },
   // problem--> 85
   {
@@ -873,9 +957,10 @@ export const problems: Problem[] = [
     title: "Hoisting Order: `var` vs Function",
     description:
       "Demonstrate that function declarations are hoisted before variable declarations when they have the same name.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Hoisting Order",
+    difficulty: "Advanced",
   },
   // problem--> 86
   {
@@ -883,9 +968,10 @@ export const problems: Problem[] = [
     title: "Hoisting: Class Declaration",
     description:
       "Show that ES6 class declarations are hoisted but, like `let`, are in a TDZ, preventing them from being used before declaration.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Class Hoisting",
+    difficulty: "Advanced",
   },
   // problem--> 87
   {
@@ -893,9 +979,10 @@ export const problems: Problem[] = [
     title: "Shallow Nature of `Object.freeze()`",
     description:
       "Show that `Object.freeze()` is shallow, meaning it does not freeze nested objects within the main object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Nested Freeze",
+    difficulty: "Advanced",
   },
   // problem--> 88
   {
@@ -903,9 +990,10 @@ export const problems: Problem[] = [
     title: "`Object.seal()`",
     description:
       "Use `Object.seal()` to prevent adding or deleting properties from an object, while still allowing existing properties to be modified.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Seal Object",
+    difficulty: "Advanced",
   },
   // problem--> 89
   {
@@ -913,9 +1001,10 @@ export const problems: Problem[] = [
     title: "`Object.preventExtensions()`",
     description:
       "Use `Object.preventExtensions()` to prevent new properties from ever being added to an object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Prevent Extensions",
+    difficulty: "Advanced",
   },
   // problem--> 90
   {
@@ -923,9 +1012,10 @@ export const problems: Problem[] = [
     title: "Destructuring Assignment without Declaration",
     description:
       "Show the syntax for assigning to existing variables using object destructuring, which requires parentheses.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Assignment",
+    difficulty: "Intermediate",
   },
   // problem--> 91
   {
@@ -933,9 +1023,10 @@ export const problems: Problem[] = [
     title: "Destructuring with Dynamic Property Name",
     description:
       "Demonstrate the limitation of destructuring with dynamic keys and show the correct alternative using bracket notation.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Dynamic Destructuring",
+    difficulty: "Advanced",
   },
   // problem--> 92
   {
@@ -943,9 +1034,10 @@ export const problems: Problem[] = [
     title: "Mixed Array and Object Destructuring",
     description:
       "Destructure a complex data structure that contains both arrays and objects.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Mixed Destructuring",
+    difficulty: "Advanced",
   },
   // problem--> 93
   {
@@ -953,9 +1045,10 @@ export const problems: Problem[] = [
     title: "Shadowing with `catch` Parameter",
     description:
       "Show how the error parameter in a `catch` block can shadow an outer variable, a behavior that changed in ES2019.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `catch` Shadowing",
+    difficulty: "Advanced",
   },
   // problem--> 94
   {
@@ -963,9 +1056,10 @@ export const problems: Problem[] = [
     title: "TDZ and Closures",
     description:
       "Create a closure that captures a `let` variable and call it before the variable is declared to show the TDZ applies.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test TDZ in Closure",
+    difficulty: "Advanced",
   },
   // problem--> 95
   {
@@ -973,9 +1067,10 @@ export const problems: Problem[] = [
     title: "TDZ with Default Parameters",
     description:
       "Show how a default function parameter can be in the TDZ for another parameter in the same function signature.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Default Param TDZ",
+    difficulty: "Advanced",
   },
   // problem--> 96
   {
@@ -983,9 +1078,10 @@ export const problems: Problem[] = [
     title: "Garbage Collection (Conceptual)",
     description:
       "Explain the basic concept of garbage collection in JavaScript, focusing on how unreferenced variables and objects are cleaned up.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain GC",
+    difficulty: "Intermediate",
   },
   // problem--> 97
   {
@@ -993,9 +1089,10 @@ export const problems: Problem[] = [
     title: "Memory Leaks with Closures (Conceptual)",
     description:
       "Explain how a long-lived closure can unintentionally keep variables in memory, leading to a memory leak.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Leak",
+    difficulty: "Advanced",
   },
   // problem--> 98
   {
@@ -1003,9 +1100,10 @@ export const problems: Problem[] = [
     title: "`let` and `const` in `switch` cases",
     description:
       "Show that the entire `switch` statement is a single block, and declaring a `let` variable in one `case` makes it unavailable in others without its own block.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `switch` Scope",
+    difficulty: "Advanced",
   },
   // problem--> 99
   {
@@ -1013,9 +1111,10 @@ export const problems: Problem[] = [
     title: "TDZ in Function Parameters",
     description:
       "Show how the Temporal Dead Zone applies to function parameters when one parameter references another that has not yet been initialized.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Parameter TDZ",
+    difficulty: "Advanced",
   },
   // problem--> 100
   {
@@ -1023,9 +1122,10 @@ export const problems: Problem[] = [
     title: "Deep Freeze Utility (Conceptual)",
     description:
       'Conceptually outline a recursive function that can "deep freeze" an object, applying `Object.freeze()` to all nested objects.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Deep Freeze",
+    difficulty: "Advanced",
   },
   // problem--> 101
   {
@@ -1033,9 +1133,10 @@ export const problems: Problem[] = [
     title: "Hoisting Across Scripts (Conceptual)",
     description:
       "Explain that hoisting is a file-scoped (or module-scoped) mechanism and does not apply between different `<script>` tags or modules.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Hoisting Boundary",
+    difficulty: "Intermediate",
   },
   // problem--> 102
   {
@@ -1043,9 +1144,10 @@ export const problems: Problem[] = [
     title: "Memory Lifecycle (Conceptual)",
     description:
       "Explain the three steps of the memory lifecycle in JavaScript: Allocation, Use, and Release (Garbage Collection).",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Lifecycle",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1053,9 +1155,10 @@ export const problems: Problem[] = [
     title: "Destructuring from `Map`",
     description:
       "Use destructuring in a `for...of` loop to iterate over the key-value pairs of an ES6 `Map`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Map",
+    difficulty: "Advanced",
   },
   // problem--> 104
   {
@@ -1063,9 +1166,10 @@ export const problems: Problem[] = [
     title: "Immutable Update Pattern",
     description:
       'Demonstrate the pattern of "updating" a `const` object by creating a new object with the old properties spread in, plus the new changes.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Immutable Update",
+    difficulty: "Intermediate",
   },
   // problem--> 105
   {
@@ -1073,9 +1177,10 @@ export const problems: Problem[] = [
     title: "`for...in` vs. `for...of`",
     description:
       "Declare an array and show how `for...in` iterates over its keys (indices) while `for...of` iterates over its values.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Compare Loops",
+    difficulty: "Intermediate",
   },
   // problem--> 106
   {
@@ -1083,9 +1188,10 @@ export const problems: Problem[] = [
     title: "Conditional `var` Hoisting",
     description:
       "Show that a `var` inside an `if (false)` block is still hoisted, which can be unintuitive.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Conditional Hoisting",
+    difficulty: "Intermediate",
   },
   // problem--> 107
   {
@@ -1093,9 +1199,10 @@ export const problems: Problem[] = [
     title: "Destructuring RegExp Groups",
     description:
       "Use array destructuring on the result of `string.match()` to capture groups from a regular expression.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure RegExp",
+    difficulty: "Advanced",
   },
   // problem--> 108
   {
@@ -1103,9 +1210,10 @@ export const problems: Problem[] = [
     title: "Uninitialized `const` in a Loop",
     description:
       "Conceptually explain why `for (const x of []) {}` is valid (x is never created) but `for (const x; ; ) {}` is a syntax error.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Loop Declarations",
+    difficulty: "Advanced",
   },
   // problem--> 109
   {
@@ -1113,9 +1221,10 @@ export const problems: Problem[] = [
     title: "Function Parameter Scope",
     description:
       "Show that function parameters have their own scope, separate from the function body's scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Parameter Scope",
+    difficulty: "Advanced",
   },
   // problem--> 110
   {
@@ -1123,9 +1232,10 @@ export const problems: Problem[] = [
     title: "Destructuring a Sparse Array",
     description:
       "Demonstrate what happens when you destructure a sparse array (an array with empty slots).",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Sparse Array",
+    difficulty: "Advanced",
   },
   // problem--> 111
   {
@@ -1133,9 +1243,10 @@ export const problems: Problem[] = [
     title: "`let` Re-binding in Loops",
     description:
       "Conceptually explain that in a `for` loop, `let` is not just scoped to the block, but is re-bound for each iteration.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Re-binding",
+    difficulty: "Advanced",
   },
   // problem--> 112
   {
@@ -1143,9 +1254,10 @@ export const problems: Problem[] = [
     title: "Implicit Global from Function Call",
     description:
       "Show how calling a method detached from its object in non-strict mode can lead to `this` being the global object, potentially modifying global variables.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Implicit Global",
+    difficulty: "Advanced",
   },
   // problem--> 113
   {
@@ -1153,9 +1265,10 @@ export const problems: Problem[] = [
     title: "Practical `let`: Event Listener State",
     description:
       "Use `let` to manage a state variable (like a toggle) inside an event listener callback.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Toggle State",
+    difficulty: "Beginner",
   },
   // problem--> 114
   {
@@ -1163,9 +1276,10 @@ export const problems: Problem[] = [
     title: "Practical `const`: Function Expressions",
     description:
       "Show the common practice of assigning function expressions and arrow functions to a `const` to prevent them from being accidentally overwritten.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show `const` Function",
+    difficulty: "Beginner",
   },
   // problem--> 115
   {
@@ -1173,9 +1287,10 @@ export const problems: Problem[] = [
     title: "Practical Destructuring: API Response",
     description:
       "Show how to destructure a complex JSON object from a mock API response to extract only the needed data.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure API Data",
+    difficulty: "Intermediate",
   },
   // problem--> 116
   {
@@ -1183,9 +1298,10 @@ export const problems: Problem[] = [
     title: "`Object.is` for `NaN` comparison",
     description:
       "Demonstrate that `Object.is(NaN, NaN)` is `true`, making it a reliable way to check for `NaN` values.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `Object.is`",
+    difficulty: "Intermediate",
   },
   // problem--> 117
   {
@@ -1193,9 +1309,10 @@ export const problems: Problem[] = [
     title: "Primitive vs. Reference Assignment",
     description:
       "Assign a primitive to a new variable and modify it. Then do the same with an object to show the difference between copy-by-value and copy-by-reference.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Compare Assignment",
+    difficulty: "Intermediate",
   },
   // problem--> 118
   {
@@ -1203,9 +1320,10 @@ export const problems: Problem[] = [
     title: "Function Hoisting within Blocks",
     description:
       "Explain the strange, inconsistent behavior of hoisting function declarations out of blocks in non-strict mode.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Block Hoisting",
+    difficulty: "Advanced",
   },
   // problem--> 119
   {
@@ -1213,9 +1331,10 @@ export const problems: Problem[] = [
     title: "Destructuring any Iterable",
     description:
       "Show that any object that implements the iterable protocol (like a `Set`) can be used in an array destructuring assignment.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure a Set",
+    difficulty: "Advanced",
   },
   // problem--> 120
   {
@@ -1223,9 +1342,10 @@ export const problems: Problem[] = [
     title: "`const` and Garbage Collection",
     description:
       "Explain that using `const` does not affect when a variable is garbage collected; reachability is the only factor.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain GC and `const`",
+    difficulty: "Intermediate",
   },
   // problem--> 121
   {
@@ -1233,9 +1353,10 @@ export const problems: Problem[] = [
     title: "`var` and `eval` Scope",
     description:
       'Demonstrate how `var` declared inside an `eval()` call can "leak" into the surrounding function scope.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `eval` Scope",
+    difficulty: "Advanced",
   },
   // problem--> 122
   {
@@ -1243,9 +1364,10 @@ export const problems: Problem[] = [
     title: "`let` and `eval` Scope",
     description:
       "Show that `let` declared inside an `eval()` call respects the scope of the `eval` and does not leak out.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `let` in `eval`",
+    difficulty: "Advanced",
   },
   // problem--> 123
   {
@@ -1253,9 +1375,10 @@ export const problems: Problem[] = [
     title: "Global `var` outside Browsers",
     description:
       "Explain that in environments like Node.js, a global `var` does not attach to a `window` object but to a `global` object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Node Global",
+    difficulty: "Intermediate",
   },
   // problem--> 124
   {
@@ -1263,9 +1386,10 @@ export const problems: Problem[] = [
     title: "Destructuring and Prototypes",
     description:
       "Show that object destructuring will access properties from the object's prototype chain if they are not on the object itself.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Prototype Destructuring",
+    difficulty: "Advanced",
   },
   // problem--> 125
   {
@@ -1273,9 +1397,10 @@ export const problems: Problem[] = [
     title: "Variable Lifecycle in Closures",
     description:
       'Explain how a variable from an outer function "survives" after the outer function returns because it is kept alive by a closure.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Closure Lifecycle",
+    difficulty: "Advanced",
   },
   // problem--> 126
   {
@@ -1283,9 +1408,10 @@ export const problems: Problem[] = [
     title: "Real-World Symbol: Metadata",
     description:
       'Attach "hidden" metadata to an object using a `Symbol` as a key, which won\'t be picked up by `JSON.stringify` or `for...in` loops.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Attach Metadata",
+    difficulty: "Advanced",
   },
   // problem--> 127
   {
@@ -1293,9 +1419,10 @@ export const problems: Problem[] = [
     title: "Real-World `const`: Math Constants",
     description:
       "Declare a mathematical constant like PI or GRAVITY and use it in a calculation.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Calculate with Constant",
+    difficulty: "Beginner",
   },
   // problem--> 128
   {
@@ -1303,9 +1430,10 @@ export const problems: Problem[] = [
     title: "Real-World Destructuring: React Props",
     description:
       "Show the common pattern of destructuring a `props` object in a React component's function signature.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show React Props Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 129
   {
@@ -1313,9 +1441,10 @@ export const problems: Problem[] = [
     title: "Real-World `let`: Caching a Value",
     description:
       "Use `let` to implement a simple cache where a value is calculated and stored on first access, then retrieved from the variable on subsequent accesses.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Cache",
+    difficulty: "Intermediate",
   },
   // problem--> 130
   {
@@ -1323,9 +1452,10 @@ export const problems: Problem[] = [
     title: "TDZ in Class Bodies",
     description:
       "Demonstrate that the TDZ applies within a class body, for example when initializing a property with a value from another property declared later.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Class TDZ",
+    difficulty: "Advanced",
   },
   // problem--> 131
   {
@@ -1333,9 +1463,10 @@ export const problems: Problem[] = [
     title: "Shadowing with Function Parameters",
     description:
       "Show how a function parameter can shadow a variable from an outer scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Parameter Shadowing",
+    difficulty: "Intermediate",
   },
   // problem--> 132
   {
@@ -1343,9 +1474,10 @@ export const problems: Problem[] = [
     title: "Checking if an Object is Frozen",
     description:
       "Use `Object.isFrozen()` to check if an object has been frozen.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Check Frozen Status",
+    difficulty: "Intermediate",
   },
   // problem--> 133
   {
@@ -1353,9 +1485,10 @@ export const problems: Problem[] = [
     title: "Checking if an Object is Sealed",
     description:
       "Use `Object.isSealed()` to check if an object has been sealed.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Check Sealed Status",
+    difficulty: "Intermediate",
   },
   // problem--> 134
   {
@@ -1363,9 +1496,10 @@ export const problems: Problem[] = [
     title: "Checking if an Object is Extensible",
     description:
       "Use `Object.isExtensible()` to check if new properties can be added to an object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Check Extensible Status",
+    difficulty: "Intermediate",
   },
   // problem--> 135
   {
@@ -1373,9 +1507,10 @@ export const problems: Problem[] = [
     title: "Destructuring and Type Coercion",
     description:
       "Demonstrate that destructuring assigns the exact value without type coercion, unlike some other language constructs.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Coercion",
+    difficulty: "Intermediate",
   },
   // problem--> 136
   {
@@ -1383,9 +1518,10 @@ export const problems: Problem[] = [
     title: "Global Scope Pollution (Conceptual)",
     description:
       'Explain why creating many global variables is bad practice ("polluting the global scope") and can lead to naming conflicts with third-party libraries.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Pollution",
+    difficulty: "Beginner",
   },
   // problem--> 137
   {
@@ -1393,9 +1529,10 @@ export const problems: Problem[] = [
     title: "Using Block Scope for Privacy",
     description:
       "Use a standalone block `{}` to create temporary helper variables that don't leak into the surrounding scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Demonstrate Privacy",
+    difficulty: "Intermediate",
   },
   // problem--> 138
   {
@@ -1403,9 +1540,10 @@ export const problems: Problem[] = [
     title: "Hoisting of `let` and `const` (Conceptual)",
     description:
       "Clarify the common misconception: `let` and `const` *are* hoisted (their memory is allocated), but they are not initialized, which is why the TDZ exists.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain `let` Hoisting",
+    difficulty: "Advanced",
   },
   // problem--> 139
   {
@@ -1413,9 +1551,10 @@ export const problems: Problem[] = [
     title: "Destructuring with Computed Property Alias",
     description:
       "Show an advanced pattern where you use computed property names to extract a property and give it a static alias.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Computed Alias",
+    difficulty: "Advanced",
   },
   // problem--> 140
   {
@@ -1423,9 +1562,10 @@ export const problems: Problem[] = [
     title: "Reserved Words as Variables",
     description:
       "Demonstrate that you cannot use reserved keywords like `if`, `for`, or `class` as variable names.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Reserved Words",
+    difficulty: "Beginner",
   },
   // problem--> 141
   {
@@ -1433,9 +1573,10 @@ export const problems: Problem[] = [
     title: "`Infinity` and `-Infinity`",
     description:
       "Show the global `Infinity` and `-Infinity` variables, which represent the mathematical concepts.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Infinity",
+    difficulty: "Intermediate",
   },
   // problem--> 142
   {
@@ -1443,9 +1584,10 @@ export const problems: Problem[] = [
     title: "Pass-by-Value (Primitives)",
     description:
       "Demonstrate that when a primitive is passed to a function, it is passed by value (a copy is made). Modifying it inside the function does not affect the original.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Pass-by-Value",
+    difficulty: "Intermediate",
   },
   // problem--> 143
   {
@@ -1453,9 +1595,10 @@ export const problems: Problem[] = [
     title: "Pass-by-Reference (Objects)",
     description:
       'Demonstrate that when an object is passed to a function, it is passed by "sharing" the reference. Modifying a property of the object inside the function affects the original object.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Pass-by-Reference",
+    difficulty: "Intermediate",
   },
   // problem--> 144
   {
@@ -1463,9 +1606,10 @@ export const problems: Problem[] = [
     title: "Reassigning an Object Parameter",
     description:
       "Show that while you can mutate an object passed to a function, reassigning the parameter to a new object does not affect the original variable outside.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Parameter Reassignment",
+    difficulty: "Intermediate",
   },
   // problem--> 145
   {
@@ -1473,9 +1617,10 @@ export const problems: Problem[] = [
     title: "Hoisting Inside `eval`",
     description:
       "Demonstrate the complex and often unpredictable hoisting behavior of `var` within a string executed by `eval`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Hoisting in `eval`",
+    difficulty: "Advanced",
   },
   // problem--> 146
   {
@@ -1483,9 +1628,10 @@ export const problems: Problem[] = [
     title: "Real-World `const`: Enum Pattern",
     description:
       "Use a frozen object declared with `const` to create a simple, safe enumeration (enum) for representing a set of named constants.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Enum Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 147
   {
@@ -1493,9 +1639,10 @@ export const problems: Problem[] = [
     title: "Destructuring and Renaming with Rest",
     description:
       "Show how to combine renaming a property with collecting the rest of the properties into a new object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Rename with Rest",
+    difficulty: "Advanced",
   },
   // problem--> 148
   {
@@ -1503,9 +1650,10 @@ export const problems: Problem[] = [
     title: "Global Scope in Web Workers",
     description:
       "Explain that Web Workers have their own global scope, separate from the main window, which can be referenced by `self`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Worker Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 149
   {
@@ -1513,9 +1661,10 @@ export const problems: Problem[] = [
     title: "Scope of Default Parameters",
     description:
       "Demonstrate that default parameters exist in an intermediate scope between the outer scope and the function body's scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Default Param Scope",
+    difficulty: "Advanced",
   },
   // problem--> 150
   {
@@ -1523,9 +1672,10 @@ export const problems: Problem[] = [
     title: "Automatic Semicolon Insertion (ASI)",
     description:
       "Explain how ASI can affect variable declarations, especially with `let` or `const` on a new line after a `return` statement.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain ASI",
+    difficulty: "Intermediate",
   },
   // problem--> 151
   {
@@ -1533,9 +1683,10 @@ export const problems: Problem[] = [
     title: "`Object.is` vs. `===`",
     description:
       "Compare the behavior of `Object.is()` with the strict equality operator `===`, highlighting the differences with `NaN` and `-0`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Compare `Object.is` and `===`",
+    difficulty: "Intermediate",
   },
   // problem--> 152
   {
@@ -1543,9 +1694,10 @@ export const problems: Problem[] = [
     title: "Global `let` in ES Modules",
     description:
       "Explain that a top-level `let`, `const`, or `class` in an ES module is scoped to that module and does not create a global variable.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Module Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 153
   {
@@ -1553,9 +1705,10 @@ export const problems: Problem[] = [
     title: "Destructuring from a Generator",
     description:
       "Use array destructuring to pull values yielded from a generator function.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Generator",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -1563,9 +1716,10 @@ export const problems: Problem[] = [
     title: 'Immutable Array "Push"',
     description:
       "Demonstrate how to create a new array with an added element at the end without mutating the original, using spread syntax.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Immutable Push",
+    difficulty: "Intermediate",
   },
   // problem--> 155
   {
@@ -1573,9 +1727,10 @@ export const problems: Problem[] = [
     title: 'Immutable Array "Pop"',
     description:
       "Demonstrate how to create a new array with the last element removed without mutating the original, using `.slice()`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Immutable Pop",
+    difficulty: "Intermediate",
   },
   // problem--> 156
   {
@@ -1583,9 +1738,10 @@ export const problems: Problem[] = [
     title: "Immutable Object Property Delete",
     description:
       "Show a common pattern for creating a new object with a property removed, using destructuring and the rest syntax.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Immutable Delete",
+    difficulty: "Intermediate",
   },
   // problem--> 157
   {
@@ -1593,9 +1749,10 @@ export const problems: Problem[] = [
     title: "The `with` statement (Conceptual)",
     description:
       "Explain the deprecated `with` statement, why it is forbidden in strict mode, and how it can create ambiguous variable scopes.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain `with`",
+    difficulty: "Advanced",
   },
   // problem--> 158
   {
@@ -1603,9 +1760,10 @@ export const problems: Problem[] = [
     title: "`let` in `switch` with Fallthrough",
     description:
       "Show how a `let` declared in a `case` can cause a `ReferenceError` in a subsequent `case` due to fallthrough and the TDZ.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Fallthrough Error",
+    difficulty: "Advanced",
   },
   // problem--> 159
   {
@@ -1613,9 +1771,10 @@ export const problems: Problem[] = [
     title: "Destructuring Triggers Getters",
     description:
       "Demonstrate that destructuring a property from an object will execute that property's getter method.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Getter",
+    difficulty: "Advanced",
   },
   // problem--> 160
   {
@@ -1623,9 +1782,10 @@ export const problems: Problem[] = [
     title: "Destructuring Assignment Triggers Setters",
     description:
       "Demonstrate that using destructuring for assignment on an object with a setter will execute the setter method.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Setter",
+    difficulty: "Advanced",
   },
   // problem--> 161
   {
@@ -1633,9 +1793,10 @@ export const problems: Problem[] = [
     title: "Scope of `static` Blocks",
     description:
       "Explain the scope within a `static {}` initialization block in a class, showing it has access to private static fields.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain `static` Block",
+    difficulty: "Advanced",
   },
   // problem--> 162
   {
@@ -1643,9 +1804,10 @@ export const problems: Problem[] = [
     title: "Block-Scoped Functions in Strict Mode",
     description:
       "Show that in strict mode, function declarations are block-scoped, unlike their inconsistent hoisting behavior in non-strict mode.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Strict Function Scope",
+    difficulty: "Advanced",
   },
   // problem--> 163
   {
@@ -1653,9 +1815,10 @@ export const problems: Problem[] = [
     title: "`const` vs. `Object.defineProperty`",
     description:
       "Show that `const` does not prevent a property from being modified using `Object.defineProperty`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `defineProperty`",
+    difficulty: "Advanced",
   },
   // problem--> 164
   {
@@ -1663,9 +1826,10 @@ export const problems: Problem[] = [
     title: "Destructuring a `Proxy` Object",
     description:
       "Demonstrate that destructuring a `Proxy` object triggers the `get` handler for each property being destructured.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Proxy Destructuring",
+    difficulty: "Advanced",
   },
   // problem--> 165
   {
@@ -1673,9 +1837,10 @@ export const problems: Problem[] = [
     title: "Freezing an Array of Objects",
     description:
       "Demonstrate that freezing an array does not freeze the objects contained within it.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Frozen Array",
+    difficulty: "Intermediate",
   },
   // problem--> 166
   {
@@ -1683,9 +1848,10 @@ export const problems: Problem[] = [
     title: "`let` vs. `var` Scope Deep Dive",
     description:
       "Provide a clear example showing `var` leaking from a loop block while `let` remains contained.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Compare Scopes",
+    difficulty: "Intermediate",
   },
   // problem--> 167
   {
@@ -1693,9 +1859,10 @@ export const problems: Problem[] = [
     title: "TDZ with Circular Default Parameters",
     description:
       "Show a `ReferenceError` caused by two default parameters referencing each other in a circular way.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Circular Reference",
+    difficulty: "Advanced",
   },
   // problem--> 168
   {
@@ -1703,9 +1870,10 @@ export const problems: Problem[] = [
     title: "Real-World `const`: Namespace",
     description:
       "Use a `const` object as a simple namespace to group related utility functions.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Namespace Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 169
   {
@@ -1713,9 +1881,10 @@ export const problems: Problem[] = [
     title: "Destructuring Default for `null`",
     description:
       "Show that the destructuring default assignment (`=`) only triggers for `undefined`, not `null`, and how to handle `null` with the OR operator.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Handle `null` Default",
+    difficulty: "Advanced",
   },
   // problem--> 170
   {
@@ -1723,9 +1892,10 @@ export const problems: Problem[] = [
     title: "`eval` and the TDZ",
     description:
       "Demonstrate that code executed by `eval()` respects the Temporal Dead Zone of its surrounding scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `eval` TDZ",
+    difficulty: "Advanced",
   },
   // problem--> 171
   {
@@ -1733,9 +1903,10 @@ export const problems: Problem[] = [
     title: "Shadowing Across Modules (Conceptual)",
     description:
       "Explain that because ES modules have their own scope, it is impossible for a variable in one module to shadow a variable in another.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Module Shadowing",
+    difficulty: "Intermediate",
   },
   // problem--> 172
   {
@@ -1743,9 +1914,10 @@ export const problems: Problem[] = [
     title: "Immutable Nested Update Pattern",
     description:
       "Show the pattern for immutably updating a property deep inside a nested object using multiple levels of spread syntax.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Show Nested Update",
+    difficulty: "Advanced",
   },
   // problem--> 173
   {
@@ -1753,9 +1925,10 @@ export const problems: Problem[] = [
     title: "Destructuring the `arguments` Object",
     description:
       "Show how to convert the array-like `arguments` object into an array to use destructuring on it.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure `arguments`",
+    difficulty: "Advanced",
   },
   // problem--> 174
   {
@@ -1763,9 +1936,10 @@ export const problems: Problem[] = [
     title: "`var` Hoisting and `try...catch`",
     description:
       "Demonstrate that a `var` declared inside a `try` block is hoisted to the top of the function, not just the `try` block.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `try` Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 175
   {
@@ -1773,9 +1947,10 @@ export const problems: Problem[] = [
     title: "`const` and `Proxy` Objects",
     description:
       "Show that a `const` reference to a `Proxy` does not prevent the proxy's target object from being mutated via traps.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `const` Proxy",
+    difficulty: "Advanced",
   },
   // problem--> 176
   {
@@ -1783,9 +1958,10 @@ export const problems: Problem[] = [
     title: "Well-Known Symbol: `Symbol.iterator`",
     description:
       "Use the well-known symbol `Symbol.iterator` to make a custom object iterable so it can be used in a `for...of` loop and with destructuring.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Make Object Iterable",
+    difficulty: "Advanced",
   },
   // problem--> 177
   {
@@ -1793,9 +1969,10 @@ export const problems: Problem[] = [
     title: "`new Function()` and Hoisting",
     description:
       "Show that functions created with `new Function()` are not subject to standard hoisting rules and do not form closures over their creation scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `new Function`",
+    difficulty: "Advanced",
   },
   // problem--> 178
   {
@@ -1803,9 +1980,10 @@ export const problems: Problem[] = [
     title: "Destructuring: Rename and Rest",
     description:
       "Combine renaming a property with collecting the rest of the properties into a new object in a single destructuring statement.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Rename with Rest",
+    difficulty: "Advanced",
   },
   // problem--> 179
   {
@@ -1813,9 +1991,10 @@ export const problems: Problem[] = [
     title: "Arrow Function Parameter Scope",
     description:
       "Explain that arrow function parameters share the same scoping rules as regular function parameters, including the intermediate scope for defaults.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Arrow Param Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 180
   {
@@ -1823,9 +2002,10 @@ export const problems: Problem[] = [
     title: "`var` and Named Function Expressions",
     description:
       "Show an edge case where in non-strict mode, some engines would create a variable for the name of a named function expression in the outer scope.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test NFE Leakage",
+    difficulty: "Advanced",
   },
   // problem--> 181
   {
@@ -1833,9 +2013,10 @@ export const problems: Problem[] = [
     title: "Global Scope: Modules vs. Scripts",
     description:
       "Summarize the key difference: top-level `var` in a classic `<script>` becomes a `window` property, while top-level `var`/`let`/`const` in a module are scoped to the module.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Compare Scopes",
+    difficulty: "Intermediate",
   },
   // problem--> 182
   {
@@ -1843,9 +2024,10 @@ export const problems: Problem[] = [
     title: "Destructuring Primitives",
     description:
       "Show what happens when you attempt to destructure a primitive like a number or boolean, and how it accesses properties on the temporary wrapper object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Primitive Destructuring",
+    difficulty: "Advanced",
   },
   // problem--> 183
   {
@@ -1853,9 +2035,10 @@ export const problems: Problem[] = [
     title: "Shadowing Built-in Globals",
     description:
       "Demonstrate how a local variable (e.g., `let Array = ...`) can shadow a built-in global constructor, which can lead to bugs.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Shadowing `Array`",
+    difficulty: "Intermediate",
   },
   // problem--> 184
   {
@@ -1863,9 +2046,10 @@ export const problems: Problem[] = [
     title: "`const` Objects and `WeakMap`",
     description:
       "Explain that using a `const` object as a key in a `WeakMap` allows the entry to be garbage collected if the `const` variable goes out of scope and there are no other references to the object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain `WeakMap` GC",
+    difficulty: "Advanced",
   },
   // problem--> 185
   {
@@ -1873,9 +2057,10 @@ export const problems: Problem[] = [
     title: "Variable Declarations and Performance (Conceptual)",
     description:
       "Briefly discuss how modern JavaScript engines (JIT compilers) can better optimize code when `const` is used, as it provides a guarantee that the variable's reference will not change.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Performance",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -1883,9 +2068,10 @@ export const problems: Problem[] = [
     title: "Destructuring Property Access Order",
     description:
       "Demonstrate that property access during destructuring happens in the order they appear on the right-hand side, not the order in the destructuring pattern.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Access Order",
+    difficulty: "Advanced",
   },
   // problem--> 187
   {
@@ -1893,9 +2079,10 @@ export const problems: Problem[] = [
     title: "Deleting Global `var`",
     description:
       "Show that properties created on the global object via `var` are non-configurable and cannot be removed with the `delete` operator.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test `delete`",
+    difficulty: "Intermediate",
   },
   // problem--> 188
   {
@@ -1903,9 +2090,10 @@ export const problems: Problem[] = [
     title: "TDZ and Recursion",
     description:
       "Create a recursive function with a default parameter that causes a `ReferenceError` by calling itself before the parameter's `let` is initialized.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Recursive TDZ",
+    difficulty: "Advanced",
   },
   // problem--> 189
   {
@@ -1913,9 +2101,10 @@ export const problems: Problem[] = [
     title: "`const` Assertions in TypeScript (Conceptual)",
     description:
       "Explain how TypeScript's `as const` assertion creates the most specific, deep `readonly` type possible, which is a powerful tool for immutability at the type level.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain `as const`",
+    difficulty: "Advanced",
   },
   // problem--> 190
   {
@@ -1923,9 +2112,10 @@ export const problems: Problem[] = [
     title: "Scope in Generator Functions",
     description:
       "Show that variables declared with `let` and `const` inside a generator function are scoped to the entire generator and persist across `yield` statements.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Generator Scope",
+    difficulty: "Advanced",
   },
   // problem--> 191
   {
@@ -1933,9 +2123,10 @@ export const problems: Problem[] = [
     title: "Destructuring Invalid Identifiers",
     description:
       'Show how to destructure a property whose name is not a valid identifier (e.g., "foo-bar") by using quotes and aliasing.',
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Invalid Identifier",
+    difficulty: "Intermediate",
   },
   // problem--> 192
   {
@@ -1943,9 +2134,10 @@ export const problems: Problem[] = [
     title: "Conditional Function Declaration Hoisting",
     description:
       "Explain the inconsistent, browser-dependent hoisting behavior of function declarations inside `if` blocks in non-strict mode.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Conditional Hoisting",
+    difficulty: "Advanced",
   },
   // problem--> 193
   {
@@ -1953,9 +2145,10 @@ export const problems: Problem[] = [
     title: "TDZ and `Proxy` Traps",
     description:
       "Demonstrate how a `Proxy`'s `has` or `get` trap can be triggered for a variable that is in its TDZ, causing a `ReferenceError`.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Proxy and TDZ",
+    difficulty: "Advanced",
   },
   // problem--> 194
   {
@@ -1963,9 +2156,10 @@ export const problems: Problem[] = [
     title: "Immutable Update with `structuredClone`",
     description:
       "Use the modern `structuredClone()` API to create a deep copy of an object for a truly immutable update.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Use `structuredClone`",
+    difficulty: "Intermediate",
   },
   // problem--> 195
   {
@@ -1973,9 +2167,10 @@ export const problems: Problem[] = [
     title: "Shadowing with `with` (Conceptual)",
     description:
       "Explain how the deprecated `with` statement can make variable shadowing unpredictable by dynamically adding an object's properties to the scope chain.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain `with` Shadowing",
+    difficulty: "Advanced",
   },
   // problem--> 196
   {
@@ -1983,9 +2178,10 @@ export const problems: Problem[] = [
     title: "Destructuring from Empty Sources",
     description:
       "Show what happens when you destructure from an empty array or object, both with and without default values.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test Empty Source",
+    difficulty: "Intermediate",
   },
   // problem--> 197
   {
@@ -1993,9 +2189,10 @@ export const problems: Problem[] = [
     title: "Scope of Class Fields",
     description:
       "Explain that public and private class fields are scoped to the class instance and are set after `super()` is called in a constructor.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Explain Class Field Scope",
+    difficulty: "Advanced",
   },
   // problem--> 198
   {
@@ -2003,9 +2200,10 @@ export const problems: Problem[] = [
     title: "`var` in the Node.js REPL",
     description:
       "Demonstrate that in the Node.js REPL (interactive console), top-level `var` behaves like it does in the browser, attaching to the `global` object.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Test REPL Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 199
   {
@@ -2013,9 +2211,10 @@ export const problems: Problem[] = [
     title: "Destructuring Symbol Properties",
     description:
       "Show the syntax for destructuring properties from an object that are keyed by `Symbol`s.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Destructure Symbol Key",
+    difficulty: "Advanced",
   },
   // problem--> 200
   {
@@ -2023,8 +2222,9 @@ export const problems: Problem[] = [
     title: "Summary: `var` vs. `let` vs. `const`",
     description:
       "Provide a final conceptual summary of the key differences in scope, hoisting, reassignment, and global object attachment.",
-    category: "Variables & Constants Deep Dive",
+    category: "Variables and Constants Deep Dive",
     inputs: [],
     buttonText: "Summarize Differences",
+    difficulty: "Beginner",
   },
 ];

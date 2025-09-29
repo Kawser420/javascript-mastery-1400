@@ -1,7 +1,6 @@
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
-  // --- Basic Conditionals ---
   // problem--> 01
   {
     id: "if-statement-basic",
@@ -18,6 +17,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Password",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -28,6 +28,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "age", label: "Age", type: "number", defaultValue: 25 }],
     buttonText: "Check Age",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -38,6 +39,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: -10 }],
     buttonText: "Check Number",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -55,6 +57,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Message",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -72,6 +75,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Day Name",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -89,6 +93,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Day Type",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -99,6 +104,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 12 }],
     buttonText: "Check Number",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -116,6 +122,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Run Guarded Function",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -128,6 +135,7 @@ export const problems: Problem[] = [
       { id: "username", label: "Username", type: "text", defaultValue: "" },
     ],
     buttonText: "Get Username",
+    difficulty: "Beginner",
   },
   // problem--> 10
   {
@@ -145,6 +153,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Value",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -163,6 +172,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Eligibility",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -173,6 +183,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "age", label: "Age", type: "number", defaultValue: 30 }],
     buttonText: "Get Ticket Price",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -185,6 +196,7 @@ export const problems: Problem[] = [
       { id: "month", label: "Month (1-12)", type: "number", defaultValue: 7 },
     ],
     buttonText: "Find Season",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -195,6 +207,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "year", label: "Year", type: "number", defaultValue: 2024 }],
     buttonText: "Check Year",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -209,6 +222,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
     ],
     buttonText: "Calculate",
+    difficulty: "Beginner",
   },
   // --- Basic Loops ---
   // problem--> 16
@@ -220,6 +234,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Run Loop",
+    difficulty: "Beginner",
   },
   // problem--> 17
   {
@@ -237,6 +252,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Start Countdown",
+    difficulty: "Beginner",
   },
   // problem--> 18
   {
@@ -249,6 +265,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Sum up to", type: "number", defaultValue: 10 },
     ],
     buttonText: "Calculate Sum",
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -266,6 +283,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Iterate",
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -275,6 +293,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Run Loop",
+    difficulty: "Beginner",
   },
   // problem--> 21
   {
@@ -285,6 +304,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Run Loop",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -302,6 +322,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find first number > 5",
+    difficulty: "Beginner",
   },
   // problem--> 23
   {
@@ -319,6 +340,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum Positive Numbers",
+    difficulty: "Beginner",
   },
   // problem--> 24
   {
@@ -336,6 +358,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Iterate",
+    difficulty: "Beginner",
   },
   // problem--> 25
   {
@@ -346,6 +369,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Iterate Object",
+    difficulty: "Beginner",
   },
   // problem--> 26
   {
@@ -356,6 +380,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "limit", label: "Limit", type: "number", defaultValue: 10 }],
     buttonText: "Get Evens",
+    difficulty: "Beginner",
   },
   // problem--> 27
   {
@@ -365,6 +390,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
     buttonText: "Calculate Factorial",
+    difficulty: "Beginner",
   },
   // problem--> 28
   {
@@ -377,6 +403,7 @@ export const problems: Problem[] = [
       { id: "limit", label: "Limit", type: "number", defaultValue: 100 },
     ],
     buttonText: "Find Powers",
+    difficulty: "Beginner",
   },
   // problem--> 29
   {
@@ -387,6 +414,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "limit", label: "Limit", type: "number", defaultValue: 15 }],
     buttonText: "Run Loop",
+    difficulty: "Beginner",
   },
   // problem--> 30
   {
@@ -399,6 +427,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "hello" },
     ],
     buttonText: "Reverse",
+    difficulty: "Beginner",
   },
   // --- Intermediate Conditionals & Loops ---
   // problem--> 31
@@ -412,6 +441,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Loop up to", type: "number", defaultValue: 15 },
     ],
     buttonText: "Run FizzBuzz",
+    difficulty: "Intermediate",
   },
   // problem--> 32
   {
@@ -422,6 +452,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "size", label: "Size", type: "number", defaultValue: 4 }],
     buttonText: "Create Square",
+    difficulty: "Intermediate",
   },
   // problem--> 33
   {
@@ -439,6 +470,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Primes",
+    difficulty: "Intermediate",
   },
   // problem--> 34
   {
@@ -456,6 +488,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Count Vowels",
+    difficulty: "Beginner",
   },
   // problem--> 35
   {
@@ -472,6 +505,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Max",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -488,6 +522,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Min",
+    difficulty: "Beginner",
   },
   // problem--> 37
   {
@@ -498,6 +533,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Check Nested Property",
+    difficulty: "Intermediate",
   },
   // problem--> 38
   {
@@ -510,6 +546,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4,5" },
     ],
     buttonText: "Reverse",
+    difficulty: "Intermediate",
   },
   // problem--> 39
   {
@@ -520,6 +557,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Simulate Validation",
+    difficulty: "Intermediate",
   },
   // problem--> 40
   {
@@ -532,6 +570,7 @@ export const problems: Problem[] = [
       { id: "score", label: "Score (0-100)", type: "number", defaultValue: 85 },
     ],
     buttonText: "Get Grade",
+    difficulty: "Intermediate",
   },
   // problem--> 41
   {
@@ -542,6 +581,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 42
   {
@@ -559,6 +599,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum Matrix",
+    difficulty: "Intermediate",
   },
   // problem--> 43
   {
@@ -569,6 +610,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Compare Loops",
+    difficulty: "Intermediate",
   },
   // problem--> 44
   {
@@ -579,6 +621,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Show Pitfall",
+    difficulty: "Intermediate",
   },
   // problem--> 45
   {
@@ -589,6 +632,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Run Labeled Break",
+    difficulty: "Intermediate",
   },
   // problem--> 46
   {
@@ -599,6 +643,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Run Labeled Continue",
+    difficulty: "Intermediate",
   },
   // problem--> 47
   {
@@ -616,6 +661,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum Values",
+    difficulty: "Beginner",
   },
   // problem--> 48
   {
@@ -633,6 +679,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Generate Sequence",
+    difficulty: "Intermediate",
   },
   // problem--> 49
   {
@@ -650,6 +697,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Filter Evens",
+    difficulty: "Intermediate",
   },
   // problem--> 50
   {
@@ -667,6 +715,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Double Numbers",
+    difficulty: "Intermediate",
   },
   // problem--> 51
   {
@@ -678,6 +727,7 @@ export const problems: Problem[] = [
       { id: "rows", label: "Number of Rows", type: "number", defaultValue: 5 },
     ],
     buttonText: "Create Pyramid",
+    difficulty: "Intermediate",
   },
   // problem--> 52
   {
@@ -694,6 +744,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Create Diamond",
+    difficulty: "Intermediate",
   },
   // problem--> 53
   {
@@ -711,6 +762,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check if all are even",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -728,6 +780,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check if some are even",
+    difficulty: "Intermediate",
   },
   // problem--> 55
   {
@@ -745,6 +798,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find first number < 10",
+    difficulty: "Intermediate",
   },
   // problem--> 56
   {
@@ -762,6 +816,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Remove Odd Numbers",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -774,6 +829,7 @@ export const problems: Problem[] = [
       { id: "command", label: "Command", type: "text", defaultValue: "save" },
     ],
     buttonText: "Execute Command",
+    difficulty: "Intermediate",
   },
   // problem--> 58
   {
@@ -792,6 +848,7 @@ export const problems: Problem[] = [
       { id: "shift", label: "Shift amount", type: "number", defaultValue: 3 },
     ],
     buttonText: "Encode",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -802,6 +859,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Calculate Credit Total",
+    difficulty: "Intermediate",
   },
   // problem--> 60
   {
@@ -812,6 +870,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -824,6 +883,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "abcdefg" },
     ],
     buttonText: "Check Uniqueness",
+    difficulty: "Intermediate",
   },
   // problem--> 62
   {
@@ -834,6 +894,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Iterate Map",
+    difficulty: "Intermediate",
   },
   // problem--> 63
   {
@@ -844,6 +905,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Iterate Set",
+    difficulty: "Intermediate",
   },
   // problem--> 64
   {
@@ -854,6 +916,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Run Loop",
+    difficulty: "Intermediate",
   },
   // problem--> 65
   {
@@ -871,6 +934,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort",
+    difficulty: "Intermediate",
   },
   // problem--> 66
   {
@@ -888,6 +952,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort",
+    difficulty: "Intermediate",
   },
   // problem--> 67
   {
@@ -898,6 +963,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Demonstrate Scope",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -908,6 +974,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Run Menu",
+    difficulty: "Intermediate",
   },
   // problem--> 69
   {
@@ -918,6 +985,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Process Users",
+    difficulty: "Intermediate",
   },
   // problem--> 70
   {
@@ -928,6 +996,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Show Pitfall",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -938,6 +1007,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "size", label: "Size", type: "number", defaultValue: 5 }],
     buttonText: "Create Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 72
   {
@@ -947,6 +1017,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "rows", label: "Rows", type: "number", defaultValue: 5 }],
     buttonText: "Create Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 73
   {
@@ -957,6 +1028,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "rows", label: "Rows", type: "number", defaultValue: 5 }],
     buttonText: "Generate Triangle",
+    difficulty: "Intermediate",
   },
   // problem--> 74
   {
@@ -970,6 +1042,7 @@ export const problems: Problem[] = [
       { id: "value", label: "Value to Find", type: "text", defaultValue: "a" },
     ],
     buttonText: "Find Indices",
+    difficulty: "Intermediate",
   },
   // problem--> 75
   {
@@ -983,6 +1056,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 24 },
     ],
     buttonText: "Find GCD",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -995,6 +1069,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 6 },
     ],
     buttonText: "Find LCM",
+    difficulty: "Intermediate",
   },
   // problem--> 77
   {
@@ -1005,6 +1080,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Sum Arguments",
+    difficulty: "Intermediate",
   },
   // problem--> 78
   {
@@ -1015,6 +1091,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Group Products",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -1032,6 +1109,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Transpose",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -1049,6 +1127,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Diagonal Sum",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -1066,6 +1145,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Sequence",
+    difficulty: "Advanced",
   },
   // problem--> 82
   {
@@ -1084,6 +1164,7 @@ export const problems: Problem[] = [
       { id: "target", label: "Target", type: "number", defaultValue: 23 },
     ],
     buttonText: "Search",
+    difficulty: "Intermediate",
   },
   // problem--> 83
   {
@@ -1102,6 +1183,7 @@ export const problems: Problem[] = [
       { id: "k", label: "Window Size (k)", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Max Sum",
+    difficulty: "Intermediate",
   },
   // problem--> 84
   {
@@ -1119,6 +1201,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Max Subarray Sum",
+    difficulty: "Advanced",
   },
   // problem--> 85
   {
@@ -1136,6 +1219,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Traverse Spiral",
+    difficulty: "Advanced",
   },
   // problem--> 86
   {
@@ -1153,6 +1237,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Encode",
+    difficulty: "Intermediate",
   },
   // problem--> 87
   {
@@ -1170,6 +1255,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Decode",
+    difficulty: "Intermediate",
   },
   // problem--> 88
   {
@@ -1180,6 +1266,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "limit", label: "Limit", type: "number", defaultValue: 30 }],
     buttonText: "Find Primes",
+    difficulty: "Intermediate",
   },
   // problem--> 89
   {
@@ -1193,6 +1280,7 @@ export const problems: Problem[] = [
       { id: "target", label: "Target", type: "number", defaultValue: 9 },
     ],
     buttonText: "Find Indices",
+    difficulty: "Intermediate",
   },
   // problem--> 90
   {
@@ -1210,6 +1298,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Triplets",
+    difficulty: "Advanced",
   },
   // problem--> 91
   {
@@ -1227,6 +1316,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Validate",
+    difficulty: "Advanced",
   },
   // problem--> 92
   {
@@ -1244,6 +1334,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort",
+    difficulty: "Intermediate",
   },
   // problem--> 93
   {
@@ -1257,6 +1348,7 @@ export const problems: Problem[] = [
       { id: "arr2", label: "Array 2", type: "text", defaultValue: "2, 4, 6" },
     ],
     buttonText: "Merge",
+    difficulty: "Intermediate",
   },
   // problem--> 94
   {
@@ -1274,6 +1366,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 95
   {
@@ -1286,6 +1379,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Integer", type: "number", defaultValue: 1994 },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 96
   {
@@ -1303,6 +1397,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Peak",
+    difficulty: "Intermediate",
   },
   // problem--> 97
   {
@@ -1320,6 +1415,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Rotate",
+    difficulty: "Advanced",
   },
   // problem--> 98
   {
@@ -1332,6 +1428,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1, 2, 3, 4" },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 99
   {
@@ -1344,6 +1441,7 @@ export const problems: Problem[] = [
       { id: "str", label: "Brackets", type: "text", defaultValue: "()[]{}" },
     ],
     buttonText: "Validate",
+    difficulty: "Intermediate",
   },
   // problem--> 100
   {
@@ -1361,6 +1459,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Max Area",
+    difficulty: "Intermediate",
   },
   // problem--> 101
   {
@@ -1378,6 +1477,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 102
   {
@@ -1395,6 +1495,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Prefix",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1412,6 +1513,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Validate",
+    difficulty: "Intermediate",
   },
   // problem--> 104
   {
@@ -1429,6 +1531,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Move Zeroes",
+    difficulty: "Intermediate",
   },
   // problem--> 105
   {
@@ -1446,6 +1549,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Duplicates",
+    difficulty: "Intermediate",
   },
   // problem--> 106
   {
@@ -1463,6 +1567,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Majority Element",
+    difficulty: "Intermediate",
   },
   // problem--> 107
   {
@@ -1475,6 +1580,7 @@ export const problems: Problem[] = [
       { id: "rowIndex", label: "Row Index", type: "number", defaultValue: 3 },
     ],
     buttonText: "Get Row",
+    difficulty: "Intermediate",
   },
   // problem--> 108
   {
@@ -1494,6 +1600,7 @@ export const problems: Problem[] = [
       { id: "upper", label: "Upper Bound", type: "number", defaultValue: 99 },
     ],
     buttonText: "Find Missing Ranges",
+    difficulty: "Intermediate",
   },
   // problem--> 109
   {
@@ -1511,6 +1618,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Ranges",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1524,6 +1632,7 @@ export const problems: Problem[] = [
       { id: "t", label: "String t", type: "text", defaultValue: "add" },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 111
   {
@@ -1542,6 +1651,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 112
   {
@@ -1552,6 +1662,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 19 }],
     buttonText: "Check if Happy",
+    difficulty: "Intermediate",
   },
   // problem--> 113
   {
@@ -1564,6 +1675,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1, 2, 3, 1" },
     ],
     buttonText: "Check for Duplicates",
+    difficulty: "Beginner",
   },
   // problem--> 114
   {
@@ -1577,6 +1689,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 3 },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 115
   {
@@ -1590,6 +1703,7 @@ export const problems: Problem[] = [
       { id: "t", label: "String t", type: "text", defaultValue: "nagaram" },
     ],
     buttonText: "Check Anagram",
+    difficulty: "Beginner",
   },
   // problem--> 116
   {
@@ -1600,6 +1714,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 38 }],
     buttonText: "Add Digits",
+    difficulty: "Intermediate",
   },
   // problem--> 117
   {
@@ -1610,6 +1725,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 6 }],
     buttonText: "Check if Ugly",
+    difficulty: "Intermediate",
   },
   // problem--> 118
   {
@@ -1622,6 +1738,7 @@ export const problems: Problem[] = [
       { id: "s", label: "String", type: "text", defaultValue: "leetcode" },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 119
   {
@@ -1635,6 +1752,7 @@ export const problems: Problem[] = [
       { id: "t", label: "String t", type: "text", defaultValue: "abcde" },
     ],
     buttonText: "Find Difference",
+    difficulty: "Intermediate",
   },
   // problem--> 120
   {
@@ -1653,6 +1771,7 @@ export const problems: Problem[] = [
       { id: "magazine", label: "Magazine", type: "text", defaultValue: "aab" },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 121
   {
@@ -1670,6 +1789,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Words",
+    difficulty: "Intermediate",
   },
   // problem--> 122
   {
@@ -1687,6 +1807,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Length",
+    difficulty: "Intermediate",
   },
   // problem--> 123
   {
@@ -1699,6 +1820,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,2,4" },
     ],
     buttonText: "Find Mismatch",
+    difficulty: "Intermediate",
   },
   // problem--> 124
   {
@@ -1722,6 +1844,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Word",
+    difficulty: "Intermediate",
   },
   // problem--> 125
   {
@@ -1739,6 +1862,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Translate",
+    difficulty: "Intermediate",
   },
   // problem--> 126
   {
@@ -1751,6 +1875,7 @@ export const problems: Problem[] = [
       { id: "rows", label: "Number of Rows", type: "number", defaultValue: 5 },
     ],
     buttonText: "Create Triangle",
+    difficulty: "Intermediate",
   },
   // problem--> 127
   {
@@ -1768,6 +1893,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort",
+    difficulty: "Intermediate",
   },
   // problem--> 128
   {
@@ -1781,6 +1907,7 @@ export const problems: Problem[] = [
       { id: "p", label: "String p", type: "text", defaultValue: "abc" },
     ],
     buttonText: "Find Anagrams",
+    difficulty: "Advanced",
   },
   // problem--> 129
   {
@@ -1793,6 +1920,7 @@ export const problems: Problem[] = [
       { id: "rowIndex", label: "Row Index", type: "number", defaultValue: 4 },
     ],
     buttonText: "Generate Row",
+    difficulty: "Intermediate",
   },
   // problem--> 130
   {
@@ -1810,6 +1938,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Profit",
+    difficulty: "Intermediate",
   },
   // problem--> 131
   {
@@ -1828,6 +1957,7 @@ export const problems: Problem[] = [
       { id: "target", label: "Target", type: "number", defaultValue: 8 },
     ],
     buttonText: "Find Position",
+    difficulty: "Intermediate",
   },
   // problem--> 132
   {
@@ -1845,6 +1975,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Number",
+    difficulty: "Intermediate",
   },
   // problem--> 133
   {
@@ -1862,6 +1993,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Title",
+    difficulty: "Intermediate",
   },
   // problem--> 134
   {
@@ -1874,6 +2006,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "4,1,2,1,2" },
     ],
     buttonText: "Find Single",
+    difficulty: "Intermediate",
   },
   // problem--> 135
   {
@@ -1891,6 +2024,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Plus One",
+    difficulty: "Beginner",
   },
   // problem--> 136
   {
@@ -1903,6 +2037,7 @@ export const problems: Problem[] = [
       { id: "s", label: "String", type: "text", defaultValue: "Hello World" },
     ],
     buttonText: "Get Length",
+    difficulty: "Beginner",
   },
   // problem--> 137
   {
@@ -1913,6 +2048,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 121 }],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 138
   {
@@ -1925,6 +2061,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Sorted Array", type: "text", defaultValue: "1,1,2" },
     ],
     buttonText: "Remove Duplicates",
+    difficulty: "Intermediate",
   },
   // problem--> 139
   {
@@ -1938,6 +2075,7 @@ export const problems: Problem[] = [
       { id: "val", label: "Value to Remove", type: "number", defaultValue: 3 },
     ],
     buttonText: "Remove",
+    difficulty: "Intermediate",
   },
   // problem--> 140
   {
@@ -1956,6 +2094,7 @@ export const problems: Problem[] = [
       { id: "target", label: "Target", type: "number", defaultValue: 5 },
     ],
     buttonText: "Find Position",
+    difficulty: "Beginner",
   },
   // problem--> 141
   {
@@ -1973,6 +2112,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Compute Next Generation",
+    difficulty: "Advanced",
   },
   // problem--> 142
   {
@@ -1983,6 +2123,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 143
   {
@@ -2000,6 +2141,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Pairs",
+    difficulty: "Advanced",
   },
   // problem--> 144
   {
@@ -2023,6 +2165,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Start",
+    difficulty: "Advanced",
   },
   // problem--> 145
   {
@@ -2035,6 +2178,7 @@ export const problems: Problem[] = [
       { id: "ratings", label: "Ratings", type: "text", defaultValue: "1,0,2" },
     ],
     buttonText: "Calculate Candies",
+    difficulty: "Advanced",
   },
   // problem--> 146
   {
@@ -2058,6 +2202,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 147
   {
@@ -2070,6 +2215,7 @@ export const problems: Problem[] = [
       { id: "s", label: "String", type: "text", defaultValue: "   -42" },
     ],
     buttonText: "Convert",
+    difficulty: "Intermediate",
   },
   // problem--> 148
   {
@@ -2082,6 +2228,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "2,3,1,1,4" },
     ],
     buttonText: "Find Min Jumps",
+    difficulty: "Advanced",
   },
   // problem--> 149
   {
@@ -2094,6 +2241,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,4,-1,1" },
     ],
     buttonText: "Find",
+    difficulty: "Advanced",
   },
   // problem--> 150
   {
@@ -2106,6 +2254,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" },
     ],
     buttonText: "Find Next",
+    difficulty: "Advanced",
   },
   // problem--> 151
   {
@@ -2123,6 +2272,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Compute",
+    difficulty: "Intermediate",
   },
   // problem--> 152
   {
@@ -2132,6 +2282,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "s", label: "String", type: "text", defaultValue: "hello" }],
     buttonText: "Reverse Vowels",
+    difficulty: "Intermediate",
   },
   // problem--> 153
   {
@@ -2145,6 +2296,7 @@ export const problems: Problem[] = [
       { id: "arr2", label: "Array 2", type: "text", defaultValue: "2,2" },
     ],
     buttonText: "Find Intersection",
+    difficulty: "Intermediate",
   },
   // problem--> 154
   {
@@ -2163,6 +2315,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Longest Word",
+    difficulty: "Intermediate",
   },
   // problem--> 155
   {
@@ -2180,6 +2333,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Encode/Decode",
+    difficulty: "Advanced",
   },
   // problem--> 156
   {
@@ -2192,6 +2346,7 @@ export const problems: Problem[] = [
       { id: "n", label: "Number of people", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Celebrity (Conceptual)",
+    difficulty: "Intermediate",
   },
   // problem--> 157
   {
@@ -2209,6 +2364,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate",
+    difficulty: "Advanced",
   },
   // problem--> 158
   {
@@ -2227,6 +2383,7 @@ export const problems: Problem[] = [
       { id: "maxWidth", label: "Max Width", type: "number", defaultValue: 16 },
     ],
     buttonText: "Justify",
+    difficulty: "Advanced",
   },
   // problem--> 159
   {
@@ -2245,6 +2402,7 @@ export const problems: Problem[] = [
       { id: "t", label: "String t", type: "text", defaultValue: "ABC" },
     ],
     buttonText: "Find Window",
+    difficulty: "Advanced",
   },
   // problem--> 160
   {
@@ -2258,6 +2416,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Find Length",
+    difficulty: "Advanced",
   },
   // problem--> 161
   {
@@ -2272,6 +2431,7 @@ export const problems: Problem[] = [
       { id: "x", label: "x", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Closest",
+    difficulty: "Intermediate",
   },
   // problem--> 162
   {
@@ -2285,6 +2445,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "2,3,1,2,4,3" },
     ],
     buttonText: "Find Length",
+    difficulty: "Intermediate",
   },
   // problem--> 163
   {
@@ -2298,6 +2459,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Count Subarrays",
+    difficulty: "Advanced",
   },
   // problem--> 164
   {
@@ -2316,6 +2478,7 @@ export const problems: Problem[] = [
       { id: "limit", label: "Limit", type: "number", defaultValue: 3 },
     ],
     buttonText: "Calculate Boats",
+    difficulty: "Intermediate",
   },
   // problem--> 165
   {
@@ -2333,6 +2496,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Calculate Waits",
+    difficulty: "Intermediate",
   },
   // problem--> 166
   {
@@ -2345,6 +2509,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,7,3,6,5,6" },
     ],
     buttonText: "Find Pivot",
+    difficulty: "Beginner",
   },
   // problem--> 167
   {
@@ -2362,6 +2527,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sort",
+    difficulty: "Intermediate",
   },
   // problem--> 168
   {
@@ -2375,6 +2541,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 169
   {
@@ -2388,6 +2555,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 170
   {
@@ -2398,6 +2566,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "s", label: "String", type: "text", defaultValue: "tree" }],
     buttonText: "Sort",
+    difficulty: "Intermediate",
   },
   // problem--> 171
   {
@@ -2410,6 +2579,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "3, 6, 1, 0" },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 172
   {
@@ -2422,6 +2592,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,4" },
     ],
     buttonText: "Find Max Product",
+    difficulty: "Intermediate",
   },
   // problem--> 173
   {
@@ -2434,6 +2605,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,4,3,2" },
     ],
     buttonText: "Calculate Max Sum",
+    difficulty: "Beginner",
   },
   // problem--> 174
   {
@@ -2453,6 +2625,7 @@ export const problems: Problem[] = [
       { id: "c", label: "Columns (c)", type: "number", defaultValue: 4 },
     ],
     buttonText: "Reshape",
+    difficulty: "Intermediate",
   },
   // problem--> 175
   {
@@ -2470,6 +2643,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 176
   {
@@ -2487,6 +2661,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Transpose",
+    difficulty: "Beginner",
   },
   // problem--> 177
   {
@@ -2504,6 +2679,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Flip and Invert",
+    difficulty: "Intermediate",
   },
   // problem--> 178
   {
@@ -2516,6 +2692,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "0,3,2,1" },
     ],
     buttonText: "Validate",
+    difficulty: "Beginner",
   },
   // problem--> 179
   {
@@ -2528,6 +2705,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,1,2,4" },
     ],
     buttonText: "Sort",
+    difficulty: "Beginner",
   },
   // problem--> 180
   {
@@ -2540,6 +2718,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "4,2,5,7" },
     ],
     buttonText: "Sort",
+    difficulty: "Intermediate",
   },
   // problem--> 181
   {
@@ -2557,6 +2736,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Square and Sort",
+    difficulty: "Beginner",
   },
   // problem--> 182
   {
@@ -2574,6 +2754,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
   // problem--> 183
   {
@@ -2586,6 +2767,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,2,3,1" },
     ],
     buttonText: "Find Length",
+    difficulty: "Intermediate",
   },
   // problem--> 184
   {
@@ -2603,6 +2785,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Count",
+    difficulty: "Advanced",
   },
   // problem--> 185
   {
@@ -2621,6 +2804,7 @@ export const problems: Problem[] = [
       { id: "duration", label: "Duration", type: "number", defaultValue: 2 },
     ],
     buttonText: "Calculate",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -2639,6 +2823,7 @@ export const problems: Problem[] = [
       { id: "n", label: "n", type: "number", defaultValue: 1 },
     ],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 187
   {
@@ -2657,6 +2842,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 4 },
     ],
     buttonText: "Find Max Average",
+    difficulty: "Intermediate",
   },
   // problem--> 188
   {
@@ -2670,6 +2856,7 @@ export const problems: Problem[] = [
       { id: "k", label: "k", type: "number", defaultValue: 2 },
     ],
     buttonText: "Find Pairs",
+    difficulty: "Intermediate",
   },
   // problem--> 189
   {
@@ -2688,6 +2875,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find Judge",
+    difficulty: "Intermediate",
   },
   // problem--> 190
   {
@@ -2700,6 +2888,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,2,4,1" },
     ],
     buttonText: "Get Flips",
+    difficulty: "Advanced",
   },
   // problem--> 191
   {
@@ -2713,6 +2902,7 @@ export const problems: Problem[] = [
       { id: "nums2", label: "nums2", type: "text", defaultValue: "1,3,4,2" },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 192
   {
@@ -2730,6 +2920,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find",
+    difficulty: "Intermediate",
   },
   // problem--> 193
   {
@@ -2752,6 +2943,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Compute",
+    difficulty: "Intermediate",
   },
   // problem--> 194
   {
@@ -2770,6 +2962,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Run Logger",
+    difficulty: "Intermediate",
   },
   // problem--> 195
   {
@@ -2782,6 +2975,7 @@ export const problems: Problem[] = [
       { id: "size", label: "Window Size", type: "number", defaultValue: 3 },
     ],
     buttonText: "Simulate",
+    difficulty: "Intermediate",
   },
   // problem--> 196
   {
@@ -2792,6 +2986,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "n", label: "Grid Size", type: "number", defaultValue: 3 }],
     buttonText: "Simulate Game",
+    difficulty: "Advanced",
   },
   // problem--> 197
   {
@@ -2809,6 +3004,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Count",
+    difficulty: "Intermediate",
   },
   // problem--> 198
   {
@@ -2822,6 +3018,7 @@ export const problems: Problem[] = [
       { id: "c", label: "Character", type: "text", defaultValue: "e" },
     ],
     buttonText: "Calculate Distances",
+    difficulty: "Intermediate",
   },
   // problem--> 199
   {
@@ -2832,6 +3029,7 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 22 }],
     buttonText: "Find Gap",
+    difficulty: "Beginner",
   },
   // problem--> 200
   {
@@ -2842,5 +3040,6 @@ export const problems: Problem[] = [
     category: "Control Flow and Loops",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 153 }],
     buttonText: "Check",
+    difficulty: "Beginner",
   },
 ];

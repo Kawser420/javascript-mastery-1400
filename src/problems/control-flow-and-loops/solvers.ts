@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS to make solvers robust against user input
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -44,7 +43,6 @@ let sim_MovingAverage_stream: number[] = [];
 let sim_TicTacToe: any = {};
 
 export const solvers: Record<string, Function> = {
-  // --- Basic Conditionals ---
   // problem solver--> 01
   "if-statement-basic": ({ password }: { password: string }) => {
     if (password === "secret123") {
@@ -211,7 +209,6 @@ export const solvers: Record<string, Function> = {
         throw new Error("Invalid operator");
     }
   },
-  // --- Basic Loops ---
   // problem solver--> 16
   "for-loop-basic": () => {
     let result = "";
@@ -351,7 +348,6 @@ export const solvers: Record<string, Function> = {
     }
     return reversed;
   },
-  // --- Intermediate Conditionals & Loops ---
   // problem solver--> 31
   "fizzbuzz-challenge": ({ num }: { num: any }) => {
     const n = parseNumber(num);
@@ -532,7 +528,7 @@ export const solvers: Record<string, Function> = {
     arr.customProp = "test";
     let result = "";
     for (const key in arr) {
-      result += `${key} `; // Will include '0', '1', AND 'customProp'
+      result += `${key} `;
     }
     return `for...in iterates over: ${result.trim()}`;
   },

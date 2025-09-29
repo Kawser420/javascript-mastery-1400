@@ -1,6 +1,4 @@
 export const explanations: Record<string, string> = {
-  // ========== BASIC CONDITIONALS ==========
-
   // problem explanation--> 01
   "if-statement-basic": `
 ### 💡 Problem Breakdown

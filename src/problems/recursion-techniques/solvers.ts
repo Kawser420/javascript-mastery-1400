@@ -1,9 +1,8 @@
-// Type definitions for binary tree node and linked list node used in some problems
 type TreeNode = {
   value: any;
   left?: TreeNode | null;
   right?: TreeNode | null;
-  next?: TreeNode | null; // For problem 148
+  next?: TreeNode | null;
 } | null;
 
 type ListNode = {
@@ -11,7 +10,6 @@ type ListNode = {
   next: ListNode | null;
 } | null;
 
-// Type for Quad Tree Node for problem 104
 type QuadNode = {
   val: boolean;
   isLeaf: boolean;
@@ -308,7 +306,7 @@ export const solvers: Record<string, Function> = {
         if (isSafe(row, col)) {
           board[row][col] = "Q";
           solve(row + 1);
-          board[row][col] = "."; // Backtrack
+          board[row][col] = ".";
         }
       }
     }
@@ -338,7 +336,7 @@ export const solvers: Record<string, Function> = {
               if (isSafe(i, j, num)) {
                 board[i][j] = num;
                 if (solve()) return true;
-                board[i][j] = 0; // Backtrack
+                board[i][j] = 0;
               }
             }
             return false;
@@ -915,9 +913,8 @@ export const solvers: Record<string, Function> = {
     n: number,
     k: number
   ): number {
-    if (n === 1) return 0; // 0-indexed result
+    if (n === 1) return 0;
     return (josephus(n - 1, k) + k) % n;
-    // To convert to 1-indexed, add 1 to the final result outside this function.
   },
   // problem solver--> 66
   "recursion-phone-number-mnemonics": function letterCombinations(
@@ -1029,8 +1026,7 @@ export const solvers: Record<string, Function> = {
   ): number {
     if (m === 0) return n + 1;
     if (m > 0 && n === 0) return ackermann(m - 1, 1);
-    // Be careful: This grows extremely fast!
-    if (m > 3 && n > 1) return Infinity; // Prevent stack overflow for large inputs
+    if (m > 3 && n > 1) return Infinity;
     return ackermann(m - 1, ackermann(m, n - 1));
   },
   // problem solver--> 72
@@ -1087,7 +1083,7 @@ export const solvers: Record<string, Function> = {
         return;
       }
       for (let i = index; i < num.length; i++) {
-        if (i > index && num[index] === "0") break; // Avoid numbers with leading zeros
+        if (i > index && num[index] === "0") break;
         const currentStr = num.substring(index, i + 1);
         const currentNum = parseInt(currentStr);
         if (index === 0) {
@@ -1105,7 +1101,6 @@ export const solvers: Record<string, Function> = {
             value - currentNum,
             -currentNum
           );
-          // The multiplication case is tricky due to operator precedence
           backtrack(
             i + 1,
             path + "*" + currentStr,
@@ -1195,7 +1190,7 @@ export const solvers: Record<string, Function> = {
       for (const neighbor of graph[node]) {
         path.push(neighbor);
         dfs(neighbor, path);
-        path.pop(); // backtrack
+        path.pop();
       }
     }
     dfs(0, [0]);
@@ -1246,9 +1241,7 @@ export const solvers: Record<string, Function> = {
         clumpSum += arr[i];
         i++;
       }
-      // Choose the clump
       if (solve(i, currentSum + clumpSum)) return true;
-      // Don't choose the clump
       if (solve(i, currentSum)) return true;
 
       return false;
@@ -1261,11 +1254,8 @@ export const solvers: Record<string, Function> = {
       if (start > end) return -1;
       const mid = Math.floor((start + end) / 2);
       if (arr[mid] === mid) return mid;
-
-      // Search left
       const leftResult = search(start, Math.min(mid - 1, arr[mid]));
       if (leftResult !== -1) return leftResult;
-      // Search right
       return search(Math.max(mid + 1, arr[mid]), end);
     }
     return search(0, arr.length - 1);
@@ -1383,9 +1373,7 @@ export const solvers: Record<string, Function> = {
         if (currentSubsequence.length > 0) result.push(currentSubsequence);
         return;
       }
-      // Exclude current character
       solve(index + 1, currentSubsequence);
-      // Include current character
       solve(index + 1, currentSubsequence + str[index]);
     }
     solve(0, "");
@@ -1545,8 +1533,6 @@ export const solvers: Record<string, Function> = {
       for (let i = 0; i < 26; i++) if (c1[i] !== c2[i]) return false;
       return true;
     }
-
-    // A recursive sliding window would be inefficient. This is the optimal iterative version.
     for (let i = 0; i < s2.length - s1.length; i++) {
       if (matches(s1Count, s2Count)) return true;
       s2Count[s2.charCodeAt(i) - 97]--;
@@ -1564,14 +1550,10 @@ export const solvers: Record<string, Function> = {
     function solve(currentNeeds: number[]): number {
       const key = currentNeeds.join(",");
       if (memo.has(key)) return memo.get(key)!;
-
-      // Option 1: Buy items individually
       let minPrice = currentNeeds.reduce(
         (sum, need, i) => sum + need * price[i],
         0
       );
-
-      // Option 2: Try each special offer
       for (const offer of special) {
         const nextNeeds = [...currentNeeds];
         let canUseOffer = true;
@@ -2121,7 +2103,6 @@ export const solvers: Record<string, Function> = {
       }
     }
     traverse(fs, "");
-    // The prompt asks for root to be included, let's adjust for that
     return allPaths.map((p) => (p.startsWith("root/") ? p.substring(5) : p));
   },
   // problem solver--> 117
@@ -2398,7 +2379,7 @@ export const solvers: Record<string, Function> = {
         }
       }
     }
-    return maxArea === 0 ? n * n : maxArea; // Handle case where grid is all 1s
+    return maxArea === 0 ? n * n : maxArea;
   },
   // problem solver--> 126
   "recursion-basic-calculator": function calculate(s: string): number {
@@ -2776,7 +2757,7 @@ export const solvers: Record<string, Function> = {
       dfs(r - 1, c, count + 1);
       dfs(r, c + 1, count + 1);
       dfs(r, c - 1, count + 1);
-      grid[r][c] = temp; // Backtrack
+      grid[r][c] = temp;
     }
 
     dfs(startR, startC, 0);
@@ -2787,7 +2768,6 @@ export const solvers: Record<string, Function> = {
     board: string[][],
     dictionary: string[]
   ): string[] {
-    // A full Trie implementation is needed for efficiency, this is conceptual.
     const result = new Set<string>();
     const rows = board.length,
       cols = board[0].length;
@@ -2819,7 +2799,7 @@ export const solvers: Record<string, Function> = {
           dfs(nr, nc, currentWord + board[nr][nc], visited);
         }
       }
-      visited[r][c] = false; // backtrack
+      visited[r][c] = false;
     }
 
     for (let r = 0; r < rows; r++) {
@@ -2973,16 +2953,12 @@ export const solvers: Record<string, Function> = {
       if (left > right) return -1;
       const mid = Math.floor((left + right) / 2);
       if (nums[mid] === target) return mid;
-
-      // Left part is sorted
       if (nums[left] <= nums[mid]) {
         if (target >= nums[left] && target < nums[mid]) {
           return search(left, mid - 1);
         }
         return search(mid + 1, right);
-      }
-      // Right part is sorted
-      else {
+      } else {
         if (target > nums[mid] && target <= nums[right]) {
           return search(mid + 1, right);
         }
@@ -2995,7 +2971,7 @@ export const solvers: Record<string, Function> = {
   "recursion-populating-next-right-pointers": function connect(
     root: TreeNode
   ): TreeNode {
-    if (!root || !root.left) return root; // Perfect tree means left exists iff right exists
+    if (!root || !root.left) return root;
 
     root.left.next = root.right;
     if (root.next) {
@@ -3092,7 +3068,7 @@ export const solvers: Record<string, Function> = {
             const newBoard = cleanBoard(b.slice(0, i) + color + b.slice(i));
             const res = solve(newBoard);
             if (res !== Infinity) minSteps = Math.min(minSteps, 1 + res);
-            handCount.set(color, count); // backtrack
+            handCount.set(color, count);
           }
         }
       }
@@ -3182,17 +3158,12 @@ export const solvers: Record<string, Function> = {
     source: number[],
     target: number[]
   ): boolean {
-    // This problem is not a good fit for pure recursion due to massive search space.
-    // The key insight is that if the source and target are not enclosed by the blockers, a path exists.
-    // We can check this by running a limited BFS/DFS from both source and target.
     const blockedSet = new Set(blocked.map(([r, c]) => `${r},${c}`));
     const maxArea = (blocked.length * (blocked.length - 1)) / 2;
-
     function canReachFar(start: number[], end: number[]): boolean {
       const visited = new Set([`${start[0]},${start[1]}`]);
       const queue = [start];
       let count = 0;
-
       while (queue.length > 0) {
         const [r, c] = queue.shift()!;
         count++;
@@ -3223,7 +3194,6 @@ export const solvers: Record<string, Function> = {
       }
       return false;
     }
-
     return canReachFar(source, target) && canReachFar(target, source);
   },
   // problem solver--> 156
@@ -3270,11 +3240,10 @@ export const solvers: Record<string, Function> = {
             for (let j = c; j < c + size; j++) height[i][j] = true;
           backtrack(height, count + 1);
           for (let i = r; i < r + size; i++)
-            for (let j = c; j < c + size; j++) height[i][j] = false; // backtrack
+            for (let j = c; j < c + size; j++) height[i][j] = false;
         }
       }
     }
-
     const heightGrid = Array.from({ length: n }, () => Array(m).fill(false));
     backtrack(heightGrid, 0);
     return minSquares;
@@ -3292,14 +3261,14 @@ export const solvers: Record<string, Function> = {
         return 0;
 
       const gold = grid[r][c];
-      grid[r][c] = 0; // Mark as visited
+      grid[r][c] = 0;
 
       const down = dfs(r + 1, c);
       const up = dfs(r - 1, c);
       const right = dfs(r, c + 1);
       const left = dfs(r, c - 1);
 
-      grid[r][c] = gold; // backtrack
+      grid[r][c] = gold;
       return gold + Math.max(down, up, right, left);
     }
 
@@ -3382,7 +3351,7 @@ export const solvers: Record<string, Function> = {
         if (sides[i] + matchsticks[index] <= sideLength) {
           sides[i] += matchsticks[index];
           if (backtrack(index + 1, sides)) return true;
-          sides[i] -= matchsticks[index]; // backtrack
+          sides[i] -= matchsticks[index];
         }
       }
       return false;
@@ -3500,8 +3469,6 @@ export const solvers: Record<string, Function> = {
         result[left[i].index] += j;
         i++;
       }
-
-      // Standard merge logic to sort the array for the next level up
       i = 0;
       j = 0;
       while (i < left.length && j < right.length) {
@@ -3580,17 +3547,12 @@ export const solvers: Record<string, Function> = {
     function solve(l: number, r: number, k: number): number {
       if (l > r) return 0;
       if (memo[l][r][k] > 0) return memo[l][r][k];
-
-      // Option 1: Remove the current group of boxes[l]
       let res = (k + 1) * (k + 1) + solve(l + 1, r, 0);
-
-      // Option 2: Find another box of the same color and merge
       for (let i = l + 1; i <= r; i++) {
         if (boxes[i] === boxes[l]) {
           res = Math.max(res, solve(l + 1, i - 1, 0) + solve(i, r, k + 1));
         }
       }
-
       memo[l][r][k] = res;
       return res;
     }
@@ -3749,7 +3711,6 @@ export const solvers: Record<string, Function> = {
     points: number[][],
     k: number
   ): number {
-    // Brute force recursive approach - will time out on large inputs
     let maxVal = -Infinity;
     function solve(i: number, j: number) {
       if (i >= points.length) return;
@@ -4065,7 +4026,7 @@ export const solvers: Record<string, Function> = {
         }
       }
     }
-    return 0; // No path found
+    return 0;
   },
   // problem solver--> 182
   "recursion-find-all-anagrams-in-a-string": function findAnagrams(
@@ -4152,7 +4113,6 @@ export const solvers: Record<string, Function> = {
     targetValue: number,
     k: number
   ): number[] {
-    // This is identical to problem 101, re-implementing for completeness
     const result: number[] = [];
     const parentMap = new Map<TreeNode, TreeNode>();
     let targetNode: TreeNode = null;
@@ -4288,7 +4248,7 @@ export const solvers: Record<string, Function> = {
       prefixSumCount.set(currentSum, (prefixSumCount.get(currentSum) || 0) + 1);
       count += dfs(node.left, currentSum);
       count += dfs(node.right, currentSum);
-      prefixSumCount.set(currentSum, prefixSumCount.get(currentSum)! - 1); // backtrack
+      prefixSumCount.set(currentSum, prefixSumCount.get(currentSum)! - 1);
 
       return count;
     }
@@ -4388,12 +4348,12 @@ export const solvers: Record<string, Function> = {
       }
     }
 
-    const visited = new Map<string, boolean>(); // false: visiting, true: visited
+    const visited = new Map<string, boolean>();
     let result = "";
 
     function dfs(char: string): boolean {
       if (visited.has(char)) return visited.get(char)!;
-      visited.set(char, false); // Mark as visiting (cycle detection)
+      visited.set(char, false);
       if (adj.has(char)) {
         for (const neighbor of adj.get(char)!) {
           if (!dfs(neighbor)) return false;
@@ -4406,7 +4366,7 @@ export const solvers: Record<string, Function> = {
 
     for (const char of adj.keys()) {
       if (!visited.has(char)) {
-        if (!dfs(char)) return ""; // Cycle detected
+        if (!dfs(char)) return "";
       }
     }
     return result;
@@ -4442,20 +4402,11 @@ export const solvers: Record<string, Function> = {
       function backtrack(index: number, count: number) {
         if (index === requests.length) {
           const balance = Array(n).fill(0);
-          // This should be done inside, but for a pure recursive solution:
-          // For now, let's assume we can calculate it. The check is complex.
-          // A better backtracking would pass the balance array.
-          // We'll simulate it for this explanation.
-          // If a subset of requests is valid, update maxAchieved.
-          // This is a placeholder for the actual logic.
           return;
         }
-        // Exclude request
         backtrack(index + 1, count);
-        // Include request
         backtrack(index + 1, count + 1);
       }
-      // The actual solver is much more complex, using a balance array in backtracking
       function solve(start: number, numRequests: number, balance: number[]) {
         if (start === requests.length) {
           if (balance.every((b) => b === 0))
@@ -4500,8 +4451,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 198
   "recursion-largest-component-size-by-common-factor":
     function largestComponentSize(nums: number[]): number {
-      // This problem is best solved with Union-Find, not pure recursion.
-      // The recursive part would be a DFS/BFS to find component sizes after building the graph.
       const maxNum = Math.max(...nums);
       const parent = Array.from({ length: maxNum + 1 }, (_, i) => i);
 
@@ -4540,12 +4489,8 @@ export const solvers: Record<string, Function> = {
   ): number {
     const MOD = 1_000_000_007;
     const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
-
-    // frequency of each number 1..30
     const freq = new Array(31).fill(0);
     for (const n of nums) freq[n]++;
-
-    // mask for each number: which primes divide it (skip if square factor)
     const masks: number[] = new Array(31).fill(0);
     for (let x = 2; x <= 30; x++) {
       let mask = 0;
@@ -4560,7 +4505,6 @@ export const solvers: Record<string, Function> = {
             cnt++;
           }
           if (cnt > 1) {
-            // square factor -> not allowed
             valid = false;
             break;
           }
@@ -4569,15 +4513,12 @@ export const solvers: Record<string, Function> = {
       }
       masks[x] = valid ? mask : -1;
     }
-
-    // dp[mask] = number of ways to form subset with prime factors = mask
     const dp = new Array(1 << primes.length).fill(0);
     dp[0] = 1;
 
     for (let x = 2; x <= 30; x++) {
       if (freq[x] === 0 || masks[x] === -1) continue;
       const m = masks[x];
-      // iterate backwards to avoid double counting
       for (let s = (1 << primes.length) - 1; s >= 0; s--) {
         if ((s & m) === 0) {
           dp[s | m] = (dp[s | m] + dp[s] * freq[x]) % MOD;
@@ -4589,8 +4530,6 @@ export const solvers: Record<string, Function> = {
     for (let s = 1; s < 1 << primes.length; s++) {
       ans = (ans + dp[s]) % MOD;
     }
-
-    // each '1' can be included or not independently
     const pow2 = (exp: number): number => {
       let res = 1,
         base = 2;

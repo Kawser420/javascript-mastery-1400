@@ -1,17 +1,14 @@
-// problem--> 01
-// import { Problem } from "../../types";
-
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
-  // --- Fundamentals: Basic String & Array Operations ---
   // problem--> 01
   {
     id: "as-reverse-string",
     title: "Reverse a String",
     description:
       "Write a function that takes a string and returns a new string with the characters in reverse order.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "hello" },
     ],
@@ -23,7 +20,8 @@ export const problems: Problem[] = [
     title: "Check for Palindrome",
     description:
       "Write a function that checks if a given string is a palindrome (reads the same forwards and backward), ignoring case and non-alphanumeric characters.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "str",
@@ -40,7 +38,8 @@ export const problems: Problem[] = [
     title: "Get String Length",
     description:
       "Write a function that returns the number of characters in a string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "JavaScript" },
     ],
@@ -52,7 +51,8 @@ export const problems: Problem[] = [
     title: "Convert String to Uppercase",
     description:
       "Use a built-in method to convert a string to all uppercase letters.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "hello world" },
     ],
@@ -64,7 +64,8 @@ export const problems: Problem[] = [
     title: "Convert String to Lowercase",
     description:
       "Use a built-in method to convert a string to all lowercase letters.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "HELLO WORLD" },
     ],
@@ -75,7 +76,8 @@ export const problems: Problem[] = [
     id: "as-access-first-array-element",
     title: "Access First Array Element",
     description: "Given an array, return its first element.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -92,7 +94,8 @@ export const problems: Problem[] = [
     title: "Access Last Array Element",
     description:
       "Given an array, return its last element without modifying the array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -109,7 +112,8 @@ export const problems: Problem[] = [
     title: "Add to End of Array with `.push()`",
     description:
       "Add a new element to the end of an array using the `.push()` method. Return the new array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -132,7 +136,8 @@ export const problems: Problem[] = [
     title: "Remove from End of Array with `.pop()`",
     description:
       "Remove the last element from an array using the `.pop()` method. Return the modified array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -149,7 +154,8 @@ export const problems: Problem[] = [
     title: "Remove from Start of Array with `.shift()`",
     description:
       "Remove the first element from an array using the `.shift()` method. Return the modified array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -166,7 +172,8 @@ export const problems: Problem[] = [
     title: "Add to Start of Array with `.unshift()`",
     description:
       "Add a new element to the beginning of an array using the `.unshift()` method. Return the new array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -189,7 +196,8 @@ export const problems: Problem[] = [
     title: "Join Array Elements into a String",
     description:
       "Use the `.join()` method to combine all elements of an array into a single string, separated by a custom delimiter.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -212,7 +220,8 @@ export const problems: Problem[] = [
     title: "Split a String into an Array",
     description:
       "Use the `.split()` method to break a sentence into an array of words.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "str",
@@ -228,7 +237,8 @@ export const problems: Problem[] = [
     id: "as-find-max-in-array",
     title: "Find Maximum in Array",
     description: "Use a loop to find the largest number in an array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -244,7 +254,8 @@ export const problems: Problem[] = [
     id: "as-find-min-in-array",
     title: "Find Minimum in Array",
     description: "Use a loop to find the smallest number in an array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -261,7 +272,8 @@ export const problems: Problem[] = [
     title: "Sum All Array Elements",
     description:
       "Write a function that calculates the sum of all numbers in an array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -278,7 +290,8 @@ export const problems: Problem[] = [
     title: "Count Character Occurrences",
     description:
       "Write a function that counts how many times a specific character appears in a string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "hello world" },
       {
@@ -296,7 +309,8 @@ export const problems: Problem[] = [
     title: "Remove Duplicates from Array",
     description:
       "Write a function that takes an array and returns a new array with all duplicate elements removed.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -313,7 +327,8 @@ export const problems: Problem[] = [
     title: "Extract a Portion of an Array with `.slice()`",
     description:
       "Use the `.slice()` method to create a new array containing a portion of an existing array without modifying the original.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -332,7 +347,8 @@ export const problems: Problem[] = [
     title: "Modify Array with `.splice()`",
     description:
       "Use the `.splice()` method to remove elements from and/or add new elements to an array. Return the modified array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -349,7 +365,8 @@ export const problems: Problem[] = [
     title: "FizzBuzz Challenge",
     description:
       "Loop from 1 to a given number. For multiples of 3, output 'Fizz'. For 5, 'Buzz'. For both, 'FizzBuzz'. Otherwise, the number.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "num", label: "Loop up to", type: "number", defaultValue: 15 },
     ],
@@ -361,7 +378,8 @@ export const problems: Problem[] = [
     title: "Vowels Counter",
     description:
       "Write a function that returns the number of vowels used in a string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "Hi There!" },
     ],
@@ -373,7 +391,8 @@ export const problems: Problem[] = [
     title: "Find Longest Word in String",
     description:
       "Write a function that takes a sentence and returns the longest word.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "sentence",
@@ -390,7 +409,8 @@ export const problems: Problem[] = [
     title: "Title Case a Sentence",
     description:
       "Write a function that takes a sentence and returns it with the first letter of each word capitalized.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "sentence",
@@ -407,7 +427,8 @@ export const problems: Problem[] = [
     title: "Double Array Elements with `.map()`",
     description:
       "Use the `.map()` method to create a new array where each number from an original array is doubled.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -424,7 +445,8 @@ export const problems: Problem[] = [
     title: "Filter for Even Numbers with `.filter()`",
     description:
       "Use the `.filter()` method to create a new array containing only the even numbers from an original array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -441,7 +463,8 @@ export const problems: Problem[] = [
     title: "Sum with `.reduce()`",
     description:
       "Use the `.reduce()` method to calculate the sum of all numbers in an array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -458,7 +481,8 @@ export const problems: Problem[] = [
     title: "Find an Element with `.find()`",
     description:
       "Use the `.find()` method to find the first element in an array that satisfies a condition (e.g., the first number greater than 10).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -475,7 +499,8 @@ export const problems: Problem[] = [
     title: "Check All Elements with `.every()`",
     description:
       "Use the `.every()` method to check if all elements in an array are positive numbers.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -492,7 +517,8 @@ export const problems: Problem[] = [
     title: "Check Some Elements with `.some()`",
     description:
       "Use the `.some()` method to check if at least one element in an array is a negative number.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -509,7 +535,8 @@ export const problems: Problem[] = [
     title: "Sort an Array of Numbers",
     description:
       "Use the `.sort()` method with a compare function to correctly sort an array of numbers in ascending order.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -526,7 +553,8 @@ export const problems: Problem[] = [
     title: "Sort an Array of Strings",
     description:
       "Use the `.sort()` method to sort an array of strings alphabetically.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -543,7 +571,8 @@ export const problems: Problem[] = [
     title: "Check for Anagrams",
     description:
       "Write a function to check if two strings are anagrams of each other (contain the same characters with the same frequencies).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "str1",
@@ -566,7 +595,8 @@ export const problems: Problem[] = [
     title: "Max Character",
     description:
       "Given a string, return the character that is most commonly used in the string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "abcccccccd" },
     ],
@@ -578,7 +608,8 @@ export const problems: Problem[] = [
     title: "Array Chunking",
     description:
       "Write a function that splits an array into smaller arrays of a specified size.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -596,7 +627,8 @@ export const problems: Problem[] = [
     title: "Move Zeroes",
     description:
       "Given an integer array, move all 0's to the end of it while maintaining the relative order of the non-zero elements.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -613,7 +645,8 @@ export const problems: Problem[] = [
     title: "Flatten a Nested Array with `.flat()`",
     description:
       "Use the `.flat()` method to create a new array with all sub-array elements concatenated into it.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -631,7 +664,8 @@ export const problems: Problem[] = [
     title: "Find Array Intersection",
     description:
       "Given two arrays, create a function that finds the intersection of the two arrays (elements that are present in both).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr1",
@@ -654,7 +688,8 @@ export const problems: Problem[] = [
     title: "Find Array Union",
     description:
       "Given two arrays, create a function that finds the union of the two arrays (all unique elements from both).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr1",
@@ -677,7 +712,8 @@ export const problems: Problem[] = [
     title: "Check for Isogram",
     description:
       "An isogram is a word that has no repeating letters. Implement a function to determine if a string is an isogram, ignoring case.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "str",
@@ -693,7 +729,8 @@ export const problems: Problem[] = [
     id: "as-group-anagrams",
     title: "Group Anagrams",
     description: "Given an array of strings, group the anagrams together.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -710,7 +747,8 @@ export const problems: Problem[] = [
     title: "Longest Substring Without Repeating Characters",
     description:
       "Given a string, find the length of the longest substring without repeating characters.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "abcabcbb" },
     ],
@@ -722,7 +760,8 @@ export const problems: Problem[] = [
     title: "Two Sum",
     description:
       "Given an array of integers, return indices of the two numbers such that they add up to a specific target.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -740,7 +779,8 @@ export const problems: Problem[] = [
     title: "Container With Most Water",
     description:
       "Given n non-negative integers representing vertical lines, find two lines that form a container that contains the most water.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -757,7 +797,8 @@ export const problems: Problem[] = [
     title: "Sliding Window: Max Sum Subarray",
     description:
       "Given an array of integers and a number k, find the maximum sum of a subarray of size k.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "2,1,5,1,3,2" },
       { id: "k", label: "Window Size (k)", type: "number", defaultValue: 3 },
@@ -770,7 +811,8 @@ export const problems: Problem[] = [
     title: "Maximum Subarray Sum (Kadane's Algorithm)",
     description:
       "Given an integer array, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -787,7 +829,8 @@ export const problems: Problem[] = [
     title: "3Sum",
     description:
       "Given an array of integers, find all unique triplets in the array which gives the sum of zero.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -804,7 +847,8 @@ export const problems: Problem[] = [
     title: "Product of Array Except Self",
     description:
       "Given an integer array, return an array such that the output at index i is the product of all the elements of the original array except the one at i.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -821,7 +865,8 @@ export const problems: Problem[] = [
     title: "Valid Parentheses",
     description:
       "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "str",
@@ -838,7 +883,8 @@ export const problems: Problem[] = [
     title: "Spiral Matrix Traversal",
     description:
       "Given an m x n matrix, return all elements of the matrix in spiral order.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "matrix",
@@ -854,7 +900,8 @@ export const problems: Problem[] = [
     id: "as-rotate-matrix",
     title: "Rotate Matrix 90 Degrees",
     description: "Rotate an N x N matrix by 90 degrees clockwise in-place.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "matrix",
@@ -871,7 +918,8 @@ export const problems: Problem[] = [
     title: "Set Matrix Zeroes",
     description:
       "Given an m x n matrix, if an element is 0, set its entire row and column to 0. Do it in-place.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "matrix",
@@ -888,7 +936,8 @@ export const problems: Problem[] = [
     title: "Word Search in Matrix",
     description:
       "Given an m x n grid of characters and a word, return true if the word exists in the grid. The word can be constructed from letters of sequentially adjacent cells.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "board",
@@ -911,7 +960,8 @@ export const problems: Problem[] = [
     title: "Minimum Window Substring",
     description:
       "Given two strings S and T, find the minimum window in S which will contain all the characters in T.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "s",
@@ -934,7 +984,8 @@ export const problems: Problem[] = [
     title: "Trapping Rain Water",
     description:
       "Given n non-negative integers representing an elevation map, compute how much water it can trap after raining.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "heights",
@@ -951,7 +1002,8 @@ export const problems: Problem[] = [
     title: "Text Justification",
     description:
       "Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "words",
@@ -968,7 +1020,8 @@ export const problems: Problem[] = [
     id: "as-roman-to-integer",
     title: "Roman to Integer",
     description: "Given a roman numeral, convert it to an integer.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "roman",
@@ -984,7 +1037,8 @@ export const problems: Problem[] = [
     id: "as-integer-to-roman",
     title: "Integer to Roman",
     description: "Given an integer, convert it to a Roman numeral.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "num", label: "Integer", type: "number", defaultValue: 1994 },
     ],
@@ -996,7 +1050,8 @@ export const problems: Problem[] = [
     title: "Longest Common Prefix",
     description:
       "Write a function to find the longest common prefix string amongst an array of strings.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -1013,7 +1068,8 @@ export const problems: Problem[] = [
     title: "Implement strStr()",
     description:
       "Return the index of the first occurrence of a needle string in a haystack string, or -1 if needle is not part of haystack.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "haystack",
@@ -1031,7 +1087,8 @@ export const problems: Problem[] = [
     title: "Merge Sorted Arrays",
     description:
       "Given two sorted integer arrays, merge the second array into the first one as a single sorted array. Assume the first array has enough space.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr1",
@@ -1061,7 +1118,8 @@ export const problems: Problem[] = [
     title: "Remove Duplicates from Sorted Array II",
     description:
       "Given a sorted array, remove the duplicates in-place such that each unique element appears at most twice. Return the new length.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1078,7 +1136,8 @@ export const problems: Problem[] = [
     title: "Plus One",
     description:
       "Given a large integer represented as an integer array, increment the integer by one and return the resulting array of digits.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -1095,7 +1154,8 @@ export const problems: Problem[] = [
     title: "Length of Last Word",
     description:
       "Given a string consisting of words and spaces, return the length of the last word in the string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "Hello World" },
     ],
@@ -1107,7 +1167,8 @@ export const problems: Problem[] = [
     title: "Rotate Array",
     description:
       "Given an array, rotate the array to the right by k steps, where k is non-negative.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1124,7 +1185,8 @@ export const problems: Problem[] = [
     id: "as-longest-palindromic-substring",
     title: "Longest Palindromic Substring",
     description: "Given a string, return the longest palindromic substring.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "babad" },
     ],
@@ -1136,7 +1198,8 @@ export const problems: Problem[] = [
     title: "ZigZag Conversion",
     description:
       "The string 'PAYPALISHIRING' is written in a zigzag pattern on a given number of rows. Write the code that will take a string and make this conversion.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "str",
@@ -1154,7 +1217,8 @@ export const problems: Problem[] = [
     title: "String to Integer (atoi)",
     description:
       "Implement a function that converts a string to a 32-bit signed integer, handling whitespace, signs, and overflow.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "   -42" },
     ],
@@ -1166,7 +1230,8 @@ export const problems: Problem[] = [
     title: "Jump Game",
     description:
       "Given an array of non-negative integers, you are initially positioned at the first index. Each element represents your maximum jump length. Determine if you can reach the last index.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "2,3,1,1,4" },
     ],
@@ -1178,7 +1243,8 @@ export const problems: Problem[] = [
     title: "Find All Duplicates in an Array",
     description:
       "Given an array of integers, 1 <= a[i] <= n (n = size of array), some elements appear twice and others appear once. Find all the elements that appear twice.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1195,7 +1261,8 @@ export const problems: Problem[] = [
     title: "First Missing Positive",
     description:
       "Given an unsorted integer array, find the smallest missing positive integer.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,4,-1,1" },
     ],
@@ -1207,7 +1274,8 @@ export const problems: Problem[] = [
     title: "Next Permutation",
     description:
       "Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" },
     ],
@@ -1219,7 +1287,8 @@ export const problems: Problem[] = [
     title: "Search in Rotated Sorted Array",
     description:
       "You are given an integer array sorted in ascending order, that has been rotated at some unknown pivot. Given a target value, return its index if found, or -1 otherwise.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1237,7 +1306,8 @@ export const problems: Problem[] = [
     title: "Find First and Last Position in Sorted Array",
     description:
       "Given an array of integers sorted in ascending order, find the starting and ending position of a given target value.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1255,7 +1325,8 @@ export const problems: Problem[] = [
     title: "Permutations",
     description:
       "Given an array of distinct integers, return all the possible permutations.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" },
     ],
@@ -1267,7 +1338,8 @@ export const problems: Problem[] = [
     title: "Permutations II (with Duplicates)",
     description:
       "Given a collection of numbers that might contain duplicates, return all possible unique permutations.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1284,7 +1356,8 @@ export const problems: Problem[] = [
     title: "Combinations",
     description:
       "Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "n", label: "n", type: "number", defaultValue: 4 },
       { id: "k", label: "k", type: "number", defaultValue: 2 },
@@ -1297,7 +1370,8 @@ export const problems: Problem[] = [
     title: "Combination Sum",
     description:
       "Given a set of candidate numbers (without duplicates) and a target number, find all unique combinations where the candidate numbers sum to target. The same number may be chosen multiple times.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "candidates",
@@ -1315,7 +1389,8 @@ export const problems: Problem[] = [
     title: "Combination Sum II (with Duplicates)",
     description:
       "Given a collection of candidate numbers that might contain duplicates and a target number, find all unique combinations where the candidate numbers sum to target. Each number may only be used once.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "candidates",
@@ -1333,7 +1408,8 @@ export const problems: Problem[] = [
     title: "Subsets",
     description:
       "Given an integer array of unique elements, return all possible subsets (the power set).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3" },
     ],
@@ -1345,7 +1421,8 @@ export const problems: Problem[] = [
     title: "Reshape the Matrix",
     description:
       "Given a 2D array and new dimensions (r, c), reshape the matrix. If impossible, return the original.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "matrix",
@@ -1364,7 +1441,8 @@ export const problems: Problem[] = [
     title: "Toeplitz Matrix",
     description:
       "A matrix is Toeplitz if every diagonal from top-left to bottom-right has the same element. Check if a matrix is Toeplitz.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "matrix",
@@ -1381,7 +1459,8 @@ export const problems: Problem[] = [
     title: "Flipping an Image",
     description:
       "Given a binary matrix, flip it horizontally and then invert it (0s become 1s and vice versa).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "matrix",
@@ -1398,7 +1477,8 @@ export const problems: Problem[] = [
     title: "Transpose Matrix",
     description:
       "Given a 2D integer array matrix, return the transpose of the matrix (swap rows and columns).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "matrix",
@@ -1415,7 +1495,8 @@ export const problems: Problem[] = [
     title: "Valid Mountain Array",
     description:
       "An array is a mountain array if it's strictly increasing then strictly decreasing. Check if an array is a valid mountain array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -1432,7 +1513,8 @@ export const problems: Problem[] = [
     title: "Sort Array By Parity",
     description:
       "Rearrange an array so that all even integers appear at the beginning, followed by all odd integers.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -1449,7 +1531,8 @@ export const problems: Problem[] = [
     title: "Squares of a Sorted Array",
     description:
       "Given a sorted array (possibly with negative numbers), return an array of the squares of each number, also in sorted order.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -1466,7 +1549,8 @@ export const problems: Problem[] = [
     title: "K-diff Pairs in an Array",
     description:
       "Given an array and an integer k, find the number of unique pairs in the array where the absolute difference is k.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,1,4,1,5" },
       { id: "k", label: "Difference (k)", type: "number", defaultValue: 2 },
@@ -1479,7 +1563,8 @@ export const problems: Problem[] = [
     title: "Isomorphic Strings",
     description:
       "Determine if two strings are isomorphic, meaning characters in the first string can be replaced to get the second, preserving order and maintaining a one-to-one mapping.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str1", label: "String 1", type: "text", defaultValue: "egg" },
       { id: "str2", label: "String 2", type: "text", defaultValue: "add" },
@@ -1492,7 +1577,8 @@ export const problems: Problem[] = [
     title: "Word Pattern",
     description:
       "Given a pattern string and a sentence, determine if the sentence follows the pattern with a bijective mapping.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "pattern", label: "Pattern", type: "text", defaultValue: "abba" },
       {
@@ -1510,7 +1596,8 @@ export const problems: Problem[] = [
     title: "Happy Number",
     description:
       "Determine if a number is 'happy' by repeatedly summing the squares of its digits. If the process reaches 1, it's a happy number. If it enters a cycle, it is not.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 19 }],
     buttonText: "Check if Happy",
   },
@@ -1520,7 +1607,8 @@ export const problems: Problem[] = [
     title: "Contains Duplicate",
     description:
       "Given an integer array, find if the array contains any duplicate values.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,1" },
     ],
@@ -1532,7 +1620,8 @@ export const problems: Problem[] = [
     title: "Contains Duplicate II",
     description:
       "Find if there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,3,1,2,3" },
       { id: "k", label: "k", type: "number", defaultValue: 2 },
@@ -1545,7 +1634,8 @@ export const problems: Problem[] = [
     title: "Add Digits (Digital Root)",
     description:
       "Given a non-negative integer, repeatedly add all its digits until the result has only one digit.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 38 }],
     buttonText: "Find Digital Root",
   },
@@ -1555,7 +1645,8 @@ export const problems: Problem[] = [
     title: "Ugly Number",
     description:
       "An ugly number is a positive number whose prime factors only include 2, 3, and 5. Check if a number is ugly.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 6 }],
     buttonText: "Check if Ugly",
   },
@@ -1565,7 +1656,8 @@ export const problems: Problem[] = [
     title: "First Unique Character in a String",
     description:
       "Given a string, find the first non-repeating character and return its index. If it does not exist, return -1.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "leetcode" },
     ],
@@ -1577,7 +1669,8 @@ export const problems: Problem[] = [
     title: "Find the Difference",
     description:
       "Given two strings `s` and `t`, where `t` is a shuffled `s` with one extra letter, find the added letter.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "s", label: "String s", type: "text", defaultValue: "abcd" },
       { id: "t", label: "String t", type: "text", defaultValue: "abcde" },
@@ -1590,7 +1683,8 @@ export const problems: Problem[] = [
     title: "Ransom Note",
     description:
       "Determine if a ransom note can be constructed from the letters in a magazine. Each letter in the magazine can only be used once.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "note", label: "Ransom Note", type: "text", defaultValue: "aa" },
       { id: "magazine", label: "Magazine", type: "text", defaultValue: "aab" },
@@ -1603,7 +1697,8 @@ export const problems: Problem[] = [
     title: "Longest Harmonious Subsequence",
     description:
       "A harmonious array's max and min values differ by exactly 1. Find the length of the longest harmonious subsequence from a given array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1620,7 +1715,8 @@ export const problems: Problem[] = [
     title: "Set Mismatch",
     description:
       "An array that should contain numbers from 1 to n has one number duplicated and one number missing. Find both.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,2,4" },
     ],
@@ -1632,7 +1728,8 @@ export const problems: Problem[] = [
     title: "Goat Latin",
     description:
       "Convert a sentence to 'Goat Latin' based on a set of rules involving vowels, consonants, and word index.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "sentence",
@@ -1649,7 +1746,8 @@ export const problems: Problem[] = [
     title: "Dutch National Flag Problem",
     description:
       "Given an array of 0s, 1s, and 2s, sort it in-place (also known as 'Sort Colors').",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -1666,7 +1764,8 @@ export const problems: Problem[] = [
     title: "Find All Anagrams in a String",
     description:
       "Given two strings s and p, return an array of all the start indices of p's anagrams in s.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s", label: "String s", type: "text", defaultValue: "cbaebabacd" },
       { id: "p", label: "String p", type: "text", defaultValue: "abc" },
@@ -1679,7 +1778,8 @@ export const problems: Problem[] = [
     title: "Pascal's Triangle Row",
     description:
       "Given a non-negative integer rowIndex, return the rowIndex-th (0-indexed) row of Pascal's triangle.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "rowIndex", label: "Row Index", type: "number", defaultValue: 3 },
     ],
@@ -1691,7 +1791,8 @@ export const problems: Problem[] = [
     title: "Best Time to Buy and Sell Stock II",
     description:
       "Given stock prices for consecutive days, find the maximum profit you can achieve. You may complete as many transactions as you like.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "prices",
@@ -1708,7 +1809,8 @@ export const problems: Problem[] = [
     title: "Excel Sheet Column Number",
     description:
       "Given an Excel column title (e.g., 'A', 'B', 'AA', 'ZY'), return its corresponding column number.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "columnTitle",
@@ -1725,7 +1827,8 @@ export const problems: Problem[] = [
     title: "Excel Sheet Column Title",
     description:
       "Given a column number, return its corresponding Excel column title.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "columnNumber",
@@ -1742,7 +1845,8 @@ export const problems: Problem[] = [
     title: "Single Number",
     description:
       "In a non-empty array of integers, every element appears twice except for one. Find that single one.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "4,1,2,1,2" },
     ],
@@ -1754,7 +1858,8 @@ export const problems: Problem[] = [
     title: "Palindrome Number",
     description:
       "Given an integer, return true if the integer is a palindrome without converting it to a string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 121 }],
     buttonText: "Check Palindrome",
   },
@@ -1764,7 +1869,8 @@ export const problems: Problem[] = [
     title: "Remove Element",
     description:
       "Given an array and a value, remove all instances of that value in-place and return the new length.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,2,2,3" },
       { id: "val", label: "Value to Remove", type: "number", defaultValue: 3 },
@@ -1777,7 +1883,8 @@ export const problems: Problem[] = [
     title: "Search Insert Position",
     description:
       "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -1795,7 +1902,8 @@ export const problems: Problem[] = [
     title: "Battleships in a Board",
     description:
       "Count the number of battleships on a 2D board. Battleships are represented by 'X's, empty cells by '.', and they do not touch.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "board",
@@ -1812,7 +1920,8 @@ export const problems: Problem[] = [
     title: "Shortest Distance to a Character",
     description:
       "Given a string and a character, return an array of the shortest distances from each character to an occurrence of the target character.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "loveleetcode" },
       { id: "c", label: "Character", type: "text", defaultValue: "e" },
@@ -1825,7 +1934,8 @@ export const problems: Problem[] = [
     title: "Binary Gap",
     description:
       "Given a positive integer, find the length of its longest binary gap (the longest sequence of consecutive zeros surrounded by ones).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 22 }],
     buttonText: "Find Gap",
   },
@@ -1835,7 +1945,8 @@ export const problems: Problem[] = [
     title: "Armstrong Number",
     description:
       "Check if a number is an Armstrong number (a number that is equal to the sum of its own digits each raised to the power of the number of digits).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [{ id: "n", label: "Number", type: "number", defaultValue: 153 }],
     buttonText: "Check Armstrong",
   },
@@ -1845,7 +1956,8 @@ export const problems: Problem[] = [
     title: "Find Pivot Index",
     description:
       "Find the pivot index of an array, which is the index where the sum of numbers to the left is equal to the sum of numbers to the right.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,7,3,6,5,6" },
     ],
@@ -1857,7 +1969,8 @@ export const problems: Problem[] = [
     title: "Kth Largest Element in an Array",
     description:
       "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,2,1,5,6,4" },
       { id: "k", label: "k", type: "number", defaultValue: 2 },
@@ -1870,7 +1983,8 @@ export const problems: Problem[] = [
     title: "Top K Frequent Elements",
     description:
       "Given a non-empty array of integers, return the k most frequent elements.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,1,1,2,2,3" },
       { id: "k", label: "k", type: "number", defaultValue: 2 },
@@ -1883,7 +1997,8 @@ export const problems: Problem[] = [
     title: "Sort Characters By Frequency",
     description:
       "Given a string, sort it in decreasing order based on the frequency of characters.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [{ id: "s", label: "String", type: "text", defaultValue: "tree" }],
     buttonText: "Sort by Frequency",
   },
@@ -1893,7 +2008,8 @@ export const problems: Problem[] = [
     title: "Maximum Product of Three Numbers",
     description:
       "Given an integer array, find the maximum product of three numbers in the array. Handle negative numbers correctly.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "-1,-2,-3,4" },
     ],
@@ -1905,7 +2021,8 @@ export const problems: Problem[] = [
     title: "Basic Calculator II",
     description:
       "Implement a basic calculator to evaluate an expression string containing `+`, `-`, `*`, `/` and non-negative integers. Handle operator precedence.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s", label: "Expression", type: "text", defaultValue: "3+2*2" },
     ],
@@ -1917,7 +2034,8 @@ export const problems: Problem[] = [
     title: "Longest Substring with At Most Two Distinct Characters",
     description:
       "Given a string, find the length of the longest substring that contains at most two distinct characters.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "ccaabbb" },
     ],
@@ -1929,7 +2047,8 @@ export const problems: Problem[] = [
     title: "Encode and Decode TinyURL",
     description:
       "Design a service like TinyURL that can encode a long URL to a short one and decode it back.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "url",
@@ -1946,7 +2065,8 @@ export const problems: Problem[] = [
     title: "Longest Repeating Character Replacement",
     description:
       "Given a string and an integer k, you can change any character in the string to any other uppercase English character at most k times. Find the length of the longest substring containing all repeating letters.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "ABAB" },
       { id: "k", label: "k", type: "number", defaultValue: 2 },
@@ -1959,7 +2079,8 @@ export const problems: Problem[] = [
     title: "Number of Islands",
     description:
       "Given a 2D grid map of '1's (land) and '0's (water), count the number of islands.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "grid",
@@ -1977,7 +2098,8 @@ export const problems: Problem[] = [
     title: "Decode String",
     description:
       "Given an encoded string, return its decoded string. The encoding rule is: `k[encoded_string]`, where the encoded_string inside the square brackets is being repeated exactly k times.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "s",
@@ -1994,7 +2116,8 @@ export const problems: Problem[] = [
     title: "Meeting Rooms II",
     description:
       "Given an array of meeting time intervals, find the minimum number of conference rooms required.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "intervals",
@@ -2011,7 +2134,8 @@ export const problems: Problem[] = [
     title: "Merge Intervals",
     description:
       "Given an array of intervals, merge all overlapping intervals and return an array of the non-overlapping intervals.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "intervals",
@@ -2028,7 +2152,8 @@ export const problems: Problem[] = [
     title: "Letter Case Permutation",
     description:
       "Given a string, we can transform every letter individually to be lowercase or uppercase to create another string. Return a list of all possible strings we could create.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [{ id: "s", label: "String", type: "text", defaultValue: "a1b2" }],
     buttonText: "Generate Permutations",
   },
@@ -2038,7 +2163,8 @@ export const problems: Problem[] = [
     title: "Longest Word in Dictionary",
     description:
       "Given an array of strings `words`, find the longest word in `words` that can be built one character at a time by other words in `words`.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "words",
@@ -2055,7 +2181,8 @@ export const problems: Problem[] = [
     title: "Word Break",
     description:
       "Given a string and a dictionary of words, determine if the string can be segmented into a space-separated sequence of one or more dictionary words.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "leetcode" },
       {
@@ -2073,7 +2200,8 @@ export const problems: Problem[] = [
     title: "Combination Sum IV",
     description:
       "Given an array of distinct integers and a target integer, return the number of possible combinations that add up to the target. Combinations are different if the order of the numbers is different.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "nums", label: "Numbers", type: "text", defaultValue: "1,2,3" },
       { id: "target", label: "Target", type: "number", defaultValue: 4 },
@@ -2086,7 +2214,8 @@ export const problems: Problem[] = [
     title: "Coin Change",
     description:
       "You are given coins of different denominations and a total amount of money. Write a function to compute the fewest number of coins that you need to make up that amount.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "coins", label: "Coins", type: "text", defaultValue: "1,2,5" },
       { id: "amount", label: "Amount", type: "number", defaultValue: 11 },
@@ -2099,7 +2228,8 @@ export const problems: Problem[] = [
     title: "Longest Increasing Subsequence",
     description:
       "Given an integer array, return the length of the longest strictly increasing subsequence.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "nums",
@@ -2116,7 +2246,8 @@ export const problems: Problem[] = [
     title: "Partition Equal Subset Sum",
     description:
       "Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "nums", label: "Numbers", type: "text", defaultValue: "1,5,11,5" },
     ],
@@ -2128,7 +2259,8 @@ export const problems: Problem[] = [
     title: "Unique Paths",
     description:
       "A robot is located at the top-left corner of an m x n grid. The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner. How many possible unique paths are there?",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "m", label: "Rows (m)", type: "number", defaultValue: 3 },
       { id: "n", label: "Columns (n)", type: "number", defaultValue: 7 },
@@ -2141,7 +2273,8 @@ export const problems: Problem[] = [
     title: "Unique Paths II",
     description:
       "A robot is located at the top-left corner of a grid with obstacles. The robot can only move either down or right. Find the number of unique paths to the bottom-right corner.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "grid",
@@ -2158,7 +2291,8 @@ export const problems: Problem[] = [
     title: "Minimum Path Sum",
     description:
       "Given a grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path. You can only move either down or right.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "grid",
@@ -2175,7 +2309,8 @@ export const problems: Problem[] = [
     title: "Word Ladder",
     description:
       "Given two words, `beginWord` and `endWord`, and a dictionary's word list, find the length of the shortest transformation sequence from `beginWord` to `endWord`.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "beginWord",
@@ -2199,7 +2334,8 @@ export const problems: Problem[] = [
     title: "Maximal Square",
     description:
       "Given a 2D binary matrix filled with 0s and 1s, find the largest square containing only 1s and return its area.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "matrix",
@@ -2217,7 +2353,8 @@ export const problems: Problem[] = [
     title: "Serialize and Deserialize Binary Tree",
     description:
       "Design an algorithm to serialize a binary tree to a string and deserialize the string back to the tree.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Show Concept",
   },
@@ -2227,7 +2364,8 @@ export const problems: Problem[] = [
     title: "Insert Delete GetRandom O(1)",
     description:
       "Design a data structure that supports insert, remove, and getRandom in average O(1) time.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Show Concept",
   },
@@ -2237,7 +2375,8 @@ export const problems: Problem[] = [
     title: "Regular Expression Matching",
     description:
       "Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "aab" },
       { id: "p", label: "Pattern", type: "text", defaultValue: "c*a*b" },
@@ -2250,7 +2389,8 @@ export const problems: Problem[] = [
     title: "Wildcard Matching",
     description:
       "Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*'.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "adceb" },
       { id: "p", label: "Pattern", type: "text", defaultValue: "*a*b" },
@@ -2263,7 +2403,8 @@ export const problems: Problem[] = [
     title: "Largest Rectangle in Histogram",
     description:
       "Given an array of integers representing the histogram's bar height, find the area of the largest rectangle in the histogram.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "heights",
@@ -2280,7 +2421,8 @@ export const problems: Problem[] = [
     title: "Maximal Rectangle",
     description:
       "Given a 2D binary matrix filled with 0s and 1s, find the largest rectangle containing only 1s and return its area.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "matrix",
@@ -2298,7 +2440,8 @@ export const problems: Problem[] = [
     title: "Word Search II",
     description:
       "Given a 2D board and a list of words from the dictionary, find all words on the board.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Show Concept",
   },
@@ -2307,8 +2450,9 @@ export const problems: Problem[] = [
     id: "as-basic-calculator-iii",
     title: "Basic Calculator III",
     description:
-      "Implement a basic calculator to evaluate an expression string containing `+`, `-`, `*`, `/`, `(`, `)`, and non-negative integers.",
-    category: "Arrays & Strings",
+      "Implement a basic calculator to evaluate an expression string containing `+`, `-`, `*`, `/`, `(`, `)` and non-negative integers.",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "s",
@@ -2325,7 +2469,8 @@ export const problems: Problem[] = [
     title: "Sliding Window Median",
     description:
       "The median is the middle value in an ordered integer list. Find the median of all windows of size k as the window slides from left to right.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Show Concept",
   },
@@ -2335,7 +2480,8 @@ export const problems: Problem[] = [
     title: "Longest Consecutive Sequence II (in a 2D grid)",
     description:
       "Given a 2D grid, find the length of the longest consecutive path. A path can be formed by moving to an adjacent cell (up, down, left, right) with a value that is exactly one greater.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Show Concept",
   },
@@ -2345,7 +2491,8 @@ export const problems: Problem[] = [
     title: "Find Common Characters",
     description:
       "Given an array of strings, return an array of all characters that show up in all strings in the list (including duplicates).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "words",
@@ -2362,7 +2509,8 @@ export const problems: Problem[] = [
     title: "Valid Palindrome II",
     description:
       "Given a string, check if it can become a palindrome by deleting at most one character.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "abca" },
     ],
@@ -2374,7 +2522,8 @@ export const problems: Problem[] = [
     title: "String Compression",
     description:
       "Implement a method to perform basic string compression using the counts of repeated characters. For example, 'aabcccccaaa' would become 'a2b1c5a3'.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str", label: "String", type: "text", defaultValue: "aabcccccaaa" },
     ],
@@ -2386,7 +2535,8 @@ export const problems: Problem[] = [
     title: "One Edit Away",
     description:
       "There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str1", label: "String 1", type: "text", defaultValue: "pale" },
       { id: "str2", label: "String 2", type: "text", defaultValue: "ple" },
@@ -2399,7 +2549,8 @@ export const problems: Problem[] = [
     title: "Rotate String",
     description:
       "Given two strings, s and goal, return true if and only if s can become goal after some number of left shifts on s.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "s", label: "String s", type: "text", defaultValue: "abcde" },
       { id: "goal", label: "String goal", type: "text", defaultValue: "cdeab" },
@@ -2412,7 +2563,8 @@ export const problems: Problem[] = [
     title: "Minimum Add to Make Parentheses Valid",
     description:
       "Given a string of '(' and ')' parentheses, compute the minimum number of parentheses we must add to make the resulting string valid.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str", label: "Parentheses", type: "text", defaultValue: "())" },
     ],
@@ -2424,7 +2576,8 @@ export const problems: Problem[] = [
     title: "Backspace String Compare",
     description:
       "Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s", label: "String s", type: "text", defaultValue: "ab#c" },
       { id: "t", label: "String t", type: "text", defaultValue: "ad#c" },
@@ -2437,7 +2590,8 @@ export const problems: Problem[] = [
     title: "Kth Missing Positive Number",
     description:
       "Given an array of strictly increasing positive integers, and an integer k, return the k-th positive integer that is missing from this array.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "2,3,4,7,11" },
       { id: "k", label: "k", type: "number", defaultValue: 5 },
@@ -2450,7 +2604,8 @@ export const problems: Problem[] = [
     title: "Max Consecutive Ones III",
     description:
       "Given a binary array and an integer k, return the maximum number of consecutive 1s in the array if you can flip at most k 0s.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "arr",
@@ -2468,7 +2623,8 @@ export const problems: Problem[] = [
     title: "Find Numbers with Even Number of Digits",
     description:
       "Given an array of integers, return how many of them contain an even number of digits.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -2485,7 +2641,8 @@ export const problems: Problem[] = [
     title: "Duplicate Zeros",
     description:
       "Given a fixed-length integer array, duplicate each occurrence of zero, shifting the remaining elements to the right. Modify the input array in-place.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -2502,7 +2659,8 @@ export const problems: Problem[] = [
     title: "Check If N and Its Double Exist",
     description:
       "Given an array of integers, check if there exist two integers N and M such that N is the double of M (i.e., N = 2 * M).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "10,2,5,3" },
     ],
@@ -2514,7 +2672,8 @@ export const problems: Problem[] = [
     title: "Replace Elements with Greatest Element on Right Side",
     description:
       "Given an array, replace every element with the greatest element among the elements to its right, and replace the last element with -1.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "arr",
@@ -2531,7 +2690,8 @@ export const problems: Problem[] = [
     title: "Third Maximum Number",
     description:
       "Given a non-empty array of integers, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,2,1" },
     ],
@@ -2543,7 +2703,8 @@ export const problems: Problem[] = [
     title: "Generate Parentheses",
     description:
       "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 3 }],
     buttonText: "Generate",
   },
@@ -2553,7 +2714,8 @@ export const problems: Problem[] = [
     title: "Multiply Strings",
     description:
       "Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also as a string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "num1", label: "Number 1", type: "text", defaultValue: "123" },
       { id: "num2", label: "Number 2", type: "text", defaultValue: "456" },
@@ -2566,7 +2728,8 @@ export const problems: Problem[] = [
     title: "Basic Calculator",
     description:
       "Implement a basic calculator to evaluate a simple expression string containing `+`, `-`, `(`, `)`, and non-negative integers.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       {
         id: "s",
@@ -2583,7 +2746,8 @@ export const problems: Problem[] = [
     title: "Find the Celebrity",
     description:
       "Suppose you are at a party with n people. A 'celebrity' is a person who is known by everyone but knows no one. Find the celebrity.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [],
     buttonText: "Show Concept",
   },
@@ -2592,7 +2756,8 @@ export const problems: Problem[] = [
     id: "as-dot-product-of-two-sparse-vectors",
     title: "Dot Product of Two Sparse Vectors",
     description: "Given two sparse vectors, compute their dot product.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "vec1",
@@ -2615,7 +2780,8 @@ export const problems: Problem[] = [
     title: "Pancake Sorting",
     description:
       "Given an array, sort it by performing a series of pancake flips (reversing a prefix of the array). Return the k-values corresponding to the flips.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "arr", label: "Array", type: "text", defaultValue: "3,2,4,1" },
     ],
@@ -2626,7 +2792,8 @@ export const problems: Problem[] = [
     id: "as-reverse-words-in-a-string",
     title: "Reverse Words in a String",
     description: "Given an input string, reverse the order of the words.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "s",
@@ -2643,7 +2810,8 @@ export const problems: Problem[] = [
     title: "Reverse Words in a String II",
     description:
       "Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "abcdefg" },
       { id: "k", label: "k", type: "number", defaultValue: 2 },
@@ -2656,7 +2824,8 @@ export const problems: Problem[] = [
     title: "Valid Word Abbreviation",
     description:
       "Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "word",
@@ -2679,7 +2848,8 @@ export const problems: Problem[] = [
     title: "Find and Replace Pattern",
     description:
       "Given a list of strings words and a string pattern, return a list of words[i] that match pattern.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "words",
@@ -2697,7 +2867,8 @@ export const problems: Problem[] = [
     title: "Count Binary Substrings",
     description:
       "Give a binary string, return the number of non-empty substrings that have the same number of 0's and 1's, and all the 0's and all the 1's in these substrings are grouped consecutively.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "s",
@@ -2714,7 +2885,8 @@ export const problems: Problem[] = [
     title: "Reorganize String",
     description:
       "Given a string, rearrange the characters so that any two adjacent characters are not the same. If possible, return one such string. Otherwise, return an empty string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [{ id: "s", label: "String", type: "text", defaultValue: "aab" }],
     buttonText: "Reorganize",
   },
@@ -2724,7 +2896,8 @@ export const problems: Problem[] = [
     title: "Custom Sort String",
     description:
       "You are given two strings: order and str. All the characters of order are unique and were sorted in some custom order previously. Permute the characters of str so that they match the order that order was sorted in.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "order", label: "Order", type: "text", defaultValue: "cba" },
       { id: "s", label: "String", type: "text", defaultValue: "abcd" },
@@ -2737,7 +2910,8 @@ export const problems: Problem[] = [
     title: "Partition Labels",
     description:
       "A string is partitioned into as many parts as possible so that each letter appears in at most one part. Return a list of integers representing the size of these parts.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "s",
@@ -2754,7 +2928,8 @@ export const problems: Problem[] = [
     title: "Repeated String Match",
     description:
       "Given two strings a and b, return the minimum number of times you should repeat string a so that string b is a substring of it. If it is impossible, return -1.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "a", label: "String a", type: "text", defaultValue: "abcd" },
       { id: "b", label: "String b", type: "text", defaultValue: "cdabcdab" },
@@ -2767,7 +2942,8 @@ export const problems: Problem[] = [
     title: "Longest Uncommon Subsequence I",
     description:
       "Given two strings a and b, return the length of the longest uncommon subsequence between a and b. If no such uncommon subsequence exists, return -1.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "a", label: "String a", type: "text", defaultValue: "aba" },
       { id: "b", label: "String b", type: "text", defaultValue: "cdc" },
@@ -2780,7 +2956,8 @@ export const problems: Problem[] = [
     title: "Verifying an Alien Dictionary",
     description:
       "In an alien language, they also use English lowercase letters, but possibly in a different order. Given a sequence of words and the order of the alphabet, return true if the given words are sorted lexicographically.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       {
         id: "words",
@@ -2803,7 +2980,8 @@ export const problems: Problem[] = [
     title: "Remove Outermost Parentheses",
     description:
       "Given a valid parentheses string, remove the outermost parentheses of every primitive string in the decomposition of the input string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "(()())(())" },
     ],
@@ -2815,7 +2993,8 @@ export const problems: Problem[] = [
     title: "Reverse Only Letters",
     description:
       "Given a string, reverse the string according to the rule: All characters that are not English letters remain in the same position. All English letters should be reversed.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [{ id: "s", label: "String", type: "text", defaultValue: "ab-cd" }],
     buttonText: "Reverse",
   },
@@ -2825,7 +3004,8 @@ export const problems: Problem[] = [
     title: "Unique Email Addresses",
     description:
       "Given a list of emails, we send one email to each address in the list. How many different addresses actually receive mails? Apply rules for '.' and '+' in local names.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       {
         id: "emails",
@@ -2843,7 +3023,8 @@ export const problems: Problem[] = [
     title: "Reverse String II",
     description:
       "Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "s", label: "String", type: "text", defaultValue: "abcdefg" },
       { id: "k", label: "k", type: "number", defaultValue: 2 },
@@ -2856,7 +3037,8 @@ export const problems: Problem[] = [
     title: "Add Strings",
     description:
       "Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "num1", label: "Number 1", type: "text", defaultValue: "123" },
       { id: "num2", label: "Number 2", type: "text", defaultValue: "456" },
@@ -2869,7 +3051,8 @@ export const problems: Problem[] = [
     title: "Add Binary",
     description:
       "Given two binary strings, return their sum (also a binary string).",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Beginner",
     inputs: [
       { id: "a", label: "Binary String a", type: "text", defaultValue: "1010" },
       { id: "b", label: "Binary String b", type: "text", defaultValue: "1011" },
@@ -2882,7 +3065,8 @@ export const problems: Problem[] = [
     title: "Longest Common Substring",
     description:
       "Given two strings, find the length of the longest common substring between them.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "str1", label: "String 1", type: "text", defaultValue: "ABABC" },
       { id: "str2", label: "String 2", type: "text", defaultValue: "BABCA" },
@@ -2895,7 +3079,8 @@ export const problems: Problem[] = [
     title: "KMP String Search Algorithm (Conceptual)",
     description:
       "Explain the Knuth-Morris-Pratt (KMP) algorithm for finding occurrences of a 'word' W within a main 'text' T by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Explain KMP",
   },
@@ -2905,7 +3090,8 @@ export const problems: Problem[] = [
     title: "Rabin-Karp Algorithm (Conceptual)",
     description:
       "Explain the Rabin-Karp string-searching algorithm that uses hashing to find any one of a set of pattern strings in a text.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Explain Rabin-Karp",
   },
@@ -2915,7 +3101,8 @@ export const problems: Problem[] = [
     title: "Manacher's Algorithm (Conceptual)",
     description:
       "Explain Manacher's algorithm, an efficient O(n) algorithm for finding the longest palindromic substring in any given string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Explain Manacher's",
   },
@@ -2925,7 +3112,8 @@ export const problems: Problem[] = [
     title: "Z-Algorithm (Conceptual)",
     description:
       "Explain the Z-Algorithm, a linear time string matching algorithm that constructs a Z-array. The Z-array stores the length of the longest substring starting from the current position that is also a prefix of the string.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Explain Z-Algorithm",
   },
@@ -2935,7 +3123,8 @@ export const problems: Problem[] = [
     title: "Suffix Array (Conceptual)",
     description:
       "Explain what a Suffix Array is and how it can be used for various string problems, such as finding the longest repeated substring.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Explain Suffix Array",
   },
@@ -2945,7 +3134,8 @@ export const problems: Problem[] = [
     title: "Suffix Tree (Conceptual)",
     description:
       "Explain the Suffix Tree data structure, a powerful tool for solving complex string problems like finding all occurrences of multiple patterns.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Explain Suffix Tree",
   },
@@ -2955,7 +3145,8 @@ export const problems: Problem[] = [
     title: "Aho-Corasick Algorithm (Conceptual)",
     description:
       "Explain the Aho-Corasick algorithm, a string-searching algorithm that can find all occurrences of a finite set of keywords in a text simultaneously.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [],
     buttonText: "Explain Aho-Corasick",
   },
@@ -2965,7 +3156,8 @@ export const problems: Problem[] = [
     title: "Longest Palindromic Subsequence",
     description:
       "Given a string, find the length of the longest palindromic subsequence. A subsequence is not necessarily contiguous.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [{ id: "s", label: "String", type: "text", defaultValue: "bbbab" }],
     buttonText: "Find Length",
   },
@@ -2975,7 +3167,8 @@ export const problems: Problem[] = [
     title: "Edit Distance",
     description:
       "Given two strings, find the minimum number of operations (insert, delete, or substitute a character) required to convert one string to the other.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Advanced",
     inputs: [
       { id: "word1", label: "Word 1", type: "text", defaultValue: "horse" },
       { id: "word2", label: "Word 2", type: "text", defaultValue: "ros" },
@@ -2988,7 +3181,8 @@ export const problems: Problem[] = [
     title: "Longest Common Subsequence",
     description:
       "Given two strings, find the length of the longest common subsequence.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "text1", label: "Text 1", type: "text", defaultValue: "abcde" },
       { id: "text2", label: "Text 2", type: "text", defaultValue: "ace" },
@@ -3001,7 +3195,8 @@ export const problems: Problem[] = [
     title: "Minimum ASCII Delete Sum for Two Strings",
     description:
       "Given two strings, find the lowest ASCII sum of deleted characters to make two strings equal.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [
       { id: "s1", label: "String 1", type: "text", defaultValue: "sea" },
       { id: "s2", label: "String 2", type: "text", defaultValue: "eat" },
@@ -3014,7 +3209,8 @@ export const problems: Problem[] = [
     title: "Integer Break",
     description:
       "Given a positive integer n, break it into the sum of at least two positive integers and maximize the product of those integers. Return the maximum product you can get.",
-    category: "Arrays & Strings",
+    category: "Arrays and Strings",
+    difficulty: "Intermediate",
     inputs: [{ id: "n", label: "n", type: "number", defaultValue: 10 }],
     buttonText: "Maximize Product",
   },

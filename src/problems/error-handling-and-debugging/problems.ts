@@ -10,6 +10,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run try...catch",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -20,6 +21,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger ReferenceError",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -30,6 +32,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger TypeError",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -40,6 +43,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Throw String",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -50,6 +54,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Throw Error Object",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -60,6 +65,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run with Finally",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -70,6 +76,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `finally` with return",
+    difficulty: "Intermediate",
   },
   // problem--> 08
   {
@@ -80,6 +87,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Throw Custom Error",
+    difficulty: "Intermediate",
   },
   // problem--> 09
   {
@@ -90,6 +98,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Check Error Type",
+    difficulty: "Intermediate",
   },
   // problem--> 10
   {
@@ -107,6 +116,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Parse JSON",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -117,6 +127,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log Message",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -127,6 +138,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log Error Name",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -137,6 +149,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log Stack Trace",
+    difficulty: "Intermediate",
   },
   // problem--> 14
   {
@@ -147,6 +160,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger RangeError",
+    difficulty: "Intermediate",
   },
   // problem--> 15
   {
@@ -157,6 +171,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger URIError",
+    difficulty: "Intermediate",
   },
   // problem--> 16
   {
@@ -167,6 +182,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Rethrow Error",
+    difficulty: "Intermediate",
   },
   // problem--> 17
   {
@@ -177,6 +193,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run Check",
+    difficulty: "Beginner",
   },
   // problem--> 18
   {
@@ -189,6 +206,7 @@ export const problems: Problem[] = [
       { id: "input", label: "Input Value", type: "text", defaultValue: "5" },
     ],
     buttonText: "Process Input",
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -199,6 +217,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test with Error",
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -209,6 +228,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Safely Access Property",
+    difficulty: "Intermediate",
   },
   // problem--> 21
   {
@@ -219,6 +239,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate",
+    difficulty: "Intermediate",
   },
   // problem--> 22
   {
@@ -229,6 +250,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate",
+    difficulty: "Intermediate",
   },
   // problem--> 23
   {
@@ -239,6 +261,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Scope",
+    difficulty: "Beginner",
   },
   // problem--> 24
   {
@@ -249,6 +272,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `throw` in `finally`",
+    difficulty: "Advanced",
   },
   // problem--> 25
   {
@@ -259,6 +283,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Validate User",
+    difficulty: "Intermediate",
   },
   // problem--> 26
   {
@@ -269,6 +294,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run Promise",
+    difficulty: "Beginner",
   },
   // problem--> 27
   {
@@ -279,6 +305,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run Async Function",
+    difficulty: "Intermediate",
   },
   // problem--> 28
   {
@@ -289,6 +316,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Chain Catch",
+    difficulty: "Intermediate",
   },
   // problem--> 29
   {
@@ -299,6 +327,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Rejection",
+    difficulty: "Intermediate",
   },
   // problem--> 30
   {
@@ -309,6 +338,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run allSettled",
+    difficulty: "Intermediate",
   },
   // problem--> 31
   {
@@ -319,6 +349,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Fetch Error",
+    difficulty: "Intermediate",
   },
   // problem--> 32
   {
@@ -329,6 +360,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 33
   {
@@ -339,6 +371,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Propagation",
+    difficulty: "Intermediate",
   },
   // problem--> 34
   {
@@ -349,6 +382,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log to Console",
+    difficulty: "Beginner",
   },
   // problem--> 35
   {
@@ -359,6 +393,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log an Error",
+    difficulty: "Beginner",
   },
   // problem--> 36
   {
@@ -368,6 +403,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log a Warning",
+    difficulty: "Beginner",
   },
   // problem--> 37
   {
@@ -378,6 +414,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log as Table",
+    difficulty: "Intermediate",
   },
   // problem--> 38
   {
@@ -388,6 +425,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger Debugger",
+    difficulty: "Beginner",
   },
   // problem--> 39
   {
@@ -398,6 +436,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `any` Rejection",
+    difficulty: "Advanced",
   },
   // problem--> 40
   {
@@ -408,6 +447,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Error Cause",
+    difficulty: "Advanced",
   },
   // problem--> 41
   {
@@ -418,6 +458,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Throw AggregateError",
+    difficulty: "Advanced",
   },
   // problem--> 42
   {
@@ -428,6 +469,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log Grouped Messages",
+    difficulty: "Intermediate",
   },
   // problem--> 43
   {
@@ -438,6 +480,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Measure Duration",
+    difficulty: "Intermediate",
   },
   // problem--> 44
   {
@@ -448,6 +491,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run Assertion",
+    difficulty: "Intermediate",
   },
   // problem--> 45
   {
@@ -458,6 +502,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 46
   {
@@ -468,6 +513,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 47
   {
@@ -478,6 +524,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 48
   {
@@ -488,6 +535,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 49
   {
@@ -498,6 +546,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 50
   {
@@ -508,6 +557,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 51
   {
@@ -518,6 +568,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 52
   {
@@ -528,6 +579,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 53
   {
@@ -538,6 +590,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -548,6 +601,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 55
   {
@@ -558,6 +612,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Retry",
+    difficulty: "Advanced",
   },
   // problem--> 56
   {
@@ -575,6 +630,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Test Timeout",
+    difficulty: "Advanced",
   },
   // problem--> 57
   {
@@ -585,6 +641,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Async `finally`",
+    difficulty: "Intermediate",
   },
   // problem--> 58
   {
@@ -595,6 +652,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -605,6 +663,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix Loop",
+    difficulty: "Beginner",
   },
   // problem--> 60
   {
@@ -615,6 +674,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix Mutation",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -625,6 +685,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix Closure",
+    difficulty: "Intermediate",
   },
   // problem--> 62
   {
@@ -635,6 +696,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Compare Floats",
+    difficulty: "Intermediate",
   },
   // problem--> 63
   {
@@ -645,6 +707,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix `this`",
+    difficulty: "Intermediate",
   },
   // problem--> 64
   {
@@ -655,6 +718,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 65
   {
@@ -665,6 +729,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Abortable Fetch",
+    difficulty: "Advanced",
   },
   // problem--> 66
   {
@@ -675,6 +740,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate Type Guard",
+    difficulty: "Advanced",
   },
   // problem--> 67
   {
@@ -685,6 +751,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 68
   {
@@ -695,6 +762,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `catch {}`",
+    difficulty: "Intermediate",
   },
   // problem--> 69
   {
@@ -705,6 +773,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Debug Regex",
+    difficulty: "Intermediate",
   },
   // problem--> 70
   {
@@ -715,6 +784,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -725,6 +795,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 72
   {
@@ -735,6 +806,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 73
   {
@@ -745,6 +817,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 74
   {
@@ -755,6 +828,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 75
   {
@@ -765,6 +839,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Parse Safely",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -775,6 +850,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate",
+    difficulty: "Advanced",
   },
   // problem--> 77
   {
@@ -785,6 +861,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Return",
+    difficulty: "Advanced",
   },
   // problem--> 78
   {
@@ -795,6 +872,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Assertion",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -805,6 +883,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger Stack Overflow",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -815,6 +894,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -825,6 +905,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 82
   {
@@ -835,6 +916,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 83
   {
@@ -845,6 +927,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 84
   {
@@ -855,6 +938,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 85
   {
@@ -865,6 +949,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 86
   {
@@ -875,6 +960,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 87
   {
@@ -885,6 +971,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 88
   {
@@ -895,6 +982,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 89
   {
@@ -905,6 +993,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 90
   {
@@ -915,6 +1004,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 91
   {
@@ -925,6 +1015,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 92
   {
@@ -935,6 +1026,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 93
   {
@@ -945,6 +1037,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 94
   {
@@ -955,6 +1048,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 95
   {
@@ -965,6 +1059,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Mutex",
+    difficulty: "Advanced",
   },
   // problem--> 96
   {
@@ -975,6 +1070,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 97
   {
@@ -985,6 +1081,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 98
   {
@@ -995,6 +1092,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Logging Proxy",
+    difficulty: "Advanced",
   },
   // problem--> 99
   {
@@ -1005,6 +1103,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trace Function Call",
+    difficulty: "Intermediate",
   },
   // problem--> 100
   {
@@ -1015,6 +1114,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix Binary Search",
+    difficulty: "Intermediate",
   },
   // problem--> 101
   {
@@ -1025,6 +1125,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix Regex",
+    difficulty: "Intermediate",
   },
   // problem--> 102
   {
@@ -1035,6 +1136,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log Object with dir",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1045,6 +1147,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 104
   {
@@ -1055,6 +1158,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
 
   // problem--> 105
@@ -1066,6 +1170,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 106
   {
@@ -1076,6 +1181,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 107
   {
@@ -1086,6 +1192,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate",
+    difficulty: "Intermediate",
   },
   // problem--> 108
   {
@@ -1096,6 +1203,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 109
   {
@@ -1106,6 +1214,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1116,6 +1225,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 111
   {
@@ -1126,6 +1236,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 112
   {
@@ -1136,6 +1247,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix Coercion",
+    difficulty: "Beginner",
   },
   // problem--> 113
   {
@@ -1146,6 +1258,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run Counter",
+    difficulty: "Intermediate",
   },
   // problem--> 114
   {
@@ -1156,6 +1269,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log with Timestamps",
+    difficulty: "Intermediate",
   },
   // problem--> 115
   {
@@ -1166,6 +1280,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Pretty-Print",
+    difficulty: "Intermediate",
   },
   // problem--> 116
   {
@@ -1176,6 +1291,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 117
   {
@@ -1186,6 +1302,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 118
   {
@@ -1196,6 +1313,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 119
   {
@@ -1206,6 +1324,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 120
   {
@@ -1216,6 +1335,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 121
   {
@@ -1226,6 +1346,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log DOM Element",
+    difficulty: "Intermediate",
   },
   // problem--> 122
   {
@@ -1236,6 +1357,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 123
   {
@@ -1246,6 +1368,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Process Queue",
+    difficulty: "Advanced",
   },
   // problem--> 124
   {
@@ -1256,6 +1379,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 125
   {
@@ -1266,6 +1390,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 126
   {
@@ -1276,6 +1401,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 127
   {
@@ -1286,6 +1412,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 128
   {
@@ -1296,6 +1423,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 129
   {
@@ -1306,6 +1434,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 130
   {
@@ -1316,6 +1445,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Fix Timing Issue",
+    difficulty: "Intermediate",
   },
   // problem--> 131
   {
@@ -1325,6 +1455,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Clear Console",
+    difficulty: "Beginner",
   },
   // problem--> 132
   {
@@ -1335,6 +1466,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run and Reset Counter",
+    difficulty: "Intermediate",
   },
   // problem--> 133
   {
@@ -1345,6 +1477,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 134
   {
@@ -1355,6 +1488,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Advanced",
   },
   // problem--> 135
   {
@@ -1365,6 +1499,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 136
   {
@@ -1375,6 +1510,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain Invariants",
+    difficulty: "Intermediate",
   },
   // problem--> 137
   {
@@ -1385,6 +1521,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 138
   {
@@ -1395,6 +1532,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 139
   {
@@ -1405,6 +1543,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger Error",
+    difficulty: "Intermediate",
   },
   // problem--> 140
   {
@@ -1415,6 +1554,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate",
+    difficulty: "Beginner",
   },
   // problem--> 141
   {
@@ -1425,6 +1565,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 142
   {
@@ -1435,6 +1576,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Show Pitfall",
+    difficulty: "Intermediate",
   },
   // problem--> 143
   {
@@ -1445,6 +1587,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate",
+    difficulty: "Intermediate",
   },
   // problem--> 144
   {
@@ -1455,6 +1598,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 145
   {
@@ -1465,6 +1609,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run Timers",
+    difficulty: "Intermediate",
   },
   // problem--> 146
   {
@@ -1475,6 +1620,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `finally` Return",
+    difficulty: "Advanced",
   },
   // problem--> 147
   {
@@ -1485,6 +1631,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 148
   {
@@ -1495,6 +1642,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain Names",
+    difficulty: "Intermediate",
   },
   // problem--> 149
   {
@@ -1505,6 +1653,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Show Pitfall",
+    difficulty: "Intermediate",
   },
   // problem--> 150
   {
@@ -1515,6 +1664,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 151
   {
@@ -1525,6 +1675,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 152
   {
@@ -1535,6 +1686,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `WeakMap` Privacy",
+    difficulty: "Advanced",
   },
   // problem--> 153
   {
@@ -1545,6 +1697,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `WeakSet`",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -1555,6 +1708,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 155
   {
@@ -1565,6 +1719,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Create and Revoke Proxy",
+    difficulty: "Advanced",
   },
   // problem--> 156
   {
@@ -1575,6 +1730,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Trigger Error",
+    difficulty: "Intermediate",
   },
   // problem--> 157
   {
@@ -1585,6 +1741,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `.throw()`",
+    difficulty: "Advanced",
   },
   // problem--> 158
   {
@@ -1595,6 +1752,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Async Generator Error",
+    difficulty: "Advanced",
   },
   // problem--> 159
   {
@@ -1605,6 +1763,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log Collapsed Group",
+    difficulty: "Intermediate",
   },
   // problem--> 160
   {
@@ -1615,6 +1774,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain Utility",
+    difficulty: "Intermediate",
   },
   // problem--> 161
   {
@@ -1625,6 +1785,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Inspect Chain",
+    difficulty: "Advanced",
   },
   // problem--> 162
   {
@@ -1635,6 +1796,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 163
   {
@@ -1645,6 +1807,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 164
   {
@@ -1655,6 +1818,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 165
   {
@@ -1665,6 +1829,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 166
   {
@@ -1675,6 +1840,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 167
   {
@@ -1685,6 +1851,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 168
   {
@@ -1695,6 +1862,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 169
   {
@@ -1705,6 +1873,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 170
   {
@@ -1715,6 +1884,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 171
   {
@@ -1725,6 +1895,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 172
   {
@@ -1735,6 +1906,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 173
   {
@@ -1745,6 +1917,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 174
   {
@@ -1755,6 +1928,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Strict Mode",
+    difficulty: "Intermediate",
   },
   // problem--> 175
   {
@@ -1765,6 +1939,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Proxy Trap",
+    difficulty: "Advanced",
   },
   // problem--> 176
   {
@@ -1775,6 +1950,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Throw SuppressedError",
+    difficulty: "Advanced",
   },
   // problem--> 177
   {
@@ -1785,6 +1961,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test",
+    difficulty: "Intermediate",
   },
   // problem--> 178
   {
@@ -1795,6 +1972,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Error",
+    difficulty: "Intermediate",
   },
   // problem--> 179
   {
@@ -1805,6 +1983,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Run Counters",
+    difficulty: "Intermediate",
   },
   // problem--> 180
   {
@@ -1815,6 +1994,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate (Conceptual)",
+    difficulty: "Intermediate",
   },
   // problem--> 181
   {
@@ -1825,6 +2005,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Analyze String",
+    difficulty: "Advanced",
   },
   // problem--> 182
   {
@@ -1842,6 +2023,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Integer",
+    difficulty: "Intermediate",
   },
   // problem--> 183
   {
@@ -1852,6 +2034,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate (Conceptual)",
+    difficulty: "Intermediate",
   },
   // problem--> 184
   {
@@ -1862,6 +2045,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Log Collapsed Group",
+    difficulty: "Intermediate",
   },
   // problem--> 185
   {
@@ -1872,6 +2056,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain Utility",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -1882,6 +2067,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Constructor Error",
+    difficulty: "Intermediate",
   },
   // problem--> 187
   {
@@ -1892,6 +2078,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Throw Custom Error with Data",
+    difficulty: "Advanced",
   },
   // problem--> 188
   {
@@ -1902,6 +2089,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate Race Condition",
+    difficulty: "Advanced",
   },
   // problem--> 189
   {
@@ -1912,6 +2100,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test `finally`",
+    difficulty: "Intermediate",
   },
   // problem--> 190
   {
@@ -1922,6 +2111,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 191
   {
@@ -1932,6 +2122,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 192
   {
@@ -1942,6 +2133,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 193
   {
@@ -1952,6 +2144,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 194
   {
@@ -1962,6 +2155,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 195
   {
@@ -1972,6 +2166,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Recovery",
+    difficulty: "Intermediate",
   },
   // problem--> 196
   {
@@ -1982,6 +2177,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 197
   {
@@ -1992,6 +2188,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Demonstrate (Conceptual)",
+    difficulty: "Intermediate",
   },
   // problem--> 198
   {
@@ -2002,6 +2199,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Summarize",
+    difficulty: "Beginner",
   },
   // problem--> 199
   {
@@ -2012,6 +2210,7 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Test Error",
+    difficulty: "Advanced",
   },
   // problem--> 200
   {
@@ -2022,5 +2221,6 @@ export const problems: Problem[] = [
     category: "Error Handling and Debugging",
     inputs: [],
     buttonText: "Explain Source Maps",
+    difficulty: "Intermediate",
   },
 ];

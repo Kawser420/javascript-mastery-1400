@@ -10,6 +10,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Block Scope",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -20,6 +21,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Reassignment",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -30,6 +32,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Mutate Object",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -40,6 +43,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 9 }],
     buttonText: "Double with Arrow",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -50,6 +54,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 8 }],
     buttonText: "Square",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -62,6 +67,7 @@ export const problems: Problem[] = [
       { id: "name", label: "Name", type: "text", defaultValue: "Alice" },
     ],
     buttonText: "Create Greeting",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -72,6 +78,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create Multiline String",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -84,6 +91,7 @@ export const problems: Problem[] = [
       { id: "name", label: "Name (optional)", type: "text", defaultValue: "" },
     ],
     buttonText: "Greet User",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -94,6 +102,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Combine Arrays",
+    difficulty: "Beginner",
   },
   // problem--> 10
   {
@@ -104,6 +113,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Merge Objects",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -121,6 +131,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Sum All",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -131,6 +142,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure Array",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -141,6 +153,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure Object",
+    difficulty: "Beginner",
   },
   // problem--> 14
   {
@@ -151,6 +164,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Swap Variables",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -161,6 +175,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure with Alias",
+    difficulty: "Beginner",
   },
   // problem--> 16
   {
@@ -171,6 +186,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure with Default",
+    difficulty: "Beginner",
   },
   // problem--> 17
   {
@@ -188,6 +204,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Iterate with for...of",
+    difficulty: "Beginner",
   },
   // problem--> 18
   {
@@ -200,6 +217,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "hello" },
     ],
     buttonText: "Iterate String",
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -210,6 +228,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create with Shorthand",
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -220,6 +239,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create with Computed Key",
+    difficulty: "Intermediate",
   },
   // problem--> 21
   {
@@ -230,6 +250,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Lexical `this`",
+    difficulty: "Intermediate",
   },
   // problem--> 22
   {
@@ -240,6 +261,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Define and Instantiate",
+    difficulty: "Beginner",
   },
   // problem--> 23
   {
@@ -250,6 +272,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Call Method",
+    difficulty: "Beginner",
   },
   // problem--> 24
   {
@@ -260,6 +283,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Inheritance",
+    difficulty: "Intermediate",
   },
   // problem--> 25
   {
@@ -270,6 +294,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `super()`",
+    difficulty: "Intermediate",
   },
   // problem--> 26
   {
@@ -280,6 +305,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create and Resolve",
+    difficulty: "Intermediate",
   },
   // problem--> 27
   {
@@ -290,6 +316,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create and Reject",
+    difficulty: "Intermediate",
   },
   // problem--> 28
   {
@@ -300,6 +327,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise Chain",
+    difficulty: "Intermediate",
   },
   // problem--> 29
   {
@@ -310,6 +338,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise.all",
+    difficulty: "Intermediate",
   },
   // problem--> 30
   {
@@ -320,6 +349,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Map",
+    difficulty: "Intermediate",
   },
   // problem--> 31
   {
@@ -330,6 +360,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Set",
+    difficulty: "Intermediate",
   },
   // problem--> 32
   {
@@ -347,6 +378,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Remove Duplicates",
+    difficulty: "Beginner",
   },
   // problem--> 33
   {
@@ -357,6 +389,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain Modules",
+    difficulty: "Intermediate",
   },
   // problem--> 34
   {
@@ -367,6 +400,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create a Symbol",
+    difficulty: "Intermediate",
   },
   // problem--> 35
   {
@@ -377,6 +411,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain Iterator",
+    difficulty: "Advanced",
   },
   // problem--> 36
   {
@@ -387,6 +422,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Generate Numbers",
+    difficulty: "Advanced",
   },
   // problem--> 37
   {
@@ -397,6 +433,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create Array from String",
+    difficulty: "Intermediate",
   },
   // problem--> 38
   {
@@ -414,6 +451,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find first number > 10",
+    difficulty: "Beginner",
   },
   // problem--> 39
   {
@@ -431,6 +469,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Find index of first number > 10",
+    difficulty: "Beginner",
   },
   // problem--> 40
   {
@@ -454,6 +493,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Inclusion",
+    difficulty: "Beginner",
   },
   // problem--> 41
   {
@@ -477,6 +517,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Start",
+    difficulty: "Beginner",
   },
   // problem--> 42
   {
@@ -500,6 +541,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check End",
+    difficulty: "Beginner",
   },
   // problem--> 43
   {
@@ -518,6 +560,7 @@ export const problems: Problem[] = [
       { id: "count", label: "Repeat count", type: "number", defaultValue: 3 },
     ],
     buttonText: "Repeat",
+    difficulty: "Beginner",
   },
   // problem--> 44
   {
@@ -528,6 +571,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Merge Objects",
+    difficulty: "Beginner",
   },
   // problem--> 45
   {
@@ -545,6 +589,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Integer",
+    difficulty: "Beginner",
   },
   // problem--> 46
   {
@@ -555,6 +600,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Compare `isNaN`",
+    difficulty: "Intermediate",
   },
   // problem--> 47
   {
@@ -568,6 +614,7 @@ export const problems: Problem[] = [
       { id: "exponent", label: "Exponent", type: "number", defaultValue: 10 },
     ],
     buttonText: "Calculate",
+    difficulty: "Beginner",
   },
   // problem--> 48
   {
@@ -591,6 +638,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check Inclusion",
+    difficulty: "Beginner",
   },
   // problem--> 49
   {
@@ -601,6 +649,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 50
   {
@@ -611,6 +660,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 51
   {
@@ -621,6 +671,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Trigger TDZ",
+    difficulty: "Intermediate",
   },
   // problem--> 52
   {
@@ -631,6 +682,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `arguments`",
+    difficulty: "Intermediate",
   },
   // problem--> 53
   {
@@ -641,6 +693,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure Nested",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -651,6 +704,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Call Function",
+    difficulty: "Intermediate",
   },
   // problem--> 55
   {
@@ -661,6 +715,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Beginner",
   },
   // problem--> 56
   {
@@ -671,6 +726,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Define and Call",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -681,6 +737,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Getters/Setters",
+    difficulty: "Intermediate",
   },
   // problem--> 58
   {
@@ -698,6 +755,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Resolve Instantly",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -715,6 +773,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Reject Instantly",
+    difficulty: "Intermediate",
   },
   // problem--> 60
   {
@@ -725,6 +784,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Promise Race",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -735,6 +795,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 62
   {
@@ -745,6 +806,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Iterate Map",
+    difficulty: "Intermediate",
   },
   // problem--> 63
   {
@@ -762,6 +824,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Create Set",
+    difficulty: "Beginner",
   },
   // problem--> 64
   {
@@ -772,6 +835,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `Symbol.for`",
+    difficulty: "Advanced",
   },
   // problem--> 65
   {
@@ -782,6 +846,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Symbol Key",
+    difficulty: "Advanced",
   },
   // problem--> 66
   {
@@ -792,6 +857,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain Iterable",
+    difficulty: "Advanced",
   },
   // problem--> 67
   {
@@ -802,6 +868,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Make Object Iterable",
+    difficulty: "Advanced",
   },
   // problem--> 68
   {
@@ -812,6 +879,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Iterator",
+    difficulty: "Advanced",
   },
   // problem--> 69
   {
@@ -822,6 +890,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Generate Sequence",
+    difficulty: "Advanced",
   },
   // problem--> 70
   {
@@ -832,6 +901,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create and Map",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -842,6 +912,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Compare `Array.of(7)` and `new Array(7)`",
+    difficulty: "Intermediate",
   },
   // problem--> 72
   {
@@ -852,6 +923,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `Object.is`",
+    difficulty: "Intermediate",
   },
   // problem--> 73
   {
@@ -862,6 +934,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `.includes()`",
+    difficulty: "Beginner",
   },
   // problem--> 74
   {
@@ -875,6 +948,7 @@ export const problems: Problem[] = [
       { id: "exp", label: "Exponent", type: "number", defaultValue: 2 },
     ],
     buttonText: "Calculate",
+    difficulty: "Beginner",
   },
   // problem--> 75
   {
@@ -885,6 +959,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Fetch with async/await",
+    difficulty: "Intermediate",
   },
   // problem--> 76
   {
@@ -895,6 +970,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get Values",
+    difficulty: "Beginner",
   },
   // problem--> 77
   {
@@ -905,6 +981,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get Entries",
+    difficulty: "Beginner",
   },
   // problem--> 78
   {
@@ -915,6 +992,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Pad String",
+    difficulty: "Beginner",
   },
   // problem--> 79
   {
@@ -925,6 +1003,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get Descriptors",
+    difficulty: "Advanced",
   },
   // problem--> 80
   {
@@ -935,6 +1014,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 81
   {
@@ -945,6 +1025,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `.finally()`",
+    difficulty: "Intermediate",
   },
   // problem--> 82
   {
@@ -955,6 +1036,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Rest Properties",
+    difficulty: "Intermediate",
   },
   // problem--> 83
   {
@@ -965,6 +1047,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Spread Properties",
+    difficulty: "Beginner",
   },
   // problem--> 84
   {
@@ -975,6 +1058,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Lookbehind",
+    difficulty: "Advanced",
   },
   // problem--> 85
   {
@@ -985,6 +1069,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Named Groups",
+    difficulty: "Advanced",
   },
   // problem--> 86
   {
@@ -1002,6 +1087,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Flatten Array",
+    difficulty: "Intermediate",
   },
   // problem--> 87
   {
@@ -1012,6 +1098,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `flatMap`",
+    difficulty: "Intermediate",
   },
   // problem--> 88
   {
@@ -1022,6 +1109,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Trim String",
+    difficulty: "Beginner",
   },
   // problem--> 89
   {
@@ -1032,6 +1120,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create from Entries",
+    difficulty: "Intermediate",
   },
   // problem--> 90
   {
@@ -1042,6 +1131,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Optional Binding",
+    difficulty: "Intermediate",
   },
   // problem--> 91
   {
@@ -1052,6 +1142,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `BigInt`",
+    difficulty: "Intermediate",
   },
   // problem--> 92
   {
@@ -1062,6 +1153,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 93
   {
@@ -1072,6 +1164,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `??`",
+    difficulty: "Beginner",
   },
   // problem--> 94
   {
@@ -1082,6 +1175,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `?.`",
+    difficulty: "Beginner",
   },
   // problem--> 95
   {
@@ -1092,6 +1186,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run `allSettled`",
+    difficulty: "Intermediate",
   },
   // problem--> 96
   {
@@ -1102,6 +1197,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show `globalThis`",
+    difficulty: "Intermediate",
   },
   // problem--> 97
   {
@@ -1112,6 +1208,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `matchAll`",
+    difficulty: "Intermediate",
   },
   // problem--> 98
   {
@@ -1122,6 +1219,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Operators",
+    difficulty: "Intermediate",
   },
   // problem--> 99
   {
@@ -1139,6 +1237,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Replace All 'o's",
+    difficulty: "Beginner",
   },
   // problem--> 100
   {
@@ -1149,6 +1248,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run `any`",
+    difficulty: "Intermediate",
   },
   // problem--> 101
   {
@@ -1159,6 +1259,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Separator",
+    difficulty: "Beginner",
   },
   // problem--> 102
   {
@@ -1169,6 +1270,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 103
   {
@@ -1179,6 +1281,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Class Fields",
+    difficulty: "Intermediate",
   },
   // problem--> 104
   {
@@ -1189,6 +1292,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Private Members",
+    difficulty: "Advanced",
   },
   // problem--> 105
   {
@@ -1199,6 +1303,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Static Features",
+    difficulty: "Advanced",
   },
   // problem--> 106
   {
@@ -1209,6 +1314,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `.at()`",
+    difficulty: "Beginner",
   },
   // problem--> 107
   {
@@ -1219,6 +1325,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `/d` flag",
+    difficulty: "Advanced",
   },
   // problem--> 108
   {
@@ -1229,6 +1336,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `Object.hasOwn`",
+    difficulty: "Beginner",
   },
   // problem--> 109
   {
@@ -1239,6 +1347,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Error Cause",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1249,6 +1358,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 111
   {
@@ -1259,6 +1369,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `findLast()`",
+    difficulty: "Beginner",
   },
   // problem--> 112
   {
@@ -1269,6 +1380,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `findLastIndex()`",
+    difficulty: "Beginner",
   },
   // problem--> 113
   {
@@ -1279,6 +1391,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Immutable Methods",
+    difficulty: "Intermediate",
   },
   // problem--> 114
   {
@@ -1289,6 +1402,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 115
   {
@@ -1299,6 +1413,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Symbol Key",
+    difficulty: "Advanced",
   },
   // problem--> 116
   {
@@ -1309,6 +1424,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `withResolvables`",
+    difficulty: "Advanced",
   },
   // problem--> 117
   {
@@ -1319,6 +1435,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Validation Proxy",
+    difficulty: "Advanced",
   },
   // problem--> 118
   {
@@ -1329,6 +1446,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Default Value Proxy",
+    difficulty: "Advanced",
   },
   // problem--> 119
   {
@@ -1339,6 +1457,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use `Reflect`",
+    difficulty: "Advanced",
   },
   // problem--> 120
   {
@@ -1349,6 +1468,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Iterate Custom Object",
+    difficulty: "Advanced",
   },
   // problem--> 121
   {
@@ -1359,6 +1479,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Tag Function",
+    difficulty: "Advanced",
   },
   // problem--> 122
   {
@@ -1369,6 +1490,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 123
   {
@@ -1379,6 +1501,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain TCO",
+    difficulty: "Advanced",
   },
   // problem--> 124
   {
@@ -1389,6 +1512,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Literals",
+    difficulty: "Beginner",
   },
   // problem--> 125
   {
@@ -1399,6 +1523,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Unicode Escape",
+    difficulty: "Intermediate",
   },
   // problem--> 126
   {
@@ -1409,6 +1534,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Extend `Array`",
+    difficulty: "Advanced",
   },
   // problem--> 127
   {
@@ -1419,6 +1545,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 128
   {
@@ -1429,6 +1556,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Object Key",
+    difficulty: "Intermediate",
   },
   // problem--> 129
   {
@@ -1439,6 +1567,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `WeakMap` Privacy",
+    difficulty: "Advanced",
   },
   // problem--> 130
   {
@@ -1449,6 +1578,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `WeakSet`",
+    difficulty: "Advanced",
   },
   // problem--> 131
   {
@@ -1459,6 +1589,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `/s` flag",
+    difficulty: "Advanced",
   },
   // problem--> 132
   {
@@ -1469,6 +1600,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Match Emoji",
+    difficulty: "Advanced",
   },
   // problem--> 133
   {
@@ -1479,6 +1611,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get Source Code",
+    difficulty: "Advanced",
   },
   // problem--> 134
   {
@@ -1489,6 +1622,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get Description",
+    difficulty: "Intermediate",
   },
   // problem--> 135
   {
@@ -1499,6 +1633,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 136
   {
@@ -1509,6 +1644,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `.toSpliced()`",
+    difficulty: "Intermediate",
   },
   // problem--> 137
   {
@@ -1519,6 +1655,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Rest Pattern",
+    difficulty: "Beginner",
   },
   // problem--> 138
   {
@@ -1529,6 +1666,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Defaults",
+    difficulty: "Beginner",
   },
   // problem--> 139
   {
@@ -1539,6 +1677,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Compare `let` and `var`",
+    difficulty: "Intermediate",
   },
   // problem--> 140
   {
@@ -1549,6 +1688,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Shallow Copy",
+    difficulty: "Intermediate",
   },
   // problem--> 141
   {
@@ -1559,6 +1699,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Object Keys",
+    difficulty: "Intermediate",
   },
   // problem--> 142
   {
@@ -1569,6 +1710,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Promise Unwrapping",
+    difficulty: "Intermediate",
   },
   // problem--> 143
   {
@@ -1579,6 +1721,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Call Parent Method",
+    difficulty: "Intermediate",
   },
   // problem--> 144
   {
@@ -1589,6 +1732,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Generator to End",
+    difficulty: "Advanced",
   },
   // problem--> 145
   {
@@ -1599,6 +1743,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Catch Async Error",
+    difficulty: "Intermediate",
   },
   // problem--> 146
   {
@@ -1609,6 +1754,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 147
   {
@@ -1619,6 +1765,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 148
   {
@@ -1629,6 +1776,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Safely Call Method",
+    difficulty: "Beginner",
   },
   // problem--> 149
   {
@@ -1646,6 +1794,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Replace All",
+    difficulty: "Intermediate",
   },
   // problem--> 150
   {
@@ -1656,6 +1805,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Check Instance Brand",
+    difficulty: "Advanced",
   },
   // problem--> 151
   {
@@ -1666,6 +1816,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Iterate and Destructure",
+    difficulty: "Intermediate",
   },
   // problem--> 152
   {
@@ -1676,6 +1827,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Chain `.set()` Calls",
+    difficulty: "Intermediate",
   },
   // problem--> 153
   {
@@ -1686,6 +1838,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `yield*`",
+    difficulty: "Advanced",
   },
   // problem--> 154
   {
@@ -1696,6 +1849,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Compare Execution",
+    difficulty: "Intermediate",
   },
   // problem--> 155
   {
@@ -1706,6 +1860,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Rejection",
+    difficulty: "Intermediate",
   },
   // problem--> 156
   {
@@ -1716,6 +1871,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Convert Map to Object",
+    difficulty: "Intermediate",
   },
   // problem--> 157
   {
@@ -1726,6 +1882,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Safely Access Index",
+    difficulty: "Beginner",
   },
   // problem--> 158
   {
@@ -1736,6 +1893,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `any` Rejection",
+    difficulty: "Intermediate",
   },
   // problem--> 159
   {
@@ -1746,6 +1904,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Private Static Method",
+    difficulty: "Advanced",
   },
   // problem--> 160
   {
@@ -1756,6 +1915,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `.with()`",
+    difficulty: "Beginner",
   },
   // problem--> 161
   {
@@ -1766,6 +1926,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Immutable Update",
+    difficulty: "Intermediate",
   },
   // problem--> 162
   {
@@ -1776,6 +1937,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Iterate with `forEach`",
+    difficulty: "Intermediate",
   },
   // problem--> 163
   {
@@ -1786,6 +1948,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Convert Set",
+    difficulty: "Beginner",
   },
   // problem--> 164
   {
@@ -1796,6 +1959,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Pass Value to Generator",
+    difficulty: "Advanced",
   },
   // problem--> 165
   {
@@ -1806,6 +1970,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Show Pitfall",
+    difficulty: "Intermediate",
   },
   // problem--> 166
   {
@@ -1823,6 +1988,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Match Numbers without €",
+    difficulty: "Advanced",
   },
   // problem--> 167
   {
@@ -1833,6 +1999,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Flatten Completely",
+    difficulty: "Intermediate",
   },
   // problem--> 168
   {
@@ -1843,6 +2010,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Compare `BigInt` and `Number`",
+    difficulty: "Intermediate",
   },
   // problem--> 169
   {
@@ -1853,6 +2021,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `??=`",
+    difficulty: "Intermediate",
   },
   // problem--> 170
   {
@@ -1863,6 +2032,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Private Static Field",
+    difficulty: "Advanced",
   },
   // problem--> 171
   {
@@ -1873,6 +2043,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `.toReversed()`",
+    difficulty: "Beginner",
   },
   // problem--> 172
   {
@@ -1883,6 +2054,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Tag Function",
+    difficulty: "Advanced",
   },
   // problem--> 173
   {
@@ -1893,6 +2065,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Race Rejection",
+    difficulty: "Intermediate",
   },
   // problem--> 174
   {
@@ -1903,6 +2076,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Arrow Function Field",
+    difficulty: "Intermediate",
   },
   // problem--> 175
   {
@@ -1913,6 +2087,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run Loop with Await",
+    difficulty: "Intermediate",
   },
   // problem--> 176
   {
@@ -1923,6 +2098,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `/s` Flag",
+    difficulty: "Advanced",
   },
   // problem--> 177
   {
@@ -1940,6 +2116,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Trim Text",
+    difficulty: "Beginner",
   },
   // problem--> 178
   {
@@ -1950,6 +2127,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `allSettled`",
+    difficulty: "Intermediate",
   },
   // problem--> 179
   {
@@ -1960,6 +2138,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Advanced",
   },
   // problem--> 180
   {
@@ -1972,6 +2151,7 @@ export const problems: Problem[] = [
       { id: "text", label: "Text", type: "text", defaultValue: "JavaScript" },
     ],
     buttonText: "Get Last Character",
+    difficulty: "Beginner",
   },
   // problem--> 181
   {
@@ -1982,6 +2162,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `.toSorted()`",
+    difficulty: "Beginner",
   },
   // problem--> 182
   {
@@ -1992,6 +2173,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Destructure and Rest",
+    difficulty: "Beginner",
   },
   // problem--> 183
   {
@@ -2002,6 +2184,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `get` Handler",
+    difficulty: "Advanced",
   },
   // problem--> 184
   {
@@ -2012,6 +2195,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `set` Handler",
+    difficulty: "Advanced",
   },
   // problem--> 185
   {
@@ -2022,6 +2206,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Run in Parallel",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -2034,6 +2219,7 @@ export const problems: Problem[] = [
       { id: "text", label: "Text", type: "text", defaultValue: "Isaac Newton" },
     ],
     buttonText: "Match 'Isaac' followed by 'Newton'",
+    difficulty: "Advanced",
   },
   // problem--> 187
   {
@@ -2044,6 +2230,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Get Symbol Description",
+    difficulty: "Intermediate",
   },
   // problem--> 188
   {
@@ -2061,6 +2248,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Create `BigInt`",
+    difficulty: "Intermediate",
   },
   // problem--> 189
   {
@@ -2071,6 +2259,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `&&=`",
+    difficulty: "Intermediate",
   },
   // problem--> 190
   {
@@ -2081,6 +2270,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Private Accessors",
+    difficulty: "Advanced",
   },
   // problem--> 191
   {
@@ -2091,6 +2281,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `.toSpliced()`",
+    difficulty: "Intermediate",
   },
   // problem--> 192
   {
@@ -2101,6 +2292,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Use Reflect",
+    difficulty: "Advanced",
   },
   // problem--> 193
   {
@@ -2111,6 +2303,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Clone with Descriptors",
+    difficulty: "Advanced",
   },
   // problem--> 194
   {
@@ -2121,6 +2314,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test Chaining",
+    difficulty: "Intermediate",
   },
   // problem--> 195
   {
@@ -2138,6 +2332,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Words",
+    difficulty: "Intermediate",
   },
   // problem--> 196
   {
@@ -2150,6 +2345,7 @@ export const problems: Problem[] = [
       { id: "text", label: "Text", type: "text", defaultValue: "cat dog cat" },
     ],
     buttonText: "Find All 'cat's",
+    difficulty: "Intermediate",
   },
   // problem--> 197
   {
@@ -2160,6 +2356,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Test `||=`",
+    difficulty: "Intermediate",
   },
   // problem--> 198
   {
@@ -2170,6 +2367,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Create Error Chain",
+    difficulty: "Intermediate",
   },
   // problem--> 199
   {
@@ -2180,6 +2378,7 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Chain Immutable Methods",
+    difficulty: "Intermediate",
   },
   // problem--> 200
   {
@@ -2190,5 +2389,6 @@ export const problems: Problem[] = [
     category: "ES6+ Features",
     inputs: [],
     buttonText: "Explain Decorators",
+    difficulty: "Advanced",
   },
 ];

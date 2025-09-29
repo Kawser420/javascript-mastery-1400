@@ -1,4 +1,3 @@
-// HELPER FUNCTIONS to make solvers robust against user input
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -126,7 +125,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 20
   "iocu-console-time": () => {
     console.time("my-timer");
-    for (let i = 0; i < 1e6; i++) {} // Simulate work
+    for (let i = 0; i < 1e6; i++) {}
     console.timeEnd("my-timer");
     return "Timer result logged to console.";
   },
@@ -134,7 +133,6 @@ export const solvers: Record<string, Function> = {
   "iocu-console-time-with-label": () => {
     console.time("Task A");
     console.time("Task B");
-    // Simulate different durations
     for (let i = 0; i < 1e5; i++) {}
     console.timeEnd("Task A");
     for (let i = 0; i < 2e5; i++) {}

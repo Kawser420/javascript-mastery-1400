@@ -1,4 +1,3 @@
-// Robust helper functions to handle various user inputs without TypeScript errors
 const parseAsValue = (input: string): any => {
   const trimmed = input.trim().toLowerCase();
   if (trimmed === "null") return null;
@@ -11,12 +10,10 @@ const parseAsValue = (input: string): any => {
   return input;
 };
 
-// State for some problems
 let retryCounter = 0;
 let asyncRaceResult = "";
 
 export const solvers: Record<string, Function> = {
-  // --- Fundamentals: Basic Error Handling & Concepts ---
   // problem solver--> 01
   "ehd-try-catch-basic": () => {
     try {
@@ -241,7 +238,6 @@ export const solvers: Record<string, Function> = {
     } catch (e) {
       // 'e' only exists here
     }
-    // 'e' is not defined here
     return `The error variable 'e' is scoped only to the catch block.`;
   },
   // problem solver--> 24
@@ -387,7 +383,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 38
   "ehd-debugger-statement": () => {
     let x = 1;
-    debugger; // Execution will pause here if dev tools are open
+    debugger;
     x = 2;
     return `Debugger was triggered. Final x is ${x}.`;
   },
@@ -603,7 +599,7 @@ export const solvers: Record<string, Function> = {
       try {
         return JSON.parse(jsonString);
       } catch (e) {
-        return { theme: "default" }; // Return a fail-safe default
+        return { theme: "default" };
       }
     }
     return `Config from invalid JSON: ${JSON.stringify(getConfig("invalid"))}`;
@@ -620,7 +616,7 @@ export const solvers: Record<string, Function> = {
         return "finally";
       }
     }
-    return await test(); // Returns "finally"
+    return await test();
   },
   // problem solver--> 78
   "ehd-assert-function": () => {
@@ -696,19 +692,12 @@ export const solvers: Record<string, Function> = {
 
     class Mutex {
       private currentPromise: Promise<unknown> = Promise.resolve();
-
       acquire<T>(fn: () => Promise<T>): Promise<T> {
-        // Create a new promise that chains after the current one
         const newPromise = this.currentPromise.then(() => fn());
-
-        // Update currentPromise to catch any errors to prevent unhandled rejections
         this.currentPromise = newPromise.catch(() => {});
-
-        // Return the promise that resolves with the function's result
         return newPromise;
       }
     }
-
     const mutex = new Mutex();
     mutex.acquire(async () => {
       await new Promise((res) => setTimeout(res, 20));
@@ -717,7 +706,6 @@ export const solvers: Record<string, Function> = {
     mutex.acquire(async () => {
       asyncRaceResult += "B";
     });
-
     return new Promise((res) =>
       setTimeout(() => res(`Final order: ${asyncRaceResult}`), 50)
     );
@@ -1107,7 +1095,7 @@ export const solvers: Record<string, Function> = {
     try {
       const obj = {};
       Object.defineProperty(obj, "a", { value: 1, writable: false });
-      (obj as any).a = 2; // This throws an error in strict mode
+      (obj as any).a = 2;
       return "This should not be reached.";
     } catch (e: any) {
       return `Caught expected error: ${e.name}`;
@@ -1277,7 +1265,6 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 199
   "ehd-error-in-class-static-block": () => {
     try {
-      // This is a dynamic eval to simulate the class definition failing
       eval(
         `class MyClass { static { throw new Error("Static block failed"); } }`
       );

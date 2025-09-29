@@ -1,10 +1,6 @@
-// problem--> 01
-// import { Problem } from "../../types";
-
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
-  // --- Arithmetic Operators ---
   // problem--> 01
   {
     id: "addition-operator",
@@ -16,6 +12,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
     buttonText: "Add",
+    difficulty: "Beginner",
   },
   // problem--> 02
   {
@@ -29,6 +26,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 8 },
     ],
     buttonText: "Subtract",
+    difficulty: "Beginner",
   },
   // problem--> 03
   {
@@ -42,6 +40,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 6 },
     ],
     buttonText: "Multiply",
+    difficulty: "Beginner",
   },
   // problem--> 04
   {
@@ -54,6 +53,7 @@ export const problems: Problem[] = [
       { id: "divisor", label: "Divisor", type: "number", defaultValue: 10 },
     ],
     buttonText: "Divide",
+    difficulty: "Beginner",
   },
   // problem--> 05
   {
@@ -67,6 +67,7 @@ export const problems: Problem[] = [
       { id: "divisor", label: "Divisor", type: "number", defaultValue: 3 },
     ],
     buttonText: "Find Remainder",
+    difficulty: "Beginner",
   },
   // problem--> 06
   {
@@ -80,6 +81,7 @@ export const problems: Problem[] = [
       { id: "exponent", label: "Exponent", type: "number", defaultValue: 3 },
     ],
     buttonText: "Calculate Power",
+    difficulty: "Beginner",
   },
   // problem--> 07
   {
@@ -89,6 +91,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
     buttonText: "Increment",
+    difficulty: "Beginner",
   },
   // problem--> 08
   {
@@ -98,6 +101,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
     buttonText: "Decrement",
+    difficulty: "Beginner",
   },
   // problem--> 09
   {
@@ -108,6 +112,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 10 }],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 10
   {
@@ -118,6 +123,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Beginner",
   },
   // problem--> 11
   {
@@ -128,6 +134,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Beginner",
   },
   // problem--> 12
   {
@@ -138,6 +145,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 15 }],
     buttonText: "Negate",
+    difficulty: "Beginner",
   },
   // problem--> 13
   {
@@ -150,6 +158,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String Number", type: "text", defaultValue: "50" },
     ],
     buttonText: "Convert to Number",
+    difficulty: "Intermediate",
   },
   // problem--> 14
   {
@@ -172,6 +181,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Concatenate",
+    difficulty: "Beginner",
   },
   // problem--> 15
   {
@@ -185,6 +195,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 100 },
     ],
     buttonText: "Combine",
+    difficulty: "Intermediate",
   },
   // problem--> 16
   {
@@ -195,6 +206,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Assign",
+    difficulty: "Beginner",
   },
   // problem--> 17
   {
@@ -205,6 +217,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Add and Assign",
+    difficulty: "Beginner",
   },
   // problem--> 18
   {
@@ -215,6 +228,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Subtract and Assign",
+    difficulty: "Beginner",
   },
   // problem--> 19
   {
@@ -225,6 +239,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Multiply and Assign",
+    difficulty: "Beginner",
   },
   // problem--> 20
   {
@@ -235,6 +250,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Divide and Assign",
+    difficulty: "Beginner",
   },
   // problem--> 21
   {
@@ -244,6 +260,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Remainder and Assign",
+    difficulty: "Beginner",
   },
   // problem--> 22
   {
@@ -253,6 +270,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Exponentiate and Assign",
+    difficulty: "Beginner",
   },
   // problem--> 23
   {
@@ -263,6 +281,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Chain Assign",
+    difficulty: "Intermediate",
   },
   // problem--> 24
   {
@@ -273,6 +292,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Append String",
+    difficulty: "Beginner",
   },
   // problem--> 25
   {
@@ -283,6 +303,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Intermediate",
   },
   // problem--> 26
   {
@@ -293,6 +314,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Compare `5` and `"5"` with ===',
+    difficulty: "Beginner",
   },
   // problem--> 27
   {
@@ -303,6 +325,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Compare `5` and `"5"` with ==',
+    difficulty: "Intermediate",
   },
   // problem--> 28
   {
@@ -313,6 +336,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Compare `5` and `"5"` with !==',
+    difficulty: "Beginner",
   },
   // problem--> 29
   {
@@ -323,6 +347,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Compare `5` and `"5"` with !=',
+    difficulty: "Intermediate",
   },
   // problem--> 30
   {
@@ -335,6 +360,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
     ],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 31
   {
@@ -347,6 +373,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 5 },
     ],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 32
   {
@@ -359,6 +386,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 33
   {
@@ -371,6 +399,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 10 },
     ],
     buttonText: "Compare",
+    difficulty: "Beginner",
   },
   // problem--> 34
   {
@@ -381,6 +410,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Compare "apple" and "banana"',
+    difficulty: "Beginner",
   },
   // problem--> 35
   {
@@ -391,6 +421,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 36
   {
@@ -401,6 +432,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `NaN === NaN`",
+    difficulty: "Intermediate",
   },
   // problem--> 37
   {
@@ -411,6 +443,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare `{a:1}` and `{a:1}`",
+    difficulty: "Intermediate",
   },
   // problem--> 38
   {
@@ -421,6 +454,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 39
   {
@@ -430,6 +464,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Compare `"10"` and `5`',
+    difficulty: "Intermediate",
   },
   // problem--> 40
   {
@@ -440,6 +475,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `Object.is`",
+    difficulty: "Advanced",
   },
   // problem--> 41
   {
@@ -463,6 +499,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check with &&",
+    difficulty: "Beginner",
   },
   // problem--> 42
   {
@@ -486,6 +523,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Check with ||",
+    difficulty: "Beginner",
   },
   // problem--> 43
   {
@@ -502,6 +540,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Invert with !",
+    difficulty: "Beginner",
   },
   // problem--> 44
   {
@@ -512,6 +551,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Truthy Values",
+    difficulty: "Intermediate",
   },
   // problem--> 45
   {
@@ -522,6 +562,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Falsy Values",
+    difficulty: "Intermediate",
   },
   // problem--> 46
   {
@@ -532,6 +573,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Short-Circuit",
+    difficulty: "Intermediate",
   },
   // problem--> 47
   {
@@ -542,6 +584,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Short-Circuit",
+    difficulty: "Intermediate",
   },
   // problem--> 48
   {
@@ -559,6 +602,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Get Name",
+    difficulty: "Intermediate",
   },
   // problem--> 49
   {
@@ -571,6 +615,7 @@ export const problems: Problem[] = [
       { id: "value", label: "Any Value", type: "text", defaultValue: "hello" },
     ],
     buttonText: "Coerce to Boolean",
+    difficulty: "Intermediate",
   },
   // problem--> 50
   {
@@ -581,6 +626,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Intermediate",
   },
   // problem--> 51
   {
@@ -591,6 +637,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Return Value",
+    difficulty: "Intermediate",
   },
   // problem--> 52
   {
@@ -601,6 +648,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Return Value",
+    difficulty: "Intermediate",
   },
   // problem--> 53
   {
@@ -613,6 +661,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 3 }, // 0011
     ],
     buttonText: "Calculate `&`",
+    difficulty: "Intermediate",
   },
   // problem--> 54
   {
@@ -625,6 +674,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 3 }, // 0011
     ],
     buttonText: "Calculate `|`",
+    difficulty: "Intermediate",
   },
   // problem--> 55
   {
@@ -638,6 +688,7 @@ export const problems: Problem[] = [
       { id: "num2", label: "Number 2", type: "number", defaultValue: 3 }, // 0011
     ],
     buttonText: "Calculate `^`",
+    difficulty: "Intermediate",
   },
   // problem--> 56
   {
@@ -648,6 +699,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 5 }],
     buttonText: "Calculate `~`",
+    difficulty: "Intermediate",
   },
   // problem--> 57
   {
@@ -661,6 +713,7 @@ export const problems: Problem[] = [
       { id: "bits", label: "Bits to Shift", type: "number", defaultValue: 1 },
     ],
     buttonText: "Calculate `<<`",
+    difficulty: "Intermediate",
   },
   // problem--> 58
   {
@@ -674,6 +727,7 @@ export const problems: Problem[] = [
       { id: "bits", label: "Bits to Shift", type: "number", defaultValue: 1 },
     ],
     buttonText: "Calculate `>>`",
+    difficulty: "Intermediate",
   },
   // problem--> 59
   {
@@ -687,6 +741,7 @@ export const problems: Problem[] = [
       { id: "bits", label: "Bits to Shift", type: "number", defaultValue: 1 },
     ],
     buttonText: "Calculate `>>>`",
+    difficulty: "Advanced",
   },
   // problem--> 60
   {
@@ -697,6 +752,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 7 }],
     buttonText: "Check",
+    difficulty: "Intermediate",
   },
   // problem--> 61
   {
@@ -707,6 +763,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Swap with `^`",
+    difficulty: "Advanced",
   },
   // problem--> 62
   {
@@ -717,6 +774,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "age", label: "Age", type: "number", defaultValue: 21 }],
     buttonText: "Check Age",
+    difficulty: "Beginner",
   },
   // problem--> 63
   {
@@ -727,6 +785,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate with Comma",
+    difficulty: "Advanced",
   },
   // problem--> 64
   {
@@ -737,6 +796,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Delete Property",
+    difficulty: "Intermediate",
   },
   // problem--> 65
   {
@@ -749,6 +809,7 @@ export const problems: Problem[] = [
       { id: "value", label: "Value", type: "text", defaultValue: "hello" },
     ],
     buttonText: "Get Type",
+    difficulty: "Beginner",
   },
   // problem--> 66
   {
@@ -759,6 +820,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check for Property",
+    difficulty: "Intermediate",
   },
   // problem--> 67
   {
@@ -769,6 +831,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Instance",
+    difficulty: "Intermediate",
   },
   // problem--> 68
   {
@@ -779,6 +842,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Use `void`",
+    difficulty: "Advanced",
   },
   // problem--> 69
   {
@@ -789,6 +853,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `(2 + 3) * 4`",
+    difficulty: "Beginner",
   },
   // problem--> 70
   {
@@ -799,6 +864,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Create Instance",
+    difficulty: "Intermediate",
   },
   // problem--> 71
   {
@@ -809,6 +875,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain `super`",
+    difficulty: "Advanced",
   },
   // problem--> 72
   {
@@ -818,6 +885,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Spread Array",
+    difficulty: "Intermediate",
   },
   // problem--> 73
   {
@@ -828,6 +896,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Spread Object",
+    difficulty: "Intermediate",
   },
   // problem--> 74
   {
@@ -838,6 +907,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain `yield`",
+    difficulty: "Advanced",
   },
   // problem--> 75
   {
@@ -848,6 +918,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain `yield*`",
+    difficulty: "Advanced",
   },
   // problem--> 76
   {
@@ -858,6 +929,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Use `await`",
+    difficulty: "Advanced",
   },
   // problem--> 77
   {
@@ -868,6 +940,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `??`",
+    difficulty: "Intermediate",
   },
   // problem--> 78
   {
@@ -878,6 +951,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare `??` and `||`",
+    difficulty: "Intermediate",
   },
   // problem--> 79
   {
@@ -888,6 +962,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `?.`",
+    difficulty: "Intermediate",
   },
   // problem--> 80
   {
@@ -898,6 +973,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `?.()`",
+    difficulty: "Intermediate",
   },
   // problem--> 81
   {
@@ -908,6 +984,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `?.[]`",
+    difficulty: "Intermediate",
   },
   // problem--> 82
   {
@@ -918,6 +995,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `??=`",
+    difficulty: "Intermediate",
   },
   // problem--> 83
   {
@@ -928,6 +1006,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `&&=`",
+    difficulty: "Intermediate",
   },
   // problem--> 84
   {
@@ -938,6 +1017,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `||=`",
+    difficulty: "Intermediate",
   },
   // problem--> 85
   {
@@ -948,6 +1028,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain Flags",
+    difficulty: "Advanced",
   },
   // problem--> 86
   {
@@ -958,6 +1039,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Read Permission",
+    difficulty: "Advanced",
   },
   // problem--> 87
   {
@@ -968,6 +1050,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Add Write Permission",
+    difficulty: "Advanced",
   },
   // problem--> 88
   {
@@ -978,6 +1061,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Remove Execute Permission",
+    difficulty: "Advanced",
   },
   // problem--> 89
   {
@@ -988,6 +1072,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Toggle Write Permission",
+    difficulty: "Advanced",
   },
   // problem--> 90
   {
@@ -1005,6 +1090,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Floor with `~~`",
+    difficulty: "Advanced",
   },
   // problem--> 91
   {
@@ -1014,6 +1100,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 21 }],
     buttonText: "Multiply",
+    difficulty: "Advanced",
   },
   // problem--> 92
   {
@@ -1024,6 +1111,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 42 }],
     buttonText: "Divide",
+    difficulty: "Advanced",
   },
   // problem--> 93
   {
@@ -1034,6 +1122,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `2 ** 3 ** 2`",
+    difficulty: "Intermediate",
   },
   // problem--> 94
   {
@@ -1044,6 +1133,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain Associativity",
+    difficulty: "Intermediate",
   },
   // problem--> 95
   {
@@ -1054,6 +1144,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 0 }],
     buttonText: "Check Sign",
+    difficulty: "Intermediate",
   },
   // problem--> 96
   {
@@ -1064,6 +1155,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check for `toString`",
+    difficulty: "Advanced",
   },
   // problem--> 97
   {
@@ -1074,6 +1166,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain `instanceof`",
+    difficulty: "Advanced",
   },
   // problem--> 98
   {
@@ -1084,6 +1177,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Copy Array",
+    difficulty: "Intermediate",
   },
   // problem--> 99
   {
@@ -1094,6 +1188,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Merge Objects",
+    difficulty: "Intermediate",
   },
   // problem--> 100
   {
@@ -1104,6 +1199,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Sum with Spread",
+    difficulty: "Intermediate",
   },
   // problem--> 101
   {
@@ -1114,6 +1210,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 10 }],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 102
   {
@@ -1124,6 +1221,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Intermediate",
   },
   // problem--> 103
   {
@@ -1134,6 +1232,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Evaluate `20 - "10"`',
+    difficulty: "Intermediate",
   },
   // problem--> 104
   {
@@ -1144,6 +1243,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Pitfall",
+    difficulty: "Beginner",
   },
   // problem--> 105
   {
@@ -1154,6 +1254,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare `[1,2]` and `[1,2]`",
+    difficulty: "Intermediate",
   },
   // problem--> 106
   {
@@ -1164,6 +1265,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Test `1 && "hello"`',
+    difficulty: "Intermediate",
   },
   // problem--> 107
   {
@@ -1174,6 +1276,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Test `null || "hello"`',
+    difficulty: "Intermediate",
   },
   // problem--> 108
   {
@@ -1184,6 +1287,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Read/Write Permission",
+    difficulty: "Advanced",
   },
   // problem--> 109
   {
@@ -1194,6 +1298,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Delete from Array",
+    difficulty: "Intermediate",
   },
   // problem--> 110
   {
@@ -1204,6 +1309,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `typeof null`",
+    difficulty: "Intermediate",
   },
   // problem--> 111
   {
@@ -1214,6 +1320,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `?.[]` with Variable",
+    difficulty: "Intermediate",
   },
   // problem--> 112
   {
@@ -1226,6 +1333,7 @@ export const problems: Problem[] = [
       { id: "str", label: "String", type: "text", defaultValue: "spread" },
     ],
     buttonText: "Spread String",
+    difficulty: "Intermediate",
   },
   // problem--> 113
   {
@@ -1236,6 +1344,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Evaluation",
+    difficulty: "Advanced",
   },
   // problem--> 114
   {
@@ -1246,6 +1355,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `-10 % 3`",
+    difficulty: "Intermediate",
   },
   // problem--> 115
   {
@@ -1256,6 +1366,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Run Loop",
+    difficulty: "Advanced",
   },
   // problem--> 116
   {
@@ -1266,6 +1377,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain Comparison",
+    difficulty: "Advanced",
   },
   // problem--> 117
   {
@@ -1276,6 +1388,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Advanced",
   },
   // problem--> 118
   {
@@ -1293,6 +1406,7 @@ export const problems: Problem[] = [
       },
     ], // #FF00FF
     buttonText: "Extract Channels",
+    difficulty: "Advanced",
   },
   // problem--> 119
   {
@@ -1303,6 +1417,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Guard Pattern",
+    difficulty: "Intermediate",
   },
   // problem--> 120
   {
@@ -1313,6 +1428,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Inheritance",
+    difficulty: "Intermediate",
   },
   // problem--> 121
   {
@@ -1323,6 +1439,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Type",
+    difficulty: "Beginner",
   },
   // problem--> 122
   {
@@ -1333,6 +1450,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Destructuring",
+    difficulty: "Intermediate",
   },
   // problem--> 123
   {
@@ -1343,6 +1461,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain Use Case",
+    difficulty: "Advanced",
   },
   // problem--> 124
   {
@@ -1353,6 +1472,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Combine Operators",
+    difficulty: "Intermediate",
   },
   // problem--> 125
   {
@@ -1365,6 +1485,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "2,3,4,3,2" },
     ],
     buttonText: "Find Unique",
+    difficulty: "Advanced",
   },
   // problem--> 126
   {
@@ -1375,6 +1496,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `2 ** -3`",
+    difficulty: "Intermediate",
   },
   // problem--> 127
   {
@@ -1385,6 +1507,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Convert Set",
+    difficulty: "Intermediate",
   },
   // problem--> 128
   {
@@ -1395,6 +1518,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `x = 5 + 3`",
+    difficulty: "Beginner",
   },
   // problem--> 129
   {
@@ -1405,6 +1529,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Evaluate `"10" - 5`',
+    difficulty: "Intermediate",
   },
   // problem--> 130
   {
@@ -1415,6 +1540,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Delete",
+    difficulty: "Advanced",
   },
   // problem--> 131
   {
@@ -1425,6 +1551,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Type",
+    difficulty: "Beginner",
   },
   // problem--> 132
   {
@@ -1435,6 +1562,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Type",
+    difficulty: "Intermediate",
   },
   // problem--> 133
   {
@@ -1445,6 +1573,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `100 / Infinity`",
+    difficulty: "Intermediate",
   },
   // problem--> 134
   {
@@ -1455,6 +1584,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `0 % 5`",
+    difficulty: "Beginner",
   },
   // problem--> 135
   {
@@ -1465,6 +1595,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `5 % 0`",
+    difficulty: "Beginner",
   },
   // problem--> 136
   {
@@ -1475,6 +1606,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Indexing",
+    difficulty: "Intermediate",
   },
   // problem--> 137
   {
@@ -1485,6 +1617,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Compare `"a"` and `"A"`',
+    difficulty: "Beginner",
   },
   // problem--> 138
   {
@@ -1495,6 +1628,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `if (x=0)`",
+    difficulty: "Beginner",
   },
   // problem--> 139
   {
@@ -1512,6 +1646,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Negate",
+    difficulty: "Intermediate",
   },
   // problem--> 140
   {
@@ -1524,6 +1659,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 4294967297 },
     ],
     buttonText: "Truncate",
+    difficulty: "Advanced",
   },
   // problem--> 141
   {
@@ -1534,6 +1670,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `a ? b : c ? d : e`",
+    difficulty: "Advanced",
   },
   // problem--> 142
   {
@@ -1544,6 +1681,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `delete`",
+    difficulty: "Advanced",
   },
   // problem--> 143
   {
@@ -1554,6 +1692,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Spread a Set",
+    difficulty: "Intermediate",
   },
   // problem--> 144
   {
@@ -1564,6 +1703,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `&&=`",
+    difficulty: "Intermediate",
   },
   // problem--> 145
   {
@@ -1576,6 +1716,7 @@ export const problems: Problem[] = [
       { id: "num", label: "Number", type: "number", defaultValue: 12.5 },
     ],
     buttonText: "Check Integer",
+    difficulty: "Advanced",
   },
   // problem--> 146
   {
@@ -1586,6 +1727,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Assignment",
+    difficulty: "Intermediate",
   },
   // problem--> 147
   {
@@ -1596,6 +1738,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `typeof`",
+    difficulty: "Intermediate",
   },
   // problem--> 148
   {
@@ -1606,6 +1749,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Shallow Clone",
+    difficulty: "Intermediate",
   },
   // problem--> 149
   {
@@ -1616,6 +1760,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Show Separator",
+    difficulty: "Intermediate",
   },
   // problem--> 150
   {
@@ -1626,6 +1771,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 151
   {
@@ -1636,6 +1782,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate",
+    difficulty: "Advanced",
   },
   // problem--> 152
   {
@@ -1646,6 +1793,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain `new.target`",
+    difficulty: "Advanced",
   },
   // problem--> 153
   {
@@ -1656,6 +1804,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `5 + ++x`",
+    difficulty: "Intermediate",
   },
   // problem--> 154
   {
@@ -1666,6 +1815,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `5 + x++`",
+    difficulty: "Intermediate",
   },
   // problem--> 155
   {
@@ -1676,6 +1826,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `[] == ![]`",
+    difficulty: "Advanced",
   },
   // problem--> 156
   {
@@ -1693,6 +1844,7 @@ export const problems: Problem[] = [
       },
     ],
     buttonText: "Truncate with `|`",
+    difficulty: "Advanced",
   },
   // problem--> 157
   {
@@ -1703,6 +1855,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `?.()`",
+    difficulty: "Intermediate",
   },
   // problem--> 158
   {
@@ -1713,6 +1866,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Return Value",
+    difficulty: "Intermediate",
   },
   // problem--> 159
   {
@@ -1723,6 +1877,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Primitives",
+    difficulty: "Intermediate",
   },
   // problem--> 160
   {
@@ -1733,6 +1888,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Spread a String",
+    difficulty: "Intermediate",
   },
   // problem--> 161
   {
@@ -1743,6 +1899,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Precedence",
+    difficulty: "Intermediate",
   },
   // problem--> 162
   {
@@ -1760,6 +1917,7 @@ export const problems: Problem[] = [
       },
     ], // #FF0000FF
     buttonText: "Extract RGBA",
+    difficulty: "Advanced",
   },
   // problem--> 163
   {
@@ -1770,6 +1928,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `in` on Array",
+    difficulty: "Intermediate",
   },
   // problem--> 164
   {
@@ -1780,6 +1939,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `4 ** 0.5`",
+    difficulty: "Intermediate",
   },
   // problem--> 165
   {
@@ -1790,6 +1950,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Return",
+    difficulty: "Intermediate",
   },
   // problem--> 166
   {
@@ -1799,6 +1960,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 167
   {
@@ -1809,6 +1971,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test with Objects",
+    difficulty: "Intermediate",
   },
   // problem--> 168
   {
@@ -1819,6 +1982,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Encrypt/Decrypt",
+    difficulty: "Advanced",
   },
   // problem--> 169
   {
@@ -1829,6 +1993,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 170
   {
@@ -1839,6 +2004,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check Type",
+    difficulty: "Intermediate",
   },
   // problem--> 171
   {
@@ -1849,6 +2015,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Remove Duplicates",
+    difficulty: "Intermediate",
   },
   // problem--> 172
   {
@@ -1859,6 +2026,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Pitfall",
+    difficulty: "Intermediate",
   },
   // problem--> 173
   {
@@ -1868,6 +2036,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `+null`",
+    difficulty: "Intermediate",
   },
   // problem--> 174
   {
@@ -1878,6 +2047,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Run Loop",
+    difficulty: "Intermediate",
   },
   // problem--> 175
   {
@@ -1888,6 +2058,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: 'Test `++"5"`',
+    difficulty: "Intermediate",
   },
   // problem--> 176
   {
@@ -1898,6 +2069,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `null` and `undefined`",
+    difficulty: "Intermediate",
   },
   // problem--> 177
   {
@@ -1908,6 +2080,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain",
+    difficulty: "Intermediate",
   },
   // problem--> 178
   {
@@ -1918,6 +2091,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Arrow Function",
+    difficulty: "Advanced",
   },
   // problem--> 179
   {
@@ -1928,6 +2102,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `delete`",
+    difficulty: "Intermediate",
   },
   // problem--> 180
   {
@@ -1938,6 +2113,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Destructuring",
+    difficulty: "Intermediate",
   },
   // problem--> 181
   {
@@ -1948,6 +2124,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `5 + 3 & 7`",
+    difficulty: "Advanced",
   },
   // problem--> 182
   {
@@ -1958,6 +2135,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Lazy Init",
+    difficulty: "Advanced",
   },
   // problem--> 183
   {
@@ -1968,6 +2146,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Spread `arguments`",
+    difficulty: "Intermediate",
   },
   // problem--> 184
   {
@@ -1978,6 +2157,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Compare",
+    difficulty: "Intermediate",
   },
   // problem--> 185
   {
@@ -1988,6 +2168,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Check `isFinite`",
+    difficulty: "Intermediate",
   },
   // problem--> 186
   {
@@ -2000,6 +2181,7 @@ export const problems: Problem[] = [
       { id: "arr", label: "Array", type: "text", defaultValue: "1,2,4,5" },
     ],
     buttonText: "Find Missing",
+    difficulty: "Advanced",
   },
   // problem--> 187
   {
@@ -2010,6 +2192,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Short-Circuiting",
+    difficulty: "Intermediate",
   },
   // problem--> 188
   {
@@ -2020,6 +2203,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `void` IIFE",
+    difficulty: "Advanced",
   },
   // problem--> 189
   {
@@ -2030,6 +2214,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Explain `Symbol.hasInstance`",
+    difficulty: "Advanced",
   },
   // problem--> 190
   {
@@ -2040,6 +2225,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Mixed Types",
+    difficulty: "Advanced",
   },
   // problem--> 191
   {
@@ -2050,6 +2236,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Assignment",
+    difficulty: "Intermediate",
   },
   // problem--> 192
   {
@@ -2060,6 +2247,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [{ id: "num", label: "Number", type: "number", defaultValue: 10 }],
     buttonText: "Flip Sign",
+    difficulty: "Advanced",
   },
   // problem--> 193
   {
@@ -2070,6 +2258,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Assignment",
+    difficulty: "Intermediate",
   },
   // problem--> 194
   {
@@ -2080,6 +2269,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `typeof`",
+    difficulty: "Advanced",
   },
   // problem--> 195
   {
@@ -2090,6 +2280,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Getters",
+    difficulty: "Advanced",
   },
   // problem--> 196
   {
@@ -2100,6 +2291,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Side Effect",
+    difficulty: "Intermediate",
   },
   // problem--> 197
   {
@@ -2110,6 +2302,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test `>>`",
+    difficulty: "Intermediate",
   },
   // problem--> 198
   {
@@ -2120,6 +2313,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `typeof 1 + 2`",
+    difficulty: "Intermediate",
   },
   // problem--> 199
   {
@@ -2130,6 +2324,7 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Test Precedence",
+    difficulty: "Advanced",
   },
   // problem--> 200
   {
@@ -2140,5 +2335,6 @@ export const problems: Problem[] = [
     category: "Operators and Expressions",
     inputs: [],
     buttonText: "Evaluate `1 + 2 ** 3 * 4 / 2 || 0`",
+    difficulty: "Advanced",
   },
 ];

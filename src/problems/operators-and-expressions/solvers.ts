@@ -1,5 +1,3 @@
-// problem solver--> 01
-// HELPER FUNCTIONS
 const parseNumber = (input: any): number => {
   const num = Number(input);
   if (isNaN(num)) throw new Error(`Invalid number input: "${input}"`);
@@ -23,10 +21,9 @@ let multiplicationAssignmentVar = 5;
 let divisionAssignmentVar = 100;
 let remainderAssignmentVar = 10;
 let exponentiationAssignmentVar = 2;
-let permissions = 5; // READ and EXECUTE
+let permissions = 5;
 
 export const solvers: Record<string, Function> = {
-  // --- Arithmetic Operators ---
   // problem solver--> 01
   "addition-operator": ({ num1, num2 }: { num1: any; num2: any }) =>
     parseNumber(num1) + parseNumber(num2),
@@ -349,7 +346,7 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 63
   "comma-operator": () => {
     let x = 1;
-    const y = (x++, x + 2); // x becomes 2, y becomes 4
+    const y = (x++, x + 2);
     return `The expression returns the last value: ${y}. x is now ${x}.`;
   },
   // problem solver--> 64
@@ -574,20 +571,15 @@ export const solvers: Record<string, Function> = {
   "logical-and-with-non-booleans": () => `1 && "hello" is "${1 && "hello"}"`,
   // problem solver--> 107
   "logical-or-with-non-booleans": (): string => {
-    // demonstrate || returning the first truthy operand
     const left: null = null;
     const right: string = "hello";
-
-    // || can return either side, so use a union
     const result: string | null = left || right;
-
-    // String() guarantees a string for template output
     return `null || "hello" is "${String(result)}"`;
   },
   // problem solver--> 108
   "bitwise-permission-masking": () => {
-    const userPermissions = 5; // READ and EXECUTE
-    const READ_WRITE_MASK = 6; // READ | WRITE
+    const userPermissions = 5;
+    const READ_WRITE_MASK = 6;
     return `Has Read & Write? ${
       (userPermissions & READ_WRITE_MASK) === READ_WRITE_MASK
     }`;
@@ -619,7 +611,6 @@ export const solvers: Record<string, Function> = {
       x = "changed";
       return x;
     };
-    // y is number|string, so ensure the operator works and coerce result
     y ||= func();
     return `Because y was falsy, func() ran. x is now: "${x}"`;
   },
@@ -649,7 +640,7 @@ export const solvers: Record<string, Function> = {
   },
   // problem solver--> 118
   "bitwise-color-channel-extraction": ({ color }: { color: any }) => {
-    const c = parseNumber(color); // #FF00FF -> 16711935
+    const c = parseNumber(color);
     const red = (c >> 16) & 255;
     const green = (c >> 8) & 255;
     const blue = c & 255;
@@ -823,9 +814,9 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 151
   "comma-operator-return-value": () => {
     let temp;
-    temp = 1 + 2; // Evaluated but not used
-    const result = 3 + 4; // Final value
-    return `The expression (1+2, 3+4) evaluates to ${result}`; // Returns 7
+    temp = 1 + 2;
+    const result = 3 + 4;
+    return `The expression (1+2, 3+4) evaluates to ${result}`;
   },
   // problem solver--> 152
   "new-target-conceptual": () =>
@@ -845,8 +836,8 @@ export const solvers: Record<string, Function> = {
   // problem solver--> 155
   "type-coercion-in-loose-equality": () => {
     const emptyArray: any = [];
-    const notEmptyArray = !emptyArray; // false
-    const comparisonResult = emptyArray == notEmptyArray; // true
+    const notEmptyArray = !emptyArray;
+    const comparisonResult = emptyArray == notEmptyArray;
 
     return `Empty array: ${JSON.stringify(emptyArray)}
 Negation of empty array (![]): ${notEmptyArray}  

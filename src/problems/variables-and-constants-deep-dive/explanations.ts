@@ -1,4 +1,3 @@
-// Explanations for Variables & Constants Deep Dive problems
 export const explanations: Record<string, string> = {
   // problem explanation--> 01
   "declare-with-var": `
