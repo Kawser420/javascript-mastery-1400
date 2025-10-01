@@ -1,6 +1,7 @@
 import { Problem } from "@/types";
 
 export const problems: Problem[] = [
+  // mini project problem-->01
   {
     id: "mini-todo-app",
     title: "To-Do List App",
@@ -10,6 +11,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show To-Do Logic",
   },
+  // mini project problem-->02
   {
     id: "mini-weather-app",
     title: "Weather App",
@@ -19,6 +21,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Weather App Steps",
   },
+  // mini project problem-->03
   {
     id: "mini-quiz-app",
     title: "Quiz App",
@@ -28,6 +31,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Quiz App Logic",
   },
+  // mini project problem-->04
   {
     id: "mini-pomodoro-timer",
     title: "Pomodoro Timer",
@@ -37,6 +41,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Timer Logic",
   },
+  // mini project problem-->05
   {
     id: "mini-markdown-previewer",
     title: "Markdown Previewer",
@@ -46,6 +51,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Previewer Logic",
   },
+  // mini project problem-->06
   {
     id: "mini-recipe-finder",
     title: "Recipe Finder App",
@@ -55,6 +61,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Recipe App Logic",
   },
+  // mini project problem-->07
   {
     id: "mini-expense-tracker",
     title: "Expense Tracker",
@@ -64,6 +71,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Tracker Logic",
   },
+  // mini project problem-->08
   {
     id: "mini-drawing-app",
     title: "Drawing App",
@@ -73,6 +81,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Drawing App Logic",
   },
+  // mini project problem-->09
   {
     id: "mini-music-player",
     title: "Music Player",
@@ -82,6 +91,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Music Player Logic",
   },
+  // mini project problem-->10
   {
     id: "mini-memory-game",
     title: "Memory Game",
@@ -91,6 +101,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Memory Game Logic",
   },
+  // mini project problem-->11
   {
     id: "mini-kanban-board",
     title: "Kanban Board",
@@ -100,6 +111,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Kanban Logic",
   },
+  // mini project problem-->12
   {
     id: "mini-typing-speed-test",
     title: "Typing Speed Test",
@@ -109,6 +121,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Typing Test Logic",
   },
+  // mini project problem-->13
   {
     id: "mini-image-gallery",
     title: "Image Gallery with Lightbox",
@@ -118,6 +131,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Gallery Logic",
   },
+  // mini project problem-->14
   {
     id: "mini-countdown-timer",
     title: "Countdown Timer",
@@ -127,6 +141,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Countdown Logic",
   },
+  // mini project problem-->15
   {
     id: "mini-movie-db-app",
     title: "Movie Database App",
@@ -136,6 +151,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Movie App Logic",
   },
+  // mini project problem-->16
   {
     id: "mini-github-profile-finder",
     title: "GitHub Profile Finder",
@@ -145,6 +161,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show GitHub App Logic",
   },
+  // mini project problem-->17
   {
     id: "mini-currency-converter",
     title: "Currency Converter",
@@ -154,6 +171,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Converter Logic",
   },
+  // mini project problem-->18
   {
     id: "mini-ecommerce-cart",
     title: "Simple E-commerce Cart",
@@ -163,6 +181,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Cart Logic",
   },
+  // mini project problem-->19
   {
     id: "mini-poll-app",
     title: "Poll/Voting App",
@@ -172,6 +191,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Poll App Logic",
   },
+  // mini project problem-->20
   {
     id: "mini-password-generator",
     title: "Password Generator",
@@ -181,6 +201,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Generator Logic",
   },
+  // mini project problem-->21
   {
     id: "mini-wikipedia-search-app",
     title: "Wikipedia Search App",
@@ -190,6 +211,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Wikipedia App Logic",
   },
+  // mini project problem-->22
   {
     id: "mini-sortable-list",
     title: "Sortable Drag-and-Drop List",
@@ -199,6 +221,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Sortable List Logic",
   },
+  // mini project problem-->23
   {
     id: "mini-breakout-game",
     title: "Breakout Game",
@@ -208,6 +231,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Breakout Logic",
   },
+  // mini project problem-->24
   {
     id: "mini-chat-app-conceptual",
     title: "Simple Chat App (Conceptual)",
@@ -217,6 +241,7 @@ export const problems: Problem[] = [
     inputs: [],
     buttonText: "Show Chat App Logic",
   },
+  // mini project problem-->25
   {
     id: "mini-bookmarking-app",
     title: "Bookmarking App",
