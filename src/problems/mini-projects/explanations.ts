@@ -1,4 +1,5 @@
 export const explanations: Record<string, string> = {
+  // mini project explanation--> 01
   "mini-todo-app": `
 ### 💡 Problem Breakdown
 A to-do list is a classic introductory project that combines all the fundamentals of web development: data management (state), user input, DOM manipulation, and event handling. The core idea is to maintain a list of tasks that can be added, removed, or marked as done.
@@ -11,6 +12,7 @@ The application is built around a "single source of truth": an array of todo obj
 -   **UI as a Function of State**: The principle that the UI is always a direct result of rendering the current state.
 -   **CRUD Operations**: The four basic functions of persistent storage (Create, Read, Update, Delete).
 `,
+  // mini project explanation--> 02
   "mini-weather-app": `
 ### 💡 Problem Breakdown
 This project involves building a front-end application that communicates with a third-party API (Application Programming Interface) to fetch and display data. It's a fundamental skill for building dynamic web apps.
@@ -23,6 +25,7 @@ The application flow centers on a user event (submitting a city). This triggers 
 -   **Asynchronous Data Fetching**: Using \`async/await\` and \`fetch\` to get data from a server without blocking the main UI thread.
 -   **Conditional Rendering**: Displaying different UI elements based on the current state of the application.
 `,
+  // mini project explanation--> 03
   "mini-quiz-app": `
 ### 💡 Problem Breakdown
 A quiz app is an excellent project for practicing state management and user interaction logic. The user is presented with a series of questions and must choose from a set of multiple-choice answers, with the application tracking their score.
@@ -34,6 +37,7 @@ The core of the application is a state machine. The primary state variables are 
 -   **State Management**: Tracking the user's progress (\`score\`, \`currentQuestionIndex\`) through the quiz.
 -   **Conditional Logic**: The core of the application's flow, determining what to display next based on user actions and whether the quiz is finished.
 `,
+  // mini project explanation--> 04
   "mini-pomodoro-timer": `
 ### 💡 Problem Breakdown
 The Pomodoro Technique is a time management method that uses a timer to break down work into intervals. This project involves creating a timer that cycles between focused work sessions and short breaks, managed by user controls.
@@ -45,6 +49,7 @@ The application is a state machine controlled by a timer. The core state include
 -   \`\`setInterval\` / \`clearInterval\`\`: The Web APIs for creating and managing repeating timers.
 -   **State Machine**: The application is a simple state machine that transitions between 'work' and 'break' states.
 `,
+  // mini project explanation--> 05
   "mini-markdown-previewer": `
 ### 💡 Project Breakdown
 A Markdown previewer provides a real-time view of how Markdown text will be rendered as HTML. This project focuses on handling user input and integrating a third-party library to perform a complex task.
@@ -57,6 +62,7 @@ The core of this application is an event listener on the \`input\` event of a te
 -   \`\`input\` Event\`\`: Used to create a real-time, responsive user experience.
 -   **\`.innerHTML\`**: Used to render the parsed HTML string into the DOM.
 `,
+  // mini project explanation--> 06
   "mini-recipe-finder": `
 ### 💡 Problem Breakdown
 This project is another great example of using a third-party API. The application allows users to search for recipes based on an ingredient and displays a list of results.
@@ -68,6 +74,7 @@ Similar to the weather app, this project is built around an API call. The user p
 -   **API Integration**: The core skill of fetching and displaying data from an external service.
 -   **Dynamic Rendering**: Using array methods like \`.map()\` to render a list of components from a data array.
 `,
+  // mini project explanation--> 07
   "mini-expense-tracker": `
 ### 💡 Problem Breakdown
 This project focuses on CRUD (Create, Read, Update, Delete) operations and state management. The user can add income and expense transactions, and the application calculates and displays a running balance.
@@ -80,6 +87,7 @@ The application's state is a single array of transaction objects. The UI is a di
 -   \`\`localStorage\`\`: A Web API for making data persist in the browser.
 -   **Derived State**: Calculating values (like totals) from the core state rather than storing them separately.
 `,
+  // mini project explanation--> 08
   "mini-drawing-app": `
 ### 💡 Project Breakdown
 This project introduces the HTML Canvas API. The goal is to create a simple digital drawing board where the user can draw by moving their mouse while the button is held down.
@@ -91,6 +99,7 @@ The application logic is driven by a series of mouse events on the \`<canvas>\` 
 -   **Canvas API**: The primary browser API for 2D drawing.
 -   **Event Handling**: Using a combination of mouse events (\`mousedown\`, \`mousemove\`, \`mouseup\`) to create an interactive experience.
 `,
+  // mini project explanation--> 09
   "mini-music-player": `
 ### 💡 Problem Breakdown
 This project uses the HTML Audio API to create a functional user interface for a music player. It involves managing a playlist and controlling playback.
@@ -102,6 +111,7 @@ The application logic is a wrapper around the HTML \`<audio>\` element. The stat
 -   **HTML Media Elements**: Using the built-in capabilities of the \`<audio>\` element.
 -   **State Management**: Tracking the current song and playback status.
 `,
+  // mini project explanation--> 10
   "mini-memory-game": `
 ### 💡 Problem Breakdown
 This project is a classic logic game that requires managing a grid state, handling user interaction, and implementing game logic with timers.
@@ -119,6 +129,7 @@ The game is won when all cards are marked as \`isMatched\`.
 -   **State Management**: Managing the complex state of a game board.
 -   \`\`setTimeout\`\`: Used to create a delay before non-matching cards are flipped back.
 `,
+  // mini project explanation--> 11
   "mini-kanban-board": `
 ### 💡 Problem Breakdown
 This project involves implementing drag-and-drop functionality to create a simple task board like Trello.
@@ -134,6 +145,7 @@ The application state is an object where keys represent the columns and values a
 -   **Drag and Drop API**: A set of DOM events for implementing native drag-and-drop.
 -   **Data Transfer**: Using the \`DataTransfer\` object to pass information from the dragged element to the drop target.
 `,
+  // mini project explanation--> 12
   "mini-typing-speed-test": `
 ### 💡 Problem Breakdown
 This project involves handling user input in real-time, tracking time, and performing calculations to measure performance (WPM and accuracy).
@@ -146,6 +158,7 @@ The logic is triggered when the user first types in the input area, which starts
 -   **Date Object**: Used to get start and end timestamps for performance calculation.
 -   **String Manipulation**: Comparing the user's input string with the prompt string.
 `,
+  // mini project explanation--> 13
   "mini-image-gallery": `
 ### 💡 Problem Breakdown
 This project focuses on creating a common UI pattern: a modal lightbox for viewing images.
@@ -157,6 +170,7 @@ The state includes an array of image URLs and a variable to hold the URL of the 
 -   **Conditional Rendering**: The lightbox is only rendered when the "selected image" state is not null.
 -   **State Management**: A simple state variable controls the visibility and content of a major UI component.
 `,
+  // mini project explanation--> 14
   "mini-countdown-timer": `
 ### 💡 Problem Breakdown
 This project involves calculating and displaying the time remaining until a specific future date. It requires continuous updates using a timer.
@@ -173,6 +187,7 @@ The core of the application is a \`setInterval\` that runs every second. Inside 
 -   \`\`setInterval\`\`: The Web API used to run the update function repeatedly.
 -   **Date Object**: Used to work with timestamps and perform calculations.
 `,
+  // mini project explanation--> 15
   "mini-movie-db-app": `
 ### 💡 Problem Breakdown
 This is another API-based project that involves two different types of API calls: one for searching for a list of items, and another for getting the detailed view of a single item.
@@ -184,6 +199,7 @@ The application flow has two main parts. First, a search form triggers a \`fetch
 -   **Multi-step API Interaction**: A common pattern where an initial API call provides IDs that are then used in subsequent calls for more details.
 -   **State Management**: Managing the state for both the list of search results and the currently selected item's details.
 `,
+  // mini project explanation--> 16
   "mini-github-profile-finder": `
 ### 💡 Problem Breakdown
 This project uses the public GitHub API to fetch and display user profile data. It's a great exercise in handling API responses and dynamically creating a user interface from the fetched data.
@@ -195,6 +211,7 @@ The application has a search input for a GitHub username. When the form is submi
 -   **API Integration**: Working with a well-documented public API.
 -   **Error Handling**: Specifically handling HTTP error statuses like 404.
 `,
+  // mini project explanation--> 17
   "mini-currency-converter": `
 ### 💡 Problem Breakdown
 This project involves fetching data from an exchange rate API and performing calculations based on user input.
@@ -209,6 +226,7 @@ This project involves fetching data from an exchange rate API and performing cal
 -   **Data-Driven UI**: Populating UI elements (like select dropdowns) from API data.
 -   **Stateful Calculation**: Re-running a calculation whenever any of its input state variables change.
 `,
+  // mini project explanation--> 18
   "mini-ecommerce-cart": `
 ### 💡 Problem Breakdown
 This project focuses on client-side state management for a common e-commerce feature. The logic involves adding, updating, and removing items from a collection and calculating a derived total.
@@ -220,6 +238,7 @@ The state is managed in two main arrays: one for the list of available products 
 -   **State Management**: Managing a collection of items (the cart).
 -   **Derived State**: Calculating values (like the total) from the core state rather than storing them separately. This prevents data from becoming inconsistent.
 `,
+  // mini project explanation--> 19
   "mini-poll-app": `
 ### 💡 Problem Breakdown
 This project involves managing the state of a poll, handling user votes, and displaying the results visually.
@@ -231,6 +250,7 @@ The state can be a single object that contains the poll question and an array of
 -   **Data Visualization**: Representing numerical data visually (e.g., with progress bars).
 -   **State Management**: Handling user interactions that modify a central state object.
 `,
+  // mini project explanation--> 20
   "mini-password-generator": `
 ### 💡 Problem Breakdown
 This project focuses on handling user-configurable options and generating random data based on those options.
@@ -245,6 +265,7 @@ The logic starts when the "Generate" button is clicked.
 -   **Randomness**: Using \`Math.random()\` to generate unpredictable results.
 -   **String Manipulation**: Building up a new string based on a set of rules.
 `,
+  // mini project explanation--> 21
   "mini-wikipedia-search-app": `
 ### 💡 Problem Breakdown
 This project is an excellent exercise in using a public API with a more complex query string and response structure. The user can type a search term, and the app will display a list of matching Wikipedia articles.
@@ -259,6 +280,7 @@ This project is an excellent exercise in using a public API with a more complex 
 -   **API Integration**: Working with URL query parameters and nested JSON responses.
 -   **CORS**: Understanding the Cross-Origin Resource Sharing policies of public APIs.
 `,
+  // mini project explanation--> 22
   "mini-sortable-list": `
 ### 💡 Problem Breakdown
 This project focuses on a more advanced user interaction: re-ordering items in a list using the native Drag and Drop API.
@@ -275,6 +297,7 @@ The core of the logic is in the event handlers for drag and drop.
 -   **Drag and Drop API**: Using the full sequence of DnD events to manage a user interaction.
 -   **Immutable State Updates**: Creating a new, reordered array instead of mutating the existing one in place.
 `,
+  // mini project explanation--> 23
   "mini-breakout-game": `
 ### 💡 Problem Breakdown
 This is a classic arcade game that serves as an excellent introduction to game development logic and the Canvas API. The project involves animation, user input, and collision detection.
@@ -294,6 +317,7 @@ This is a classic arcade game that serves as an excellent introduction to game d
 -   **Game Loop**: The fundamental pattern for creating animation and interactive games.
 -   **Collision Detection**: The logic for determining when two game objects intersect.
 `,
+  // mini project explanation--> 24
   "mini-chat-app-conceptual": `
 ### 💡 Problem Breakdown
 This is a conceptual overview of a real-time chat application. Unlike the request-response model of HTTP, chat requires a persistent, two-way connection between clients and a server, which is the primary use case for WebSockets.
@@ -308,6 +332,7 @@ This is a conceptual overview of a real-time chat application. Unlike the reques
 -   **WebSockets**: A protocol that provides a full-duplex (two-way) communication channel over a single TCP connection.
 -   **Real-time Communication**: The ability to push data from the server to clients instantly without the client having to poll for updates.
 `,
+  // mini project explanation--> 25
   "mini-bookmarking-app": `
 ### 💡 Problem Breakdown
 This project is a great exercise in building a complete CRUD (Create, Read, Update, Delete) application that persists data on the client-side using \`localStorage\`.
