@@ -43,7 +43,7 @@ export type Category =
   | "Beginner Basics"
   | "Functions and Scope"
   | "Variables and Constants Deep Dive"
-  | "Operators and Expressions" // <-- changed here if you choose option 2
+  | "Operators and Expressions"
   | "Control Flow and Loops"
   | "Arrays and Strings"
   | "Objects and Prototypes"
