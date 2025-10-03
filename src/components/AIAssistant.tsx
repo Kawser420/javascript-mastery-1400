@@ -2,13 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { ChatMessage } from "@/types";
 import { getAIResponseStream } from "../services/geminiService";
 
-/* ---------- storage keys ---------- */
+/* ---------- Storage Keys ---------- */
 const LS_KEYS = {
   MESSAGES: "ai_assistant_msgs_v_final",
   CONTEXT_OPT_IN: "ai_assistant_context_v_final",
 };
 
-/* ---------- helpers ---------- */
+/* ---------- Helpers ---------- */
 const uid = (p = "") => `${p}${Math.random().toString(36).slice(2, 9)}`;
 const saveJSON = (k: string, v: any) => {
   try {
