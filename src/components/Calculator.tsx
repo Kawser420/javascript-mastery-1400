@@ -118,7 +118,7 @@ const Calculator: React.FC = () => {
     setDisplay("0");
   };
 
-  /* Prepare expression for mathjs */
+  //  Prepare expression for mathjs
   const prepareForEval = (raw: string) => {
     let s = raw;
     s = s.replace(/π/g, "pi");
