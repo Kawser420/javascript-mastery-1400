@@ -58,10 +58,6 @@ import { problems as closuresLexicalEnvironmentProblems } from "./closures-and-l
 import { solvers as closuresLexicalEnvironmentSolvers } from "./closures-and-lexical-environment/solvers";
 import { explanations as closuresLexicalEnvironmentExplanations } from "./closures-and-lexical-environment/explanations";
 
-import { problems as recursionTechniquesProblems } from "./recursion-techniques/problems";
-import { solvers as recursionTechniquesSolvers } from "./recursion-techniques/solvers";
-import { explanations as recursionTechniquesExplanations } from "./recursion-techniques/explanations";
-
 // import { problems as advancedJsFeaturesProblems } from "./advanced-js-features/problems";
 // import { solvers as advancedJsFeaturesSolvers } from "./advanced-js-features/solvers";
 // import { explanations as advancedJsFeaturesExplanations } from "./advanced-js-features/explanations";
