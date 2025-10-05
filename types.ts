@@ -40,6 +40,7 @@ export interface ProblemInput {
   min?: string;
 }
 
+// export category
 export type Category =
   | "Beginner Basics"
   | "Functions and Scope"
