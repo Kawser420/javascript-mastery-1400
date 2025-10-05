@@ -1,3 +1,4 @@
+// Theme Mode
 export type Theme =
   | "light"
   | "dark"
