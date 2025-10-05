@@ -58,6 +58,14 @@ import { problems as closuresLexicalEnvironmentProblems } from "./closures-and-l
 import { solvers as closuresLexicalEnvironmentSolvers } from "./closures-and-lexical-environment/solvers";
 import { explanations as closuresLexicalEnvironmentExplanations } from "./closures-and-lexical-environment/explanations";
 
+// import { problems as recursionTechniquesProblems } from "./recursion-techniques/problems";
+// import { solvers as recursionTechniquesSolvers } from "./recursion-techniques/solvers";
+// import { explanations as recursionTechniquesExplanations } from "./recursion-techniques/explanations";
+
+// import { problems as classesOopProblems } from "./classes-and-oop/problems";
+// import { solvers as classesOopSolvers } from "./classes-and-oop/solvers";
+// import { explanations as classesOopExplanations } from "./classes-and-oop/explanations";
+
 // import { problems as advancedJsFeaturesProblems } from "./advanced-js-features/problems";
 // import { solvers as advancedJsFeaturesSolvers } from "./advanced-js-features/solvers";
 // import { explanations as advancedJsFeaturesExplanations } from "./advanced-js-features/explanations";
@@ -91,8 +99,8 @@ export const allProblems: Problem[] = [
   // export allProblems--> Core Concepts(12)
   ...es6FeaturesProblems,
   ...closuresLexicalEnvironmentProblems,
-  ...recursionTechniquesProblems,
-  ...classesOopProblems,
+  // ...recursionTechniquesProblems,
+  // ...classesOopProblems,
   // ...advancedJsFeaturesProblems,
   // ...asynchronousJsProblems,
   ...miniProjectsProblems,
@@ -115,8 +123,8 @@ export const allSolvers: Record<string, Function> = {
   // export allSolvers--> Core Concepts(12)
   ...es6FeaturesSolvers,
   ...closuresLexicalEnvironmentSolvers,
-  ...recursionTechniquesSolvers,
-  ...classesOopSolvers,
+  // ...recursionTechniquesSolvers,
+  // ...classesOopSolvers,
   // ...advancedJsFeaturesSolvers,
   // ...asynchronousJsSolvers,
   ...miniProjectsSolvers,
@@ -140,7 +148,7 @@ export const staticExplanations: Record<string, string> = {
   // export allExplanations--> Core Concepts(12)
   ...es6FeaturesExplanations,
   ...closuresLexicalEnvironmentExplanations,
-  ...recursionTechniquesExplanations,
+  // ...recursionTechniquesExplanations,
   // ...classesOopExplanations,
   // ...advancedJsFeaturesExplanations,
   // ...asynchronousJsExplanations,
