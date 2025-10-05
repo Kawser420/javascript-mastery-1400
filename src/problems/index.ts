@@ -62,10 +62,6 @@ import { problems as recursionTechniquesProblems } from "./recursion-techniques/
 import { solvers as recursionTechniquesSolvers } from "./recursion-techniques/solvers";
 import { explanations as recursionTechniquesExplanations } from "./recursion-techniques/explanations";
 
-import { problems as classesOopProblems } from "./classes-and-oop/problems";
-import { solvers as classesOopSolvers } from "./classes-and-oop/solvers";
-// import { explanations as classesOopExplanations } from "./classes-and-oop/explanations";
-
 // import { problems as advancedJsFeaturesProblems } from "./advanced-js-features/problems";
 // import { solvers as advancedJsFeaturesSolvers } from "./advanced-js-features/solvers";
 // import { explanations as advancedJsFeaturesExplanations } from "./advanced-js-features/explanations";
