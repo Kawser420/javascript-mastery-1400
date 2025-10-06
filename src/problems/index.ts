@@ -70,10 +70,6 @@ import { explanations as closuresLexicalEnvironmentExplanations } from "./closur
 // import { solvers as advancedJsFeaturesSolvers } from "./advanced-js-features/solvers";
 // import { explanations as advancedJsFeaturesExplanations } from "./advanced-js-features/explanations";
 
-// import { problems as asynchronousJsProblems } from "./asynchronous-js/problems";
-// import { solvers as asynchronousJsSolvers } from "./asynchronous-js/solvers";
-// import { explanations as asynchronousJsExplanations } from "./asynchronous-js/explanations";
-
 import { problems as miniProjectsProblems } from "./mini-projects/problems";
 import { solvers as miniProjectsSolvers } from "./mini-projects/solvers";
 import { explanations as miniProjectsExplanations } from "./mini-projects/explanations";
