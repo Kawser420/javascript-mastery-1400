@@ -98,7 +98,6 @@ export const allProblems: Problem[] = [
   // ...recursionTechniquesProblems,
   // ...classesOopProblems,
   // ...advancedJsFeaturesProblems,
-  // ...asynchronousJsProblems,
   ...miniProjectsProblems,
   ...modulesImportsExportsProblems,
 ];
@@ -122,7 +121,6 @@ export const allSolvers: Record<string, Function> = {
   // ...recursionTechniquesSolvers,
   // ...classesOopSolvers,
   // ...advancedJsFeaturesSolvers,
-  // ...asynchronousJsSolvers,
   ...miniProjectsSolvers,
   ...modulesImportsExportsSolvers,
   ...controlFlowLoopsSolvers,
@@ -147,7 +145,6 @@ export const staticExplanations: Record<string, string> = {
   // ...recursionTechniquesExplanations,
   // ...classesOopExplanations,
   // ...advancedJsFeaturesExplanations,
-  // ...asynchronousJsExplanations,
   ...miniProjectsExplanations,
   ...modulesImportsExportsExplanations,
   ...controlFlowLoopsExplanations,
